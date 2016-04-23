@@ -1,0 +1,131 @@
+﻿v 1.3.3
+- Neu: Plot - Schriftgröße kann global geändert werden. SkinSettings/Design
+- Neu: Kennzeichnung von .disc Dateien
+- Neu: neue Defaulticons im Design angepasst. (AddonPVRClient, VCD, RemovableDisc)
+- Bugfix: fehlende Kennzeichnung in Listen Ansichten für 3D und Sets ergänzt
+
+v 1.3.2
+- Neu: 3Panel View - Poster statt Fanart wählbar
+- Änderung: Wallviews - preloaditems erhöht
+- Änderung: LiveTV - Suchlaufinformationen hinzugefügt
+- Änderung: LiveTV - Infopanel - nächste Sendung hinzugefügt
+- Bugfix: LiveTV - Pausebutton
+- Bugfix: Backgroundtexturehändling
+- Bugfix: Texte
+- Bugfix: allgemein
+
+v 1.3.0 (ISENGARD)
+- alle nötigen Änderungen für Isengard vorgenommen
+- Neu: Musicvisualisierung - neue alternative Ansicht gebaut (Vinyl)
+- Änderung: CDART leicht überarbeitet, Fallback: Titel um Artist ergänzt
+- Änderung: Nexttrackplaylist etwas verkleinert
+- Änderung: "Benutzerdefiniert 3" Schalter - Beschreibung angepasst (Radio Addon)
+- Bugfix: Gridgröße korrigiert
+- Bugfix: Albuminfo - unteres Menü verbreitert
+- Bugfix: Ebenen-Position einiger Fenster korrigiert
+- Bugfix: Musicoverlay - doppelte Titelanziege korrigiert
+- Code: neue Möglichkeiten des "Dynamic List Content" umgesetzt
+
+v 1.2.4
+- Neu: Kennzeichnung von Streamingdateien (strm)
+- Neu: Angepasstes Aussehen des CDArt Managers
+- Änderung: Favouriten3 (Radio Addon) - Pfad für Widget kann nun selbst gewählt werden (zB. "Musikrichtung" oder "meine Sender" oder ...), wirkt sich aufs Widget aus
+- Änderung: Widgets separiert, wirkt sich (hoffentlich) auf die Performance aus und wenn das Radio Addon unter Favouriten3 genutzt wird, verhindert es die Fehlermeldungen
+- Änderung: Shutdownmenü - Hintergrundbild geändert
+- Änderung: Favouriten3 Widget (Radio Addon) - eigenes Fallback Icon falls kein Cover vorhanden
+- Bugfix: Shutdownmenü - "gerade Spielt" korrigiert
+- Bugfix: Animation in den Widgets (slide)
+- Bugfix: Watched-, Amazonicons
+- Bugfix: Codec und Bitrate Darstellung
+- Bugfix: Fanartview für Musik - Position des unteren Labels
+- Bugfix: in einige Bereichen den Code angepasst, damit die Proportionen formstabil bleiben, wenn die Auflösung mal nicht 16:9 ist
+- Bugfix: Musik- und Videooverlays überdeckten Dialoge
+- Bugfix: Auswahl für Playlisten korrigiert (casesensitive)
+
+
+v 1.2.2
+- Neu: LiveTV-Widget - es kann nun ein eigene Gruppe angegeben werden (SkinSettings - SkinWidget - LiveTV)
+- Änderung: Es wird nur noch Clearart, kein Thumb, im Vollbild unten Links angezeigt
+- Bugfix: Senderlogo wurde im Hauptmenü 2x dargestellt
+
+v 1.2.1
+- Neu: Profilbild und Name oben rechts sichtbar, wenn es mehr als einen eingetragenen Benutzer gibt (Name kann in den Settings ausgeblendet werden)
+- Neu: TVtunes Unterstützung
+- Neu: h.265 Icon
+- Änderung: Im Shutdownmenü wird nun das aktuell gespielte Medium angezeigt
+- Bugfixes: Übersetzungen/Texte korrigiert
+- Bugfixes: Textfarbe im Edit-Feld in PVR Guide Suche korrigert
+- Bugfixes: Code korrekturen
+
+v 1.2.0
+- Pflege: kleinere optische Überarbeitungen
+- Pflege: Code aufgeräumt
+- Neu: Ansicht "Wide" für Serien, Filme und Dateien
+- Neu: Markierung von Amazon Instant Videos in der Datenbank
+- Neu: Sets werden in den Views ohne Clearcase markiert
+- Änderung: farbige Avengers Hintergrundbilder entfernt
+- Bugfix: Timer- / Recordicon oben links überlagerten sich
+- Bugfix: Hauptmenu OSD
+- Bugfix: allgemein
+
+v 1.1.0
+- Änderung: Hauptmenüpunkte können nun beliebig in der Reihenfolge geändert werden (SkinSettings)
+- Änderung: "nur ein Hintergrundbild" kann nun zum Multiimage umgestellt werden
+- Änderung: Dialogfarbe ändert sich nun auch entsprechend der Themefarbe (vorher Rot)
+- Bugfix: der export der Skin Einstellungen funktioniert wieder, jetzt aber mit dem Script Toolbox von Phil65
+- Bugfix: in den Video und Audio Settings war ein falscher Slider sichtbar
+- Bugfix: Übersetzungen
+- minimalste Design Optimierung vorgenommen
+- Code aufgeräumt
+
+v 1.0.4
+- Bugfix: Übersetzungen
+- Bugfix: Dashboard - Event Blog - Text war auch bei nicht aktiviertem Script sichtbar
+- Bugfix: AddonInfo - ".. als defekt markiert .." stand dauerhaft da
+- Bugfix: LiveTV - Fullscreen - Menüs werden bei aktivem Teletext nicht mehr angezeigt
+- Bugfix: Videodatenbankansichten - Fehler bei Sets behoben
+- Bugfix: Hauptmenü - nach Screensaver kein Fokus
+- Änderung: Zentrale - onlick für Programme angepasst und Fokusfarbe heller gemacht
+- Änderung: global - Anzeige für Timer und Aufnahme (oben links) differenziert
+- Änderung: Hauptmenü - Untermenü - "aktualisieren" Schalter geändert. Es öffnet sich nun ein Dialog
+- Neu: die neuen DefaultIcons für verschiedene Addon Bereiche gezeichnet und eingesetzt
+
+v 1.0.3
+- Änderung in den Dashboardeinstellungen. "Alle löschen" jetzt per navigation nach rechts
+- Beschriftung in der "Zentrale" hinzugefügt
+- Fehler in den Einstellungen behoben. Kodi konnte sich den letzten Menüpunkt nicht merken.
+- Export der Skineinstellungen vorläufig entfernt
+- einige Ergänzungen und Fehler in den einzelnen Beschreibungstexten angepasst/behoben.
+- in der PVR Info zu einer Sendung den Punkt "ähnliche suchen" hinzugefügt
+- Fehler in der Visualisierung behoben. Sie war nicht sichtbar.
+
+v 1.0.2
+- Farbauswahl in den SkinSettings neu designt, eigener Farbcode kann nun auch angegeben werden (AARRGGBB)
+- Farbwahl ändert jetzt auch das OSD und die Seekbar gleichermaßen
+- wenn man über das Submenü die Datenbank scannt, läd er nun danach alle im Addon (Artwork Downloader) eingestellten Extra Arts
+- in den SkinWidgets gibt es nun einen Schalter um alle Extra Arts zu laden
+- in den SkinWidgets kann das automatische laden von Extra Arts deaktiviert werden
+- Aufnahme-Icon oben links sichtbar, solange eine Aufnahme oder Timer läuft
+- Titel Ansicht für Episoden in der Seekbar geändert
+
+v 1.0.1
+Vielen Dank an magy77 aus dem kodinerds.net Forum,
+der mir sehr ausführlich und akribisch bei der Beseitigung von Bugs zur Seite stand
+und sinnvolle Ideen einbrachte die dem Skin nun etwas mehr Struktur verleihen.
+
+- Widget und Dashboard komplett überarbeitet
+- Diverse Grafische Anpassungen vorgenommen, sieht nun strukturierter/einheitlicher aus
+- unter erweiterten Einstellungen (SkinSettings) / Design ändert "Farb Theme" mehr Bereiche, unteranderem den Hauptmenübalken und es sind 2 Farben hinzugekommen
+- Musik Widget besteht nun aus zuletzt gespielte Songs / zuletzt gespielte Alben / zuletzt hinzugefügte Alben / zufällig
+- das Addon WeatheropenMaps wird nun unterstützt
+- extended Infos für Sets funktioniert wieder
+- 2 neue Icons für die "Zentrale" - Addons und Programme
+- einige Fehler unter Linux behoben
+- neues Lyricsscript übernommen
+- Anzeige von Hintergründen im zusammenspiel mit Artistslideshow korrigiert
+- diverse andere Bugfixes vorgenommen
+
+v 1.0.0
+- diverse Bugfixes
+- Dashboard erweitert
+- Helix konform geschrieben
