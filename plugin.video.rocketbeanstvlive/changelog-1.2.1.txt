@@ -1,4 +1,0 @@
-v1.2.1 (2015-11-21)
--upd: support full hd (source) playback
-v1.2.0 (2015-11-10)
--add: chat (twitch account + script.ircchat required)
