@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="plugin.video.rocketbeanstvlive"
+  version="1.2.1"
+  name="Rocket Beans TV"
+  provider-name="Jin">
+  <requires>
+   <import addon="xbmc.python" version="2.14.0"/>
+  </requires>
+  <extension 
+    point="xbmc.python.pluginsource"
+    library="rbtv.py">
+   <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>Rocket Beans TV | 24/7 Entertainment auf Twitch</summary>
+    <description>Rocket Beans TV ist Entertainment 24/7 zu digitalen Themen wie Filme, Games und Comedy.</description>
+    <platform>all</platform>
+    <forum>http://kodinerds.net</forum>
+  </extension>
+</addon>

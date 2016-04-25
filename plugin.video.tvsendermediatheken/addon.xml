@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.tvsendermediatheken" name="TV-Sender Mediatheken" version="1.3.3" provider-name="Steffen95">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="de">Alle Sendungen aus vielen deutsche TV-Sender Mediatheken</summary>
+        <language>de</language>
+        <description lang="de">Dieses Addon greift direkt auf die Sendungen von den deutschen TV-Sernder Mediatheken zu und erspart somit einiges an Navigation durch Unterpunkte. Das Addon greift hierbei nur auf die entsprechenden Pfade von anderen Addons zu, sodass diese zum verwenden des Addons zwingend notwendig sind.</description>
+        <source></source>
+        <forum>http://www.kodinerds.net/index.php/Thread/49530-Release-Mediatheken-Sendungen/</forum>
+        <email></email>
+        <website></website>
+    </extension>
+</addon>
