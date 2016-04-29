@@ -25,7 +25,7 @@
 		<platform>all</platform>
 	</extension>
 </addon>
-<addon id="repository.kodinerds-betas"
+<addon id="repository.kodinerds.betas"
 		name="kodinerds.net Add-ons Betas"
 		version="1.0.0"
 		provider-name="Jugger">
