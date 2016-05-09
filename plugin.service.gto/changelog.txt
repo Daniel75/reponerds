@@ -1,3 +1,12 @@
+1.0.2
+- option 'show outdated broadcasts too' removed
+- readme updated
+- more robust scraper routines
+- bug in InfoWindow fixed (switch to actual broadcast)
+
+1.0.1
+- cosmetics, channel translation updated
+
 1.0.0
 - initial release
 
