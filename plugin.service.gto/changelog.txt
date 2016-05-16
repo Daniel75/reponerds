@@ -1,3 +1,6 @@
+1.0.4
+- scraper resource tests and fallback implemented (as rtv rss resources aren't accurate yet)
+
 1.0.3
 - minor bugfixes
 
