@@ -1,3 +1,5 @@
+v1.6.0 (2016-05-02)
+-rem: myvideo.de
 v1.5.4 (2016-04-01)
 -upd: youtube search
 -upd: addon icon (thx barney)
