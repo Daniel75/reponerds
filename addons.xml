@@ -645,6 +645,33 @@ Auch die aktuelle Tabelle der 1. und 2. Bundesliga kann angezeigt werden.
     </extension>
 </addon>
 
+<addon id="plugin.service.gto" name="German Telecast Offers" version="1.0.4" provider-name="Birger Jesch">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.python.script" library="default.py" />
+    <extension point="xbmc.service" library="starter.py" start="startup">
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Fetch todays TV Offers from www.rtv.de</summary>
+        <summary lang="de">Holt die TV Tipps des Tages von www.rtv.de</summary>
+        <language>de</language>
+        <description lang="en">Fetch todays TV Offers from www.rtv.de</description>
+        <description lang="de">Holt die TV Tipps des Tages von www.rtv.de
+
+Dieses Plugin benoetigt eine Skin-Integration!
+Hierfür bitte README.txt im Ordner integration beachten.
+        </description>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
+        <source>https://github.com/b-jesch/plugin.service.gto</source>
+        <forum>-</forum>
+        <email>-</email>
+        <website>-</website>
+    </extension>
+</addon>
+
 <addon id="service.rytecepgdownloader" 
     name="Rytec EPG Downloader"
     version="16.5.9"
