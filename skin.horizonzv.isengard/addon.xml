@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.horizonzv.isengard" name="Horizonz V" version="1.8.9.8" provider-name="blauesgruen">
+<addon id="skin.horizonzv.isengard" name="Horizonz V" version="1.8.9.9" provider-name="blauesgruen">
 	<requires>
-		<!-- <import addon="xbmc.gui" version="5.10.0"/>
-		<import addon="script.image.resource.select" version="0.0.5"/>
+		<import addon="xbmc.gui" version="5.10.0"/>
+		<!-- <import addon="script.image.resource.select" version="0.0.5"/>
 		<import addon="service.library.data.provider" version="0.1.2"/>
 		<import addon="resource.images.languageflags.colour" version="0.0.3"/>
 		<import addon="script.artwork.downloader" version="12.0.29"/>
