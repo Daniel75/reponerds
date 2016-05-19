@@ -1,3 +1,6 @@
+0.1.22
+- Bugfix
+
 0.1.21
 - Adding ability to encode multiple files at once (encode only).
   Delete source files must be enabled for this.
