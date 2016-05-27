@@ -1,23 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon
-  id="plugin.video.eurosportplayer"
-  version="1.0.4"
-  name="Eurosport Player"
-  provider-name="Jin">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension 
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Watch Eurosport Live Anytime, Anywhere.</summary>
-    <description>
-Eurosport Player is the Eurosport subscription service to enjoy full and unlimited access to the Eurosport channels and exclusive content LIVE and on demand.
-    </description>
-    <platform>all</platform>
-    <forum>http://kodinerds.net</forum>
-  </extension>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.eurosportplayer" version="1.1.0" name="Eurosport Player" provider-name="Jin">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Watch Eurosport Live Anytime, Anywhere.</summary>
+        <description>Eurosport Player is the Eurosport subscription service to enjoy full and unlimited access to the Eurosport channels and exclusive content LIVE and on demand.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <disclaimer>This addon is in no way, shape, or form affiliated with, approved by, authorized by, or otherwise related to Eurosport or any of its related companies.</disclaimer>
+        <forum>http://www.kodinerds.net/index.php/Thread/47296</forum>
+    </extension>
 </addon>

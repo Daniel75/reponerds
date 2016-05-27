@@ -286,27 +286,21 @@ Achtung: Diese Sender wurden nicht auf Funktionalität geprüft!
     </extension>
 </addon>
 
-<addon
-  id="plugin.video.eurosportplayer"
-  version="1.0.4"
-  name="Eurosport Player"
-  provider-name="Jin">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension 
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Watch Eurosport Live Anytime, Anywhere.</summary>
-    <description>
-Eurosport Player is the Eurosport subscription service to enjoy full and unlimited access to the Eurosport channels and exclusive content LIVE and on demand.
-    </description>
-    <platform>all</platform>
-    <forum>http://kodinerds.net</forum>
-  </extension>
+<addon id="plugin.video.eurosportplayer" version="1.1.0" name="Eurosport Player" provider-name="Jin">
+    <requires>
+        <import addon="xbmc.python" version="2.20.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Watch Eurosport Live Anytime, Anywhere.</summary>
+        <description>Eurosport Player is the Eurosport subscription service to enjoy full and unlimited access to the Eurosport channels and exclusive content LIVE and on demand.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <disclaimer>This addon is in no way, shape, or form affiliated with, approved by, authorized by, or otherwise related to Eurosport or any of its related companies.</disclaimer>
+        <forum>http://www.kodinerds.net/index.php/Thread/47296</forum>
+    </extension>
 </addon>
 
 <addon id="plugin.video.tvsendermediatheken" name="TV-Sender Mediatheken" version="1.3.3" provider-name="Steffen95">
@@ -331,7 +325,7 @@ Eurosport Player is the Eurosport subscription service to enjoy full and unlimit
 <!-- ===================================================================================== -->
 <!-- ================================ MUSIC ADDONS ======================================= -->
 <!-- ===================================================================================== -->
-<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.2.2" provider-name="piet">
+<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.2.4" provider-name="piet">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.mechanize" version="0.2.6"/>
