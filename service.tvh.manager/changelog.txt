@@ -1,5 +1,8 @@
 CHANGELOG
 
+0.3.12
+- Polish language file updated
+
 0.3.11
 - Command option in network detection removed
 
