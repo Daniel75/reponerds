@@ -325,7 +325,7 @@ Achtung: Diese Sender wurden nicht auf Funktionalität geprüft!
 <!-- ===================================================================================== -->
 <!-- ================================ MUSIC ADDONS ======================================= -->
 <!-- ===================================================================================== -->
-<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.2.4" provider-name="piet">
+<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.3.2" provider-name="piet">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.mechanize" version="0.2.6"/>
