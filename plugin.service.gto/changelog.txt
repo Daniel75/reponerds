@@ -1,3 +1,7 @@
+1.0.7
+- Skin cosmetics for Confluence. To take effect, You must copy the
+  file 'script-gto.xml' to the Confluence folder again (see README.txt)
+
 1.0.6
 - transform html entities into real chars
 
