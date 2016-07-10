@@ -1,26 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<addon
-  id="plugin.video.laola1tv"
-  version="1.3.0"
-  name="Laola1 TV"
-  provider-name="Jin">
-  <requires>
-   <import addon="xbmc.python" version="2.14.0"/>
-  </requires>
-  <extension 
-    point="xbmc.python.pluginsource"
-    library="default.py">
-   <provides>video</provides>
-  </extension>
-  <extension point="xbmc.addon.metadata">
-    <summary>Watch Sport Live Streams + Videos</summary>
-    <description>
-LAOLA1.tv - the international online sports TV.
-Sports fans can enjoy a lot of exclusive highlight-clips and video-LIVE-streams from the world of sports.
-
-***This addon is for PREMIUM MEMBERS only***
-    </description>
-    <platform>all</platform>
-    <forum>http://kodinerds.net</forum>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.laola1tv" version="1.5.0" name="Laola1 TV" provider-name="Jin">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="addon.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de_DE">LAOLA1.tv - Das Sport-TV im Netz</summary>
+        <summary lang="en_GB">LAOLA1.tv - the online sports TV</summary>
+        <description lang="de_DE">Online-Videos und Video-LIVE-Streams aus der Welt des Sports.</description>
+        <description lang="en_GB">Highlight-clips and video-LIVE-streams from the world of sports.</description>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <disclaimer lang="de_DE">Inoffizielles Addon - Benutzung auf eigene Gefahr</disclaimer>
+        <disclaimer lang="en_GB">Unofficial Addon - Use at your own risk</disclaimer>
+        <forum>http://www.kodinerds.net</forum>
+        <email>[jin] at [xyz] dot [de]</email>
   </extension>
 </addon>
