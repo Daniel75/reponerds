@@ -85,6 +85,21 @@
 	</extension>
 </addon>
 
+<addon id="skin.horizonzv" name="[RC] Horizonz V (Kodi 17)" version="0.9.0.0" provider-name="blauesgruen">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.65">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary>Skin von blauesgruen / Initiator mad-max</summary>
+		<description></description>
+		<disclaimer>Ursprünglich basierte der Skin auf den Mockups von xb2iris Skin "Horizonz".</disclaimer>
+	</extension>
+</addon>
+
 <addon
 	id="skin.moddedconfluence.4"
 	name="Confluence-MOD Vol. 4.2 (Beta)"
