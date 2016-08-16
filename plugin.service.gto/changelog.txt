@@ -1,3 +1,10 @@
+1.0.9
+- move ChannelTranslations.json to userdata folder to avoid overwriting changes of this file
+  after update
+
+1.0.8
+- Cosmetics, see 1.0.7
+
 1.0.7
 - Skin cosmetics for Confluence. To take effect, You must copy the
   file 'script-gto.xml' to the Confluence folder again (see README.txt)
