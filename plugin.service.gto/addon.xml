@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.service.gto" name="German Telecast Offers" version="1.0.10" provider-name="Birger Jesch">
+<addon id="plugin.service.gto" name="German Telecast Offers" version="2.0.2" provider-name="Birger Jesch">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="xbmc.python" version="2.20.0"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py" />
     <extension point="xbmc.service" library="starter.py" start="startup">
@@ -9,14 +9,18 @@
 
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
-        <summary lang="en">Fetch todays TV Offers from www.rtv.de</summary>
-        <summary lang="de">Holt die TV Tipps des Tages von www.rtv.de</summary>
+        <summary lang="en">Fetch todays TV Offers from different scrapers</summary>
+        <summary lang="de">Holt die TV Tipps des Tages aus den RSS-Feeds diverser Webseiten</summary>
         <language>de</language>
-        <description lang="en">Fetch todays TV Offers from www.rtv.de</description>
-        <description lang="de">Holt die TV Tipps des Tages von www.rtv.de
+        <description lang="en">Fetch todays TV Offers from different scrapers
+
+This plugin needs a integration into the skin!
+Please refer to the README.txt into the folder named 'integration'.
+        </description>
+        <description lang="de">Holt die TV Tipps des Tages aus den RSS-Feeds diverser Webseiten.
 
 Dieses Plugin benoetigt eine Skin-Integration!
-Hierfür bitte README.txt im Ordner integration beachten.
+Hierfür bitte README.txt im Ordner 'integration' beachten.
         </description>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
         <source>https://github.com/b-jesch/plugin.service.gto</source>

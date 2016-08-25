@@ -1,3 +1,13 @@
+2.0.2
+- TV Scraper 'TV Spielfilm' added
+
+2.0.1
+- some minor fixes
+
+2.0.0
+- Introducing dynamic loading of scraper libraries and selecting them - or your own written
+  scrapers - from settings. Just put your own scraper in resources/lib/ - that's all.
+
 1.0.10
 - Parameter passing adjusted when the addon is called as a plugin
 
