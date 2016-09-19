@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="0">
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <controls>
+    <control type="image">
+		<description>Weather image fake</description>
+		<left>0</left>
+		<top>0</top>
+		<width>1</width>
+		<height>1</height>
+		<texture>$INFO[Weather.Conditions]</texture>
+	</control>
+
+	  <include>CommonHomeBack</include>	
+	  <include>HomeWidgetsHorizontal</include>	
+	  <include>HomePlaying</include>	
+	  <include>HomeMainMenuHorizontal</include>		
+	  <include>CommonHomeButton</include>
+	  <include>CommonHomeWidgetControl</include>			
+	  <include>BigInfosTime</include>
+	  <include>BigInfosDatabaseCount</include>
+	  <include>BigInfosWeather</include>
+	  <include>HomeSubmenu</include>
+
+  </controls>
+</window>

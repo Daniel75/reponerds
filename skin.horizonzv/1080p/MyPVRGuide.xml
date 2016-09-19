@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">777</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundOverlayColor]</backgroundcolor>
+    <menucontrol>9000</menucontrol>
+    <include>ViewsidGuide</include>
+    <controls>
+        <include>GlobalOverlay</include>
+        <include>FakeButton777_PVR</include>
+        <include>ViewsGuide</include>
+        <include>PVRInfoTopPanel</include>
+        <control type="group">
+            <!-- <visible>!Skin.HasSetting(KioskMode)</visible> -->
+            <include>SidePanelAnimation</include>
+            <include>SidePanelBackground</include>
+            <control type="grouplist" id="9000">
+                <include>SidePanelProperty</include>
+                <include>SidePanelContent_PVR</include>
+            </control>
+            <include>SidePanelNavigation</include>
+        </control>
+        <control type="group">
+            <left>-75</left>
+            <top>34</top>
+            <include>CommonPageCount</include>
+        </control>
+        <include>SidePanelShortcuts</include>
+        <include>Clock</include>
+        <include>NavInfo</include>
+        <include>BehindDialogFadeOut</include>
+        <include>TouchButtons</include>
+    </controls>
+</window>

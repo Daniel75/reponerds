@@ -1,0 +1,1100 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  
+  <include name="HomeMainMenuHorizontal">
+	<control type="group">
+	<animation effect="slide" end="0,400" time="500" tween="Back" easing="in" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+	<include>Animation.ZoomIn</include>
+	<control type="list" id="9000">	
+	  <include condition="!Skin.HasSetting(HomeMainMenu2)">HomemenuLeftWebOS</include>
+      <include condition="Skin.HasSetting(HomeMainMenu2)">HomemenuLeftTizen</include>
+      <include condition="!Skin.HasSetting(HomeMainMenu2)">HomemenuTopWebOS</include>
+      <include condition="Skin.HasSetting(HomeMainMenu2)">HomemenuTopTizen</include>
+      <width>1850</width>
+	  <height>350</height>
+	  <ondown condition="Container(9000).Hasfocus(1)">9010</ondown>	
+	  <ondown condition="Container(9000).Hasfocus(2)">9011</ondown>	 
+	  <ondown condition="!Container(9000).Hasfocus(1) + !Container(9000).Hasfocus(2)">9012</ondown>	 
+	  <onright>9000</onright> 
+	  <onleft>9000</onleft> 	  
+	  <onup condition="Container(9000).Hasfocus(1)">8304</onup><!-- LiveTV -->
+	  <onup condition="Container(9000).Hasfocus(2)">8305</onup><!-- Radio -->
+	  <onup condition="Container(9000).Hasfocus(3)">8306</onup><!-- Filme -->
+	  <onup condition="Container(9000).Hasfocus(4)">8322</onup><!-- Videos -->
+	  <onup condition="Container(9000).Hasfocus(5)">8310</onup><!-- Playlist 1 -->
+	  <onup condition="Container(9000).Hasfocus(6)">8310</onup><!-- Playlist 2 -->
+	  <onup condition="Container(9000).Hasfocus(7)">8310</onup><!-- Playlist 3 -->  
+	  <onup condition="Container(9000).Hasfocus(8)">8307</onup><!-- Serien -->
+	  <onup condition="Container(9000).Hasfocus(9)">1860</onup><!-- SimplePlaylists -->
+	  <onup condition="Container(9000).Hasfocus(10)">8309</onup><!-- Music -->	  
+	  <onup condition="Container(9000).Hasfocus(11)">8308</onup><!-- Apps -->
+	  <onup condition="Container(9000).Hasfocus(12)">8312</onup><!-- Musicvideos -->
+	  <onup condition="Container(9000).Hasfocus(13)">8321</onup><!-- Pictures -->
+	  <onup condition="Container(9000).Hasfocus(14)">8319</onup><!-- Wetter -->
+	  <onup condition="Container(9000).Hasfocus(15)">1860</onup><!-- Sonstiges --> 	
+	  <onup condition="Container(9000).Hasfocus(16)">1860</onup><!-- DVD Laufwerk -->  
+	  <onup condition="Container(9000).Hasfocus(17)">8317</onup><!-- Youtube -->  
+	  <onup condition="Container(9000).Hasfocus(18)">88306</onup><!-- Pinboard -->	
+	  <onup condition="Container(9000).Hasfocus(19)">1860</onup><!-- Button 1 -->	
+	  <onup condition="Container(9000).Hasfocus(20)">1860</onup><!-- Button 2 -->	
+	  <onup condition="Container(9000).Hasfocus(31)">8331</onup><!-- Button 2 -->
+      <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+	  <orientation>horizontal</orientation>
+	  <focusposition>3</focusposition>
+      <movement>1</movement>
+      <itemlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+	    <control type="group">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <include>WebOSNoFocusButton</include>
+		</control>
+		<control type="image">
+          <left>133</left>
+          <top>150</top>
+          <width>40</width>
+          <height>40</height>
+          <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <colordiffuse>$VAR[ColorFontNormalHomemenu]</colordiffuse>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_16</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+		<control type="label">
+          <left>120</left>
+          <top>20</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_14</font>
+          <label>$INFO[ListItem.Property(Info)]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>
+		  <visible>Skin.HasSetting(HomemenuButtonOnDBCounter)</visible>		  
+        </control>
+      </itemlayout>
+	  <itemlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="group">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <include>TizenNoFocusButton</include>
+		</control>
+		<control type="image">
+          <left>110</left>
+          <top>105</top>
+          <width>40</width>
+          <height>40</height>
+          <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <colordiffuse>$VAR[ColorFontNormalHomemenu]</colordiffuse>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>185</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_16</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_14</font>
+          <label>$INFO[ListItem.Property(Info)]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>
+		  <visible>Skin.HasSetting(HomemenuButtonOnDBCounter)</visible>		  
+        </control>		
+      </itemlayout>
+      <focusedlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+	  <control type="group">
+	  <animation effect="slide" end="3.5,-20" center="auto" time="200">Focus</animation>
+	    <control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  <visible>!Control.HasFocus(9000)</visible>
+		</control>
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  <visible>Control.HasFocus(9000)</visible>
+		</control>	
+		<control type="image">
+          <left>133</left>
+          <top>150</top>
+          <width>40</width>
+          <height>40</height>
+          <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <colordiffuse>$VAR[ColorFontNormalHomemenu]</colordiffuse>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_16</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>  
+        </control>
+		<control type="label">
+          <left>120</left>
+          <top>20</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_14</font>
+          <label>$INFO[ListItem.Property(Info)]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>
+		  <visible>Skin.HasSetting(HomemenuButtonOnDBCounter)</visible>		  
+        </control>
+	   </control>
+      </focusedlayout>
+	  <focusedlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+	    <control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  <visible>!Control.HasFocus(9000)</visible>
+		</control>
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  <animation effect="zoom" end="105" center="auto" time="200">Focus</animation>
+		  <visible>Control.HasFocus(9000)</visible>
+		</control>	
+		<control type="image">
+          <left>110</left>
+          <top>105</top>
+          <width>40</width>
+          <height>40</height>
+          <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <colordiffuse>$VAR[ColorFontNormalHomemenu]</colordiffuse>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>185</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_16</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_14</font>
+          <label>$INFO[ListItem.Property(Info)]</label>
+		  <textcolor>$VAR[ColorFontNormalHomemenu]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadowHomemenu]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>
+		  <visible>Skin.HasSetting(HomemenuButtonOnDBCounter)</visible>	  
+        </control>
+      </focusedlayout>
+      <content>	   
+	      <include>HomeMenuContent</include>
+      </content>
+     </control>	
+	 <control type="group">
+	 <visible>!Skin.HasSetting(HomeMainMenu2)</visible>
+	 <control type="image">
+	  <left>-134</left>
+	  <top>725</top>
+	  <width>300</width>
+	  <height>350</height>
+	  <texture background="true">home/button/webos_button.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>1762</left>
+	  <top>725</top>
+	  <width>300</width>
+	  <height>350</height>
+	  <texture background="true">home/button/webos_button.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>20</left>
+	  <top>775</top>
+	  <width>60</width>
+	  <height>60</height>
+	  <texture background="true">$INFO[System.ProfileThumb]</texture>
+	  <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+	</control>
+	<control type="label">
+	  <left>10</left>
+	  <top>735</top>
+	  <height>45</height>
+	  <width>280</width>
+	  <label>$INFO[System.ProfileName]</label>
+	  <align>left</align>
+	  <aligny>center</aligny>
+	  <font>primal_13</font>
+	  <textcolor>$VAR[ColorButtonNoFocus]</textcolor>
+	  <scroll>false</scroll>
+	</control>
+   </control> 
+   <control type="group">
+     <visible>Skin.HasSetting(HomeMainMenu2)</visible>
+	 <top>80</top>
+	 <control type="image">
+	  <left>-185</left>
+	  <top>725</top>
+	  <width>300</width>
+	  <height>275</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>1812</left>
+	  <top>725</top>
+	  <width>300</width>
+	  <height>275</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>20</left>
+	  <top>775</top>
+	  <width>60</width>
+	  <height>60</height>
+	  <texture background="true">$INFO[System.ProfileThumb]</texture>
+	  <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+	</control>
+	<control type="label">
+	  <left>10</left>
+	  <top>735</top>
+	  <height>45</height>
+	  <width>280</width>
+	  <label>$INFO[System.ProfileName]</label>
+	  <align>left</align>
+	  <aligny>center</aligny>
+	  <font>primal_13</font>
+	  <textcolor>$VAR[ColorButtonNoFocus]</textcolor>
+	  <scroll>false</scroll>
+	</control>
+   </control>
+  </control> 
+  </include>
+  
+  <include name="HomeSubmenu">
+    <control type="group" id="9001">
+      <left>0</left>
+      <top>400</top>
+	  <animation effect="fade" start="0" time="100" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+	  <animation effect="slide" end="0,-400" time="800" tween="Back" easing="inout" condition="ControlGroup(9001).HasFocus">Conditional</animation>
+	  <!-- ======================= Submenu LiveTV ================================= -->
+      <control type="list" id="9010">
+	    <visible>Container(9000).Hasfocus(1)</visible>
+	    <include condition="!Skin.HasSetting(HomeMainMenu2)">HomemenuLeftWebOS</include>
+        <include condition="Skin.HasSetting(HomeMainMenu2)">HomemenuLeftTizen</include>
+		<include condition="!Skin.HasSetting(HomeMainMenu2)">SubmenuTopWebOS</include>
+        <include condition="Skin.HasSetting(HomeMainMenu2)">SubmenuTopTizen</include>
+		<width>1850</width>
+		<height>350</height>
+		<onright>9010</onright>
+        <onleft>9010</onleft>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+        <movement>1</movement>
+        <itemlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>	
+		<control type="image">
+          <left>120</left>
+          <top>120</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </itemlayout>
+	  <itemlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		</control>	
+		<control type="image">
+          <left>90</left>
+          <top>105</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </itemlayout>
+      <focusedlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+	  <control type="group">
+	  <animation effect="slide" end="3.5,-20" center="auto" time="200">Focus</animation>
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		</control>			
+		<control type="image">
+          <left>120</left>
+          <top>120</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+	   </control>
+      </focusedlayout>
+	  <focusedlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  <animation effect="zoom" end="105" center="auto" time="200">Focus</animation>
+		</control>	
+		<control type="image">
+          <left>90</left>
+          <top>105</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </focusedlayout>
+         <content target="video">$VAR[HomeWidgetsLiveTV]</content>
+      </control>
+	  <!-- ======================= Submenu Radio ================================= -->
+	  <control type="list" id="9011">
+	    <visible>Container(9000).Hasfocus(2)</visible>
+	    <include condition="!Skin.HasSetting(HomeMainMenu2)">HomemenuLeftWebOS</include>
+        <include condition="Skin.HasSetting(HomeMainMenu2)">HomemenuLeftTizen</include>
+		<include condition="!Skin.HasSetting(HomeMainMenu2)">SubmenuTopWebOS</include>
+        <include condition="Skin.HasSetting(HomeMainMenu2)">SubmenuTopTizen</include>
+		<width>1850</width>
+		<height>350</height>
+		<onright>9011</onright>
+        <onleft>9011</onleft>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+        <movement>1</movement>
+        <itemlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>	
+		<control type="image">
+          <left>120</left>
+          <top>120</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </itemlayout>
+	  <itemlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		</control>	
+		<control type="image">
+          <left>90</left>
+          <top>105</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </itemlayout>
+      <focusedlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+	  <control type="group">
+	  <animation effect="slide" end="3.5,-20" center="auto" time="200">Focus</animation>
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		</control>	
+		<control type="image">
+          <left>120</left>
+          <top>120</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>300</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+	   </control>
+      </focusedlayout>
+	  <focusedlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  <animation effect="zoom" end="105" center="auto" time="200">Focus</animation>
+		</control>	
+		<control type="image">
+          <left>90</left>
+          <top>110</top>
+          <width>80</width>
+          <height>80</height>
+          <texture background="true">$INFO[ListItem.Icon]</texture>
+		  <aspectratio>keep</aspectratio>
+        </control>
+		<control type="label">
+          <left>65</left>
+          <top>215</top>
+          <width>130</width>
+          <height>36</height>
+          <font>primal_15</font>
+          <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+        </control>
+      </focusedlayout>
+         <content target="video">$VAR[HomeWidgetsRadio]</content>
+      </control>
+	  <!-- ======================= Submenu Addons ================================= -->
+	  <control type="list" id="9012">
+	    <visible>!Container(9000).Hasfocus(1) + !Container(9000).Hasfocus(2)</visible>
+		<include condition="!Skin.HasSetting(HomeMainMenu2)">HomemenuLeftWebOS</include>
+		<include condition="Skin.HasSetting(HomeMainMenu2)">HomemenuLeftTizen</include>
+		<include condition="!Skin.HasSetting(HomeMainMenu2)">SubmenuTopWebOS</include>
+        <include condition="Skin.HasSetting(HomeMainMenu2)">SubmenuTopTizen</include>
+		<width>1850</width>
+		<height>350</height>
+		<onright>9012</onright>
+		<onleft>9110</onleft>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+		<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+		<movement>1</movement>
+		<itemlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+		<control type="group">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <include>WebOSNoFocusButton</include>
+		</control>
+		<control type="image">
+		  <left>120</left>
+		  <top>120</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <visible>!Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="image">
+		  <left>120</left>
+		  <top>120</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(FavIcon)]</texture>
+		</control>
+		<control type="image">
+		  <left>105</left>
+		  <top>120</top>
+		  <width>100</width>
+		  <height>100</height>
+		  <texture background="true">resource://resource.images.addonicons.color/$INFO[ListItem.Label,,.png]</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <visible>Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="label">
+		  <left>65</left>
+		  <top>300</top>
+		  <width>130</width>
+		  <height>36</height>
+		  <font>primal_15</font>
+		  <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+		</control>
+	  </itemlayout>
+	  <itemlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="group">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <include>TizenNoFocusButton</include>
+		</control>
+		<control type="image">
+		  <left>90</left>
+		  <top>90</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <visible>!Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="image">
+		  <left>90</left>
+		  <top>90</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(FavIcon)]</texture>
+		</control>
+		<control type="image">
+		  <left>75</left>
+		  <top>60</top>
+		  <width>100</width>
+		  <height>100</height>
+		  <texture background="true">resource://resource.images.addonicons.color/$INFO[ListItem.Label,,.png]</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <visible>Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="label">
+		  <left>35</left>
+		  <top>200</top>
+		  <width>200</width>
+		  <height>36</height>
+		  <font>primal_15</font>
+		  <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+		</control>
+	  </itemlayout>
+	  <focusedlayout condition="!Skin.HasSetting(HomeMainMenu2)" height="351" width="158">
+	  <control type="group">
+	  <animation effect="slide" end="3.5,-20" center="auto" time="200">Focus</animation>
+		<control type="image">
+		  <left>10</left>
+		  <top>5</top>
+		  <width>300</width>
+		  <height>350</height>
+		  <texture background="true">home/button/webos_button.png</texture>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		</control>	
+		<control type="image">
+		  <left>120</left>
+		  <top>120</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <visible>!Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="image">
+		  <left>120</left>
+		  <top>120</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(FavIcon)]</texture>
+		</control>
+		<control type="image">
+		  <left>105</left>
+		  <top>120</top>
+		  <width>100</width>
+		  <height>100</height>
+		  <texture background="true">resource://resource.images.addonicons.color/$INFO[ListItem.Label,,.png]</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <visible>Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="label">
+		  <left>65</left>
+		  <top>300</top>
+		  <width>130</width>
+		  <height>36</height>
+		  <font>primal_15</font>
+		  <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+		</control>
+	   </control>
+	  </focusedlayout>
+	  <focusedlayout condition="Skin.HasSetting(HomeMainMenu2)" height="251" width="243.5">
+		<control type="image">
+		  <left>10</left>
+		  <top>20</top>
+		  <width>249</width>
+		  <height>250</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  <animation effect="zoom" end="105" center="auto" time="200">Focus</animation>
+		</control>	
+		<control type="image">
+		  <left>90</left>
+		  <top>90</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+		  <visible>!Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="image">
+		  <left>90</left>
+		  <top>90</top>
+		  <width>80</width>
+		  <height>80</height>
+		  <texture background="true">$INFO[ListItem.Property(FavIcon)]</texture>
+		</control>
+		<control type="image">
+		  <left>75</left>
+		  <top>60</top>
+		  <width>100</width>
+		  <height>100</height>
+		  <texture background="true">resource://resource.images.addonicons.color/$INFO[ListItem.Label,,.png]</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <visible>Skin.HasSetting(AlternativeLogos)</visible> 
+		</control>
+		<control type="label">
+		  <left>35</left>
+		  <top>200</top>
+		  <width>200</width>
+		  <height>36</height>
+		  <font>primal_15</font>
+		  <label>$INFO[ListItem.Label]</label>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>center</align>
+		  <aligny>center</aligny>	  
+		</control>
+	  </focusedlayout>
+		<content>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</icon>
+			  <thumb></thumb>
+			  <property name="AddonPlot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</property>
+			  <property name="BackWebOS1">home/button/webos_button.png</property>
+		      <property name="BackTizen1">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton1))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton2))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</icon>
+			  <thumb></thumb>
+			  <property name="AddonPlot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</property>
+			  <property name="BackWebOS2">home/button/webos_button.png</property>
+		      <property name="BackTizen2">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton2))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton3))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</icon>
+			  <thumb></thumb>
+			  <property name="AddonPlot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</property>
+			  <property name="BackWebOS3">home/button/webos_button.png</property>
+		      <property name="BackTizen3">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton3))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton4))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</property>
+			  <property name="BackWebOS4">home/button/webos_button.png</property>
+		      <property name="BackTizen4">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton4))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton5))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</property>
+			  <property name="BackWebOS5">home/button/webos_button.png</property>
+		      <property name="BackTizen5">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton5))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton6))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton6)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton6))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton6))]</property>
+			  <property name="BackWebOS6">home/button/webos_button.png</property>
+		      <property name="BackTizen6">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton6))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton7))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton7)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton7))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton7))]</property>
+			  <property name="BackWebOS7">home/button/webos_button.png</property>
+		      <property name="BackTizen7">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton7))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton8))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton8)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton8))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton8))]</property>
+			  <property name="BackWebOS8">home/button/webos_button.png</property>
+		      <property name="BackTizen8">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton8))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton9))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton9)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton9))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton9))]</property>
+			  <property name="BackWebOS9">home/button/webos_button.png</property>
+		      <property name="BackTizen9">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton9))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton10))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton10)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton10))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton10))]</property>
+			  <property name="BackWebOS10">home/button/webos_button.png</property>
+		      <property name="BackTizen10">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton10))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton11))]</label>
+			  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton11)])</onclick>
+			  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton11))]</icon>
+			  <thumb></thumb>
+			  <property name="Plot">$INFO[ListItem.Property(Addon.Description)]</property>
+			  <property name="MenuIcon">$INFO[system.addonicon(Skin.String(HomeVideosButton11))]</property>
+			  <property name="BackWebOS11">home/button/webos_button.png</property>
+		      <property name="BackTizen11">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(HomeVideosButton11))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Icon)]</property>
+			  <property name="BackWebOS12">home/button/webos_button.png</property>
+		      <property name="BackTizen12">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite1.Path))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite2.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite2.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite2.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite2.Icon)]</property>
+			  <property name="BackWebOS13">home/button/webos_button.png</property>
+		      <property name="BackTizen13">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite2.Path))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite3.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite3.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite3.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite3.Icon)]</property>
+			  <property name="BackWebOS14">home/button/webos_button.png</property>
+		      <property name="BackTizen14">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite3.Path))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite4.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite4.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite4.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite4.Icon)]</property>
+			  <property name="BackWebOS15">home/button/webos_button.png</property>
+		      <property name="BackTizen15">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite4.Path))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite5.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite5.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite5.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite5.Icon)]</property>
+			  <property name="BackWebOS16">home/button/webos_button.png</property>
+		      <property name="BackTizen16">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite5.Path))</visible>
+		  </item>
+		  <item>
+			  <label>$INFO[Skin.String(Menu_HomeVideosButtonfavourite6.Label)]</label>
+			  <onclick>$INFO[Skin.String(Menu_HomeVideosButtonfavourite6.Path)]</onclick>
+			  <icon>$INFO[Skin.String(Menu_HomeVideosButtonfavourite6.Icon)]</icon>
+			  <thumb></thumb>
+			  <property name="FavIcon">$INFO[Skin.String(Menu_HomeVideosButtonfavourite6.Icon)]</property>
+			  <property name="BackWebOS17">home/button/webos_button.png</property>
+		      <property name="BackTizen17">skin/button_klein.png</property>
+			  <visible>!IsEmpty(Skin.String(Menu_HomeVideosButtonfavourite6.Path))</visible>
+		  </item>
+		</content>
+	  </control>
+	  <control type="group">
+	  <visible>!Skin.HasSetting(HomeMainMenu2)</visible>
+	  <control type="image">
+		<left>-134</left>
+		<top>725</top>
+		<width>300</width>
+		<height>350</height>
+		<texture background="true">home/button/webos_button.png</texture>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+	  <control type="image">
+		<left>1762</left>
+		<top>725</top>
+		<width>300</width>
+		<height>350</height>
+		<texture background="true">home/button/webos_button.png</texture>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+	  <control type="button" id="9110">
+		<left>20</left>
+		<top>745</top>
+		<width>60</width>
+		<height>60</height>
+		<font>-</font>
+		<label>-</label>
+		<onup>9000</onup>
+		<ondown>9000</ondown>	  
+		<onright>9012</onright> 
+		<onleft>1860</onleft>
+		<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">home/homeicons/widgets_list.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/homeicons/widgets_list.png</texturefocus>
+		<onclick>ActivateWindow(4107)</onclick>
+		<visible>!Control.HasFocus(9010) + !Control.HasFocus(9011)</visible>
+	  </control>
+	  </control>
+	  <control type="group">
+	  <visible>Skin.HasSetting(HomeMainMenu2)</visible>
+	  <top>80</top>
+	  <control type="image">
+		<left>-185</left>
+		<top>725</top>
+		<width>300</width>
+		<height>275</height>
+		<texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+	  <control type="image">
+		<left>1812</left>
+		<top>725</top>
+		<width>300</width>
+		<height>275</height>
+		<texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+	  <control type="button" id="9110">
+		<left>20</left>
+		<top>745</top>
+		<width>60</width>
+		<height>60</height>
+		<font>-</font>
+		<label>-</label>
+		<onup>9000</onup>
+		<ondown>9000</ondown>	  
+		<onright>9012</onright> 
+		<onleft>1860</onleft>
+		<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">home/homeicons/widgets_list.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/homeicons/widgets_list.png</texturefocus>
+		<onclick>ActivateWindow(4107)</onclick>
+		<visible>!Control.HasFocus(9010) + !Control.HasFocus(9011)</visible>
+	  </control>
+	</control>	 
+  </control>
+</include>
+	
+</includes>

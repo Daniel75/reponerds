@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">10</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <onload condition="System.HasAddon(plugin.image.mypicsdb)">RunScript(plugin.image.mypicsdb,0,?action='setproperties'&method ='Latest'&sort ='Added'&limit=7)</onload>
+  <onload condition="Skin.HasSetting(Use_Startup_Playlist)">PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onload>
+  <onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload> 
+	    <controls>
+		<control type="button" id="10">
+		  <animation effect="fade" start="0" end="100" time="0" delay="5000" condition="Skin.HasSetting(startupname)">Focus</animation>
+		  <description>trigger</description>
+		  <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+		  <texturenofocus>-</texturenofocus>
+		  <texturefocus>-</texturefocus>
+		  <visible>!Skin.HasSetting(Use_Startup_Playlist) + !Skin.HasSetting(Use_Startup_VideoPlaylist) + !Skin.HasSetting(Use_Startup_Favorites)</visible>
+		</control>
+		<control type="button" id="10">
+		  <animation effect="fade" start="0" end="100" time="0" delay="8000" condition="Skin.HasSetting(startupname)">Focus</animation>
+		  <description>trigger with startup Playlist</description>
+		  <onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Playlist_Path)])</onfocus>
+		  <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+		  <texturenofocus>-</texturenofocus>
+		  <texturefocus>-</texturefocus>
+		  <visible>Skin.HasSetting(Use_Startup_Playlist)</visible>
+		</control>
+		<control type="button" id="10">
+		  <animation effect="fade" start="0" end="100" time="0" delay="5000" condition="Skin.HasSetting(startupname)">Focus</animation>
+		  <description>trigger with startup Favorites</description>
+		  <onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_Favorites_Path)])</onfocus>
+		  <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+		  <texturenofocus>-</texturenofocus>
+		  <texturefocus>-</texturefocus>
+		  <visible>Skin.HasSetting(Use_Startup_Favorites)</visible>
+		</control>
+		<control type="button" id="10">
+		  <animation effect="fade" start="0" end="100" time="0" delay="5000" condition="Skin.HasSetting(startupname)">Focus</animation>
+		  <description>trigger with startup Playlist</description>
+		  <onfocus>XBMC.PlayMedia($INFO[Skin.String(Startup_VideoPlaylist_Path)],1)</onfocus>
+		  <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+		  <texturenofocus>-</texturenofocus>
+		  <texturefocus>-</texturefocus>
+		  <visible>Skin.HasSetting(Use_Startup_VideoPlaylist)</visible>
+		</control>
+	</controls>
+</window>

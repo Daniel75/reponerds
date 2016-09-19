@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1123" type="dialog">
+	<defaultcontrol always="true">90100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>457</left>
+		<top>240</top>
+	</coordinates>
+	<onunload condition="!IsEmpty(Skin.String(ItemToEdit.Path))">Skin.SetString($INFO[Window(Home).Property(Destiny.Path)],$INFO[Skin.String(ItemToEdit.Path)])</onunload>
+	<onunload condition="!IsEmpty(Skin.String(ItemToEdit.Label))">Skin.SetString($INFO[Window(Home).Property(Destiny.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onunload>
+	<onunload>ClearProperty(Destiny.Path,Home)</onunload>
+	<onunload>ClearProperty(Destiny.Label,Home)</onunload>
+	<onunload>CancelAlarm(DialogClose,True)</onunload>
+	<controls>
+		<control type="list" id="90100">
+			<left>189</left>
+			<top>88</top>
+			<width>628</width>
+			<height>480</height>
+			<onup>90100</onup>
+			<ondown>90100</ondown>
+			<onleft>90100</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="65" width="356">
+				<control type="image">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <texture background="true">skin/button_klein.png</texture>
+				  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				</control>
+				<control type="label">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <font>primal_20</font>
+				  <textoffsetx>15</textoffsetx>
+				  <textcolor>$VAR[ColorFontNormal]</textcolor>
+				  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				  <align>right</align>
+				  <aligny>center</aligny>
+				  <label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="65" width="356">
+				<control type="image">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <texture background="true">skin/button_klein.png</texture>
+				  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				</control>
+				<control type="label">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <font>primal_20</font>
+				  <textoffsetx>15</textoffsetx>
+				  <textcolor>$VAR[ColorFontNormal]</textcolor>
+				  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				  <align>right</align>
+				  <aligny>center</aligny>
+				  <label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<item>
+					<label>$LOCALIZE[10035]</label>
+					<onclick>Skin.Reset(ItemToEdit.Path)</onclick>
+					<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.Path)],$INFO[Skin.String(ItemToEdit.Path)])</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1037]</label>
+					<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.video)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1038]</label>
+					<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.audio)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1043]</label>
+					<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.executable)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[1039]</label>
+					<onclick>Skin.SetAddon(ItemToEdit.Path,xbmc.addon.image)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Label,$INFO[system.addontitle(Skin.String(ItemToEdit.Path))])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,$INFO[Skin.String(ItemToEdit.Path),RunAddon(,)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[20012]</label>
+					<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(Videos,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[20011]</label>
+					<onclick>Skin.SetFile(ItemToEdit.Path,.xsp|.m3u,special://profile/playlists/music/)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.Path,ActivateWindow(MusicLibrary,$INFO[Skin.String(ItemToEdit.Path)],return))</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+				<!--<item>
+					<label>$LOCALIZE[1036]</label>
+					<onclick>RunScript(script.favourites,property=ItemToEdit)</onclick>
+					<onclick>AlarmClock(DialogClose,Dialog.Close(1123),00:05,silent)</onclick>
+				</item>-->
+				<item>
+					<label>$LOCALIZE[20190]</label>
+					<onclick>Skin.SetString(ItemToEdit.Path)</onclick>
+					<onclick>Skin.Reset(ItemToEdit.Label)</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.Label)],$INFO[Skin.String(ItemToEdit.Label)])</onclick>
+					<onclick>Dialog.Close(1123)</onclick>
+				</item>
+			</content>
+		</control>
+	</controls>
+</window>

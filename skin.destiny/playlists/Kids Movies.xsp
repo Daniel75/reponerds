@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>kds</name>
+    <match>all</match>
+    <rule field="genre" operator="is">
+        <value>Animation</value>
+        <value>Familie</value>
+        <value>Family</value>
+    </rule>
+	<order direction="ascending">sorttitle</order>
+</smartplaylist>

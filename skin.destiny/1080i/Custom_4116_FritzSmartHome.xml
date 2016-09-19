@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="4116" type="dialog">
+  <defaultcontrol always="true">49000</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <left>300</left>
+    <top>150</top>
+  </coordinates>
+  <controls>
+    <control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1297</width>
+	  <height>700</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>12</left>
+	  <top>12</top>
+	  <width>1273</width>
+	  <height>676</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+    <control type="panel" id="49000">
+      <left>10</left>
+      <top>17</top>
+      <width>1300</width>
+      <height>670</height>
+	  <onright>49000</onright> 
+	  <onleft>49000</onleft> 
+      <orientation>vertical</orientation>
+	  <focusposition>0</focusposition>
+      <movement>1</movement>
+      <itemlayout height="155" width="635">
+	      <control type="image">
+			<left>5</left>
+			<top>0</top>
+			<width>630</width>
+			<height>150</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>20</left>
+			<top>5</top>
+			<width>145</width>
+			<height>145</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>20</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_18_Title</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>60</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Property(Temp)]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>95</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Property(Consum)]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+	   </itemlayout>
+       <focusedlayout height="155" width="635">
+	      <control type="image">
+			<left>5</left>
+			<top>0</top>
+			<width>630</width>
+			<height>150</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>20</left>
+			<top>5</top>
+			<width>145</width>
+			<height>145</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>20</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_18_Title</font>
+			<label>$INFO[ListItem.Label]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>60</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Property(Temp)]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+		  <control type="label">
+			<left>200</left>
+			<top>95</top>
+			<width>1200</width>
+			<height>36</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Property(Consum)]</label>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>	  
+		  </control>
+	   </focusedlayout>
+	    <content>
+		   <item id="1">
+			  <label>Wohnzimmer TV Lampe</label>
+			  <onclick>ActivateWindow(4115)</onclick>
+			  <icon>default/fritzdect200.png</icon>
+			  <thumb></thumb>
+			  <property name="Temp">Temperatur gemessen: 19,5°</property>
+			  <property name="Consum">Gesamtverbrauch: 10 kWh</property>	 
+		   </item>
+		   <item id="2">
+			  <label>Wohnzimmer Couch Lampe</label>
+			  <onclick>ActivateWindow(4115)</onclick>
+			  <icon>default/fritzdect200.png</icon>
+			  <thumb></thumb>
+			  <property name="Temp">Temperatur gemessen: 19,5°</property>
+			  <property name="Consum">Gesamtverbrauch: 135 kWh</property> 
+		   </item>
+		   <item id="3">
+			  <label>Flur Lampe</label>
+			  <onclick>ActivateWindow(4115)</onclick>
+			  <icon>default/fritzdect200.png</icon>
+			  <thumb></thumb>
+			  <property name="Temp">Temperatur gemessen: 19,5°</property>
+			  <property name="Consum">Gesamtverbrauch: 367 kWh</property> 
+		   </item>
+		   <item id="4">
+			  <label>Flur Lampe 2</label>
+			  <onclick>ActivateWindow(4115)</onclick>
+			  <icon>default/fritzdect200.png</icon>
+			  <thumb></thumb>
+			  <property name="Temp">Temperatur gemessen: 19,5°</property>
+			  <property name="Consum">Gesamtverbrauch: 65 kWh</property> 
+		   </item>
+		   <item id="5">
+			  <label>Garten Lampe</label>
+			  <onclick>ActivateWindow(4115)</onclick>
+			  <icon>default/fritzdect200.png</icon>
+			  <thumb></thumb>
+			  <property name="Temp">Temperatur gemessen: 19,5°</property>
+			  <property name="Consum">Gesamtverbrauch: 48 kWh</property> 
+		   </item>
+		</content>
+    </control>
+  </controls>
+</window>

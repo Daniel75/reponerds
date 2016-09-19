@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4112" type="dialog">
+  <defaultcontrol always="true">36100</defaultcontrol>
+	<controls>
+		<include>BlackBack</include>
+		<control type="group" id="576757">
+			<include>openclosebox</include>
+			<left>235</left>
+			<top>60</top>
+			<width>810</width>
+			<height>600</height>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>810</width>
+				<height>600</height>
+				<colordiffuse>grey1</colordiffuse>
+				<texture border="1">WhiteBack.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>10</left>
+				<top>10</top>
+				<width>790</width>
+				<height>580</height>
+				<texture border="1">WhiteBack.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>40</left>
+				<top>15</top>
+				<width>730</width>
+				<height>30</height>
+				<font>impacted21</font>
+				<label>$LOCALIZE[51485]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>grey2</textcolor>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>10</left>
+				<top>48</top>
+				<width>790</width>
+				<height>40</height>
+				<colordiffuse>grey2</colordiffuse>
+				<texture border="1">WhiteBack.png</texture>
+			</control>
+			<control type="grouplist">
+				<left>580</left>
+				<top>370</top>
+				<width>220</width>
+				<height>220</height>
+				<control type="image">
+					<description>background image</description>
+					<width>300</width>
+					<height>300</height>
+					<aspectratio align="left">keep</aspectratio>
+					<colordiffuse>grey1</colordiffuse>
+					<texture border="1">PVR-HasTimer2.png</texture>
+				</control>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<left>25</left>
+				<top>52</top>
+				<width>200</width>
+				<label>$LOCALIZE[21820]</label>
+				<align>left</align>
+				<scroll>false</scroll>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<left>225</left>
+				<top>52</top>
+				<width>200</width>
+				<label>$LOCALIZE[19029] / $LOCALIZE[369]$LOCALIZE[50038]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<scroll>false</scroll>
+			</control>
+			<control type="button" id="36100">
+				<left>305</left>
+				<top>94</top>
+				<width>200</width>
+				<ondown>36100</ondown>
+				<label>close</label>
+				<textcolor>black</textcolor>
+				<texturenofocus>-</texturenofocus>
+				<onclick>Dialog.Close(all,true)</onclick>
+			</control>
+			<control type="list" id="36101">
+				<left>10</left>
+				<top>90</top>
+				<width>790</width>
+				<height>580</height>
+				<onright>9000</onright>
+				<onleft>9000</onleft>
+				<onup>36100</onup>
+				<ondown>36100</ondown>
+				<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>vertical</orientation>
+				<movement>1</movement>
+				<itemlayout height="50" width="790">
+					<control type="label">
+						<left>20</left>
+						<top>10</top>
+						<width>190</width>
+						<height>36</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!SubString(ListItem.Label,...)</visible>
+					</control>
+					<control type="label">
+						<left>225</left>
+						<top>10</top>
+						<width>570</width>
+						<height>36</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.ChannelName][CR]$INFO[ListItem.Label2]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!SubString(ListItem.Label,...)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50" width="790">
+					<control type="label">
+						<left>20</left>
+						<top>10</top>
+						<width>190</width>
+						<height>36</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!SubString(ListItem.Label,...)</visible>
+					</control>
+					<control type="label">
+						<left>225</left>
+						<top>10</top>
+						<width>570</width>
+						<height>36</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.ChannelName][CR]$INFO[ListItem.Label2]</label>
+						<align>left</align>
+						<aligny>top</aligny>
+						<visible>!SubString(ListItem.Label,...)</visible>
+					</control>
+				</focusedlayout>
+				<content target="pvr" limit="10">pvr://timers/tv/grouped</content>
+			</control>
+		</control>
+    </controls>
+</window>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+<!-- ===================================================================================== -->
+<!-- =================================== THUMB VIEW ID 580 =============================== -->
+<!-- ===================================================================================== -->
+<include name="View_580_PictureWall">
+	  
+	<control type="group">
+	<visible>Control.IsVisible(580)</visible>
+	<left>0</left>
+	<top>0</top>
+	<animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+	<include>Animation.ZoomIn</include>
+	<control type="panel" id="580">
+		  <include>Animation.ZoomIn</include>
+		  <left>175</left>
+		  <top>150</top>
+		  <width>1920</width>
+		  <height>835</height>
+		  <onright>1860</onright>
+		  <onleft>9020</onleft>
+		  <onup>606</onup>
+		  <ondown>606</ondown>
+		  <viewtype label="Picture Wall">list</viewtype>
+		  <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+		  <focusposition>0</focusposition>
+		  <orientation>vertical</orientation>
+		  <movement>1</movement>
+		  <itemlayout height="280" width="425">
+		  <control type="group">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>425</width>
+			<height>280</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>	
+		  <control type="image">
+			<left>12</left>
+			<top>12</top>
+			<width>400</width>
+			<height>257</height>
+			<texture background="true" fallback="background.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>160</top>
+			<width>425</width>
+			<height>120</height>
+			<texture background="true">skin/button_klein_tranz70.png</texture>
+			<bordertexture border="10">-</bordertexture>
+	        <bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>180</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_16_Bold</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[552]: $INFO[ListItem.PictureDate]</label>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>210</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[21823]: $INFO[ListItem.PictureCamModel]</label>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>235</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[553]: $INFO[ListItem.PictureResolution]</label>
+		  </control>	
+		 </control>
+		</itemlayout>
+		<focusedlayout height="280" width="425">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>425</width>
+			<height>280</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>12</left>
+			<top>12</top>
+			<width>400</width>
+			<height>257</height>
+			<texture background="true" fallback="background.png">$INFO[ListItem.Icon]</texture>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>160</top>
+			<width>425</width>
+			<height>120</height>
+			<texture background="true">skin/button_klein_tranz70.png</texture>
+			<bordertexture border="10">-</bordertexture>
+	        <bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>180</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_16_Bold</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[552]: $INFO[ListItem.PictureDate]</label>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>210</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[21823]: $INFO[ListItem.PictureCamModel]</label>
+		  </control>
+		  <control type="label">
+			<left>25</left>
+			<top>235</top>
+			<width>380</width>
+			<height>30</height>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label fallback=".NA.">$LOCALIZE[553]: $INFO[ListItem.PictureResolution]</label>
+		  </control>
+		</focusedlayout>
+	  </control>
+	
+	  <control type="scrollbar" id="66">
+	      <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+		  <left>850</left>
+		  <top>650</top>
+		  <width>20</width>
+		  <height>400</height>
+		  <texturesliderbackground border="14,0,14,0">ScrollBarV.png</texturesliderbackground>
+		  <textureslidernib>ScrollBarV_bar.png</textureslidernib>
+		  <textureslidernibfocus>ScrollBarV_bar_focus.png</textureslidernibfocus>
+		  <onleft>2</onleft>
+		  <onright>580</onright>
+		  <showonepage>false</showonepage>
+		  <orientation>vertical</orientation>
+		  <visible allowhiddenfocus="true">Control.IsVisible(580) + Control.HasFocus(66)</visible>
+	  </control>
+	</control>
+  </include>
+  
+</includes>

@@ -1,0 +1,1695 @@
+# Kodi Media Center language file
+# Addon Name: Destiny
+# Addon id: skin.destiny
+# Addon Provider: Jugger
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: German (http://www.transifex.com/projects/p/xbmc-skins/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#49965"
+msgid "Loading..."
+msgstr "Lade..."
+
+msgctxt "#49966"
+msgid "delete group"
+msgstr "Gruppe löschen"
+
+msgctxt "#49967"
+msgid "rename group"
+msgstr "Gruppe umbenennen"
+
+msgctxt "#49968"
+msgid "Add group"
+msgstr "Gruppe hinzufügen"
+
+msgctxt "#49969"
+msgid "Channels in groups"
+msgstr "Kanäle in Gruppen"
+
+msgctxt "#49970"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#49971"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#49972"
+msgid "Ends at"
+msgstr "Endet um"
+
+msgctxt "#49973"
+msgid "path:"
+msgstr "Pfad:"
+
+msgctxt "#49974"
+msgid "Modify database"
+msgstr "Editiere Datenbank"
+
+msgctxt "#49975"
+msgid "Fanart.tv"
+msgstr "Fanart.tv"
+
+msgctxt "#49976"
+msgid "Cinema"
+msgstr "Cinema"
+
+msgctxt "#49977"
+msgid "Watch Later"
+msgstr "Schau später"
+
+msgctxt "#49978"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#49979"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#49980"
+msgid "A : "
+msgstr "A : "
+
+msgctxt "#49981"
+msgid "B : "
+msgstr "B : "
+
+msgctxt "#49982"
+msgid "Playback"
+msgstr "Wiedergabe"
+
+msgctxt "#49983"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#49984"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#49985"
+msgid "Series Search"
+msgstr "Serien Suche"
+
+msgctxt "#49986"
+msgid "Movie-Sets"
+msgstr "Film-Sets"
+
+msgctxt "#49987"
+msgid "added Recently"
+msgstr "Kürzlich hinzugefügt"
+
+msgctxt "#49988"
+msgid "Movie Search"
+msgstr "Film Suche"
+
+msgctxt "#49989"
+msgid "Skin Settings"
+msgstr "Skin Einstellung"
+
+msgctxt "#49990"
+msgid "Upcoming recordings"
+msgstr "Anstehend-Aufnahmen"
+
+msgctxt "#49991"
+msgid "TV-Recordings"
+msgstr "TV-Aufnahmen"
+
+msgctxt "#49992"
+msgid "EPG - program Guide"
+msgstr "EPG - Programmguide"
+
+msgctxt "#49993"
+msgid "Radio channel list"
+msgstr "Radio Kanalliste"
+
+msgctxt "#49994"
+msgid "TV channel list"
+msgstr "TV Kanalliste"
+
+msgctxt "#49995"
+msgid "Music-Addons"
+msgstr "Musik-Addons"
+
+msgctxt "#49996"
+msgid "Music Search"
+msgstr "Musik Suche"
+
+msgctxt "#49997"
+msgid "Video Addons"
+msgstr "Video Addons"
+
+msgctxt "#49998"
+msgid "Root"
+msgstr "Haupt"
+
+msgctxt "#49999"
+msgid "Search"
+msgstr "Suche"
+
+msgctxt "#50000"
+msgid "Latest Movies"
+msgstr "Letzte Filme"
+
+msgctxt "#50001"
+msgid "Latest Concerts"
+msgstr "Letzte Konzerte"
+
+msgctxt "#50002"
+msgid "Latest Serien"
+msgstr "Letzte Serien"
+
+msgctxt "#50003"
+msgid "Latest Albums"
+msgstr "Letzte Alben"
+
+msgctxt "#50004"
+msgid "Compilations"
+msgstr "Compilations"
+
+msgctxt "#50005"
+msgid "Last seen movies"
+msgstr "Zuletzt gesehene Filme"
+
+msgctxt "#50006"
+msgid "Last seen Series"
+msgstr "Zuletzt gesehene Serien"
+
+msgctxt "#50007"
+msgid "Concerts-Events"
+msgstr "Konzert-Termine"
+
+msgctxt "#50008"
+msgid "Statistics"
+msgstr "Statistik"
+
+msgctxt "#50009"
+msgid "Last belonged songs"
+msgstr "Zuletzt gehörte Songs"
+
+msgctxt "#50010"
+msgid "current weather"
+msgstr "Aktuelles Wetter"
+
+msgctxt "#50011"
+msgid "Place"
+msgstr "Ort"
+
+msgctxt "#50012"
+msgid "Ends at"
+msgstr "Endet um"
+
+msgctxt "#50013"
+msgid "Next"
+msgstr "Nächste"
+
+msgctxt "#50014"
+msgid "[B]MANAGE YOUR PROFILE[/B][CR][CR]Choose your Kodi user profile to log in."
+msgstr "[B]VERWALTE DEINE PROFILE[/B][CR][CR]Wähle dein Kodi User-Profil zum einloggen."
+
+msgctxt "#50015"
+msgid "power setting"
+msgstr "Energieeinstellung"
+
+msgctxt "#50016"
+msgid "Rewind"
+msgstr "Zurückspulen"
+
+msgctxt "#50017"
+msgid "Pause"
+msgstr "Pause"
+
+msgctxt "#50018"
+msgid "Stop"
+msgstr "Stop"
+
+msgctxt "#50019"
+msgid "Fast forward"
+msgstr "Vorspulen"
+
+msgctxt "#50020"
+msgid "Visualisierungs-Settings"
+msgstr "Visualisierungs-Einstellungen"
+
+msgctxt "#50021"
+msgid "Kodi lyrics"
+msgstr "Kodi Liedtexte"
+
+msgctxt "#50022"
+msgid "Current"
+msgstr "Aktuell"
+
+msgctxt "#50023"
+msgid "Audio characteristics"
+msgstr "Audio Eigenschaften"
+
+msgctxt "#50024"
+msgid "Aktuelle Settings"
+msgstr "Aktuelle Einstellungen"
+
+msgctxt "#50025"
+msgid "Music: files"
+msgstr "Musik: Dateien"
+
+msgctxt "#50026"
+msgid "View Settings"
+msgstr "Ansichts Einstellung"
+
+msgctxt "#50027"
+msgid "Eject"
+msgstr "Auswerfen"
+
+msgctxt "#50028"
+msgid "General settings"
+msgstr "Allgemeine Einstellung"
+
+msgctxt "#50029"
+msgid "Order : Descending"
+msgstr "Sortieren: Absteigend"
+
+msgctxt "#50030"
+msgid "View Settings"
+msgstr "Ansichts Einstellung"
+
+msgctxt "#50031"
+msgid "show Extrafanart"
+msgstr "zeige Extrafanart"
+
+msgctxt "#50032"
+msgid "show only a cover"
+msgstr "zeige nur ein Cover"
+
+msgctxt "#50033"
+msgid "put switchtimers"
+msgstr "Umschalttimer setzen"
+
+msgctxt "#50034"
+msgid "show DVD"
+msgstr "zeige DVD"
+
+msgctxt "#50035"
+msgid "Clearart On/Off"
+msgstr "Clearart Ein/Aus"
+
+msgctxt "#50036"
+msgid "Logo On/Off"
+msgstr "Logo Ein/Aus"
+
+msgctxt "#50037"
+msgid "Sets Logo On/Off"
+msgstr "Sets Logo Ein/Aus"
+
+msgctxt "#50038"
+msgid "switchtimers"
+msgstr "Umschalttimer"
+
+msgctxt "#50039"
+msgid "Fanart fade out"
+msgstr "Fanart ausblenden"
+
+msgctxt "#50040"
+msgid "Plot On/Off"
+msgstr "Beschreibung Aus/An"
+
+msgctxt "#50041"
+msgid "Home Automation"
+msgstr "Home Automation"
+
+msgctxt "#50042"
+msgid "Cover off"
+msgstr "Cover aus"
+
+msgctxt "#50043"
+msgid "Similar Artists"
+msgstr "Ãhnliche Künstler"
+
+msgctxt "#50044"
+msgid "Currently tagged"
+msgstr "Aktuell markiert"
+
+msgctxt "#50045"
+msgid "Open Playlist"
+msgstr "Playliste öffnen"
+
+msgctxt "#50046"
+msgid "Save Playlist"
+msgstr "Playliste speichern"
+
+msgctxt "#50047"
+msgid "close Playlist"
+msgstr "Playliste schliessen"
+
+msgctxt "#50048"
+msgid "System music files"
+msgstr "System Musik-Dateien"
+
+msgctxt "#50049"
+msgid "Hide INFO"
+msgstr "Verstecke INFO"
+
+msgctxt "#50050"
+msgid "Current temperature"
+msgstr "Aktuelle Temperatur"
+
+msgctxt "#50051"
+msgid "Last update"
+msgstr "Letztes Update"
+
+msgctxt "#50052"
+msgid "sunrise"
+msgstr "Sonnenaufgang"
+
+msgctxt "#50053"
+msgid "sunset"
+msgstr "Sonnenuntergang"
+
+msgctxt "#50054"
+msgid "10 day forecast"
+msgstr "10-Tage-Prognose"
+
+msgctxt "#50055"
+msgid "36 hour forecast"
+msgstr "36-Stunden-Prognose"
+
+msgctxt "#50056"
+msgid "Weekend Forecast"
+msgstr "Wochenend-Prognose"
+
+msgctxt "#50057"
+msgid "Hourly Weather forecast"
+msgstr "Stündliche Prognose"
+
+msgctxt "#50058"
+msgid "Map"
+msgstr "Karte"
+
+msgctxt "#50059"
+msgid "Precipitations probability"
+msgstr "Niederschlagswahrscheinlichkeit"
+
+msgctxt "#50060"
+msgid "[B]CONFIGURE PRESENTATION[/B][CR]Change the Skin · Choose your language and region[CR]Change the file display · Choose your screensaver"
+msgstr "[B]KONFIGURIERE DARSTELLUNG[/B][CR]Ändere den Skin · Wähle Sprache und Region[CR]Ändere die Dateianzeige · Wähle deinen Bildschirmschoner"
+
+msgctxt "#50061"
+msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR]Manage your video database · Select video playback options[CR]Change the video display · Select the subtitle font"
+msgstr "[B]KONFIGURIERE VIDEO-EINSTELLUNGEN[/B][CR]Manage deine Video-Datenbank · Wähle Video-Wiedergabe Optionen[CR]Ändere die Video-Darstellung · Wähle die Untertitel-Schrift"
+
+msgctxt "#50062"
+msgid "Live TV"
+msgstr ""
+
+msgctxt "#50063"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR]Change the fullscreen · Manage your EPG"
+msgstr "KONFIGURIERE TV-EINSTELLUNGEN[/B][CR]Ändere die Vollbild-Anzeige · Manage dein EPG"
+
+msgctxt "#50064"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR]Preference for music database , playback options[CR]Configure the song Submission."
+msgstr "[B]KONFIGURIERE MUSIK-EINSTELLUNGEN[/B][CR]Einstellung für Musik-Datenbank, Wiedergabe Optionen[CR]Konfiguriere die Lied Submission · Wähle Karaoke Optionen"
+
+msgctxt "#50065"
+msgid "[B]CONFIGURE IMAGES SETTINGS[/B][CR]Change the photo display · Configure slideshows"
+msgstr "[B]KONFIGURIERE BILDER-EINSTELLUNGEN[/B][CR]Ändere die Bilder-Darstellung · Konfiguriere Diashows"
+
+msgctxt "#50066"
+msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR]Choose three cities for weather data"
+msgstr "[B]KONFIGURIERE WETTER-EINSTELLUNGEN[/B][CR]Wähle drei Städte für die Wetterdaten"
+
+msgctxt "#50067"
+msgid "[B]CONFIGURE NETWORK SETTINGS[/B][CR]Configure Remote via UPnP and HTTP[CR]Configure network shares and Internet"
+msgstr "[B]KONFIGURIERE NETZWERK-EINSTELLUNGEN[/B][CR]Konfiguriere Remote via UPnp und HTTP[CR]Konfiguriere Netzwerkfreigaben und Internetzugang"
+
+msgctxt "#50068"
+msgid "[B]CONFIGURE ADDONS[/B][CR]Change Addon setting · Install new addons or uninstall your Addons."
+msgstr "[B]KONFIGURIERE ADDONS[/B][CR]Ändere Addon Einstellung · Installiere neue Addons oder deinstalliere dein Addons."
+
+msgctxt "#50069"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR]Setting display, remote control, power options[CR]Set Enable debugging · User rights"
+msgstr "[B]KONFIGURIERE SYSTEM-EINSTELLUNGEN[/B][CR]Einstellung für Display, Fernbedienung, Energieoptionen[CR]Aktiviere Debugging · Benutzerrechte setzen"
+
+msgctxt "#50070"
+msgid "[B]CONFIGURE SKIN SETTINGS[/B][CR]Configure Destiny[CR]Adding and removing main menu items"
+msgstr "[B]KONFIGURIERE SKIN-EINSTELLUNGEN[/B][CR]Konfiguriere Destiny[CR]Hinzufügen und Entfernen von Hauptmenü-Items"
+
+msgctxt "#50071"
+msgid "[B]MANAGE YOUR PROFILE[/B][CR]Choose your Kodi © user profile to log in."
+msgstr "[B]VERWALTE DEINE PROFILE[/B][CR]Wähle dein Kodi© User-Profil zum einloggen."
+
+msgctxt "#50072"
+msgid "[B]SYSTEM INFOS[/B][CR]All about your system."
+msgstr "[B]SYSTEM INFOS[/B][CR]Alle Infos zu deinem System."
+
+msgctxt "#50073"
+msgid "system Info"
+msgstr "Systeminfo"
+
+msgctxt "#50074"
+msgid "Featured profile"
+msgstr "Ausgewähltes Profil"
+
+msgctxt "#50075"
+msgid "last login"
+msgstr "Letzter Login"
+
+msgctxt "#50076"
+msgid "RAM required:"
+msgstr "RAM benötigt:"
+
+msgctxt "#50077"
+msgid "Settings"
+msgstr "Einstellung"
+
+msgctxt "#50078"
+msgid "Mediathek"
+msgstr "Mediathek"
+
+msgctxt "#50079"
+msgid "Preview Playlists"
+msgstr "Preview Playlisten"
+
+msgctxt "#50080"
+msgid "Last seen"
+msgstr "Zuletzt gesehen"
+
+msgctxt "#50081"
+msgid "Background"
+msgstr "Hintergrund"
+
+msgctxt "#50082"
+msgid "Change the Default Background"
+msgstr "Ändere den Default Hintergrund"
+
+msgctxt "#50083"
+msgid "Activate lyrics in music OSD"
+msgstr "Aktiviere Liedtexte in Musik-OSD"
+
+msgctxt "#50084"
+msgid "PATH TO SONG TEXT SCRIPT"
+msgstr "PFAD ZUM LIEDTEXT-SKRIPT"
+
+msgctxt "#50085"
+msgid "Activate subtitles in video OSD"
+msgstr "Aktiviere Untertitel herunterladen in Video-OSD"
+
+msgctxt "#50086"
+msgid "PATH TO SUBTITLE SCRIPT"
+msgstr "PFAD ZUM UNTERTITEL-SKRIPT"
+
+msgctxt "#50087"
+msgid "Enable Kiosk mode ( disable slideout menu )"
+msgstr "Aktiviere Kiosk Modus (deaktiviere Slideout-Menü)"
+
+msgctxt "#50088"
+msgid "Activate CDART in music visualization"
+msgstr "Aktiviere CDArt in der Musik-Visualisierung"
+
+msgctxt "#50089"
+msgid "See "Pause" in slideshow"
+msgstr "Zeige "Pause" in Diashow"
+
+msgctxt "#50090"
+msgid "Show title at the background scan"
+msgstr "Zeige Titel beim Hintergrundscan"
+
+msgctxt "#50091"
+msgid "Activate Artist slideshow script in music visualization"
+msgstr "Aktiviere Artist-Slideshow-Skript in der Musik-Visualisierung"
+
+msgctxt "#50092"
+msgid "Setting Artist Slideshow Script"
+msgstr "Einstellung für Artist-Slideshow Script"
+
+msgctxt "#50093"
+msgid "Enable CD Wall"
+msgstr "CD Wall einschalten"
+
+msgctxt "#50094"
+msgid "CD Wall Path"
+msgstr "CD Wall Pfad"
+
+msgctxt "#50095"
+msgid "Activate own background in music visualization"
+msgstr "Aktiviere eigenen Hintergrund in der Musik-Visualisierung"
+
+msgctxt "#50096"
+msgid "Enable black background in music visualization"
+msgstr "Aktiviere schwarzen Hintergrund in der Musik-Visualisierung"
+
+msgctxt "#50097"
+msgid "Activate music playlist at startup"
+msgstr "Aktiviere Musik-Playliste beim Starten"
+
+msgctxt "#50098"
+msgid "Choose Music Playlist"
+msgstr "Wähle Musik-Playliste"
+
+msgctxt "#50099"
+msgid "Activate music addon startup"
+msgstr "Aktiviere Musik-Addon beim Starten"
+
+msgctxt "#50100"
+msgid "Choose music Addon"
+msgstr "Wähle Musik-Addon"
+
+msgctxt "#50101"
+msgid "Activate video playlist at startup"
+msgstr "Aktiviere Video-Playliste beim Starten"
+
+msgctxt "#50102"
+msgid "Select Video-Playlist"
+msgstr "Wähle Video-Playliste"
+
+msgctxt "#50103"
+msgid "Background"
+msgstr "Hintergrund"
+
+msgctxt "#50104"
+msgid "Global Background "Now Playing" Video and Visualization"
+msgstr "Global Background "Now Playing" Video and Visualization"
+
+msgctxt "#50105"
+msgid "Style"
+msgstr "Stil"
+
+msgctxt "#50106"
+msgid "Activate custom focus offset in the main menu when you start"
+msgstr "Aktiviere benutzerdefinierten Focus Offset im Hauptmenü beim Starten"
+
+msgctxt "#50107"
+msgid "Home General"
+msgstr "Home Allgemein"
+
+msgctxt "#50108"
+msgid "Customize Home Menu"
+msgstr "Home Menü anpassen"
+
+msgctxt "#50109"
+msgid "Home Button"
+msgstr "Home Button"
+
+msgctxt "#50110"
+msgid "ends in"
+msgstr "Endet in"
+
+msgctxt "#50111"
+msgid "Database Counter (only Home remains )"
+msgstr "Datenbank Counter aus (nur Home bleibt)"
+
+msgctxt "#50112"
+msgid "Unlock extra fanart and Artist Slideshow"
+msgstr "Schalte Extra-Fanart und Artistslideshow ein"
+
+msgctxt "#50113"
+msgid "Artist Fanart on the Home menu during music playback"
+msgstr "Artist Fanart auf dem Homemenü während der Musikwiedergabe"
+
+msgctxt "#50114"
+msgid "Artist Extrafanart on the Home menu during music playback"
+msgstr "Artist Extrafanart auf dem Homemenü während der Musikwiedergabe"
+
+msgctxt "#50115"
+msgid "Artist Slideshow on the Home menu during music playback"
+msgstr "Artistslideshow auf dem Homemenü während der Musikwiedergabe"
+
+msgctxt "#50116"
+msgid "Video window"
+msgstr "Video-Fenster"
+
+msgctxt "#50117"
+msgid "Activate video window from the main menu"
+msgstr "Aktiviere Videofenster im Hauptmenü"
+
+msgctxt "#50118"
+msgid "Activate global video window"
+msgstr "Aktiviere globales Videofenster"
+
+msgctxt "#50119"
+msgid "Pictures"
+msgstr "Bilder"
+
+msgctxt "#50120"
+msgid "Weather Fanart on the Home menu - [COLOR ColorFontSelected]("resource.images.weatherfanart.multi" must be installed! )[/COLOR]"
+msgstr "Wetter Fanart auf dem Homemenü - [COLOR ColorFontSelected]("resource.images.weatherfanart.multi" muss installiert sein! )[/COLOR]"
+
+msgctxt "#50121"
+msgid "Weather Fanart Path:"
+msgstr "Wetter Fanart Pfad:"
+
+msgctxt "#50122"
+msgid "Video | Music | Program - select addon"
+msgstr "Video | Musik | Programm - Addon wählen"
+
+msgctxt "#50123"
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgctxt "#50124"
+msgid "Random Movies"
+msgstr "Zufällige Filme"
+
+msgctxt "#50125"
+msgid "Music"
+msgstr "Musik"
+
+msgctxt "#50126"
+msgid "Genre Icons/Fanart"
+msgstr "Genre Icons/Fanart"
+
+msgctxt "#50127"
+msgid "Close the window"
+msgstr "Fenster schließen"
+
+msgctxt "#50128"
+msgid "[B]MANAGE YOUR VIDEOS[/B][CR]Change add the videos · Add Videos"
+msgstr "[B]VERWALTE DEINE VIDEOS[/B][CR]Ändere den Videos · Füge Videos hinzu"
+
+msgctxt "#50129"
+msgid "aired in"
+msgstr "Ausgestahlt"
+
+msgctxt "#50132"
+msgid "Others"
+msgstr "Sonstiges"
+
+msgctxt "#50133"
+msgid "Unseen Series"
+msgstr "Ungesehene Serien"
+
+msgctxt "#50134"
+msgid "Recent Episodes"
+msgstr "Letzte Episoden"
+
+msgctxt "#50135"
+msgid "off Automatic scrolling of descriptions"
+msgstr "Automatisches Scrollen von Beschreibungen ausschalten"
+
+msgctxt "#50136"
+msgid "off database Counter in Home"
+msgstr "Datenbank-Counter auch im Home ausschalten"
+
+msgctxt "#50137"
+msgid "off button bar at the top right ( home stays )"
+msgstr "Button-Leiste oben rechts ausschalten (nur Home bleibt)"
+
+msgctxt "#50138"
+msgid "Visualisation-Settings"
+msgstr "Visualisation-Einstellung"
+
+msgctxt "#50139"
+msgid "Change color for this Home Button"
+msgstr "Farbe für diesen Homebutton ändern"
+
+msgctxt "#50140"
+msgid "Activate TV Tunes for series ( Addon required)"
+msgstr "Aktiviere TV Tunes für Serien (Addon erforderlich)"
+
+msgctxt "#50141"
+msgid "Special"
+msgstr "Spezial"
+
+msgctxt "#50142"
+msgid "Video at the start switch ( Addon required)"
+msgstr "Video beim Start einschalten (Addon erforderlich)"
+
+msgctxt "#50143"
+msgid "Press " OK " to change[CR]Press again to return to default"
+msgstr "Drück "OK" zum wechseln[CR]nochmaliges drücken zum Default zurück"
+
+msgctxt "#50144"
+msgid "PAUSE"
+msgstr "PAUSE"
+
+msgctxt "#50145"
+msgid "Playlists-Settings"
+msgstr "Playlisten-Einstellungen"
+
+msgctxt "#50146"
+msgid "Year"
+msgstr "Jahr"
+
+msgctxt "#50147"
+msgid "running time"
+msgstr "Laufzeit"
+
+msgctxt "#50148"
+msgid "Artist"
+msgstr "Artist"
+
+msgctxt "#50149"
+msgid "Studio"
+msgstr "Studio"
+
+msgctxt "#50150"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#50151"
+msgid "Director"
+msgstr "Regisseur"
+
+msgctxt "#50152"
+msgid "Stagger"
+msgstr "Staffeln"
+
+msgctxt "#50153"
+msgid "running time"
+msgstr "Laufzeit"
+
+msgctxt "#50154"
+msgid "Author"
+msgstr "Autor"
+
+msgctxt "#50155"
+msgid "Album"
+msgstr "Album"
+
+msgctxt "#50156"
+msgid "Genre"
+msgstr "Genre"
+
+msgctxt "#50157"
+msgid "Rating"
+msgstr "Rating"
+
+msgctxt "#50158"
+msgid "Top250"
+msgstr "Top250"
+
+msgctxt "#50159"
+msgid "Recording"
+msgstr "Aufnahme"
+
+msgctxt "#50160"
+msgid "Channel list"
+msgstr "Kanalliste"
+
+msgctxt "#50161"
+msgid "Teletext"
+msgstr "Teletext"
+
+msgctxt "#50162"
+msgid "Activate"
+msgstr "Aktivieren"
+
+msgctxt "#50163"
+msgid "Edit mode"
+msgstr "Modus ändern"
+
+msgctxt "#50164"
+msgid "Look into 2D"
+msgstr "In 2D schauen"
+
+msgctxt "#50165"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#50166"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#50167"
+msgid "Artist"
+msgstr "Artist"
+
+msgctxt "#50168"
+msgid "Title"
+msgstr "Titel"
+
+msgctxt "#50169"
+msgid "running time"
+msgstr "Laufzeit"
+
+msgctxt "#50170"
+msgid "Album"
+msgstr "Album"
+
+msgctxt "#50171"
+msgid "Studio"
+msgstr "Studio"
+
+msgctxt "#50172"
+msgid "Jahr"
+msgstr "Jahr"
+
+msgctxt "#50173"
+msgid "Genre"
+msgstr "Genre"
+
+msgctxt "#50174"
+msgid "Director"
+msgstr "Director"
+
+msgctxt "#50175"
+msgid "Videos"
+msgstr "Videos"
+
+msgctxt "#50176"
+msgid "minutes total"
+msgstr "Minuten gesamt"
+
+msgctxt "#50177"
+msgid "Born"
+msgstr "Geboren"
+
+msgctxt "#50178"
+msgid "Died"
+msgstr "Gestorben"
+
+msgctxt "#50179"
+msgid "Plot"
+msgstr "Beschreibung"
+
+msgctxt "#50180"
+msgid "Created"
+msgstr "Erstellt"
+
+msgctxt "#50181"
+msgid "Resolution"
+msgstr "Auflösung"
+
+msgctxt "#50182"
+msgid "Pic"
+msgstr "Bild"
+
+msgctxt "#50183"
+msgid "Cam Manufacturer"
+msgstr "Cam Hersteller"
+
+msgctxt "#50184"
+msgid "Cam Model"
+msgstr "Cam Model"
+
+msgctxt "#50185"
+msgid "aperture"
+msgstr "Blende"
+
+msgctxt "#50186"
+msgid "flash mode"
+msgstr "Blitzmodus"
+
+msgctxt "#50187"
+msgid "exposure time"
+msgstr "Belichtungszeit"
+
+msgctxt "#50188"
+msgid "ISO speed"
+msgstr "ISO-Filmempfindlichkeit"
+
+msgctxt "#50189"
+msgid "Stagger"
+msgstr "Staffeln"
+
+msgctxt "#50190"
+msgid "Movies"
+msgstr "Filme"
+
+msgctxt "#50191"
+msgid "Ges."
+msgstr "Ges."
+
+msgctxt "#50192"
+msgid "Unges."
+msgstr "Unge."
+
+msgctxt "#50193"
+msgid "Series"
+msgstr "Serien"
+
+msgctxt "#50194"
+msgid "Musicvideos"
+msgstr "Musikvideos"
+
+msgctxt "#50195"
+msgid "play disc"
+msgstr "Disk wiedergeben"
+
+msgctxt "#50196"
+msgid "Search"
+msgstr "Suche"
+
+msgctxt "#50197"
+msgid "App Center"
+msgstr "App Center"
+
+msgctxt "#50198"
+msgid "All Musicvideos"
+msgstr "Alle Musikvideos"
+
+msgctxt "#50199"
+msgid "Concerts"
+msgstr "Konzerte"
+
+msgctxt "#50200"
+msgid "Movie-Sets"
+msgstr "Movie-Sets"
+
+msgctxt "#50201"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#50202"
+msgid "TV-Series"
+msgstr "TV-Serien"
+
+msgctxt "#50203"
+msgid "Episoden"
+msgstr "Episoden"
+
+msgctxt "#50204"
+msgid "All Series"
+msgstr "Alle Serien"
+
+msgctxt "#50205"
+msgid "TV-Guide"
+msgstr "TV-Guide"
+
+msgctxt "#50207"
+msgid "Next"
+msgstr "Nächste"
+
+msgctxt "#50208"
+msgid "recording in progress:"
+msgstr "Aufnahme Läuft:"
+
+msgctxt "#50209"
+msgid "The file is stacked , select the part to be started"
+msgstr "Die Datei ist gestapelt, wähle den zu startenden Teil"
+
+msgctxt "#50210"
+msgid "Exit"
+msgstr "Exit"
+
+msgctxt "#50211"
+msgid "Current Scraper"
+msgstr "Aktueller Scraper"
+
+msgctxt "#50212"
+msgid "select Scraper"
+msgstr "Scraper wählen"
+
+msgctxt "#50213"
+msgid "Setting for scanning the contents"
+msgstr "Einstellung zum Scannen des Inhaltes"
+
+msgctxt "#50214"
+msgid "[B]set timer![/B] [COLOR=grey2] - System shuts down in[/COLOR]"
+msgstr "[B]Timer gesetzt![/B] [COLOR=grey2] - System fährt herunter in[/COLOR]"
+
+msgctxt "#50215"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#50216"
+msgid "setting list"
+msgstr "Einstellung Liste"
+
+msgctxt "#50217"
+msgid "extra settings"
+msgstr "Extra Einstellung"
+
+msgctxt "#50218"
+msgid "Clearart On/Off"
+msgstr "Clearart Ein/Aus"
+
+msgctxt "#50219"
+msgid "Logo On/Off"
+msgstr "Logo Ein/Aus"
+
+msgctxt "#50220"
+msgid "show DVD/Bluray"
+msgstr "zeige DVD/Bluray"
+
+msgctxt "#50221"
+msgid "show Charakterart"
+msgstr "zeige Charakterart"
+
+msgctxt "#50222"
+msgid "Exit"
+msgstr "Exit"
+
+msgctxt "#50223"
+msgid "Panel Settings"
+msgstr "Panel Einstellungen"
+
+msgctxt "#50224"
+msgid "Infos fade out"
+msgstr "Infos ausblenden"
+
+msgctxt "#50225"
+msgid "Direct Home Button"
+msgstr "Direkt Homebutton"
+
+msgctxt "#50226"
+msgid "Select widget"
+msgstr "Wähle Widget"
+
+
+msgctxt "#50228"
+msgid "Landscape"
+msgstr "Landscape"
+
+msgctxt "#50229"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#50230"
+msgid "Case"
+msgstr "Case"
+
+msgctxt "#50231"
+msgid "Show"
+msgstr "Zeige"
+
+msgctxt "#50232"
+msgid "Button bar, clock, DB - Counter and Weather"
+msgstr "Buttonleiste, Uhr, DB-Counter und Wetter"
+
+msgctxt "#50233"
+msgid "open selection option"
+msgstr "öffne Auswahl-Option"
+
+msgctxt "#50234"
+msgid "Exit"
+msgstr "Exit"
+
+msgctxt "#50235"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#50236"
+msgid "All Movies"
+msgstr "Alle Filme"
+
+msgctxt "#50237"
+msgid "Movie-Sets"
+msgstr "Movie-Sets"
+
+msgctxt "#50238"
+msgid "Favourite"
+msgstr "Favorit"
+
+msgctxt "#50239"
+msgid "Movie Playlisten On/Off"
+msgstr "Film Playlisten An/Aus"
+
+msgctxt "#50240"
+msgid "show Banner"
+msgstr "zeige Banner"
+
+msgctxt "#50241"
+msgid "[B]POWER FUNKTION[/B][CR]Administer the setting for end of Kodi."
+msgstr "[B]POWERFUNKTION[/B][CR]Verwalte die Einstellung für beenden von Kodi."
+
+msgctxt "#50242"
+msgid "Movie Playlist without submenu"
+msgstr "Film Playliste ohne Untermenü"
+
+msgctxt "#50243"
+msgid "TV-Series"
+msgstr "TV-Serien"
+
+msgctxt "#50244"
+msgid "Series Playlists"
+msgstr "Serien Playlisten"
+
+msgctxt "#50245"
+msgid "[B]MAIN FOLDER[/B][CR]All added videos Overview."
+msgstr "[B]HAUPTORDNER[/B][CR]Alle hinzugefügten Videos im Überblick."
+
+msgctxt "#50246"
+msgid "[B]FILE MANAGER[/B][CR]To change and move your videos"
+msgstr "[B]DATEIMANAGER[/B][CR]Zum ändern und verschieben deiner Videos"
+
+msgctxt "#50247"
+msgid "TV-Guide"
+msgstr "TV-Guide"
+
+
+
+msgctxt "#50249"
+msgid "Videos"
+msgstr "Videos"
+
+msgctxt "#50250"
+msgid "Konzerte"
+msgstr "Concerts"
+
+msgctxt "#50251"
+msgid "Musicvideos"
+msgstr "Musikvideos"
+
+msgctxt "#50252"
+msgid "Games"
+msgstr "Spiele"
+
+msgctxt "#50253"
+msgid "Music"
+msgstr "Musik"
+
+
+
+
+msgctxt "#50256"
+msgid "Programs"
+msgstr "Programme"
+
+msgctxt "#50257"
+msgid "Weather Icon"
+msgstr "Wetter Icon"
+
+msgctxt "#50259"
+msgid "Weather"
+msgstr "Wetter"
+
+msgctxt "#50260"
+msgid "System"
+msgstr "System"
+
+msgctxt "#50261"
+msgid "play disc"
+msgstr "Disk wiedergeben"
+
+msgctxt "#50262"
+msgid "Favourites"
+msgstr "Favoriten"
+
+msgctxt "#50263"
+msgid "Power"
+msgstr "Power"
+
+msgctxt "#50264"
+msgid "Search"
+msgstr "Suche"
+
+msgctxt "#50265"
+msgid "Message"
+msgstr "Nachricht"
+
+msgctxt "#50266"
+msgid "Hide"
+msgstr "Verstecke"
+
+msgctxt "#50267"
+msgid "Rename"
+msgstr "Umbenennen"
+
+msgctxt "#50268"
+msgid "Choose an icon"
+msgstr "Wähle ein Icon"
+
+msgctxt "#50269"
+msgid "Standard Icon"
+msgstr "Standard Icon"
+
+msgctxt "#50270"
+msgid "Choose playlists for Preview - playlist"
+msgstr "Wähle Playlisten für Preview - Playlist"
+
+msgctxt "#50271"
+msgid " - assign label"
+msgstr " - Label zuweisen"
+
+msgctxt "#50272"
+msgid "- Choose playlists"
+msgstr "- Wähle Playliste"
+
+msgctxt "#50273"
+msgid "Random albums"
+msgstr "Zufällige Alben"
+
+msgctxt "#50274"
+msgid "Select for Movie Preview a playlist"
+msgstr "Wähle für Film-Preview eine Playlist"
+
+msgctxt "#50275"
+msgid "Select for Series Preview a playlist"
+msgstr "Wähle für Serien-Preview eine Playlist"
+
+msgctxt "#50276"
+msgid "Change Background - Single Image"
+msgstr "Hintergrund ändern - Einzelnes Bild"
+
+msgctxt "#50277"
+msgid "Change Background - More Images"
+msgstr "Hintergrund ändern - Mehrere Bilder"
+
+msgctxt "#50278"
+msgid "Background"
+msgstr "Hintergrund"
+
+msgctxt "#50279"
+msgid "Movie Playlist 7"
+msgstr "Film Playliste 7"
+
+msgctxt "#50280"
+msgid "Choose series playlist for 2 Preview 1"
+msgstr "Wähle Serien Playlist 2 für Preview 1"
+
+msgctxt "#50281"
+msgid "Choose series playlist for 2 Preview 2"
+msgstr "Wähle Serien Playlist 2 für Preview 2"
+
+msgctxt "#50282"
+msgid "Choose series playlist for 2 Preview 3"
+msgstr "Wähle Serien Playlist 2 für Preview 3"
+
+msgctxt "#50283"
+msgid "Choose series playlist for 2 Preview 4"
+msgstr "Wähle Serien Playlist 2 für Preview 4"
+
+msgctxt "#50284"
+msgid "Series Playlists"
+msgstr "Serien Playlisten"
+
+msgctxt "#50285"
+msgid "edit or create profile"
+msgstr "Profile bearbeiten oder erstellen"
+
+msgctxt "#50286"
+msgid "TV-Guide"
+msgstr "TV-Guide"
+
+msgctxt "#50287"
+msgid " - assigning favorites"
+msgstr " - Favorit zuweisen"
+
+msgctxt "#50288"
+msgid "Home Music button opens Artist"
+msgstr "Home Musik Button öffnet Artist"
+
+msgctxt "#50289"
+msgid "Home Music button opens Album"
+msgstr "Home Musik Button öffnet Album"
+
+msgctxt "#50290"
+msgid "Choose music playlist for Preview 1"
+msgstr "Wähle Musik Playlist für Preview 1"
+
+msgctxt "#50291"
+msgid "Choose music playlist for Preview 2"
+msgstr "Wähle Musik Playlist für Preview 2"
+
+msgctxt "#50292"
+msgid "Choose music playlist for Preview 3"
+msgstr "Wähle Musik Playlist für Preview 3"
+
+msgctxt "#50293"
+msgid "Choose music playlist for Preview 4"
+msgstr "Wähle Musik Playlist für Preview 4"
+
+msgctxt "#50294"
+msgid "Opt for a movie or series Playlist"
+msgstr "Wähle Film oder Serien Playlist"
+
+msgctxt "#50295"
+msgid "Choose music playlist"
+msgstr "Wähle Musik Playlist"
+
+msgctxt "#50296"
+msgid "Choose addon"
+msgstr "Wähle Addon"
+
+msgctxt "#50297"
+msgid "BUTTON NAME"
+msgstr "TASTEN BEZEICHNUNG"
+
+msgctxt "#50298"
+msgid "Choose special addon [B]1[/B]"
+msgstr "Wähle spezielles Addon [B]1[/B]"
+
+msgctxt "#50299"
+msgid "PATH TO THE SCRIPT"
+msgstr "PFAD ZUM SKRIPT"
+
+msgctxt "#50300"
+msgid "Choose special addon [B]2[/B]"
+msgstr "Wähle spezielles Addon [B]2[/B]"
+
+msgctxt "#50301"
+msgid "Choose special program [B]1[/B]"
+msgstr "Wähle spezielles Programm [B]1[/B]"
+
+msgctxt "#50302"
+msgid "Choose special program [B]2[/B]"
+msgstr "Wähle spezielles Programm [B]2[/B]"
+
+msgctxt "#50303"
+msgid "Weather Fanart on the Home menu"
+msgstr "Wetter Fanart auf dem Homemenü"
+
+msgctxt "#50304"
+msgid "Weather Fanart Path:"
+msgstr "Wetter Fanart Pfad:"
+
+
+
+msgctxt "#50307"
+msgid "Colored Button in the home off"
+msgstr "Farbige Button im Home aus"
+
+msgctxt "#50308"
+msgid "music Artist - Logo"
+msgstr "Musikartist - Logo"
+
+msgctxt "#50309"
+msgid "Unseen Movies"
+msgstr "Ungesehene Filme"
+
+msgctxt "#50310"
+msgid "Pictures"
+msgstr "Bilder"
+
+msgctxt "#50311"
+msgid "Activate Music Info Panel (script.extendedinfo erforderlich)"
+msgstr "Aktiviere Musik Info Panel (script.extendedinfo erforderlich)"
+
+msgctxt "#50312"
+msgid "Activate Music-Visualisierung"
+msgstr "Aktiviere Musik-Visualisierung"
+
+msgctxt "#50313"
+msgid "Program Addons"
+msgstr "Programm-Addons"
+
+msgctxt "#50314"
+msgid "Choose your own color... z.B. FF000000 for Black"
+msgstr "Wähle deine eigene Farbe... z.B. FF000000 für Schwarz"
+
+msgctxt "#50315"
+msgid "Top Rating"
+msgstr "Top Rating"
+
+msgctxt "#50316"
+msgid "3D Movies"
+msgstr "3D Filme"
+
+msgctxt "#50317"
+msgid "Children's Movies"
+msgstr "Kinderfilme"
+
+msgctxt "#50318"
+msgid "FSK 18 Films"
+msgstr "FSK 18 Filme"
+
+msgctxt "#50319"
+msgid "Music-Addons"
+msgstr "Musik-Addons"
+
+msgctxt "#50320"
+msgid "Actor"
+msgstr "Schauspieler"
+
+msgctxt "#50321"
+msgid "My Addons for Home submenu (selectable if there is one in there)"
+msgstr "Meine Addons für Home Submenü (auch dort wählbar wenn eins drin ist)"
+
+msgctxt "#50322"
+msgid "Last heard music"
+msgstr "Zuletzt gehörte Musik"
+
+msgctxt "#50323"
+msgid "Random series"
+msgstr "Zufällige Serien"
+
+msgctxt "#50324"
+msgid "Order : Ascending"
+msgstr "Sortieren: Aufsteigend"
+
+msgctxt "#50325"
+msgid "Watchlist"
+msgstr "Watchlist"
+
+msgctxt "#50326"
+msgid "Radio"
+msgstr "Radio"
+
+msgctxt "#50327"
+msgid "Submenü"
+msgstr "Submenü"
+
+msgctxt "#50328"
+msgid "Top 100"
+msgstr "Top 100"
+
+msgctxt "#50329"
+msgid "Stations in their vicinity"
+msgstr "Sender in ihrer Nähe"
+
+msgctxt "#50330"
+msgid "Previously selected episodes"
+msgstr "Zuletzt gesehene Episoden"
+
+msgctxt "#50331"
+msgid "Top Rating Series"
+msgstr "Top Rating Serien"
+
+msgctxt "#50332"
+msgid "Top Rating Movies"
+msgstr "Top Rating Filme"
+
+msgctxt "#50333"
+msgid "Choose the addons that will be shown from the skin settings "
+msgstr "Wähle die Addons, die gezeigt werden sollen in den Skin-Settings aus."
+
+msgctxt "#50334"
+msgid "Order : Ascending"
+msgstr "Sortieren: Aufsteigend"
+
+msgctxt "#50335"
+msgid "My Transmitter"
+msgstr "Meine Sender"
+
+msgctxt "#50336"
+msgid "Order : Descending"
+msgstr "Sortieren: Absteigend"
+
+msgctxt "#50337"
+msgid "Playlists"
+msgstr "Playlisten"
+
+msgctxt "#50338"
+msgid "Tablet mode on."
+msgstr "Tablet Modus an."
+
+msgctxt "#50339"
+msgid "Tablet"
+msgstr "Tablet"
+
+msgctxt "#50340"
+msgid "Writer"
+msgstr "Schriftsteller"
+
+msgctxt "#50341"
+msgid "Database Counter off (top right) in the Home"
+msgstr "Datenbank Counter (oben rechts) im Home ausschalten"
+
+msgctxt "#50342"
+msgid "Change this home button"
+msgstr "ändere diesen Home-Button"
+
+msgctxt "#50343"
+msgid "No last seen series available!"
+msgstr "Keine zuletzt gesehen Serien verfügbar!"
+
+msgctxt "#50344"
+msgid "No last seen movies available!"
+msgstr "Keine zuletzt gesehen Filme verfügbar!"
+
+msgctxt "#50345"
+msgid "Genre must be (XXX)"
+msgstr "Genre muss (XXX) sein"
+
+msgctxt "#50346"
+msgid "Trailer"
+msgstr "Trailer"
+
+msgctxt "#50347"
+msgid "Daily forecast"
+msgstr "Tägliche Vorhersage"
+
+msgctxt "#50348"
+msgid "Alarms"
+msgstr "Alarme"
+
+msgctxt "#50349"
+msgid "Other settings"
+msgstr "Sonstige Einstellungen"
+
+msgctxt "#50350"
+msgid "Weather Fanart"
+msgstr "Wetter Fanart"
+
+msgctxt "#50351"
+msgid "Location"
+msgstr "Standort"
+
+msgctxt "#50352"
+msgid "Colored button On/Off"
+msgstr "Farbige Button On/Off"
+
+msgctxt "#50353"
+msgid "Extended Info On/Off"
+msgstr "Extendedinfo On/Off"
+
+msgctxt "#50354"
+msgid "Video Window On/Off"
+msgstr "Videofenster On/Off"
+
+msgctxt "#50355"
+msgid "Set Fanart file path"
+msgstr "Fanart-Dateipfad festlegen"
+
+msgctxt "#50356"
+msgid "Here you can find all the settings to your system"
+msgstr "Hier findest du alle Einstellungen zu deinem System"
+
+msgctxt "#50357"
+msgid "YouTube"
+msgstr "YouTube"
+
+msgctxt "#50358"
+msgid "See video clips , watch catch-up TV."
+msgstr "Video-Clips ansehen, verpasste Sendungen anschauen."
+
+msgctxt "#50359"
+msgid "Panel"
+msgstr "Panel"
+
+msgctxt "#50360"
+msgid "choose what you want to search in YouTube Home widget."
+msgstr "wähle was gesucht werden soll im YouTube Home Widget."
+
+msgctxt "#50361"
+msgid "Home Widget Settings"
+msgstr "Home Widget Einstellungen"
+
+msgctxt "#50362"
+msgid "Home Widget Turn off"
+msgstr "Home Widget Ausschalten"
+
+msgctxt "#50363"
+msgid "Extended Info"
+msgstr "Extended Info"
+
+msgctxt "#50364"
+msgid "Close playlist"
+msgstr "Wiedergabeliste schließen"
+
+msgctxt "#50365"
+msgid "Save playlist"
+msgstr "Wiedergabeliste speichern"
+
+msgctxt "#50366"
+msgid "Open playlist"
+msgstr "Wiedergabeliste öffnen"
+
+
+
+msgctxt "#50380"
+msgid "No last played albums available!"
+msgstr "Keine zuletzt gehörten Alben verfügbar!"
+
+msgctxt "#50381"
+msgid "Here you can specify playlists in the film - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Film - Preview angezeigt werden!"
+
+msgctxt "#50382"
+msgid "Here you can specify playlists in the series - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Serien - Preview angezeigt werden!"
+
+msgctxt "#50383"
+msgid "Here you can specify playlists in the playlist 1 - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Playlist 1 - Preview angezeigt werden!"
+
+msgctxt "#50384"
+msgid "Here you can specify playlists in the playlist 2 - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Playlist 2 - Preview angezeigt werden!"
+
+msgctxt "#50385"
+msgid "Here you can specify playlists in the Music - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Musik - Preview angezeigt werden!"
+
+msgctxt "#50386"
+msgid "Here you can specify playlists in the playlist 3 - are displayed Preview!"
+msgstr "Hier kannst du Playlisten angeben, die in der Playlist 3 - Preview angezeigt werden!"
+
+msgctxt "#50387"
+msgid "Here you can specify a playlist , which can be accessed by clicking the Home then!"
+msgstr "Hier kannst du eine Playliste angeben, die im Home dann per Klick aufrufbar ist!"
+
+msgctxt "#50388"
+msgid "Scrollbar off in views"
+msgstr "Scrollbar in Ansichten ausschalten"
+
+msgctxt "#50389"
+msgid "Alternatives Home menu with four Eckigen tiles instead of the oblique"
+msgstr "Alternatives Homemenü mit Viereckigen Kacheln statt den schrägen"
+
+msgctxt "#50390"
+msgid "Unlock Widgets in Home from"
+msgstr "Schalte Widgets im Home aus"
+
+msgctxt "#50391"
+msgid "Unlock Fanart Grabber for movies, series and music (script.grab.fanart required)"
+msgstr "Schalte Fanart Grabber für Filme, Serien und Musik ein (script.grab.fanart erforderlich)"
+
+msgctxt "#50392"
+msgid "Unlock Extrafanart for current music in a Home"
+msgstr "Schalte Extrafanart für laufende Musik im Home ein"
+
+msgctxt "#50393"
+msgid "Unlock Artist Slideshow for current music in a Home (script.artistslideshow required)"
+msgstr "Schalte Artistslideshow für laufende Musik im Home ein (script.artistslideshow erforderlich)"
+
+msgctxt "#50394"
+msgid "Unlock Fanart for current music in a Home"
+msgstr "Schalte Fanart für laufende Musik im Home ein"
+
+msgctxt "#50395"
+msgid "Weather in the top left off"
+msgstr "Wetter links oben ausschalten"
+
+msgctxt "#50396"
+msgid "Unlock Colored icons Rated at"
+msgstr "Schalte Farbige FSK Icons an"
+
+msgctxt "#50397"
+msgid "off time at the top right"
+msgstr "Uhrzeit oben rechts ausschalten"
+
+msgctxt "#50398"
+msgid "Move Home Menu Button"
+msgstr "Home Menü Button verschieben"
+
+msgctxt "#50399"
+msgid "Single Background Image"
+msgstr "Einzelnes Hintergrundbild"
+
+msgctxt "#50400"
+msgid "Default Image"
+msgstr "Standard Hintergrundbild"
+
+msgctxt "#50401"
+msgid "Choose a direct path , addon or favorites"
+msgstr "Wähle ein direkten Pfad, Addon oder ein Favoriten"
+
+msgctxt "#50402"
+msgid "Description zoom in all views"
+msgstr "Beschreibung vergrößern in allen Ansichten"
+
+msgctxt "#50403"
+msgid "News Center"
+msgstr "News Center"
+
+msgctxt "#504044"
+msgid "Strength"
+msgstr "Stärke"

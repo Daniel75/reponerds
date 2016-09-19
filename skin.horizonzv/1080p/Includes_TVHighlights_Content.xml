@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="TVHighlightsItem">
+        <item>
+            <property name="id">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].ID)]</property>
+            <property name="pvrid">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].PVRID)]</property>
+            <property name="popup">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Popup)]</property>
+            <property name="channel">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+            <property name="comment">$INFO[Window(Home).Property(TVHighlightsToday.Info.Title)]</property>
+            <property name="genre">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+            <property name="country">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Country)]</property>
+            <property name="year">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Year)]</property>
+            <property name="extrainfos">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+            <property name="watchtype">$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Watchtype)]</property>
+            <label>$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Title)]</label>
+            <label2>$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+            <icon>$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+            <thumb>$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+            <onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+            <visible>!String.IsEmpty(Window(Home).Property(TVHighlightsToday.$PARAM[highlight_id].Title))</visible>
+        </item>
+    </include>
+    <include name="TVHighlightsContent">
+        <content>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="1" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="2" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="3" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="4" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="5" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="6" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="7" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="8" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="9" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="10" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="11" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="12" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="13" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="14" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="15" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="16" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="17" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="18" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="19" />
+            </include>
+            <include content="TVHighlightsItem">
+                <param name="highlight_id" value="20" />
+            </include>
+        </content>
+    </include>
+</includes>

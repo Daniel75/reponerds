@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4112">
+    <defaultcontrol always="true">270300</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>			
+		
+		<control type="list" id="270300">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>800</height>
+			<onright>1860</onright>
+			<onleft>270350</onleft>
+			<onup>270300</onup>
+			<ondown>270300</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>	
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>
+			    <item id="270301">
+				  <label>$INFO[Skin.String(movieplaylistButton301_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_301)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton301) + !IsEmpty(Skin.String(movieplaylistButton301_label))</visible>
+				</item>
+				<item id="270302">
+				  <label>$INFO[Skin.String(movieplaylistButton302_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_302)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton302) + !IsEmpty(Skin.String(movieplaylistButton302_label))</visible>
+				</item>
+				<item id="270303">
+				  <label>$INFO[Skin.String(movieplaylistButton303_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_303)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton303) + !IsEmpty(Skin.String(movieplaylistButton303_label))</visible>
+				</item>
+				<item id="270304">
+				  <label>$INFO[Skin.String(movieplaylistButton304_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_304)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton304) + !IsEmpty(Skin.String(movieplaylistButton304_label))</visible>
+				</item>		  
+				<item id="270305">
+				  <label>$INFO[Skin.String(movieplaylistButton305_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_305)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton305) + !IsEmpty(Skin.String(movieplaylistButton305_label))</visible>
+				</item>
+				<item id="270306">
+				  <label>$INFO[Skin.String(movieplaylistButton306_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_306)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton306) + !IsEmpty(Skin.String(movieplaylistButton306_label))</visible>
+				</item>
+				<item id="270307">
+				  <label>$INFO[Skin.String(movieplaylistButton307_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_307)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton307) + !IsEmpty(Skin.String(movieplaylistButton307_label))</visible>
+				</item>
+				<item id="270308">
+				  <label>$INFO[Skin.String(movieplaylistButton308_label)]</label>
+				  <onclick>XBMC.ActivateWindow(10025,$INFO[Skin.String(movieplaylistButtonPathScript_308)],return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(movieplaylistButton308) + !IsEmpty(Skin.String(movieplaylistButton308_label))</visible>
+				</item>
+			</content>
+		</control>
+		
+		<control type="wraplist" id="270350">
+		  <include>Animation.ZoomIn</include>
+		  <left>186</left>
+		  <top>165</top>
+		  <width>1155</width>
+	      <height>810</height>
+		  <onright>270300</onright>
+		  <onleft>9020</onleft>
+		  <onup>270350</onup>
+		  <ondown>270350</ondown>
+		  <orientation>vertical</orientation>
+		  <preloaditems>1</preloaditems>
+		  <autoscroll time="15000">!Control.HasFocus(20105)</autoscroll>
+		  <scrolltime tween="cubic">500</scrolltime>
+		  <itemlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/VIDEODEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+		  </itemlayout>
+		  <focusedlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/VIDEODEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>0</left>
+				<top>615</top>
+				<width>1155</width>
+				<height>200</height>
+				<texture background="true">skin/button_klein_tranz70.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				<visible>!Control.HasFocus(270350)</visible>
+			  </control>
+			  <control type="image">
+				<left>0</left>
+				<top>615</top>
+				<width>1155</width>
+				<height>200</height>
+				<texture background="true">skin/button_klein_tranz70.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.HasFocus(270350)</visible>
+			  </control>
+				<control type="label">
+				<description>Title label</description>
+				<left>20</left>
+				<top>630</top>
+				<height>45</height>
+				<width>1118</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="textbox">
+				<description>Movie Plot</description>
+				<left>20</left>
+				<top>680</top>
+				<width>1118</width>
+				<height>125</height>
+				<font>primal_16</font>
+				<align>justify</align>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+				<autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  </control>
+		  </focusedlayout>
+		      <content>$VAR[HomePreviewMovies]</content>  
+		  </control>
+		  
+    </controls>
+    </window>

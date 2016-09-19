@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Mastermode Items & Content -->
+	<include name="TVHighlightsItem">
+		<item>
+			<property name="channel">$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVHighlightsToday.Info.Title)]</property>
+			<property name="genre">$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<label>$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsContentMastermode">
+		<content>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItem">
+				<param name="highlight_id" value="10" />
+			</include>
+		</content>
+	</include>
+	<!-- Splitmode Items & Content -->
+	<include name="TVHighlightsItemSplitSpielfilm">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVspielfilmHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsItemSplitSerie">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVserieHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsItemSplitSport">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVsportHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsItemSplitUnterhaltung">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVunterhaltungHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsItemSplitDokuInfo">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVdoku-und-infoHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsItemSplitKinder">
+		<item>
+			<property name="watchtype">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].WatchType)]</property>
+			<property name="channel">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Channel)]</property>
+			<property name="comment">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Comment)]</property>
+			<property name="genre">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Genre)]</property>
+			<property name="country">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Country)]</property>
+			<property name="year">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Year)]</property>
+			<property name="extrainfos">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Extrainfos)]</property>
+			<property name="date">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Date)]</property>
+			<property name="duration">$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Duration)]</property>
+			<label>$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Title)]</label>
+			<onclick>RunScript(plugin.program.tvhighlights,&quot;?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Popup)]&quot;)</onclick>
+			<icon>$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Logo)]</icon>
+			<label2>$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Time)]</label2>
+			<thumb>$INFO[Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Thumb)]</thumb>
+			<visible>!IsEmpty(Window.Property(TVkinderHighlightsToday.$PARAM[highlight_id].Title))</visible>
+		</item>
+	</include>
+	<include name="TVHighlightsContentSplitmode">
+		<content>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="1" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="2" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="3" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="4" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="5" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="6" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="7" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="8" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="9" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="10" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="11" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="12" />
+			</include>
+			<include name="TVHighlightsItemSplitSpielfilm">
+				<param name="highlight_id" value="13" />
+			</include>
+			<include name="TVHighlightsItemSplitSerie">
+				<param name="highlight_id" value="13" />
+			</include>
+			<include name="TVHighlightsItemSplitSport">
+				<param name="highlight_id" value="13" />
+			</include>
+			<include name="TVHighlightsItemSplitUnterhaltung">
+				<param name="highlight_id" value="13" />
+			</include>
+			<include name="TVHighlightsItemSplitDokuInfo">
+				<param name="highlight_id" value="13" />
+			</include>
+			<include name="TVHighlightsItemSplitKinder">
+				<param name="highlight_id" value="13" />
+			</include>
+		</content>
+	</include>
+	<!-- Layout & List -->
+	<include name="HomeRecentlyAddedTVHighlightsLayout">
+		<itemlayout height="220" width="240">
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>158</height>
+				<texture border="15">RecentAddedBack.png</texture>
+				<visible>Player.HasMedia+!Control.HasFocus(58051)</visible>
+			</control>
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>310</height>
+				<texture border="15">RecentAddedBack.png</texture>
+				<visible>Control.HasFocus(58051)|!Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>10</top>
+				<width>220</width>
+				<height>135</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(58051)|!Player.HasMedia</visible>
+				<control type="image">
+					<left>20</left>
+					<top>180</top>
+					<width>80</width>
+					<height>72</height>
+					<aspectratio>keep</aspectratio>
+					<align>left</align>
+					<aligny>top</aligny>
+					<texture background="false">$INFO[ListItem.ActualIcon]</texture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label" id="starttime">
+					<left>120</left>
+					<top>195</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="label" id="movietitle">
+					<left>20</left>
+					<top>160</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label" id="moviecomment">
+					<left>20</left>
+					<top>270</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(comment)]</label>
+				</control>
+				<control type="label" id="moviegenre">
+					<left>120</left>
+					<top>215</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(channel)]</label>
+				</control>
+				<control type="label" id="country">
+					<left>120</left>
+					<top>255</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(country)]</label>
+				</control>
+				<control type="label" id="extrainfos">
+					<left>20</left>
+					<top>245</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(extrainfos)]</label>
+				</control>
+			</control>
+		</itemlayout>
+		<focusedlayout height="220" width="240">
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>158</height>
+				<texture border="15">RecentAddedBack.png</texture>
+				<visible>!Control.HasFocus(58051)+Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>240</width>
+				<height>310</height>
+				<texture border="15">RecentAddedBack.png</texture>
+				<visible>Control.HasFocus(58051)|!Player.HasMedia</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>10</top>
+				<width>220</width>
+				<height>135</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="5">button-nofocus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>!Control.HasFocus(58051)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>10</top>
+				<width>220</width>
+				<height>135</height>
+				<aspectratio>scale</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="5">folder-focus.png</bordertexture>
+				<bordersize>5</bordersize>
+				<visible>Control.HasFocus(58051)</visible>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(58051)|!Player.HasMedia</visible>
+				<control type="image">
+					<left>20</left>
+					<top>180</top>
+					<width>80</width>
+					<height>72</height>
+					<aspectratio>keep</aspectratio>
+					<align>left</align>
+					<aligny>top</aligny>
+					<texture background="false">$INFO[ListItem.ActualIcon]</texture>
+					<bordersize>5</bordersize>
+				</control>
+				<control type="label" id="starttime">
+					<left>120</left>
+					<top>195</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Label2]</label>
+				</control>
+				<control type="label" id="movietitle">
+					<left>20</left>
+					<top>160</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label" id="moviecomment">
+					<left>20</left>
+					<top>270</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(comment)]</label>
+				</control>
+				<control type="label" id="moviegenre">
+					<left>120</left>
+					<top>215</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(channel)]</label>
+				</control>
+				<control type="label" id="country">
+					<left>120</left>
+					<top>255</top>
+					<width>100</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>right</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(country)]</label>
+				</control>
+				<control type="label" id="extrainfos">
+					<left>20</left>
+					<top>245</top>
+					<width>200</width>
+					<height>20</height>
+					<font>font10</font>
+					<textcolor>grey2</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>top</aligny>
+					<label>$INFO[ListItem.Property(extrainfos)]</label>
+				</control>
+			</control>
+		</focusedlayout>
+	</include>
+	<include name="HomeRecentlyAddedTVHighlightsTodayInfo">
+		<control type="image">
+			<left>-5</left>
+			<top>-5</top>
+			<texture border="15">black-back.png</texture>
+			<visible>Control.HasFocus(58051)</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
+		<control type="group" id="5777">
+			<left>160</left>
+			<top>60</top>
+			<visible>Container(9000).Hasfocus(12)</visible>
+			<animation effect="slide" end="-635" time="500" condition="[PVR.IsRecording|PVR.HasNonRecordingTimer]+!Control.HasFocus(58051)">Conditional</animation>
+			<include>VisibleFadeEffect</include>
+			<control type="label">
+				<description>Title label</description>
+				<left>240</left>
+				<top>310</top>
+				<height>20</height>
+				<width>480</width>
+				<label>$ADDON[plugin.program.tvhighlights  30104] (Mastermode)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Control.HasFocus(58051)</visible>
+				<visible>SubString(Window(Home).Property(TVHighlightsToday.Mode),mastermode)</visible>
+			</control>
+			<control type="label">
+				<description>Title label</description>
+				<left>240</left>
+				<top>-25</top>
+				<height>20</height>
+				<width>480</width>
+				<label>$ADDON[plugin.program.tvhighlights  30104] (Splitmode)</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>Control.HasFocus(58051)</visible>
+				<visible>SubString(Window(Home).Property(TVHighlightsToday.Mode),splitmode)</visible>
+			</control>
+			<control type="list" id="58051">
+				<animation effect="slide" start="0,0" end="120,0" time="0" condition="StringCompare(Container(58051).NumItems,3)">conditional</animation>
+				<animation effect="slide" start="0,0" end="240,0" time="0" condition="StringCompare(Container(58051).NumItems,2)">conditional</animation>
+				<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(58051).NumItems,1)">conditional</animation>
+				<left>0</left>
+				<top>0</top>
+				<width>960</width>
+				<height>330</height>
+				<onleft>58051</onleft>
+				<onright>58051</onright>
+				<onup>20</onup>
+				<ondown condition="System.HasAddon(script.globalsearch)">608</ondown>
+				<ondown condition="!System.HasAddon(script.globalsearch)">603</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>Horizontal</orientation>
+				<include>HomeRecentlyAddedTVHighlightsLayout</include>
+				<include condition="SubString(Window(Home).Property(TVHighlightsToday.Mode),mastermode)">TVHighlightsContentMastermode</include>
+				<include condition="SubString(Window(Home).Property(TVHighlightsToday.Mode),splitmode)">TVHighlightsContentSplitmode</include>
+			</control>
+			<control type="group">
+				<visible>Control.HasFocus(58051)</visible>
+				<control type="button">
+					<description>left Arrow</description>
+					<left>-40</left>
+					<top>90</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-left.png</texturefocus>
+					<texturenofocus>arrow-big-left.png</texturenofocus>
+					<onclick>Control.Move(58051,-1)</onclick>
+					<visible>Container(58051).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<description>right Arrow</description>
+					<left>970</left>
+					<top>90</top>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-right.png</texturefocus>
+					<texturenofocus>arrow-big-right.png</texturenofocus>
+					<onclick>Control.Move(58051,1)</onclick>
+					<visible>Container(58051).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

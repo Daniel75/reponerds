@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="AlphaBarButtons">
+        <left>0</left>
+        <top>0</top>
+        <height>45</height>
+        <width>105</width>
+        <font>ubuntu-r13b</font>
+        <textoffsetx>15</textoffsetx>
+        <textoffsety>6</textoffsety>
+        <textcolor>white</textcolor>
+        <focusedcolor>black</focusedcolor>
+        <texturefocus colordiffuse="description">White.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
+        <pulseonselect>false</pulseonselect>
+        <onclick>$VAR[AlphaBar_moveandclick]</onclick>
+    </include>
+    <include name="AlphaBarH">
+        <control type="group">
+            <top>150</top>
+            <visible>!Skin.HasSetting(HideJumpSMSBar)</visible>
+            <animation effect="slide" end="0,-150" time="400" condition="ControlGroup(17000).HasFocus()|ControlGroup(18000).HasFocus()">Conditional</animation>
+            <control type="image">
+                <left>-15</left>
+                <top>945</top>
+                <height>90</height>
+                <width>1950</width>
+                <texture background="true">Shadow.png</texture>
+            </control>
+            <control type="image">
+                <left>-15</left>
+                <top>1035</top>
+                <height>240</height>
+                <width>1950</width>
+                <colordiffuse>grey</colordiffuse>
+                <texture background="true" border="5">Underlay.png</texture>
+            </control>
+            <control type="grouplist" id="17000">
+                <animation effect="slide" end="0,150" time="400" condition="ControlGroup(18000).HasFocus()">Conditional</animation>
+                <left>0</left>
+                <top>1035</top>
+                <width>1920</width>
+                <height>180</height>
+                <align>center</align>
+                <itemgap>15</itemgap>
+                <onup>$VAR[AlphaBar_moveandclick]</onup>
+                <ondown>SetFocus(732)</ondown>
+                <onleft>17000</onleft>
+                <onright>17000</onright>
+                <orientation>horizontal</orientation>
+                <control type="button" id="17001">
+                    <include>AlphaBarButtons</include>
+                    <label>ABC</label>
+                    <onclick>Action(JumpSMS2)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17002">
+                    <include>AlphaBarButtons</include>
+                    <label>DEF</label>
+                    <onclick>Action(JumpSMS3)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17003">
+                    <include>AlphaBarButtons</include>
+                    <label>GHI</label>
+                    <onclick>Action(JumpSMS4)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17004">
+                    <include>AlphaBarButtons</include>
+                    <label>JKL</label>
+                    <onclick>Action(JumpSMS5)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17005">
+                    <include>AlphaBarButtons</include>
+                    <label>MNO</label>
+                    <onclick>Action(JumpSMS6)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17006">
+                    <include>AlphaBarButtons</include>
+                    <label>PQRS</label>
+                    <onclick>Action(JumpSMS7)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17007">
+                    <include>AlphaBarButtons</include>
+                    <label>TUV</label>
+                    <onclick>Action(JumpSMS8)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17008">
+                    <include>AlphaBarButtons</include>
+                    <label>WXYZ</label>
+                    <onclick>Action(JumpSMS9)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="17009">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <label>Export</label>
+                    <onclick condition="Window.IsVisible(videos)">exportlibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">exportlibrary(music)</onclick>
+                </control>
+                <control type="button" id="17010">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <visible>!library.isscanningvideo+!library.isscanningmusic</visible>
+                    <label>Update</label>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <onclick condition="Window.IsVisible(videos)">UpdateLibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">UpdateLibrary(music)</onclick>
+                </control>
+                <control type="button" id="17011">
+                    <include>AlphaBarButtons</include>
+                    <visible>library.isscanningvideo|library.isscanningmusic</visible>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <label>STOP</label>
+                    <onclick condition="Window.IsVisible(videos)">UpdateLibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">UpdateLibrary(music)</onclick>
+                </control>
+                <control type="button" id="17012">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <label>CLEAN</label>
+                    <onclick>SetFocus(18002)</onclick>
+                </control>
+            </control>
+            <control type="grouplist" id="18000">
+                <animation effect="slide" end="0,-150" time="400" condition="ControlGroup(18000).HasFocus()">Conditional</animation>
+                <left>0</left>
+                <top>1185</top>
+                <width>1920</width>
+                <height>180</height>
+                <align>center</align>
+                <itemgap>15</itemgap>
+                <onup>noop</onup>
+                <ondown>noop</ondown>
+                <onleft>18000</onleft>
+                <onright>18000</onright>
+                <orientation>horizontal</orientation>
+                <control type="label">
+                    <width>450</width>
+                    <height>39</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>ubuntu-r16</font>
+                    <textcolor>description</textcolor>
+                    <label>$LOCALIZE[313] ?</label>
+                </control>
+                <control type="button" id="18001">
+                    <include>AlphaBarButtons</include>
+                    <onleft>noop</onleft>
+                    <onright>18002</onright>
+                    <label>107</label>
+                    <onclick condition="Window.IsVisible(videos)">CleanLibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">CleanLibrary(music)</onclick>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+                <control type="button" id="18002">
+                    <include>AlphaBarButtons</include>
+                    <onleft>18001</onleft>
+                    <onright>noop</onright>
+                    <label>106</label>
+                    <onclick>SetFocus(17000)</onclick>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="AlphaBarV">
+        <control type="group">
+            <left>150</left>
+            <visible>!Skin.HasSetting(HideJumpSMSBar)</visible>
+            <animation effect="slide" end="-150,0" time="400" condition="ControlGroup(15000).HasFocus()|ControlGroup(16000).HasFocus()">Conditional</animation>
+            <control type="image">
+                <left>1725</left>
+                <top>-150</top>
+                <height>1260</height>
+                <width>210</width>
+                <texture background="true" flipx="true">SideFade.png</texture>
+            </control>
+            <control type="image">
+                <left>1815</left>
+                <top>-150</top>
+                <height>1260</height>
+                <width>210</width>
+                <texture background="true" border="4">Underlay.png</texture>
+            </control>
+            <control type="grouplist" id="15000">
+                <animation effect="slide" end="150,0" time="400" condition="ControlGroup(16000).HasFocus()">Conditional</animation>
+                <left>1815</left>
+                <top>6</top>
+                <width>150</width>
+                <height>1080</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <itemgap>15</itemgap>
+                <onleft>$VAR[AlphaBar_moveandclick]</onleft>
+                <onright>SetFocus(732)</onright>
+                <onup>15000</onup>
+                <ondown>15000</ondown>
+                <orientation>vertical</orientation>
+                <control type="button" id="15001">
+                    <include>AlphaBarButtons</include>
+                    <label>ABC</label>
+                    <onclick>Action(JumpSMS2)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15002">
+                    <include>AlphaBarButtons</include>
+                    <label>DEF</label>
+                    <onclick>Action(JumpSMS3)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15003">
+                    <include>AlphaBarButtons</include>
+                    <label>GHI</label>
+                    <onclick>Action(JumpSMS4)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15004">
+                    <include>AlphaBarButtons</include>
+                    <label>JKL</label>
+                    <onclick>Action(JumpSMS5)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15005">
+                    <include>AlphaBarButtons</include>
+                    <label>MNO</label>
+                    <onclick>Action(JumpSMS6)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15006">
+                    <include>AlphaBarButtons</include>
+                    <label>PQRS</label>
+                    <onclick>Action(JumpSMS7)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15007">
+                    <include>AlphaBarButtons</include>
+                    <label>TUV</label>
+                    <onclick>Action(JumpSMS8)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15008">
+                    <include>AlphaBarButtons</include>
+                    <label>WXYZ</label>
+                    <onclick>Action(JumpSMS9)</onclick>
+                    <onclick>SetFocus(15000)</onclick>
+                </control>
+                <control type="button" id="15009">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <label>Export</label>
+                    <onclick condition="Window.IsVisible(videos)">exportlibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">exportlibrary(music)</onclick>
+                </control>
+                <control type="button" id="15010">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <visible>!library.isscanningvideo+!library.isscanningmusic</visible>
+                    <label>Update</label>
+                    <onclick condition="Window.IsVisible(videos)">UpdateLibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">UpdateLibrary(music)</onclick>
+                </control>
+                <control type="button" id="15011">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <visible>library.isscanningvideo|library.isscanningmusic</visible>
+                    <label>STOP</label>
+                    <onclick condition="Window.IsVisible(videos)">UpdateLibrary(video)</onclick>
+                    <onclick condition="Window.IsVisible(music)">UpdateLibrary(music)</onclick>
+                </control>
+                <control type="button" id="15012">
+                    <include>AlphaBarButtons</include>
+                    <visible>Window.IsVisible(videos)|Window.IsVisible(music)</visible>
+                    <label>CLEAN</label>
+                    <onclick>SetFocus(16002)</onclick>
+                </control>
+            </control>
+            <control type="group">
+                <left>150</left>
+                <animation effect="slide" end="-150,0" time="400" condition="ControlGroup(16000).HasFocus()">Conditional</animation>
+                <control type="label">
+                    <left>1402</left>
+                    <top>480</top>
+                    <width>450</width>
+                    <height>45</height>
+                    <align>right</align>
+                    <aligny>bottom</aligny>
+                    <angle>90</angle>
+                    <textcolor>description</textcolor>
+                    <label>$LOCALIZE[313] ?</label>
+                </control>
+                <control type="grouplist" id="16000">
+                    <left>1815</left>
+                    <top>6</top>
+                    <width>150</width>
+                    <height>780</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <itemgap>15</itemgap>
+                    <onup>16000</onup>
+                    <ondown>16000</ondown>
+                    <onleft>noop</onleft>
+                    <onright>noop</onright>
+                    <orientation>vertical</orientation>
+                    <control type="button" id="16001">
+                        <include>AlphaBarButtons</include>
+                        <label>107</label>
+                        <onclick condition="Window.IsVisible(videos)">CleanLibrary(video)</onclick>
+                        <onclick condition="Window.IsVisible(music)">CleanLibrary(music)</onclick>
+                        <onclick>SetFocus(15000)</onclick>
+                    </control>
+                    <control type="button" id="16002">
+                        <include>AlphaBarButtons</include>
+                        <label>106</label>
+                        <onclick>SetFocus(15000)</onclick>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

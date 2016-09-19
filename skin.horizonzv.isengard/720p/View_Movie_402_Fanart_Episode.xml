@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="Fanart_Episode">
+		<include>openclose</include>
+		<control type="group">
+			<control type="button" id="444">
+				<enable>false</enable>
+				<include>HiddenButton</include>
+				<visible>Control.IsVisible(402)+!Control.HasFocus(666)</visible>
+			</control>
+			<visible>Control.IsVisible(402)+!Control.HasFocus(666)</visible>
+			<control type="group">
+				<include>openclosevisible</include>
+				<visible>Skin.HasSetting(EpisodeInfo)|Control.HasFocus(888)</visible>
+				<include>BlackGrunge</include>
+			</control>
+			<control type="group">
+				<include>opencloseslideup</include>
+				<include>MirrorPanel</include>
+			</control>
+			<control type="button" id="888">
+				<onup>Control.SetFocus(9000)</onup>
+				<ondown>Control.SetFocus(402)</ondown>
+				<include>HiddenButton</include>
+			</control>
+			<control type="image" id="9898">
+				<left>1035</left>
+				<top>50</top>
+				<width>230</width>
+				<height>70</height>
+				<fadetime>FadeTime</fadetime>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$VAR[MovieStudioLogoVar]$INFO[ListItem.Studio,,.png]</texture>
+				<visible>!IsEmpyt(Control.GetLabel(9898))</visible>
+				<include>openclosevisible</include>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(402)+!Control.HasFocus(666)</visible>
+			<include>opencloseslideup</include>
+			<left>0</left>
+			<top>460</top>
+			<control type="group">
+				<left>1270</left>
+				<top>-10</top>
+				<include>opencloseslideup</include>
+				<visible>Skin.HasSetting(CommonPageCount)</visible>
+				<control type="label">
+					<description>Page Count Label</description>
+					<left>520r</left>
+					<top>0</top>
+					<width>500</width>
+					<height>20</height>
+					<font>font16</font>
+					<textcolor>grey</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container.NumItems,([COLOR=selected],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=selected]]$INFO[Container.NumPages,/,[/COLOR])]</label>
+				</control>
+			</control>
+			<control type="fixedlist" id="402">
+				<left>-55</left>
+				<top>0</top>
+				<width>1350</width>
+				<height>250</height>
+				<onleft>402</onleft>
+				<onright>402</onright>
+				<onup condition="!Skin.HasSetting(EpisodeInfo)+!SubString(ListItem.Label,..,left)">888</onup>
+				<onup condition="Skin.HasSetting(EpisodeInfo)|SubString(ListItem.Label,..,left)">9000</onup>
+				<ondown condition="[Skin.HasSetting(HideJumpSMSBar)|Container.Content(episodes)|Container.Content(seasons)]+Control.IsVisible(60)">60</ondown>
+				<ondown condition="[Skin.HasSetting(HideJumpSMSBar)|Container.Content(episodes)|Container.Content(seasons)]+!Control.IsVisible(60)">SetFocus(732)</ondown>
+				<ondown condition="!Skin.HasSetting(HideJumpSMSBar)+!Container.Content(episodes)+!Container.Content(seasons)">17000</ondown>
+				<viewtype label="31029">fixed</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<focusposition>2</focusposition>
+				<movement>1</movement>
+				<orientation>horizontal</orientation>
+				<preloaditems>4</preloaditems>
+				<visible>Container.Content(Episodes)</visible>
+				<itemlayout height="200" width="275">
+					<control type="image">
+						<left>2</left>
+						<top>20</top>
+						<width>273</width>
+						<height>160</height>
+						<aspectratio>scale</aspectratio>
+						<fadetime>FadeTime</fadetime>
+						<colordiffuse>$VAR[CoverDim]</colordiffuse>
+						<texture background="true" diffuse="masks/mask.png" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>6</bordersize>
+						<visible>!StringCompare(ListItem.label,..)</visible>
+					</control>
+					<control type="group">
+						<left>8</left>
+						<top>26</top>
+						<include>Amazon_Flagg_Small</include>
+					</control>
+					<control type="group">
+						<left>8</left>
+						<top>26</top>
+						<include>WatchedIcon_Small</include>
+					</control>
+					<control type="image">
+						<left>7</left>
+						<top>26</top>
+						<width>263</width>
+						<height>148</height>
+						<fadetime>FadeTime</fadetime>
+						<colordiffuse>$VAR[CoverDim]</colordiffuse>
+						<texture background="true">masks/Default.png</texture>
+						<visible>Skin.HasSetting(animation)</visible>
+						<visible>!StringCompare(ListItem.label,..)</visible>
+					</control>
+					<control type="image">
+						<left>8</left>
+						<top>178</top>
+						<width>261</width>
+						<height>60</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>FadeTime</fadetime>
+						<colordiffuse>grey2</colordiffuse>
+						<texture background="true" flipy="true" diffuse="ShadowWhite.png" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+						<visible>!StringCompare(ListItem.label,..)</visible>
+					</control>
+					<control type="image">
+						<left>2</left>
+						<top>20</top>
+						<width>273</width>
+						<height>160</height>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>$VAR[CoverDim]</colordiffuse>
+						<texture background="true" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+						<include>openclosevisible</include>
+						<visible>StringCompare(ListItem.label,..)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="310" width="275">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="100" end="130" time="200"/>
+						</animation>
+						<animation type="UnFocus" reversible="false">
+							<effect type="zoom" center="auto" start="130" end="100" time="200"/>
+						</animation>
+						<control type="image">
+							<left>2</left>
+							<top>19</top>
+							<width>273</width>
+							<height>160</height>
+							<aspectratio>scale</aspectratio>
+							<fadetime>FadeTime</fadetime>
+							<texture background="true" diffuse="masks/mask.png" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadowWhite.png</bordertexture>
+							<bordersize>7</bordersize>
+							<visible>!StringCompare(ListItem.label,..)</visible>
+						</control>
+						<control type="group">
+							<left>8</left>
+							<top>26</top>
+							<include>Amazon_Flagg_Small_Focus</include>
+						</control>
+						<control type="group">
+							<left>8</left>
+							<top>26</top>
+							<include>WatchedIcon_Focus_Small</include>
+						</control>
+						<control type="image">
+							<left>8</left>
+							<top>26</top>
+							<width>260</width>
+							<height>147</height>
+							<fadetime>FadeTime</fadetime>
+							<texture background="true">masks/Default.png</texture>
+							<visible>Skin.HasSetting(animation)</visible>
+							<visible>!StringCompare(ListItem.label,..)</visible>
+						</control>
+						<control type="image">
+							<left>2</left>
+							<top>20</top>
+							<width>273</width>
+							<height>160</height>
+							<aspectratio>stretch</aspectratio>
+							<texture background="true" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+							<include>openclosevisible</include>
+							<visible>StringCompare(ListItem.label,..)</visible>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(402)+!Control.HasFocus(666)</visible>
+			<include>opencloseslideup</include>
+			<control type="group">
+				<top>15</top>
+				<include>opencloseslideup</include>
+				<control type="image">
+					<left>-10</left>
+					<top>664</top>
+					<width>1300</width>
+					<height>10</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture background="true" border="2" flipy="true">Shadow.png</texture>
+				</control>
+				<control type="image">
+					<visible>Control.IsVisible(402)</visible>
+					<left>-10</left>
+					<top>664</top>
+					<width>1300</width>
+					<height>1</height>
+					<colordiffuse>menudiffuse</colordiffuse>
+					<texture background="true">Separator2.png</texture>
+				</control>
+				<control type="label">
+					<left>40</left>
+					<top>640</top>
+					<width>1200</width>
+					<height>20</height>
+					<scroll>true</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>impacted31</font>
+					<label>$VAR[OriginalTitle]</label>
+				</control>
+			</control>
+			<control type="scrollbar" id="60">
+				<animation effect="slide" start="0,-50" end="0,0" time="150" condition="!Control.HasFocus(60)">Conditional</animation>
+				<left>10</left>
+				<top>755</top>
+				<width>1260</width>
+				<height>12</height>
+				<texturesliderbackground border="1">ScrollBarBackground_H.png</texturesliderbackground>
+				<texturesliderbar border="3">ScrollBar_H.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="red" border="3">ScrollBar_H.png</texturesliderbarfocus>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<onup>402</onup>
+				<ondown>SetFocus(732)</ondown>
+				<showonepage>false</showonepage>
+				<orientation>horizontal</orientation>
+			</control>
+			<control type="group">
+				<top>-15</top>
+				<visible>Control.IsVisible(402)+[Skin.HasSetting(EpisodeInfo)|Control.HasFocus(888)]</visible>
+				<visible>!StringCompare(ListItem.label,..)</visible>
+				<include>openclosevisible</include>
+				<control type="group">
+					<left>20</left>
+					<top>40</top>
+					<control type="group">
+						<left></left>
+						<top>0</top>
+						<control type="grouplist">
+							<left>5</left>
+							<top>20</top>
+							<width>760</width>
+							<height>30</height>
+							<itemgap>4</itemgap>
+							<align>left</align>
+							<orientation>horizontal</orientation>
+							<include>FlagVideo</include>
+							<include>FlagVideoAudioStream1</include>
+							<include>FlagVideoAudioStream2</include>
+							<include>FlagVideoSubtitles</include>
+						</control>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>75</top>
+						<width>1000</width>
+						<height>20</height>
+						<font>impacted31</font>
+						<textcolor>grey</textcolor>
+						<scroll>true</scroll>
+						<label>$VAR[OriginalTitle] $INFO[ListItem.Year,(,)]</label>
+					</control>
+					<control type="group">
+						<control type="image">
+							<left>-10</left>
+							<top>116</top>
+							<width>1260</width>
+							<height>280</height>
+							<texture background="true">BlackBack.png</texture>
+						</control>
+						<control type="image">
+							<description>Separator</description>
+							<left>-10</left>
+							<top>55</top>
+							<width>1000</width>
+							<height>2</height>
+							<colordiffuse>fanartdiffuse</colordiffuse>
+							<texture background="true" border="1">Separator1.png</texture>
+						</control>
+						<control type="image">
+							<description>Separator</description>
+							<left>-10</left>
+							<top>115</top>
+							<width>1260</width>
+							<height>2</height>
+							<colordiffuse>fanartdiffuse</colordiffuse>
+							<texture background="true" border="1">Separator1.png</texture>
+						</control>
+					</control>
+				</control>
+				<control type="image">
+					<description>Separator</description>
+					<left>846</left>
+					<top>172</top>
+					<width>2</width>
+					<height>250</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture background="true" border="1">Separator4.png</texture>
+				</control>
+				<control type="image">
+					<description>Separator</description>
+					<left>10</left>
+					<top>435</top>
+					<width>1260</width>
+					<height>2</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture background="true" border="1">Separator1.png</texture>
+				</control>
+				<control type="textbox">
+					<description>Description</description>
+					<left>20</left>
+					<top>160</top>
+					<width>780</width>
+					<height>252</height>
+					<shadowcolor>black</shadowcolor>
+					<include condition="!Skin.HasSetting(BigPlotText)">PlotText16Var</include>
+					<include condition="Skin.HasSetting(BigPlotText)">PlotTextBigVar</include>
+					<label>$INFO[ListItem.Plot]</label>
+					<visible>!IsEmpty(ListItem.Plot)</visible>
+				</control>
+				<control type="group">
+					<left>870</left>
+					<top>170</top>
+					<control type="grouplist">
+						<width>370</width>
+						<height>300</height>
+						<aligny>top</aligny>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[2050]: [/COLOR]$INFO[ListItem.Duration] $LOCALIZE[12391] $INFO[ListItem.PercentPlayed,/ , % $LOCALIZE[576]]</label>
+						</control>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[515]: [/COLOR]$INFO[ListItem.Genre]</label>
+							<visible>!IsEmpty(ListItem.Genre)</visible>
+						</control>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[572]: [/COLOR]$INFO[ListItem.Studio]</label>
+						</control>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[563]: [/COLOR]$INFO[ListItem.RatingAndVotes]</label>
+						</control>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[20074]: [/COLOR]$INFO[ListItem.mpaa]</label>
+						</control>
+						<control type="label">
+							<width>370</width>
+							<height>20</height>
+							<font>font16</font>
+							<label>[COLOR=grey]$LOCALIZE[568]: [/COLOR]$INFO[ListItem.LastPlayed]</label>
+							<visible>!IsEmpty(ListItem.LastPlayed)</visible>
+						</control>
+					</control>
+					<control type="group">
+						<left>0</left>
+						<top>160</top>
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>370</width>
+							<height>40</height>
+							<align>left</align>
+							<textcolor>grey</textcolor>
+							<font>menufontimpacted</font>
+							<label>$INFO[ListItem.Season,$LOCALIZE[20373] ,]</label>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>40</top>
+							<width>370</width>
+							<height>40</height>
+							<align>left</align>
+							<font>menufontimpacted</font>
+							<shadowcolor>grey3</shadowcolor>
+							<label>$INFO[ListItem.Episode,$LOCALIZE[20452] ,]</label>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(402)+!Control.HasFocus(666)</visible>
+			<include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarH</include>
+		</control>
+	</include>
+</includes>

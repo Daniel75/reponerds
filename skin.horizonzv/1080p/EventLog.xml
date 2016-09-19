@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">570</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundOverlayColor]</backgroundcolor>
+    <menucontrol>9000</menucontrol>
+    <onload condition="!Skin.HasSetting(FirstTimeRun)">ActivateWindow(1112)</onload>
+    <views>570</views>
+    <include>openclose</include>
+    <include>openclosebox</include>
+    <controls>
+        <include>DialogBackgroundSimple</include>
+        <include content="DialogInfoBackgroundParam">
+            <param name="DialogBackgroundLeft" value="90" />
+            <param name="DialogBackgroundTop" value="60" />
+            <param name="DialogBackgroundWidth" value="1740" />
+            <param name="DialogBackgroundHeight" value="938" />
+            <param name="DialogSeparatorTop" value="135" />
+            <param name="DialogSeparatorBottom" value="998" />
+            <param name="DialogShadowTop" value="1000" />
+            <param name="DialogHeaderLabel" value="Event Log" />
+            <param name="DialogHeaderTop" value="75" />
+            <param name="DialogHeaderId" value="1" />
+        </include>
+        <include>ScrollOffsetLabel</include>
+        <control type="image">
+            <description>Section header image</description>
+            <left>120</left>
+            <top>75</top>
+            <width>52</width>
+            <height>52</height>
+            <aspectratio>keep</aspectratio>
+            <texture>icon_events.png</texture>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(570)</visible>
+            <control type="list" id="570">
+                <left>142</left>
+                <top>150</top>
+                <width>1620</width>
+                <height>795</height>
+                <onleft>9000</onleft>
+                <onright>60</onright>
+                <onup>570</onup>
+                <ondown>570</ondown>
+                <viewtype label="535">list</viewtype>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="128" width="1620">
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <width>120</width>
+                        <height>114</height>
+                        <texture>$INFO[Listitem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="3">BlackBack.png</bordertexture>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>0</top>
+                        <width>1305</width>
+                        <height>45</height>
+                        <font>font13</font>
+                        <textcolor>grey</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>135</left>
+                        <top>48</top>
+                        <width>1305</width>
+                        <height>72</height>
+                        <font>font12</font>
+                        <textcolor>grey</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Property(Event.Description)]</label>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>0</top>
+                        <width>1455</width>
+                        <height>45</height>
+                        <font>font12</font>
+                        <textcolor>grey</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="128" width="1620">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>1620</width>
+                        <height>120</height>
+                        <texture border="5">buttons/ButtonFO.png</texture>
+                        <visible>!Control.HasFocus(570)</visible>
+                        <include>openclosevisible</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>1620</width>
+                        <height>120</height>
+                        <texture border="5">buttons/ButtonFO.png</texture>
+                        <visible>Control.HasFocus(570)</visible>
+                        <include>openclosevisible</include>
+                    </control>
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <width>120</width>
+                        <height>114</height>
+                        <texture>$INFO[Listitem.Icon]</texture>
+                        <aspectratio>keep</aspectratio>
+                        <bordertexture border="3">BlackBack.png</bordertexture>
+                        <bordersize>2</bordersize>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>0</top>
+                        <width>1305</width>
+                        <height>45</height>
+                        <font>font13</font>
+                        <textcolor>black</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>[B]$INFO[ListItem.Label][/B]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>135</left>
+                        <top>48</top>
+                        <width>1305</width>
+                        <height>72</height>
+                        <font>font12</font>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <label>$INFO[ListItem.Property(Event.Description)]</label>
+                    </control>
+                    <control type="label">
+                        <left>135</left>
+                        <top>0</top>
+                        <width>1455</width>
+                        <height>45</height>
+                        <font>font12</font>
+                        <textcolor>black</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="scrollbar" id="60">
+                <left>1785</left>
+                <top>150</top>
+                <width>18</width>
+                <height>795</height>
+                <onleft>570</onleft>
+                <onright>2</onright>
+                <showonepage>true</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(570)</visible>
+            </control>
+        </control>
+        <include>fakebutton_visible_bkg</include>
+        <views>570</views>
+        <control type="group">
+            <visible>!Skin.HasSetting(KioskMode)</visible>
+            <include>SidePanelAnimation</include>
+            <include>SidePanelBackground</include>
+            <control type="grouplist" id="9000">
+                <include>SidePanelProperty</include>
+                <control type="togglebutton" id="4">
+                    <description>Sort asc</description>
+                    <include>SidePanelToggleButton</include>
+                    <label>31051</label>
+                    <altlabel>31050</altlabel>
+                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
+                </control>
+                <control type="button" id="21">
+                    <description>Level button</description>
+                    <include>SidePanelToggleButton</include>
+                    <label>-</label>
+                </control>
+                <control type="radiobutton" id="22">
+                    <description>Only show current level</description>
+                    <include>SidePanelToggleButton</include>
+                    <label>-</label>
+                </control>
+                <control type="button" id="20">
+                    <description>Clear button</description>
+                    <include>SidePanelToggleButton</include>
+                    <label>192</label>
+                </control>
+            </control>
+            <include>SidePanelNavigation</include>
+        </control>
+        <include>SidePanelShortcuts</include>
+        <include>Clock</include>
+        <include>NavInfo</include>
+        <include>BehindDialogFadeOut</include>
+    </controls>
+</window>

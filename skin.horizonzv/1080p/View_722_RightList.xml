@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <variable name="description">
+        <value condition="Container.Content(Addons)">$INFO[ListItem.AddonDescription]</value>
+        <value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
+        <value condition="Container.Content(Albums)">$INFO[ListItem.Property(Album_Description)]</value>
+    </variable>
+    <include name="RightList_Addons">
+        <control type="group">
+            <include>openclose</include>
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <include>BlackGrunge</include>
+        </control>
+        <control type="group">
+            <include>opencloseslideleft</include>
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <left>1065</left>
+            <top>0</top>
+            <control type="image">
+                <left>0</left>
+                <top>-8</top>
+                <width>840</width>
+                <height>1095</height>
+                <colordiffuse>grey2</colordiffuse>
+                <texture background="true">Underlay2.png</texture>
+            </control>
+            <control type="image">
+                <left>22</left>
+                <top>982</top>
+                <width>795</width>
+                <height>3</height>
+                <colordiffuse>menudiffuse</colordiffuse>
+                <texture background="true">Separator1.png</texture>
+            </control>
+            <control type="list" id="722">
+                <left>0</left>
+                <top>82</top>
+                <width>840</width>
+                <height>896</height>
+                <onleft>9000</onleft>
+                <onright condition="[Skin.HasSetting(HideJumpSMSBar)|Container.Content(episodes)|Container.Content(seasons)]+Control.IsVisible(60)">60</onright>
+                <onright condition="[Skin.HasSetting(HideJumpSMSBar)|Container.Content(episodes)|Container.Content(seasons)]+!Control.IsVisible(60)">SetFocus(732)</onright>
+                <onright condition="!Skin.HasSetting(HideJumpSMSBar)+!Container.Content(episodes)+!Container.Content(seasons)">15000</onright>
+                <onup>722</onup>
+                <ondown>722</ondown>
+                <viewtype label="RightList">list</viewtype>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <visible>![Container.Content(Sets)|Container.Content(Musicvideos)|Container.Content(Movies)|Container.Content(TVShows)|Container.Content(Episodes)|Container.Content(Seasons)]</visible>
+                <itemlayout width="840" height="52">
+                    <control type="label">
+                        <left>30</left>
+                        <width>750</width>
+                        <height>66</height>
+                        <align>left</align>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>810</left>
+                        <width>375</width>
+                        <height>66</height>
+                        <align>right</align>
+                        <font>ubuntu-r16b</font>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Label2,- ]</label>
+                        <visible>!Container.Content(Addons)</visible>
+                    </control>
+                    <control type="label">
+                        <left>810</left>
+                        <width>375</width>
+                        <height>66</height>
+                        <align>right</align>
+                        <font>ubuntu-r16b</font>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <label>$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.AddonVersion, (,) ]</label>
+                        <visible>Container.Content(Addons)</visible>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="840" height="52">
+                    <control type="group">
+                        <include>focuseffect</include>
+                        <control type="image">
+                            <left>0</left>
+                            <top>8</top>
+                            <width>840</width>
+                            <height>50</height>
+                            <texture border="5">buttons/ButtonFO.png</texture>
+                            <visible>Control.HasFocus(722)</visible>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>8</top>
+                            <width>840</width>
+                            <height>50</height>
+                            <colordiffuse>fanartdiffuse</colordiffuse>
+                            <texture border="5">buttons/ButtonFO.png</texture>
+                            <visible>!Control.HasFocus(722)</visible>
+                        </control>
+                        <control type="label">
+                            <left>30</left>
+                            <width>750</width>
+                            <height>66</height>
+                            <align>left</align>
+                            <textcolor>black</textcolor>
+                            <selectedcolor>$VAR[SelectedColor]</selectedcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="label">
+                            <left>810</left>
+                            <top>10</top>
+                            <width>375</width>
+                            <align>right</align>
+                            <font>ubuntu-r16b</font>
+                            <textcolor>black</textcolor>
+                            <selectedcolor>$VAR[SelectedColor]</selectedcolor>
+                            <label>$INFO[ListItem.Label2,- ]</label>
+                            <visible>!Container.Content(Addons)</visible>
+                        </control>
+                        <control type="label">
+                            <left>810</left>
+                            <top>10</top>
+                            <width>375</width>
+                            <align>right</align>
+                            <font>ubuntu-r16b</font>
+                            <textcolor>black</textcolor>
+                            <selectedcolor>$VAR[SelectedColor]</selectedcolor>
+                            <label>$INFO[ListItem.Property(Addon.Status)]$INFO[ListItem.AddonVersion, (,) ]</label>
+                            <visible>Container.Content(Addons)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="scrollbar" id="60">
+                <left>16r</left>
+                <top>82</top>
+                <height>892</height>
+                <onleft>722</onleft>
+                <onright>732</onright>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Skin.HasSetting(HideJumpSMSBar)|Container.Content(episodes)</visible>
+            </control>
+        </control>
+        <control type="group">
+            <include>opencloseslideright</include>
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <control type="group">
+                <control type="image">
+                    <left>22</left>
+                    <top>562</top>
+                    <width>1020</width>
+                    <height>3</height>
+                    <colordiffuse>menudiffuse</colordiffuse>
+                    <texture background="true">Separator1.png</texture>
+                </control>
+                <control type="image">
+                    <left>22</left>
+                    <top>982</top>
+                    <width>1020</width>
+                    <height>3</height>
+                    <colordiffuse>menudiffuse</colordiffuse>
+                    <texture background="true">Separator1.png</texture>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <top>530</top>
+                    <width>1020</width>
+                    <height>30</height>
+                    <label>$LOCALIZE[21863]: $INFO[ListItem.AddonCreator]</label>
+                    <visible>!String.IsEmpty(ListItem.AddonCreator)</visible>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <top>530</top>
+                    <width>1020</width>
+                    <height>30</height>
+                    <label>$LOCALIZE[345]: $INFO[ListItem.Year]</label>
+                    <visible>!String.IsEmpty(ListItem.Year)</visible>
+                </control>
+            </control>
+            <control type="group">
+                <control type="image">
+                    <left>30</left>
+                    <top>585</top>
+                    <width>990</width>
+                    <height>375</height>
+                    <fadetime>FadeTime</fadetime>
+                    <aspectratio align="left">keep</aspectratio>
+                    <texture background="true" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+                    <bordertexture border="5">buttons/ButtonNF.png</bordertexture>
+                    <bordersize>4</bordersize>
+                    <visible>![Container.Content(songs)|Container.Content(artists)|Container.Content(albums)]</visible>
+                </control>
+                <control type="image">
+                    <left>30</left>
+                    <top>585</top>
+                    <width>375</width>
+                    <height>375</height>
+                    <fadetime>FadeTime</fadetime>
+                    <aspectratio align="center">stretch</aspectratio>
+                    <texture background="true" fallback="FallbackCover.png">$INFO[ListItem.Icon]</texture>
+                    <bordertexture border="5">buttons/ButtonNF.png</bordertexture>
+                    <bordersize>4</bordersize>
+                    <visible>Container.Content(songs)|Container.Content(artists)|Container.Content(albums)</visible>
+                </control>
+                <control type="image">
+                    <left>420</left>
+                    <top>585</top>
+                    <width>3</width>
+                    <height>375</height>
+                    <fadetime>FadeTime</fadetime>
+                    <colordiffuse>menudiffuse</colordiffuse>
+                    <texture background="true">Separator4.png</texture>
+                    <visible>Container.Content(songs)|Container.Content(artists)|Container.Content(albums)</visible>
+                </control>
+            </control>
+            <control type="group">
+                <visible>!ListItem.IsParentFolder</visible>
+                <include>openclosemedium</include>
+                <left>435</left>
+                <top>585</top>
+                <control type="group">
+                    <control type="label">
+                        <left>15</left>
+                        <top>8</top>
+                        <width>570</width>
+                        <height>360</height>
+                        <font>ubuntu-r16b</font>
+                        <wrapmultiline>true</wrapmultiline>
+                        <label>$VAR[description]</label>
+                    </control>
+                    <control type="image">
+                        <visible>[Container.Content(Addons)+String.IsEmpty(ListItem.AddonDescription)]|[Container.Content(Albums)+String.IsEmpty(ListItem.Property(Album_Description))]|[Container.Content(artists)+String.IsEmpty(ListItem.Property(Artist_Description))]|Container.Content(Songs)</visible>
+                        <left>3</left>
+                        <top></top>
+                        <width>592</width>
+                        <height>375</height>
+                        <aspectratio align="center" aligny="center">scale</aspectratio>
+                        <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+                        <bordertexture border="5">buttons/ButtonNF.png</bordertexture>
+                        <bordersize>4</bordersize>
+                    </control>
+                </control>
+            </control>
+            <control type="image">
+                <include>openclosevisible</include>
+                <left>142</left>
+                <top>90</top>
+                <width>780</width>
+                <height>435</height>
+                <aspectratio>keep</aspectratio>
+                <fadetime>FadeTime</fadetime>
+                <texture background="true">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist,,/logo.png]</texture>
+                <visible>Container.Content(songs)|Container.Content(artists)|Container.Content(albums)</visible>
+                <visible>Skin.HasSetting(music_art)</visible>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <include>opencloseslideup</include>
+            <include>CommonPageCount</include>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <include>opencloseslideup</include>
+            <left>22</left>
+            <top>982</top>
+            <control type="grouplist">
+                <left>8</left>
+                <top>30</top>
+                <width>990</width>
+                <height>45</height>
+                <itemgap>6</itemgap>
+                <align>left</align>
+                <scrolltime tween="sine" easing="out">200</scrolltime>
+                <orientation>horizontal</orientation>
+                <include>FlagMusic</include>
+                <visible>Container.Content(songs)|Container.Content(artists)|Container.Content(albums)</visible>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Control.IsVisible(722)+!Control.HasFocus(666)</visible>
+            <include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarV</include>
+        </control>
+    </include>
+</includes>

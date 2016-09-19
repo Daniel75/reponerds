@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="PictureWrapView">
+        <include>openclose</include>
+        <control type="group">
+            <include>openclosevisible</include>
+            <visible>Control.IsVisible(510)+!Control.HasFocus(666)</visible>
+            <control type="button" id="888">
+                <onup>Control.SetFocus(9000)</onup>
+                <ondown>Control.SetFocus(510)</ondown>
+                <include>HiddenButton</include>
+            </control>
+            <control type="group">
+                <visible>Control.IsVisible(510)+!Control.HasFocus(888)</visible>
+                <include>openclosevisible</include>
+                <include>WhiteGrunge</include>
+            </control>
+            <include>MirrorPanel</include>
+            <control type="group">
+                <include>opencloseslideup</include>
+                <visible>Control.IsVisible(510)+!Control.HasFocus(666)</visible>
+                <left>0</left>
+                <top>660</top>
+                <control type="wraplist" id="510">
+                    <left>-38</left>
+                    <top>8</top>
+                    <width>1995</width>
+                    <height>375</height>
+                    <onleft>510</onleft>
+                    <onright>510</onright>
+                    <onup>9000</onup>
+                    <ondown condition="Skin.HasSetting(HideJumpSMSBar)+Control.IsVisible(60)">60</ondown>
+                    <ondown condition="Skin.HasSetting(HideJumpSMSBar)+!Control.IsVisible(60)">SetFocus(732)</ondown>
+                    <ondown condition="!Skin.HasSetting(HideJumpSMSBar)">17000</ondown>
+                    <viewtype label="31032">wrap</viewtype>
+                    <pagecontrol>60</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <focusposition>3</focusposition>
+                    <orientation>horizontal</orientation>
+                    <preloaditems>4</preloaditems>
+                    <visible>Window.IsVisible(Pictures)</visible>
+                    <itemlayout height="300" width="285">
+                        <control type="label">
+                            <left>0</left>
+                            <top>285</top>
+                            <width>285</width>
+                            <height>60</height>
+                            <font>ubuntu-r16b</font>
+                            <textcolor>grey</textcolor>
+                            <align>center</align>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                        <control type="image">
+                            <include>openclosevisible</include>
+                            <left>22</left>
+                            <top>60</top>
+                            <width>240</width>
+                            <height>240</height>
+                            <aspectratio>scale</aspectratio>
+                            <bordertexture border="10">ThumbShadow.png</bordertexture>
+                            <bordersize>6</bordersize>
+                            <fadetime>FadeTime</fadetime>
+                            <texture background="true" border="4">BlackBack.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>38</left>
+                            <top>75</top>
+                            <width>210</width>
+                            <height>210</height>
+                            <colordiffuse>grey</colordiffuse>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+                        <control type="image">
+                            <include>openclosevisible</include>
+                            <left>32</left>
+                            <top>294</top>
+                            <width>222</width>
+                            <height>60</height>
+                            <fadetime>FadeTime</fadetime>
+                            <colordiffuse>fanartdiffuse</colordiffuse>
+                            <texture background="true" flipy="true" diffuse="ShadowWhite.png">BlackBack.png</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="300" width="285">
+                        <control type="image">
+                            <left>22</left>
+                            <top>60</top>
+                            <width>240</width>
+                            <height>240</height>
+                            <aspectratio>stretch</aspectratio>
+                            <bordertexture border="10">ThumbShadowWhite.png</bordertexture>
+                            <bordersize>8</bordersize>
+                            <colordiffuse>menudiffuse</colordiffuse>
+                            <texture background="true" border="4">BlackBack.png</texture>
+                            <animation reversible="false" effect="zoom" start="22,60,160,160" end="-15,-8,210,210" time="200">focus</animation>
+                            <animation reversible="false" effect="zoom" end="22,60,160,160" start="-15,-8,210,210" time="200">unfocus</animation>
+                        </control>
+                        <control type="image">
+                            <left>38</left>
+                            <top>75</top>
+                            <width>210</width>
+                            <height>210</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <animation reversible="false" effect="zoom" start="38,75,140,140" end="8,15,180,180" time="200">focus</animation>
+                            <animation reversible="false" effect="zoom" end="38,75,140,140" start="8,15,180,180" time="200">unfocus</animation>
+                        </control>
+                        <control type="image">
+                            <left>172</left>
+                            <top>210</top>
+                            <width>45</width>
+                            <height>45</height>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">OverlayWatching.png</texture>
+                            <animation reversible="false" effect="zoom" start="38,75,30,30" end="8,15,50,50" time="200">focus</animation>
+                            <animation reversible="false" effect="zoom" end="38,75,30,30" start="8,15,50,50" time="200">unfocus</animation>
+                            <visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
+                        </control>
+                        <control type="label">
+                            <left>0</left>
+                            <top>308</top>
+                            <width>285</width>
+                            <height>60</height>
+                            <align>center</align>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="scrollbar" id="60">
+                    <visible>Skin.HasSetting(HideJumpSMSBar)</visible>
+                    <left>15</left>
+                    <top>382</top>
+                    <width>1890</width>
+                    <height>18</height>
+                    <texturesliderbackground border="1">ScrollBarBackground_H.png</texturesliderbackground>
+                    <texturesliderbar border="3">ScrollBar_H.png</texturesliderbar>
+                    <texturesliderbarfocus colordiffuse="red" border="3">ScrollBar_H.png</texturesliderbarfocus>
+                    <textureslidernib>-</textureslidernib>
+                    <textureslidernibfocus>-</textureslidernibfocus>
+                    <onup>510</onup>
+                    <showonepage>false</showonepage>
+                    <orientation>horizontal</orientation>
+                </control>
+            </control>
+            <control type="group">
+                <left>1905</left>
+                <top>615</top>
+                <include>openclose</include>
+                <include>opencloseslideup</include>
+                <visible>Skin.HasSetting(CommonPageCount)</visible>
+                <control type="label">
+                    <description>Page Count Label</description>
+                    <left>780r</left>
+                    <top>0</top>
+                    <width>750</width>
+                    <height>30</height>
+                    <font>font16</font>
+                    <textcolor>grey</textcolor>
+                    <scroll>false</scroll>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>$INFO[Container.TotalTime,$LOCALIZE[31009] ([COLOR=white],[/COLOR]) • ]$INFO[Container.NumItems,([COLOR=white],[/COLOR]) $LOCALIZE[31025]]$INFO[Container.CurrentPage, - $LOCALIZE[31024] ([COLOR=white]]$INFO[Container.NumPages,/,[/COLOR])]</label>
+                </control>
+            </control>
+            <control type="group">
+                <include>opencloseslidedown</include>
+                <control type="image">
+                    <left>-15</left>
+                    <top>90</top>
+                    <width>1950</width>
+                    <height>525</height>
+                    <texture background="true" border="12">ThumbShadow.png</texture>
+                </control>
+                <control type="image">
+                    <left>735</left>
+                    <top>126</top>
+                    <width>450</width>
+                    <height>450</height>
+                    <fadetime>FadeTime</fadetime>
+                    <aspectratio>keep</aspectratio>
+                    <texture background="true">$INFO[ListItem.FilenameandPath]</texture>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <top>518</top>
+                    <width>675</width>
+                    <height>60</height>
+                    <font>impacted44</font>
+                    <label>$INFO[ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <left>705r</left>
+                    <top>518</top>
+                    <width>675</width>
+                    <height>60</height>
+                    <font>impacted44</font>
+                    <align>right</align>
+                    <label>$INFO[ListItem.Label2]</label>
+                </control>
+            </control>
+            <include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarH</include>
+        </control>
+    </include>
+    <include name="PictureThumbView">
+        <include>openclose</include>
+        <control type="group">
+            <include>openclosevisible</include>
+            <visible>Control.IsVisible(514)</visible>
+            <include>WhiteGrunge</include>
+            <control type="group">
+                <control type="group">
+                    <include>opencloseslideright</include>
+                    <left>15</left>
+                    <top>30</top>
+                    <control type="panel" id="514">
+                        <left>90</left>
+                        <top>112</top>
+                        <width>648</width>
+                        <height>864</height>
+                        <onleft>9000</onleft>
+                        <onright condition="Skin.HasSetting(HideJumpSMSBar)+Control.IsVisible(60)">60</onright>
+                        <onright condition="Skin.HasSetting(HideJumpSMSBar)+!Control.IsVisible(60)">SetFocus(732)</onright>
+                        <onright condition="!Skin.HasSetting(HideJumpSMSBar)">15000</onright>
+                        <onup>514</onup>
+                        <ondown>514</ondown>
+                        <viewtype label="$LOCALIZE[31031]">list</viewtype>
+                        <pagecontrol>60</pagecontrol>
+                        <scrolltime>200</scrolltime>
+                        <preloaditems>2</preloaditems>
+                        <visible>Window.IsVisible(Pictures)</visible>
+                        <visible>!String.StartsWith(Container.FolderPath,plugin://)+!Container.Content(Addons)</visible>
+                        <itemlayout height="216" width="216">
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>216</width>
+                                <height>216</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" border="4">special://skin/backgrounds/media-overlay.jpg</texture>
+                                <bordertexture border="10">ThumbShadow.png</bordertexture>
+                                <bordersize>8</bordersize>
+                                <fadetime>FadeTime</fadetime>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>15</top>
+                                <width>186</width>
+                                <height>186</height>
+                                <colordiffuse>grey</colordiffuse>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="216" width="216">
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>216</width>
+                                <height>216</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" border="4" colordiffuse="grey2">White.png</texture>
+                                <bordertexture border="10">ThumbShadowWhite.png</bordertexture>
+                                <bordersize>8</bordersize>
+                                <fadetime>FadeTime</fadetime>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>15</top>
+                                <width>186</width>
+                                <height>186</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                    <control type="scrollbar" id="60">
+                        <visible>Skin.HasSetting(HideJumpSMSBar)</visible>
+                        <left>750</left>
+                        <top>105</top>
+                        <height>864</height>
+                        <onleft>514</onleft>
+                        <onright>2</onright>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
+                    </control>
+                </control>
+                <control type="group">
+                    <include>opencloseslideleft</include>
+                    <control type="group">
+                        <left>855</left>
+                        <top>120</top>
+                        <control type="label">
+                            <description>Title txt</description>
+                            <left>0</left>
+                            <top>0</top>
+                            <width>960</width>
+                            <height>22</height>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <font>impacted24</font>
+                            <textcolor>grey</textcolor>
+                            <shadowcolor>black</shadowcolor>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>45</top>
+                            <width>960</width>
+                            <height>705</height>
+                            <texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
+                            <fadetime>FadeTime</fadetime>
+                            <aspectratio>keep</aspectratio>
+                            <bordertexture border="10">ThumbShadow.png</bordertexture>
+                            <bordersize>6</bordersize>
+                        </control>
+                        <control type="label">
+                            <description>Date time txt</description>
+                            <left>0</left>
+                            <top>765</top>
+                            <width>960</width>
+                            <height>22</height>
+                            <label>$INFO[ListItem.PictureDateTime,$LOCALIZE[31326] - ]</label>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>grey3</textcolor>
+                        </control>
+                        <control type="label">
+                            <description>Resolution txt</description>
+                            <left>0</left>
+                            <top>802</top>
+                            <width>960</width>
+                            <height>22</height>
+                            <label>$INFO[ListItem.PictureResolution,$LOCALIZE[31327] - ]</label>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <textcolor>grey3</textcolor>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <top>22</top>
+                <include>CommonPageCount</include>
+            </control>
+            <include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarV</include>
+            <include>custom_settings_rightpanel</include>
+        </control>
+    </include>
+    <include name="PictureWallView">
+        <include>openclose</include>
+        <control type="group">
+            <include>openclosevisible</include>
+            <visible>Control.IsVisible(516)</visible>
+            <include>WhiteGrunge</include>
+            <control type="group">
+                <control type="group">
+                    <include>opencloseslideleft</include>
+                    <left>15</left>
+                    <top>0</top>
+                    <control type="panel" id="516">
+                        <left>75</left>
+                        <top>112</top>
+                        <width>1800</width>
+                        <height>864</height>
+                        <onleft>9000</onleft>
+                        <onright condition="Skin.HasSetting(HideJumpSMSBar)+Control.IsVisible(60)">60</onright>
+                        <onright condition="Skin.HasSetting(HideJumpSMSBar)+!Control.IsVisible(60)">SetFocus(732)</onright>
+                        <onright condition="!Skin.HasSetting(HideJumpSMSBar)">15000</onright>
+                        <onup>516</onup>
+                        <ondown>516</ondown>
+                        <viewtype label="$LOCALIZE[31031]">list</viewtype>
+                        <pagecontrol>60</pagecontrol>
+                        <scrolltime>200</scrolltime>
+                        <preloaditems>2</preloaditems>
+                        <visible>Window.IsVisible(Pictures)</visible>
+                        <visible>!String.StartsWith(Container.FolderPath,plugin://)+!Container.Content(Addons)</visible>
+                        <itemlayout height="216" width="216">
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>216</width>
+                                <height>216</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" border="4">special://skin/backgrounds/media-overlay.jpg</texture>
+                                <bordertexture border="10">ThumbShadow.png</bordertexture>
+                                <bordersize>8</bordersize>
+                                <fadetime>FadeTime</fadetime>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>15</top>
+                                <width>186</width>
+                                <height>186</height>
+                                <colordiffuse>grey</colordiffuse>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="216" width="216">
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>216</width>
+                                <height>216</height>
+                                <aspectratio>scale</aspectratio>
+                                <texture background="true" border="4" colordiffuse="grey2">White.png</texture>
+                                <bordertexture border="10">ThumbShadowWhite.png</bordertexture>
+                                <bordersize>8</bordersize>
+                                <fadetime>FadeTime</fadetime>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>15</top>
+                                <width>186</width>
+                                <height>186</height>
+                                <aspectratio>keep</aspectratio>
+                                <texture background="true">$INFO[ListItem.Icon]</texture>
+                            </control>
+                        </focusedlayout>
+                    </control>
+                    <control type="scrollbar" id="60">
+                        <visible>Skin.HasSetting(HideJumpSMSBar)</visible>
+                        <left>1882</left>
+                        <top>105</top>
+                        <height>864</height>
+                        <onleft>516</onleft>
+                        <onright>2</onright>
+                        <showonepage>false</showonepage>
+                        <orientation>vertical</orientation>
+                    </control>
+                </control>
+                <control type="group">
+                    <include>opencloseslideup</include>
+                    <control type="image">
+                        <left>-30</left>
+                        <top>990</top>
+                        <width>1965</width>
+                        <height>15</height>
+                        <colordiffuse>fanartdiffuse</colordiffuse>
+                        <texture background="true">Shadow.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>-30</left>
+                        <top>1005</top>
+                        <width>1965</width>
+                        <height>82</height>
+                        <texture background="true">BlackBack.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>-30</left>
+                        <top>1005</top>
+                        <width>1965</width>
+                        <height>1</height>
+                        <texture background="true">Separator2.png</texture>
+                    </control>
+                    <control type="label">
+                        <description>Title txt</description>
+                        <left>45</left>
+                        <top>1020</top>
+                        <width>1815</width>
+                        <height>45</height>
+                        <label>$INFO[ListItem.FileNameandPath]</label>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>impacted24</font>
+                        <textcolor>white</textcolor>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <top>22</top>
+                <include>CommonPageCount</include>
+            </control>
+            <include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarV</include>
+        </control>
+    </include>
+</includes>

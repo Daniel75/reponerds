@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+	    <include>CommonHomeBack</include>
+		<include>CommonAllFront2</include>
+		<include>SideBladeForViews</include>	
+		<include>BigInfosTime</include>
+		<include>BigInfosDatabaseCount</include>
+		<include>BigInfosWeather</include>
+		<include>CommonHomeButton</include>	
+		<include>HomePlaying</include>
+		<control type="group">
+			<left>185</left>
+			<top>30</top>
+			<include>Animation.ZoomIn</include>
+			<control type="button" id ="4">
+				<description>Enable Login screen</description>
+				<left>0</left>
+				<top>135</top>
+				<width>410</width>
+				<height>100</height>
+				<textoffsety>8</textoffsety>
+				<label>20096</label>
+				<font>primal_22</font>
+				<align>center</align>
+				<aligny>top</aligny>
+				<onleft>1799</onleft>
+				<onright>2</onright>
+				<onup>5</onup>
+				<ondown>5</ondown>
+				<enable>!Window.IsVisible(ProfileSettings)</enable>
+			</control>
+			<control type="label">
+				<left>50</left>
+				<top>195</top>
+				<width>300</width>
+				<height>25</height>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>305</label>
+				<visible>System.HasLoginScreen</visible>
+			</control>
+			<control type="label">
+				<left>50</left>
+				<top>195</top>
+				<width>300</width>
+				<height>25</height>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>1223</label>
+				<visible>!System.HasLoginScreen</visible>
+			</control>
+			<control type="button" id="5"> 
+				<description>Choose auto login user</description> 
+				<left>0</left> 
+				<top>245</top> 
+				<width>410</width> 
+				<height>100</height> 
+				<textoffsety>8</textoffsety> 
+				<label>33084</label> 
+				<font>primal_22</font> 
+				<align>center</align> 
+				<aligny>top</aligny> 
+				<onleft>1799</onleft> 
+				<onright>2</onright> 
+				<onup>4</onup> 
+				<ondown>4</ondown>  
+				<visible>!System.HasLoginScreen</visible> 
+				<enable>!Window.IsVisible(ProfileSettings) + !System.HasLoginScreen</enable> 
+			</control> 
+			<control type="button"> 
+				<description>Choose auto login user (grayed out)</description> 
+				<left>0</left> 
+				<top>245</top> 
+				<width>410</width> 
+				<height>72</height> 
+				<textoffsety>8</textoffsety> 
+				<label>33084</label> 
+				<font>primal_24</font> 
+				<align>center</align> 
+				<aligny>top</aligny> 
+				<onleft>2</onleft> 
+				<onright>2</onright> 
+				<onup>4</onup> 
+				<ondown>4</ondown> 
+				<visible>System.HasLoginScreen</visible> 
+				<enable>false</enable> 
+			</control> 
+			<control type="label"> 
+				<left>50</left> 
+				<top>305</top> 
+				<width>300</width> 
+				<height>25</height> 
+				<font>primal_18</font> 
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<align>center</align> 
+ 				<aligny>center</aligny> 
+				<label>$INFO[System.ProfileAutoLogin]</label> 
+				<scroll>Control.HasFocus(5)</scroll> 
+				<scrollspeed>30</scrollspeed> 
+				<visible>!System.HasLoginScreen</visible> 
+			</control> 
+			<control type="group">
+				<left>80</left>
+				<top>400</top>
+				<control type="image">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>240</width>
+				  <height>200</height>
+				  <aspectratio>keep</aspectratio>
+				  <bordertexture border="10">ThumbShadow.png</bordertexture>
+				  <bordersize>10</bordersize>
+				  <texture fallback="unknown-user.png">$INFO[Container(2).Listitem.Icon]</texture>
+				</control>
+				<control type="label">
+				  <left>0</left>
+				  <top>210</top>
+				  <width>240</width>
+				  <height>20</height>
+				  <font>primal_20</font>
+				  <textcolor>$VAR[ColorFontSelected]</textcolor>
+				  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				  <align>center</align>
+				  <aligny>center</aligny>
+				  <label>$LOCALIZE[50074]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>255</top>
+					<width>240</width>
+					<height>20</height>
+					<font>primal_24</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[Container(2).ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>335</top>
+					<width>240</width>
+					<height>30</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor> 
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$LOCALIZE[50075]</label>
+				</control>
+				<control type="label">
+					<left>0</left>
+					<top>380</top>
+					<width>240</width>
+					<height>30</height>
+					<font>primal_24</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label fallback="13170">$INFO[Container(2).ListItem.Label2]</label>
+				</control>
+			</control>
+			<control type="image">
+			  <left>418</left>
+			  <top>134</top>
+			  <width>1253</width>
+			  <height>813</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			</control>
+			<control type="label">
+			  <description>header label</description>
+			  <left>450</left>
+			  <top>160</top>
+			  <width>740</width>
+			  <height>30</height>
+			  <font>primal_26</font>
+			  <label>$LOCALIZE[10034]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="panel" id="2">
+				<left>450</left>
+				<top>230</top>
+				<width>1260</width>
+				<height>540</height>
+				<onleft>4</onleft>
+				<onright>60</onright>
+				<onup>53</onup>
+				<ondown>53</ondown>
+				<viewtype label="21371">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<itemlayout height="240" width="290">
+					<control type="image">
+						<left>11</left>
+						<top>10</top>
+						<width>268</width>
+						<height>225</height>
+						<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>30</left>
+						<top>275</top>
+						<width>278</width>
+						<height>25</height>
+						<font>primal_20</font>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>selected</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</itemlayout>
+				<focusedlayout height="240" width="290">
+				    <control type="image">
+						<left>1</left>
+						<top>0</top>
+						<width>288</width>
+						<height>245</height>
+						<texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>6</bordersize>
+						<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+					</control>	
+					<control type="image">
+						<left>11</left>
+						<top>10</top>
+						<width>268</width>
+						<height>225</height>
+						<texture fallback="unknown-user.png">$INFO[Listitem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>30</left>
+						<top>275</top>
+						<width>278</width>
+						<height>25</height>
+						<font>primal_20</font>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+						<align>left</align>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1060</left>
+				<top>60</top>
+				<width>15</width>
+				<height>530</height>
+				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+				<onleft>2</onleft>
+				<onright>4</onright>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+			</control>
+		</control>
+	</controls>
+</window>

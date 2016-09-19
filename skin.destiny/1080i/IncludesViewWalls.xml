@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+    <!-- OnNext -->
+    <include name="Includes_OnNext_Wall">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-11).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1968</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(0).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1968</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(11).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(12).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1968</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(13).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+    </include>
+    <!-- OnPrevious -->
+    <include name="Includes_OnPrevious_Wall">
+        <control type="image">
+            <left>-246</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>-246</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(0).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>-246</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(11).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(12).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(13).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(14).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+    </include>
+    <!-- Static -->
+    <include name="Includes_Static_Wall">
+        <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>0</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(-1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(0).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(1).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(2).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(3).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(4).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>360</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(5).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>0</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(6).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>246</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(7).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>492</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(8).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>738</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(9).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>984</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(10).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1230</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(11).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1476</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(12).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+        <control type="image">
+            <left>1722</left>
+            <top>720</top>
+            <width>246</width>
+            <height>363</height>
+            <aspectratio scalediffuse="false">stretch</aspectratio>
+            <texture background="true">$INFO[ListItem(13).Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+        </control>
+    </include>
+</includes>

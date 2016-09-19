@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+	<string id="32000">Action on IDLE</string>
+	<string id="32001">Service enabled</string>
+	<string id="32002">Timeout (min)</string>
+	<string id="32003">Action type</string>
+	<string id="32004">Action</string>
+	<string id="32005">- Type</string>
+	<string id="32006">- Play a directory</string>
+	<string id="32007">- Execute a</string>
+	<string id="32008">- File</string>
+	<string id="32009">- Folder</string>
+	<string id="32010">- URL</string>
+	<string id="32011">- Parameter (optional)</string>
+	<string id="32012">- CMD</string>
+	<string id="32013">- Offset</string>
+	<string id="32014">- Windowtype</string>
+	<string id="32015">- Recursive</string>
+	<string id="32016">- Randomtype</string>
+	<string id="32017">- Library</string>
+	<string id="32018">- Folder (optional)</string>
+	<string id="32019">Description:</string>
+	
+	<string id="32100">Minimizes XBMC</string>
+	<string id="32101">Quits XBMC</string>
+	<string id="32102">Powerdown system</string>
+	<string id="32103">Hibernate (S4) the System</string>
+	<string id="32104">Suspends (S3 / S1 depending on bios setting) the System</string>
+	<string id="32105">Run Python script. You must specify the full path to the script</string>
+	<string id="32106">Run AppleScript. You must specify the full path to the script</string>
+	<string id="32107">Plays a playlist, music/video-file, directory or an Url</string>
+	<string id="32108">Starts a slideshow of pictures</string>
+	<string id="32109">Run a slideshow from the specified directory, including all subdirs</string>
+	<string id="32110">Will play the inserted CD or DVD media from the DVD-ROM drive</string>
+	<string id="32111">Execute shell commands</string>
+	<string id="32112">Execute shell commands and freezes XBMC until shell is closed</string>
+	<string id="32113">Update database. For "video" you can additionally specify a path to be scanned</string>
+	<string id="32114">Cleanup database</string>
+	<string id="32115">CAUTION!!!</string>
+	<string id="32116">This can delete your entire library if the source is not available!!!</string>
+	<string id="32117">Starts the screensaver(Future XBMC-Gotham(v13) addition) - not implemented</string>
+	<string id="32118">No operation</string>
+	
+	<string id="32119">For further information see wiki: List of built-in functions</string>
+	
+	
+	<string id="32200">Action after IDLE</string>
+	<string id="32201">Notice: Service must be enabled in "Action on IDLE"-Window</string>
+	<string id="32202">Action enabled</string>
+</strings>

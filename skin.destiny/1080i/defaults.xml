@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <default type="image">
+    <left>0</left>
+    <top>0</top>
+    <texture>-</texture>
+    <colorkey>0</colorkey>
+  </default>
+  <default type="label">
+    <left>120</left>
+    <top>90</top>
+    <label>-</label>
+	<font>primal_18</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+  </default>
+  <default type="fadelabel">
+    <left>120</left>
+    <top>90</top>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+  </default>
+  <default type="button">
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <font>primal_18</font>
+	<textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+    <pulseonselect>no</pulseonselect>
+  </default>
+  <default type="togglebutton">
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <alttexturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</alttexturefocus>
+    <alttexturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</alttexturenofocus>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <label>-</label>
+    <font>primal_18</font>
+	<textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+    <pulseonselect>no</pulseonselect>
+  </default>
+  <default type="textbox">
+    <left>330</left>
+    <top>330</top>
+    <width>615</width>
+    <height>322</height>
+    <spinwidth>18</spinwidth>
+    <spinheight>16</spinheight>
+    <spinleft>410</spinleft>
+    <spintop>305</spintop>
+    <spincolor>white</spincolor>
+    <spinfont>primal_16</spinfont>
+	<textcolor>$VAR[ColorFontNormal]</textcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <textureup>scroll-up.png</textureup>
+    <texturedown>scroll-down.png</texturedown>
+    <textureupfocus>scroll-up-focus.png</textureupfocus>
+    <texturedownfocus>scroll-down-focus.png</texturedownfocus>
+    <font>font13</font>
+  </default>
+  <!--<default type="progress">
+    <left>0</left>
+    <top>0</top>
+	<reveal>true</reveal>
+	<texturebg>Button/progress-back.png</texturebg>
+	<lefttexture colordiffuse="$VAR[ColorProgress]">-</lefttexture>
+	<midtexture border="2,2,2,2" colordiffuse="$VAR[ColorProgress]">Button/progress-mid.png</midtexture>
+	<righttexture colordiffuse="$VAR[ColorProgress]">-</righttexture>
+	<overlaytexture border="2,2,2,2" colordiffuse="$VAR[ColorProgress]">-</overlaytexture>
+	<info>ListItem.Progress</info>
+  </default>-->
+  <default type="progress">
+	<texturebg border="0">progress/bg.png</texturebg>
+	<lefttexture border="0" colordiffuse="$VAR[ColorProgress]">-</lefttexture>
+	<midtexture border="0" colordiffuse="$VAR[ColorProgress]">progress/blank.png</midtexture>
+	<righttexture border="0" colordiffuse="$VAR[ColorProgress]">-</righttexture>
+	<info>ListItem.Progress</info>
+	<overlaytexture>-</overlaytexture>
+  </default>
+  <default type="spincontrol">
+    <left>495</left>
+    <top>189</top>
+    <textureup>Button/scrollup.png</textureup>
+    <texturedown>Button/scrolldown.png</texturedown>
+    <textureupfocus>Button/scrollup.png</textureupfocus>
+    <texturedownfocus>Button/scrolldown.png</texturedownfocus>
+	<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <align>right</align>
+    <width>43</width>
+    <height>60</height>
+    <font>primal_18</font>
+    <reverse>yes</reverse>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <subtype>text</subtype>
+    <textoffsetx>-8</textoffsetx>
+    <textoffsety>0</textoffsety>
+    <pulseonselect>no</pulseonselect>
+  </default>
+  <default type="spincontrolex">
+    <left>795</left>
+    <top>240</top>
+    <width>500</width>
+    <height>63</height>
+    <spinwidth>43</spinwidth>
+    <spinheight>60</spinheight>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <textureup>button/scrollupNF.png</textureup>
+    <texturedown>button/scrolldownNF.png</texturedown>
+    <textureupfocus>button/scrollup.png</textureupfocus>
+    <texturedownfocus>button/scrolldown.png</texturedownfocus>
+    <font>primal_18</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+    <reverse>yes</reverse>
+    <pulseonselect>no</pulseonselect>
+  </default>
+  <default type="radiobutton">
+    <left>450</left>
+    <top>300</top>
+    <width>450</width>
+    <height>80</height>
+    <radiowidth>80</radiowidth>
+    <radioheight>40</radioheight>
+	<textureradioonfocus>Button/radio_on_focus.png</textureradioonfocus>
+	<textureradioonnofocus>Button/radio_on_no_focus.png</textureradioonnofocus>
+	<textureradioofffocus>Button/radio_off_focus.png</textureradioofffocus>
+	<textureradiooffnofocus>Button/radio_off_no_focus.png</textureradiooffnofocus>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <label>215</label>
+    <font>primal_18</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+  </default>
+  <default type="selectbutton">
+    <left>735</left>
+    <top>502</top>
+    <width>450</width>
+    <height>75</height>
+    <label>-</label>
+    <font>primal_18</font>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <texturebg colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturebg>
+    <textureleft>button/scroll-left.png</textureleft>
+    <textureleftfocus>button/scroll-left-focus.png</textureleftfocus>
+    <textureright>button/scroll-right.png</textureright>
+    <texturerightfocus>button/scroll-right-focus.png</texturerightfocus>
+    <font>font13</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+    <aligny>center</aligny>
+  </default>
+  <default type="slider">
+    <controloffsetx>75</controloffsetx>
+    <controloffsety>0</controloffsety>
+  </default>
+  <default type="sliderex">
+    <height>52</height>
+    <textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <sliderwidth>150</sliderwidth>
+    <sliderheight>20</sliderheight>
+    <texturesliderbar>button/seekslider.png</texturesliderbar>
+    <textureslidernib colordiffuse="$VAR[ColorFontNormal]">button/osd_slider_nib.png</textureslidernib>
+    <textureslidernibfocus colordiffuse="$VAR[ColorFontNormal]">button/osd_slider_nib.png</textureslidernibfocus>
+    <font>primal_18</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>$VAR[ColorFontUnfocus]</disabledcolor>
+  </default>
+  <default type="mover">
+    <left>90</left>
+    <top>288</top>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+  </default>
+  <default type="resize">
+    <left>90</left>
+    <top>288</top>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+  </default>
+  <default type="edit">
+    <left>450</left>
+    <top>300</top>
+    <width>450</width>
+    <height>63</height>
+    <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+    <font>primal_18</font>
+    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <disabledcolor>grey3</disabledcolor>
+    <textoffsetx>10</textoffsetx>
+    <aligny>center</aligny>
+    <pulseonselect>no</pulseonselect>
+  </default>
+</includes>

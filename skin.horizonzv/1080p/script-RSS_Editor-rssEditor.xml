@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>10</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundOverlayColor]</backgroundcolor>
+    <coordinates>
+        <left>360</left>
+        <top>210</top>
+    </coordinates>
+    <include>openclose</include>
+    <include>openclosebox</include>
+    <controls>
+        <control type="group">
+            <include content="DialogInfoBackgroundParam">
+                <param name="DialogBackgroundLeft" value="0" />
+                <param name="DialogBackgroundTop" value="0" />
+                <param name="DialogBackgroundWidth" value="1200" />
+                <param name="DialogBackgroundHeight" value="585" />
+                <param name="DialogSeparatorTop" value="60" />
+                <param name="DialogSeparatorBottom" value="585" />
+                <param name="DialogShadowTop" value="587" />
+                <param name="DialogHeaderLabel" value="-" />
+                <param name="DialogHeaderTop" value="8" />
+                <param name="DialogHeaderId" value="2" />
+            </include>
+            <control type="image">
+                <left>0</left>
+                <top>525</top>
+                <width>1200</width>
+                <height>60</height>
+                <colordiffuse>$VAR[BackgroundOverlayColorDialog]</colordiffuse>
+                <texture>WhiteBack.png</texture>
+            </control>
+            <control type="label" id="3">
+                <description>List label</description>
+                <left>30</left>
+                <top>98</top>
+                <width>1140</width>
+                <height>45</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="list" id="10">
+                <left>45</left>
+                <top>158</top>
+                <width>780</width>
+                <height>338</height>
+                <onup>9001</onup>
+                <onleft>9000</onleft>
+                <onright>60</onright>
+                <ondown>9001</ondown>
+                <pagecontrol>60</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <itemlayout height="68">
+                    <control type="label">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>750</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="68">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>780</width>
+                        <height>60</height>
+                        <colordiffuse>fanartdiffuse</colordiffuse>
+                        <visible>!Control.HasFocus(10)</visible>
+                        <texture border="5">buttons/ButtonFO.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>780</width>
+                        <height>60</height>
+                        <visible>Control.hasfocus(14) | Control.HasFocus(10)</visible>
+                        <texture border="5">buttons/ButtonFO.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>750</width>
+                        <height>60</height>
+                        <font>font13</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <textcolor>black</textcolor>
+                        <selectedcolor>selected</selectedcolor>
+                        <info>ListItem.Label</info>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="scrollbar" id="60">
+                <left>828</left>
+                <top>158</top>
+                <width>18</width>
+                <height>338</height>
+                <onleft>10</onleft>
+                <onright>9000</onright>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+            <control type="group" id="9000">
+                <left>870</left>
+                <top>158</top>
+                <control type="button" id="11">
+                    <description>Change Set Button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>18</onup>
+                    <onleft>60</onleft>
+                    <onright>10</onright>
+                    <ondown>13</ondown>
+                </control>
+                <control type="button" id="13">
+                    <description>Add Button</description>
+                    <left>0</left>
+                    <top>68</top>
+                    <width>300</width>
+                    <label>15019</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>11</onup>
+                    <onleft>60</onleft>
+                    <onright>10</onright>
+                    <ondown>14</ondown>
+                </control>
+                <control type="button" id="14">
+                    <description>Remove Button</description>
+                    <left>0</left>
+                    <top>135</top>
+                    <width>300</width>
+                    <label>1210</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>13</onup>
+                    <onleft>60</onleft>
+                    <onright>10</onright>
+                    <ondown>9001</ondown>
+                </control>
+            </control>
+            <control type="group" id="9001">
+                <control type="button" id="18">
+                    <description>Ok Button</description>
+                    <left>300</left>
+                    <top>532</top>
+                    <width>300</width>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>impacted21</font>
+                    <texturenofocus>-</texturenofocus>
+                    <label>186</label>
+                    <onup>9000</onup>
+                    <onleft>20</onleft>
+                    <onright>19</onright>
+                    <ondown>10</ondown>
+                </control>
+                <control type="button" id="19">
+                    <description>Cancel Button</description>
+                    <left>615</left>
+                    <top>532</top>
+                    <width>300</width>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>222</label>
+                    <font>impacted21</font>
+                    <texturenofocus>-</texturenofocus>
+                    <onup>9000</onup>
+                    <onleft>18</onleft>
+                    <onright>20</onright>
+                    <ondown>10</ondown>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

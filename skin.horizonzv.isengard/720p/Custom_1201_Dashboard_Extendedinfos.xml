@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1201">
+	<defaultcontrol always="true">8010</defaultcontrol>
+	<include>openclose</include>
+	<include>openclosefanart</include>
+	<controls>
+		<!-- <include>BlackBack</include> -->
+		<control type="group">
+			<include>openclosebox</include>
+			<left>20</left>
+			<top>355</top>
+			<!-- <width>810</width>
+			<height>600</height> -->
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1240</width>
+				<height>350</height>
+				<colordiffuse>grey2</colordiffuse>
+				<texture border="1">White.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>10</left>
+				<top>10</top>
+				<width>1220</width>
+				<height>330</height>
+				<texture border="1">WhiteBack.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>620</left>
+				<top>20</top>
+				<width>2</width>
+				<height>310</height>
+				<texture border="1">separator4.png</texture>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>20</left>
+				<top>12</top>
+				<width>600</width>
+				<height>30</height>
+				<font>impacted21</font>
+				<label>Blog 1</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>grey2</textcolor>
+			</control>
+			<control type="label">
+				<description>header label</description>
+				<left>620</left>
+				<top>12</top>
+				<width>600</width>
+				<height>30</height>
+				<font>impacted21</font>
+				<label>Blog 2</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>grey2</textcolor>
+			</control>
+			<control type="list" id="8010">
+				<left>20</left>
+				<top>42</top>
+				<width>580</width>
+				<height>290</height>
+				<onright>8011</onright>
+				<onleft>noop</onleft>
+				<onup>8010</onup>
+				<ondown>8010</ondown>
+				<scrolltime tween="Quadratic" easing="out">200</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>vertical</orientation>
+				<movement>1</movement>
+				<itemlayout height="30" width="580">
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>grey3</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>grey3</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<align>right</align>  
+					</control>
+				</itemlayout>
+				<focusedlayout height="30" width="580">
+					<control type="image">
+					  <left>0</left>
+					  <top>0</top>
+					  <width>580</width>
+					  <height>30</height>
+					  <texture border="2">buttons/ButtonFO.png</texture>
+					  <visible>Control.HasFocus(8010)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>	  
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<align>right</align>  
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Enable Blog 1</description>
+						<width>350</width>
+						<align>left</align>
+						<label>deaktiviere Blog 1</label>
+						<include>dashboard_skinreset_blog1</include>
+					</item>
+					<item id="2">
+						<width>350</width>
+						<align>left</align>
+						<label>youtube user</label>
+						<label2>$INFO[Skin.String(YoutubeSearchUser),(,)]</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetString(YoutubeSearchUser)</onclick>
+						<onclick>Skin.SetBool(dashboard_youtubeuser)</onclick>
+					</item>
+					<item id="3">
+						<width>350</width>
+						<align>left</align>
+						<label>youtube</label>
+						<include>dashboard_skinreset_blog1</include>
+						<label2>(Trailer HD German)</label2>
+						<onclick>Skin.SetBool(dashboard_youtube)</onclick>
+					</item>
+					<item id="4">
+						<width>350</width>
+						<align>left</align>
+						<label>trailer</label>
+						<include>dashboard_skinreset_blog1</include>
+						<label2>(Apple iTunes Trailer)</label2>
+						<onclick>Skin.SetBool(dashboard_appletrailer)</onclick>
+					</item>
+					<item id="5">
+						<width>350</width>
+						<align>left</align>
+						<label>new dvd releases</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_newdvdreleases)</onclick>
+					</item>
+					<item id="6">
+						<width>350</width>
+						<align>left</align>
+						<label>toprentals</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_toprentals)</onclick>
+					</item>
+					<item id="7">
+						<width>350</width>
+						<align>left</align>
+						<label>intheaters</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_intheaters)</onclick>
+					</item>
+					<item id="8">
+						<width>350</width>
+						<align>left</align>
+						<label>comingsoon</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_comingsoon)</onclick>
+					</item>
+					<item id="9">
+						<width>350</width>
+						<align>left</align>
+						<label>opening</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_opening)</onclick>
+					</item>
+					<item id="10">
+						<width>350</width>
+						<align>left</align>
+						<label>boxoffice</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_boxoffice)</onclick>
+					</item>
+					<item id="11">
+						<width>350</width>
+						<align>left</align>
+						<label>incinemas</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_incinemas)</onclick>
+					</item>
+					<item id="12">
+						<width>350</width>
+						<align>left</align>
+						<label>upcoming</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_upcoming)</onclick>
+					</item>
+					<item id="13">
+						<width>350</width>
+						<align>left</align>
+						<label>popular movies</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_popularmovies)</onclick>
+					</item>
+					<item id="14">
+						<width>350</width>
+						<align>left</align>
+						<label>toprated movies</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_topratedmovies)</onclick>
+					</item>
+					<item id="15">
+						<width>350</width>
+						<align>left</align>
+						<label>popular tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_populartvshows)</onclick>
+					</item>
+					<item id="16">
+						<width>350</width>
+						<align>left</align>
+						<label>toprated tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_topratedtvshows)</onclick>
+					</item>
+					<item id="17">
+						<width>350</width>
+						<align>left</align>
+						<label>onair tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_onairtvshows)</onclick>
+					</item>
+					<item id="18">
+						<width>350</width>
+						<align>left</align>
+						<label>airingtoday tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_airingtodaytvshows)</onclick>
+					</item>
+					<item id="19">
+						<width>350</width>
+						<align>left</align>
+						<label>similar movies</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_trendingmovies)</onclick>
+					</item>
+					<item id="20">
+						<width>350</width>
+						<align>left</align>
+						<label>similar tvshows</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_trendingshows)</onclick>
+					</item>
+					<item id="21">
+						<width>350</width>
+						<align>left</align>
+						<label>airing episodes</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog1</include>
+						<onclick>Skin.SetBool(dashboard_airingshows)</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="list" id="8011">
+				<left>640</left>
+				<top>42</top>
+				<width>580</width>
+				<height>290</height>
+				<onright>noop</onright>
+				<onleft>8010</onleft>
+				<onup>8011</onup>
+				<ondown>8011</ondown>
+				<scrolltime tween="Quadratic" easing="out">200</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>vertical</orientation>
+				<movement>1</movement>
+				<itemlayout height="30" width="580">
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>grey3</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>grey3</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<align>right</align>  
+					</control>
+				</itemlayout>
+				<focusedlayout height="30" width="580">
+					<control type="image">
+					  <left>0</left>
+					  <top>0</top>
+					  <width>580</width>
+					  <height>30</height>
+					  <texture border="2">buttons/ButtonFO.png</texture>
+					  <visible>Control.HasFocus(8011)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<align>left</align>	  
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>560</width>
+						<height>30</height>
+						<textcolor>black</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+						<align>right</align>  
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Enable Blog 2</description>
+						<width>350</width>
+						<align>left</align>
+						<label>deaktiviere Blog 2</label>
+						<include>dashboard_skinreset_blog2</include>
+					</item>
+					<item id="2">
+						<width>350</width>
+						<align>left</align>
+						<label>youtube user</label>
+						<label2>$INFO[Skin.String(YoutubeSearchUser2),(,)]</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetString(YoutubeSearchUser2)</onclick>
+						<onclick>Skin.SetBool(dashboard_youtubeuser2)</onclick>
+					</item>
+					<item id="3">
+						<width>350</width>
+						<align>left</align>
+						<label>youtube</label>
+						<include>dashboard_skinreset_blog2</include>
+						<label2>(Trailer HD German)</label2>
+						<onclick>Skin.SetBool(dashboard_youtube2)</onclick>
+					</item>
+					<item id="4">
+						<width>350</width>
+						<align>left</align>
+						<label>trailer</label>
+						<include>dashboard_skinreset_blog2</include>
+						<label2>(Apple iTunes Trailer)</label2>
+						<onclick>Skin.SetBool(dashboard_appletrailer2)</onclick>
+					</item>
+					<item id="5">
+						<width>350</width>
+						<align>left</align>
+						<label>new dvd releases</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_newdvdreleases2)</onclick>
+					</item>
+					<item id="6">
+						<width>350</width>
+						<align>left</align>
+						<label>toprentals</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_toprentals2)</onclick>
+					</item>
+					<item id="7">
+						<width>350</width>
+						<align>left</align>
+						<label>intheaters</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_intheaters2)</onclick>
+					</item>
+					<item id="8">
+						<width>350</width>
+						<align>left</align>
+						<label>comingsoon</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_comingsoon2)</onclick>
+					</item>
+					<item id="9">
+						<width>350</width>
+						<align>left</align>
+						<label>opening</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_opening2)</onclick>
+					</item>
+					<item id="10">
+						<width>350</width>
+						<align>left</align>
+						<label>boxoffice</label>
+						<label2>(Rotten Tomatoes)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_boxoffice2)</onclick>
+					</item>
+					<item id="11">
+						<width>350</width>
+						<align>left</align>
+						<label>incinemas</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_incinemas2)</onclick>
+					</item>
+					<item id="12">
+						<width>350</width>
+						<align>left</align>
+						<label>upcoming</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_upcoming2)</onclick>
+					</item>
+					<item id="13">
+						<width>350</width>
+						<align>left</align>
+						<label>popular movies</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_popularmovies2)</onclick>
+					</item>
+					<item id="14">
+						<width>350</width>
+						<align>left</align>
+						<label>toprated movies</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_topratedmovies2)</onclick>
+					</item>
+					<item id="15">
+						<width>350</width>
+						<align>left</align>
+						<label>popular tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_populartvshows2)</onclick>
+					</item>
+					<item id="16">
+						<width>350</width>
+						<align>left</align>
+						<label>toprated tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_topratedtvshows2)</onclick>
+					</item>
+					<item id="17">
+						<width>350</width>
+						<align>left</align>
+						<label>onair tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_onairtvshows2)</onclick>
+					</item>
+					<item id="18">
+						<width>350</width>
+						<align>left</align>
+						<label>airingtoday tvshows</label>
+						<label2>(The MovieDB)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_airingtodaytvshows2)</onclick>
+					</item>
+					<item id="19">
+						<width>350</width>
+						<align>left</align>
+						<label>similar movies</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_trendingmovies2)</onclick>
+					</item>
+					<item id="20">
+						<width>350</width>
+						<align>left</align>
+						<label>similar tvshows</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_trendingshows2)</onclick>
+					</item>
+					<item id="21">
+						<width>350</width>
+						<align>left</align>
+						<label>airing episodes</label>
+						<label2>(Trakt.tv)</label2>
+						<include>dashboard_skinreset_blog2</include>
+						<onclick>Skin.SetBool(dashboard_airingshows2)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+	</controls>
+</window>

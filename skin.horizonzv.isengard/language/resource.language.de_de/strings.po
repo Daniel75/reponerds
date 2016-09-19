@@ -1,0 +1,1747 @@
+# Kodi Media Center language file
+# Addon Name: Confluence
+# Addon id: skin.confluence
+# Addon Provider: Jezz_X, Team Kodi
+msgid "
+msgstr "
+"Project-Id-Version: KODI Main\n"
+"Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: German (Germany) (http://www.transifex.com/projects/p/kodi-main/language/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#31000"
+msgid "Change your"
+msgstr "Ändern von"
+
+msgctxt "#31003"
+msgid "Power options"
+msgstr "Energieeinstellungen"
+
+msgctxt "#31004"
+msgid "Working..."
+msgstr "Beschäftigt..."
+
+msgctxt "#31005"
+msgid "Hide information"
+msgstr "Informationen verstecken"
+
+msgctxt "#31006"
+msgid "View options"
+msgstr "Ansichteneinstellungen"
+
+msgctxt "#31008"
+msgid "Full screen"
+msgstr "Vollbild"
+
+msgctxt "#31009"
+msgid "Total duration"
+msgstr "Gesamtdauer"
+
+msgctxt "#31022"
+msgid "Music - Files"
+msgstr "Musik - Dateien"
+
+msgctxt "#31023"
+msgid "Playing"
+msgstr "Es läuft"
+
+msgctxt "#31024"
+msgid "Page"
+msgstr "Seite"
+
+msgctxt "#31025"
+msgid "Items"
+msgstr "Einträge"
+
+msgctxt "#31026"
+msgid "Misc options"
+msgstr "Sonstige Einstellungen"
+
+msgctxt "#31027"
+msgid "Location"
+msgstr "Standort"
+
+msgctxt "#31028"
+msgid "Poster wrap"
+msgstr "Poster"
+
+msgctxt "#31029"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#31031"
+msgid "Pic thumbs"
+msgstr "Vorschaubilder"
+
+msgctxt "#31032"
+msgid "Image wrap"
+msgstr "Bild"
+
+msgctxt "#31033"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "#31039"
+msgid "Actions"
+msgstr "Aktionen"
+
+msgctxt "#31040"
+msgid "Now playing"
+msgstr "Es läuft"
+
+msgctxt "#31042"
+msgid "PLAYING"
+msgstr "ES LÄUFT"
+
+msgctxt "#31043"
+msgid "PAUSED"
+msgstr "PAUSE"
+
+msgctxt "#31044"
+msgid "FAST FORWARD"
+msgstr "SCHNELLER VORLAUF"
+
+msgctxt "#31045"
+msgid "REWIND"
+msgstr "RÜCKLAUF"
+
+msgctxt "#31046"
+msgid "SEEKING"
+msgstr "SUCHLAUF"
+
+msgctxt "#31048"
+msgid "Visualisation presets"
+msgstr "Visualisierungs-Voreinstellungen"
+
+msgctxt "#31049"
+msgid "End time"
+msgstr "Endzeit"
+
+msgctxt "#31050"
+msgid "Sort: Ascending"
+msgstr "Sortieren: Aufsteigend"
+
+msgctxt "#31051"
+msgid "Sort: Descending"
+msgstr "Sortieren: Absteigend"
+
+msgctxt "#31055"
+msgid "Open playlist"
+msgstr "Wiedergabeliste öffnen"
+
+msgctxt "#31056"
+msgid "Save playlist"
+msgstr "Wiedergabeliste speichern"
+
+msgctxt "#31057"
+msgid "Close playlist"
+msgstr "Wiedergabeliste schließen"
+
+msgctxt "#31058"
+msgid "System music files"
+msgstr "System-Musikdateien"
+
+msgctxt "#31059"
+msgid "Current playlist"
+msgstr "Aktuelle Wiedergabeliste"
+
+msgctxt "#31060"
+msgid "This file is stacked, select the part you want to play from."
+msgstr "Diese Datei besteht aus mehreren Teilen. Bitte den abzuspielenden Teil auswählen."
+
+msgctxt "#31061"
+msgid "Current selected"
+msgstr "Aktuell ausgewählt"
+
+msgctxt "#31101"
+msgid "Home screen options"
+msgstr "Hauptmenü-Einstellungen"
+
+msgctxt "#31102"
+msgid "Background"
+msgstr "Hintergrund"
+
+msgctxt "#31103"
+msgid "Show \"Paused\" in picture slideshow"
+msgstr "\"Pause\" in Bilder-Diaschau anzeigen"
+
+msgctxt "#31104"
+msgid "Play trailers in a window [COLOR=grey3](Video information dialogue only)[/COLOR]"
+msgstr "Film-Trailer im Fenster abspielen [COLOR=grey3](gilt nur für Video-Informationsdialog)[/COLOR]"
+
+msgctxt "#31106"
+msgid "Miscellaneous options"
+msgstr "Sonstige Einstellungen"
+
+msgctxt "#31107"
+msgid "Hide flagging read from video filenames [COLOR=grey3](e.g. Blu-ray, HD-DVD)[/COLOR]"
+msgstr "Flags von Dateinamen ausblenden [COLOR=grey3](z.B. Blu-ray, HD-DVD)[/COLOR]"
+
+msgctxt "#31108"
+msgid "Hide main menu buttons"
+msgstr "Hauptmenü-Buttons verstecken"
+
+msgctxt "#31109"
+msgid "Enable custom background"
+msgstr "Benutzerdefinierten Hintergrund aktivieren"
+
+msgctxt "#31110"
+msgid "Background path:"
+msgstr "Hintergrundbilder-Dateipfad:"
+
+msgctxt "#31111"
+msgid "Hide"
+msgstr "Verstecken"
+
+msgctxt "#31112"
+msgid "Options"
+msgstr "Einstellungen"
+
+msgctxt "#31116"
+msgid "Show recently added albums"
+msgstr "Zeige zuletzt hinzugefügte Alben"
+
+msgctxt "#31117"
+msgid "Show recently added videos"
+msgstr "Zeige zuletzt hinzugefügte Videos"
+
+msgctxt "#31118"
+msgid "Home page programs submenu"
+msgstr "Hauptmenü Programme-Untermenü"
+
+msgctxt "#31119"
+msgid "Hide background fanart"
+msgstr "Hintergrund-Fanart verstecken"
+
+msgctxt "#31124"
+msgid "Show background \"Now playing\" video"
+msgstr "Das \"Es läuft\" Hintergrund-Video anzeigen"
+
+msgctxt "#31125"
+msgid "Show background \"Now playing\" visualisation"
+msgstr "Die \"Es läuft\" Hintergrund-Visualisierung anzeigen"
+
+#empty strings from id 31126 to 31127
+
+msgctxt "#31128"
+msgid "Lyrics"
+msgstr "Liedtexte"
+
+msgctxt "#31129"
+msgid "Hide fanart in full screen visualisation"
+msgstr "Fanart verstecken, wenn Vollbild-Visualiserung aktiv ist"
+
+msgctxt "#31132"
+msgid "Lyrics add-on"
+msgstr "Liedtexte-Addon"
+
+msgctxt "#31134"
+msgid "Home page \"Videos\" submenu"
+msgstr "Hauptmenü Videos-Untermenü"
+
+msgctxt "#31135"
+msgid "Home page \"Music\" submenu"
+msgstr "Hauptmenü Musik-Untermenü"
+
+msgctxt "#31136"
+msgid "Home page \"Pictures\" submenu"
+msgstr "Hauptmenü Bilder-Untermenü"
+
+msgctxt "#31140"
+msgid "Music OSD"
+msgstr "Musik-OSD"
+
+msgctxt "#31141"
+msgid "Video OSD"
+msgstr "Video-OSD"
+
+msgctxt "#31142"
+msgid "Settings level"
+msgstr "Einstellungsebene"
+
+msgctxt "#31200"
+msgid "Shortcuts"
+msgstr "Verknüpfungen"
+
+msgctxt "#31203"
+msgid "Choose your song"
+msgstr "Lied auswählen"
+
+msgctxt "#31205"
+msgid "Lyrics source"
+msgstr "Liedtexte-Quelle"
+
+msgctxt "#31206"
+msgid "Found"
+msgstr "Gefunden"
+
+msgctxt "#31207"
+msgid "Find more items"
+msgstr "Mehr Titel suchen"
+
+msgctxt "#31208"
+msgid "Upcoming episodes"
+msgstr "Zukünftige Episoden"
+
+msgctxt "#31300"
+msgid "Current temperature"
+msgstr "Aktuelle Temperatur"
+
+msgctxt "#31301"
+msgid "Last updated"
+msgstr "Zuletzt aktualisiert"
+
+msgctxt "#31303"
+msgid "Data provider"
+msgstr "Quelle"
+
+msgctxt "#31307"
+msgid "Hide fanart"
+msgstr "Fanart verstecken"
+
+msgctxt "#31308"
+msgid "Movie details"
+msgstr "Film Details"
+
+msgctxt "#31309"
+msgid "Memory used:"
+msgstr "Speicherverbrauch:"
+
+msgctxt "#31310"
+msgid "Track number"
+msgstr "Titelnummer"
+
+msgctxt "#31311"
+msgid "Fanart image[CR][CR]Unavailable[CR][CR] Click button to set"
+msgstr "FANART-BILD[CR][CR]NICHT VORHANDEN[CR][CR] BUTTON KLICKEN ZUM FESTLEGEN"
+
+msgctxt "#31312"
+msgid "Current scraper"
+msgstr "Aktueller Scraper"
+
+msgctxt "#31313"
+msgid "Choose a scraper"
+msgstr "Scraper auswählen"
+
+msgctxt "#31314"
+msgid "Content scanning options"
+msgstr "Inhalt-Scanning-Einstellungen"
+
+msgctxt "#31317"
+msgid "Set fanart path"
+msgstr "Fanart-Dateipfad festlegen"
+
+msgctxt "#31319"
+msgid "Selected profile"
+msgstr "Profil auswählen"
+
+msgctxt "#31320"
+msgid "Last logged in"
+msgstr "Zuletzt angemeldet"
+
+msgctxt "#31321"
+msgid "Karaoke song selector"
+msgstr "Karaoke-Titelauswahl"
+
+msgctxt "#31322"
+msgid "Aired"
+msgstr "Ausgestrahlt"
+
+msgctxt "#31325"
+msgid "Playlist options"
+msgstr "Wiedergabelisten-Einstellungen"
+
+msgctxt "#31326"
+msgid "Created"
+msgstr "Erstellt"
+
+msgctxt "#31327"
+msgid "Resolution"
+msgstr "Auflösung"
+
+msgctxt "#31328"
+msgid "Recently added"
+msgstr "Kürzlich hinzugefügt"
+
+msgctxt "#31329"
+msgid "Timer set! [COLOR=grey1] - System auto shutdown in[/COLOR]"
+msgstr "Ausschalt-Timer aktiv! [COLOR=grey1] - Zeit bis zum Herunterfahren:[/COLOR]"
+
+msgctxt "#31330"
+msgid "Click button to play[CR][CR]movie trailer"
+msgstr "Button klicken, um[CR][CR]Film-Trailer abzuspielen"
+
+msgctxt "#31331"
+msgid "Album details"
+msgstr "Album-Details"
+
+msgctxt "#31351"
+msgid "Pause"
+msgstr "Pause"
+
+msgctxt "#31352"
+msgid "Stop"
+msgstr "Stopp"
+
+msgctxt "#31353"
+msgid "Fast forward"
+msgstr "Schneller Vorlauf"
+
+msgctxt "#31354"
+msgid "Rewind"
+msgstr "Rücklauf"
+
+msgctxt "#31355"
+msgid "Movie menu"
+msgstr "Filmmenü"
+
+msgctxt "#31356"
+msgid "Download subtitles"
+msgstr "Untertitel herunterladen"
+
+msgctxt "#31360"
+msgid "Watch as 2D"
+msgstr "In 2D ansehen"
+
+msgctxt "#31361"
+msgid "Change mode"
+msgstr "Modus ändern"
+
+msgctxt "#31362"
+msgid "Enabled"
+msgstr "Aktiviert"
+
+msgctxt "#31390"
+msgid "Skin default"
+msgstr "Skin-Standard"
+
+msgctxt "#31391"
+msgid "Skin default with no caps"
+msgstr "Skin-Standard ohne Großbuchstaben"
+
+msgctxt "#31392"
+msgid "Arial based"
+msgstr "Arial-basiert"
+
+msgctxt "#31400"
+msgid "[B]CONFIGURE APPEARANCE SETTINGS[/B][CR][CR]Change the skin · Set language and region · Change file listing options[CR]Set up a screensaver"
+msgstr "[B]ERSCHEINUNGSBILD KONFIGURIEREN[/B][CR][CR]Skin auswählen · Sprache und Region einstellen · Dateilisteneinstellungen ändern[CR]Bildschirmschoner festlegen"
+
+msgctxt "#31401"
+msgid "[B]CONFIGURE VIDEO SETTINGS[/B][CR][CR]Manage your video library · Set video playback options · Change video listing options[CR]Set subtitle fonts"
+msgstr "[B]VIDEO-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Die Video-Bibliothek verwalten · Videoabspieleinstellungen vornehmen · Videoauflistungseinstellungen ändern[CR]Untertitel-Schriftarten einstellen"
+
+msgctxt "#31402"
+msgid "[B]CONFIGURE MUSIC SETTINGS[/B][CR][CR]Manage your music library · Set music playback options · Change music listing options[CR]Setup song submission · Set karaoke options"
+msgstr "[B]MUSIK-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Die Musik-Bibliothek verwalten· Musikabspieleinstellungen · Musikauflistungseinstellungen ändern[CR]Musikübertragung einrichten · Karaoke-Einstellungen"
+
+msgctxt "#31403"
+msgid "[B]CONFIGURE PICTURE SETTINGS[/B][CR][CR]Set picture listing options · Configure slideshow"
+msgstr "[B]BILDER-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Bildauflistungseinstellungen · Diashow konfigurieren"
+
+msgctxt "#31404"
+msgid "[B]CONFIGURE WEATHER SETTINGS[/B][CR][CR]Set various cities to collect weather information"
+msgstr "[B]WETTER-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Städte zum Sammeln von Wetter-Informationen auswählen"
+
+msgctxt "#31406"
+msgid "[B]CONFIGURE SYSTEM SETTINGS[/B][CR][CR]Setup and calibrate displays · Configure audio output · Setup remote controls[CR]Set power saving options · Enable debugging · Setup master lock"
+msgstr "[B]SYSTEM-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Bildschirme konfigurieren und kalibrieren · Audioausgabe konfigurieren · Fernbedienungseinstellungen[CR]Energiespar-Einstellungen vornehmen· Debugging aktivieren· Master-Sperre einrichten"
+
+msgctxt "#31408"
+msgid "[B]CONFIGURE ADD-ONS[/B][CR][CR]Manage your installed add-ons · Browse for and install add-ons from kodi.tv[CR]Modify add-on settings"
+msgstr "[B]ADDONS KONFIGURIEREN[/B][CR][CR]Installierte Addons verwalten · Addons aus verschiedenen Repositories auswählen und installieren[CR]Addon-Einstellungen verändern"
+
+msgctxt "#31409"
+msgid "[B]CONFIGURE TV SETTINGS[/B][CR][CR]Change full screen info · Manage EPG data settings"
+msgstr "[B]TV-EINSTELLUNGEN KONFIGURIEREN[/B][CR][CR]Vollbildinformationen ändern · TV-Guide-Dateneinstellungen verwalten "
+
+msgctxt "#31410"
+msgid "[B]CONFIGURE SERVICE SETTINGS[/B][CR][CR]Setup control of Kodi via UPnP and HTTP · Configure file sharing[CR]Enable Zeroconf · Configure AirPlay"
+msgstr "[B]DIENSTE KONFIGURIEREN[/B][CR][CR]Zugriff auf Kodi via UPnP und HTTP einrichten · Dateifreigaben konfigurieren[CR]Zeroconf aktivieren · AirPlay konfigurieren"
+
+msgctxt "#31411"
+msgid "First run help..."
+msgstr "Hilfe für ersten Start..."
+
+msgctxt "#31412"
+msgid "This tab signifies that there is a menu off to the side of this window that contains extra options for this section. To access the menu, navigate to the left with your remote control or keyboard or place your mouse pointer over the tab. [CR][CR]Click \"OK\" to close this dialogue. It will not appear again."
+msgstr "Dieses Symbol zeigt an, dass ein Menü an der Seite des Fensters versteckt ist, das weitere Einstellungen beinhaltet. Um es aufzurufen, nach links navigieren oder  mit der Maus darauf zeigen.[CR][CR]Auf \"OK\" klicken, um diesen Dialog zu schließen. Er wird nicht wieder angezeigt werden."
+
+msgctxt "#31413"
+msgid "Local subtitle available"
+msgstr "Lokaler Untertitel verfügbar"
+
+msgctxt "#31420"
+msgid "Login"
+msgstr "Anmeldung"
+
+msgctxt "#31421"
+msgid "Select your Kodi user profile[CR]to login and continue"
+msgstr "Bitte Kodi-Benutzerprofil auswählen[CR]um fortzufahren"
+
+msgctxt "#31422"
+msgid "Show or hide the login screen at startup."
+msgstr "Den Anmeldebildschirm beim Start anzeigen oder ausblenden"
+
+msgctxt "#31423"
+msgid "Select the profile that will be used at startup when the login screen is disabled."
+msgstr "Profil, das beim Start verwendet werden soll, wenn der Anmeldebildschirm deaktiviert ist."
+
+msgctxt "#31501"
+msgid "Scheduled time"
+msgstr "Geplante Zeit"
+
+msgctxt "#31502"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#31503"
+msgid "Add group"
+msgstr "Gruppe hinzufügen"
+
+msgctxt "#31504"
+msgid "Rename group"
+msgstr "Gruppe umbenennen"
+
+msgctxt "#31505"
+msgid "Delete group"
+msgstr "Gruppe löschen"
+
+msgctxt "#31506"
+msgid "Available[CR]Groups"
+msgstr "Verfügbare[CR]Gruppen"
+
+msgctxt "#31509"
+msgid "Channel group"
+msgstr "Kanal-Gruppe"
+
+msgctxt "#31510"
+msgid "Timer set"
+msgstr "Timer aktiviert"
+
+msgctxt "#31511"
+msgid "Channel options"
+msgstr "Kanal-Einstellungen"
+
+msgctxt "#31901"
+msgid "36-hour forecast"
+msgstr "36-Stunden-Vorhersage"
+
+msgctxt "#31902"
+msgid "Hourly forecast"
+msgstr "Stündliche Vorhersage"
+
+msgctxt "#31903"
+msgid "Weekend forecast"
+msgstr "Wochenend-Vorhersage"
+
+msgctxt "#31904"
+msgid "Daily forecast"
+msgstr "Tägliche Vorhersage"
+
+msgctxt "#31905"
+msgid "Forecast"
+msgstr "Vorhersage"
+
+msgctxt "#31908"
+msgid "Chance of precipitation"
+msgstr "Niederschlagswahrscheinlichkeit"
+
+msgctxt "#31909"
+msgid "Fetching forecast info..."
+msgstr "Vorhersagedaten werden abgerufen..."
+
+msgctxt "#31910"
+msgid "Maps"
+msgstr "Karten"
+
+msgctxt "#31950"
+msgid "WEATHER"
+msgstr "WETTER"
+
+msgctxt "#31951"
+msgid "PICTURES"
+msgstr "BILDER"
+
+msgctxt "#31952"
+msgid "TV"
+msgstr "TV"
+
+msgctxt "#31953"
+msgid "VIDEOS"
+msgstr "VIDEOS"
+
+msgctxt "#31954"
+msgid "MOVIES"
+msgstr "FILME"
+
+msgctxt "#31955"
+msgid "TV SHOWS"
+msgstr "SERIEN"
+
+msgctxt "#31956"
+msgid "MUSIC"
+msgstr "MUSIK"
+
+msgctxt "#31957"
+msgid "PROGRAMS"
+msgstr "PROGRAMME"
+
+msgctxt "#31958"
+msgid "PLAY DISC"
+msgstr "DISC ABSPIELEN"
+
+msgctxt "#31959"
+msgid "SYSTEM"
+msgstr "OPTIONEN"
+
+msgctxt "#31960"
+msgid "RADIO"
+msgstr "RADIO"
+
+# Horizonz
+
+msgctxt "#51000"
+msgid "[COLOR=white]Attention:[/COLOR] All Skin Settings are reseted."
+msgstr "[COLOR=white]Achtung:[/COLOR] Alle Skin bezogenen Einstellungen werden zurückgesetzt."
+
+msgctxt "#51001"
+msgid "Export your Skin Settings to a txt File.[CR][COLOR=white]script.toolbox by phil65 is required.[/COLOR]"
+msgstr "Sichere deine Einstellungen des Skins in einer Textdatei.[CR][COLOR=white]script.toolbox von phil65 wird benötigt.[/COLOR]"
+
+msgctxt "#51002"
+msgid "Import your Skin Settings again.[CR][COLOR=white]script.toolbox by phil65 is required.[/COLOR]"
+msgstr "Stellt deine zuvor gespeicherten Einstellungen des Skins wieder her.[CR][COLOR=white]script.toolbox von phil65 wird benötigt.[/COLOR]"
+
+msgctxt "#51003"
+msgid "Define quote a value for deferring the focus.[CR]Negative figures are also possible.[CR][COLOR=white]Once a menu item is disabled, the focus has to be readjusted.[/COLOR]"
+msgstr "Hier einen Wert angeben um den der Focus verschoben werden soll.[CR]Auch negative Zahlen sind möglich. (zB. -2)[CR][COLOR=white]Sobald ein Menupunkt deaktiviert wird, muss auch der Focus wieder angepasst werden.[/COLOR]"
+
+msgctxt "#51004"
+msgid "Movies which contain ".3D." or "_3D_" in their file name or [CR]"3D" in tag or genre are shown."
+msgstr "Es werden Filme angezeigt, die im Dateinamen ".3D." oder "_3D_" enthalten oder[CR]"3D" im Tag oder Genre steht."
+
+msgctxt "#51006"
+msgid "Movies from a resolution of 720p are displayed."
+msgstr "Es werden Filme ab einer Auflösung von 720p angezeigt."
+
+msgctxt "#51008"
+msgid "Movies from a resolution of 1080p are displayed."
+msgstr "Es werden Filme ab einer Auflösung von 1080p angezeigt."
+
+msgctxt "#51010"
+msgid "Movies with the genre Documentary, Dokumentarfilm, Dokumentation, Doku and Docu are displayed."
+msgstr "Es werden Filme mit dem Genre "Documentary", "Dokumentarfilm", "Dokumentation", "Doku" und "Docu" angezeigt."
+
+msgctxt "#51012"
+msgid "Movies with the chosen age rating are displayed.[CR]Following languages are supported: german, english (US and UK), french.[CR]On movies without age rating are not displayed."
+msgstr "Es werden Filme mit der gewählten Altersfreigabe angezeigt.[CR]Unterstützt werden folgende Sprachen: Deutsch, Englisch (US+UK), Französisch.[CR]Bei Filmen ohne Altersfreigabe wird kein Logo angezeigt."
+
+msgctxt "#51014"
+msgid "Choose an own [COLOR=white]video smart-playlist[/COLOR], and name it."
+msgstr "Wähle eine eigene [COLOR=white]Intelligente Wiedergabeliste[/COLOR] aus, und gebe dem Schalter einen eigenen Namen."
+
+msgctxt "#51016"
+msgid "Choose an own [COLOR=white]video smart-playlist[/COLOR], and name it."
+msgstr "Wähle eine eigene [COLOR=white]Intelligente Wiedergabeliste[/COLOR] aus, und gebe dem Schalter einen eigenen Namen."
+
+msgctxt "#51018"
+msgid "Choose an own [COLOR=white]music playlist[/COLOR] or use the [COLOR=white]Radio ADDON[/COLOR] in the main menu, and name it."
+msgstr "Wähle eine eigene [COLOR=white]Musikplaylist[/COLOR] aus oder nutze das [COLOR=white]Radio ADDON[/COLOR] im Hauptmenü, und gebe dem Schalter einen eigenen Namen."
+
+msgctxt "#51019"
+msgid "Choose an [COLOR=white]folder[/COLOR], and name it."
+msgstr "Wähle einen [COLOR=white]Ordner[/COLOR] aus, und gebe dem Schalter einen eigenen Namen."
+
+msgctxt "#51020"
+msgid "The home menu appears automatically as long as the focus is on "WEATHER".[CR][COLOR=white]Work only with activated "Weather Fanarts".[/COLOR]"
+msgstr "Blendet das Hauptmenü automatisch aus, solange der Fokus auf "WETTER" liegt.[CR][COLOR=white]Funktioniert nur mit aktivierten "Wetter Fanarts".[/COLOR]"
+
+msgctxt "#51021"
+msgid "Put here determines the time to hide.[CR][COLOR=white]We recommend at least 10 seconds.[/COLOR]"
+msgstr "Lege hier die Zeit bis zum ausblenden fest.[CR][COLOR=white]Empfohlen werden mind. 10 Sekunden.[/COLOR]"
+
+msgctxt "#51022"
+msgid "Blinds the main menu after defined time, while you stay on the menu item Weather.[CR][COLOR=white]Playlist and weatherwidget are still visible.[/COLOR]"
+msgstr "Blendet das Hauptmenu nach einer festgelegten Zeit aus, solange man auf dem Punkt Wetter verweilt.[CR][COLOR=white]Playlist und Wetterwidget bleiben sichtbar.[/COLOR]"
+
+msgctxt "#51024"
+msgid "Define time in seconds here …before the main menu is blinded."
+msgstr "Hier die Zeit in Sekunden angeben, die vergehen soll, bevor sich das Hauptmenu ausblendet."
+
+msgctxt "#51026"
+msgid "Activates background video in the main menu."
+msgstr "Aktiviert Hintergrundvideo im Hauptmenü."
+
+msgctxt "#51028"
+msgid "Displays flags determined by the file name and not recognized by XBMC. [CR][COLOR=white]Sprache:[/COLOR] .ger., .german., _ger_, -german_, DL, ML[CR][COLOR=white]Format:[/COLOR] bluray, bdrip, hddvd, dvd, hdtv (pdtv, dsr), vhs[CR][COLOR=white]Codec:[/COLOR] div, dx50[CR][COLOR=white]Extra:[/COLOR] .3d., _3d_ - in XBMC 13 (Gotham) not necessary anymore."
+msgstr "Zeigt Flags, die durch den Dateinamen bestimmt werden, und nicht von XBMC erkannt werden.[CR][COLOR=white]Sprache:[/COLOR] .ger., .german., _ger_, -german_, DL, ML[CR][COLOR=white]Format:[/COLOR] bluray, bdrip, hddvd, dvd, hdtv (pdtv, dsr), vhs[CR][COLOR=white]Codec:[/COLOR] div, dx50[CR][COLOR=white]Extra:[/COLOR] .3d., _3d_ - ab XBMC 13 (Gotham) nicht  mehr nötig"
+
+msgctxt "#51030"
+msgid "Displays flags of age rating suitable to design, original logos or both."
+msgstr "Zeigt Altersfreigabeflags passend zum Design, die Originallogos oder beide."
+
+msgctxt "#51032"
+msgid "Choose country for age rating (defined by the scrapper).[CR]Supported are DE, US, UK, FR.[CR]US ratings are displayed if no other exists."
+msgstr "Wähle das Land für die Altersfreigabe (wird im Scrapper definiert).[CR]Unterstützt wird DE, US, UK, FR.[CR]Sind ausschließlich US-Freigaben vorhanden, werden diese angezeigt."
+
+msgctxt "#51034"
+msgid "Trailer are directly displayed in the movie information or in fullscreen mode."
+msgstr "Trailer werden direkt in der Filminformation oder im Vollbild angezeigt."
+
+msgctxt "#51036"
+msgid "Displays playlist of the next 9 titles in main menu and in fullscreen mode."
+msgstr "Zeigt eine Playlist der nächsten 9 Titel im Hauptmenü und im Vollbild."
+
+msgctxt "#51038"
+msgid "Displays a wall of covers of the next 9 titles in the main menu, while residing in menu item "music"."
+msgstr "Zeigt im Hauptmenü eine Wand mit Covern der nächsten 9 Titel, wenn man sich auf dem Punkt "Musik" befindet."
+
+msgctxt "#51040"
+msgid "Define the volume in percent, which will be played on any start of XBMC.[CR]Quote a figure between 0 and 100%."
+msgstr "Lege die Lautstärke in Prozent fest, welche bei jedem Start von XBMC wiedergegeben werden soll.[CR]Gib eine Zahl von 0% - 100% an."
+
+msgctxt "#51042"
+msgid "Disable alphanumeric jump list in SMS style.[CR][COLOR=grey]Imported from the skin "Alaska"[/COLOR]."
+msgstr "Deaktiviert die alphanummerische Sprungliste im SMS-Stil.[CR][COLOR=grey]Importiert aus dem Skin "Alaska".[/COLOR]"
+
+msgctxt "#51044"
+msgid "Hardware address (MAC) is required."
+msgstr "Hardwareadresse (MAC) wird benötigt."
+
+msgctxt "#51046"
+msgid "Displays by means of a graphic file, which one is put on the server/NAS, if the server/NAS is online (not 100% reliable)."
+msgstr "Zeigt anhand einer Grafikdatei, welche auf dem Server/NAS liegt, ob dieser online ist (nicht 100% zuverlässig)."
+
+msgctxt "#51047"
+msgid "Überspringt im Hauptmenu die Favoriten.[CR]Diese sind dann über das "Zentrale" erreichbar.[CR][COLOR=grey]Vereinfacht die Navigation, falls man z.B. keine Favoriten nutzt.[/COLOR]"
+msgstr "Überspringt im Hauptmenu die Favoriten.[CR]Diese sind dann über das "Zentrale" erreichbar.[CR][COLOR=grey]Vereinfacht die Navigation, falls man z.B. keine Favoriten nutzt.[/COLOR]"
+
+msgctxt "#51048"
+msgid "Activates film skin widget.[CR]Choose between "recently added" and "random".[CR][COLOR=white]Visible in the main menu while focussing on "Movies".[COLOR=white]"
+msgstr "Aktiviert das Film-SkinWidget.[CR]Wähle zwischen "zuletzt hinzugefügt" und "zufällig".[CR][COLOR=white]Sichtbar im Hauptmenü beim Fokus auf "Filme".[/COLOR]"
+
+msgctxt "#51050"
+msgid "Activates music video skin widget.[CR]Choose between "recently added" and "random".[CR][COLOR=white]Visible in the main menu while focussing on "Music Videos".[/COLOR]"
+msgstr "Aktiviert das Musikvideo-SkinWidget.[CR]Wähle zwischen "zuletzt hinzugefügt" und "zufällig".[CR][COLOR=white]Sichtbar im Hauptmenü beim Fokus auf "Musikvideos".[/COLOR]"
+
+msgctxt "#51052"
+msgid "Activates album skin widget.[CR]Choose between "recently added" and "random".[CR][COLOR=white]Visible in the main menu while focussing on "Music".[/COLOR]"
+msgstr "Aktiviert das Album-SkinWidget.[CR]Wähle zwischen "zuletzt hinzugefügt" und "zufällig".[CR][COLOR=white]Sichtbar im Hauptmenü beim Fokus auf "Musik".[/COLOR]"
+
+msgctxt "#51054"
+msgid "Activates weather skin widget.[CR]Choose between "current" and "forecast".[CR][COLOR=white]Visible in the main menu while focussing on "Weather".[/COLOR]"
+msgstr "Aktiviert das Wetter-SkinWidget.[CR]Wähle zwischen "aktuell" und "Prognose".[CR][COLOR=white]Sichtbar im Hauptmenü beim Fokus auf "Wetter".[/COLOR]"
+
+msgctxt "#51056"
+msgid "Activates TV Series skin widget.[CR]Up to 10 "recently added episodes" are displayed.[CR][COLOR=white]Visible in the main menu while focussing on "TV Series".[/COLOR]"
+msgstr "Aktiviert das TV-Serien-SkinWidget.[CR]Gezeigt werden bis zu 10 "zuletzt hinzugefügte Episoden".[CR][COLOR=white]Sichtbar im Hauptmenü, beim Fokus auf "TV-Serien".[/COLOR]"
+
+msgctxt "#51058"
+msgid "Activates Add On widget.[CR]Self picked programs are displayed.[CR]It is possible to choose own programs at this place or directly in the widgedt.[CR][COLOR=white]Visible in the main menu while focussing on "Add On".[/COLOR]"
+msgstr "Aktiviert das Add-On-Widget.[CR]Gezeigt werden selbst gewählte Programme.[CR]Eigene Programme können hier ausgewählt werden oder direkt im Widget.[CR][COLOR=white]Sichtbar im Hauptmenü, beim Fokus auf "Programme".[/COLOR]"
+
+msgctxt "#51060"
+msgid "Activates system information widget.[CR]System referring files are displayed.[CR][COLOR=white]Visible in the main menu while focussing on "System".[/COLOR]"
+msgstr "Aktiviert das Systeminfo - Widget.[CR]Gezeigt werden systembezogene Daten.[CR][COLOR=white]Sichtbar im Hauptmenü, beim Fokus auf "System".[/COLOR]"
+
+msgctxt "#51062"
+msgid "Activates Slide Show widget.[CR]Own pictures in a slide show are displayed directly in the widget.[CR]The folder for the own pictures has to be quoted.[CR][COLOR=white]Visible in the main menu while focussing on "Slide Show".[/COLOR]"
+msgstr "Aktiviert das Diashow-Widget.[CR]Gezeigt werden eigene Bilder in einer Diashow direkt im Widget.[CR]Der Ordner für die eigenen Bilder muss angegeben werden.[CR][COLOR=white]Sichtbar im Hauptmenü, beim Fokus auf "Bilder".[/COLOR]"
+
+msgctxt "#51064"
+msgid "Please enter the path of pictures for the slide show."
+msgstr "Hier den Ort der Bilder für die Diashow angeben."
+
+msgctxt "#51066"
+msgid "Activates the Disc widget.[CR]Information about the inserted disc is displayed.[CR][COLOR=white]Visible in the main menu while focussing on "Play Disc".[/COLOR]"
+msgstr "Aktiviert das Disk-Widget.[CR]Gezeigt werden die Infos zur eingelegten Disk.[CR][COLOR=white]Sichtbar im Hauptmenü, beim Fokus auf "Disk abspielen".[/COLOR]"
+
+msgctxt "#51068"
+msgid "Displays the last watched movie in the main menu while it was not finished.[CR][COLOR=white]This is always the first cover in the widget.[/COLOR][CR][COLOR=grey]Navigating from the widget another time upwards, the last 2 to 10 movies last watched and not finished are displayed.[CR]Visible in the main menu while focussing on "Movies".[/COLOR]"
+msgstr "Zeigt im Hauptmenü den zuletzt gesehenen Film, solange er noch nicht zu Ende geschaut wurde.[CR][COLOR=white]Es ist immer das erste Cover unter den Widgets.[/COLOR][CR][COLOR=grey]Wenn man vom Widget aus nochmals nach "oben" navigiert, werden die zuletzt gesehenen und noch nicht beendeten Filme #2-10 gezeigt.[CR]Sichtbar im Hauptmenü, beim Fokus auf Filme.[/COLOR]"
+
+msgctxt "#51070"
+msgid "Displays the last watched episode in the main menu while it was not finished.[CR][COLOR=white]This is always the first cover in the widget.[/COLOR][CR][COLOR=grey] Navigating from the widget another time upwards, the last 2 to 10 episodes last watched and not finished are displayed.[CR]Visible in the main menu while focussing on "TV Shows".[/COLOR]"
+msgstr "Zeigt im Hauptmenü die zuletzt gesehene Episode, solange es noch nicht zu Ende geschaut wurde.[CR][COLOR=white]Es ist immer das erste Cover unter den Widgets.[/COLOR][CR][COLOR=grey]Wenn man vom Widget aus nochmals nach "oben" navigiert, werden die zuletzt gesehenen und noch nicht beendeten Episoden #2-10 gezeigt.[CR]Sichtbar im Hauptmenü, beim Fokus auf Serien.[/COLOR]"
+
+msgctxt "#51072"
+msgid "Displays the last watched musicvideos in the main menu while it was not finished.[CR][COLOR=white]This is always the first cover in the widget.[/COLOR][CR][COLOR=grey] Navigating from the widget another time upwards, the last 2 to 10 musicvideos last watched and not finished are displayed.[CR]Visible in the main menu while focussing on "Musicvideos".[/COLOR]"
+msgstr "Zeigt im Hauptmenü das zuletzt gesehene Musikvideo, solange es noch nicht zu Ende geschaut wurde.[CR][COLOR=white]Es ist immer das erste Cover unter den Widgets.[/COLOR][CR][COLOR=grey]Wenn man vom Widget aus nochmals nach "oben" navigiert, werden die zuletzt gesehenen und noch nicht beendeten Musikvideos #2-10 gezeigt.[CR]Sichtbar im Hauptmenü, beim Fokus auf Musikvideos.[/COLOR]"
+
+msgctxt "#51074"
+msgid "Displays the last watched albums in the main menu while it was not finished.[CR][COLOR=white]This is always the first cover in the widget.[/COLOR][CR][COLOR=grey] Navigating from the widget another time upwards, the last 2 to 10 albums last watched and not finished are displayed.[CR]Visible in the main menu while focussing on "Music".[/COLOR]"
+msgstr "Zeigt im Hauptmenü das zuletzt gehörte Album, solange es noch nicht zu Ende gehört wurde.[CR][COLOR=white]Es ist immer das erste Cover unter den Widgets.[/COLOR][CR][COLOR=grey]Laut einiger Rückmeldungen, kommt es scheinbar nicht immer zu einer korrekten Anzeige, des letzten Albums, das ist aber leider Skin unabhängig.[CR]Sichtbar im Hauptmenü, beim Fokus auf Musik.[/COLOR]"
+
+msgctxt "#51075"
+msgid "Name of the group must be exactly the same"
+msgstr "Name der Gruppe muss exakt gleich sein"
+
+msgctxt "#51076"
+msgid "This skin contains different animation effects.This button can disable it.[CR][COLOR=white]Instead of that a simple crossfade effect is used.[/COLOR][CR][COLOR=white]That can lead to a better performance on slow systems.[/COLOR]"
+msgstr "Dieser Skin enthält verschiedene Animationseffekte.[CR]Mit diesem Schalter kannst du sie deaktivieren und es wird stattdessen ein einfacher Überblendeffekt verwendet.[CR]Dies kann auf langsamen Systemen zu einer besseren Performance führen."
+
+msgctxt "#51078"
+msgid "Displays in the upper left corner, where you are."
+msgstr "Zeigt in der linken, oberen Ecke wo du dich gerade befindest."
+
+msgctxt "#51079"
+msgid "Shows in the upper left corner of the current weather."
+msgstr "Zeigt in der linken, oberen Ecke das aktuelle Wetter an."
+
+msgctxt "#51080"
+msgid "Erases the small hint arrows on the lower left rim."
+msgstr "Entfernt die kleinen Hinweispfeile am linken unteren Rand."
+
+msgctxt "#51082"
+msgid "Hides the date display in the upper right corner."
+msgstr "Verbirgt in der rechten, oberen Ecke die Datumsanzeige."
+
+msgctxt "#51084"
+msgid "Enables fan art in all areas/sectors."
+msgstr "Aktiviert Fanart in alle Bereichen."
+
+msgctxt "#51086"
+msgid "Disables changing background pictures.[CR]Select an own picture or path."
+msgstr "Deaktiviert wechselnde Hintergrundbilder.[CR]Wähle ein eigenes Bild oder eigenen Pfad aus."
+
+msgctxt "#51088"
+msgid "Select a picture. If no pictures is chosen, a standard picture will be displayed.[CR][COLOR=white]Click again for deleting.[/COLOR]"
+msgstr "Wähle hier ein Bild aus.[CR]Wird kein Bild angegeben, wird ein Standardbild gezeigt.[CR][COLOR=white]Klicke nochmals um es wieder zu löschen.[/COLOR]"
+
+msgctxt "#51090"
+msgid "Enables the dimming of the background in all areas.[CR][COLOR=white]Possible dimming steps: OFF, LIGHT, MEDIUM, STRONG.[/COLOR]"
+msgstr "Aktiviert die Verdunklung des Hintergrundes in allen Bereichen.[CR][COLOR=white]Mögliche Verdunklungsstufen: AUS, LEICHT, MITTEL, STARK.[/COLOR]"
+
+msgctxt "#51092"
+msgid "This is for changing the color of the "Grunge" background, the mainmenu, the sidepanels and the video-osd."
+msgstr "Hier kann die Farbe für den "Grunge" Hintergrund, die Hauptmenüleiste, die Seitenpanels und das VideoOSD geändert werden."
+
+msgctxt "#51094"
+msgid "In "System" (options) information about the system is displayed."
+msgstr "Zeigt unter System (Einstellungen) Infos über das System an."
+
+msgctxt "#51096"
+msgid "Enables the page and time counter in all areas."
+msgstr "Aktiviert den Seiten- und Zeitzähler in allen Bereichen."
+
+msgctxt "#51098"
+msgid "Enables an effect of light along the main menu."
+msgstr "Aktiviert einen Lichteffekt entlang des Hauptmenüs."
+
+msgctxt "#51100"
+msgid "Moves the menu in the middle of the screen.[CR]Many things like SkinWidget, Playlist, Favorites etc. will be automatically adapted."
+msgstr "Verschiebt das Menu in die mitte des Bildschirmes.[CR]Viele Dinge wie SkinWidgets, Playlist, Favouriten ... werden automatisch angepasst."
+
+msgctxt "#51102"
+msgid "Select a background theme. It modifies strongly the overall pictures of the main menu.[CR]The theme "Gambit" improves the performance on slower systems.[CR][COLOR=grey]Thanks to "G4mbit" of the forum "XBMCNERDS" for putting it at the disposal.[/COLOR][CR][COLOR=grey]It will be disabled as soon as "only one background picture" is enabled.[/COLOR]"
+msgstr "Wähle eines der Hintergrundtheme aus. Es verändert stark den Gesamteindruck des Hauptmenüs.[CR]Das Theme "Gambit" hat den Vorteil, dass es auf schwächeren Systemen für bessere Performance sorgt.[CR][COLOR=white]Wird deaktiviert, sobald "nur ein Hintergrundbild" aktiv ist.[/COLOR][CR][COLOR=grey]Dieses Theme wurde freundlicherweise von "G4mbit" aus dem XBMCNERDS Forum zu Verfügung gestellt.[/COLOR]"
+
+msgctxt "#51104"
+msgid "Define your own background pictures. It's possible at all themes.[CR][COLOR=white]It will be disabled as soon as "only one background picture" is enabled.[/COLOR]"
+msgstr "Hier können eigene Hintergrundbilder festgelegt werden. Egal welches Theme gewählt ist.[CR][COLOR=white]Wird deaktiviert, sobald "nur ein Hintergrundbild" aktiv ist.[/COLOR]"
+
+msgctxt "#51106"
+msgid "Puts a kind of window over the background picture.[CR]The color can be changed further upwards  under the point "General"."
+msgstr "Legt eine Art Fenster über das Hintergrundbild.[CR]Die Farbe kann weiter oben, unter Allgemein, geändert werden."
+
+msgctxt "#51108"
+msgid "The player controls are displayed on the left side under the menu during the playing mode."
+msgstr "Zeigt die Player Controls wärend der Wiedergabe links, unterhalb des Menüs."
+
+msgctxt "#51110"
+msgid "Illustrates weather fan arts recording to the weather information.[CR][COLOR=white]A path to the pictures must be indicated, and a weather add on musst be configurated.[/COLOR][CR][COLOR=grey]Help and download on "XMBCNERDS.COM"forum.[/COLOR]"
+msgstr "Stellt Wetterfanarts, dem Wetter entsprechend dar.[CR][COLOR=white]Es muss ein Pfad zu den Bildern angegeben werden und ein Wetter Add-On muss konfiguriert sein.[/COLOR][CR][COLOR=grey]Hilfe und Download im XBMCNERDS.COM Forum.[/COLOR]"
+
+msgctxt "#51112"
+msgid "Please indicate/quote the path to weather fan arts."
+msgstr "Hier den Pfad zu den Wetterfanarts angeben."
+
+msgctxt "#51114"
+msgid "It is possible to disable "Radio", which is one of 3 views during the playing mode in full screen."
+msgstr "Radio", eine von 3 Ansichten wärend der Wiedergabe im Vollbild, kann hier deaktiviert werden."
+
+msgctxt "#51116"
+msgid "Select between the views Standard, Alternative and Radio.[CR][COLOR=grey]"Radio" is always used for online music streams. It is possible to disable it.[/COLOR]"
+msgstr "Wähle zwischen den Ansichten Standard, Alternative und Radio.[CR][COLOR=grey]"Radio" wird immer bei Online Musikstreams verwendet. Kann aber deaktiviert werden.[/COLOR]"
+
+msgctxt "#51118"
+msgid "Select between the views Standard, Alternative and Radio.[CR][COLOR=white]Information: "Radio" was disabled.[/COLOR]"
+msgstr "Wähle zwischen den Ansichten Standard und Alternative.[CR][COLOR=white]Info: Radio wurde deaktiviert.[/COLOR]"
+
+msgctxt "#51120"
+msgid "A discreet presentation of the title information is displayed after fading out the info panel in full screen."
+msgstr "Nach dem Ausblenden des Infopaneles im Vollbild, wird eine dezente Darstellung der Titelinformationen gezeigt."
+
+msgctxt "#51122"
+msgid "Displays a discreet narrow variation of the screen in "pause"."
+msgstr "Zeigt eine dezente, schmale Variante des Pausebildschirms an."
+
+msgctxt "#51123"
+msgid "When updating via the submenu the database are then automatically set all extra arts loaded.[CR]The automatic one can disable here."
+msgstr "Wenn über das Untermenü die Datenbank aktualisiert wird, werden danach automatisch alle eingestellten Extra Arts geladen.[CR]Die Automatik kann man hier deaktivieren."
+
+msgctxt "#51124"
+msgid "Information like chapter, subtitle, current time bar etc. are not displayed.[CR][COLOR=grey]Studio logos and extra arts are faded out.[/COLOR]"
+msgstr "Es werden keine Infos wie Kapitel, Untertitel, Laufzeitbalken etc. angezeigt.[CR][COLOR=grey]Auch Studiologos und Extra Arts werden ausgeblendet.[/COLOR]"
+
+msgctxt "#51125"
+msgid "This downloads all available artwork that has been enable in the add-on settings.[CR][COLOR=white]"Artwork Downloader" is required.[/COLOR]"
+msgstr "Lade alle verfügbaren Extra Arts, welche in den ADDON Einstellungen gewählt sind, herunter.[CR][COLOR=white]"Artwork Downloader" wird benötigt.[/COLOR]"
+
+msgctxt "#51126"
+msgid "Enables all movie extra arts below.[CR][COLOR=white]"Artwork Downloader" is required.[/COLOR]"
+msgstr "Aktiviert alle unten stehenden Film Extra Arts.[CR][COLOR=white]"Artwork Downloader" wird benötigt.[/COLOR]"
+
+# empty #51128
+
+msgctxt "#51130"
+msgid "Enables all tvshows extra arts below.[CR][COLOR=white]"Artwork Downloader" is required.[/COLOR]"
+msgstr "Aktiviert alle unten stehenden TV Serien Extra Arts.[CR][COLOR=white]"Artwork Downloader" wird benötigt.[/COLOR]"
+
+msgctxt "#51132"
+msgid "Enables music extra arts. (Band logos, CD Arts).[CR][COLOR=grey]"CD Art Manager" is required.[/COLOR][CR][COLOR=white]The music folder must be indicated.[CR]The indication is not required for the current played title.[CR]The album and artist folder must correspond to the XBMC data.[/COLOR]"
+msgstr "Aktiviert Musik Extra Arts. (Band Logos, CDArts).[CR][COLOR=grey]"CDArt Manager" wird benötigt.[/COLOR][CR][COLOR=white]Es wird die Angabe des Musikverzeichnisses benötigt.[CR]Für den aktuell gespielten Titel ist die Angabe nicht erforderlich.[CR]Album- und Artistordner müssen mit den XBMC Daten übereinstimmen.[/COLOR]"
+
+msgctxt "#51134"
+msgid "Quote the file of your music collection."
+msgstr "Hier den Ordner deiner Musiksammlung angeben."
+
+msgctxt "#51136"
+msgid "Pictures of the current playing interpret are loaded and displayed.[CR][COLOR=grey]"Artist Slide Show" is required.[/COLOR]"
+msgstr "Es werden Bilder zum aktuell gespielten Interpreten aus dem Internet geladen und dargestellt.[CR][COLOR=grey]"Artist Slideshow" wird benötigt.[/COLOR]"
+
+msgctxt "#51138"
+msgid "Select a background picture."
+msgstr "Wähle ein Hintergrundbild"
+
+msgctxt "#51139"
+msgid "Reset"
+msgstr "Zurücksetzen"
+
+msgctxt "#51140"
+msgid "Select the performance of the system."
+msgstr "Systemleistung wählen"
+
+msgctxt "#51142"
+msgid "Defines the default for this skin.[CR]This refers only to customized options."
+msgstr "Legt die Voreinstellung für diesen Skin fest.[CR]Betrifft nur die Benutzerdefinierten Einstellungen."
+
+msgctxt "#51144"
+msgid "Weak"
+msgstr "Schwach"
+
+msgctxt "#51146"
+msgid "Medium"
+msgstr "Mittel"
+
+msgctxt "#51148"
+msgid "Fast"
+msgstr "Schnell"
+
+msgctxt "#51150"
+msgid "MAC address"
+msgstr "MAC Adresse"
+
+msgctxt "#51152"
+msgid "[COLOR=focused][UPPERCASE][B]First Start[/B][/UPPERCASE][/COLOR][CR][CR]Welcome.[CR]These are the possibilities of navigation in the main menu.[CR][COLOR=grey1]"Skin widgets" are only visible, if the widgets are enabled in the settings.[/COLOR]"
+msgstr "[COLOR=focused][UPPERCASE][B]Erster Start[/B][/UPPERCASE][/COLOR][CR][CR]Willkommen.[CR]Hier siehst du die Navigationsmöglichkeiten im Hauptmenu.[CR][COLOR=grey1]"SkinWidgets" sind nur sichtbar, wenn die Widgets in den Einstellungen aktiviert wurden.[/COLOR]"
+
+msgctxt "#51154"
+msgid "SkinWidgets .2[CR]Submenu .1"
+msgstr "SkinWidgets .2[CR]Untermenü .1"
+
+msgctxt "#51156"
+msgid "Favorites .1[CR]Shutdown .2[CR]Settings .3"
+msgstr "Favoriten .1[CR]Shutdown .2[CR]Einstellungen .3"
+
+msgctxt "#51158"
+msgid "In progress #2 - #10"
+msgstr "Im Gange #2 - #10"
+
+msgctxt "#51160"
+msgid "[COLOR=focused][UPPERCASE][B]First start[/B][/UPPERCASE][/COLOR][CR][CR]Hide on the sides are settings panele.[CR][COLOR=grey1]Navigate left or right to open it.[CR]In horizontal views must be navigated up or down.[/COLOR]"
+msgstr "[COLOR=focused][UPPERCASE][B]Erster Start[/B][/UPPERCASE][/COLOR][CR][CR]An den Seiten verbergen sich Einstellungspanele.[CR][COLOR=grey1]Navigiere nach links oder rechts um sie zu öffnen.[CR]Bei horizontalen Ansichten muss nach oben bzw. unten navigiert werden.[/COLOR]"
+
+msgctxt "#51162"
+msgid "Kodi Settings for each section.[CR](e.g. sorting)"
+msgstr "Kodi Einstellungen für die jeweilige Section.[CR](z.B. Sortierung)"
+
+msgctxt "#51164"
+msgid "Settings for current view.[CR](e.g. Cover dim)"
+msgstr "Einstellungen für aktuelle Ansicht.[CR](z.B. Cover dimmen)"
+
+msgctxt "#51166"
+msgid "Wake this Computer: $INFO[Skin.String(MAC_Address)]?"
+msgstr "Rechner ($INFO[Skin.String(MAC_Address)]) starten?"
+
+msgctxt "#51168"
+msgid "Awarded no mac adress,[CR]register now?"
+msgstr "Keine MAC Adresse angegeben,[CR]jetzt eintragen?"
+
+msgctxt "#51170"
+msgid "[UPPERCASE]Skin settings reset ?[/UPPERCASE]"
+msgstr "[UPPERCASE]Skin Einstellungen zurücksetzen ?[/UPPERCASE]"
+
+msgctxt "#51172"
+msgid "Cover"
+msgstr "Cover"
+
+msgctxt "#51174"
+msgid "add-on edit widget"
+msgstr "Addon-Widget bearbeiten"
+
+msgctxt "#51176"
+msgid "no defined favourites"
+msgstr "Keine Favouriten vorhanden"
+
+msgctxt "#51178"
+msgid "[B]XBMC SUBTITLES[/B]"
+msgstr "[B]XBMC UNTERTITEL[/B]"
+
+msgctxt "#51180"
+msgid "Data"
+msgstr "Daten"
+
+msgctxt "#51182"
+msgid "It is recommended to disable the mouse!"
+msgstr "Es wird empfohlen die Maus in den Systemeinstellungen zu deaktiveren!"
+
+msgctxt "#51184"
+msgid "Sidepanel"
+msgstr "Seitenpanel"
+
+msgctxt "#51186"
+msgid "Set Information"
+msgstr "Set Informationen"
+
+msgctxt "#51187"
+msgid "Children movies"
+msgstr "Kinderfilme"
+
+msgctxt "#51188"
+msgid "Concerts"
+msgstr "Konzerte"
+
+msgctxt "#51190"
+msgid "Choose age rating logo style"
+msgstr "Wähle FSK Logo Stil"
+
+msgctxt "#51192"
+msgid "- Language (age rating)"
+msgstr "- Sprache (Altersfreigabe)"
+
+msgctxt "#51194"
+msgid "Flags in text form"
+msgstr "Flags in Textform"
+
+msgctxt "#51196"
+msgid "Dim background"
+msgstr "Hintergrund dimmen"
+
+msgctxt "#51198"
+msgid "Page Count"
+msgstr "Seitenzähler"
+
+msgctxt "#51200"
+msgid "Cases"
+msgstr "Hüllen"
+
+msgctxt "#51202"
+msgid "Hide big cover"
+msgstr "Verberge großes Cover"
+
+msgctxt "#51204"
+msgid "Logo in place title"
+msgstr "Logo statt Titel"
+
+msgctxt "#51205"
+msgid "Logo in place Cover"
+msgstr "Logo statt Cover"
+
+msgctxt "#51206"
+msgid "Information"
+msgstr "Informationen"
+
+msgctxt "#51208"
+msgid "Hide "NEW" Logo"
+msgstr "Verberge "NEW" Icon"
+
+msgctxt "#51210"
+msgid "Dusteffect (case)"
+msgstr "Staubeffekt (Hülle)"
+
+msgctxt "#51212"
+msgid "Big wall"
+msgstr "Große Wand"
+
+msgctxt "#51214"
+msgid "Information panel"
+msgstr "Informations Panel"
+
+msgctxt "#51216"
+msgid "Disable Cover animations"
+msgstr "Cover Animation deaktivieren"
+
+msgctxt "#51218"
+msgid "Dim cover"
+msgstr "Cover dimmen"
+
+msgctxt "#51220"
+msgid "Playlist recently added"
+msgstr "Playlist "zuletzt hinzugefügt"
+
+msgctxt "#51222"
+msgid "Playlist "random"
+msgstr "Playlist "Zufall"
+
+msgctxt "#51224"
+msgid "Playlist "in progress"
+msgstr "Playlist "im Gange"
+
+msgctxt "#51226"
+msgid "Alter from: "
+msgstr "Alter ab: "
+
+msgctxt "#51228"
+msgid "List"
+msgstr "List"
+
+msgctxt "#51230"
+msgid "Info List"
+msgstr "Info List"
+
+msgctxt "#51232"
+msgid "Thumbview"
+msgstr "Thumbview"
+
+msgctxt "#51234"
+msgid "Banner"
+msgstr "Banner"
+
+msgctxt "#51236"
+msgid "Showcase"
+msgstr "Showcase"
+
+msgctxt "#51238"
+msgid "Perspective"
+msgstr "Perspective"
+
+msgctxt "#51240"
+msgid "Disc Flow"
+msgstr "Disc Flow"
+
+msgctxt "#51242"
+msgid "Rightlist"
+msgstr "Rightlist"
+
+msgctxt "#51243"
+msgid "Cover Wall (fullsize)"
+msgstr "Cover Wall (Vollbild)"
+
+msgctxt "#51244"
+msgid "Cover Wall"
+msgstr "Cover Wall"
+
+msgctxt "#51246"
+msgid "Picture wall"
+msgstr "Bilderwand"
+
+msgctxt "#51248"
+msgid "Disable radio view"
+msgstr "Radio Ansicht deaktivieren"
+
+msgctxt "#51250"
+msgid "Music visualisation"
+msgstr "Musik Visualisierung"
+
+msgctxt "#51252"
+msgid "Music extra arts"
+msgstr "Musik Extra Arts"
+
+msgctxt "#51254"
+msgid "Date display"
+msgstr "Datumsanzeige"
+
+msgctxt "#51256"
+msgid "Artist slide show"
+msgstr "Artist Slide Show"
+
+msgctxt "#51258"
+msgid "Button description"
+msgstr "Tastenbeschreibung"
+
+msgctxt "#51260"
+msgid "Information panel"
+msgstr "Infopanel"
+
+msgctxt "#51262"
+msgid "Grunge color"
+msgstr "Grunge Farbe"
+
+msgctxt "#51264"
+msgid "Title information"
+msgstr "Titelinformationen"
+
+msgctxt "#51268"
+msgid "change settings"
+msgstr "ändere Einstellungen"
+
+msgctxt "#51269"
+msgid "back"
+msgstr "zurück"
+
+msgctxt "#51270"
+msgid "Mainmenu buttons"
+msgstr "Hauptmenü Schaltflächen"
+
+msgctxt "#51271"
+msgid "Submenu buttons"
+msgstr "Untermenü Schaltflächen"
+
+msgctxt "#51272"
+msgid "Functions"
+msgstr "Funktionen"
+
+msgctxt "#51273"
+msgid "SkinWidgets"
+msgstr "SkinWidgets"
+
+msgctxt "#51274"
+msgid "Design / Performance"
+msgstr "Design / Performance"
+
+msgctxt "#51276"
+msgid "Extra arts"
+msgstr "Extra Arts"
+
+msgctxt "#51278"
+msgid "Admin"
+msgstr "Admin"
+
+msgctxt "#51280"
+msgid "Enable debug grid"
+msgstr "Aktiviere Gitter"
+
+msgctxt "#51282"
+msgid "Debug Information"
+msgstr "Debug Information"
+
+msgctxt "#51284"
+msgid "Design of the setting menus"
+msgstr "Design des Einstellungsmenüs:"
+
+msgctxt "#51286"
+msgid "Enable First start"
+msgstr "Ersten Start aktivieren"
+
+msgctxt "#51288"
+msgid "Choose your system performance"
+msgstr "wählen deine Systemleistung"
+
+msgctxt "#51290"
+msgid "Mousepointer"
+msgstr "Mauszeiger"
+
+msgctxt "#51291"
+msgid "Set positions"
+msgstr "Positionen festlegen"
+
+msgctxt "#51292"
+msgid "Move focus"
+msgstr "Focus verschieben"
+
+msgctxt "#51294"
+msgid "Auto-hide the mainmenu"
+msgstr "Hauptmenü automatisch ausblenden"
+
+msgctxt "#51296"
+msgid "Time to hide"
+msgstr "Zeit bis zum ausblenden"
+
+msgctxt "#51298"
+msgid "Background video"
+msgstr "Hintergrund Video"
+
+msgctxt "#51300"
+msgid "- Choose the country for age rating"
+msgstr "- Wähle das Land der Alterfreigabe"
+
+msgctxt "#51302"
+msgid "Play trailer in fullscreen"
+msgstr "Trailer NICHT im Fenster abspielen"
+
+msgctxt "#51303"
+msgid "Next track playlist"
+msgstr "Next Track Playlist"
+
+msgctxt "#51304"
+msgid "Extra Fanarts for Background"
+msgstr "Hintergrund Extra Fanarts"
+
+msgctxt "#51306"
+msgid "Library Editor in contextmenü"
+msgstr "Library Editor im Contextmenu"
+
+msgctxt "#51308"
+msgid "Set startup volume"
+msgstr "Lege Startlautstärke fest"
+
+msgctxt "#51310"
+msgid "Dectivate alphanumeric jumpbar"
+msgstr "Deaktiviere alphanummerischer Sprungleiste"
+
+msgctxt "#51312"
+msgid "Show wake on lan button in "central"
+msgstr "Wake on lan Schalter in "Zentrale"
+
+msgctxt "#51314"
+msgid "Perform wake on lan when starting from XBMC"
+msgstr "Wake on Lan beim Start von XBMC auslösen"
+
+msgctxt "#51316"
+msgid "- MAC address for WOL:"
+msgstr "- MAC Adresse für WOL:"
+
+msgctxt "#51318"
+msgid "Server icon"
+msgstr "Server Icon"
+
+msgctxt "#51320"
+msgid "Artwork Downloader in contextmenu"
+msgstr "Artwork Downloader im Contextmenü"
+
+msgctxt "#51322"
+msgid "Globalsearch in contextmenu"
+msgstr "Globalsearch im Contextmenü"
+
+msgctxt "#51324"
+msgid "Statistic show in mainmenu"
+msgstr "Statistic im Hauptmenu anzeigen"
+
+msgctxt "#51326"
+msgid "Disable favorites"
+msgstr "Favoriten deaktivieren"
+
+msgctxt "#51327"
+msgid "Disable "Central"
+msgstr "Zentrale" deaktivieren"
+
+msgctxt "#51328"
+msgid "Show clear cases"
+msgstr "Clear Cases darstellen"
+
+msgctxt "#51330"
+msgid "Widgets (random / recently added)"
+msgstr "Widgets (Zufall / zuletzt hinzugefügt)"
+
+msgctxt "#51332"
+msgid "- Path"
+msgstr "- Ordner"
+
+msgctxt "#51334"
+msgid "Disc"
+msgstr "Disk"
+
+msgctxt "#51336"
+msgid "Movie recommendendation"
+msgstr "Film Empfehlung"
+
+msgctxt "#51338"
+msgid "TV Show recommendendation"
+msgstr "Serien Empfehlung"
+
+msgctxt "#51339"
+msgid "Musicvideo recommendendation"
+msgstr "Musikvideo Empfehlung"
+
+msgctxt "#51340"
+msgid "Albums recommendendation"
+msgstr "Alben Empfehlung"
+
+msgctxt "#51342"
+msgid "Animations (high cpu load)"
+msgstr "Animationen (hohe CPU-Last)"
+
+msgctxt "#51344"
+msgid "Navigation information"
+msgstr "Navigationsinformationen"
+
+msgctxt "#51345"
+msgid "Small Weather-Information"
+msgstr "Kleine Wetter-Informationen"
+
+msgctxt "#51346"
+msgid "Hide navigation arrows"
+msgstr "Verberge Navigationspfeile"
+
+msgctxt "#51348"
+msgid "Hide date display"
+msgstr "Verberge Datumsanzeige"
+
+msgctxt "#51350"
+msgid "Just a background image"
+msgstr "Nur ein Hintergrundbild"
+
+msgctxt "#51352"
+msgid "- Picture / Path"
+msgstr "- Bild / Pfad"
+
+msgctxt "#51353"
+msgid "- Slideshow instead of image"
+msgstr "- Diashow statt Standbild"
+
+msgctxt "#51354"
+msgid "Color Theme"
+msgstr "Farb Theme"
+
+msgctxt "#51356"
+msgid "Background theme"
+msgstr "Hintergrundtheme"
+
+msgctxt "#51358"
+msgid "Set your own background images"
+msgstr "Eigene Hintergrundbilder festlegen"
+
+msgctxt "#51360"
+msgid "Frame in mainmenu"
+msgstr "Rahmen im Hauptmenü"
+
+msgctxt "#51362"
+msgid "Structur in mainmenu"
+msgstr "Struktur im Hauptmenü"
+
+msgctxt "#51364"
+msgid "Player Controls"
+msgstr "Player Controls"
+
+msgctxt "#51366"
+msgid "Weather fanarts"
+msgstr "Wetter Fanarts"
+
+msgctxt "#51368"
+msgid "Lightweight version of the break screen"
+msgstr "Leichte Version des Pausebildschirms"
+
+msgctxt "#51370"
+msgid "Hide video details"
+msgstr "verberge Videodetails"
+
+msgctxt "#51372"
+msgid "Banner instead of poster"
+msgstr "Banner statt Poster"
+
+msgctxt "#51374"
+msgid "Default focus"
+msgstr "Default focus"
+
+msgctxt "#51376"
+msgid "Choose a CD that is displayed if no is found CDArt"
+msgstr "wähle eine CD die angezeigt wird, wenn kein CDArt gefunden wird"
+
+msgctxt "#51378"
+msgid "Extras"
+msgstr "Extras"
+
+msgctxt "#51380"
+msgid "hear your"
+msgstr "höre deine"
+
+msgctxt "#51382"
+msgid "manage your"
+msgstr "verwalte deine"
+
+msgctxt "#51384"
+msgid "experience your"
+msgstr "erlebe deine"
+
+msgctxt "#51386"
+msgid "check out the"
+msgstr "erkunde das"
+
+msgctxt "#51388"
+msgid "let them rotate"
+msgstr "lass sie rotieren"
+
+msgctxt "#51390"
+msgid "go to"
+msgstr "gehe zu"
+
+msgctxt "#51392"
+msgid "change your"
+msgstr "verändere dein"
+
+msgctxt "#51393"
+msgid "go to"
+msgstr "gehe zu"
+
+msgctxt "#51394"
+msgid " from"
+msgstr "ab"
+
+msgctxt "#51396"
+msgid "hear"
+msgstr "höre"
+
+msgctxt "#51398"
+msgid "Glass"
+msgstr "Glas"
+
+msgctxt "#51400"
+msgid "Blank"
+msgstr "Rohling"
+
+msgctxt "#51402"
+msgid "low"
+msgstr "leicht"
+
+msgctxt "#51404"
+msgid "medium"
+msgstr "mittel"
+
+msgctxt "#51406"
+msgid "strongly"
+msgstr "kräftig"
+
+msgctxt "#51408"
+msgid "original"
+msgstr "Original"
+
+msgctxt "#51410"
+msgid "classic"
+msgstr "Klassisch"
+
+msgctxt "#51411"
+msgid "Central"
+msgstr "Zentrale"
+
+msgctxt "#51500"
+msgid "other/unknown"
+msgstr "andere/unbekannt"
+
+msgctxt "#51502"
+msgid "Moviedrama"
+msgstr "Film Drama"
+
+msgctxt "#51504"
+msgid "News"
+msgstr "Nachrichten"
+
+msgctxt "#51506"
+msgid "Show"
+msgstr "Show"
+
+msgctxt "#51508"
+msgid "Sports"
+msgstr "Sport"
+
+msgctxt "#51510"
+msgid "Child"
+msgstr "Kinder"
+
+msgctxt "#51512"
+msgid "Music"
+msgstr "Musik"
+
+msgctxt "#51514"
+msgid "Arts"
+msgstr "Art"
+
+msgctxt "#51516"
+msgid "Social"
+msgstr "Gesellschaft"
+
+msgctxt "#51518"
+msgid "Science"
+msgstr "Wissenschaft"
+
+msgctxt "#51520"
+msgid "Hobby"
+msgstr "Hobby"
+
+msgctxt "#51522"
+msgid "Special"
+msgstr "Spezial"
+
+msgctxt "#51413"
+msgid "download all"
+msgstr "alle laden"
+
+msgctxt "#51414"
+msgid "download all extra arts"
+msgstr "alle extra Arts laden"
+
+msgctxt "#51415"
+msgid "off"
+msgstr "aus"
+
+msgctxt "#51416"
+msgid "disable automatic loading of extra arts"
+msgstr "deaktiviere das automatische Laden der Extra Arts"
+
+msgctxt "#51417"
+msgid "on"
+msgstr "an"
+
+msgctxt "#51419"
+msgid "Folder"
+msgstr "Verzeichnis"
+
+msgctxt "#51421"
+msgid "Recently played title"
+msgstr "Kürzlich gespielte Songs"
+
+msgctxt "#51423"
+msgid "at the"
+msgstr "am"
+
+msgctxt "#51425"
+msgid "Recently added TVShows"
+msgstr "Neu hinzugefügte TV-Serie"
+
+msgctxt "#51427"
+msgid "My Radio Stations"
+msgstr "Meine Sender"
+
+msgctxt "#51429"
+msgid "Radio Addon instead a Playlist (needed Addon Radio)"
+msgstr "Radio Addon statt eigener Playlist (benötigt das Radio Addon)"
+
+msgctxt "#51431"
+msgid "open Radio Addon"
+msgstr "öffne Radio Addon"
+
+msgctxt "#51433"
+msgid "forecast"
+msgstr "Prognose"
+
+msgctxt "#51435"
+msgid "export your Skin Settings"
+msgstr "exportiere deine Skin Einstellungen"
+
+msgctxt "#51437"
+msgid "import your Skin Settings"
+msgstr "importiere deine Skin Einstellungen"
+
+msgctxt "#51439"
+msgid "Event Blog Settings"
+msgstr "Event Blog Einstellungen"
+
+msgctxt "#51441"
+msgid "Set the position of each mein menu fixed points.[CR]Using position numbers from 1 - 22."
+msgstr "Lege hier die Position der einzelnen Hauptmenüpunkte fest.[CR]Verwende Positionsnummern von 1 - 22."
+
+msgctxt "#51443"
+msgid "go directly to video files"
+msgstr "direkt zu Videodateien springen"
+
+msgctxt "#51445"
+msgid "Choose a color or enter a color code.[CR]Color code must be specified in AARRGGBB hex format.[CR]An example of [COLOR=ffffffff]White[/COLOR]: FFFFFFFF"
+msgstr "Wähle eine Farbe aus oder gib einen Farbcode ein.[CR]Farbcodes müssen im AARRGGBB hex Format angegeben werden.[CR]Ein Beispiel für [COLOR=ffffffff]Weiß[/COLOR]: FFFFFFFF"
+
+msgctxt "#51447"
+msgid "Show profil name"
+msgstr "Zeige Profilnamen"
+
+msgctxt "#51449"
+msgid "with"
+msgstr "mit"
+
+msgctxt "#51451"
+msgid "Kodi runs:"
+msgstr "Kodi läuft:"
+
+msgctxt "#51453"
+msgid "use custom channelgroup"
+msgstr "nutze eigene Kanalgruppe"
+
+msgctxt "#51455"
+msgid "- Channelgroup name:"
+msgstr "- Kanalgruppenname:"
+
+msgctxt "#51457"
+msgid "Addon Path"
+msgstr "Addon Pfad"
+
+msgctxt "#51459"
+msgid "<"
+msgstr "<"
+
+msgctxt "#51461"
+msgid "<<"
+msgstr "<<"
+
+msgctxt "#51463"
+msgid "Studio symbols ..."
+msgstr "Studiosymbole ..."
+
+msgctxt "#51465"
+msgid "Genre icons ..."
+msgstr "Genresymbole ..."
+
+msgctxt "#51467"
+msgid "Weather icons ..."
+msgstr "Wettersymbole ..."
+
+msgctxt "#51469"
+msgid "Weather fanart ..."
+msgstr "Wetterfanart ..."
+
+msgctxt "#51471"
+msgid "Recordlabel icon ..."
+msgstr "Recordlabel Symbol ..."
+
+msgctxt "#51473"
+msgid "In order to set an Timer the "KN Switcher Service" is required. Download via Kodinerds repository."
+msgstr "Um einen Umschalttimer setzen zu können wird der "KN Switcher Service" benötigt. Download über Kodinerds Repository."
+
+msgctxt "#51475"
+msgid "delete all timers"
+msgstr "alle Timer löschen"
+
+msgctxt "#51477"
+msgid "delete"
+msgstr "löschen"
+
+msgctxt "#51479"
+msgid "set"
+msgstr "setzen"
+
+msgctxt "#51481"
+msgid "administration"
+msgstr "verwalten"
+
+msgctxt "#51483"
+msgid "Switchtimer"
+msgstr "Umschalttimer"
+
+msgctxt "#51485"
+msgid "Timer overview"
+msgstr "Timer Übersicht"
+
+msgctxt "#51487"
+msgid "Today"
+msgstr "Heute"
+
+msgctxt "#51489"
+msgid "Hide"
+msgstr "Verberge"
+
+msgctxt "#51491"
+msgid "Enable"
+msgstr "Zeige"
+
+msgctxt "#51493"
+msgid "Channels"
+msgstr "Kanäle"
+
+msgctxt "#51495"
+msgid "last played"
+msgstr "zuletzt gesehen"

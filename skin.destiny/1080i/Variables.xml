@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+
+	<variable name="VarWidgetsFanart">
+	  <value condition="Control.HasFocus(8304)">$INFO[Container(8304).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8305)">$INFO[Container(8305).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8306)">$INFO[Container(8306).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8307)">$INFO[Container(8307).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8308)">$INFO[Container(8308).ListItem.Art(fanart)]</value>	  
+	  <value condition="Control.HasFocus(8309)">$INFO[Container(8309).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8310)">$INFO[Container(8310).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8312)">$INFO[Container(8312).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8313)">$INFO[Container(8313).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8314)">$INFO[Container(8314).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8317)">$INFO[Container(8317).ListItem.Art(fanart)]</value>	  
+	  <value condition="Control.HasFocus(8319)">$INFO[Container(8319).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8320)">$INFO[Container(8320).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8321)">$INFO[Container(8321).ListItem.Art(fanart)]</value>
+	  <value condition="Control.HasFocus(8344)">$INFO[Container(8344).ListItem.Art(fanart)]</value>
+	</variable>
+	
+	<variable name="HomeBackgroundPlaylistenFanart">
+	  <value condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton1800)">$INFO[Skin.String(movieplaylistButtonPathScript_1800)]</value>
+	  <value condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2800)">$INFO[Skin.String(movieplaylistButtonPathScript_2800)]</value>
+	  <value condition="Container(9000).Hasfocus(7) + Skin.HasSetting(movieplaylistButton3800)">$INFO[Skin.String(movieplaylistButtonPathScript_3800)]</value>
+	  <value condition="Container(9000).Hasfocus(3) + Skin.HasSetting(movieplaylistButton11000)">$INFO[Skin.String(movieplaylistButtonPathScript_11000)]</value>
+	  <value condition="Container(9000).Hasfocus(8) + Skin.HasSetting(movieplaylistButton12000)">$INFO[Skin.String(movieplaylistButtonPathScript_12000)]</value>
+	</variable>
+  
+	<variable name="PosterThumb">
+	  <value condition="Container.Content(Episodes)">$INFO[ListItem.Art(season.poster)]</value>
+	  <value condition="Container.Content(Actors)">$INFO[ListItem.Icon]</value>
+	  <value condition="Container.Content(Genres)">$VAR[VarMovieGenreIcon]</value>
+	  <value condition="Container.Content(Addons)">$INFO[ListItem.Icon]</value>
+	  <value condition="Container.Content(Years)">$INFO[ListItem.Icon]</value>
+	  <value condition="Container.Content(studios)">$VAR[VarStudioIcon]</value>
+	  <value>$INFO[ListItem.Art(poster)]</value>
+	</variable>
+	
+	<variable name="VarFanartVideoInfos">
+	  <value condition="Control.IsVisible(600)">$INFO[Container(600).ListItem.Art(fanart)]</value>
+	  <value condition="Control.IsVisible(603)">$INFO[Container(603).ListItem.Art(fanart)]</value>
+	  <value condition="Control.IsVisible(605)">$INFO[Container(605).ListItem.Art(fanart)]</value>
+	</variable>
+	
+	<variable name="VarFanart2">
+	  <value condition="!IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+	</variable>
+	
+	<variable name="VarClearart">
+	  <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Art(tvshow.clearart))">$INFO[ListItem.Art(tvshow.clearart)]</value>
+	  <value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.clearart)]</value>
+	  <value condition="!IsEmpty(ListItem.Art(clearart))">$INFO[ListItem.Art(clearart)]</value>
+	  <value>$INFO[Player.Art(clearlogo)]</value>
+	</variable>
+	<variable name="VarClearlogo">
+	  <value condition="Container.Content(Movies)">$INFO[ListItem.Art(clearlogo)]</value>
+	  <value condition="Container.Content(Sets)">$INFO[ListItem.Art(clearlogo)]</value>
+	  <value condition="Container.Content(TVShows)">$INFO[ListItem.Art(clearlogo)]</value>
+	  <value condition="Container.Content(Seasons)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+	  <value condition="Container.Content(Episodes)">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+	</variable>	
+	<variable name="VarPlayerClearart">
+	  <value condition="VideoPlayer.Content(episodes) + !IsEmpty(Player.Art(tvshow.clearart))">$INFO[Player.Art(tvshow.clearart)]</value>
+	  <value condition="VideoPlayer.Content(episodes)">$INFO[Player.Art(tvshow.clearlogo)]</value>
+	  <value condition="!IsEmpty(Player.Art(clearart))">$INFO[Player.Art(clearart)]</value>
+	  <value>$INFO[Player.Art(clearlogo)]</value>
+	</variable>
+	
+	<!-- KN SWITCHTIMER  -->
+	<variable name="TimerLabel">
+		<value condition="!IsEmpty(Skin.String(t0:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t1:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t2:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t3:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t4:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t5:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t6:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t7:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t8:date))">Alle löschen</value>
+		<value condition="!IsEmpty(Skin.String(t9:date))">Alle löschen</value>
+		<value>keine verfügbar</value>
+    </variable>
+	<include name="KNSwitcherItem">
+		<item>
+			<label>$INFO[Skin.String($PARAM[knswitcheritem_id]:date)]</label>
+			<label2>$INFO[Skin.String($PARAM[knswitcheritem_id]:channel)]</label2>
+			<onclick>RunScript(service.kn.switchtimer,action=del,timer=t$PARAM[knswitcheritem_id])</onclick>
+			<property name="Title">$INFO[Skin.String($PARAM[knswitcheritem_id]:title)]</property>
+			<property name="Icon">home/homeicons/timers.png</property>
+			<visible>!IsEmpty(Skin.String($PARAM[knswitcheritem_id]:date))</visible>
+		</item>
+	</include>
+	<include name="KNSwitcherContent">
+		<item>
+			<label>$VAR[TimerLabel]</label>
+			<onclick>RunScript(service.kn.switchtimer,action=delall)</onclick>
+			<property name="Icon">home/homeicons/clean.png</property>
+		</item>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t0" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t1" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t2" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t3" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t4" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t5" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t6" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t7" />
+		</include>
+		<include name="KNSwitcherItem">
+			<param name="knswitcheritem_id" value="t8" />
+		</include>
+	</include>
+	<!-- KN SWITCHTIMER CLOSE  -->
+	
+	<variable name="PlayList">
+		<value condition="Player.HasVideo">ActivateWindow(videoplaylist)</value>
+		<value condition="Player.HasAudio">ActivateWindow(musicplaylist)</value>
+    </variable>
+	
+	<variable name="HomePreviewMovies">
+		<value condition="Container(270100).HasFocus(270101)">$INFO[Skin.String(movieplaylistButtonPathScript_101)]</value>
+		<value condition="Container(270100).HasFocus(270102)">$INFO[Skin.String(movieplaylistButtonPathScript_102)]</value>
+		<value condition="Container(270100).HasFocus(270103)">$INFO[Skin.String(movieplaylistButtonPathScript_103)]</value>
+		<value condition="Container(270100).HasFocus(270104)">$INFO[Skin.String(movieplaylistButtonPathScript_104)]</value>
+		<value condition="Container(270100).HasFocus(270105)">$INFO[Skin.String(movieplaylistButtonPathScript_105)]</value>
+		<value condition="Container(270100).HasFocus(270106)">$INFO[Skin.String(movieplaylistButtonPathScript_106)]</value>
+		<value condition="Container(270100).HasFocus(270107)">$INFO[Skin.String(movieplaylistButtonPathScript_107)]</value>
+		<value condition="Container(270100).HasFocus(270108)">$INFO[Skin.String(movieplaylistButtonPathScript_108)]</value>
+		<value condition="Container(270200).HasFocus(270201)">$INFO[Skin.String(movieplaylistButtonPathScript_201)]</value>
+		<value condition="Container(270200).HasFocus(270202)">$INFO[Skin.String(movieplaylistButtonPathScript_202)]</value>
+		<value condition="Container(270200).HasFocus(270203)">$INFO[Skin.String(movieplaylistButtonPathScript_203)]</value>
+		<value condition="Container(270200).HasFocus(270204)">$INFO[Skin.String(movieplaylistButtonPathScript_204)]</value>
+		<value condition="Container(270200).HasFocus(270205)">$INFO[Skin.String(movieplaylistButtonPathScript_205)]</value>
+		<value condition="Container(270200).HasFocus(270206)">$INFO[Skin.String(movieplaylistButtonPathScript_206)]</value>
+		<value condition="Container(270200).HasFocus(270207)">$INFO[Skin.String(movieplaylistButtonPathScript_207)]</value>
+		<value condition="Container(270200).HasFocus(270208)">$INFO[Skin.String(movieplaylistButtonPathScript_208)]</value>
+		<value condition="Container(270300).HasFocus(270301)">$INFO[Skin.String(movieplaylistButtonPathScript_301)]</value>
+		<value condition="Container(270300).HasFocus(270302)">$INFO[Skin.String(movieplaylistButtonPathScript_302)]</value>
+		<value condition="Container(270300).HasFocus(270303)">$INFO[Skin.String(movieplaylistButtonPathScript_303)]</value>
+		<value condition="Container(270300).HasFocus(270304)">$INFO[Skin.String(movieplaylistButtonPathScript_304)]</value>
+		<value condition="Container(270300).HasFocus(270305)">$INFO[Skin.String(movieplaylistButtonPathScript_305)]</value>
+		<value condition="Container(270300).HasFocus(270306)">$INFO[Skin.String(movieplaylistButtonPathScript_306)]</value>
+		<value condition="Container(270300).HasFocus(270307)">$INFO[Skin.String(movieplaylistButtonPathScript_307)]</value>
+		<value condition="Container(270300).HasFocus(270308)">$INFO[Skin.String(movieplaylistButtonPathScript_308)]</value>
+	</variable>
+	
+	<variable name="HomePreviewAddons">
+		<value condition="Container(19008).HasFocus(90148)">addons://sources/executable/</value>
+		<value condition="Container(19008).HasFocus(90149)">addons://sources/video/</value>
+		<value condition="Container(19008).HasFocus(90150)">addons://sources/audio/</value>
+		<value condition="Container(19008).HasFocus(90151)">androidapp://sources/apps/</value>
+		<value>addons://sources/video/</value>
+	</variable>
+	
+	<variable name="NewsPreviewBundesligaTabelle">
+		<value condition="Container(23010).Hasfocus(23101)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&buliliga=1</value>
+		<value condition="Container(23010).Hasfocus(23103)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&buliliga=2</value>
+	</variable>
+	<variable name="NewsPreviewBundesligaSpiele">
+		<value condition="Container(23010).Hasfocus(23102)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&buliliga=1</value>
+		<value condition="Container(23010).Hasfocus(23104)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&buliliga=2</value>
+		<value condition="Container(23010).Hasfocus(23105)">plugin://plugin.program.newscenter/?methode=get_buli_naechsterspieltag_items&buliliga=1</value>
+		<value condition="Container(23010).Hasfocus(23106)">plugin://plugin.program.newscenter/?methode=get_buli_naechsterspieltag_items&buliliga=2</value>
+	</variable>	
+	
+	<!-- ======================= Widget Umschalt Begin ================================= -->
+	<variable name="MovieWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(recommendedmovies)">$LOCALIZE[50005]</value>
+	  <value condition="Skin.HasSetting(unseenmovies)">$LOCALIZE[50309]</value>
+	  <value condition="Skin.HasSetting(fsk18movies)">$LOCALIZE[50318]</value>
+	  <value condition="Skin.HasSetting(moviessets)">$LOCALIZE[49986]</value>
+	  <value condition="Skin.HasSetting(topratedmovies)">$LOCALIZE[50315]</value>
+	  <value condition="Skin.HasSetting(3dmovies)">$LOCALIZE[50316]</value>
+	  <value>$LOCALIZE[50000]</value>
+	</variable>
+	<variable name="HomeWidgetsMovies">
+	  <value condition="!Skin.HasSetting(recentmovies) + !Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(3dmovies)">special://skin/playlists/Movies Recent.xsp</value>
+	  <value condition="Skin.HasSetting(recommendedmovies)">special://skin/playlists/Last Played Movies.xsp</value>
+	  <value condition="Skin.HasSetting(unseenmovies)">special://skin/playlists/Unseen Movies.xsp</value>
+	  <value condition="Skin.HasSetting(fsk18movies)">special://skin/playlists/FSK 18.xsp</value>
+	  <value condition="Skin.HasSetting(topratedmovies)">special://skin/playlists/Top Rated Movies.xsp</value>
+	  <value condition="Skin.HasSetting(moviessets)">videodb://movies/sets/</value>
+	  <value condition="Skin.HasSetting(3dmovies)">special://skin/playlists/3D Movies.xsp</value>
+	</variable>
+	<variable name="VideosWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(recommendedmovies2)">$LOCALIZE[50005]</value>
+	  <value condition="Skin.HasSetting(unseenmovies2)">$LOCALIZE[50309]</value>
+	  <value condition="Skin.HasSetting(fsk18movies2)">$LOCALIZE[50318]</value>
+	  <value>$LOCALIZE[50000]</value>
+	</variable>
+	<variable name="HomeWidgetsVideos">
+	  <value condition="!Skin.HasSetting(recentmovies2) + !Skin.HasSetting(recommendedmovies2) + !Skin.HasSetting(unseenmovies2) + !Skin.HasSetting(fsk18movies2) + !Skin.HasSetting(topratedmovies2) + !Skin.HasSetting(moviessets2)">special://skin/playlists/Movies Recent.xsp</value>
+	  <value condition="Skin.HasSetting(recommendedmovies2)">special://skin/playlists/Last Played Movies.xsp</value>
+	  <value condition="Skin.HasSetting(unseenmovies2)">special://skin/playlists/Unseen Movies.xsp</value>
+	  <value condition="Skin.HasSetting(fsk18movies2)">special://skin/playlists/FSK 18.xsp</value>
+	  <value condition="Skin.HasSetting(topratedmovies2)">special://skin/playlists/Top Rated Movies.xsp</value>
+	  <value condition="Skin.HasSetting(moviessets2)">videodb://movies/sets/</value>
+	</variable>
+	<variable name="TVShowsWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(recommendedtvshows)">$LOCALIZE[50006]</value>
+	  <value condition="Skin.HasSetting(unseentvshows)">$LOCALIZE[50133]</value>
+	  <value>$LOCALIZE[50134]</value>
+	</variable>
+	<variable name="HomeWidgetsSeries">
+	  <value condition="!Skin.HasSetting(recentepisodes) + !Skin.HasSetting(unseentvshows) + !Skin.HasSetting(recommendedtvshows)">videodb://recentlyaddedepisodes/</value>
+	  <value condition="Skin.HasSetting(recommendedtvshows)">special://skin/playlists/inprogress TVShows.xsp</value>
+	  <value condition="Skin.HasSetting(unseentvshows)">special://skin/playlists/Unseen TVShows.xsp</value>
+	</variable>
+	<variable name="AddonsWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(videoaddons)">$LOCALIZE[1037]</value>
+	  <value condition="Skin.HasSetting(musicaddons)">$LOCALIZE[1038]</value>
+	  <value>$LOCALIZE[1043]</value>
+	</variable>
+	<variable name="HomeWidgetsAddons">
+	  <value condition="!Skin.HasSetting(videoaddons) + !Skin.HasSetting(musicaddons)">addons://sources/executable/</value>
+	  <value condition="Skin.HasSetting(videoaddons)">addons://sources/video/</value>
+	  <value condition="Skin.HasSetting(musicaddons)">addons://sources/audio/</value>
+	</variable>
+	<variable name="MusicWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(albumsrecentlyplayedmusic)">$LOCALIZE[50322]</value>
+	  <value condition="Skin.HasSetting(randommusic)">$LOCALIZE[50273]</value>
+	  <value>$LOCALIZE[50003]</value>
+	</variable>
+	<variable name="HomeWidgetsMusic">
+	  <value condition="!Skin.HasSetting(recentmusic) + !Skin.HasSetting(randommusic) + !Skin.HasSetting(albumsrecentlyplayedmusic)">special://skin/playlists/Music Recentlyadded.xsp</value>
+	  <value condition="Skin.HasSetting(albumsrecentlyplayedmusic)">special://skin/playlists/Albums_Recently_Played.xsp</value>
+	  <value condition="Skin.HasSetting(randommusic)">special://skin/playlists/Random Album.xsp</value>
+	</variable>
+	<variable name="LiveTVWidgetsSettingVar">
+	  <value condition="Skin.HasSetting(tvhighlight)">TV Digital Highlights</value>
+	  <value condition="Skin.HasSetting(serienplaner)">Serienplaner</value>
+	  <value>LiveTV Vorschau</value>
+	</variable>
+	<variable name="HomeWidgetsLiveTV">
+	  <value condition="Container(9000).Hasfocus(1)">pvr://channels/tv/All&amp;channels/</value>
+	</variable>
+	<variable name="HomeWidgetsRadio">
+	  <value condition="Container(9000).Hasfocus(2)">pvr://channels/radio/All&amp;channels/</value>
+	</variable>
+	<variable name="HomeWidgetsPlaylisten">
+	  <value condition="IsEmpty(Container(9000).ListItem.Property(Widget))">videodb://recentlyaddedmovies/</value>	
+	  <value condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton1000)">$INFO[Skin.String(Playlist1HomeItem.Widget)]</value>  
+	  <value condition="Container(9000).Hasfocus(5) + Skin.HasSetting(movieplaylistButton101)">$INFO[Skin.String(movieplaylistButtonPathScript_101)]</value>
+	  <value condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton2000)">$INFO[Skin.String(Playlist2HomeItem.Widget)]</value>
+	  <value condition="Container(9000).Hasfocus(6) + Skin.HasSetting(movieplaylistButton201)">$INFO[Skin.String(movieplaylistButtonPathScript_201)]</value>
+	  <value condition="Container(9000).Hasfocus(7) + Skin.HasSetting(movieplaylistButton3000)">$INFO[Skin.String(Playlist3HomeItem.Widget)]</value>
+	  <value condition="Container(9000).Hasfocus(7) + Skin.HasSetting(movieplaylistButton301)">$INFO[Skin.String(movieplaylistButtonPathScript_301)]</value>
+	  <value condition="Container(9000).Hasfocus(19) + Skin.HasSetting(movieplaylistButton1001)">$INFO[Skin.String(Playlist4HomeItem.Widget)]</value>
+	  <value condition="Container(9000).Hasfocus(20) + Skin.HasSetting(movieplaylistButton1002)">$INFO[Skin.String(Playlist5HomeItem.Widget)]</value>
+	</variable>	
+	<variable name="HomeWidgetsYoutube">
+	  <value condition="!Skin.HasSetting(youtubenewuploadedvideostv) + !Skin.HasSetting(youtubemine) + !Skin.HasSetting(youtubelive) + !Skin.HasSetting(youtubelist)">plugin://plugin.video.youtube/special/popular_right_now/</value><!--Jetzt gerade beliebt-->
+	  <value condition="Skin.HasSetting(youtubenewuploadedvideostv)">plugin://plugin.video.youtube/special/new_uploaded_videos_tv/</value><!--Meine Abos-->
+	  <value condition="Skin.HasSetting(youtubemine)">plugin://plugin.video.youtube/channel/mine/</value><!--Mein Kanal-->
+	  <value condition="Skin.HasSetting(youtubelive)">plugin://plugin.video.youtube/special/live/</value><!--Live-->
+	  <value condition="Skin.HasSetting(youtubelist)">plugin://plugin.video.youtube/subscriptions/list/</value><!--Abos-->
+	</variable>
+	<variable name="HomeWidgetsYoutubeSettingVar">
+	  <value condition="Skin.HasSetting(youtubenewuploadedvideostv)">Meine Abos</value>
+	  <value condition="Skin.HasSetting(youtubemine)">Mein Kanal</value>
+	  <value condition="Skin.HasSetting(youtubelive)">Live</value>
+	  <value condition="Skin.HasSetting(youtubelist)">Abos</value>
+	  <value>Jetzt gerade beliebt</value>
+	</variable>
+	<!-- ======================= Widget Umschalt Close ================================= -->
+	
+	<!-- ======================= Feel & Look Packs Begin =============================== -->
+	<variable name="VarWeatherHomeIcon">
+	  <value condition="!Skin.HasSetting(weathericonsdefault) + !Skin.HasSetting(weathericons3dcoloured) + !Skin.HasSetting(weathericons3dwhite) + !Skin.HasSetting(weathericonsanimated) + !Skin.HasSetting(weathericonscoloured) + !Skin.HasSetting(weathericonsflat) + !Skin.HasSetting(weathericonsgrey) + !Skin.HasSetting(weathericonsoutline) + !Skin.HasSetting(weathericonsoutlinehd) + !Skin.HasSetting(weathericonstransparent) + !Skin.HasSetting(weathericonswhite)">resource://resource.images.weathericons.default/</value>
+	  <value condition="Skin.HasSetting(weathericons3dcoloured)">resource://resource.images.weathericons.3d-coloured/</value>	  
+	  <value condition="Skin.HasSetting(weathericons3dwhite)">resource://resource.images.weathericons.3d-white/</value>
+	  <value condition="Skin.HasSetting(weathericonsanimated)">resource://resource.images.weathericons.animated/</value>
+	  <value condition="Skin.HasSetting(weathericonscoloured)">resource://resource.images.weathericons.coloured/</value>
+	  <value condition="Skin.HasSetting(weathericonsflat)">resource://resource.images.weathericons.flat/</value>	  
+	  <value condition="Skin.HasSetting(weathericonsgrey)">resource://resource.images.weathericons.grey/</value>
+	  <value condition="Skin.HasSetting(weathericonsoutline)">resource://resource.images.weathericons.outline/</value>
+	  <value condition="Skin.HasSetting(weathericonsoutlinehd)">resource://resource.images.weathericons.outline-hd/</value>	  
+	  <value condition="Skin.HasSetting(weathericonstransparent)">resource://resource.images.weathericons.transparent/</value>
+	  <value condition="Skin.HasSetting(weathericonswhite)">resource://resource.images.weathericons.white/</value>
+	</variable>
+	<variable name="VarMovieGenreIcon">
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.white)">resource://resource.images.moviegenreicons.white/$INFO[ListItem.Label].jpg</value>
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.poster)">resource://resource.images.moviegenreicons.poster/$INFO[ListItem.Label].jpg</value>
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.coloured)">resource://resource.images.moviegenreicons.coloured/$INFO[ListItem.Label].jpg</value>	  
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/$INFO[ListItem.Label].jpg</value>
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.grey)">resource://resource.images.moviegenreicons.grey/$INFO[ListItem.Label].jpg</value>	  
+	  <value condition="System.HasAddon(resource.images.moviegenreicons.filmstrip)">resource://resource.images.moviegenreicons.filmstrip/$INFO[ListItem.Label].jpg</value>
+	</variable>	
+	<variable name="VarMusicGenreIcon">
+	  <value condition="System.HasAddon(resource.images.musicgenreicons.poster)">resource://resource.images.musicgenreicons.poster/$INFO[ListItem.Label].jpg</value>
+	  <value condition="System.HasAddon(resource.images.musicgenreicons.text)">resource://resource.images.musicgenreicons.text/$INFO[ListItem.Label].jpg</value>
+	  <value condition="System.HasAddon(resource.images.musicgenreicons.grey)">resource://resource.images.musicgenreicons.grey/$INFO[ListItem.Label].jpg</value>
+	</variable>	
+	<!--<variable name="VarMovieGenreIcon">
+		<value condition="IsEmpty(Skin.String(resource.images.moviegenreicons.path))">$INFO[ListItem.Label,resource://resource.images.moviegenreicons.coloured/,.jpg]</value>
+		<value condition="!IsEmpty(Skin.String(resource.images.moviegenreicons.path))">$INFO[Skin.String(resource.images.moviegenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
+	</variable>
+	<variable name="VarMusicGenreIcon">
+		<value condition="IsEmpty(Skin.String(resource.images.musicgenreicons.path))">$INFO[ListItem.Label,resource://resource.images.musicgenreicons.poster/,.jpg]</value>
+		<value condition="!IsEmpty(Skin.String(resource.images.musicgenreicons.path))">$INFO[Skin.String(resource.images.musicgenreicons.path)]$INFO[ListItem.Label,,.jpg]</value>
+	</variable>-->
+	<variable name="VarStudioIcon">
+		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(studios)">resource://resource.images.studios.white/$INFO[ListItem.Studio,,.png]</value>
+		<value condition="Container.Content(musicvideos)">resource://resource.images.recordlabels.white/$INFO[ListItem.Studio,,.png]</value>
+		<value condition="Window.IsVisible(music)">resource://resource.images.recordlabels.white/$INFO[Listitem.Property(Album_Label),,.png]</value>
+	</variable>
+	<!-- ======================= Feel & Look Packs Close =============================== -->
+	
+	
+	<variable name="ExtendedInfoYear">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[50146]: $INFO[Window(home).Property(SkinHelper.MovieSet.Years)]</value>
+	  <value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)">$LOCALIZE[50146]: $INFO[ListItem.Year]</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[50146]: $INFO[listitem.Year]</value>
+    </variable>
+	<variable name="ExtendedInfoRuntime">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[50147]: $INFO[Window(home).Property(SkinHelper.MovieSet.Runtime)] min</value>
+	  <value condition="Container.Content(Movies)">$LOCALIZE[50147]: $INFO[ListItem.Duration] min</value>
+	  <value condition="Container.Content(TVShows)">$LOCALIZE[50152]: $INFO[ListItem.Property(TotalSeasons)] • $LOCALIZE[20360]: $INFO[listitem.episode]</value>
+	  <value condition="Container.Content(Seasons)">$LOCALIZE[20360]: $INFO[listitem.episode]</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[50148]: $INFO[ListItem.Artist]</value>
+	  <value condition="Container.Content(Episodes)">$LOCALIZE[50147]: $INFO[ListItem.Duration] min</value>
+    </variable>
+	<variable name="ExtendedInfoStudio">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[50149]: $INFO[Window(home).Property(SkinHelper.MovieSet.Studio)]</value>
+	  <value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[50149]: $INFO[ListItem.Studio]</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[50150]: $INFO[ListItem.Title]</value>
+    </variable>
+	<variable name="ExtendedInfoDirector">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[50151]: $INFO[Window(home).Property(SkinHelper.MovieSet.Director)]</value>
+	  <value condition="Container.Content(Movies)">$LOCALIZE[50151]: $INFO[ListItem.Director]</value>
+	  <value condition="Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[50152]: $INFO[ListItem.Property(TotalSeasons)] - $LOCALIZE[20360]: $INFO[listitem.episode]</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[50153]: $INFO[ListItem.Duration] min</value>
+	  <value condition="Container.Content(Albums) | Container.Content(Artists)">$LOCALIZE[557]: $INFO[ListItem.Artist]</value>
+	  <value condition="Container.Content(Addons)">$LOCALIZE[144]: $INFO[ListItem.Property(Addon.Version)]</value>
+    </variable>
+	<variable name="ExtendedInfoWriter">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[50154]: $INFO[Window(home).Property(SkinHelper.MovieSet.Writer)]</value>
+	  <value condition="Container.Content(Movies)">$LOCALIZE[50154]: $INFO[ListItem.Writer]</value>
+	  <value condition="Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[20360]: $INFO[listitem.episode]  ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[50155]: $INFO[ListItem.Album]</value>
+	  <value condition="Container.Content(Albums)">$LOCALIZE[558]: $INFO[ListItem.Album]</value>
+	  <value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Born),$LOCALIZE[21893]: ]</value>
+	  <value condition="Container.Content(Addons)">$INFO[ListItem.Property(Addon.Creator)]</value>
+    </variable>
+	<variable name="ExtendedInfoGenre">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$LOCALIZE[135]: $INFO[Window(home).Property(SkinHelper.MovieSet.Genre)]</value>
+	  <value condition="Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Episodes) | Container.Content(Seasons)">$LOCALIZE[50156]: $INFO[ListItem.Genre]</value>
+	  <value condition="Container.Content(MusicVideos)">$LOCALIZE[135]: $INFO[listitem.Genre]</value>
+	  <value condition="Container.Content(Albums)">$LOCALIZE[135]: $INFO[ListItem.Property(Album_Style)]</value>
+	  <value condition="Container.Content(Artists)">$LOCALIZE[135]: $INFO[ListItem.Property(Artist_Style)]</value>
+	  <value condition="Container.Content(Addons)">$LOCALIZE[146]: $INFO[ListItem.Property(Addon.Type)]</value>
+    </variable>
+	<variable name="ExtendedInfoRatingAndVotes">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(SkinHelper.MovieSet.Count] $LOCALIZE[50190]</value>
+	  <value condition="Container.Content(Movies)">$LOCALIZE[50157]: $INFO[ListItem.RatingAndVotes]</value>
+	  <value condition="Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[20416]: $INFO[ListItem.Premiered]</value>
+	  <value condition="Container.Content(Episodes)">$LOCALIZE[183]: $INFO[ListItem.RatingAndVotes]</value>
+    </variable>
+	<variable name="ExtendedInfoTop250">
+	  <value condition="Container.Content(Movies)">$LOCALIZE[50158]: $INFO[ListItem.Top250]</value>
+    </variable>
+	<variable name="ExtendedInfoPlot">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
+	  <value condition="Container.Content(seasons)">$INFO[Container.ShowPlot]</value>
+      <value condition="Container.Content(addons)">$INFO[ListItem.Property(Addon.Description)]</value>
+	  <value condition="Container.Content(Albums)">$INFO[Window(home).Property(SkinHelper.Music.Info)]</value>
+	  <value condition="Container.Content(Artists)">$INFO[Window(home).Property(SkinHelper.Music.Info)]</value>
+	  <value>$INFO[ListItem.Plot]</value>
+    </variable>	
+	<variable name="ExtendedInfoMore">
+	  <value condition="Container.Content(Albums)">$INFO[Window(home).Property(SkinHelper.Music.TrackList)]</value>
+	  <value condition="Container.Content(Artists)">$INFO[Window(home).Property(SkinHelper.Music.Albums)]</value>
+    </variable>
+	
+	<variable name="ExtendedInfoTimeEnd">
+	  <value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">$INFO[Window(home).Property(SkinHelper.MovieSet.Count] $LOCALIZE[50190]</value>
+	  <value condition="Container.Content(Movies)">$LOCALIZE[49972]: $INFO[ListItem.EndTime]</value>
+	  <value condition="Container.Content(TVShows) | Container.Content(Seasons)">$LOCALIZE[50191]: $INFO[ListItem.Property(WatchedEpisodes)] • $LOCALIZE[50192]: $INFO[ListItem.Property(UnWatchedEpisodes)]</value>
+	  <value condition="Container.Content(Episodes)">$LOCALIZE[49972]: $INFO[ListItem.EndTime]</value>
+    </variable>
+	
+	<variable name="cdARTVar">
+	  <value condition="[Window.IsActive(musicfiles) + IsEmpty(ListItem.FileExtension)]">$INFO[ListItem.Path]$INFO[ListItem.Label,,/cdart.png]</value>
+	  <value condition="Container.Content(albums)">$INFO[Skin.String(Music_Folder_Path)]$INFO[ListItem.Artist]/$INFO[ListItem.Label]/cdart.png</value>
+	  <value condition="Window.IsActive(musicinformation)">$INFO[ListItem.FileNameAndPath,,/cdart.png]</value>
+	  <value>$INFO[ListItem.Path]cdart.png</value>
+    </variable>
+	
+	
+	<variable name="Icon(-10)Poster">
+		<value condition="!IsEmpty(ListItem(-10).Art(poster))">$INFO[ListItem(-10).Art(poster)]</value>
+		<value>$INFO[ListItem(-10).Icon]</value>
+	</variable>
+	<variable name="Icon(-9)Poster">
+		<value condition="!IsEmpty(ListItem(-9).Art(poster))">$INFO[ListItem(-9).Art(poster)]</value>
+		<value>$INFO[ListItem(-9).Icon]</value>
+	</variable>
+	<variable name="Icon(-8)Poster">
+		<value condition="!IsEmpty(ListItem(-8).Art(poster))">$INFO[ListItem(-8).Art(poster)]</value>
+		<value>$INFO[ListItem(-8).Icon]</value>
+	</variable>
+	<variable name="Icon(-7)Poster">
+		<value condition="!IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
+		<value>$INFO[ListItem(-7).Icon]</value>
+	</variable>
+	<variable name="Icon(-6)Poster">
+		<value condition="!IsEmpty(ListItem(-6).Art(poster))">$INFO[ListItem(-6).Art(poster)]</value>
+		<value>$INFO[ListItem(-6).Icon]</value>
+	</variable>
+	<variable name="Icon(-5)Poster">
+		<value condition="!IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
+		<value>$INFO[ListItem(-5).Icon]</value>
+	</variable>
+	<variable name="Icon(-4)Poster">
+		<value condition="!IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
+		<value>$INFO[ListItem(-4).Icon]</value>
+	</variable>
+	<variable name="Icon(-3)Poster">
+		<value condition="!IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
+		<value>$INFO[ListItem(-3).Icon]</value>
+	</variable>
+	<variable name="Icon(-2)Poster">
+		<value condition="!IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
+		<value>$INFO[ListItem(-2).Icon]</value>
+	</variable>
+	<variable name="Icon(-1)Poster">
+		<value condition="!IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
+		<value>$INFO[ListItem(-1).Icon]</value>
+	</variable>
+	<variable name="Icon(0)Poster">
+		<value condition="!IsEmpty(ListItem(0).Art(poster))">$INFO[ListItem(0).Art(poster)]</value>
+		<value>$INFO[ListItem(0).Icon]</value>
+	</variable>
+	<variable name="Icon(1)Poster">
+		<value condition="!IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
+		<value>$INFO[ListItem(1).Icon]</value>
+	</variable>
+	<variable name="Icon(2)Poster">
+		<value condition="!IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
+		<value>$INFO[ListItem(2).Icon]</value>
+	</variable>
+	<variable name="Icon(3)Poster">
+		<value condition="!IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
+		<value>$INFO[ListItem(3).Icon]</value>
+	</variable>
+	<variable name="Icon(4)Poster">
+		<value condition="!IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
+		<value>$INFO[ListItem(4).Icon]</value>
+	</variable>
+	<variable name="Icon(5)Poster">
+		<value condition="!IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
+		<value>$INFO[ListItem(5).Icon]</value>
+	</variable>
+	<variable name="Icon(6)Poster">
+		<value condition="!IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
+		<value>$INFO[ListItem(6).Icon]</value>
+	</variable>
+	<variable name="Icon(7)Poster">
+		<value condition="!IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
+		<value>$INFO[ListItem(7).Icon]</value>
+	</variable>
+	<variable name="Icon(8)Poster">
+		<value condition="!IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
+		<value>$INFO[ListItem(8).Icon]</value>
+	</variable>
+	<variable name="Icon(9)Poster">
+		<value condition="!IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
+		<value>$INFO[ListItem(9).Icon]</value>
+	</variable>
+	<variable name="Icon(10)Poster">
+		<value condition="!IsEmpty(ListItem(10).Art(poster))">$INFO[ListItem(10).Art(poster)]</value>
+		<value>$INFO[ListItem(10).Icon]</value>
+	</variable>
+	<variable name="Icon(11)Poster">
+		<value condition="!IsEmpty(ListItem(11).Art(poster))">$INFO[ListItem(11).Art(poster)]</value>
+		<value>$INFO[ListItem(11).Icon]</value>
+	</variable>
+	<variable name="Icon(12)Poster">
+		<value condition="!IsEmpty(ListItem(12).Art(poster))">$INFO[ListItem(12).Art(poster)]</value>
+		<value>$INFO[ListItem(12).Icon]</value>
+	</variable>
+	
+	<variable name="spinetypecaseblurayblue">
+		<value condition="[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + ![substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl)]">Views/spine/bdblue.png</value>
+	</variable>
+	<variable name="spinetypecasebluray3">
+		<value condition="[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + ![SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d) | SubString(ListItem.Filenameandpath,3d) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl)]">Views/spine/case_blue.png</value>
+	</variable>
+	<variable name="spinetypecasebluray3d">
+		<value condition="SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d)">Views/spine/case3d_blue.png</value>
+	</variable>
+	<variable name="spinetypecasesets1">
+		<value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">Views/spine/sets.png</value>
+	</variable>
+	<variable name="spinetypecasesets2">
+		<value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">Views/spine/case_collection.png</value>
+	</variable>
+	<variable name="spinetypecasedvd1">
+		<value condition="stringcompare(ListItem.VideoResolution,480) | stringcompare(ListItem.VideoResolution,540) | stringcompare(ListItem.VideoResolution,576)] + ![SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d) | SubString(ListItem.Filenameandpath,3d) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr) | substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl)]">Views/spine/dvd.png</value>
+	</variable>
+	<variable name="spinetypecasedvd3">
+		<value condition="stringcompare(ListItem.VideoResolution,480) | stringcompare(ListItem.VideoResolution,540) | stringcompare(ListItem.VideoResolution,576)] + ![SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d) | SubString(ListItem.Filenameandpath,3d) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr) | substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl)]">Views/spine/case_grey.png</value>
+	</variable>
+	
+    <variable name="typehackflagging">
+		<value condition="[IntegerGreaterThan(ListItem.VideoResolution,719) | substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]">bluray</value>
+		<value condition="substring(ListItem.FilenameAndPath,hddvd)">hddvd</value>
+		<value condition="[IntegerGreaterThan(ListItem.VideoResolution,479) | substring(ListItem.FilenameAndPath,dvd)]">dvd</value>
+		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">TV</value>
+		<value condition="substring(ListItem.FilenameAndPath,vhs)">vhs</value>
+	</variable>
+	
+	<variable name="typehackcase">
+		<value condition="[stringcompare(ListItem.VideoResolution,720) | stringcompare(ListItem.VideoResolution,1080)] + ![SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d) | SubString(ListItem.Filenameandpath,3d) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl) | SubString(ListItem.Filenameandpath,steelbook)]">case/BD.png</value>
+		<value condition="[stringcompare(ListItem.VideoResolution,480) | stringcompare(ListItem.VideoResolution,540) | stringcompare(ListItem.VideoResolution,576)] + ![SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d) | SubString(ListItem.Filenameandpath,3d) | substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr) | substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl) | SubString(ListItem.Filenameandpath,steelbook)]">case/DVD.png</value>
+		<value condition="[substring(ListItem.FilenameAndPath,web) | substring(ListItem.FilenameAndPath,webdl)]">case/WEBDL.png</value>
+		<value condition="[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)]">case/HDTV.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,3dbd) | SubString(ListItem.Filenameandpath,3d)">case/3D.png</value>
+		<value condition="SubString(ListItem.Path,videodb://movies/sets/,left)">case/SET.png</value>
+		<value condition="Container.Content(TVShows) | Container.Content(Seasons)">case/TVSERIE.png</value>
+		<value condition="SubString(ListItem.Filenameandpath,steelbook)">case/steelbook.png</value>
+	</variable>
+	
+	<variable name="LangFlagging">
+		<value condition="substring(ListItem.FilenameAndPath,.de.)">flagging/audioflags/ger.png</value>
+		<value condition="substring(ListItem.FilenameAndPath,.en.)">flagging/audioflags/eng.png</value>
+		<value condition="substring(ListItem.FilenameAndPath,.es.)">flagging/audioflags/spa.png</value>
+		<value condition="substring(ListItem.FilenameAndPath,.fr.)">flagging/audioflags/fra.png</value>
+		<value condition="substring(ListItem.FilenameAndPath,.it.)">flagging/audioflags/ita.png</value>
+	</variable>
+	
+	<variable name="mpaa">
+	    <!-- AUSTRALIA -->
+		<value condition="substring(listitem.mpaa,Australia:G)">flagging/ratings/australia_g.png</value>
+		<value condition="substring(listitem.mpaa,Australia:PG)">flagging/ratings/australia_pg.png</value>
+		<value condition="substring(listitem.mpaa,Australia:M) + ! substring(listitem.mpaa,Australia:MA)">flagging/ratings/australia_m.png</value>
+		<value condition="substring(listitem.mpaa,Australia:MA)">flagging/ratings/australia_ma.png</value>
+		<value condition="substring(listitem.mpaa,Australia:R)">flagging/ratings/australia_r.png</value>
+		<value condition="substring(listitem.mpaa,Australia:X)">flagging/ratings/australia_x.png</value>
+
+		<!-- US -->
+		<value condition="substring(listitem.mpaa,Rated G)">flagging/ratings/mpaa_general.png</value>
+		<value condition="substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)">flagging/ratings/mpaa_pg.png</value>
+		<value condition="substring(listitem.mpaa,Rated PG-13)">flagging/ratings/mpaa_pg13.png</value>
+		<value condition="substring(Listitem.mpaa,Rated R)">flagging/ratings/mpaa_restricted.png</value>
+		<value condition="substring(Listitem.mpaa,Rated NC)">flagging/ratings/mpaa_nc17.png</value>
+		<!--<value condition="[!ListItem.IsFolder | !SubString(Container.FolderPath,videodb)] + IsEmpty(ListItem.MPAA)">flagging/ratings/mpaa_unrated.png</value>-->
+
+		<!-- UK -->
+		<value condition="substring(listitem.mpaa,UK:U)">flagging/ratings/UK_u.png</value>
+		<value condition="substring(listitem.mpaa,UK:PG)">flagging/ratings/UK_pg.png</value>
+		<value condition="substring(listitem.mpaa,UK:12a)">flagging/ratings/UK_12a.png</value>
+		<value condition="substring(listitem.mpaa,UK:12) + !substring(listitem.mpaa,UK:12a)">flagging/ratings/UK_12.png</value>
+		<value condition="substring(listitem.mpaa,UK:15)">flagging/ratings/UK_15.png</value>
+		<value condition="substring(listitem.mpaa,UK:18)">flagging/ratings/UK_18.png</value>
+		<value condition="substring(listitem.mpaa,UK:R18)">flagging/ratings/UK_r18.png</value>
+
+		<!-- GERMANY -->
+		<value condition="[substring(ListItem.mpaa,Germany:0) | substring(ListItem.mpaa,FSK 0) | substring(ListItem.mpaa,DE-0)] + !Skin.HasSetting(RatingColor)">flagging/ratings/Germany0.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:6) | substring(ListItem.mpaa,FSK 6) | substring(ListItem.mpaa,DE-6)] + !Skin.HasSetting(RatingColor)">flagging/ratings/Germany6.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:12) | substring(ListItem.mpaa,FSK 12) | substring(ListItem.mpaa,DE-12)] + !Skin.HasSetting(RatingColor)">flagging/ratings/Germany12.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:16) | substring(ListItem.mpaa,FSK 16) | substring(ListItem.mpaa,DE-16)] + !Skin.HasSetting(RatingColor)">flagging/ratings/Germany16.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:18) | substring(ListItem.mpaa,FSK 18) | substring(ListItem.mpaa,DE-18)] + !Skin.HasSetting(RatingColor)">flagging/ratings/Germany18.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:0) | substring(ListItem.mpaa,FSK 0) | substring(ListItem.mpaa,DE-0)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany0.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:6) | substring(ListItem.mpaa,FSK 6) | substring(ListItem.mpaa,DE-6)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany6_color.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:12) | substring(ListItem.mpaa,FSK 12) | substring(ListItem.mpaa,DE-12)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany12_color.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:16) | substring(ListItem.mpaa,FSK 16) | substring(ListItem.mpaa,DE-16)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany16_color.png</value>
+		<value condition="[substring(ListItem.mpaa,Germany:18) | substring(ListItem.mpaa,FSK 18) | substring(ListItem.mpaa,DE-18)] + Skin.HasSetting(RatingColor)">flagging/ratings/Germany18_color.png</value>
+	</variable>
+	
+	<variable name="mpaatext">
+	    <!-- AUSTRALIA -->
+		<value condition="substring(listitem.mpaa,Australia:G)">[COLOR FF0db14b]G[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,Australia:MA15+)">[COLOR FFed1c24]MA15+[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,Australia:R18+)">[COLOR FF000000]R18+[/COLOR]</value>
+
+		<!-- US -->
+		<value condition="substring(listitem.mpaa,Rated G)">[COLOR FF0db14b]G[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)">[COLOR FF0db14b]PG[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,Rated PG-13)">[COLOR FF0db14b]PG-13[/COLOR]</value>
+		<value condition="substring(Listitem.mpaa,Rated R)">[COLOR FFed1c24]R[/COLOR]</value>
+		<value condition="substring(Listitem.mpaa,Rated NC)">[COLOR FFffe600]NC[/COLOR]</value>
+		<value condition="[!ListItem.IsFolder | !SubString(Container.FolderPath,videodb)] + IsEmpty(ListItem.MPAA)">unrated</value>
+
+		<!-- UK -->
+		<value condition="substring(listitem.mpaa,UK:U)">[COLOR FFffffff]U[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:PG)">[COLOR FFffe600]PG[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:12a)">[COLOR FF0db14b]12a[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:12) + !substring(listitem.mpaa,UK:12a)">[COLOR FF0db14b]12[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:15)">[COLOR FF00a4e0]15[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:18)">[COLOR FFed1c24]18[/COLOR]</value>
+		<value condition="substring(listitem.mpaa,UK:R18)">[COLOR FFed1c24]R18[/COLOR]</value>
+
+		<!-- GERMANY -->
+		<value condition="substring(ListItem.mpaa,Germany:o.A.) | substring(ListItem.mpaa,o.A.)">o.A.</value>
+		<value condition="substring(ListItem.mpaa,Germany:0) | substring(ListItem.mpaa,FSK 0) | substring(ListItem.mpaa,DE-0)">[COLOR FFffffff]FSK 0[/COLOR]</value>
+		<value condition="substring(ListItem.mpaa,Germany:6) | substring(ListItem.mpaa,FSK 6) | substring(ListItem.mpaa,DE-6)">[COLOR FFffe600]FSK 6[/COLOR]</value>
+		<value condition="substring(ListItem.mpaa,Germany:12) | substring(ListItem.mpaa,FSK 12) | substring(ListItem.mpaa,DE-12)">[COLOR FF0db14b]FSK 12[/COLOR]</value>
+		<value condition="substring(ListItem.mpaa,Germany:16) | substring(ListItem.mpaa,FSK 16) | substring(ListItem.mpaa,DE-16)">[COLOR FF00a4e0]FSK 16[/COLOR]</value>
+		<value condition="substring(ListItem.mpaa,Germany:18) | substring(ListItem.mpaa,FSK 18) | substring(ListItem.mpaa,DE-18)">[COLOR FFed1c24]FSK 18[/COLOR]</value>
+	</variable>
+
+
+<!-- ======================================================================================================================= -->
+<!-- ============================================= SKIN FARBEINSTELLUNGEN ================================================== -->
+<!-- ======================================================================================================================= -->
+<include name="BackColorFrontReset">
+	<onclick>Skin.Reset(ColorCollection1.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection1.34)</onclick>
+</include>
+<variable name="BackColorFront">	
+	<value condition="Skin.HasSetting(ColorCollection1.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection1.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection1.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection1.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection1.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection1.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection1.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection1.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection1.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection1.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection1.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection1.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection1.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection1.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection1.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection1.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection1.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection1.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection1.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection1.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection1.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection1.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection1.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection1.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection1.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection1.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection1.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection1.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection1.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection1.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection1.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection1.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection1.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection1.34)">$INFO[Skin.String(SelfColor_Path1.34)]</value>
+	<value>BackColorFront</value>
+</variable>
+<include name="BackColorButtonReset">
+	<onclick>Skin.Reset(ColorCollection2.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection2.34)</onclick>
+</include>
+<variable name="BackColorButton">	
+	<value condition="Skin.HasSetting(ColorCollection2.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection2.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection2.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection2.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection2.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection2.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection2.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection2.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection2.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection2.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection2.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection2.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection2.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection2.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection2.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection2.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection2.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection2.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection2.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection2.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection2.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection2.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection2.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection2.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection2.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection2.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection2.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection2.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection2.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection2.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection2.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection2.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection2.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection2.34)">$INFO[Skin.String(SelfColor_Path2.34)]</value>
+	<value>BackColorButton</value>
+</variable>
+<include name="ColorButtonDialogeBackReset">
+	<onclick>Skin.Reset(ColorCollection3.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection3.34)</onclick>
+</include>
+<variable name="ColorButtonDialogeBack">	
+	<value condition="Skin.HasSetting(ColorCollection3.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection3.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection3.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection3.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection3.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection3.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection3.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection3.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection3.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection3.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection3.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection3.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection3.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection3.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection3.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection3.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection3.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection3.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection3.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection3.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection3.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection3.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection3.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection3.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection3.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection3.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection3.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection3.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection3.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection3.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection3.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection3.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection3.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection3.34)">$INFO[Skin.String(SelfColor_Path3.34)]</value>
+	<value>ColorButtonDialogeBack</value>
+</variable>
+<include name="BackColorBackgroundReset">
+	<onclick>Skin.Reset(ColorCollection4.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection4.34)</onclick>
+</include>
+<variable name="BackColorBackground">	
+	<value condition="Skin.HasSetting(ColorCollection4.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection4.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection4.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection4.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection4.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection4.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection4.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection4.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection4.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection4.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection4.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection4.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection4.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection4.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection4.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection4.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection4.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection4.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection4.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection4.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection4.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection4.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection4.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection4.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection4.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection4.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection4.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection4.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection4.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection4.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection4.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection4.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection4.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection4.34)">$INFO[Skin.String(SelfColor_Path4.34)]</value>
+	<value>BackColorBackground</value>
+</variable>
+<include name="ColorIconsReset">
+	<onclick>Skin.Reset(ColorCollection5.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection5.34)</onclick>
+</include>
+<variable name="ColorIcons">	
+	<value condition="Skin.HasSetting(ColorCollection5.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection5.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection5.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection5.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection5.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection5.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection5.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection5.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection5.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection5.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection5.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection5.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection5.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection5.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection5.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection5.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection5.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection5.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection5.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection5.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection5.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection5.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection5.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection5.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection5.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection5.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection5.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection5.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection5.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection5.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection5.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection5.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection5.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection5.34)">$INFO[Skin.String(SelfColor_Path5.34)]</value>
+	<value>ColorIcons</value>
+</variable>
+<include name="ColorFlaggingIconsReset">
+	<onclick>Skin.Reset(ColorCollection6.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection6.34)</onclick>
+</include>
+<variable name="ColorFlaggingIcons">	
+	<value condition="Skin.HasSetting(ColorCollection6.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection6.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection6.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection6.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection6.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection6.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection6.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection6.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection6.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection6.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection6.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection6.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection6.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection6.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection6.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection6.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection6.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection6.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection6.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection6.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection6.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection6.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection6.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection6.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection6.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection6.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection6.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection6.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection6.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection6.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection6.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection6.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection6.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection6.34)">$INFO[Skin.String(SelfColor_Path6.34)]</value>
+	<value>ColorFlaggingIcons</value>
+</variable>
+<include name="ColorProgressReset">
+	<onclick>Skin.Reset(ColorCollection7.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection7.34)</onclick>
+</include>
+<variable name="ColorProgress">	
+	<value condition="Skin.HasSetting(ColorCollection7.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection7.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection7.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection7.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection7.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection7.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection7.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection7.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection7.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection7.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection7.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection7.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection7.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection7.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection7.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection7.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection7.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection7.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection7.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection7.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection7.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection7.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection7.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection7.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection7.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection7.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection7.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection7.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection7.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection7.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection7.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection7.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection7.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection7.34)">$INFO[Skin.String(SelfColor_Path7.34)]</value>
+	<value>ColorProgress</value>
+</variable>
+<include name="ColorFontNormalReset">
+	<onclick>Skin.Reset(ColorCollection8.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection8.34)</onclick>
+</include>
+<variable name="ColorFontNormal">	
+	<value condition="Skin.HasSetting(ColorCollection8.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection8.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection8.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection8.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection8.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection8.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection8.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection8.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection8.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection8.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection8.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection8.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection8.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection8.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection8.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection8.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection8.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection8.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection8.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection8.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection8.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection8.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection8.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection8.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection8.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection8.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection8.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection8.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection8.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection8.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection8.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection8.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection8.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection8.34)">$INFO[Skin.String(SelfColor_Path8.34)]</value>
+	<value>ColorFontNormal</value>
+</variable>
+<include name="ColorFontUnfocusReset">
+	<onclick>Skin.Reset(ColorCollection9.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection9.34)</onclick>
+</include>
+<variable name="ColorFontUnfocus">	
+	<value condition="Skin.HasSetting(ColorCollection9.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection9.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection9.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection9.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection9.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection9.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection9.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection9.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection9.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection9.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection9.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection9.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection9.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection9.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection9.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection9.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection9.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection9.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection9.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection9.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection9.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection9.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection9.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection9.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection9.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection9.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection9.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection9.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection9.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection9.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection9.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection9.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection9.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection9.34)">$INFO[Skin.String(SelfColor_Path9.34)]</value>
+	<value>ColorFontUnfocus</value>
+</variable>
+<include name="ColorFontSelectedReset">
+	<onclick>Skin.Reset(ColorCollection10.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection10.34)</onclick>
+</include>
+<variable name="ColorFontSelected">	
+	<value condition="Skin.HasSetting(ColorCollection10.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection10.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection10.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection10.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection10.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection10.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection10.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection10.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection10.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection10.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection10.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection10.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection10.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection10.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection10.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection10.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection10.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection10.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection10.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection10.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection10.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection10.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection10.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection10.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection10.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection10.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection10.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection10.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection10.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection10.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection10.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection10.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection10.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection10.34)">$INFO[Skin.String(SelfColor_Path10.34)]</value>
+	<value>ColorFontSelected</value>
+</variable>
+<include name="ColorFontShadowReset">
+	<onclick>Skin.Reset(ColorCollection11.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection11.34)</onclick>
+</include>
+<variable name="ColorFontShadow">	
+	<value condition="Skin.HasSetting(ColorCollection11.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection11.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection11.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection11.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection11.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection11.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection11.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection11.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection11.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection11.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection11.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection11.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection11.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection11.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection11.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection11.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection11.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection11.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection11.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection11.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection11.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection11.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection11.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection11.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection11.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection11.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection11.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection11.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection11.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection11.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection11.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection11.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection11.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection11.34)">$INFO[Skin.String(SelfColor_Path11.34)]</value>
+	<value>ColorFontShadow</value>
+</variable>
+
+<include name="ColorButtonHomemenuBigReset">
+	<onclick>Skin.Reset(ColorCollection12.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection12.34)</onclick>
+</include>
+<variable name="ColorButtonHomemenuBig">	
+	<value condition="Skin.HasSetting(ColorCollection12.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection12.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection12.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection12.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection12.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection12.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection12.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection12.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection12.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection12.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection12.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection12.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection12.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection12.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection12.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection12.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection12.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection12.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection12.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection12.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection12.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection12.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection12.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection12.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection12.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection12.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection12.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection12.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection12.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection12.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection12.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection12.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection12.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection12.34)">$INFO[Skin.String(SelfColor_Path12.34)]</value>
+	<value>ColorButtonHomemenuBig</value>
+</variable>
+
+<include name="ColorButtonNoFocusReset">
+	<onclick>Skin.Reset(ColorCollection13.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection13.34)</onclick>
+</include>
+<variable name="ColorButtonNoFocus">	
+	<value condition="Skin.HasSetting(ColorCollection13.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection13.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection13.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection13.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection13.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection13.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection13.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection13.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection13.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection13.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection13.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection13.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection13.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection13.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection13.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection13.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection13.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection13.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection13.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection13.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection13.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection13.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection13.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection13.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection13.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection13.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection13.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection13.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection13.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection13.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection13.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection13.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection13.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection13.34)">$INFO[Skin.String(SelfColor_Path13.34)]</value>
+	<value>ColorButtonNoFocus</value>
+</variable>
+
+<include name="ColorFontNormalHomemenuReset">
+	<onclick>Skin.Reset(ColorCollection14.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection14.34)</onclick>
+</include>
+<variable name="ColorFontNormalHomemenu">	
+	<value condition="Skin.HasSetting(ColorCollection14.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection14.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection14.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection14.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection14.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection14.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection14.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection14.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection14.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection14.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection14.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection14.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection14.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection14.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection14.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection14.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection14.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection14.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection14.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection14.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection14.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection14.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection14.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection14.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection14.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection14.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection14.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection14.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection14.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection14.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection14.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection14.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection14.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection14.34)">$INFO[Skin.String(SelfColor_Path14.34)]</value>
+	<value>ColorFontNormalHomemenu</value>
+</variable>
+
+<include name="ColorFontShadowHomemenuReset">
+	<onclick>Skin.Reset(ColorCollection15.1)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.2)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.3)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.4)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.5)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.6)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.7)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.8)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.9)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.10)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.11)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.12)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.13)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.14)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.15)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.16)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.17)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.18)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.19)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.20)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.21)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.22)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.23)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.24)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.25)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.26)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.27)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.28)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.29)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.30)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.31)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.32)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.33)</onclick>
+	<onclick>Skin.Reset(ColorCollection15.34)</onclick>
+</include>
+<variable name="ColorFontShadowHomemenu">	
+	<value condition="Skin.HasSetting(ColorCollection15.1)">FF22353c</value>
+	<value condition="Skin.HasSetting(ColorCollection15.2)">FFdea26c</value>
+	<value condition="Skin.HasSetting(ColorCollection15.3)">FF6f4837</value>
+	<value condition="Skin.HasSetting(ColorCollection15.4)">FF05080d</value>
+	<value condition="Skin.HasSetting(ColorCollection15.5)">FFa26e49</value>
+	<value condition="Skin.HasSetting(ColorCollection15.6)">FF3d272a</value>
+	<value condition="Skin.HasSetting(ColorCollection15.7)">FFe7e3e2</value>
+	<value condition="Skin.HasSetting(ColorCollection15.8)">FFdeb887</value>
+	<value condition="Skin.HasSetting(ColorCollection15.9)">FF5f9ea0</value>
+	<value condition="Skin.HasSetting(ColorCollection15.10)">FF7fff00</value>
+	<value condition="Skin.HasSetting(ColorCollection15.11)">FFff7f50</value>
+	<value condition="Skin.HasSetting(ColorCollection15.12)">FFbdb76b</value>
+	<value condition="Skin.HasSetting(ColorCollection15.13)">FF483d8b</value>
+	<value condition="Skin.HasSetting(ColorCollection15.14)">FF2f4f4f</value>
+	<value condition="Skin.HasSetting(ColorCollection15.15)">FF00ced1</value>
+	<value condition="Skin.HasSetting(ColorCollection15.16)">FFffd700</value>
+	<value condition="Skin.HasSetting(ColorCollection15.17)">FFdaa520</value>
+	<value condition="Skin.HasSetting(ColorCollection15.18)">FF008000</value>
+	<value condition="Skin.HasSetting(ColorCollection15.19)">FFcd5c5c</value>
+	<value condition="Skin.HasSetting(ColorCollection15.20)">FF4b0082</value>	
+	<value condition="Skin.HasSetting(ColorCollection15.21)">FFf0e68c</value>
+	<value condition="Skin.HasSetting(ColorCollection15.22)">FFffe4b5</value>
+	<value condition="Skin.HasSetting(ColorCollection15.23)">FF808000</value>
+	<value condition="Skin.HasSetting(ColorCollection15.24)">FF6b8e23</value>
+	<value condition="Skin.HasSetting(ColorCollection15.25)">FFda70d6</value>
+	<value condition="Skin.HasSetting(ColorCollection15.26)">FFeee8aa</value>
+	<value condition="Skin.HasSetting(ColorCollection15.27)">FF800080</value>
+	<value condition="Skin.HasSetting(ColorCollection15.28)">FFbc8f8f</value>
+	<value condition="Skin.HasSetting(ColorCollection15.29)">FF8b4513</value>
+	<value condition="Skin.HasSetting(ColorCollection15.30)">FFd3d3d3</value>	
+	<value condition="Skin.HasSetting(ColorCollection15.31)">FFa9a9a9</value>
+	<value condition="Skin.HasSetting(ColorCollection15.32)">FF808080</value>
+	<value condition="Skin.HasSetting(ColorCollection15.33)">FF696969</value>
+	<value condition="Skin.HasSetting(ColorCollection15.34)">$INFO[Skin.String(SelfColor_Path15.34)]</value>
+	<value>ColorFontShadowHomemenu</value>
+</variable>
+
+<variable name="HomeMainMenuColor">
+		<value condition="Container(9000).Hasfocus(13)">FF696969</value>
+		<value></value>
+</variable>
+
+<!-- Color Settings for Homebutton -->
+<variable name="ColorBackWebOS0">	
+	<value condition="Skin.HasSetting(ColorBackWebOS0)">$INFO[Skin.String(SelfColorWebOS0_Path)]</value>
+	<value>ColorBackHomeButton0</value>
+</variable>
+<variable name="ColorBackWebOS1">	
+	<value condition="Skin.HasSetting(ColorBackWebOS1)">$INFO[Skin.String(SelfColorWebOS1_Path)]</value>
+	<value>ColorBackHomeButton1</value>
+</variable>
+<variable name="ColorBackWebOS2">	
+	<value condition="Skin.HasSetting(ColorBackWebOS2)">$INFO[Skin.String(SelfColorWebOS2_Path)]</value>
+	<value>ColorBackHomeButton2</value>
+</variable>
+<variable name="ColorBackWebOS3">	
+	<value condition="Skin.HasSetting(ColorBackWebOS3)">$INFO[Skin.String(SelfColorWebOS3_Path)]</value>
+	<value>ColorBackHomeButton3</value>
+</variable>
+<variable name="ColorBackWebOS4">	
+	<value condition="Skin.HasSetting(ColorBackWebOS4)">$INFO[Skin.String(SelfColorWebOS4_Path)]</value>
+	<value>ColorBackHomeButton4</value>
+</variable>
+<variable name="ColorBackWebOS5">	
+	<value condition="Skin.HasSetting(ColorBackWebOS5)">$INFO[Skin.String(SelfColorWebOS5_Path)]</value>
+	<value>ColorBackHomeButton5</value>
+</variable>
+<variable name="ColorBackWebOS6">	
+	<value condition="Skin.HasSetting(ColorBackWebOS6)">$INFO[Skin.String(SelfColorWebOS6_Path)]</value>
+	<value>ColorBackHomeButton6</value>
+</variable>
+<variable name="ColorBackWebOS7">	
+	<value condition="Skin.HasSetting(ColorBackWebOS7)">$INFO[Skin.String(SelfColorWebOS7_Path)]</value>
+	<value>ColorBackHomeButton7</value>
+</variable>
+<variable name="ColorBackWebOS8">	
+	<value condition="Skin.HasSetting(ColorBackWebOS8)">$INFO[Skin.String(SelfColorWebOS8_Path)]</value>
+	<value>ColorBackHomeButton8</value>
+</variable>
+<variable name="ColorBackWebOS9">	
+	<value condition="Skin.HasSetting(ColorBackWebOS9)">$INFO[Skin.String(SelfColorWebOS9_Path)]</value>
+	<value>ColorBackHomeButton9</value>
+</variable>
+<variable name="ColorBackWebOS10">	
+	<value condition="Skin.HasSetting(ColorBackWebOS10)">$INFO[Skin.String(SelfColorWebOS10_Path)]</value>
+	<value>ColorBackHomeButton10</value>
+</variable>
+<variable name="ColorBackWebOS11">	
+	<value condition="Skin.HasSetting(ColorBackWebOS11)">$INFO[Skin.String(SelfColorWebOS11_Path)]</value>
+	<value>ColorBackHomeButton11</value>
+</variable>
+<variable name="ColorBackWebOS12">	
+	<value condition="Skin.HasSetting(ColorBackWebOS12)">$INFO[Skin.String(SelfColorWebOS12_Path)]</value>
+	<value>ColorBackHomeButton12</value>
+</variable>
+<variable name="ColorBackWebOS13">	
+	<value condition="Skin.HasSetting(ColorBackWebOS13)">$INFO[Skin.String(SelfColorWebOS13_Path)]</value>
+	<value>ColorBackHomeButton13</value>
+</variable>
+<variable name="ColorBackWebOS14">	
+	<value condition="Skin.HasSetting(ColorBackWebOS14)">$INFO[Skin.String(SelfColorWebOS14_Path)]</value>
+	<value>ColorBackHomeButton14</value>
+</variable>
+<variable name="ColorBackWebOS15">	
+	<value condition="Skin.HasSetting(ColorBackWebOS15)">$INFO[Skin.String(SelfColorWebOS15_Path)]</value>
+	<value>ColorBackHomeButton15</value>
+</variable>
+<variable name="ColorBackWebOS16">	
+	<value condition="Skin.HasSetting(ColorBackWebOS16)">$INFO[Skin.String(SelfColorWebOS16_Path)]</value>
+	<value>ColorBackHomeButton16</value>
+</variable>
+<variable name="ColorBackWebOS17">	
+	<value condition="Skin.HasSetting(ColorBackWebOS17)">$INFO[Skin.String(SelfColorWebOS17_Path)]</value>
+	<value>ColorBackHomeButton17</value>
+</variable>
+<variable name="ColorBackWebOS18">	
+	<value condition="Skin.HasSetting(ColorBackWebOS18)">$INFO[Skin.String(SelfColorWebOS18_Path)]</value>
+	<value>ColorBackHomeButton18</value>
+</variable>
+<variable name="ColorBackWebOS19">	
+	<value condition="Skin.HasSetting(ColorBackWebOS19)">$INFO[Skin.String(SelfColorWebOS19_Path)]</value>
+	<value>ColorBackHomeButton19</value>
+</variable>
+<variable name="ColorBackWebOS20">	
+	<value condition="Skin.HasSetting(ColorBackWebOS20)">$INFO[Skin.String(SelfColorWebOS20_Path)]</value>
+	<value>ColorBackHomeButton20</value>
+</variable>
+<variable name="ColorBackWebOS21">	
+	<value condition="Skin.HasSetting(ColorBackWebOS21)">$INFO[Skin.String(SelfColorWebOS21_Path)]</value>
+	<value>ColorBackHomeButton21</value>
+</variable>
+<variable name="ColorBackWebOS22">	
+	<value condition="Skin.HasSetting(ColorBackWebOS22)">$INFO[Skin.String(SelfColorWebOS22_Path)]</value>
+	<value>ColorBackHomeButton22</value>
+</variable>
+<variable name="ColorBackWebOS23">	
+	<value condition="Skin.HasSetting(ColorBackWebOS23)">$INFO[Skin.String(SelfColorWebOS23_Path)]</value>
+	<value>ColorBackHomeButton23</value>
+</variable>
+<!-- Color Settings for Homebutton Close -->
+
+<!--================================ Pictures Widget Begin =========================================-->
+<include name="PicturesAddonWidget">
+  <item id="1">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.1.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.1.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=1)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.1.Path)]</icon>
+  </item>	
+  <item id="2">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.2.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.2.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=2)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.2.Path)]</icon>
+  </item>	
+  <item id="3">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.3.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.3.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=3)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.3.Path)]</icon>
+  </item> 
+  <item id="4">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.4.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.4.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=4)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.4.Path)]</icon>
+  </item> 
+  <item id="5">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.5.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.5.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=5)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.5.Path)]</icon>
+  </item> 
+  <item id="6">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.6.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.6.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=6)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.6.Path)]</icon>
+  </item> 
+  <item id="7">
+	<label>$INFO[Window(Home).Property(MyPicsDBLatest.7.Name)]</label>
+	<label2>$INFO[Window(Home).Property(MyPicsDBLatest.7.Date)]</label2>
+	<onclick>XBMC.RunScript(plugin.image.mypicsdb,0,?action='slideshow'&limit=1&method='Latest'&current=7)</onclick>
+	<icon>$INFO[Window(Home).Property(MyPicsDBLatest.7.Path)]</icon>
+  </item> 
+</include>
+<!--================================ Pictures Widget Close =========================================-->
+
+<!--================================ Pinwand Widget Begin =========================================-->
+<variable name="QuicklinksContextLabelMovies">
+		<value condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + !IsEmpty(Skin.String(MovieList7Title))">Die Watchlist ist voll..</value>
+		<value>In die Watchlist aufnehmen.</value>
+</variable>
+<variable name="QuicklinksContextLabelSeries">
+	<value condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle))">Die Watchlist ist voll..</value>
+	<value>In die Watchlist aufnehmen.</value>
+</variable>
+
+<include name="Pinwand">
+	<item id="1">
+	  <label>$INFO[Skin.String(MovieList1Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList1Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList1Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList1Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList1Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList1Thumb)]</property>
+	  <property name="StarRating">$INFO[Skin.String(MovieList1StarRating)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList1Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList1Genre)]</property>
+	  <onclick>Skin.Reset(MovieList1Title)</onclick>
+	  <onclick>Skin.Reset(MovieList1Path)</onclick>
+	  <onclick>Skin.Reset(MovieList1ID)</onclick>
+	  <onclick>Skin.Reset(MovieList1Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList1Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList1Title))</visible>
+	</item>
+	<item id="2">
+	  <label>$INFO[Skin.String(ShowList1TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList1Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList1Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList1Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList1Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList1Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList1Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList1TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList1Path)</onclick>
+	  <onclick>Skin.Reset(ShowList1ID)</onclick>
+	  <onclick>Skin.Reset(ShowList1Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList1Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList1TVShowTitle))</visible>
+	</item>
+	<item id="3">
+	  <label>$INFO[Skin.String(MovieList2Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList2Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList2Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList2Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList2Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList2Thumb)]</property>
+	  <property name="StarRating">$INFO[Skin.String(MovieList2StarRating)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList2Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList2Genre)]</property>
+	  <onclick>Skin.Reset(MovieList2Title)</onclick>
+	  <onclick>Skin.Reset(MovieList2Path)</onclick>
+	  <onclick>Skin.Reset(MovieList2ID)</onclick>
+	  <onclick>Skin.Reset(MovieList2Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList2Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList2Title))</visible>
+	</item>
+	<item id="4">
+	  <label>$INFO[Skin.String(ShowList2TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList2Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList2Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList2Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList2Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList2Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList2Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList2TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList2Path)</onclick>
+	  <onclick>Skin.Reset(ShowList2ID)</onclick>
+	  <onclick>Skin.Reset(ShowList2Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList2Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList2TVShowTitle))</visible>
+	</item>
+	<item id="5">
+	  <label>$INFO[Skin.String(MovieList3Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList3Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList3Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList3Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList3Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList3Thumb)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList3Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList3Genre)]</property>
+	  <onclick>Skin.Reset(MovieList3Title)</onclick>
+	  <onclick>Skin.Reset(MovieList3Path)</onclick>
+	  <onclick>Skin.Reset(MovieList3ID)</onclick>
+	  <onclick>Skin.Reset(MovieList3Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList3Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList3Title))</visible>
+	</item>
+	<item id="6">
+	  <label>$INFO[Skin.String(ShowList3TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList3Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList3Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList3Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList3Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList3Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList3Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList3TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList3Path)</onclick>
+	  <onclick>Skin.Reset(ShowList3ID)</onclick>
+	  <onclick>Skin.Reset(ShowList3Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList3Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList3TVShowTitle))</visible>
+	</item>
+	<item id="7">
+	  <label>$INFO[Skin.String(MovieList4Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList4Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList4Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList4Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList4Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList4Thumb)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList4Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList4Genre)]</property>
+	  <onclick>Skin.Reset(MovieList4Title)</onclick>
+	  <onclick>Skin.Reset(MovieList4Path)</onclick>
+	  <onclick>Skin.Reset(MovieList4ID)</onclick>
+	  <onclick>Skin.Reset(MovieList4Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList4Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList4Title))</visible>
+	</item>
+	<item id="8">
+	  <label>$INFO[Skin.String(ShowList4TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList4Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList4Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList4Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList4Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList4Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList4Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList4TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList4Path)</onclick>
+	  <onclick>Skin.Reset(ShowList4ID)</onclick>
+	  <onclick>Skin.Reset(ShowList4Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList4Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList4TVShowTitle))</visible>
+	</item>
+	<item id="9">
+	  <label>$INFO[Skin.String(MovieList5Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList5Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList5Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList5Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList5Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList5Thumb)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList5Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList5Genre)]</property>
+	  <onclick>Skin.Reset(MovieList5Title)</onclick>
+	  <onclick>Skin.Reset(MovieList5Path)</onclick>
+	  <onclick>Skin.Reset(MovieList5ID)</onclick>
+	  <onclick>Skin.Reset(MovieList5Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList5Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList5Title))</visible>
+	</item>
+	<item id="10">
+	  <label>$INFO[Skin.String(ShowList5TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList5Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList5Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList5Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList5Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList5Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList5Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList5TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList5Path)</onclick>
+	  <onclick>Skin.Reset(ShowList5ID)</onclick>
+	  <onclick>Skin.Reset(ShowList5Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList5Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList5TVShowTitle))</visible>
+	</item>
+	<item id="11">
+	  <label>$INFO[Skin.String(MovieList6Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList6Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList6Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList6Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList6Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList6Thumb)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList6Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList6Genre)]</property>
+	  <onclick>Skin.Reset(MovieList6Title)</onclick>
+	  <onclick>Skin.Reset(MovieList6Path)</onclick>
+	  <onclick>Skin.Reset(MovieList6ID)</onclick>
+	  <onclick>Skin.Reset(MovieList6Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList6Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList6Title))</visible>
+	</item>
+	<item id="12">
+	  <label>$INFO[Skin.String(ShowList6TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList6Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList6Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList6Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList6Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList6Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList6Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList6TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList6Path)</onclick>
+	  <onclick>Skin.Reset(ShowList6ID)</onclick>
+	  <onclick>Skin.Reset(ShowList6Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList6Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList6TVShowTitle))</visible>
+	</item>
+	<item id="13">
+	  <label>$INFO[Skin.String(MovieList7Title)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(MovieList7Path)])</onclick>
+	  <thumb>$INFO[Skin.String(MovieList7Poster)]</thumb>
+	  <icon>$INFO[Skin.String(MovieList7Thumb)]</icon>
+	  <property name="Plot">$INFO[Skin.String(MovieList7Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(MovieList7Thumb)]</property>
+	  <property name="Duration">$INFO[Skin.String(MovieList7Duration)]</property>
+	  <property name="Genre">$INFO[Skin.String(MovieList7Genre)]</property>
+	  <onclick>Skin.Reset(MovieList7Title)</onclick>
+	  <onclick>Skin.Reset(MovieList7Path)</onclick>
+	  <onclick>Skin.Reset(MovieList7ID)</onclick>
+	  <onclick>Skin.Reset(MovieList7Thumb)</onclick>
+	  <onclick>Skin.Reset(MovieList7Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(MovieList7Title))</visible>
+	</item>
+	<item id="14">
+	  <label>$INFO[Skin.String(ShowList7TVShowTitle)]</label>
+	  <onclick>PlayMedia($INFO[Skin.String(ShowList7Path)])</onclick>
+	  <thumb>$INFO[Skin.String(ShowList7Poster)]</thumb>
+	  <icon>$INFO[Skin.String(ShowList7Thumb)]</icon>
+	  <property name="Poster">$INFO[Skin.String(ShowList7Poster)]</property>
+	  <property name="Plot">$INFO[Skin.String(ShowList7Plot)]</property>
+	  <property name="Fanart">$INFO[Skin.String(ShowList7Fanart)]</property>
+	  <onclick>Skin.Reset(ShowList7TVShowTitle)</onclick>
+	  <onclick>Skin.Reset(ShowList7Path)</onclick>
+	  <onclick>Skin.Reset(ShowList7ID)</onclick>
+	  <onclick>Skin.Reset(ShowList7Thumb)</onclick>
+	  <onclick>Skin.Reset(ShowList7Poster)</onclick>
+	  <visible>!IsEmpty(Skin.String(ShowList7TVShowTitle))</visible>
+	</item>
+</include>
+<!--================================ Pinwand Widget Close =========================================-->
+
+</includes>

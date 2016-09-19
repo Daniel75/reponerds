@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="SidePanelAnimation">
+        <!-- animation -->
+        <animation effect="slide" start="0" end="428" time="400" condition="ControlGroup(9000).HasFocus()|ControlGroup(90000).HasFocus()">Conditional</animation>
+        <animation effect="fade" start="100" end="0" time="400" delay="250" condition="![ControlGroup(9000).HasFocus()|ControlGroup(90000).HasFocus()]">Conditional</animation>
+    </include>
+    <include name="SidePanelBackground">
+        <control type="group">
+            <top>0</top>
+            <left>-428</left>
+            <control type="image">
+                <description>SidePanel</description>
+                <left>-30</left>
+                <top>-15</top>
+                <width>452</width>
+                <height>1110</height>
+                <colordiffuse>$VAR[BackgroundOverlayColorDialog]</colordiffuse>
+                <texture border="8">SidePanel.png</texture>
+            </control>
+            <control type="image">
+                <description>SidePanel</description>
+                <left>420</left>
+                <top>-8</top>
+                <width>15</width>
+                <height>1095</height>
+                <colordiffuse>fanartdiffuse</colordiffuse>
+                <texture>SideFade.png</texture>
+            </control>
+            <control type="image">
+                <description>Seperator</description>
+                <left>420</left>
+                <top>-150</top>
+                <width>1</width>
+                <height>1350</height>
+                <texture>Separator3.png</texture>
+            </control>
+            <!-- <control type="image">
+                <left>-8</left>
+                <top>997</top>
+                <width>426</width>
+                <height>66</height>
+                <texture>BlackBack.png</texture>
+            </control> -->
+            <control type="group" id="90000">
+                <include>Media_Menu_NowPlaying</include>
+                <left>60</left>
+                <top>100</top>
+                <control type="group">
+                    <left>30</left>
+                    <top>0</top>
+					<control type="image">
+						<left>-96</left>
+						<top>896</top>
+						<width>426</width>
+						<height>66</height>
+						<texture>BlackBack.png</texture>
+					</control>
+                    <control type="button" id="90001">
+                        <!-- Button1 -->
+                        <left>0</left>
+                        <top>900</top>
+                        <width>57</width>
+                        <height>57</height>
+                        <onup condition="!Player.HasAudio">9000</onup>
+                        <onup condition="Player.HasAudio">3000</onup>
+                        <ondown>9000</ondown>
+                        <onleft>90003</onleft>
+                        <onright>90002</onright>
+                        <texturefocus border="5" colordiffuse="selected">icons/Back.png</texturefocus>
+                        <texturenofocus border="5">icons/Back.png</texturenofocus>
+                        <onclick>Action(back)</onclick>
+                    </control>
+                    <control type="image">
+                        <description>Seperator</description>
+                        <left>75</left>
+                        <top>900</top>
+                        <width>3</width>
+                        <height>57</height>
+                        <colordiffuse>fanartdiffuse</colordiffuse>
+                        <texture background="true" border="1">Separator4.png</texture>
+                    </control>
+                    <control type="button" id="90002">
+                        <!-- Button2 -->
+                        <left>90</left>
+                        <top>900</top>
+                        <width>60</width>
+                        <height>60</height>
+                        <onup condition="!Player.HasAudio">9000</onup>
+                        <onup condition="Player.HasAudio">3000</onup>
+                        <onleft>90001</onleft>
+                        <onright condition="Player.HasMedia">90003</onright>
+                        <onright condition="!Player.HasMedia">90001</onright>
+                        <ondown>9000</ondown>
+                        <texturefocus border="5" colordiffuse="selected">icons/Home.png</texturefocus>
+                        <texturenofocus border="5">icons/Home.png</texturenofocus>
+                        <onclick>ActivateWindow(home)</onclick>
+                    </control>
+                    <control type="image" id="90008">
+                        <description>Seperator</description>
+                        <left>165</left>
+                        <top>900</top>
+                        <width>3</width>
+                        <height>57</height>
+                        <colordiffuse>fanartdiffuse</colordiffuse>
+                        <texture background="true" border="1">Separator4.png</texture>
+                    </control>
+                    <animation effect="fade" start="100" end="40" time="0" condition="!Player.HasMedia">Conditional</animation>
+                    <control type="button" id="90003">
+                        <!-- Button3 -->
+                        <left>180</left>
+                        <top>900</top>
+                        <width>57</width>
+                        <height>57</height>
+                        <onup condition="!Player.HasAudio">9000</onup>
+                        <onup condition="Player.HasAudio">3000</onup>
+                        <ondown>9000</ondown>
+                        <onleft>90002</onleft>
+                        <onright>90001</onright>
+                        <texturefocus border="5" colordiffuse="selected">icons/Player.png</texturefocus>
+                        <texturenofocus border="5">icons/Player.png</texturenofocus>
+                        <onclick>ActivateWindow(PlayerControls)</onclick>
+                        <enable>Player.HasMedia</enable>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="SidePanelShortcutsBackground">
+        <control type="group">
+            <control type="image">
+                <description>SidePanel</description>
+                <left>-8</left>
+                <top>-8</top>
+                <width>106</width>
+                <height>1095</height>
+                <colordiffuse>$VAR[BackgroundOverlayColorDialog]</colordiffuse>
+                <texture border="2" background="true">White.png</texture>
+            </control>
+            <control type="image">
+                <description>SidePanel</description>
+                <left>-8</left>
+                <top>-8</top>
+                <width>105</width>
+                <height>1095</height>
+                <colordiffuse>menudiffuse</colordiffuse>
+                <texture background="true" flipx="true">SideFade.png</texture>
+            </control>
+            <control type="image">
+                <description>SidePanel</description>
+                <left>98</left>
+                <top>-8</top>
+                <width>15</width>
+                <height>1095</height>
+                <colordiffuse>menudiffuse</colordiffuse>
+                <texture background="true">SideFade.png</texture>
+            </control>
+            <control type="image">
+                <description>Seperator</description>
+                <left>98</left>
+                <top>-150</top>
+                <width>1</width>
+                <height>1380</height>
+                <texture background="true">Separator3.png</texture>
+            </control>
+        </control>
+    </include>
+    <include name="SidePanelProperty">
+        <left>-435</left>
+        <top>150</top>
+        <width>428</width>
+        <height>1095</height>
+        <onleft>9002</onleft>
+        <onright>SetFocus(777)</onright>
+        <onup>9000</onup>
+        <ondown condition="!Player.HasAudio">90001</ondown>
+        <ondown condition="Player.HasAudio">3000</ondown>
+        <itemgap>4</itemgap>
+        <orientation>vertical</orientation>
+    </include>
+    <include name="SidePanelButton">
+        <focusedcolor>grey3</focusedcolor>
+        <textcolor>grey</textcolor>
+        <width>428</width>
+        <height>34</height>
+        <textoffsetx>22</textoffsetx>
+        <textwidth>360</textwidth>
+        <align>left</align>
+        <font>bebas19</font>
+        <disabledcolor>grey2</disabledcolor>
+        <texturefocus>WhiteBack.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
+        <alttexturefocus>-</alttexturefocus>
+        <alttexturenofocus>-</alttexturenofocus>
+    </include>
+    <include name="SidePanelToggleButton">
+        <focusedcolor>grey3</focusedcolor>
+        <textcolor>grey</textcolor>
+        <width>428</width>
+        <height>38</height>
+        <textoffsetx>22</textoffsetx>
+        <textwidth>338</textwidth>
+        <align>left</align>
+        <font>bebas19</font>
+        <disabledcolor>grey2</disabledcolor>
+        <texturenofocus>-</texturenofocus>
+        <texturefocus>WhiteBack.png</texturefocus>
+        <alttexturenofocus>-</alttexturenofocus>
+        <alttexturefocus>WhiteBack.png</alttexturefocus>
+    </include>
+    <include name="SidePanelShortcuts">
+        <control type="group">
+            <include>SidePanelShortcutsBackground</include>
+            <animation effect="slide" start="0" end="428" time="400" tween="cubic" easing="out" condition="Control.HasFocus(9002)">Conditional</animation>
+            <animation effect="fade" start="100" end="0" time="200" condition="!Control.HasFocus(9002)">Conditional</animation>
+            <left>-428</left>
+            <control type="list" id="9002">
+                <left>12</left>
+                <top>142</top>
+                <width>390</width>
+                <height>1095</height>
+                <onleft>9000</onleft>
+                <onright>777</onright>
+                <onup>9002</onup>
+                <ondown>9002</ondown>
+                <pagecontrol>-</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <orientation>vertical</orientation>
+                <itemlayout height="87" width="82">
+                    <control type="image">
+                        <left>3</left>
+                        <top>3</top>
+                        <width>66</width>
+                        <height>66</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="87" width="82">
+                    <control type="image">
+                        <left>87</left>
+                        <top>0</top>
+                        <width>180</width>
+                        <height>72</height>
+                        <texture background="true">SideFade.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>105</left>
+                        <top>22</top>
+                        <width>750</width>
+                        <height>30</height>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>-4</left>
+                        <top>-4</top>
+                        <width>81</width>
+                        <height>81</height>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item id="1">
+                        <description>Movie Library/Files</description>
+                        <label>20342</label>
+                        <icon>icons/MoviesIcon.png</icon>
+                        <onclick condition="!Library.HasContent(Movies)+String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos)</onclick>
+                        <onclick condition="!Library.HasContent(Movies)+!String.IsEqual(Window.Property(VideosDirectLink),True)">ActivateWindow(Videos,root)</onclick>
+                        <onclick condition="Library.HasContent(Movies)">ActivateWindow(Videos,MovieTitles,return)</onclick>
+                    </item>
+                    <item id="2">
+                        <description>Music Library/Files</description>
+                        <label>2</label>
+                        <label2></label2>
+                        <icon>icons/MusicIcon.png</icon>
+                        <onclick condition="Library.HasContent(Music)">ActivateWindow(music)</onclick>
+                        <onclick condition="!Library.HasContent(Music)">ActivateWindow(Music,Files,return)</onclick>
+                    </item>
+                    <item id="3">
+                        <description>TV Show Library</description>
+                        <label>20343</label>
+                        <icon>icons/TVShowsIcon.png</icon>
+                        <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+                        <visible>Library.HasContent(TVShows)</visible>
+                    </item>
+                    <item id="4">
+                        <description>Musicvideo Library</description>
+                        <label>20391</label>
+                        <icon>icons/MusicvideosIcon.png</icon>
+                        <onclick>ActivateWindow(Videos,MusicVideos,return)</onclick>
+                        <visible>Library.HasContent(MusicVideos)</visible>
+                    </item>
+                    <item id="5">
+                        <description>Pictures</description>
+                        <label>1</label>
+                        <icon>icons/PicturesIcon.png</icon>
+                        <onclick>ActivateWindow(Pictures)</onclick>
+                    </item>
+                    <item id="6">
+                        <description>Addons</description>
+                        <label>0</label>
+                        <icon>icons/AddonsIcon.png</icon>
+                        <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+                        <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                    </item>
+                    <item id="7">
+                        <description>PVR</description>
+                        <label>31502</label>
+                        <icon>icons/LiveTVIcon.png</icon>
+                        <onclick>ActivateWindow(PVR)</onclick>
+                        <visible>PVR.HasTVChannels</visible>
+                    </item>
+                    <item id="8">
+                        <description>PlayDVD</description>
+                        <label>341</label>
+                        <icon>icons/PlayDiscIcon.png</icon>
+                        <onclick>PlayDVD()</onclick>
+                        <visible>System.HasMediaDVD</visible>
+                    </item>
+                    <item id="9">
+                        <description>Weather</description>
+                        <label>8</label>
+                        <icon>icons/WeatherIcon.png</icon>
+                        <onclick>ActivateWindow(weather)</onclick>
+                    </item>
+                    <item id="10">
+                        <label>13000</label>
+                        <onclick>ActivateWindow(settings)</onclick>
+                        <icon>icons/SystemIcon.png</icon>
+                    </item>
+                    <item id="11">
+                        <label>33061</label>
+                        <onclick>ActivateWindow(shutdown)</onclick>
+                        <icon>icons/ShutdownIcon.png</icon>
+                    </item>
+                </content>
+            </control>
+            <control type="group">
+                <control type="group">
+                    <left>0</left>
+                    <top>0</top>
+                    <control type="image">
+                        <left>0</left>
+                        <top>1023</top>
+                        <width>98</width>
+                        <height>45</height>
+                        <texture background="true">BlackBack.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>12</left>
+                        <top>1035</top>
+                        <width>18</width>
+                        <height>21</height>
+                        <texture background="true">ArrowBig.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>42</left>
+                        <top>1026</top>
+                        <width>300</width>
+                        <height>38</height>
+                        <font>impacted18</font>
+                        <label>SP</label>
+                    </control>
+                    <control type="image">
+                        <left>105</left>
+                        <top>540</top>
+                        <width>21</width>
+                        <height>38</height>
+                        <texture background="true" flipx="true">ArrowBig.png</texture>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="SidePanelNavigation">
+        <control type="group">
+            <left>-428</left>
+            <visible>ControlGroup(9000).HasFocus()|ControlGroup(90000).HasFocus()|ControlGroup(9001).HasFocus()</visible>
+            <control type="group">
+                <left>0</left>
+                <top>0</top>
+                <control type="image">
+                    <left>-2</left>
+                    <top>87</top>
+                    <width>420</width>
+                    <height>45</height>
+                    <texture background="true">BlackBack.png</texture>
+                </control>
+                <control type="image">
+                    <left>30</left>
+                    <top>96</top>
+                    <width>21</width>
+                    <height>27</height>
+                    <texture background="true">ArrowBig.png</texture>
+                </control>
+                <control type="label">
+                    <left>60</left>
+                    <top>90</top>
+                    <width>300</width>
+                    <height>38</height>
+                    <font>impacted18</font>
+                    <label>Shortcuts</label>
+                    <visible>ControlGroup(9000).HasFocus()|ControlGroup(90000).HasFocus()</visible>
+                </control>
+                <control type="label">
+                    <left>60</left>
+                    <top>90</top>
+                    <width>300</width>
+                    <height>38</height>
+                    <font>impacted18</font>
+                    <label>51184</label>
+                    <visible>ControlGroup(9001).HasFocus()</visible>
+                </control>
+                <control type="image">
+                    <left>428</left>
+                    <top>540</top>
+                    <width>21</width>
+                    <height>38</height>
+                    <texture background="true" flipx="true">ArrowBig.png</texture>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="Media_Menu_NowPlaying">
+        <control type="group">
+            <left>-60</left>
+            <top>480</top>
+            <visible>!Window.IsVisible(weather)</visible>
+            <visible>Player.HasAudio+[ControlGroup(9000).HasFocus()|ControlGroup(90000).HasFocus()|ControlGroup(3000).HasFocus()]</visible>
+            <include>openclosevisible</include>
+            <control type="group" id="4000">
+                <top>15</top>
+                <!--Infos-->
+                <control type="grouplist" id="4001">
+                    <left>15</left>
+                    <top>15</top>
+                    <width>390</width>
+                    <height>135</height>
+                    <align>left</align>
+                    <itemgap>0</itemgap>
+                    <animation effect="slide" end="0,30" condition="String.IsEmpty(MusicPlayer.Artist)">Conditional</animation>
+                    <animation effect="slide" end="0,30" condition="String.IsEmpty(MusicPlayer.Album)|[String.StartsWith(Container.Folderpath,pvr://)|String.StartsWith(ListItem.Folderpath,pvr://)]">Conditional</animation>
+                    <animation effect="slide" end="0,30" condition="String.IsEmpty(MusicPlayer.Title)|[String.StartsWith(Container.Folderpath,pvr://)|String.StartsWith(ListItem.Folderpath,pvr://)]">Conditional</animation>
+                    <control type="label">
+                        <height>30</height>
+                        <font>ubuntu-r16b</font>
+                        <textcolor>white</textcolor>
+                        <label>$INFO[MusicPlayer.Artist]</label>
+                        <visible>!String.IsEmpty(MusicPlayer.Artist)</visible>
+                    </control>
+                    <control type="label">
+                        <height>30</height>
+                        <font>ubuntu-r16b</font>
+                        <textcolor>grey1</textcolor>
+                        <label>$INFO[MusicPlayer.Album]</label>
+                        <visible>!String.IsEmpty(MusicPlayer.Album)+![String.StartsWith(Container.Folderpath,pvr://)|String.StartsWith(ListItem.Folderpath,pvr://)]</visible>
+                    </control>
+                    <control type="label">
+                        <height>30</height>
+                        <font>ubuntu-r16b</font>
+                        <textcolor>grey1</textcolor>
+                        <label>$INFO[MusicPlayer.Title]</label>
+                        <visible>!String.IsEmpty(MusicPlayer.Title)+![String.StartsWith(Container.Folderpath,pvr://)|String.StartsWith(ListItem.Folderpath,pvr://)]</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <left>150</left>
+                    <top>112</top>
+                    <include>cdart_player</include>
+                </control>
+                <control type="image">
+                    <left>15</left>
+                    <top>112</top>
+                    <height>270</height>
+                    <width>270</width>
+                    <texture background="true" fallback="DefaultAlbumCover.png" diffuse="masks/mask.png">$INFO[MusicPlayer.Cover]</texture>
+                </control>
+                <control type="image">
+                    <left>15</left>
+                    <top>248</top>
+                    <width>270</width>
+                    <height>135</height>
+                    <texture background="true" border="1" diffuse="masks/mask.png">Shadow.png</texture>
+                </control>
+                <control type="image">
+                    <left>15</left>
+                    <top>112</top>
+                    <height>270</height>
+                    <width>270</width>
+                    <texture background="true">masks/Default.png</texture>
+                </control>
+            </control>
+            <control type="grouplist" id="3000">
+                <left>18</left>
+                <top>352</top>
+                <itemgap>-2</itemgap>
+                <onup>9000</onup>
+                <ondown>90001</ondown>
+                <onleft>3000</onleft>
+                <onright>3000</onright>
+                <orientation>horizontal</orientation>
+                <control type="button" id="600">
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <font>-</font>
+                    <texturefocus colordiffuse="description">osd/PrevTrackFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/PrevTrackFO.png</texturenofocus>
+                    <onclick>PlayerControl(Previous)</onclick>
+                </control>
+                <control type="button" id="601">
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <texturefocus colordiffuse="description">osd/RewindFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/RewindFO.png</texturenofocus>
+                    <onclick>PlayerControl(Rewind)</onclick>
+                </control>
+                <control type="togglebutton" id="602">
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <texturefocus colordiffuse="description">osd/PauseFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/PauseFO.png</texturenofocus>
+                    <usealttexture>Player.Paused|Player.Forwarding|Player.Rewinding</usealttexture>
+                    <alttexturefocus colordiffuse="description">osd/PlayFO.png</alttexturefocus>
+                    <alttexturenofocus colordiffuse="grey">osd/PlayFO.png</alttexturenofocus>
+                    <onclick>PlayerControl(Play)</onclick>
+                </control>
+                <control type="button" id="603">
+                    <left>330</left>
+                    <top>3</top>
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <texturefocus colordiffuse="description">osd/StopFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/StopFO.png</texturenofocus>
+                    <onclick>PlayerControl(Stop)</onclick>
+                    <onclick>Control.SetFocus(9000)</onclick>
+                </control>
+                <control type="button" id="604">
+                    <left>375</left>
+                    <top>3</top>
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <texturefocus colordiffuse="description">osd/ForwardFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/ForwardFO.png</texturenofocus>
+                    <onclick>PlayerControl(Forward)</onclick>
+                </control>
+                <control type="button" id="605">
+                    <left>420</left>
+                    <top>3</top>
+                    <width>45</width>
+                    <height>45</height>
+                    <label>-</label>
+                    <texturefocus colordiffuse="description">osd/NextTrackFO.png</texturefocus>
+                    <texturenofocus colordiffuse="grey">osd/NextTrackFO.png</texturenofocus>
+                    <onclick>PlayerControl(Next)</onclick>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="SidePanelContent_PVR">
+        <control type="button" id="100">
+            <description>Channels</description>
+            <include>SidePanelButton</include>
+            <label>19019</label>
+            <onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
+        </control>
+        <control type="button" id="101">
+            <description>Guide</description>
+            <include>SidePanelButton</include>
+            <label>22020</label>
+            <onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
+        </control>
+        <control type="button" id="102">
+            <description>Recordings</description>
+            <include>SidePanelButton</include>
+            <label>19163</label>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
+        </control>
+        <control type="button" id="103">
+            <description>Timers</description>
+            <include>SidePanelButton</include>
+            <label>19040</label>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
+        </control>
+        <control type="button" id="104">
+            <description>Search</description>
+            <include>SidePanelButton</include>
+            <label>Timer Rules</label>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
+        </control>
+        <control type="button" id="105">
+            <description>Search</description>
+            <include>SidePanelButton</include>
+            <label>137</label>
+            <onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
+            <onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
+        </control>
+        <control type="label" id="201">
+            <textcolor>focused</textcolor>
+            <width>428</width>
+            <height>38</height>
+            <textoffsetx>22</textoffsetx>
+            <align>center</align>
+            <font>bebas19</font>
+            <label>31006</label>
+        </control>
+        <control type="button" id="2">
+            <description>View As button</description>
+            <include>SidePanelButton</include>
+            <label>-</label>
+            <visible>Window.IsActive(MyPVRChannels.xml)</visible>
+        </control>
+		<control type="button" id="6054">
+            <include>SidePanelButton</include>
+			<label>$LOCALIZE[19141]</label>
+			<label2>$PARAM[group_label2]</label2>
+			<onclick>SendClick(28)</onclick>
+			<visible>Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRGuide.xml)</visible>
+		</control>
+		<control type="button" id="6053">
+            <include>SidePanelButton</include>
+			<label>$LOCALIZE[31022]</label>
+			<label2>$INFO[Container.SortMethod]</label2>
+			<onclick>Container.NextSortMethod</onclick>
+			<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
+		</control>
+		<control type="button" id="6055">
+            <include>SidePanelButton</include>
+			<label>$LOCALIZE[31032]</label>
+			<label2>$INFO[Container.SortOrder]</label2>
+			<onclick>Container.SetSortDirection</onclick>
+			<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
+		</control>
+		<control type="button" id="6051">
+            <include>SidePanelButton</include>
+			<label>$LOCALIZE[456]</label>
+			<label2>$INFO[Container.Viewmode]</label2>
+			<onclick>Container.NextViewMode</onclick>
+			<visible>Window.IsActive(MyPVRGuide.xml)</visible>
+		</control>
+		<control type="label" id="300">
+			<label>$LOCALIZE[31021]</label>
+            <textcolor>focused</textcolor>
+            <width>428</width>
+            <height>38</height>
+            <textoffsetx>22</textoffsetx>
+            <align>center</align>
+            <font>bebas19</font>
+			<visible>Control.IsVisible(31) |Control.IsVisible(5) |Control.IsVisible(6) |Control.IsVisible(7) |Control.IsVisible(8)</visible>
+		</control>
+		<control type="radiobutton" id="31">
+            <include>SidePanelToggleButton</include>
+			<label>$LOCALIZE[587]</label>
+			<selected>Container.Filtered</selected>
+			<onclick>right</onclick>
+			<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+		</control>
+		<control type="radiobutton" id="5">
+			<description>Group recording items by folder structure</description>
+            <include>SidePanelToggleButton</include>
+			<label>$LOCALIZE[19270]</label>
+			<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+		</control>
+		<control type="radiobutton" id="6">
+			<description>Show hidden channels</description>
+            <include>SidePanelToggleButton</include>
+			<label>$LOCALIZE[19051]</label>
+			<visible>Window.IsActive(MyPVRChannels.xml)</visible>
+		</control>
+		<control type="radiobutton" id="7">
+			<description>Show deleted recordings</description>
+            <include>SidePanelToggleButton</include>
+			<label>$LOCALIZE[19184]</label>
+			<visible>Window.IsActive(MyPVRRecordings.xml)</visible>
+		</control>
+		<control type="radiobutton" id="8">
+			<description>Hide disabled timers</description>
+            <include>SidePanelToggleButton</include>
+			<label>$LOCALIZE[19077]</label>
+			<visible>Window.IsActive(MyPVRTimers.xml)</visible>
+		</control>
+    </include>
+</includes>

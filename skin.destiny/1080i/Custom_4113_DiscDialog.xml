@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="4113" type="dialog">
+  <defaultcontrol always="true">9000</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <left>0</left>
+    <top>0</top>
+  </coordinates>
+  <controls>
+    <control type="group" id="9000">
+	    <left>47</left>
+		<top>450</top>
+	  <control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>300</width>
+		<height>220</height>
+		<texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+	    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	  </control>
+	  <control type="image">
+		<left>10</left>
+		<top>10</top>
+		<width>280</width>
+		<height>200</height>
+		<texture background="true">skin/button_klein.png</texture>
+	    <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+      <control type="button" id="1">
+        <description>Play Button</description>
+        <left>15</left>
+        <top>15</top>
+        <width>270</width>
+        <height>60</height>
+        <label>208</label>
+        <font>font13</font>
+        <align>center</align>
+        <onclick>PlayDVD()</onclick>
+        <onclick>Dialog.Close(1113)</onclick>
+        <onleft>Dialog.Close(1113)</onleft>
+        <onright>1</onright>
+        <onup>3</onup>
+        <ondown>2</ondown>
+        <enable>System.HasMediaDVD</enable>
+      </control>
+      <control type="button" id="2">
+        <description>Eject Button</description>
+        <left>15</left>
+        <top>80</top>
+        <width>270</width>
+        <height>60</height>
+        <label>13391</label>
+        <font>font13</font>
+        <align>center</align>
+        <onclick>EjectTray()</onclick>
+        <onleft>Dialog.Close(1113)2</onleft>
+        <onright>2</onright>
+        <onup>1</onup>
+        <ondown>3</ondown>
+      </control>
+      <control type="button" id="3">
+        <description>Cancel Button</description>
+        <left>15</left>
+        <top>145</top>
+        <width>270</width>
+        <height>60</height>
+        <label>222</label>
+        <font>font13</font>
+        <align>center</align>
+        <onclick>Dialog.Close(4113)</onclick>
+        <onleft>Dialog.Close(4113)</onleft>
+        <onright>3</onright>
+        <onup>2</onup>
+        <ondown>1</ondown>
+      </control>
+    </control>
+  </controls>
+</window>

@@ -1,0 +1,3234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4106" type="dialog">
+	<defaultcontrol always="true">14801</defaultcontrol>
+	<controls>
+		<!--========================================================================================-->
+        <!--============================ HOME VERÄNDERE HAUPTMENÜ ==================================-->
+		<!--========================================================================================-->
+		<control type="group">
+		<top>150</top>
+		<animation effect="fade" time="500">WindowOpen</animation>
+		<control type="image">
+		  <left>0</left>
+		  <top>-150</top>
+		  <width>1920</width>
+		  <height>1080</height>
+		  <texture background="true">background.png</texture>
+		</control>
+		<control type="image">
+		  <left>185</left>
+		  <top>46</top>
+		  <width>1580</width>
+		  <height>800</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>7</bordersize>
+		  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	    </control>
+		<control type="image">
+		  <left>200</left>
+		  <top>61</top>
+		  <width>1550</width>
+		  <height>770</height>
+		  <texture background="true">skin/button_klein.png</texture>
+	      <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	    </control>
+		
+		<!-- ============================================================================ -->
+		<!-- ==================================== BUTTON ================================ -->
+		<!-- ============================================================================ -->
+		<control type="group">
+		<control type="grouplist" id="14799">
+		<left>1200</left>
+		<top>88</top>
+		<height>720</height>
+		<width>520</width>
+		<itemgap>5</itemgap>
+		<onleft>14799</onleft>
+		<onright>14799</onright>
+		<orientation>vertical</orientation> 
+		<animation effect="fade" time="500">WindowOpen</animation>
+		<control type="button" id="14801">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Allgemeine Hintergründe verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40000)</onleft>
+		</control>
+		<control type="button" id="14802">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Alle Button im Focus verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40100)</onleft>
+		</control>
+		<control type="button" id="14803">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Alle Button nicht im Focus verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(42000)</onleft>
+		</control> 
+		<control type="button" id="14804">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Dialog Hintergründe verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40200)</onleft>
+		</control> 
+		<control type="button" id="14805">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Hintergrund verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40300)</onleft>
+		</control> 
+		<control type="button" id="14806">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Icons verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40400)</onleft>
+		</control>
+		<control type="button" id="14807">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Flagging Icons verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40500)</onleft>
+		</control>
+		<control type="button" id="14808">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Progressbar verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40600)</onleft>
+		</control>
+		<control type="button" id="14809">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Schriftfarbe Normal (auch im Focus) verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40700)</onleft>
+		</control>
+		<control type="button" id="14810">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Schriftfarbe UnFocus (z.B. Menü nicht im Focus) verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40800)</onleft>
+		</control>
+		<control type="button" id="14811">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Schriftfarbe Selected (z.B. Wenn Sender im Live TV läuft) verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(40900)</onleft>
+		</control>
+		<control type="button" id="14812">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>Schriftfarbe Schatten verändern</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onleft>SetFocus(41000)</onleft>
+		</control>
+		<control type="button" id="14813">
+		  <height>50</height>
+		  <width>520</width>
+		  <aligny>center</aligny>
+		  <font>primal_18</font>
+		  <textoffsetx>15</textoffsetx>
+		  <pulseonselect>false</pulseonselect>
+		  <label>50127</label>
+		  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein_tranz80.png</texturenofocus>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein_tranz80.png</texturefocus>
+		  <onclick>Dialog.Close(4106)</onclick>
+		</control>
+        </control>
+		
+		<control type="group" id="(17300)">
+		<top>20</top>
+		<control type="grouplist">
+		  <visible>Control.HasFocus(14801) | Control.HasFocus(40000) | Control.HasFocus(40001) | Control.HasFocus(40002) | Control.HasFocus(40003) | Control.HasFocus(40004) | Control.HasFocus(40005) | Control.HasFocus(40006) | Control.HasFocus(40007) | Control.HasFocus(40008) | Control.HasFocus(40009) | Control.HasFocus(40010) | Control.HasFocus(40011) | Control.HasFocus(40012) | Control.HasFocus(40013) | Control.HasFocus(40014) | Control.HasFocus(40015) | Control.HasFocus(40016) | Control.HasFocus(40017) | Control.HasFocus(40018) | Control.HasFocus(40019) | Control.HasFocus(40020) | Control.HasFocus(40021) | Control.HasFocus(40022) | Control.HasFocus(40023) | Control.HasFocus(40024) | Control.HasFocus(40025) | Control.HasFocus(40026) | Control.HasFocus(40027) | Control.HasFocus(40028) | Control.HasFocus(40029) | Control.HasFocus(40030) | Control.HasFocus(40031) | Control.HasFocus(40032) | Control.HasFocus(40033) | Control.HasFocus(40034)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40034</onleft>
+		  <onright>14801</onright>
+		  <onup>40034</onup>
+		  <ondown>40009</ondown>
+		  <orientation>vertical</orientation> 
+		  <control type="button" id="40000">			
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>     
+		  <control type="button" id="40001">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.1)</onclick>			
+		  </control>
+		  <control type="button" id="40002">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40003">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40004">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40005">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.5)</onclick>	
+		  </control>
+		  <control type="button" id="40006">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.6)</onclick>	
+		  </control>
+		  <control type="button" id="40007">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.7)</onclick>	
+		  </control>
+		  <control type="button" id="40008">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.8)</onclick>	
+		  </control>
+		  <control type="button" id="40009">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.9)</onclick>	
+		  </control>
+		  <control type="button" id="40010">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.10)</onclick>	
+		  </control>
+		  <control type="button" id="40011">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.11)</onclick>	
+		  </control>
+		  <control type="button" id="40012">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.12)</onclick>	
+		  </control>
+		  <control type="button" id="40013">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40014">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.14)</onclick>	
+		  </control>
+		  <control type="button" id="40015">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.15)</onclick>	
+		  </control>
+		  <control type="button" id="40016">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.16)</onclick>	
+		  </control>
+		  <control type="button" id="40017">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.17)</onclick>	
+		  </control>
+		  <control type="button" id="40018">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.18)</onclick>	
+		  </control>
+		  <control type="button" id="40019">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.19)</onclick>	
+		  </control>
+		  <control type="button" id="40020">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40021">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.21)</onclick>	
+		  </control>
+		  <control type="button" id="40022">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.22)</onclick>	
+		  </control>
+		  <control type="button" id="40023">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.23)</onclick>	
+		  </control>
+		  <control type="button" id="40024">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.24)</onclick>	
+		  </control>
+		  <control type="button" id="40025">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.25)</onclick>	
+		  </control>
+		  <control type="button" id="40026">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.26)</onclick>	
+		  </control>
+		  <control type="button" id="40027">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.27)</onclick>	
+		  </control>
+		  <control type="button" id="40028">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.28)</onclick>	
+		  </control>
+		  <control type="button" id="40029">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.29)</onclick>	
+		  </control>
+		  <control type="button" id="40030">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40031">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.31)</onclick>	
+		  </control>
+		  <control type="button" id="40032">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.32)</onclick>	
+		  </control>
+		  <control type="button" id="40033">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorFrontReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection1.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17304">
+		  <visible>Control.HasFocus(14801) | Control.HasFocus(40000) | Control.HasFocus(40001) | Control.HasFocus(40002) | Control.HasFocus(40003) | Control.HasFocus(40004) | Control.HasFocus(40005) | Control.HasFocus(40006) | Control.HasFocus(40007) | Control.HasFocus(40008) | Control.HasFocus(40009) | Control.HasFocus(40010) | Control.HasFocus(40011) | Control.HasFocus(40012) | Control.HasFocus(40013) | Control.HasFocus(40014) | Control.HasFocus(40015) | Control.HasFocus(40016) | Control.HasFocus(40017) | Control.HasFocus(40018) | Control.HasFocus(40019) | Control.HasFocus(40020) | Control.HasFocus(40021) | Control.HasFocus(40022) | Control.HasFocus(40023) | Control.HasFocus(40024) | Control.HasFocus(40025) | Control.HasFocus(40026) | Control.HasFocus(40027) | Control.HasFocus(40028) | Control.HasFocus(40029) | Control.HasFocus(40030) | Control.HasFocus(40031) | Control.HasFocus(40032) | Control.HasFocus(40033) | Control.HasFocus(40034)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17304</onleft>
+		  <onright>14801</onright>
+		  <onup>40027</onup>
+		  <ondown>40000</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40034">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>BackColorFrontReset</include>
+			<onclick>Skin.SetString(SelfColor_Path1.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection1.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 2 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17400)">
+		  <visible>Control.HasFocus(14802) | Control.HasFocus(40100) | Control.HasFocus(40101) | Control.HasFocus(40102) | Control.HasFocus(40103) | Control.HasFocus(40104) | Control.HasFocus(40105) | Control.HasFocus(40106) | Control.HasFocus(40107) | Control.HasFocus(40108) | Control.HasFocus(40109) | Control.HasFocus(40110) | Control.HasFocus(40111) | Control.HasFocus(40112) | Control.HasFocus(40113) | Control.HasFocus(40114) | Control.HasFocus(40115) | Control.HasFocus(40116) | Control.HasFocus(40117) | Control.HasFocus(40118) | Control.HasFocus(40119) | Control.HasFocus(40120) | Control.HasFocus(40121) | Control.HasFocus(40122) | Control.HasFocus(40123) | Control.HasFocus(40124) | Control.HasFocus(40125) | Control.HasFocus(40126) | Control.HasFocus(40127) | Control.HasFocus(40128) | Control.HasFocus(40129) | Control.HasFocus(40130) | Control.HasFocus(40131) | Control.HasFocus(40132) | Control.HasFocus(40133) | Control.HasFocus(40134)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40134</onleft>
+		  <onright>14802</onright>
+		  <onup>40134</onup>
+		  <ondown>40109</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="40100">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40101">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.1)</onclick>			
+		  </control>
+		  <control type="button" id="40102">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40103">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40104">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40105">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.5)</onclick>	
+		  </control>
+		  <control type="button" id="40106">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.6)</onclick>	
+		  </control>
+		  <control type="button" id="40107">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.7)</onclick>	
+		  </control>
+		  <control type="button" id="40108">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.8)</onclick>	
+		  </control>
+		  <control type="button" id="40109">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.9)</onclick>	
+		  </control>
+		  <control type="button" id="40110">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.10)</onclick>	
+		  </control>
+		  <control type="button" id="40111">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.11)</onclick>	
+		  </control>
+		  <control type="button" id="40112">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.12)</onclick>	
+		  </control>
+		  <control type="button" id="40113">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40114">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.14)</onclick>	
+		  </control>
+		  <control type="button" id="40115">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.15)</onclick>	
+		  </control>
+		  <control type="button" id="40116">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.16)</onclick>	
+		  </control>
+		  <control type="button" id="40117">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.17)</onclick>	
+		  </control>  
+		  <control type="button" id="40118">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.18)</onclick>	
+		  </control>
+		  <control type="button" id="40119">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.19)</onclick>	
+		  </control>
+		  <control type="button" id="40120">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40121">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.21)</onclick>	
+		  </control>
+		  <control type="button" id="40122">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.22)</onclick>	
+		  </control>
+		  <control type="button" id="40123">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.23)</onclick>	
+		  </control>
+		  <control type="button" id="40124">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.24)</onclick>	
+		  </control>
+		  <control type="button" id="40125">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.25)</onclick>	
+		  </control>
+		  <control type="button" id="40126">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.26)</onclick>	
+		  </control>
+		  <control type="button" id="40127">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.27)</onclick>	
+		  </control>
+		  <control type="button" id="40128">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.28)</onclick>	
+		  </control>
+		  <control type="button" id="40129">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.29)</onclick>	
+		  </control>
+		  <control type="button" id="40130">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40131">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.31)</onclick>	
+		  </control>
+		  <control type="button" id="40132">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.32)</onclick>	
+		  </control>
+		  <control type="button" id="40133">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorButtonReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection2.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17404">
+		  <visible>Control.HasFocus(14802) | Control.HasFocus(40100) | Control.HasFocus(40101) | Control.HasFocus(40102) | Control.HasFocus(40103) | Control.HasFocus(40104) | Control.HasFocus(40105) | Control.HasFocus(40106) | Control.HasFocus(40107) | Control.HasFocus(40108) | Control.HasFocus(40109) | Control.HasFocus(40110) | Control.HasFocus(40111) | Control.HasFocus(40112) | Control.HasFocus(40113) | Control.HasFocus(40114) | Control.HasFocus(40115) | Control.HasFocus(40116) | Control.HasFocus(40117) | Control.HasFocus(40118) | Control.HasFocus(40119) | Control.HasFocus(40120) | Control.HasFocus(40121) | Control.HasFocus(40122) | Control.HasFocus(40123) | Control.HasFocus(40124) | Control.HasFocus(40125) | Control.HasFocus(40126) | Control.HasFocus(40127) | Control.HasFocus(40128) | Control.HasFocus(40129) | Control.HasFocus(40130) | Control.HasFocus(40131) | Control.HasFocus(40132) | Control.HasFocus(40133) | Control.HasFocus(40134)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17404</onleft>
+		  <onright>14801</onright>
+		  <onup>40127</onup>
+		  <ondown>40100</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40134">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>BackColorButtonReset</include>
+			<onclick>Skin.SetString(SelfColor_Path2.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection2.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+          
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 3 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17500)">
+		  <visible>Control.HasFocus(14803) | Control.HasFocus(42000) | Control.HasFocus(42001) | Control.HasFocus(42002) | Control.HasFocus(42003) | Control.HasFocus(42004) | Control.HasFocus(42005) | Control.HasFocus(42006) | Control.HasFocus(42007) | Control.HasFocus(42008) | Control.HasFocus(42009) | Control.HasFocus(42010) | Control.HasFocus(42011) | Control.HasFocus(42012) | Control.HasFocus(42013) | Control.HasFocus(42014) | Control.HasFocus(42015) | Control.HasFocus(42016) | Control.HasFocus(42017) | Control.HasFocus(42018) | Control.HasFocus(42019) | Control.HasFocus(42020) | Control.HasFocus(42021) | Control.HasFocus(42022) | Control.HasFocus(42023) | Control.HasFocus(42024) | Control.HasFocus(42025) | Control.HasFocus(42026) | Control.HasFocus(42027) | Control.HasFocus(42028) | Control.HasFocus(42029) | Control.HasFocus(42030) | Control.HasFocus(42031) | Control.HasFocus(42032) | Control.HasFocus(42033) | Control.HasFocus(42034)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>42034</onleft>
+		  <onright>14803</onright>
+		  <onup>42034</onup>
+		  <ondown>42009</ondown>
+		  <orientation>vertical</orientation> 
+		  <control type="button" id="42000">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="42001">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.1)</onclick>			
+		  </control>
+		  <control type="button" id="42002">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.2)</onclick>	
+		  </control> 
+		  <control type="button" id="42003">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.3)</onclick>	
+		  </control> 
+		  <control type="button" id="42004">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.4)</onclick>	
+		  </control> 
+		  <control type="button" id="42005">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.5)</onclick>	
+		  </control>
+		  <control type="button" id="42006">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.6)</onclick>	
+		  </control>
+		  <control type="button" id="42007">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.7)</onclick>	
+		  </control>
+		  <control type="button" id="42008">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.8)</onclick>	
+		  </control>
+		  <control type="button" id="42009">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.9)</onclick>	
+		  </control>		  
+		  <control type="button" id="42010">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.10)</onclick>	
+		  </control>
+		  <control type="button" id="42011">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.11)</onclick>	
+		  </control>
+		  <control type="button" id="42012">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.12)</onclick>	
+		  </control>
+		  <control type="button" id="42013">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="42014">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.14)</onclick>	
+		  </control>
+		  <control type="button" id="42015">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.15)</onclick>	
+		  </control>
+		  <control type="button" id="42016">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.16)</onclick>	
+		  </control>
+		  <control type="button" id="42017">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.17)</onclick>	
+		  </control>
+		  <control type="button" id="42018">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.18)</onclick>	
+		  </control>
+		  <control type="button" id="42019">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.19)</onclick>	
+		  </control> 
+		  <control type="button" id="42020">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="42021">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.21)</onclick>	
+		  </control>
+		  <control type="button" id="42022">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.22)</onclick>	
+		  </control>
+		  <control type="button" id="42023">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.23)</onclick>	
+		  </control>
+		  <control type="button" id="42024">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.24)</onclick>	
+		  </control>
+		  <control type="button" id="42025">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.25)</onclick>	
+		  </control>
+		  <control type="button" id="42026">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.26)</onclick>	
+		  </control>
+		  <control type="button" id="42027">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.27)</onclick>	
+		  </control>
+		  <control type="button" id="42028">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.28)</onclick>	
+		  </control>
+		  <control type="button" id="42029">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.29)</onclick>	
+		  </control>	  
+		  <control type="button" id="42030">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="42031">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.31)</onclick>	
+		  </control>
+		  <control type="button" id="42032">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.32)</onclick>	
+		  </control>
+		  <control type="button" id="42033">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonNoFocusReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection13.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17504">
+		  <visible>Control.HasFocus(14803) | Control.HasFocus(42000) | Control.HasFocus(42001) | Control.HasFocus(42002) | Control.HasFocus(42003) | Control.HasFocus(42004) | Control.HasFocus(42005) | Control.HasFocus(42006) | Control.HasFocus(42007) | Control.HasFocus(42008) | Control.HasFocus(42009) | Control.HasFocus(42010) | Control.HasFocus(42011) | Control.HasFocus(42012) | Control.HasFocus(42013) | Control.HasFocus(42014) | Control.HasFocus(42015) | Control.HasFocus(42016) | Control.HasFocus(42017) | Control.HasFocus(42018) | Control.HasFocus(42019) | Control.HasFocus(42020) | Control.HasFocus(42021) | Control.HasFocus(42022) | Control.HasFocus(42023) | Control.HasFocus(42024) | Control.HasFocus(42025) | Control.HasFocus(42026) | Control.HasFocus(42027) | Control.HasFocus(42028) | Control.HasFocus(42029) | Control.HasFocus(42030) | Control.HasFocus(42031) | Control.HasFocus(42032) | Control.HasFocus(42033) | Control.HasFocus(42034)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17504</onleft>
+		  <onright>14803</onright>
+		  <onup>42027</onup>
+		  <ondown>42000</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="42034">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonNoFocusReset</include>
+			<onclick>Skin.SetString(SelfColor_Path13.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection13.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 4 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17600)">
+		  <visible>Control.HasFocus(14804) | Control.HasFocus(40200) | Control.HasFocus(40201) | Control.HasFocus(40202) | Control.HasFocus(40203) | Control.HasFocus(40204) | Control.HasFocus(40205) | Control.HasFocus(40206) | Control.HasFocus(40207) | Control.HasFocus(40208) | Control.HasFocus(40209) | Control.HasFocus(40210) | Control.HasFocus(40211) | Control.HasFocus(40212) | Control.HasFocus(40213) | Control.HasFocus(40214) | Control.HasFocus(40215) | Control.HasFocus(40216) | Control.HasFocus(40217) | Control.HasFocus(40218) | Control.HasFocus(40219) | Control.HasFocus(40220) | Control.HasFocus(40221) | Control.HasFocus(40222) | Control.HasFocus(40223) | Control.HasFocus(40224) | Control.HasFocus(40225) | Control.HasFocus(40226) | Control.HasFocus(40227) | Control.HasFocus(40228) | Control.HasFocus(40229) | Control.HasFocus(40230) | Control.HasFocus(40231) | Control.HasFocus(40232) | Control.HasFocus(40233) | Control.HasFocus(40234)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40234</onleft>
+		  <onright>14804</onright>
+		  <onup>40234</onup>
+		  <ondown>40209</ondown>
+		  <orientation>vertical</orientation>   
+		  <control type="button" id="40200">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40201">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.1)</onclick>			
+		  </control>
+		  <control type="button" id="40202">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40203">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40204">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40205">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.5)</onclick>	
+		  </control>
+		  <control type="button" id="40206">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.6)</onclick>	
+		  </control>
+		  <control type="button" id="40207">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.7)</onclick>	
+		  </control>
+		  <control type="button" id="40208">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.8)</onclick>	
+		  </control>
+		  <control type="button" id="40209">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.9)</onclick>	
+		  </control>   
+		  <control type="button" id="40210">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.10)</onclick>	
+		  </control>
+		  <control type="button" id="40211">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.11)</onclick>	
+		  </control>
+		  <control type="button" id="40212">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.12)</onclick>	
+		  </control>
+		  <control type="button" id="40213">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40214">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.14)</onclick>	
+		  </control>
+		  <control type="button" id="40215">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.15)</onclick>	
+		  </control>
+		  <control type="button" id="40216">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.16)</onclick>	
+		  </control>
+		  <control type="button" id="40217">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.17)</onclick>	
+		  </control>
+		  <control type="button" id="40218">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.18)</onclick>	
+		  </control>  
+		  <control type="button" id="40219">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.19)</onclick>	
+		  </control>
+		  <control type="button" id="40220">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40221">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.21)</onclick>	
+		  </control>
+		  <control type="button" id="40222">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.22)</onclick>	
+		  </control>
+		  <control type="button" id="40223">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.23)</onclick>	
+		  </control>
+		  <control type="button" id="40224">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.24)</onclick>	
+		  </control>
+		  <control type="button" id="40225">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.25)</onclick>	
+		  </control>
+		  <control type="button" id="40226">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.26)</onclick>	
+		  </control>
+		  <control type="button" id="40227">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.27)</onclick>	
+		  </control>	  
+		  <control type="button" id="40228">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.28)</onclick>	
+		  </control>
+		  <control type="button" id="40229">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.29)</onclick>	
+		  </control>
+		  <control type="button" id="40230">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40231">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.31)</onclick>	
+		  </control>
+		  <control type="button" id="40232">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.32)</onclick>	
+		  </control>
+		  <control type="button" id="40233">
+			<include>ColorSettingsLayout</include>
+			<include>ColorButtonDialogeBackReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection3.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17604">
+		  <visible>Control.HasFocus(14804) | Control.HasFocus(40200) | Control.HasFocus(40201) | Control.HasFocus(40202) | Control.HasFocus(40203) | Control.HasFocus(40204) | Control.HasFocus(40205) | Control.HasFocus(40206) | Control.HasFocus(40207) | Control.HasFocus(40208) | Control.HasFocus(40209) | Control.HasFocus(40210) | Control.HasFocus(40211) | Control.HasFocus(40212) | Control.HasFocus(40213) | Control.HasFocus(40214) | Control.HasFocus(40215) | Control.HasFocus(40216) | Control.HasFocus(40217) | Control.HasFocus(40218) | Control.HasFocus(40219) | Control.HasFocus(40220) | Control.HasFocus(40221) | Control.HasFocus(40222) | Control.HasFocus(40223) | Control.HasFocus(40224) | Control.HasFocus(40225) | Control.HasFocus(40226) | Control.HasFocus(40227) | Control.HasFocus(40228) | Control.HasFocus(40229) | Control.HasFocus(40230) | Control.HasFocus(40231) | Control.HasFocus(40232) | Control.HasFocus(40233) | Control.HasFocus(40234)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17504</onleft>
+		  <onright>14804</onright>
+		  <onup>40227</onup>
+		  <ondown>40200</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40234">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path3.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection3.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 5 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17700)">
+		  <visible>Control.HasFocus(14805) | Control.HasFocus(40300) | Control.HasFocus(40301) | Control.HasFocus(40302) | Control.HasFocus(40303) | Control.HasFocus(40304) | Control.HasFocus(40305) | Control.HasFocus(40306) | Control.HasFocus(40307) | Control.HasFocus(40308) | Control.HasFocus(40309) | Control.HasFocus(40310) | Control.HasFocus(40311) | Control.HasFocus(40312) | Control.HasFocus(40313) | Control.HasFocus(40314) | Control.HasFocus(40315) | Control.HasFocus(40316) | Control.HasFocus(40317) | Control.HasFocus(40318) | Control.HasFocus(40319) | Control.HasFocus(40320) | Control.HasFocus(40321) | Control.HasFocus(40322) | Control.HasFocus(40323) | Control.HasFocus(40324) | Control.HasFocus(40325) | Control.HasFocus(40326) | Control.HasFocus(40327) | Control.HasFocus(40328) | Control.HasFocus(40329) | Control.HasFocus(40330) | Control.HasFocus(40331) | Control.HasFocus(40332) | Control.HasFocus(40333) | Control.HasFocus(40334)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40234</onleft>
+		  <onright>14805</onright>
+		  <onup>40327</onup>
+		  <ondown>40309</ondown>
+		  <orientation>vertical</orientation>   
+		  <control type="button" id="40300">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40301">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.1)</onclick>			
+		  </control>
+		  <control type="button" id="40302">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40303">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40304">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40305">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.5)</onclick>	
+		  </control>
+		  <control type="button" id="40306">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.6)</onclick>	
+		  </control>
+		  <control type="button" id="40307">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.7)</onclick>	
+		  </control>
+		  <control type="button" id="40308">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.8)</onclick>	
+		  </control>
+		  <control type="button" id="40309">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.9)</onclick>	
+		  </control>
+		  <control type="button" id="40310">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.10)</onclick>	
+		  </control>
+		  <control type="button" id="40311">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.11)</onclick>	
+		  </control>
+		  <control type="button" id="40312">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.12)</onclick>	
+		  </control>
+		  <control type="button" id="40313">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40314">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.14)</onclick>	
+		  </control>
+		  <control type="button" id="40315">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.15)</onclick>	
+		  </control>
+		  <control type="button" id="40316">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.16)</onclick>	
+		  </control>
+		  <control type="button" id="40317">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.17)</onclick>	
+		  </control>
+		  <control type="button" id="40318">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.18)</onclick>	
+		  </control>	  
+		  <control type="button" id="40319">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.19)</onclick>	
+		  </control>
+		  <control type="button" id="40320">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40321">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.21)</onclick>	
+		  </control>
+		  <control type="button" id="40322">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.22)</onclick>	
+		  </control>
+		  <control type="button" id="40323">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.23)</onclick>	
+		  </control>
+		  <control type="button" id="40324">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.24)</onclick>	
+		  </control>
+		  <control type="button" id="40325">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.25)</onclick>	
+		  </control>
+		  <control type="button" id="40326">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.26)</onclick>	
+		  </control>
+		  <control type="button" id="40327">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.27)</onclick>	
+		  </control>
+		  <control type="button" id="40328">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.28)</onclick>	
+		  </control>
+		  <control type="button" id="40329">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.29)</onclick>	
+		  </control>
+		  <control type="button" id="40330">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40331">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.31)</onclick>	
+		  </control>
+		  <control type="button" id="40332">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.32)</onclick>	
+		  </control>
+		  <control type="button" id="40333">
+			<include>ColorSettingsLayout</include>
+			<include>BackColorBackgroundReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection4.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17704">
+		  <visible>Control.HasFocus(14805) | Control.HasFocus(40300) | Control.HasFocus(40301) | Control.HasFocus(40302) | Control.HasFocus(40303) | Control.HasFocus(40304) | Control.HasFocus(40305) | Control.HasFocus(40306) | Control.HasFocus(40307) | Control.HasFocus(40308) | Control.HasFocus(40309) | Control.HasFocus(40310) | Control.HasFocus(40311) | Control.HasFocus(40312) | Control.HasFocus(40313) | Control.HasFocus(40314) | Control.HasFocus(40315) | Control.HasFocus(40316) | Control.HasFocus(40317) | Control.HasFocus(40318) | Control.HasFocus(40319) | Control.HasFocus(40320) | Control.HasFocus(40321) | Control.HasFocus(40322) | Control.HasFocus(40323) | Control.HasFocus(40324) | Control.HasFocus(40325) | Control.HasFocus(40326) | Control.HasFocus(40327) | Control.HasFocus(40328) | Control.HasFocus(40329) | Control.HasFocus(40330) | Control.HasFocus(40331) | Control.HasFocus(40332) | Control.HasFocus(40333) | Control.HasFocus(40334)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17704</onleft>
+		  <onright>14805</onright>
+		  <onup>40327</onup>
+		  <ondown>40300</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40234">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path4.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection4.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 6 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17800)">
+		  <visible>Control.HasFocus(14806) | Control.HasFocus(40400) | Control.HasFocus(40401) | Control.HasFocus(40402) | Control.HasFocus(40403) | Control.HasFocus(40404) | Control.HasFocus(40405) | Control.HasFocus(40406) | Control.HasFocus(40407) | Control.HasFocus(40408) | Control.HasFocus(40409) | Control.HasFocus(40410) | Control.HasFocus(40411) | Control.HasFocus(40412) | Control.HasFocus(40413) | Control.HasFocus(40414) | Control.HasFocus(40415) | Control.HasFocus(40416) | Control.HasFocus(40417) | Control.HasFocus(40418) | Control.HasFocus(40419) | Control.HasFocus(40420) | Control.HasFocus(40421) | Control.HasFocus(40422) | Control.HasFocus(40423) | Control.HasFocus(40424) | Control.HasFocus(40425) | Control.HasFocus(40426) | Control.HasFocus(40427) | Control.HasFocus(40428) | Control.HasFocus(40429) | Control.HasFocus(40430) | Control.HasFocus(40431) | Control.HasFocus(40432) | Control.HasFocus(40433) | Control.HasFocus(40434)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40434</onleft>
+		  <onright>14806</onright>
+		  <onup>40434</onup>
+		  <ondown>40409</ondown>
+		  <orientation>vertical</orientation> 
+		  <control type="button" id="40400">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40401">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.1)</onclick>			
+		  </control>
+		  <control type="button" id="40402">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40403">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40404">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40405">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.5)</onclick>	
+		  </control>
+		  <control type="button" id="40406">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.6)</onclick>	
+		  </control>
+		  <control type="button" id="40407">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.7)</onclick>	
+		  </control>
+		  <control type="button" id="40408">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.8)</onclick>	
+		  </control>
+		  <control type="button" id="40409">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.9)</onclick>	
+		  </control>
+		  <control type="button" id="40410">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.10)</onclick>	
+		  </control>
+		  <control type="button" id="40411">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.11)</onclick>	
+		  </control>
+		  <control type="button" id="40412">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.12)</onclick>	
+		  </control>
+		  <control type="button" id="40413">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40414">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.14)</onclick>	
+		  </control>
+		  <control type="button" id="40415">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.15)</onclick>	
+		  </control>
+		  <control type="button" id="40416">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.16)</onclick>	
+		  </control>
+		  <control type="button" id="40417">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.17)</onclick>	
+		  </control>
+		  <control type="button" id="40418">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.18)</onclick>	
+		  </control>
+		  <control type="button" id="40419">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.19)</onclick>	
+		  </control>
+		  <control type="button" id="40420">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40421">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.21)</onclick>	
+		  </control>
+		  <control type="button" id="40422">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.22)</onclick>	
+		  </control>
+		  <control type="button" id="40423">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.23)</onclick>	
+		  </control>
+		  <control type="button" id="40424">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.24)</onclick>	
+		  </control>
+		  <control type="button" id="40425">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.25)</onclick>	
+		  </control>
+		  <control type="button" id="40426">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.26)</onclick>	
+		  </control>
+		  <control type="button" id="40427">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.27)</onclick>	
+		  </control>
+		  <control type="button" id="40428">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.28)</onclick>	
+		  </control>
+		  <control type="button" id="40429">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.29)</onclick>	
+		  </control>
+		  <control type="button" id="40430">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40431">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.31)</onclick>	
+		  </control>
+		  <control type="button" id="40432">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.32)</onclick>	
+		  </control>
+		  <control type="button" id="40433">
+			<include>ColorSettingsLayout</include>
+			<include>ColorIconsReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection5.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17804">
+		  <visible>Control.HasFocus(14806) | Control.HasFocus(40400) | Control.HasFocus(40401) | Control.HasFocus(40402) | Control.HasFocus(40403) | Control.HasFocus(40404) | Control.HasFocus(40405) | Control.HasFocus(40406) | Control.HasFocus(40407) | Control.HasFocus(40408) | Control.HasFocus(40409) | Control.HasFocus(40410) | Control.HasFocus(40411) | Control.HasFocus(40412) | Control.HasFocus(40413) | Control.HasFocus(40414) | Control.HasFocus(40415) | Control.HasFocus(40416) | Control.HasFocus(40417) | Control.HasFocus(40418) | Control.HasFocus(40419) | Control.HasFocus(40420) | Control.HasFocus(40421) | Control.HasFocus(40422) | Control.HasFocus(40423) | Control.HasFocus(40424) | Control.HasFocus(40425) | Control.HasFocus(40426) | Control.HasFocus(40427) | Control.HasFocus(40428) | Control.HasFocus(40429) | Control.HasFocus(40430) | Control.HasFocus(40431) | Control.HasFocus(40432) | Control.HasFocus(40433) | Control.HasFocus(40434)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17804</onleft>
+		  <onright>14806</onright>
+		  <onup>40427</onup>
+		  <ondown>40400</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40434">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path5.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection5.34)</onclick>
+		  </control>
+		  </control>
+		  </control>
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 7 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(17900)">
+		  <visible>Control.HasFocus(14807) | Control.HasFocus(40500) | Control.HasFocus(40501) | Control.HasFocus(40502) | Control.HasFocus(40503) | Control.HasFocus(40504) | Control.HasFocus(40505) | Control.HasFocus(40506) | Control.HasFocus(40507) | Control.HasFocus(40508) | Control.HasFocus(40509) | Control.HasFocus(40510) | Control.HasFocus(40511) | Control.HasFocus(40512) | Control.HasFocus(40513) | Control.HasFocus(40514) | Control.HasFocus(40515) | Control.HasFocus(40516) | Control.HasFocus(40517) | Control.HasFocus(40518) | Control.HasFocus(40519) | Control.HasFocus(40520) | Control.HasFocus(40521) | Control.HasFocus(40522) | Control.HasFocus(40523) | Control.HasFocus(40524) | Control.HasFocus(40525) | Control.HasFocus(40526) | Control.HasFocus(40527) | Control.HasFocus(40528) | Control.HasFocus(40529) | Control.HasFocus(40530) | Control.HasFocus(40531) | Control.HasFocus(40532) | Control.HasFocus(40533) | Control.HasFocus(40534)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40534</onleft>
+		  <onright>14807</onright>
+		  <onup>40534</onup>
+		  <ondown>40509</ondown>
+		  <orientation>vertical</orientation>   
+		  <control type="button" id="40500">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40501">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.1)</onclick>			
+		  </control>
+		  <control type="button" id="40502">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40503">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40504">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40505">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.5)</onclick>	
+		  </control>
+		  <control type="button" id="40506">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.6)</onclick>	
+		  </control>
+		  <control type="button" id="40507">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.7)</onclick>	
+		  </control>
+		  <control type="button" id="40508">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.8)</onclick>	
+		  </control>
+		  <control type="button" id="40509">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.9)</onclick>	
+		  </control>
+		  <control type="button" id="40510">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.10)</onclick>	
+		  </control>
+		  <control type="button" id="40511">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.11)</onclick>	
+		  </control>
+		  <control type="button" id="40512">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.12)</onclick>	
+		  </control>
+		  <control type="button" id="40513">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40514">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.14)</onclick>	
+		  </control>
+		  <control type="button" id="40515">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.15)</onclick>	
+		  </control>
+		  <control type="button" id="40516">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.16)</onclick>	
+		  </control>
+		  <control type="button" id="40517">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.17)</onclick>	
+		  </control>
+		  <control type="button" id="40518">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.18)</onclick>	
+		  </control>
+		  <control type="button" id="40519">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.19)</onclick>	
+		  </control>
+		  <control type="button" id="40520">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40521">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.21)</onclick>	
+		  </control>
+		  <control type="button" id="40522">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.22)</onclick>	
+		  </control>
+		  <control type="button" id="40523">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.23)</onclick>	
+		  </control>
+		  <control type="button" id="40524">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.24)</onclick>	
+		  </control>
+		  <control type="button" id="40525">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.25)</onclick>	
+		  </control>
+		  <control type="button" id="40526">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.26)</onclick>	
+		  </control>
+		  <control type="button" id="40527">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.27)</onclick>	
+		  </control>
+		  <control type="button" id="40528">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.28)</onclick>	
+		  </control>
+		  <control type="button" id="40529">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.29)</onclick>	
+		  </control>
+		  <control type="button" id="40530">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40531">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.31)</onclick>	
+		  </control>
+		  <control type="button" id="40532">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.32)</onclick>	
+		  </control>
+		  <control type="button" id="40533">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFlaggingIconsReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection6.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="17904">
+		  <visible>Control.HasFocus(14807) | Control.HasFocus(40500) | Control.HasFocus(40501) | Control.HasFocus(40502) | Control.HasFocus(40503) | Control.HasFocus(40504) | Control.HasFocus(40505) | Control.HasFocus(40506) | Control.HasFocus(40507) | Control.HasFocus(40508) | Control.HasFocus(40509) | Control.HasFocus(40510) | Control.HasFocus(40511) | Control.HasFocus(40512) | Control.HasFocus(40513) | Control.HasFocus(40514) | Control.HasFocus(40515) | Control.HasFocus(40516) | Control.HasFocus(40517) | Control.HasFocus(40518) | Control.HasFocus(40519) | Control.HasFocus(40520) | Control.HasFocus(40521) | Control.HasFocus(40522) | Control.HasFocus(40523) | Control.HasFocus(40524) | Control.HasFocus(40525) | Control.HasFocus(40526) | Control.HasFocus(40527) | Control.HasFocus(40528) | Control.HasFocus(40529) | Control.HasFocus(40530) | Control.HasFocus(40531) | Control.HasFocus(40532) | Control.HasFocus(40533) | Control.HasFocus(40534)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>17904</onleft>
+		  <onright>14807</onright>
+		  <onup>40527</onup>
+		  <ondown>40500</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40534">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path5.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection5.34)</onclick>
+		  </control>
+		  </control>
+		  </control>	
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 8 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(18000)">
+		  <visible>Control.HasFocus(14808) | Control.HasFocus(40600) | Control.HasFocus(40601) | Control.HasFocus(40602) | Control.HasFocus(40603) | Control.HasFocus(40604) | Control.HasFocus(40605) | Control.HasFocus(40606) | Control.HasFocus(40607) | Control.HasFocus(40608) | Control.HasFocus(40609) | Control.HasFocus(40610) | Control.HasFocus(40611) | Control.HasFocus(40612) | Control.HasFocus(40613) | Control.HasFocus(40614) | Control.HasFocus(40615) | Control.HasFocus(40616) | Control.HasFocus(40617) | Control.HasFocus(40618) | Control.HasFocus(40619) | Control.HasFocus(40620) | Control.HasFocus(40621) | Control.HasFocus(40622) | Control.HasFocus(40623) | Control.HasFocus(40624) | Control.HasFocus(40625) | Control.HasFocus(40626) | Control.HasFocus(40627) | Control.HasFocus(40628) | Control.HasFocus(40629) | Control.HasFocus(40630) | Control.HasFocus(40631) | Control.HasFocus(40632) | Control.HasFocus(40633) | Control.HasFocus(40634)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40634</onleft>
+		  <onright>14808</onright>
+		  <onup>40634</onup>
+		  <ondown>40609</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="40600">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40601">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.1)</onclick>			
+		  </control>
+		  <control type="button" id="40602">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40603">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40604">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40605">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.5)</onclick>	
+		  </control>
+		  <control type="button" id="40606">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.6)</onclick>	
+		  </control>
+		  <control type="button" id="40607">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.7)</onclick>	
+		  </control>
+		  <control type="button" id="40608">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.8)</onclick>	
+		  </control>
+		  <control type="button" id="40609">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.9)</onclick>	
+		  </control>
+		  <control type="button" id="40610">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.10)</onclick>	
+		  </control>
+		  <control type="button" id="40611">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.11)</onclick>	
+		  </control>
+		  <control type="button" id="40612">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.12)</onclick>	
+		  </control>
+		  <control type="button" id="40613">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40614">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.14)</onclick>	
+		  </control>
+		  <control type="button" id="40615">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.15)</onclick>	
+		  </control>
+		  <control type="button" id="40616">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.16)</onclick>	
+		  </control>
+		  <control type="button" id="40617">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.17)</onclick>	
+		  </control>
+		  <control type="button" id="40618">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.18)</onclick>	
+		  </control>
+		  <control type="button" id="40619">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.19)</onclick>	
+		  </control>
+		  <control type="button" id="40620">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40621">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.21)</onclick>	
+		  </control>
+		  <control type="button" id="40622">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.22)</onclick>	
+		  </control>
+		  <control type="button" id="40623">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.23)</onclick>	
+		  </control>
+		  <control type="button" id="40624">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.24)</onclick>	
+		  </control>
+		  <control type="button" id="40625">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.25)</onclick>	
+		  </control>
+		  <control type="button" id="40626">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.26)</onclick>	
+		  </control>
+		  <control type="button" id="40627">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.27)</onclick>	
+		  </control>
+		  <control type="button" id="40628">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.28)</onclick>	
+		  </control>
+		  <control type="button" id="40629">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.29)</onclick>	
+		  </control>
+		  <control type="button" id="40630">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40631">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.31)</onclick>	
+		  </control>
+		  <control type="button" id="40632">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.32)</onclick>	
+		  </control>
+		  <control type="button" id="40633">
+			<include>ColorSettingsLayout</include>
+			<include>ColorProgressReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection7.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="18004">
+		  <visible>Control.HasFocus(14808) | Control.HasFocus(40600) | Control.HasFocus(40601) | Control.HasFocus(40602) | Control.HasFocus(40603) | Control.HasFocus(40604) | Control.HasFocus(40605) | Control.HasFocus(40606) | Control.HasFocus(40607) | Control.HasFocus(40608) | Control.HasFocus(40609) | Control.HasFocus(40610) | Control.HasFocus(40611) | Control.HasFocus(40612) | Control.HasFocus(40613) | Control.HasFocus(40614) | Control.HasFocus(40615) | Control.HasFocus(40616) | Control.HasFocus(40617) | Control.HasFocus(40618) | Control.HasFocus(40619) | Control.HasFocus(40620) | Control.HasFocus(40621) | Control.HasFocus(40622) | Control.HasFocus(40623) | Control.HasFocus(40624) | Control.HasFocus(40625) | Control.HasFocus(40626) | Control.HasFocus(40627) | Control.HasFocus(40628) | Control.HasFocus(40629) | Control.HasFocus(40630) | Control.HasFocus(40631) | Control.HasFocus(40632) | Control.HasFocus(40633) | Control.HasFocus(40634)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>18004</onleft>
+		  <onright>14808</onright>
+		  <onup>40627</onup>
+		  <ondown>40600</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40634">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path7.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection7.34)</onclick>
+		  </control>
+		  </control>
+		  </control>	
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================= BUTTON 9 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(18100)">
+		  <visible>Control.HasFocus(14809) | Control.HasFocus(40700) | Control.HasFocus(40701) | Control.HasFocus(40702) | Control.HasFocus(40703) | Control.HasFocus(40704) | Control.HasFocus(40705) | Control.HasFocus(40706) | Control.HasFocus(40707) | Control.HasFocus(40708) | Control.HasFocus(40709) | Control.HasFocus(40710) | Control.HasFocus(40711) | Control.HasFocus(40712) | Control.HasFocus(40713) | Control.HasFocus(40714) | Control.HasFocus(40715) | Control.HasFocus(40716) | Control.HasFocus(40717) | Control.HasFocus(40718) | Control.HasFocus(40719) | Control.HasFocus(40720) | Control.HasFocus(40721) | Control.HasFocus(40722) | Control.HasFocus(40723) | Control.HasFocus(40724) | Control.HasFocus(40725) | Control.HasFocus(40726) | Control.HasFocus(40727) | Control.HasFocus(40728) | Control.HasFocus(40729) | Control.HasFocus(40730) | Control.HasFocus(40731) | Control.HasFocus(40732) | Control.HasFocus(40733) | Control.HasFocus(40734)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40734</onleft>
+		  <onright>14809</onright>
+		  <onup>40734</onup>
+		  <ondown>40709</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="40700">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40701">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.1)</onclick>			
+		  </control>
+		  <control type="button" id="40702">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40703">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40704">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40705">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.5)</onclick>	
+		  </control>
+		  <control type="button" id="40706">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.6)</onclick>	
+		  </control>
+		  <control type="button" id="40707">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.7)</onclick>	
+		  </control>
+		  <control type="button" id="40708">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.8)</onclick>	
+		  </control>
+		  <control type="button" id="40709">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.9)</onclick>	
+		  </control>
+		  <control type="button" id="40710">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.10)</onclick>	
+		  </control>
+		  <control type="button" id="40711">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.11)</onclick>	
+		  </control>
+		  <control type="button" id="40712">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.12)</onclick>	
+		  </control>
+		  <control type="button" id="40713">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40714">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.14)</onclick>	
+		  </control>
+		  <control type="button" id="40715">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.15)</onclick>	
+		  </control>
+		  <control type="button" id="40716">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.16)</onclick>	
+		  </control>
+		  <control type="button" id="40717">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.17)</onclick>	
+		  </control>
+		  <control type="button" id="40718">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.18)</onclick>	
+		  </control>
+		  <control type="button" id="40719">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.19)</onclick>	
+		  </control>
+		  <control type="button" id="40720">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40721">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.21)</onclick>	
+		  </control>
+		  <control type="button" id="40722">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.22)</onclick>	
+		  </control>
+		  <control type="button" id="40723">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.23)</onclick>	
+		  </control>
+		  <control type="button" id="40724">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.24)</onclick>	
+		  </control>
+		  <control type="button" id="40725">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.25)</onclick>	
+		  </control>
+		  <control type="button" id="40726">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.26)</onclick>	
+		  </control>
+		  <control type="button" id="40727">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.27)</onclick>	
+		  </control>
+		  <control type="button" id="40728">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.28)</onclick>	
+		  </control>
+		  <control type="button" id="40729">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.29)</onclick>	
+		  </control>
+		  <control type="button" id="40730">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40731">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.31)</onclick>	
+		  </control>
+		  <control type="button" id="40732">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.32)</onclick>	
+		  </control>
+		  <control type="button" id="40733">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontNormalReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection8.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="18104">
+		  <visible>Control.HasFocus(14809) | Control.HasFocus(40700) | Control.HasFocus(40701) | Control.HasFocus(40702) | Control.HasFocus(40703) | Control.HasFocus(40704) | Control.HasFocus(40705) | Control.HasFocus(40706) | Control.HasFocus(40707) | Control.HasFocus(40708) | Control.HasFocus(40709) | Control.HasFocus(40710) | Control.HasFocus(40711) | Control.HasFocus(40712) | Control.HasFocus(40713) | Control.HasFocus(40714) | Control.HasFocus(40715) | Control.HasFocus(40716) | Control.HasFocus(40717) | Control.HasFocus(40718) | Control.HasFocus(40719) | Control.HasFocus(40720) | Control.HasFocus(40721) | Control.HasFocus(40722) | Control.HasFocus(40723) | Control.HasFocus(40724) | Control.HasFocus(40725) | Control.HasFocus(40726) | Control.HasFocus(40727) | Control.HasFocus(40728) | Control.HasFocus(40729) | Control.HasFocus(40730) | Control.HasFocus(40731) | Control.HasFocus(40732) | Control.HasFocus(40733) | Control.HasFocus(40734)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>18104</onleft>
+		  <onright>14809</onright>
+		  <onup>40727</onup>
+		  <ondown>40700</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40734">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path8.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection8.34)</onclick>
+		  </control>
+		  </control>
+		  </control>  
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================ BUTTON 10 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(18200)">
+		  <visible>Control.HasFocus(14810) | Control.HasFocus(40800) | Control.HasFocus(40801) | Control.HasFocus(40802) | Control.HasFocus(40803) | Control.HasFocus(40804) | Control.HasFocus(40805) | Control.HasFocus(40806) | Control.HasFocus(40807) | Control.HasFocus(40808) | Control.HasFocus(40809) | Control.HasFocus(40810) | Control.HasFocus(40811) | Control.HasFocus(40812) | Control.HasFocus(40813) | Control.HasFocus(40814) | Control.HasFocus(40815) | Control.HasFocus(40816) | Control.HasFocus(40817) | Control.HasFocus(40818) | Control.HasFocus(40819) | Control.HasFocus(40820) | Control.HasFocus(40821) | Control.HasFocus(40822) | Control.HasFocus(40823) | Control.HasFocus(40824) | Control.HasFocus(40825) | Control.HasFocus(40826) | Control.HasFocus(40827) | Control.HasFocus(40828) | Control.HasFocus(40829) | Control.HasFocus(40830) | Control.HasFocus(40831) | Control.HasFocus(40832) | Control.HasFocus(40833) | Control.HasFocus(40834)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40834</onleft>
+		  <onright>14810</onright>
+		  <onup>40834</onup>
+		  <ondown>40809</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="40800">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40801">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.1)</onclick>			
+		  </control>
+		  <control type="button" id="40802">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40803">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40804">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40805">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.5)</onclick>	
+		  </control>
+		  <control type="button" id="40806">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.6)</onclick>	
+		  </control>
+		  <control type="button" id="40807">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.7)</onclick>	
+		  </control>
+		  <control type="button" id="40808">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.8)</onclick>	
+		  </control>
+		  <control type="button" id="40809">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.9)</onclick>	
+		  </control>
+		  <control type="button" id="40810">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.10)</onclick>	
+		  </control>
+		  <control type="button" id="40811">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.11)</onclick>	
+		  </control>
+		  <control type="button" id="40812">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.12)</onclick>	
+		  </control>
+		  <control type="button" id="40813">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40814">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.14)</onclick>	
+		  </control>
+		  <control type="button" id="40815">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.15)</onclick>	
+		  </control>
+		  <control type="button" id="40816">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.16)</onclick>	
+		  </control>
+		  <control type="button" id="40817">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.17)</onclick>	
+		  </control>
+		  <control type="button" id="40818">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.18)</onclick>	
+		  </control>
+		  <control type="button" id="40819">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.19)</onclick>	
+		  </control>
+		  <control type="button" id="40820">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40821">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.21)</onclick>	
+		  </control>
+		  <control type="button" id="40822">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.22)</onclick>	
+		  </control>
+		  <control type="button" id="40823">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.23)</onclick>	
+		  </control>
+		  <control type="button" id="40824">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.24)</onclick>	
+		  </control>
+		  <control type="button" id="40825">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.25)</onclick>	
+		  </control>
+		  <control type="button" id="40826">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.26)</onclick>	
+		  </control>
+		  <control type="button" id="40827">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.27)</onclick>	
+		  </control>
+		  <control type="button" id="40828">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.28)</onclick>	
+		  </control>
+		  <control type="button" id="40829">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.29)</onclick>	
+		  </control>
+		  <control type="button" id="40830">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40831">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.31)</onclick>	
+		  </control>
+		  <control type="button" id="40832">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.32)</onclick>	
+		  </control>
+		  <control type="button" id="40833">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontUnfocusReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection9.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="18204">
+		  <visible>Control.HasFocus(14810) | Control.HasFocus(40800) | Control.HasFocus(40801) | Control.HasFocus(40802) | Control.HasFocus(40803) | Control.HasFocus(40804) | Control.HasFocus(40805) | Control.HasFocus(40806) | Control.HasFocus(40807) | Control.HasFocus(40808) | Control.HasFocus(40809) | Control.HasFocus(40810) | Control.HasFocus(40811) | Control.HasFocus(40812) | Control.HasFocus(40813) | Control.HasFocus(40814) | Control.HasFocus(40815) | Control.HasFocus(40816) | Control.HasFocus(40817) | Control.HasFocus(40818) | Control.HasFocus(40819) | Control.HasFocus(40820) | Control.HasFocus(40821) | Control.HasFocus(40822) | Control.HasFocus(40823) | Control.HasFocus(40824) | Control.HasFocus(40825) | Control.HasFocus(40826) | Control.HasFocus(40827) | Control.HasFocus(40828) | Control.HasFocus(40829) | Control.HasFocus(40830) | Control.HasFocus(40831) | Control.HasFocus(40832) | Control.HasFocus(40833) | Control.HasFocus(40834)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>18204</onleft>
+		  <onright>14810</onright>
+		  <onup>40827</onup>
+		  <ondown>40800</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40834">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path9.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection9.34)</onclick>
+		  </control>
+		  </control>
+		  </control>   
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================ BUTTON 11 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(18300)">
+		  <visible>Control.HasFocus(14811) | Control.HasFocus(40900) | Control.HasFocus(40901) | Control.HasFocus(40902) | Control.HasFocus(40903) | Control.HasFocus(40904) | Control.HasFocus(40905) | Control.HasFocus(40906) | Control.HasFocus(40907) | Control.HasFocus(40908) | Control.HasFocus(40909) | Control.HasFocus(40910) | Control.HasFocus(40911) | Control.HasFocus(40912) | Control.HasFocus(40913) | Control.HasFocus(40914) | Control.HasFocus(40915) | Control.HasFocus(40916) | Control.HasFocus(40917) | Control.HasFocus(40918) | Control.HasFocus(40919) | Control.HasFocus(40920) | Control.HasFocus(40921) | Control.HasFocus(40922) | Control.HasFocus(40923) | Control.HasFocus(40924) | Control.HasFocus(40925) | Control.HasFocus(40926) | Control.HasFocus(40927) | Control.HasFocus(40928) | Control.HasFocus(40929) | Control.HasFocus(40930) | Control.HasFocus(40931) | Control.HasFocus(40932) | Control.HasFocus(40933) | Control.HasFocus(40934)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>40934</onleft>
+		  <onright>14811</onright>
+		  <onup>40934</onup>
+		  <ondown>40909</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="40900">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="40901">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.1)</onclick>			
+		  </control>
+		  <control type="button" id="40902">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.2)</onclick>	
+		  </control> 
+		  <control type="button" id="40903">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.3)</onclick>	
+		  </control> 
+		  <control type="button" id="40904">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.4)</onclick>	
+		  </control> 
+		  <control type="button" id="40905">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.5)</onclick>	
+		  </control>
+		  <control type="button" id="40906">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.6)</onclick>	
+		  </control>
+		  <control type="button" id="40907">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.7)</onclick>	
+		  </control>
+		  <control type="button" id="40908">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.8)</onclick>	
+		  </control>
+		  <control type="button" id="40909">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.9)</onclick>	
+		  </control>
+		  <control type="button" id="40910">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.10)</onclick>	
+		  </control>
+		  <control type="button" id="40911">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.11)</onclick>	
+		  </control>
+		  <control type="button" id="40912">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.12)</onclick>	
+		  </control>
+		  <control type="button" id="40913">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="40914">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.14)</onclick>	
+		  </control>
+		  <control type="button" id="40915">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.15)</onclick>	
+		  </control>
+		  <control type="button" id="40916">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.16)</onclick>	
+		  </control>
+		  <control type="button" id="40917">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.17)</onclick>	
+		  </control>
+		  <control type="button" id="40918">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.18)</onclick>	
+		  </control>
+		  <control type="button" id="40919">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.19)</onclick>	
+		  </control>
+		  <control type="button" id="40920">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="40921">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.21)</onclick>	
+		  </control>
+		  <control type="button" id="40922">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.22)</onclick>	
+		  </control>
+		  <control type="button" id="40923">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.23)</onclick>	
+		  </control>
+		  <control type="button" id="40924">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.24)</onclick>	
+		  </control>
+		  <control type="button" id="40925">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.25)</onclick>	
+		  </control>
+		  <control type="button" id="40926">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.26)</onclick>	
+		  </control>
+		  <control type="button" id="40927">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.27)</onclick>	
+		  </control>
+		  <control type="button" id="40928">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.28)</onclick>	
+		  </control>
+		  <control type="button" id="40929">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.29)</onclick>	
+		  </control>
+		  <control type="button" id="40930">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="40931">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.31)</onclick>	
+		  </control>
+		  <control type="button" id="40932">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.32)</onclick>	
+		  </control>
+		  <control type="button" id="40933">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontSelectedReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection10.33)</onclick>	
+		  </control>
+		  </control>
+		  
+		  <control type="grouplist" id="18304">
+		  <visible>Control.HasFocus(14811) | Control.HasFocus(40900) | Control.HasFocus(40901) | Control.HasFocus(40902) | Control.HasFocus(40903) | Control.HasFocus(40904) | Control.HasFocus(40905) | Control.HasFocus(40906) | Control.HasFocus(40907) | Control.HasFocus(40908) | Control.HasFocus(40909) | Control.HasFocus(40910) | Control.HasFocus(40911) | Control.HasFocus(40912) | Control.HasFocus(40913) | Control.HasFocus(40914) | Control.HasFocus(40915) | Control.HasFocus(40916) | Control.HasFocus(40917) | Control.HasFocus(40918) | Control.HasFocus(40919) | Control.HasFocus(40920) | Control.HasFocus(40921) | Control.HasFocus(40922) | Control.HasFocus(40923) | Control.HasFocus(40924) | Control.HasFocus(40925) | Control.HasFocus(40926) | Control.HasFocus(40927) | Control.HasFocus(40928) | Control.HasFocus(40929) | Control.HasFocus(40930) | Control.HasFocus(40931) | Control.HasFocus(40932) | Control.HasFocus(40933) | Control.HasFocus(40934)</visible>
+		  <left>225</left>
+		  <top>678</top>
+		  <width>1890</width>
+		  <height>100</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>18304</onleft>
+		  <onright>14811</onright>
+		  <onup>40927</onup>
+		  <ondown>40900</ondown>
+		  <orientation>horizontal</orientation>
+		  <control type="button" id="40934">
+			<label>50314</label>
+			<width>925</width>
+		    <height>100</height>
+			<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	        <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+			<include>ColorButtonDialogeBackReset</include>
+			<onclick>Skin.SetString(SelfColor_Path10.34)</onclick>
+            <onclick>Skin.SetBool(ColorCollection10.34)</onclick>
+		  </control>
+		  </control>
+		  </control> 
+		  
+		  <!-- ============================================================================ -->
+		  <!-- ================================ BUTTON 12 ================================= -->
+		  <!-- ============================================================================ -->
+		  <control type="group">
+		  <top>20</top>
+		  <control type="grouplist" id="(18400)">
+		  <visible>Control.HasFocus(14812) | Control.HasFocus(41000) | Control.HasFocus(41001) | Control.HasFocus(41002) | Control.HasFocus(41003) | Control.HasFocus(41004) | Control.HasFocus(41005) | Control.HasFocus(41006) | Control.HasFocus(41007) | Control.HasFocus(41008) | Control.HasFocus(41009) | Control.HasFocus(41010) | Control.HasFocus(41011) | Control.HasFocus(41012) | Control.HasFocus(41013) | Control.HasFocus(41014) | Control.HasFocus(41015) | Control.HasFocus(41016) | Control.HasFocus(41017) | Control.HasFocus(41018) | Control.HasFocus(41019) | Control.HasFocus(41020) | Control.HasFocus(41021) | Control.HasFocus(41022) | Control.HasFocus(41023) | Control.HasFocus(41024) | Control.HasFocus(41025) | Control.HasFocus(41026) | Control.HasFocus(41027) | Control.HasFocus(41028) | Control.HasFocus(4129) | Control.HasFocus(41030) | Control.HasFocus(41031) | Control.HasFocus(41032) | Control.HasFocus(41033) | Control.HasFocus(41034)</visible>
+		  <left>220</left>
+		  <top>60</top>
+		  <width>940</width>
+		  <height>600</height>
+		  <itemgap>5</itemgap>
+		  <pagecontrol>66</pagecontrol>
+		  <onleft>41034</onleft>
+		  <onright>14812</onright>
+		  <onup>41034</onup>
+		  <ondown>41009</ondown>
+		  <orientation>vertical</orientation>  
+		  <control type="button" id="41000">
+			<label>Reset</label>
+			<font>primal_15</font>
+			<align>center</align>
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<onclick>Skin.Reset</onclick>			
+		  </control>        
+		  <control type="button" id="41001">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF22353c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.1)</onclick>			
+		  </control>
+		  <control type="button" id="41002">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFdea26c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.2)</onclick>	
+		  </control> 
+		  <control type="button" id="41003">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF6f4837</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.3)</onclick>	
+		  </control> 
+		  <control type="button" id="41004">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF05080d</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.4)</onclick>	
+		  </control> 
+		  <control type="button" id="41005">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFa26e49</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.5)</onclick>	
+		  </control>
+		  <control type="button" id="41006">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF3d272a</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.6)</onclick>	
+		  </control>
+		  <control type="button" id="41007">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFe7e3e2</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.7)</onclick>	
+		  </control>
+		  <control type="button" id="41008">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFdeb887</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.8)</onclick>	
+		  </control>
+		  <control type="button" id="41009">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF5f9ea0</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.9)</onclick>	
+		  </control>
+		  <control type="button" id="41010">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF7fff00</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.10)</onclick>	
+		  </control>
+		  <control type="button" id="41011">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFff7f50</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.11)</onclick>	
+		  </control>
+		  <control type="button" id="41012">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFbdb76b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.12)</onclick>	
+		  </control>
+		  <control type="button" id="41013">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF483d8b</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.13)</onclick>	
+		  </control>		  
+		  <control type="button" id="41014">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF2f4f4f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.14)</onclick>	
+		  </control>
+		  <control type="button" id="41015">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF00ced1</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.15)</onclick>	
+		  </control>
+		  <control type="button" id="41016">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFffd700</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.16)</onclick>	
+		  </control>
+		  <control type="button" id="41017">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFdaa520</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.17)</onclick>	
+		  </control>
+		  <control type="button" id="41018">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF008000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.18)</onclick>	
+		  </control>
+		  <control type="button" id="41019">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFcd5c5c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.19)</onclick>	
+		  </control>
+		  <control type="button" id="41020">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF4b0082</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.20)</onclick>	
+		  </control>		  
+		  <control type="button" id="41021">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFf0e68c</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.21)</onclick>	
+		  </control>
+		  <control type="button" id="41022">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFffe4b5</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.22)</onclick>	
+		  </control>
+		  <control type="button" id="41023">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF808000</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.23)</onclick>	
+		  </control>
+		  <control type="button" id="41024">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF6b8e23</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.24)</onclick>	
+		  </control>
+		  <control type="button" id="41025">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFda70d6</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.25)</onclick>	
+		  </control>
+		  <control type="button" id="41026">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFeee8aa</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.26)</onclick>	
+		  </control>
+		  <control type="button" id="41027">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF800080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.27)</onclick>	
+		  </control>
+		  <control type="button" id="41028">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFbc8f8f</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.28)</onclick>	
+		  </control>
+		  <control type="button" id="41029">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF8b4513</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.29)</onclick>	
+		  </control>
+		  <control type="button" id="41030">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFd3d3d3</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.30)</onclick>	
+		  </control>		  
+		  <control type="button" id="41031">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FFa9a9a9</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.31)</onclick>	
+		  </control>
+		  <control type="button" id="41032">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF808080</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.32)</onclick>	
+		  </control>
+		  <control type="button" id="41033">
+			<include>ColorSettingsLayout</include>
+			<include>ColorFontShadowReset</include>
+			<colordiffuse>FF696969</colordiffuse>
+			<onclick>Skin.SetBool(ColorCollection11.33)</onclick>	
+		  </control>
+		 </control>
+		 
+		 
+		 <control type="grouplist" id="18404">
+		 <visible>Control.HasFocus(14812) | Control.HasFocus(41000) | Control.HasFocus(41001) | Control.HasFocus(41002) | Control.HasFocus(41003) | Control.HasFocus(41004) | Control.HasFocus(41005) | Control.HasFocus(41006) | Control.HasFocus(41007) | Control.HasFocus(41008) | Control.HasFocus(41009) | Control.HasFocus(41010) | Control.HasFocus(41011) | Control.HasFocus(41012) | Control.HasFocus(41013) | Control.HasFocus(41014) | Control.HasFocus(41015) | Control.HasFocus(41016) | Control.HasFocus(41017) | Control.HasFocus(41018) | Control.HasFocus(41019) | Control.HasFocus(41020) | Control.HasFocus(41021) | Control.HasFocus(41022) | Control.HasFocus(41023) | Control.HasFocus(41024) | Control.HasFocus(41025) | Control.HasFocus(41026) | Control.HasFocus(41027) | Control.HasFocus(41028) | Control.HasFocus(4129) | Control.HasFocus(41030) | Control.HasFocus(41031) | Control.HasFocus(41032) | Control.HasFocus(41033) | Control.HasFocus(41034)</visible>
+		 <left>225</left>
+		 <top>678</top>
+		 <width>1890</width>
+		 <height>100</height>
+		 <itemgap>5</itemgap>
+		 <pagecontrol>66</pagecontrol>
+		 <onleft>18404</onleft>
+		 <onright>14812</onright>
+		 <onup>41027</onup>
+		 <ondown>41000</ondown>
+		 <orientation>horizontal</orientation>
+		 <control type="button" id="41034">
+		   <label>50314</label>
+		   <width>925</width>
+		   <height>100</height>
+		   <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+		   <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+		   <include>ColorButtonDialogeBackReset</include>
+		   <onclick>Skin.SetString(SelfColor_Path11.34)</onclick>
+		   <onclick>Skin.SetBool(ColorCollection11.34)</onclick>
+		 </control>
+		</control>
+	   </control> 
+	  </control>
+	 </control>
+
+  </controls>
+</window>

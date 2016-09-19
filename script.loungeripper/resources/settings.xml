@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+	<category label="30060"> <!-- System Defaults -->
+		<setting label="30016" type="executable" id="makemkvcon" />
+		<setting label="30017" type="executable" id="HandBrakeCLI" />
+		<setting label="30020" type="folder" id="tempfolder" option="writable" />
+		<setting label="30019" type="bool" id="deltempfolder" default="false" />
+		<setting label="30021" type="folder" id="basefolder" option="writable" />
+		<setting label="30027" type="bool" id="subfolder" default="true" />
+		<setting label="30065" type="bool" id="updatelib" default="false" />
+		<setting label="30023" type="labelenum" id="nativelanguage" default="English (eng)" values="Arabic (ara)|Bengali (ben)|Chinese (chi)|English (eng)|French (fre)|German (ger)|Hindi (hin)|Italian (ita)|Japanese (jpn)|Panjabi-Punjabi (pan)|Portuguese (por)|Russian (rus)|Spanish-Castilian (spa)|Abkhazian (abk)|Achinese (ace)|Acoli (ach)|Adangme (ada)|Adyghe-Adygei (ady)|Afar (aar)|Afrihili (afh)|Afrikaans (afr)|Afro-Asiatic languages (afa)|Ainu (ain)|Akan (aka)|Akkadian (akk)|Albanian (alb)|Aleut (ale)|Algonquian languages (alg)|Altaic languages (tut)|Amharic (amh)|Angika (anp)|Apache languages (apa)|Aragonese (arg)|Arapaho (arp)|Arawak (arw)|Armenian (arm)|Aromanian-Arumanian-Macedo-Romanian (rup)|Artificial languages (art)|Assamese (asm)|Asturian-Bable-Leonese-Asturleonese (ast)|Athapascan languages (ath)|Australian languages (aus)|Austronesian languages (map)|Avaric (ava)|Avestan (ave)|Awadhi (awa)|Aymara (aym)|Azerbaijani (aze)|Balinese (ban)|Baltic languages (bat)|Baluchi (bal)|Bambara (bam)|Bamileke languages (bai)|Banda languages (bad)|Bantu languages (bnt)|Basa (bas)|Bashkir (bak)|Basque (baq)|Batak languages (btk)|Beja-Bedawiyet (bej)|Belarusian (bel)|Bemba (bem)|Berber languages (ber)|Bhojpuri (bho)|Bihari languages (bih)|Bikol (bik)|Bini-Edo (bin)|Bislama (bis)|Blin-Bilin (byn)|Blissymbols-Blissymbolics-Bliss (zbl)|Bokmal, Norwegian-Norwegian Bokmal (nob)|Bosnian (bos)|Braj (bra)|Breton (bre)|Buginese (bug)|Bulgarian (bul)|Buriat (bua)|Burmese (bur)|Caddo (cad)|Catalan-Valencian (cat)|Caucasian languages (cau)|Cebuano (ceb)|Celtic languages (cel)|Central American Indian languages (cai)|Central Khmer (khm)|Chagatai (chg)|Chamic languages (cmc)|Chamorro (cha)|Chechen (che)|Cherokee (chr)|Cheyenne (chy)|Chibcha (chb)|Chichewa-Chewa-Nyanja (nya)|Chinook jargon (chn)|Chipewyan-Dene Suline (chp)|Choctaw (cho)|Church Slavic-Old Slavonic-Church Slavonic-Old Bulgarian-Old Church Slavonic (chu)|Chuukese (chk)|Chuvash (chv)|Classical Newari-Old Newari-Classical Nepal Bhasa (nwc)|Classical Syriac (syc)|Coptic (cop)|Cornish (cor)|Corsican (cos)|Cree (cre)|Creek (mus)|Creoles and pidgins (crp)|Creoles and pidgins, English based (cpe)|Creoles and pidgins, French-based (cpf)|Creoles and pidgins, Portuguese-based (cpp)|Crimean Tatar-Crimean Turkish (crh)|Croatian (hrv)|Cushitic languages (cus)|Czech (cze)|Dakota (dak)|Danish (dan)|Dargwa (dar)|Delaware (del)|Dinka (din)|Divehi-Dhivehi-Maldivian (div)|Dogri (doi)|Dogrib (dgr)|Dravidian languages (dra)|Duala (dua)|Dutch-Flemish (dut)|Dutch, Middle (dum)|Dyula (dyu)|Dzongkha (dzo)|Eastern Frisian (frs)|Efik (efi)|Egyptian (egy)|Ekajuk (eka)|Elamite (elx)|English, Middle (enm)|English, Old (ang)|Erzya (myv)|Esperanto (epo)|Estonian (est)|Ewe (ewe)|Ewondo (ewo)|Fang (fan)|Fanti (fat)|Faroese (fao)|Fijian (fij)|Filipino-Pilipino (fil)|Finnish (fin)|Finno-Ugrian languages (fiu)|Fon (fon)|French, Middle (frm)|French, Old (fro)|Friulian (fur)|Fulah (ful)|Ga (gaa)|Gaelic-Scottish Gaelic (gla)|Galibi Carib (car)|Galician (glg)|Ganda (lug)|Gayo (gay)|Gbaya (gba)|Geez (gez)|Georgian (geo)|German, Middle High (gmh)|German, Old High (goh)|Germanic languages (gem)|Gilbertese (gil)|Gondi (gon)|Gorontalo (gor)|Gothic (got)|Grebo (grb)|Greek (gre)|Greek, Ancient (grc)|Guarani (grn)|Gujarati (guj)|Gwich'in (gwi)|Haida (hai)|Haitian-Haitian Creole (hat)|Hausa (hau)|Hawaiian (haw)|Hebrew (heb)|Herero (her)|Hiligaynon (hil)|Himachali languages-Western Pahari languages (him)|Hiri Motu (hmo)|Hittite (hit)|Hmong-Mong (hmn)|Hungarian (hun)|Hupa (hup)|Iban (iba)|Icelandic (ice)|Ido (ido)|Igbo (ibo)|Ijo languages (ijo)|Iloko (ilo)|Inari Sami (smn)|Indic languages (inc)|Indo-European languages (ine)|Indonesian (ind)|Ingush (inh)|Interlingua (ina)|Interlingue-Occidental (ile)|Inuktitut (iku)|Inupiaq (ipk)|Iranian languages (ira)|Irish (gle)|Irish, Middle (mga)|Irish, Old (sga)|Iroquoian languages (iro)|Javanese (jav)|Judeo-Arabic (jrb)|Judeo-Persian (jpr)|Kabardian (kbd)|Kabyle (kab)|Kachin-Jingpho (kac)|Kalaallisut-Greenlandic (kal)|Kalmyk-Oirat (xal)|Kamba (kam)|Kannada (kan)|Kanuri (kau)|Kara-Kalpak (kaa)|Karachay-Balkar (krc)|Karelian (krl)|Karen languages (kar)|Kashmiri (kas)|Kashubian (csb)|Kawi (kaw)|Kazakh (kaz)|Khasi (kha)|Khoisan languages (khi)|Khotanese-Sakan (kho)|Kikuyu-Gikuyu (kik)|Kimbundu (kmb)|Kinyarwanda (kin)|Kirghiz-Kyrgyz (kir)|Klingon-tlhIngan-Hol (tlh)|Komi (kom)|Kongo (kon)|Konkani (kok)|Korean (kor)|Kosraean (kos)|Kpelle (kpe)|Kru languages (kro)|Kuanyama-Kwanyama (kua)|Kumyk (kum)|Kurdish (kur)|Kurukh (kru)|Kutenai (kut)|Ladino (lad)|Lahnda (lah)|Lamba (lam)|Land Dayak languages (day)|Lao (lao)|Latin (lat)|Latvian (lav)|Lezghian (lez)|Limburgan-Limburger-Limburgish (lim)|Lingala (lin)|Lithuanian (lit)|Lojban (jbo)|Low German-Low Saxon-German, Low-Saxon, Low (nds)|Lower Sorbian (dsb)|Lozi (loz)|Luba-Katanga (lub)|Luba-Lulua (lua)|Luiseno (lui)|Lule Sami (smj)|Lunda (lun)|Luo (luo)|Lushai (lus)|Luxembourgish-Letzeburgesch (ltz)|Macedonian (mac)|Madurese (mad)|Magahi (mag)|Maithili (mai)|Makasar (mak)|Malagasy (mlg)|Malay (may)|Malayalam (mal)|Maltese (mlt)|Manchu (mnc)|Mandar (mdr)|Mandingo (man)|Manipuri (mni)|Manobo languages (mno)|Manx (glv)|Maori (mao)|Mapudungun-Mapuche (arn)|Marathi (mar)|Mari (chm)|Marshallese (mah)|Marwari (mwr)|Masai (mas)|Mayan languages (myn)|Mende (men)|Mi'kmaq-Micmac (mic)|Minangkabau (min)|Mirandese (mwl)|Mohawk (moh)|Moksha (mdf)|Mon-Khmer languages (mkh)|Mongo (lol)|Mongolian (mon)|Mossi (mos)|Multiple languages (mul)|Munda languages (mun)|N'Ko (nqo)|Nahuatl languages (nah)|Nauru (nau)|Navajo-Navaho (nav)|Ndebele, North-North Ndebele (nde)|Ndebele, South-South Ndebele (nbl)|Ndonga (ndo)|Neapolitan (nap)|Nepal Bhasa-Newari (new)|Nepali (nep)|Nias (nia)|Niger-Kordofanian languages (nic)|Nilo-Saharan languages (ssa)|Niuean (niu)|No linguistic content-Not applicable (zxx)|Nogai (nog)|Norse, Old (non)|North American Indian languages (nai)|Northern Frisian (frr)|Northern Sami (sme)|Norwegian (nor)|Norwegian Nynorsk-Nynorsk, Norwegian (nno)|Nubian languages (nub)|Nyamwezi (nym)|Nyankole (nyn)|Nyoro (nyo)|Nzima (nzi)|Occitan (oci)|Official Aramaic (arc)|Ojibwa (oji)|Oriya (ori)|Oromo (orm)|Osage (osa)|Ossetian-Ossetic (oss)|Otomian languages (oto)|Pahlavi (pal)|Palauan (pau)|Pali (pli)|Pampanga-Kapampangan (pam)|Pangasinan (pag)|Papiamento (pap)|Papuan languages (paa)|Pedi-Sepedi-Northern Sotho (nso)|Persian (per)|Persian, Old (peo)|Philippine languages (phi)|Phoenician (phn)|Pohnpeian (pon)|Polish (pol)|Prakrit languages (pra)|Provencal, Old (pro)|Pushto-Pashto (pus)|Quechua (que)|Rajasthani (raj)|Rapanui (rap)|Rarotongan-Cook Islands Maori (rar)|Reserved for local use (qaa-qtz)|Romance languages (roa)|Romanian (rum)|Romansh (roh)|Romany (rom)|Rundi (run)|Salishan languages (sal)|Samaritan Aramaic (sam)|Sami languages (smi)|Samoan (smo)|Sandawe (sad)|Sango (sag)|Sanskrit (san)|Santali (sat)|Sardinian (srd)|Sasak (sas)|Scots (sco)|Selkup (sel)|Semitic languages (sem)|Serbian (srp)|Serer (srr)|Shan (shn)|Shona (sna)|Sichuan Yi-Nuosu (iii)|Sicilian (scn)|Sidamo (sid)|Sign Languages (sgn)|Siksika (bla)|Sindhi (snd)|Sinhala-Sinhalese (sin)|Sino-Tibetan languages (sit)|Siouan languages (sio)|Skolt Sami (sms)|Slave (den)|Slavic languages (sla)|Slovak (slo)|Slovenian (slv)|Sogdian (sog)|Somali (som)|Songhai languages (son)|Soninke (snk)|Sorbian languages (wen)|Sotho, Southern (sot)|South American Indian languages (sai)|Southern Altai (alt)|Southern Sami (sma)|Sranan Tongo (srn)|Standard Moroccan Tamazight (zgh)|Sukuma (suk)|Sumerian (sux)|Sundanese (sun)|Susu (sus)|Swahili (swa)|Swati (ssw)|Swedish (swe)|Swiss German-Alemannic-Alsatian (gsw)|Syriac (syr)|Tagalog (tgl)|Tahitian (tah)|Tai languages (tai)|Tajik (tgk)|Tamashek (tmh)|Tamil (tam)|Tatar (tat)|Telugu (tel)|Tereno (ter)|Tetum (tet)|Thai (tha)|Tibetan (tib)|Tigre (tig)|Tigrinya (tir)|Timne (tem)|Tiv (tiv)|Tlingit (tli)|Tok Pisin (tpi)|Tokelau (tkl)|Tonga-Nyasa (tog)|Tonga-Tonga Islands (ton)|Tsimshian (tsi)|Tsonga (tso)|Tswana (tsn)|Tumbuka (tum)|Tupi languages (tup)|Turkish (tur)|Turkish, Ottoman (ota)|Turkmen (tuk)|Tuvalu (tvl)|Tuvinian (tyv)|Twi (twi)|Udmurt (udm)|Ugaritic (uga)|Uighur-Uyghur (uig)|Ukrainian (ukr)|Umbundu (umb)|Uncoded languages (mis)|Undetermined (und)|Upper Sorbian (hsb)|Urdu (urd)|Uzbek (uzb)|Vai (vai)|Venda (ven)|Vietnamese (vie)|Volapuk (vol)|Votic (vot)|Wakashan languages (wak)|Walloon (wln)|Waray (war)|Washo (was)|Welsh (wel)|Western Frisian (fry)|Wolaitta-Wolaytta (wal)|Wolof (wol)|Xhosa (xho)|Yakut (sah)|Yao (yao)|Yapese (yap)|Yiddish (yid)|Yoruba (yor)|Yupik languages (ypk)|Zande languages (znd)|Zapotec (zap)|Zaza-Dimili-Dimli-Kirdki-Kirmanjki-Zazaki (zza)|Zenaga (zen)|Zhuang-Chuang (zha)|Zulu (zul)|Zuni (zun)|" />
+		<setting type="sep" />
+		<setting label="30026" type="bool" id="eject" default="true" />
+		<setting label="30068" type="number" id="driveid" default="0" />
+	</category>
+	<category label="30031"> <!-- User Defined Profiles -->
+		<setting label="30047" type="text" id="p1_profilename" default="Profile 1" />
+		<setting label="30048" type="bool" id="p1_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p1_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p1_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p1_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p1_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p1_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p1_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p1_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>
+	<category label="30032">
+		<setting label="30047" type="text" id="p2_profilename" default="Profile 2" />
+		<setting label="30048" type="bool" id="p2_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p2_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p2_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p2_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p2_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p2_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p2_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p2_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>
+	<category label="30033">
+	<setting label="30047" type="text" id="p3_profilename" default="Profile 3" />
+		<setting label="30048" type="bool" id="p3_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p3_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p3_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p3_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p3_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p3_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p3_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p3_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>
+	<category label="30034">
+		<setting label="30047" type="text" id="p4_profilename" default="Profile 4" />
+		<setting label="30048" type="bool" id="p4_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p4_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p4_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p4_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p4_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p4_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p4_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p4_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>
+	<category label="30035">
+		<setting label="30047" type="text" id="p5_profilename" default="Profile 5" />
+		<setting label="30048" type="bool" id="p5_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p5_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p5_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p5_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p5_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p5_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p5_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p5_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>
+	<category label="30036">
+		<setting label="30047" type="text" id="p6_profilename" default="Profile 6" />
+		<setting label="30048" type="bool" id="p6_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p6_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p6_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p6_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p6_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p6_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p6_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p6_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>  
+	<category label="30037">
+		<setting label="30047" type="text" id="p7_profilename" default="Profile 7" />
+		<setting label="30048" type="bool" id="p7_enabled" default="false" />
+		<setting label="30022" type="labelenum" id="p7_mintitlelength" default="30076" lvalues="30070|30071|30072|30073|30074|30075|30076|30077|30078|30079" enable="eq(-1,true) + !eq(1,2)" />
+		<setting label="30061" type="enum" id="p7_mode" lvalues="30080|30081|30082" default="0" enable="eq(-2,true)" />
+		<setting label="30011" type="enum" id="p7_resolution" lvalues="30042|30043|30044|30045" default="0" enable="eq(-3,true) + !eq(-1,0)" />
+		<setting label="30012" type="enum" id="p7_quality" lvalues="30085|30086|30087|30088|30089" default="0" enable="eq(-4,true) + !eq(-2,0)" />
+		<setting label="30024" type="bool" id="p7_foreignaudio" default="false" enable="eq(-5,true) + !eq(-3,0)" />
+		<setting label="30028" type="bool" id="p7_blackandwhite" default="30041" enable="eq(-6,true) + !eq(-4,0)" />
+		<setting label="30064" type="text" id="p7_additionalhandbrakeargs" visible="eq(-7,true) + !eq(-5,0)" default="" />
+	</category>    
+</settings>

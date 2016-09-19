@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="3">
+  <defaultcontrol>20</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include>CommonHomeBack</include>
+    <control type="group">
+      <animation effect="slide" start="-930,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="-930,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>930</width>
+        <height>1080</height>
+        <texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow2.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+      </control>
+      <control type="image">
+        <left>750</left>
+        <top>45</top>
+        <width>120</width>
+        <height>120</height>
+        <aspectratio>keep</aspectratio>
+        <info>Container(20).ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <description>header label</description>
+        <left>45</left>
+        <top>135</top>
+        <width>855</width>
+        <height>45</height>
+        <font>primal_30</font>
+        <label>49980</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      </control>
+      <control type="label" id="101">
+        <description>current directory text label</description>
+        <left>128</left>
+        <top>135</top>
+        <width>600</width>
+        <height>45</height>
+        <font>primal_30</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <scroll>true</scroll>
+        <align>left</align>
+        <aligny>center</aligny>
+      </control>
+      <control type="label">
+        <description>number of files/pages in left list text label</description>
+        <left>60</left>
+        <top>1020</top>
+        <width>855</width>
+        <font>font12</font>
+        <align>left</align>
+        <scroll>true</scroll>
+        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <label>($INFO[Container(20).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages])</label>
+      </control>
+      <control type="scrollbar" id="30">
+        <left>922</left>
+        <top>210</top>
+        <width>15</width>
+        <height>825</height>
+        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <textureslidernib>-</textureslidernib>
+        <textureslidernibfocus>-</textureslidernibfocus>
+        <onleft>31</onleft>
+        <onright>20</onright>
+        <ondown>20</ondown>
+        <onup>20</onup>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="list" id="20">
+        <left>15</left>
+        <top>210</top>
+        <width>905</width>
+        <height>836</height>
+        <onleft>30</onleft>
+        <onright>21</onright>
+        <onup>20</onup>
+        <ondown>20</ondown>
+        <pagecontrol>30</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="76">
+          <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>902</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>		
+		  </control>
+          <control type="label">
+            <left>30</left>
+            <top>0</top>
+            <width>750</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <left>795</left>
+            <top>8</top>
+            <width>300</width>
+            <height>36</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <info>ListItem.Label2</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="76">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>902</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>	
+			<visible>!Control.HasFocus(20)</visible>	
+		  </control>
+          <control type="image">
+            <left>0</left>
+            <top>1</top>
+            <width>902</width>
+            <height>75</height>
+            <visible>Control.HasFocus(20)</visible>
+            <texture background="true">skin/button_gross.png</texture>
+	        <colordiffuse>$VAR[BackColorButton]</colordiffuse>	
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>0</top>
+            <width>750</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <left>795</left>
+            <top>10</top>
+            <width>300</width>
+            <height>36</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <info>ListItem.Label2</info>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+    <control type="group">
+      <animation effect="slide" start="930,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="930,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+      <control type="image">
+        <left>930r</left>
+        <top>0</top>
+        <width>930</width>
+        <height>1080</height>
+        <texture background="true">skin/dialog_blank.png</texture>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+      </control>
+      <control type="image">
+        <left>180r</left>
+        <top>45</top>
+        <width>120</width>
+        <height>120</height>
+        <aspectratio>keep</aspectratio>
+        <info>Container(21).ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <description>header label</description>
+        <left>885r</left>
+        <top>135</top>
+        <width>855</width>
+        <height>45</height>
+        <font>primal_30</font>
+        <label>49981</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      </control>
+      <control type="label" id="102">
+        <description>current directory text label right</description>
+        <left>818r</left>
+        <top>135</top>
+        <width>600</width>
+        <height>45</height>
+        <font>primal_30</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <scroll>true</scroll>
+        <align>left</align>
+        <aligny>center</aligny>
+      </control>
+      <control type="label">
+        <description>number of files/pages in left list text label</description>
+        <left>600r</left>
+        <top>1020</top>
+        <width>855</width>
+        <font>font12</font>
+        <align>right</align>
+        <scroll>true</scroll>
+        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <label>($INFO[Container(21).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(21).CurrentPage]/$INFO[Container(21).NumPages])</label>
+      </control>
+      <control type="scrollbar" id="31">
+        <left>935r</left>
+        <top>210</top>
+        <width>15</width>
+        <height>825</height>
+        <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+        <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+        <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+        <textureslidernib>-</textureslidernib>
+        <textureslidernibfocus>-</textureslidernibfocus>
+        <onleft>21</onleft>
+        <onright>30</onright>
+        <ondown>21</ondown>
+        <onup>21</onup>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="list" id="21">
+        <left>915r</left>
+        <top>210</top>
+        <width>905</width>
+        <height>836</height>
+        <onleft>20</onleft>
+        <onright>31</onright>
+        <onup>21</onup>
+        <ondown>21</ondown>
+        <pagecontrol>31</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="76">
+          <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>902</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>		
+		  </control>
+          <control type="label">
+            <left>30</left>
+            <top>0</top>
+            <width>750</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <left>795</left>
+            <top>10</top>
+            <width>300</width>
+            <height>36</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <info>ListItem.Label2</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="76">
+          <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>902</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>	
+			<visible>!Control.HasFocus(21)</visible>	
+		  </control>
+          <control type="image">
+            <left>0</left>
+            <top>1</top>
+            <width>902</width>
+            <height>75</height>
+            <visible>Control.HasFocus(21)</visible>
+            <texture background="true">skin/button_gross.png</texture>
+	        <colordiffuse>$VAR[BackColorButton]</colordiffuse>	
+          </control>
+          <control type="label">
+            <left>30</left>
+            <top>0</top>
+            <width>750</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <info>ListItem.Label</info>
+          </control>
+          <control type="label">
+            <left>795</left>
+            <top>8</top>
+            <width>300</width>
+            <height>36</height>
+            <font>primal_20</font>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <info>ListItem.Label2</info>
+          </control>
+        </focusedlayout>
+      </control>
+    </control>
+    <control type="group">
+      <left>52</left>
+      <top>45</top>
+      <animation effect="slide" end="-465,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+      <animation effect="slide" start="-465,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+      <control type="label">
+        <include>WindowTitleCommons</include>
+        <left>0</left>
+        <label>$LOCALIZE[7]</label>
+      </control>
+    </control>
+  </controls>
+</window>

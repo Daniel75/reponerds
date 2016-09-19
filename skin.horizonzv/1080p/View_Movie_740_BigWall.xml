@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="CoverWall_Big">
+        <control type="group">
+            <include>openclose</include>
+            <control type="button" id="444">
+                <enable>false</enable>
+                <include>HiddenButton</include>
+                <visible>Control.IsVisible(740)+!Control.HasFocus(666)</visible>
+            </control>
+            <visible>Control.IsVisible(740)</visible>
+            <include>WhiteGrunge</include>
+            <control type="group">
+                <include>openclosebox</include>
+                <visible>Control.IsVisible(740)</visible>
+                <control type="panel" id="740">
+                    <left>12</left>
+                    <top>15</top>
+                    <width>1920</width>
+                    <height>981</height>
+                    <onleft>CancelAlarm(plot,true)</onleft>
+                    <onleft>9000</onleft>
+                    <onright>CancelAlarm(plot,true)</onright>
+                    <onright condition="Control.IsVisible(70)">70</onright>
+                    <onright condition="Control.IsVisible(15000)">15000</onright>
+                    <onright condition="!Control.IsVisible(15000)">732</onright>
+                    <onup>740</onup>
+                    <ondown>740</ondown>
+                    <viewtype label="BigWall">panel2</viewtype>
+                    <pagecontrol>70</pagecontrol>
+                    <scrolltime>300</scrolltime>
+                    <preloaditems>20</preloaditems>
+                    <visible>Container.Content(Musicvideos)|Container.Content(Sets)|Container.Content(Movies)|Container.Content(TVShows)|Container.Content(Seasons)</visible>
+                    <include>WallViewLayout</include>
+                </control>
+            </control>
+            <control type="image">
+                <animation effect="slide" end="-75" time="150" condition="Control.HasFocus(70)">Conditional</animation>
+                <left>1905</left>
+                <top>0</top>
+                <height>1080</height>
+                <width>120</width>
+                <colordiffuse>red</colordiffuse>
+                <animation effect="fade" end="70" time="0" condition="true">Conditional</animation>
+                <texture flipx="true">SideFadeWhite.png</texture>
+            </control>
+            <control type="scrollbar" id="70">
+                <animation effect="slide" end="-75" time="150">Focus</animation>
+                <left>1935</left>
+                <top>8</top>
+                <height>990</height>
+                <onleft>740</onleft>
+                <onright condition="Control.IsVisible(15000)">15000</onright>
+                <onright condition="!Control.IsVisible(15000)">732</onright>
+                <showonepage>false</showonepage>
+                <orientation>vertical</orientation>
+            </control>
+            <visible>Control.IsVisible(740)</visible>
+            <include>WallViewInfoPanel</include>
+            <include condition="!Skin.HasSetting(HideJumpSMSBar)">AlphaBarV</include>
+        </control>
+    </include>
+</includes>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="104">
+	<defaultcontrol always="true">-</defaultcontrol>
+	<controls>
+		<control type="group">
+			<left>875</left>
+			<top>64</top>
+			<include>openclose</include>
+			<animation type="WindowOpen" condition="Skin.HasSetting(animation)">
+				<effect type="fade" start="0" end="100" time="300"/>
+				<effect type="slide" start="0,-200" end="0,0" time="500"/>
+			</animation>
+			<animation type="WindowClose" condition="Skin.HasSetting(animation)">
+				<effect type="fade" start="100" end="0" time="500"/>
+				<effect type="slide" start="0,0" end="0,-200" time="1000"/>
+			</animation>
+			<animation type="Visible" condition="Skin.HasSetting(animation)">
+				<effect type="fade" start="0" end="100" time="300"/>
+				<effect type="slide" start="0,-200" end="0,0" time="500"/>
+			</animation>
+			<animation type="Hidden" condition="Skin.HasSetting(animation)">
+				<effect type="fade" start="100" end="0" time="500"/>
+				<effect type="slide" start="0,0" end="0,-200" time="1000"/>
+			</animation>
+			<animation effect="slide" start="0" end="-40" time="200" condition="Window.IsVisible(MuteBug)">Conditional</animation>
+			<control type="image">
+				<description>background image</description>
+				<left>10</left>
+				<top>5</top>
+				<width>384</width>
+				<height>40</height>
+				<texture background="true" border="10">OverlayDialogBackground.png</texture>
+				<visible>!Window.IsVisible(visualisation)+!Window.IsVisible(fullscreenvideo)</visible>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<left>6</left>
+				<top>5</top>
+				<width>385</width>
+				<height>43</height>
+				<texture border="2">Underlay2.png</texture>
+				<visible>Window.IsVisible(visualisation)|Window.IsVisible(fullscreenvideo)</visible>
+			</control>
+			<control type="group">
+				<visible>!player.passthrough</visible>
+				<control type="image">
+					<description>Lite Volume Logo</description>
+					<left>10</left>
+					<top>6</top>
+					<width>42</width>
+					<height>38</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">osd/AudioFO.png</texture>
+				</control>
+				<control type="progress" id="1">
+					<description>progress control</description>
+					<left>50</left>
+					<top>12</top>
+					<width>330</width>
+					<height>27</height>
+					<info>Player.Volume</info>
+				</control>
+				<control type="label">
+					<description>progress control</description>
+					<left>300</left>
+					<top>17</top>
+					<width>75</width>
+					<height>18</height>
+					<font>ubuntu-r13b</font>
+					<shadowcolor>black</shadowcolor>
+					<align>right</align>
+					<info>Player.Volume</info>
+				</control>
+			</control>
+			<control type="group">
+				<visible>player.passthrough</visible>
+				<control type="image">
+					<description>Lite Volume Logo</description>
+					<left>10</left>
+					<top>6</top>
+					<width>42</width>
+					<height>38</height>
+					<aspectratio>keep</aspectratio>
+					<colordiffuse>selected</colordiffuse>
+					<texture background="true">osd/AudioFO.png</texture>
+				</control>
+				<control type="label">
+					<description>Passthrough Label</description>
+					<left>70</left>
+					<top>18</top>
+					<width>330</width>
+					<height>18</height>
+					<font>ubuntu-r13b</font>
+					<label>29802</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

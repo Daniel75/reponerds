@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>FSK 18</name>
+    <match>all</match>
+    <rule field="mpaarating" operator="is">
+        <value>FSK 18</value>
+		<value>Germany:18</value>
+		<value>R18</value>
+		<value>Rated NC</value>
+		<value>Australia:X</value>
+    </rule>
+	<order direction="ascending">sorttitle</order>
+</smartplaylist>

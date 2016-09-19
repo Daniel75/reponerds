@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1124" type="dialog">
+	<defaultcontrol always="true">90100</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>457</left>
+		<top>240</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<onunload condition="!IsEmpty(Skin.String(ItemToEdit.Widget))">Skin.SetString($INFO[Window(Home).Property(Destiny.Widget)],$INFO[Skin.String(ItemToEdit.Widget)])</onunload>
+	<onunload condition="!IsEmpty(Skin.String(ItemToEdit.WidgetLabel))">Skin.SetString($INFO[Window(Home).Property(Destiny.WidgetLabel)],$INFO[Skin.String(ItemToEdit.WidgetLabel)])</onunload>
+	<onunload condition="!IsEmpty(Skin.String(ItemToEdit.WidgetType))">Skin.SetString($INFO[Window(Home).Property(Destiny.WidgetType)],$INFO[Skin.String(ItemToEdit.WidgetType)])</onunload>
+	<onunload>ClearProperty(Destiny.Widget,Home)</onunload>
+	<onunload>ClearProperty(Destiny.WidgetLabel,Home)</onunload>
+	<onunload>ClearProperty(Destiny.WidgetType,Home)</onunload>
+	<controls>
+	    <control type="image">
+		  <left>175</left>
+		  <top>75</top>
+		  <width>383</width>
+		  <height>505</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>
+		<control type="list" id="90100">
+			<left>189</left>
+			<top>88</top>
+			<width>628</width>
+			<height>480</height>
+			<onup>90100</onup>
+			<ondown>90100</ondown>
+			<onleft>90100</onleft>
+			<onright>60</onright>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="65" width="356">
+				<control type="image">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <texture background="true">skin/button_klein.png</texture>
+				  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				</control>
+				<control type="label">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <font>primal_20</font>
+				  <textoffsetx>15</textoffsetx>
+				  <textcolor>$VAR[ColorFontNormal]</textcolor>
+				  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				  <align>right</align>
+				  <aligny>center</aligny>
+				  <label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="65" width="356">
+				<control type="image">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <texture background="true">skin/button_klein.png</texture>
+				  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				</control>
+				<control type="label">
+				  <left>0</left>
+				  <top>0</top>
+				  <width>356</width>
+				  <height>60</height>
+				  <font>primal_20</font>
+				  <textoffsetx>15</textoffsetx>
+				  <textcolor>$VAR[ColorFontNormal]</textcolor>
+				  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				  <align>right</align>
+				  <aligny>center</aligny>
+				  <label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+			<content>
+				<!-- WidgetType: -->
+				<!-- 1: Video    -->
+				<!-- 2: Music    -->
+				<item>
+					<label>$LOCALIZE[16018]</label>
+					<onclick>Skin.Reset(ItemToEdit.Widget)</onclick>
+					<onclick>Skin.Reset(ItemToEdit.WidgetLabel)</onclick>
+					<onclick>Skin.Reset(ItemToEdit.WidgetType)</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.Widget)],$INFO[Skin.String(ItemToEdit.Widget)])</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.WidgetLabel)],$INFO[Skin.String(ItemToEdit.WidgetLabel)])</onclick>
+					<onclick>Skin.SetString($INFO[Window(Home).Property(Destiny.WidgetType)],$INFO[Skin.String(ItemToEdit.WidgetType)])</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>Video Playlist</label>
+					<onclick>Skin.SetFile(ItemToEdit.Widget,.xsp,special://profile/playlists/video/)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>Musik Playlist</label>
+					<onclick>Skin.SetFile(ItemToEdit.Widget,.xsp|.m3u,special://profile/playlists/music/)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,2)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[50000]</label>
+					<onclick>Skin.SetString(ItemToEdit.Widget,special://skin/playlists/Movies Recent.xsp)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel,$LOCALIZE[50000])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[49986]</label>
+					<onclick>Skin.SetString(ItemToEdit.Widget,videodb://movies/sets/)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel,$LOCALIZE[49986])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[50315]</label>
+					<onclick>Skin.SetString(ItemToEdit.Widget,special://skin/playlists/Top Rated Movies.xsp)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel,$LOCALIZE[50315])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>			
+				<item>
+					<label>$LOCALIZE[50006]</label>
+					<onclick>Skin.SetString(ItemToEdit.Widget,special://skin/playlists/inprogress TVShows.xsp)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel,$LOCALIZE[50006])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+				<item>
+					<label>$LOCALIZE[50133]</label>
+					<onclick>Skin.SetString(ItemToEdit.Widget,special://skin/playlists/Unseen TVShows.xsp)</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetLabel,$LOCALIZE[50133])</onclick>
+					<onclick>Skin.SetString(ItemToEdit.WidgetType,1)</onclick>
+					<onclick>Dialog.Close(1124)</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>819</left>
+			<top>88</top>
+			<height>480</height>
+			<width>14</width>
+			<onleft>90100</onleft>
+			<onright>90100</onright>
+			<ondown>60</ondown>
+			<onup>60</onup>
+			<showonepage>false</showonepage>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar colordiffuse="55ffffff" border="4">scrollbar/texturesliderbar3.png</texturesliderbar>
+			<texturesliderbarfocus border="4">scrollbar/texturesliderbar3.png</texturesliderbarfocus>
+		</control>
+	</controls>
+</window>
