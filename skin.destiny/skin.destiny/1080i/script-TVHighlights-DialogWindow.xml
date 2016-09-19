@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+    <defaultcontrol always="true">95666</defaultcontrol>
+	<include>dialogeffect</include>
+	<controls>
+		<control type="group">
+			<left>0</left>
+			<top>0</top>
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>1920</width>
+			  <height>1080</height>
+			  <texture background="true">background.png</texture>
+			</control>
+		</control>
+		<control type="group">
+			<left>255</left>
+			<top>20</top>
+			<control type="image">
+			  <left>18</left>
+			  <top>70</top>
+			  <width>1374</width>
+			  <height>900</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>28</left>
+			  <top>80</top>
+			  <width>1354</width>
+			  <height>880</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="button">
+			  <description>Close Window button</description>
+			  <left>1358</left>
+			  <top>55</top>
+			  <width>48</width>
+			  <height>48</height>
+			  <label>-</label>
+			  <font>-</font>
+			  <onclick>PreviousMenu</onclick>
+			  <texturefocus>default/close.png</texturefocus>
+			  <texturenofocus>default/close.png</texturenofocus>
+			  <visible>!Skin.HasSetting(tablet_modus)</visible>
+			</control>
+			<control type="image">
+			  <left>45</left>
+			  <top>100</top>
+			  <width>630</width>
+			  <height>440</height>
+	          <texture background="true">$INFO[Window(Home).Property(TVHighlightsToday.Info.Picture)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+			  <aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
+			</control>
+			<control type="image">
+			  <left>1040</left>
+			  <top>285</top>
+			  <width>200</width>
+			  <height>200</height>
+			  <texture background="true">$INFO[Window(Home).Property(TVHighlightsToday.Info.Logo)]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>105</top>
+			  <width>640</width>
+			  <height>36</height>
+			  <font>primal_24</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Title)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>155</top>
+			  <width>640</width>
+			  <height>10</height>
+			  <font>primal_16</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Broadcastdetails)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>195</top>
+			  <width>640</width>
+			  <height>36</height>
+			  <font>primal_16</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Subtitle)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+            <control type="label">
+			  <left>700</left>
+			  <top>250</top>
+			  <width>310</width>
+			  <height>15</height>
+			  <font>font20_title</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>$LOCALIZE[563]:</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>300</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.RatingType.1)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>340</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.RatingType.2)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>380</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.RatingType.3)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>420</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.RatingType.4)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>700</left>
+			  <top>460</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.RatingType.5)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>860</left>
+			  <top>300</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Rating.1)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>860</left>
+			  <top>340</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Rating.2)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>860</left>
+			  <top>380</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Rating.3)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>860</left>
+			  <top>420</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Rating.4)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>860</left>
+			  <top>460</top>
+			  <width>300</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Rating.5)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>50</left>
+			  <top>570</top>
+			  <width>310</width>
+			  <height>15</height>
+			  <font>primal_20</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>$LOCALIZE[515]:</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			</control>
+            <control type="label">
+			  <left>50</left>
+			  <top>610</top>
+			  <width>1320</width>
+			  <height>10</height>
+			  <font>primal_18</font>
+			  <label>$INFO[Window(Home).Property(TVHighlightsToday.Info.Genre)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <scroll>true</scroll>
+			  <scrollspeed>50</scrollspeed>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+            <control type="label">
+			  <left>50</left>
+			  <top>650</top>
+			  <width>310</width>
+			  <height>15</height>
+			  <font>primal_20</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>$LOCALIZE[203]:</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			</control>
+			<control type="textbox">
+			  <left>50</left>
+			  <top>680</top>
+			  <width>1320</width>
+			  <height>200</height>
+			  <font>primal_18</font>
+			  <align>left</align>
+			  <autoscroll delay="10000" time="5000" repeat="10000">!IsEmpty(Window(Home).Property(TVHighlightsToday.Info.Description))</autoscroll>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window(Home).Property(TVHighlightsToday.Info.Description)][/COLOR]</label>
+			</control>
+			<control type="grouplist" id="95665">
+			<left>480</left>
+			<top>905</top>
+			<width>800</width>
+			<height>40</height>
+			<itemgap>5</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="button" id="95666">
+			  <description>switchtimer button</description>
+			  <width>200</width>
+			  <height>40</height>
+			  <label>$ADDON[plugin.program.tvhighlights  30107]</label>
+			  <align>center</align>
+			  <visible>System.HasAddon(service.kn.switchtimer)</visible>
+			  <onclick>RunScript(service.kn.switchtimer,action=add,channel=$INFO[Window(Home).Property(TVHighlightsToday.Info.Channel)],date=$INFO[Window(Home).Property(TVHighlightsToday.Info.Date)],title=$INFO[Window(Home).Property(TVHighlightsToday.Info.Title)])</onclick>
+			  <visible>System.HasAddon(service.kn.switchtimer)</visible>
+	        </control>
+		    <control type="button" id="95667">
+			  <description>Cancel Button</description>
+			  <width>200</width>
+			  <height>40</height>
+			  <label>222</label>
+			  <align>center</align>
+			  <onclick>Close</onclick>
+			</control>
+	     </control>
+		</control>
+
+	</controls>
+
+</window>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4102">
+    <defaultcontrol always="true">19002</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>			
+		
+		<control type="list" id="19002">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>800</height>
+			<onright>1860</onright>
+			<onleft>19102</onleft>
+			<onup>19002</onup>
+			<ondown>19002</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>	
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>
+			    <item id="90190">
+				  <label>50204</label>
+				  <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>!Skin.HasSetting(hidetvtitle)</visible>
+				</item>
+			    <item id="901898">
+				  <label>49987</label>
+				  <onclick>ActivateWindow(Videos,recentlyaddedepisodes,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/new.png</property>
+				  <property name="MenuIcon_over">home/homeicons/new.png</property>
+				  <visible>!Skin.HasSetting(hidemovierecently)</visible>
+				</item>
+				<item id="901899">
+				  <label>50330</label>
+				  <onclick>ActivateWindow(10025,special://skin/playlists/Last Played Episodes.xsp,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/news.png</property>
+				  <property name="MenuIcon_over">home/homeicons/news.png</property>
+				  <visible>!Skin.HasSetting(HomeMenuNoTopRatingButton)</visible>
+				</item>
+				<item id="901900">
+				  <label>49985</label>
+				  <onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+				  <onclick>SendClick(8)</onclick>
+				  <property name="MenuIcon">home/homeicons/search.png</property>
+				  <property name="MenuIcon_over">home/homeicons/search.png</property>
+				</item>
+				<item id="90191">
+				  <label>135</label>
+				  <onclick>ActivateWindow(VideoLibrary,TVShowGenres,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/genres.png</property>
+				  <property name="MenuIcon_over">home/homeicons/genres.png</property>
+				  <visible>!Skin.HasSetting(hidetvgenre)</visible>
+				</item>
+				<item id="90192">
+				  <label>652</label>
+				  <onclick>ActivateWindow(VideoLibrary,TVShowYears,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/years.png</property>
+				  <property name="MenuIcon_over">home/homeicons/years.png</property>
+				  <visible>!Skin.HasSetting(hidetvyears)</visible>
+				</item>
+				<item id="90193">
+				  <label>344</label>
+				  <onclick>ActivateWindow(VideoLibrary,TVShowActors,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/actors.png</property>
+				  <property name="MenuIcon_over">home/homeicons/actors.png</property>
+				  <visible>!Skin.HasSetting(hidetvactor)</visible>
+				</item>	
+				<item id="90202">
+				  <label>20388</label>
+				  <onclick>ActivateWindow(VideoLibrary,TVShowStudios,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/profiles.png</property>
+				  <property name="MenuIcon_over">home/homeicons/profiles.png</property>
+				  <visible>!Skin.HasSetting(hidemoviestudios)</visible>
+				</item>		
+				<item id="90196">
+				  <label>$INFO[Skin.String(tvplaylistButton1_label)]</label>
+				  <onclick>Setfocus(9000)</onclick>
+				  <onclick>$INFO[Skin.String(tvplaylistButton1_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(tvplaylistButton1) + !IsEmpty(Skin.String(tvplaylistButton1_label))</visible>
+				</item>
+				<item id="90197">
+				  <label>$INFO[Skin.String(tvplaylistButton2_label)]</label>
+				  <onclick>Setfocus(9000)</onclick>
+				  <onclick>$INFO[Skin.String(tvplaylistButton2_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(tvplaylistButton2) + !IsEmpty(Skin.String(tvplaylistButton2_label))</visible>
+				</item>
+				<item id="90198">
+				  <label>$INFO[Skin.String(tvplaylistButton3_label)]</label>
+				  <onclick>Setfocus(9000)</onclick>
+				  <onclick>$INFO[Skin.String(tvplaylistButton3_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(tvplaylistButton3) + !IsEmpty(Skin.String(tvplaylistButton3_label))</visible>
+				</item>
+				<item id="90199">
+				  <label>$INFO[Skin.String(tvplaylistButton4_label)]</label>
+				  <onclick>Setfocus(9000)</onclick>
+				  <onclick>$INFO[Skin.String(tvplaylistButton4_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(tvplaylistButton4) + !IsEmpty(Skin.String(tvplaylistButton4_label))</visible>
+				</item>
+				<item id="90200">
+				  <label>653</label>
+				  <onclick>UpdateLibrary(Video)</onclick>
+				  <property name="MenuIcon">home/homeicons/refresh.png</property>
+				  <property name="MenuIcon_over">home/homeicons/refresh.png</property>
+				  <visible>!Skin.HasSetting(hidetvupdate)</visible>
+				</item>
+				<item id="90201">
+				  <label>20108</label>
+				  <onclick>ActivateWindow(Videos,Root)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				</item>
+			</content>
+		</control>
+		
+		<control type="wraplist" id="19102">
+		  <include>Animation.ZoomIn</include>
+		  <left>186</left>
+		  <top>165</top>
+		  <width>1255</width>
+	      <height>810</height>
+		  <onright>19002</onright>
+		  <onleft>9020</onleft>
+		  <onup>19102</onup>
+		  <ondown>19102</ondown>
+		  <orientation>vertical</orientation>
+		  <preloaditems>1</preloaditems>
+		  <autoscroll time="15000">!Control.HasFocus(19102)</autoscroll>
+		  <scrolltime tween="cubic">500</scrolltime>
+		  <itemlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/TVDEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+		  </itemlayout>
+		  <focusedlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/TVDEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>0</left>
+				<top>615</top>
+				<width>1155</width>
+				<height>200</height>
+				<texture background="true">skin/button_klein_tranz70.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				<visible>!Control.HasFocus(19102)</visible>
+			  </control>
+			  <control type="image">
+				<left>0</left>
+				<top>615</top>
+				<width>1155</width>
+				<height>200</height>
+				<texture background="true">skin/button_klein_tranz70.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.HasFocus(19102)</visible>
+			  </control>
+				<control type="label">
+				<description>Title label</description>
+				<left>20</left>
+				<top>630</top>
+				<height>45</height>
+				<width>1118</width>
+				<label>$INFO[ListItem.TVShowTitle]$INFO[ListItem.Label, - ]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="textbox">
+				<description>Movie Plot</description>
+				<left>20</left>
+				<top>680</top>
+				<width>1118</width>
+				<height>125</height>
+				<font>primal_16</font>
+				<align>justify</align>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+				<autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  </control>
+		  </focusedlayout>
+		      <content>videodb://recentlyaddedepisodes/</content>  
+		  </control>
+        
+    </controls>
+    </window>

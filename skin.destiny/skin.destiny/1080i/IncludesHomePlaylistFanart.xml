@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="HomePlaylistFanart">	 
+	<control type="group">
+	<left>0</left>
+	<top>0</top>
+	<visible>Container(9000).Hasfocus(3) | Container(9000).Hasfocus(5) | Container(9000).Hasfocus(6) | Container(9000).Hasfocus(7) | Container(9000).Hasfocus(8)</visible>
+	<control type="list" id="108310">
+		<left>-20</left>
+		<top>-20</top>
+		<width>1960</width>
+		<height>1120</height>
+		<viewtype>list</viewtype>
+		<orientation>vertical</orientation>
+		<focusposition>0</focusposition>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime>10</scrolltime>
+		<autoscroll time="10000" delay="10000" repeat="5000">true</autoscroll>
+		  <itemlayout width="0" height="0">
+          </itemlayout>
+          <focusedlayout width="0" height="0">
+            <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>1960</width>
+		      <height>1120</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+              <aspectratio>stretch</aspectratio>
+			  <fadetime>1000</fadetime>	
+            </control>
+          </focusedlayout>
+		<content target="video">$VAR[HomeBackgroundPlaylistenFanart]</content>
+	  </control>
+	</control>
+
+ </include>
+  
+
+</includes>

@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="LiveTVSearchView">
+        <control type="group">
+            <description>TV Search group</description>
+            <visible>Control.IsVisible(50)</visible>
+            <include>openclose</include>
+            <include>opencloseslideup</include>
+            <control type="group">
+                <left>120</left>
+                <top>300</top>
+                <control type="image">
+                    <description>Separator image</description>
+                    <left>-135</left>
+                    <top>12</top>
+                    <width>1950</width>
+                    <height>975</height>
+                    <colordiffuse>menudiffuse</colordiffuse>
+                    <texture background="true">BlackBack.png</texture>
+                </control>
+                <control type="label">
+                    <description>Channel label</description>
+                    <left>0</left>
+                    <top>33</top>
+                    <width>375</width>
+                    <height>30</height>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>19148</label>
+                </control>
+                <control type="label">
+                    <description>Title</description>
+                    <left>435</left>
+                    <top>33</top>
+                    <width>525</width>
+                    <height>30</height>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <label>369</label>
+                </control>
+                <control type="label">
+                    <description>Time label</description>
+                    <left>975</left>
+                    <top>33</top>
+                    <width>450</width>
+                    <height>30</height>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <label>21820</label>
+                </control>
+                <control type="label">
+                    <description>Status header label</description>
+                    <left>1440</left>
+                    <top>33</top>
+                    <width>210</width>
+                    <height>30</height>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>126</label>
+                </control>
+                <control type="image">
+                    <description>Separator image</description>
+                    <left>-135</left>
+                    <top>12</top>
+                    <width>1950</width>
+                    <height>1</height>
+                    <texture background="true">Separator2.png</texture>
+                </control>
+                <control type="list" id="50">
+                    <left>0</left>
+                    <top>82</top>
+                    <width>1650</width>
+                    <height>594</height>
+                    <onup>50</onup>
+                    <ondown>50</ondown>
+                    <onleft>9000</onleft>
+                    <onright>77</onright>
+                    <pagecontrol>77</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <itemlayout height="66">
+                        <control type="image">
+                            <left>0</left>
+                            <top>1</top>
+                            <width>375</width>
+                            <height>60</height>
+                            <colordiffuse>menudiffuse</colordiffuse>
+                            <texture background="true" border="5">BlackBack.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>15</left>
+                            <top>8</top>
+                            <width>45</width>
+                            <height>45</height>
+                            <info>ListItem.Icon</info>
+                            <aspectratio>keep</aspectratio>
+                        </control>
+                        <control type="group">
+                            <top>6</top>
+                            <control type="label">
+                                <left>75</left>
+                                <top>0</top>
+                                <width>285</width>
+                                <height>52</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <textcolor>grey</textcolor>
+                                <info>ListItem.ChannelName</info>
+                            </control>
+                            <control type="label">
+                                <left>390</left>
+                                <top>0</top>
+                                <width>975</width>
+                                <height>52</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <textcolor>grey</textcolor>
+                                <info>ListItem.Label</info>
+                            </control>
+                            <control type="label">
+                                <left>1095</left>
+                                <top>0</top>
+                                <width>330</width>
+                                <height>60</height>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                                <textcolor>grey</textcolor>
+                                <info>ListItem.Date</info>
+                            </control>
+                        </control>
+                        <control type="image">
+                            <left>1470</left>
+                            <top>15</top>
+                            <width>30</width>
+                            <height>30</height>
+                            <texture background="true">PVR-IsRecording.png</texture>
+                            <visible>ListItem.IsRecording</visible>
+                        </control>
+                        <control type="label">
+                            <left>1508</left>
+                            <top>0</top>
+                            <width>120</width>
+                            <height>60</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>ubuntu-r13</font>
+                            <textcolor>grey</textcolor>
+                            <label>19043</label>
+                            <visible>ListItem.IsRecording</visible>
+                        </control>
+                        <control type="image">
+                            <left>1455</left>
+                            <top>15</top>
+                            <width>30</width>
+                            <height>30</height>
+                            <texture background="true">PVR-HasTimer.png</texture>
+                            <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+                        </control>
+                        <control type="label">
+                            <left>1500</left>
+                            <top>0</top>
+                            <width>128</width>
+                            <height>60</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <font>ubuntu-r13</font>
+                            <textcolor>grey</textcolor>
+                            <label>31510</label>
+                            <visible>ListItem.HasTimer</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="66">
+                        <control type="group">
+                            <include>focuseffect</include>
+                            <control type="image">
+                                <left>375</left>
+                                <top>1</top>
+                                <width>1275</width>
+                                <height>60</height>
+                                <colordiffuse>reddiffuse</colordiffuse>
+                                <texture background="true" border="4">WhiteBack.png</texture>
+                                <visible>Control.HasFocus(50)</visible>
+                            </control>
+                            <control type="image">
+                                <left>375</left>
+                                <top>1</top>
+                                <width>1275</width>
+                                <height>60</height>
+                                <texture background="true" border="4">masks/Default_sharp.png</texture>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <top>1</top>
+                                <width>375</width>
+                                <height>60</height>
+                                <texture background="true" border="5">BlackBack.png</texture>
+                                <visible>!Control.HasFocus(50)</visible>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <top>1</top>
+                                <width>375</width>
+                                <height>60</height>
+                                <colordiffuse>reddiffuse</colordiffuse>
+                                <texture background="true" border="5">WhiteBack.png</texture>
+                                <visible>Control.HasFocus(50)</visible>
+                            </control>
+                            <control type="image">
+                                <left>15</left>
+                                <top>8</top>
+                                <width>45</width>
+                                <height>45</height>
+                                <info>ListItem.Icon</info>
+                                <aspectratio>keep</aspectratio>
+                            </control>
+                            <control type="group">
+                                <top>6</top>
+                                <control type="label">
+                                    <left>75</left>
+                                    <top>0</top>
+                                    <width>285</width>
+                                    <height>52</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <info>ListItem.ChannelName</info>
+                                </control>
+                                <control type="label">
+                                    <left>390</left>
+                                    <top>0</top>
+                                    <width>975</width>
+                                    <height>52</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>white</textcolor>
+                                    <info>ListItem.Label</info>
+                                </control>
+                                <control type="label">
+                                    <left>1095</left>
+                                    <top>0</top>
+                                    <width>330</width>
+                                    <height>60</height>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <textcolor>white</textcolor>
+                                    <info>ListItem.Date</info>
+                                </control>
+                            </control>
+                            <control type="image">
+                                <left>1470</left>
+                                <top>15</top>
+                                <width>30</width>
+                                <height>30</height>
+                                <texture>$VAR[PVRTimerIcon]</texture>
+                            </control>
+                            <control type="label">
+                                <left>1500</left>
+                                <top>0</top>
+                                <width>128</width>
+                                <height>60</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <font>ubuntu-r13</font>
+                                <label>$VAR[PVRTimerLabel]</label>
+                            </control>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="scrollbar" id="77">
+                    <left>1658</left>
+                    <top>82</top>
+                    <height>594</height>
+                    <onleft>50</onleft>
+                    <onright>noop</onright>
+                    <showonepage>false</showonepage>
+                    <orientation>vertical</orientation>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

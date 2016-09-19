@@ -1,0 +1,1436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+   <include name="WidgetContentForeignAddons">
+      <control type="group">
+	  <left>0</left>
+	  <top>0</top>	
+	  <visible>Container(9000).Hasfocus(1)</visible>
+	  <visible>!Skin.HasSetting(tvhighlight) + !Skin.HasSetting(serienplaner)</visible>	
+	  <include>Animation.ZoomIn</include>
+	  <control type="list" id="8304">
+          <left>80</left>
+		  <top>250</top>
+		  <width>1750</width>
+		  <height>810</height>
+          <onleft>8304</onleft>
+          <onright>8304</onright>
+		  <onup>300004</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+          <focusposition>0</focusposition>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>500</scrolltime>
+          <itemlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>25</left>
+              <top>-10</top>
+              <width>200</width>
+              <height>200</height>
+              <texture background="true" fallback="default/nologo.png">$INFO[ListItem.Icon]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Title]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			</control>
+          </itemlayout>
+          <focusedlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>25</left>
+              <top>-10</top>
+              <width>200</width>
+              <height>200</height>
+              <texture background="true" fallback="default/nologo.png">$INFO[ListItem.Icon]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Title]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="3000" repeat="5000">Control.HasFocus(8304)</autoscroll>
+			</control>
+          </focusedlayout>
+		  <content target="video">$VAR[HomeWidgetsLiveTV]</content>
+        </control>
+	  </control>	
+	  
+	  
+	  <control type="group">
+	  <left>0</left>
+	  <top>0</top>
+	  <visible>Container(9000).Hasfocus(1)</visible>
+	  <visible>Skin.HasSetting(tvhighlight)</visible>		
+	  <include>Animation.ZoomIn</include>
+	  <control type="list" id="8304">
+          <left>80</left>
+		  <top>250</top>
+		  <width>1750</width>
+		  <height>810</height>
+          <onleft>8304</onleft>
+          <onright>8304</onright>
+		  <onup>300004</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+          <focusposition>0</focusposition>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>500</scrolltime>
+          <itemlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>170</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>	
+			<control type="image">
+              <left>11</left>
+              <top>11</top>
+              <width>228</width>
+              <height>25</height>
+              <texture background="true">skin/button_klein_tranz70.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>	
+			<control type="label">
+			  <description>watchtyp</description>
+			  <left>15</left>
+			  <top>0</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(watchtype)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_11_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <description>channel</description>
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>	
+			<control type="label">
+			  <description>Genre</description>
+			  <left>15</left>
+			  <top>210</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(channel)]$INFO[ListItem.Label2, - ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <description>Country</description>
+			  <left>15</left>
+			  <top>240</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(Extrainfos)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="image">
+			  <left>65</left>
+			  <top>340</top>
+			  <width>100</width>
+			  <height>100</height>
+			  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+          </itemlayout>
+          <focusedlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>170</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>	
+			<control type="image">
+              <left>11</left>
+              <top>11</top>
+              <width>228</width>
+              <height>25</height>
+              <texture background="true">skin/button_klein_tranz70.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>			
+			<control type="label">
+			  <description>watchtyp</description>
+			  <left>15</left>
+			  <top>0</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(watchtype)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_11_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <description>channel</description>
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>	
+			<control type="label">
+			  <description>Genre</description>
+			  <left>15</left>
+			  <top>210</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(channel)]$INFO[ListItem.Label2, - ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <description>Country</description>
+			  <left>15</left>
+			  <top>240</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(Extrainfos)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="image">
+			  <left>65</left>
+			  <top>340</top>
+			  <width>100</width>
+			  <height>100</height>
+			  <texture background="true">$INFO[ListItem.ActualIcon]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+          </focusedlayout>
+		  <content>
+		    <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.1.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.1.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.1.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.1.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.1.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.1.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.1.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.1.Title)]</label>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.1.Popup)]")</onclick>
+				<logo>$INFO[Window.Property(TVHighlightsToday.1.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.1.Logo)]</icon>	  
+				<label2>$INFO[Window.Property(TVHighlightsToday.1.Time)]</label2>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.1.Thumb)]</thumb>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.1.Logo)]</actualicon>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.1.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.2.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.2.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.2.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.2.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.2.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.2.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.2.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.2.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.2.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.2.Popup)]")</onclick>
+				<thumb2>$INFO[Window.Property(TVHighlightsToday.2.Logo)]</thumb2>
+				<icon>$INFO[Window.Property(TVHighlightsToday.2.Logo)]</icon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.2.Thumb)]</thumb>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.2.Logo)]</actualicon>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.2.Title))</visible>	  
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.3.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.3.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.3.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.3.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.3.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.3.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.3.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.3.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.3.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.3.Popup)]")</onclick>
+				<logo>$INFO[Window.Property(TVHighlightsToday.3.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.3.Logo)]</icon>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.3.Logo)]</actualicon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.3.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.3.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.4.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.4.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.4.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.4.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.4.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.4.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.4.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.4.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.4.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.4.Popup)]")</onclick>
+				<logo>$INFO[Window.Property(TVHighlightsToday.4.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.4.Logo)]</icon>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.4.Logo)]</actualicon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.4.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.4.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.5.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.5.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.5.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.5.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.5.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.5.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.5.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.5.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.5.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.5.Popup)]")</onclick>
+				<logo>$INFO[Window.Property(TVHighlightsToday.5.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.5.Logo)]</icon>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.5.Logo)]</actualicon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.5.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.5.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.6.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.6.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.6.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.6.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.6.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.6.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.6.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.6.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.6.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.6.Popup)]")</onclick>
+				<logo>$INFO[Window.Property(TVHighlightsToday.6.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.6.Logo)]</icon>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.6.Logo)]</actualicon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.6.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.6.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.7.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.7.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.7.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.7.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.7.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.7.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.7.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.7.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.7.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.7.Popup)]")</onclick>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.7.Logo)]</actualicon>
+				<logo>$INFO[Window.Property(TVHighlightsToday.7.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.7.Logo)]</icon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.7.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.7.Title))</visible>
+			 </item>
+			 <item>
+				<property name="channel">$INFO[Window.Property(TVHighlightsToday.8.Channel)]</property>
+				<property name="comment">$INFO[Window.Property(TVHighlightsToday.8.Comment)]</property>
+				<property name="genre">$INFO[Window.Property(TVHighlightsToday.8.Genre)]</property>
+				<property name="country">$INFO[Window.Property(TVHighlightsToday.8.Country)]</property>
+				<property name="year">$INFO[Window.Property(TVHighlightsToday.8.Year)]</property>
+				<property name="extrainfos">$INFO[Window.Property(TVHighlightsToday.8.Extrainfos)]</property>
+				<property name="watchtype">$INFO[Window.Property(TVHighlightsToday.8.WatchType)]</property>
+				<label>$INFO[Window.Property(TVHighlightsToday.8.Title)]</label>
+				<label2>$INFO[Window.Property(TVHighlightsToday.8.Time)]</label2>
+				<onclick>RunScript(plugin.program.tvhighlights,"?methode=infopopup&amp;detailurl=$INFO[Window.Property(TVHighlightsToday.8.Popup)]")</onclick>
+				<actualicon>$INFO[Window.Property(TVHighlightsToday.8.Logo)]</actualicon>
+				<logo>$INFO[Window.Property(TVHighlightsToday.8.Logo)]</logo>
+				<icon>$INFO[Window.Property(TVHighlightsToday.8.Logo)]</icon>
+				<thumb>$INFO[Window.Property(TVHighlightsToday.8.Thumb)]</thumb>
+				<visible>!IsEmpty(Window.Property(TVHighlightsToday.8.Title))</visible>
+			 </item>
+		  </content>
+        </control>
+	  </control>	
+	  
+	  
+	  
+	  
+      <control type="group">
+	  <left>0</left>
+	  <top>0</top>
+	  <visible>Container(9000).Hasfocus(1)</visible>
+	  <visible>Skin.HasSetting(serienplaner)</visible>		
+	  <include>Animation.ZoomIn</include>
+	  <control type="list" id="8304">
+          <left>80</left>
+		  <top>250</top>
+		  <width>1750</width>
+		  <height>810</height>
+          <onleft>8304</onleft>
+          <onright>8304</onright>
+		  <onup>300004</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+          <focusposition>0</focusposition>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>500</scrolltime>
+          <itemlayout width="250" height="350">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>229</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>170</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>	
+			<control type="image">
+              <left>11</left>
+              <top>11</top>
+              <width>228</width>
+              <height>25</height>
+              <texture background="true">skin/button_klein_tranz70.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>	
+			<control type="label">
+			  <left>15</left>
+			  <top>0</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_11_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(channel)] - $INFO[ListItem.Property(starttime)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>	
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label2]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(plot)][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			</control>
+			<control type="image">
+			  <left>150</left>
+			  <top>125</top>
+			  <width>70</width>
+			  <height>70</height>
+			  <texture background="true">$INFO[ListItem.Property(senderlogo)]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+          </itemlayout>
+          <focusedlayout width="250" height="350">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8304)</visible>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>229</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>170</height>
+              <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+            </control>	
+			<control type="image">
+              <left>11</left>
+              <top>11</top>
+              <width>228</width>
+              <height>25</height>
+              <texture background="true">skin/button_klein_tranz70.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>	
+			<control type="label">
+			  <left>15</left>
+			  <top>0</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_11_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Property(channel)] - $INFO[ListItem.Property(starttime)]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>	
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Label2]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_14</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(plot)][/COLOR]</label>
+			  <autoscroll time="2000" delay="3000" repeat="5000">Control.HasFocus(8304)</autoscroll>
+			</control>
+			<control type="image">
+			  <left>150</left>
+			  <top>125</top>
+			  <width>70</width>
+			  <height>70</height>
+			  <texture background="true">$INFO[ListItem.Property(senderlogo)]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			</control>
+          </focusedlayout>
+		  <content>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.1.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.1.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.1.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.1.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.1.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.1.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.1.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.1.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.1.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.1.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.1.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.1.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.1.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.1.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.1.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.1.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.1.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.1.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.1.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.1.TVShow))</visible>
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.2.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.2.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.2.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.2.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.2.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.2.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.2.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.2.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.2.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.2.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.2.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.2.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.2.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.2.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.2.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.2.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.2.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.2.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.2.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.2.TVShow))</visible>	  
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.3.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.3.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.3.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.3.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.3.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.3.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.3.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.3.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.3.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.3.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.3.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.3.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.3.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.3.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.3.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.3.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.3.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.3.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.3.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.3.TVShow))</visible>
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.4.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.4.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.4.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.4.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.4.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.4.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.4.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.4.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.4.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.4.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.4.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.4.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.4.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.4.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.4.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.4.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.4.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.4.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.4.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.4.TVShow))</visible>
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.5.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.5.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.5.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.5.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.5.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.5.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.5.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.5.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.5.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.5.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.5.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.5.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.5.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.5.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.5.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.5.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.5.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.5.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.5.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.5.TVShow))</visible>
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.6.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.6.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.6.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.6.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.6.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.6.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.6.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.6.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.6.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.6.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.6.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.6.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.6.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.6.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.6.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.6.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.6.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.6.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.6.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.6.TVShow))</visible>
+		   </item>
+		   <item>
+			  <label>$INFO[Window.Property(SerienPlaner.7.Title)]</label>
+			  <label2>$INFO[Window.Property(SerienPlaner.7.TVShow)]</label2>
+			  <thumb>$INFO[Window.Property(SerienPlaner.7.Thumb)]</thumb>
+			  <icon>$INFO[Window.Property(SerienPlaner.7.Poster)]</icon>
+			  <onclick>RunScript(plugin.program.sereinplaner,"?methode=set_details_to_home&amp;detailurl=$INFO[Window.Property(SerienPlaner.7.Popup)]")</onclick>	
+			  <property name="channel">$INFO[Window.Property(SerienPlaner.7.Channel)]</property>
+			  <property name="poster">$INFO[Window.Property(SerienPlaner.7.Poster)]</property>
+			  <property name="plot">$INFO[Window.Property(Serienplaner.7.Description)]</property>
+			  <property name="staffel">$INFO[Window.Property(SerienPlaner.7.Staffel)]</property>
+			  <property name="episode">$INFO[Window.Property(SerienPlaner.7.Episode)]</property>
+			  <property name="starttime">$INFO[Window.Property(SerienPlaner.7.Starttime)]</property>
+			  <property name="rating">$INFO[Window.Property(SerienPlaner.7.Rating)]</property>
+			  <property name="senderlogo">$INFO[Window.Property(SerienPlaner.7.Logo)]</property>
+			  <property name="genre">$INFO[Window.Property(SerienPlaner.7.Genre)]</property>
+			  <property name="date">$INFO[Window.Property(SerienPlaner.7.Datum)]</property>
+			  <property name="runtime">$INFO[Window.Property(SerienPlaner.7.RunningTime)]</property>
+			  <property name="studio">$INFO[Window.Property(SerienPlaner.7.Studio)]</property>
+			  <property name="year">$INFO[Window.Property(SerienPlaner.7.Jahr)]</property>
+			  <property name="altersfreigabe">$INFO[Window.Property(SerienPlaner.7.Altersfreigabe)]</property>
+			  <visible>!IsEmpty(Window.Property(SerienPlaner.7.TVShow))</visible>
+		   </item>
+		  </content>
+        </control>
+	  </control>
+	  
+	  
+	  <!--=================================== WIDGETS NEWSCENTER =====================================-->
+	  <control type="group">
+	  <left>0</left>
+	  <top>0</top>
+	  <visible>Container(9000).Hasfocus(31)</visible>		
+	  <include>Animation.ZoomIn</include>
+	  <control type="wraplist" id="8331">
+          <left>110</left>
+		  <top>130</top>
+		  <width>1700</width>
+		  <height>810</height>
+          <onleft>8331</onleft>
+          <onright>8331</onright>
+		  <onup>300004</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+          <focusposition>0</focusposition>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>500</scrolltime>
+          <itemlayout width="425" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>415</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>scale</aspectratio>
+            </control>	
+			<control type="image">
+              <left>6</left>
+              <top>490</top>
+              <width>413</width>
+              <height>45</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="label">
+			  <left>18</left>
+			  <top>490</top>
+			  <height>45</height>
+			  <width>390</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+          </itemlayout>
+          <focusedlayout width="425" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8331)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8331)</visible>
+            </control>
+			<control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>415</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>scale</aspectratio>
+            </control>	
+			<control type="image">
+              <left>6</left>
+              <top>490</top>
+              <width>413</width>
+              <height>45</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8331)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8331)</visible>
+            </control>
+			<control type="label">
+			  <left>18</left>
+			  <top>490</top>
+			  <height>45</height>
+			  <width>390</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>!Control.HasFocus(8331)</visible>
+			</control>
+			<control type="image">
+			  <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+			  <texture background="true">$INFO[ListItem.Property(headerpic)]</texture>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			  <visible>Control.HasFocus(8331)</visible>
+			</control>
+			<control type="label">
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8331)</visible>
+			</control>	
+			<control type="label">
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label2]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8331)</visible>
+			</control>
+			<control type="textbox">
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <label>$INFO[ListItem.Property(desc)]</label>
+			  <align>left</align>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <autoscroll time="2000" delay="3000" repeat="5000">Control.HasFocus(8331)</autoscroll>
+			  <visible>Control.HasFocus(8331)</visible>
+			</control>
+          </focusedlayout>
+		  <content>
+		    <item id="1">
+			  <label>$INFO[Window(Home).Property(LatestNews.0.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.0.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.0.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.0.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.0.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.0.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.0.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.0.Logo)]</actualicon>
+			</item>
+			<item id="2">
+			  <label>$INFO[Window(Home).Property(LatestNews.1.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.1.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.1.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.1.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.1.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.1.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.1.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.1.Logo)]</actualicon>
+			</item>
+			<item id="3">
+			  <label>$INFO[Window(Home).Property(LatestNews.2.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.2.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.2.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.2.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.2.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.2.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.2.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.2.Logo)]</actualicon>
+			</item>	
+			<item id="4">
+			  <label>$INFO[Window(Home).Property(LatestNews.3.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.3.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.3.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.3.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.3.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.3.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.3.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.3.Logo)]</actualicon>
+			</item>
+			<item id="5">
+			  <label>$INFO[Window(Home).Property(LatestNews.4.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.4.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.4.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.4.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.4.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.4.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.4.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.4.Logo)]</actualicon>
+			</item>
+			<item id="6">
+			  <label>$INFO[Window(Home).Property(LatestNews.5.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.5.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.5.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.5.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.5.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.5.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.5.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.5.Logo)]</actualicon>
+			</item>
+			<item id="7">
+			  <label>$INFO[Window(Home).Property(LatestNews.6.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.6.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.6.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.6.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.6.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.6.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.6.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.6.Logo)]</actualicon>
+			</item>
+			<item id="8">
+			  <label>$INFO[Window(Home).Property(LatestNews.7.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.7.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.7.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.7.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.7.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.7.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.7.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.7.Logo)]</actualicon>
+			</item>
+			<item id="9">
+			  <label>$INFO[Window(Home).Property(LatestNews.8.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.8.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.8.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.8.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.8.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.8.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.8.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.8.Logo)]</actualicon>
+			</item>	
+			<item id="10">
+			  <label>$INFO[Window(Home).Property(LatestNews.9.Title)]</label>
+			  <thumb>$INFO[Window(Home).Property(LatestNews.9.Logo)]</thumb>
+			  <label2>$INFO[Window(Home).Property(LatestNews.9.Date)]</label2>
+			  <property name="desc">$INFO[Window(Home).Property(LatestNews.9.Desc)]</property>
+			  <property name="headerpic">$INFO[Window(Home).Property(LatestNews.9.HeaderPic)]</property>
+			  <onclick>-</onclick>
+			  <icon>$INFO[Window(Home).Property(LatestNews.9.Logo)]</icon>
+			  <visible>!IsEmpty(Window(Home).Property(LatestNews.9.Title))</visible>
+			  <actualicon>$INFO[Window(Home).Property(LatestNews.9.Logo)]</actualicon>
+			</item>	  
+		  </content>
+        </control>
+	  </control>
+	  
+	  <!--================================= WIDGETS YOUTUBE ==================================-->
+	  <control type="group">
+	  <visible>Container(9000).Hasfocus(17)</visible>	
+	  <visible>Skin.HasSetting(widgetvideoyoutube)</visible>
+	  <include>Animation.ZoomIn</include>
+	  <control type="wraplist" id="8317">
+		<left>110</left>
+		<top>130</top>
+		<width>1700</width>
+		<height>810</height>
+		<onleft>8312</onleft>
+		<onright>8312</onright>
+		<onup>300007</onup>
+		<ondown>9000</ondown>
+		<viewtype>list</viewtype>
+		<scrolltime tween="quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+		<preloaditems>9</preloaditems>
+		<itemlayout width="425" height="250">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>425</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>415</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>6</left>
+			<top>490</top>
+			<width>413</width>
+			<height>45</height>
+			<texture background="true">skin/button_klein_tranz90.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>18</left>
+			<top>490</top>
+			<height>45</height>
+			<width>390</width>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_15</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+		  </control>	
+		</itemlayout>
+		<focusedlayout width="425" height="250">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>425</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>425</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			<visible>Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>415</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>6</left>
+			<top>490</top>
+			<width>413</width>
+			<height>45</height>
+			<texture background="true">skin/button_klein_tranz90.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>60</top>
+			<width>390</width>
+			<height>225</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+			<visible>Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="label">
+			<left>18</left>
+			<top>490</top>
+			<height>45</height>
+			<width>390</width>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_15</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>!Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="image">
+			<left>1450</left>
+			<top>60</top>
+			<width>225</width>
+			<height>225</height>
+			<texture background="true">default/youtube.png</texture>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+			<visible>Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="label">
+			<left>420</left>
+			<top>60</top>
+			<height>45</height>
+			<width>990</width>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_15_Title</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>Control.HasFocus(8317)</visible>
+		  </control>
+		  <control type="textbox">
+			<left>420</left>
+			<top>140</top>
+			<width>990</width>
+			<height>125</height>
+			<font>primal_16</font>
+			<align>justify</align>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			<autoscroll time="2000" delay="3000" repeat="5000">Control.HasFocus(8317)</autoscroll>
+			<visible>Control.HasFocus(8317)</visible>
+		  </control>
+		</focusedlayout>
+			<content target="video">$VAR[HomeWidgetsYoutube]</content>
+	  </control>
+	</control>
+   </include>
+ 
+</includes>
+

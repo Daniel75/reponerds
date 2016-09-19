@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="29">
+	<defaultcontrol always="true">52</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<include>DialogBackground</include>
+		<include>BlackStripes</include>
+		<control type="group">
+			<include>openclosebox</include>
+			<control type="group">
+				<left>270</left>
+				<top>120</top>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>740</width>
+					<height>40</height>
+					<colordiffuse>red</colordiffuse>
+					<texture>WhiteBack.png</texture>
+				</control>
+				<include name="DialogInfoBackgroundParam">
+					<param name="DialogBackgroundLeft" value="0" />
+					<param name="DialogBackgroundTop" value="0" />
+					<param name="DialogBackgroundWidth" value="740" />
+					<param name="DialogBackgroundHeight" value="455" />
+					<param name="DialogSeparatorTop" value="40" />
+					<param name="DialogSeparatorBottom" value="455" />
+					<param name="DialogShadowTop" value="456" />
+					<param name="DialogHeaderLabel" value="31421" />
+					<param name="DialogHeaderTop" value="5" />
+					<param name="DialogHeaderId" value="0" />
+				</include>
+			</control>
+			<control type="group">
+				<control type="list" id="52">
+					<left>295</left>
+					<top>170</top>
+					<width>690</width>
+					<height>401</height>
+					<onleft>20</onleft>
+					<onright>20</onright>
+					<onup>52</onup>
+					<ondown>52</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="100" width="690">
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>80</width>
+							<height>75</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>10</top>
+							<width>580</width>
+							<height>40</height>
+							<font>impacted21</font>
+							<textcolor>grey1</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>50</top>
+							<width>580</width>
+							<height>25</height>
+							<textcolor>grey2</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="100" width="580">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>690</width>
+							<height>95</height>
+							<texture border="5">buttons/ButtonNF.png</texture>
+							<visible>!Control.HasFocus(52)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>690</width>
+							<height>95</height>
+							<colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+							<texture border="5">buttons/ButtonNF.png</texture>
+							<visible>Control.HasFocus(52)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>10</top>
+							<width>80</width>
+							<height>75</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>10</top>
+							<width>580</width>
+							<height>40</height>
+							<font>impacted21</font>
+							<textcolor>white</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>110</left>
+							<top>50</top>
+							<width>580</width>
+							<height>25</height>
+							<textcolor>grey1</textcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="image">
+					<description>LOGO</description>
+					<left>20</left>
+					<top>640</top>
+					<width>220</width>
+					<height>80</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">Horizonzv.png</texture>
+				</control>
+				<control type="group">
+					<left>630</left>
+					<top>650</top>
+					<control type="label">
+						<left>0</left>
+						<top>6</top>
+						<width>580</width>
+						<height>45</height>
+						<textcolor>grey2</textcolor>
+						<align>right</align>
+						<aligny>center</aligny>
+						<label>$LOCALIZE[31003]</label>
+					</control>
+					<control type="button" id="20">
+						<description>Power push button</description>
+						<left>590</left>
+						<top>10</top>
+						<width>40</width>
+						<height>40</height>
+						<label>-</label>
+						<font>-</font>
+						<onclick>ActivateWindow(ShutdownMenu)</onclick>
+						<texturefocus colordiffuse="red">center\Center_Shutdown.png</texturefocus>
+						<texturenofocus>center\Center_Shutdown.png</texturenofocus>
+						<onleft>52</onleft>
+						<onright>52</onright>
+						<onup>52</onup>
+						<ondown>52</ondown>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>Clock</include>
+	</controls>
+</window>

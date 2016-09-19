@@ -1,0 +1,9 @@
+v1.0.1 (Nov 19, 2013):
+- Bug corrections and optimizations
+- Icon & Fanart added
+- Replaced repeat-action with different action-types
+- AfterIDLE-actions added
+- No-operation-action added for onIDLE- and afterIDLE-actions
+
+v1.0.0 (Sep 03, 2013):
+- Initial release

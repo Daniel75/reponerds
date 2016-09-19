@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="FlagDimension">
+		<width>65</width>
+		<height>28</height>
+		<aspectratio>keep</aspectratio>
+	</include>
+	<include name="FlagDimension2"> <!-- Landflaggs -->
+		<width>32</width>
+		<height>28</height>
+	</include>
+	<variable name="FlagDimension_Label_Color">
+		<value condition="!Window.IsActive(movieinformation)">white</value>
+		<value condition="Window.IsActive(movieinformation)">grey3</value>
+	</variable>
+	<variable name="FlagDimension_Label_Color2">
+		<value condition="!Window.IsActive(movieinformation)">description</value>
+		<value condition="Window.IsActive(movieinformation)">grey3</value>
+	</variable>
+	<include name="FlagDimension_Label">
+		<width>auto</width>
+		<height>28</height>
+		<align>center</align>
+		<font>ubuntu-r13b</font>
+		<textcolor>$VAR[FlagDimension_Label_Color]</textcolor>
+	</include>
+	<include name="FlagVideo_Player">
+		<control type="image" id="1">
+			<description>Audiolanguage Icon</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/lang/unknown.png">$INFO[VideoPlayer.AudioLanguage,resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.AudioLanguage)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Audiolanguage Icon</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/lang/unknown.png">$INFO[VideoPlayer.SubtitlesLanguage,resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Video rez Image</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[VideoPlayer.VideoResolution,flagging/video/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Audio Channel Image</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[VideoPlayer.AudioChannels,flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Audio Codec Image</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[VideoPlayer.AudioCodec,flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>Video Aspect Image</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/aspectratio/fallback.png">$INFO[VideoPlayer.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Divx Codec Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/divx.png</texture>
+			<visible>substring(VideoPlayer.VideoCodec,div,left)|stringcompare(VideoPlayer.VideoCodec,dx50)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Bluray Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/bluray.png</texture>
+			<visible>[substring(VideoPlayer.FilenameAndPath,bluray)|substring(VideoPlayer.FilenameAndPath,bdrip)]</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>HDDVD Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/hddvd.png</texture>
+			<visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/dvd.png</texture>
+			<visible>substring(VideoPlayer.FilenameAndPath,dvd)+!substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>TV Types Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/HDTV.png</texture>
+			<visible>substring(VideoPlayer.FilenameAndPath,pdtv)|substring(VideoPlayer.FilenameAndPath,hdtv)|substring(VideoPlayer.FilenameAndPath,dsr)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>VHS Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/vhs.png</texture>
+			<visible>substring(VideoPlayer.FilenameAndPath,vhs)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="1">
+			<description>3D Image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/3d.png</texture>
+			<visible>VideoPlayer.IsStereoscopic</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="2">
+			<description>Rated German</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/ratings/na.png">$VAR[mpaa_flagging_player]</texture>
+			<visible>!IsEmpty(VideoPlayer.mpaa)+[Skin.HasSetting(fsk)|Skin.HasSetting(fsk_dual)]</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image" id="9898">
+			<description>Studio Image</description>
+			<width>65</width>
+			<height>27</height>
+			<aspectratio>scale</aspectratio>
+			<texture border="8" fallback="Empty.png" diffuse="masks/flagging_mask.png">$VAR[MovieStudioLogoVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<!-- <control type="image" id="1">
+			<description>ActStream Signal Image</description>
+			<include>FlagDimension</include>
+			<texture border="1">$VAR[pvrsignal]</texture>
+			<visible>!IsEmpty(Pvr.ActStreamSignal)+Pvr.IsPlayingTv</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control> -->
+		<!-- Label Flagging Gotham -->
+		<control type="label" id="1">
+			<description>Audiolanguage Icon</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioLanguage,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+			<visible>!IsEmpty(VideoPlayer.AudioLanguage)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Audiolanguage Icon</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage,[COLOR=description]•[/COLOR] Sub:  , ][/UPPERCASE]</label>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+			<visible>!IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Video rez label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.VideoResolution,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.VideoResolution)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Audiolanguage Icon</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.StereoscopicMode,[COLOR=description]•[/COLOR] 3D: , ][/UPPERCASE]</label>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+			<visible>!IsEmpty(ListItem.StereoscopicMode)+!SubString(ListItem.StereoscopicMode,mono)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Audio Channel label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioChannels,[COLOR=description]•[/COLOR] , ch ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.AudioChannels)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Audio Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioCodec,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.AudioCodec)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>Video Aspect label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.VideoAspect,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.VideoAspect)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Divx Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] divx [/UPPERCASE]</label>
+			<visible>substring(VideoPlayer.VideoCodec,div,left)|stringcompare(VideoPlayer.VideoCodec,dx50)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Bluray label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] bluray [/UPPERCASE]</label>
+			<visible>[substring(VideoPlayer.FilenameAndPath,bluray)|substring(VideoPlayer.FilenameAndPath,bdrip)]</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>HDDVD label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] hddvd [/UPPERCASE]</label>
+			<visible>substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>DVD label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] DVD [/UPPERCASE]</label>
+			<visible>substring(VideoPlayer.FilenameAndPath,dvd)+!substring(VideoPlayer.FilenameAndPath,hddvd)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>TV Types label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] HDTV [/UPPERCASE]</label>
+			<visible>substring(VideoPlayer.FilenameAndPath,pdtv)|substring(VideoPlayer.FilenameAndPath,hdtv)|substring(VideoPlayer.FilenameAndPath,dsr)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>VHS label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] VHS [/UPPERCASE]</label>
+			<visible>substring(VideoPlayer.FilenameAndPath,vhs)</visible>
+			<visible>!Skin.HasSetting(HideFilenameflagging)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>3D label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR] 3D [/UPPERCASE]</label>
+			<visible>VideoPlayer.IsStereoscopic</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Rated</description>
+			<include>FlagDimension_Label</include>
+			<label fallback="N.A.">[UPPERCASE]$VAR[mpaa_flagging_label_videoplayer,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.mpaa)+[Skin.HasSetting(fsk)|Skin.HasSetting(fsk_dual)]</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>ActStream Signal label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[Pvr.ActStreamSignal,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(Pvr.ActStreamSignal)+Pvr.IsPlayingTv</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Studio Image</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[VideoPlayer.Studio,[COLOR=description]•[/COLOR] , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(VideoPlayer.Studio)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label" id="1">
+			<description>End Image</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE][COLOR=description]•[/COLOR][/UPPERCASE]</label>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	</include>
+	<include name="FlagVideo">
+		<control type="image">
+			<description>AudioLanguage Icon</description>
+			<width>40</width>
+			<height>28</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[FlagDimension_Label_Color]</colordiffuse>
+			<texture>flagging/videostream1.png</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))+!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Video rez image</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Common Codec image</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.VideoCodec,flagging/video/,.png]</texture>
+			<!-- Don't show if its one of the 500 divx codecs -->
+			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>3D image</description>
+			<include>FlagDimension</include>
+			<texture>flagging/video/3d.png</texture>
+			<visible>ListItem.IsStereoscopic</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Aspectratio image</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/aspectratio/fallback.png">$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Rated German</description>
+			<include>FlagDimension</include>
+			<texture fallback="flagging/ratings/na.png">$VAR[mpaa_flagging]</texture>
+			<visible>!IsEmpty(ListItem.mpaa)+[Container.Content(movies)|Container.Content(episodes)]+[Skin.HasSetting(fsk)|Skin.HasSetting(fsk_dual)]</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>FileExtension</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[Listitem.FileExtension,flagging/video/,.png]</texture>
+			<visible>!IsEmpty(Listitem.FileExtension)+Container.Content(movies)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Set</description>
+			<include>FlagDimension</include>
+			<texture>flagging/sets.png</texture>
+			<visible>[ListItem.IsCollection|Container.Content(Sets)]+IsEmpty(ListItem.Plot)+!StringCompare(ListItem.Label,..)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	<!-- label flagging since GOTHAM -->
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>Video:</label>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))+!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Video rez label</description>
+			<include>FlagDimension_Label</include>
+			<label>[COLOR=description]•[/COLOR]</label>
+			<visible>IsEmpty(ListItem.Property(AudioLanguage.2))+!ListItem.IsCollection</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Video rez label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.VideoResolution][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Common Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.VideoCodec][/UPPERCASE]</label>
+			<!-- Don't show if its one of the 500 divx codecs -->
+			<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.StereoscopicMode)+!SubString(ListItem.StereoscopicMode,mono)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>StereoscopicMode Icon</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.StereoscopicMode,3D: ,][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.StereoscopicMode)+!SubString(ListItem.StereoscopicMode,mono)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>ListItem.IsStereoscopic</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>3D label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]3D[/UPPERCASE]</label>
+			<visible>ListItem.IsStereoscopic</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Audio Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.AudioCodec][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Aspectratio label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.VideoAspect][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.mpaa)+Container.Content(movies)+[Skin.HasSetting(fsk)|Skin.HasSetting(fsk_dual)]</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Rated German</description>
+			<include>FlagDimension_Label</include>
+			<label fallback="N.A.">[UPPERCASE]$VAR[mpaa_flagging_label][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.mpaa)+Container.Content(movies)+[Skin.HasSetting(fsk)|Skin.HasSetting(fsk_dual)]</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(Listitem.FileExtension)+Container.Content(movies)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>FileExtension</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[Listitem.FileExtension][/UPPERCASE]</label>
+			<visible>!IsEmpty(Listitem.FileExtension)+Container.Content(movies)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Sets Label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE] [COLOR=description]•[/COLOR] $LOCALIZE[20434] [COLOR=description]•[/COLOR][/UPPERCASE]</label>
+			<visible>[ListItem.IsCollection|Container.Content(Sets)]+IsEmpty(ListItem.Plot)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>End Label</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)+!ListItem.IsCollection+!Container.Content(Sets)+!StringCompare(ListItem.label,..)</visible>
+		</control>
+	</include>
+	<include name="FlagVideoStudio">
+		<control type="image" id="9898">
+			<description>Studio image</description>
+			<width>65</width>
+			<height>27</height>
+			<aspectratio>scale</aspectratio>
+			<texture border="8" fallback="Empty.png">$VAR[MovieStudioLogoVar]$INFO[ListItem.Studio,,.png]</texture>
+			<visible>!Control.IsVisible(562)+!Window.IsVisible(movieinformation)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Studio Label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[Listitem.Studio, [COLOR=description]•[/COLOR]  , ][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Studio)</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	</include>
+	<include name="FlagVideoAudioStream1">
+		<control type="image">
+			<description>AudioLanguage Icon</description>
+			<width>34</width>
+			<height>28</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[FlagDimension_Label_Color]</colordiffuse>
+			<texture>flagging/audiostream1.png</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))+!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/lang/empty.png">$INFO[ListItem.Property(AudioLanguage.1),resource://resource.images.languageflags.colour/,.png]</texture>
+			<!-- <texture fallback="flagging/lang/empty.png">$INFO[ListItem.Property(AudioLanguage.1),flagging/lang/,.png]</texture> -->
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioChannels Icon</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.Property(AudioChannels.1),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.1))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioCodec Icon</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.Property(AudioCodec.1),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.1))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	<!-- label flagging GOTHAM -->
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label> Audio 1: </label>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))+!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>AudioIcon</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioLanguage.1),,][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Audio Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioChannels.1)][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Audio Codec label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioCodec.1)][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	</include>
+	<include name="FlagVideoAudioStream2">
+		<control type="image">
+			<description>Seperator Icon</description>
+			<width>34</width>
+			<height>28</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[FlagDimension_Label_Color]</colordiffuse>
+			<texture>flagging/audiostream2.png</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/lang/empty.png">$INFO[ListItem.Property(AudioLanguage.2),resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioChannels Icon</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.Property(AudioChannels.2),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>AudioCodec Icon</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.Property(AudioCodec.2),flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	<!-- label flagging GOTHAM -->
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label> Audio 2: </label>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>AudioLanguage Label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioLanguage.2),,][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>AudioChannels Label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioChannels.2)][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioChannels.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>AudioCodec Label</description>
+			<include>FlagDimension_Label</include>
+			<label>[UPPERCASE]$INFO[ListItem.Property(AudioCodec.2)][/UPPERCASE]</label>
+			<visible>!IsEmpty(ListItem.Property(AudioCodec.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	</include>
+	<include name="FlagVideoSubtitles">
+		<control type="image">
+			<description>Seperator Icon</description>
+			<width>34</width>
+			<height>28</height>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>$VAR[FlagDimension_Label_Color]</colordiffuse>
+			<texture>flagging/subtitles.png</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>SubtitleLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/sub_lang/empty.png">$INFO[ListItem.Property(SubtitleLanguage.1),resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>SubtitleLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/sub_lang/empty.png">$INFO[ListItem.Property(SubtitleLanguage.2),resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>SubtitleLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/sub_lang/empty.png">$INFO[ListItem.Property(SubtitleLanguage.3),resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>SubtitleLanguage Icon</description>
+			<include>FlagDimension2</include>
+			<texture fallback="flagging/sub_lang/empty.png">$INFO[ListItem.Property(SubtitleLanguage.4),resource://resource.images.languageflags.colour/,.png]</texture>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>SubtitleLanguage Label</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label> Subs:</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>SubtitleLanguage Label</description>
+			<include>FlagDimension_Label</include>
+			<label>$INFO[ListItem.Property(SubtitleLanguage.1),[UPPERCASE],[/UPPERCASE]]</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>SubtitleLanguage Label</description>
+			<include>FlagDimension_Label</include>
+			<label>$INFO[ListItem.Property(SubtitleLanguage.2),[UPPERCASE],[/UPPERCASE]]</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>SubtitleLanguage Label</description>
+			<include>FlagDimension_Label</include>
+			<label>$INFO[ListItem.Property(SubtitleLanguage.3),[UPPERCASE],[/UPPERCASE]]</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>Seperator Text</description>
+			<textcolor>$VAR[FlagDimension_Label_Color2]</textcolor>
+			<include>FlagDimension_Label</include>
+			<label>•</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>SubtitleLanguage Label</description>
+			<include>FlagDimension_Label</include>
+			<label>$INFO[ListItem.Property(SubtitleLanguage.4),[UPPERCASE],[/UPPERCASE]]</label>
+			<visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+	</include>
+	<include name="FlagMusic">
+		<control type="image">
+			<description>AudioIcon</description>
+			<include>FlagDimension</include>
+			<texture>$INFO[ListItem.FileExtension,flagging/audio/,.png]</texture>
+			<visible>!IsEmpty(ListItem.FileExtension)</visible>
+			<visible>!Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="label">
+			<description>AudioIcon</description>
+			<include>FlagDimension_Label</include>
+			<label>$INFO[ListItem.FileExtension,,  ]</label>
+			<visible>Skin.HasSetting(Label_Flagging)</visible>
+		</control>
+		<control type="image">
+			<description>Rated</description>
+			<width>114</width>
+			<height>30</height>
+			<texture fallback="LeftRating/rating0.png">$INFO[ListItem.StarRating,LeftRating/]</texture>
+		</control>
+	</include>
+</includes>

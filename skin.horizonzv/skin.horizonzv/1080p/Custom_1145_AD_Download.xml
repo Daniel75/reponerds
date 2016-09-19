@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1145">
+    <defaultcontrol>-</defaultcontrol>
+    <!-- <zorder>1</zorder> -->
+    <visible>Library.IsScanningVideo+!Skin.HasSetting(automaticAD)+System.HasAddon(script.artwork.downloader)</visible>
+    <onunload condition="!Skin.HasSetting(automaticAD)+System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, silent=true)</onunload>
+    <controls>
+        <control type="button" id="13">
+            <include>HiddenButton</include>
+        </control>
+    </controls>
+</window>

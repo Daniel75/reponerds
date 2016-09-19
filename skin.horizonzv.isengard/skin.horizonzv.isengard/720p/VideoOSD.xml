@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="2901">
+	<defaultcontrol always="true">99</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<control type="image">
+			<description>background</description>
+			<include>openclosefanart</include>
+			<include>openclosevisible</include>
+			<left>-5</left>
+			<top>-5</top>
+			<width>1290</width>
+			<height>630</height>
+			<colordiffuse>menudiffuse</colordiffuse>
+			<texture flipy="true">Shadow.png</texture>
+			<visible>Window.IsVisible(videoosd)</visible>
+		</control>
+		<control type="group">
+			<include>opencloseslidedown</include>
+			<visible>![Window.IsVisible(pvrosdteletext)|Window.IsVisible(SliderDialog)|Window.IsVisible(OSDVideoSettings)|Window.IsVisible(OSDAudioSettings)|Window.IsVisible(VideoBookmarks)|Window.IsVisible(PVRosdChannels)|Window.IsVisible(PVRosdGuide)]</visible>
+			<visible>![Window.IsActive(script-XBMC-Subtitles-main.xml)|Window.IsActive(DialogSubtitles.xml)]</visible>
+			<left>0</left>
+			<top>0</top>
+			<control type="slider"> <!-- Fake Slider für Touchbenutzung -->
+				<description>Seekbar</description>
+				<left>310</left>
+				<top>572</top>
+				<width>673</width>
+				<height>4</height>
+				<action>seek</action>
+				<colordiffuse>01FFFFFF</colordiffuse>
+				<textureslidernib>-</textureslidernib>
+				<textureslidernibfocus>-</textureslidernibfocus>
+				<texturesliderbar border="10">osd/ProgressBack.png</texturesliderbar>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>8</top>
+				<control type="grouplist" id="240">
+					<visible>Control.HasFocus(2)|Control.HasFocus(3)|ControlGroup(240).HasFocus</visible>
+					<include>opencloseslidedown</include>
+					<left>40</left>
+					<top>60</top>
+					<width>260</width>
+					<height>430</height>
+					<itemgap>0</itemgap>
+					<onleft>240</onleft>
+					<onright>240</onright>
+					<onup condition="!Control.HasFocus(405)">2</onup>
+					<onup condition="Control.HasFocus(405)">3</onup>
+					<ondown condition="!Control.HasFocus(405)">2</ondown>
+					<ondown condition="Control.HasFocus(405)">3</ondown>
+					<orientation>vertical</orientation>
+					<control type="togglebutton" id="401">
+						<description>Download with Subtitles script</description>
+						<width>255</width>
+						<height>30</height>
+						<label>33003</label>
+						<textoffsetx>30</textoffsetx>
+						<aligny>center</aligny>
+						<texturenofocus>Black.png</texturenofocus>
+						<alttexturefocus>buttons/ButtonFO.png</alttexturefocus>
+						<alttexturenofocus>Black.png</alttexturenofocus>
+						<onclick>Close</onclick>
+						<onclick>Dialog.Close(VideoOSD)</onclick>
+						<onclick>ActivateWindow(SubtitleSearch)</onclick>
+					</control>
+					<control type="button" id="402">
+						<width>255</width>
+						<aligny>center</aligny>
+						<textoffsetx>30</textoffsetx>
+						<texturenofocus>Black.png</texturenofocus>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>22006</label>
+						<onclick>SubtitleDelay</onclick>
+						<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+					</control>
+					<control type="button" id="403">
+						<width>255</width>
+						<aligny>center</aligny>
+						<textoffsetx>30</textoffsetx>
+						<texturenofocus>Black.png</texturenofocus>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<pulseonselect>false</pulseonselect>
+						<label>209</label>
+						<onclick>NextSubtitle</onclick>
+						<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+					</control>
+					<control type="radiobutton" id="404">
+						<width>255</width>
+						<textoffsetx>30</textoffsetx>
+						<aligny>center</aligny>
+						<label>449</label>
+						<radioposx>200</radioposx>
+						<texturenofocus>Black.png</texturenofocus>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<onclick>ShowSubtitles</onclick>
+						<selected>VideoPlayer.SubtitlesEnabled</selected>
+						<pulseonselect>false</pulseonselect>
+						<visible>VideoPlayer.HasSubtitles</visible>
+					</control>
+				</control>
+			</control>
+			<control type="group">
+				<left>0</left>
+				<top>8</top>
+				<control type="grouplist" id="550">
+					<visible>videoplayer.isstereoscopic + ![Window.IsVisible(SliderDialog)|Window.IsVisible(OSDVideoSettings)|Window.IsVisible(OSDAudioSettings)|Window.IsVisible(VideoBookmarks)|Window.IsVisible(PVROSDChannels)|Window.IsVisible(PVROSDGuide)]</visible>
+					<visible>Control.HasFocus(1)|ControlGroup(550).HasFocus</visible>
+					<include>opencloseslidedown</include>
+					<left>40</left>
+					<top>60</top>
+					<width>260</width>
+					<height>430</height>
+					<itemgap>1</itemgap>
+					<onleft>550</onleft>
+					<onright>550</onright>
+					<onup>1</onup>
+					<ondown>1</ondown>
+					<orientation>vertical</orientation>
+					<control type="radiobutton" id="553">
+						<width>255</width>
+						<align>left</align>
+						<texturenofocus>Black.png</texturenofocus>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<onclick>ToggleStereoMode</onclick>
+						<selected>IntegerGreaterThan(System.StereoscopicMode,0)</selected>
+						<label>31362</label>
+					</control>
+					<control type="button" id="552">
+						<width>255</width>
+						<align>left</align>
+						<texturenofocus>Black.png</texturenofocus>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>31361</label>
+						<onclick>StereoMode</onclick>
+					</control>
+					<control type="radiobutton" id="551">
+						<width>255</width>
+						<align>left</align>
+						<texturenofocus>Black.png</texturenofocus>
+						<font>font16</font>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<label>31360</label>
+						<onclick>StereoModeToMono</onclick>
+						<selected>StringCompare(System.StereoscopicMode,7)</selected>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<visible>!Window.IsVisible(sliderdialog)</visible>
+				<control type="group">
+					<visible>Skin.HasSetting(CurrentButtonLabel)</visible>
+					<control type="image">
+						<description>Current Control Background</description>
+						<left>378r</left>
+						<top>62</top>
+						<width>380</width>
+						<height>28</height>
+						<texture background="true">osd/CurrentOSDLabel.png</texture>
+						<include>opencloseslideleft</include>
+					</control>
+					<control type="label">
+						<description>Current Control</description>
+						<left>350r</left>
+						<top>62</top>
+						<width>340</width>
+						<height>30</height>
+						<align>right</align>
+						<font>ubuntu-r13b</font>
+						<textcolor>white</textcolor>
+						<label>[UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE]</label>
+						<include>opencloseslideleft</include>
+					</control>
+				</control>
+				<control type="image">
+					<left>-10</left>
+					<top>64</top>
+					<width>1300</width>
+					<height>10</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture background="true" flipy="true">Shadow.png</texture>
+				</control>
+				<control type="image">
+					<visible>!Skin.HasSetting(pause_light)</visible>
+					<left>-10</left>
+					<top>-12</top>
+					<width>1300</width>
+					<height>76</height>
+					<animation effect="fade" end="85" condition="true">Conditional</animation>
+					<colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+					<texture background="true" border="10">ContentPanel_scratched.png</texture>
+				</control>
+				<control type="image">
+					<visible>Skin.HasSetting(pause_light)</visible>
+					<left>-10</left>
+					<top>-12</top>
+					<width>1300</width>
+					<height>76</height>
+					<texture background="true" flipy="true" border="10">Underlay2.png</texture>
+				</control>
+				<control type="image">
+					<description>Current Control Background</description>
+					<left>-10</left>
+					<top>-9</top>
+					<width>380</width>
+					<height>74</height>
+					<colordiffuse>menudiffuse</colordiffuse>
+					<texture background="true" flipx="true" border="5">osd/CurrentOSDLabel.png</texture>
+				</control>
+				<control type="group"> <!-- time label -->
+					<description>time label</description>
+					<left>18r</left>
+					<top>3</top>
+					<control type="label">
+						<left>320r</left>
+						<top>0</top>
+						<width>310</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>impacted30</font>
+						<textcolor>grey</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<label>$INFO[System.Time]</label>
+					</control>
+					<control type="label">
+						<left>320r</left>
+						<top>30</top>
+						<width>310</width>
+						<align>right</align>
+						<aligny>center</aligny>
+						<font>impacted21</font>
+						<textcolor>grey</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<label>$INFO[System.Date]</label>
+						<visible>!Skin.HasSetting(NoDate)</visible>
+					</control>
+				</control>
+				<control type="group"> <!-- !LiveTV -->
+					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<control type="grouplist" id="100">
+						<left>35</left>
+						<top>6</top>
+						<width>500</width>
+						<height>60</height>
+						<itemgap>2</itemgap>
+						<orientation>horizontal</orientation>
+						<align>left</align>
+						<onleft>Control.SetFocus(101,7)</onleft>
+						<onright>Control.SetFocus(101,0)</onright>
+						<onup>noop</onup>
+						<ondown>noop</ondown>
+						<control type="button" id="1">
+							<enable>VideoPlayer.IsStereoscopic</enable>
+							<description>Stereoscopic</description>
+							<width>45</width>
+							<height>45</height>
+							<label>36501</label>
+							<font>-</font>
+							<ondown>550</ondown>
+							<texturefocus colordiffuse="description">osd/OSDStereoscopicFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/OSDStereoscopicFO.png</texturenofocus>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+							<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
+						</control>
+						<control type="button" id="2">
+							<width>50</width>
+							<height>50</height>
+							<label>31356</label>
+							<font>-</font>
+							<ondown>Control.SetFocus(240)</ondown>
+							<texturefocus colordiffuse="description">osd/SubtitlesFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/SubtitlesFO.png</texturenofocus>
+							<onclick>ActivateWindow(SubtitleSearch)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+						<control type="button" id="4">
+							<description>Bookmarks</description>
+							<width>45</width>
+							<height>45</height>
+							<label>298</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/BookMarksFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/BookMarksFO.png</texturenofocus>
+							<onclick>ActivateWindow(125)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+						<control type="button" id="5">
+							<description>Audio Settings</description>
+							<width>45</width>
+							<height>45</height>
+							<label>13396</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/AudioFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/AudioFO.png</texturenofocus>
+							<onclick>ActivateWindow(124)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+						<control type="button" id="6">
+							<description>Video Settings</description>
+							<width>45</width>
+							<height>45</height>
+							<label>13395</label>
+							<align>left</align>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/VideoFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/VideoFO.png</texturenofocus>
+							<onclick>ActivateWindow(osdvideosettings)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+					</control>
+					<control type="list" id="101">
+						<visible>![Window.IsVisible(AddonSettings)|Window.IsVisible(SelectDialog)|Window.IsVisible(VisualisationPresetList)]</visible>
+						<left>490</left>
+						<top>8</top>
+						<width>1320</width>
+						<height>564</height>
+						<onup>noop</onup>
+						<ondown>noop</ondown>
+						<onleft>6</onleft>
+						<onright>1</onright>
+						<viewtype label="list">list</viewtype>
+						<orientation>horizontal</orientation>
+						<itemgap>4</itemgap>
+						<itemlayout width="55" height="45">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey2</colordiffuse>
+								<texture background="true">osd/RingOutside.png</texture>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>DDFFFFFF</colordiffuse>
+								<texture background="true">osd/RingInsideNF.png</texture>
+							</control>
+							<control type="image">
+								<left>3</left>
+								<top>3</top>
+								<width>39</width>
+								<height>39</height>
+								<texture background="true">$INFO[ListItem.Property(record)]</texture>
+								<visible>Player.Recording</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey1</colordiffuse>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout width="55" height="45">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<texture background="true">$INFO[ListItem.Property(record)]</texture>
+								<visible>Player.Recording</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>description</colordiffuse>
+								<texture background="true">osd/RingOutside.png</texture>
+								<visible>Control.HasFocus(101)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey2</colordiffuse>
+								<texture background="true">osd/RingOutside.png</texture>
+								<visible>!Control.HasFocus(101)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<texture background="true">osd/RingInsideNF.png</texture>
+								<visible>!Control.HasFocus(101)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>description</colordiffuse>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>Control.HasFocus(101)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey1</colordiffuse>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>!Control.HasFocus(101)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="0">
+								<label>264</label>
+								<icon>osd/RecordOffFO.png</icon>
+								<onclick>PlayerControl(Record)</onclick>
+								<visible>!Player.Recording</visible>
+								<visible>Player.CanRecord</visible>
+							</item>
+							<item id="0">
+								<label>265</label>
+								<icon>osd/RecordOnFO.png</icon>
+								<onclick>PlayerControl(Record)</onclick>
+								<visible>Player.Recording</visible>
+								<visible>Player.CanRecord</visible>
+							</item>
+							<item id="1">
+								<label>210</label>
+								<icon>osd/PrevTrackFO.png</icon>
+								<onclick>Control.SetFocus(600)</onclick>
+							</item>
+							<item id="2">
+								<label>31354</label>
+								<icon>osd/RewindFO.png</icon>
+								<onclick>PlayerControl(Rewind)</onclick>
+							</item>
+							<item id="3">
+								<label>31351</label>
+								<icon>osd/PauseFO.png</icon>
+								<onclick>PlayerControl(Play)</onclick>
+								<visible>![Player.Paused|Player.Forwarding|Player.Rewinding]</visible>
+							</item>
+							<item id="3">
+								<label>208</label>
+								<icon>osd/PlayFO.png</icon>
+								<onclick>PlayerControl(Play)</onclick>
+								<visible>Player.Paused|Player.Forwarding|Player.Rewinding</visible>
+							</item>
+							<item id="4">
+								<label>31352</label>
+								<icon>osd/StopFO.png</icon>
+								<onclick>PlayerControl(Stop)</onclick>
+							</item>
+							<item id="5">
+								<label>31353</label>
+								<icon>osd/ForwardFO.png</icon>
+								<onclick>PlayerControl(Forward)</onclick>
+							</item>
+							<item id="6">
+								<label>209</label>
+								<icon>osd/NextTrackFO.png</icon>
+								<onclick>Control.SetFocus(605)</onclick>
+							</item>
+							<item id="7">
+								<label>31355</label>
+								<icon>osd/DvdFO.png</icon>
+								<onclick>PlayerControl(ShowVideoMenu)</onclick>
+								<visible>VideoPlayer.HasMenu</visible>
+							</item>
+						</content>
+					</control>
+					<control type="group" id="120">
+						<left>490</left>
+						<top>8</top>
+						<animation effect="fade" time="200">VisibleChange</animation>
+						<visible>![Window.IsVisible(AddonSettings)|Window.IsVisible(SelectDialog)|Window.IsVisible(VisualisationPresetList)]</visible>
+						<control type="button" id="600">
+							<left>0</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<label>210</label>
+							<font>-</font>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onleft>noop</onleft>
+							<onright>noop</onright>
+							<onup>noop</onup>
+							<ondown>noop</ondown>
+							<onfocus>PlayerControl(Previous)</onfocus>
+							<onfocus>PlayerControl(Previous)</onfocus>
+							<onfocus condition="Player.CanRecord">Control.SetFocus(101,1)</onfocus>
+							<onfocus condition="!Player.CanRecord">Control.SetFocus(101,0)</onfocus>
+						</control>
+						<control type="button" id="605">
+							<left>275</left>
+							<top>0</top>
+							<width>-</width>
+							<height>-</height>
+							<label>-</label>
+							<font>-</font>
+							<texturefocus>-</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onleft>noop</onleft>
+							<onright>noop</onright>
+							<onup>noop</onup>
+							<ondown>noop</ondown>
+							<onfocus>PlayerControl(Next)</onfocus>
+							<onfocus>Control.SetFocus(101,6)</onfocus>
+						</control>
+					</control>
+				</control>
+				<control type="group"> <!-- LiveTV -->
+					<visible>VideoPlayer.Content(LiveTV)</visible>
+					<control type="grouplist" id="100">
+						<left>50</left>
+						<top>6</top>
+						<width>500</width>
+						<height>60</height>
+						<itemgap>2</itemgap>
+						<orientation>horizontal</orientation>
+						<align>left</align>
+						<onleft>Control.SetFocus(102,8)</onleft>
+						<onright>Control.SetFocus(102,0)</onright>
+						<onup>noop</onup>
+						<control type="button" id="10">
+							<left>0</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<label>36501</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/OSDStereoscopicFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/OSDStereoscopicFO.png</texturenofocus>
+							<onleft>1</onleft>
+							<onright>2</onright>
+							<ondown>550</ondown>
+							<enable>VideoPlayer.IsStereoscopic</enable>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+							<animation effect="fade" start="100" end="50" time="100" condition="!VideoPlayer.IsStereoscopic">Conditional</animation>
+						</control>
+						<control type="button" id="12">
+							<left>55</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<label>31356</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/TeleTextFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/TeleTextFO.png</texturenofocus>
+							<onleft>1</onleft>
+							<onright>3</onright>
+							<onclick>ActivateWindow(Teletext)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+						<control type="button" id="13">
+							<left>110</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<label>13395</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/VideoFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/VideoFO.png</texturenofocus>
+							<onleft>350</onleft>
+							<onright>352</onright>
+							<onup>1000</onup>
+							<ondown>1000</ondown>
+							<onclick>ActivateWindow(OSDVideoSettings)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+						<control type="button" id="14">
+							<left>165</left>
+							<top>0</top>
+							<width>45</width>
+							<height>45</height>
+							<label>13396</label>
+							<font>-</font>
+							<texturefocus colordiffuse="description">osd/AudioFO.png</texturefocus>
+							<texturenofocus colordiffuse="grey">osd/AudioFO.png</texturenofocus>
+							<onleft>3</onleft>
+							<onright>5</onright>
+							<onclick>ActivateWindow(osdAudioSettings)</onclick>
+							<animation effect="zoom" start="90" center="auto" end="110" time="50">Focus</animation>
+						</control>
+					</control>
+					<control type="list" id="102">
+						<left>490</left>
+						<top>8</top>
+						<width>1320</width>
+						<height>564</height>
+						<onup>noop</onup>
+						<ondown>noop</ondown>
+						<onleft>14</onleft>
+						<onright>10</onright>
+						<viewtype label="list">list</viewtype>
+						<orientation>horizontal</orientation>
+						<itemgap>4</itemgap>
+						<itemlayout width="55" height="45">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey2</colordiffuse>
+								<texture>osd/RingOutside.png</texture>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>DDFFFFFF</colordiffuse>
+								<texture>osd/RingInsideNF.png</texture>
+							</control>
+							<control type="image">
+								<left>3</left>
+								<top>3</top>
+								<width>39</width>
+								<height>39</height>
+								<texture>$INFO[ListItem.Property(record)]</texture>
+								<visible>Player.Recording</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey1</colordiffuse>
+								<texture>$INFO[ListItem.Icon]</texture>
+							</control>
+						</itemlayout>
+						<focusedlayout width="55" height="45">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>$INFO[ListItem.Property(record)]</texture>
+								<visible>Player.Recording</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>description</colordiffuse>
+								<texture>osd/RingOutside.png</texture>
+								<visible>Control.HasFocus(102)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey2</colordiffuse>
+								<texture>osd/RingOutside.png</texture>
+								<visible>!Control.HasFocus(102)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<texture>osd/RingInsideNF.png</texture>
+								<visible>!Control.HasFocus(102)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>description</colordiffuse>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Control.HasFocus(102)</visible>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>45</width>
+								<height>45</height>
+								<colordiffuse>grey1</colordiffuse>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Control.HasFocus(102)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item id="20">
+								<label>210</label>
+								<icon>osd/ChannelUPFO.png</icon>
+								<onclick>PlayerControl(Previous)</onclick>
+							</item>
+							<item id="21">
+								<label>209</label>
+								<icon>osd/ChannelDownFO.png</icon>
+								<onclick>PlayerControl(Next)</onclick>
+							</item>
+							<item id="22">
+								<label>264</label>
+								<icon>osd/RecordOffFO.png</icon>
+								<property name="record">osd/RingOutsideRecord.png</property>
+								<onclick>PlayerControl(Record)</onclick>
+								<visible>Player.CanRecord+!Player.Recording</visible>
+							</item>
+							<item id="22">
+								<label>265</label>
+								<icon>osd/RecordOffFO.png</icon>
+								<property name="record">osd/RingOutsideRecord.png</property>
+								<onclick>PlayerControl(Record)</onclick>
+								<visible>Player.Recording</visible>
+							</item>
+							<item id="23">
+								<label>31354</label>
+								<icon>osd/RewindFO.png</icon>
+								<onclick>PlayerControl(Rewind)</onclick>
+								<visible>Player.SeekEnabled</visible>
+							</item>
+							<item id="24">
+								<label>31351</label>
+								<icon>osd/PauseFO.png</icon>
+								<onclick>PlayerControl(Play)</onclick>
+								<visible>Player.CanRecord</visible>
+								<visible>![Player.Paused|Player.Forwarding|Player.Rewinding]</visible>
+							</item>
+							<item id="25">
+								<label>208</label>
+								<icon>osd/PlayFO.png</icon>
+								<onclick>PlayerControl(Play)</onclick>
+								<visible>Player.PauseEnabled</visible>
+								<visible>Player.Paused|Player.Forwarding|Player.Rewinding</visible>
+							</item>
+							<item id="26">
+								<label>31352</label>
+								<icon>osd/StopFO.png</icon>
+								<onclick>PlayerControl(Stop)</onclick>
+							</item>
+							<item id="27">
+								<label>31353</label>
+								<icon>osd/ForwardFO.png</icon>
+								<onclick>PlayerControl(Forward)</onclick>
+								<visible>Player.SeekEnabled</visible>
+							</item>
+							<item id="28">
+								<label>19019</label>
+								<icon>osd/ChannelListFO.png</icon>
+								<onclick>ActivateWindow(PVRosdChannels)</onclick>
+								<onclick>Dialog.Close(Videoosd)</onclick>
+							</item>
+							<item id="29">
+								<label>$LOCALIZE[19029]$INFO[VideoPlayer.ChannelName, - ]</label>
+								<icon>osd/EPG.png</icon>
+								<onclick>ActivateWindow(PVRosdGuide)</onclick>
+								<onclick>Dialog.Close(Videoosd)</onclick>
+							</item>
+						</content>
+					</control>
+				</control>
+			</control>
+		</control>
+		<control type="button" id="99">
+			<include>HiddenButton</include>
+			<onfocus condition="VideoPlayer.Content(LiveTV)">Control.SetFocus(102,2)</onfocus>
+			<onfocus condition="!VideoPlayer.Content(LiveTV)">Control.SetFocus(101,2)</onfocus>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="136">
+    <!-- <zorder>2</zorder> -->
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <controls>
+        <control type="group" id="901">
+            <animation effect="fade" time="300">WindowOpen</animation>
+            <animation effect="fade" time="300">WindowClose</animation>
+            <control type="group">
+                <left>0</left>
+                <top>225</top>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>0</left>
+                    <top>210</top>
+                    <width>1920</width>
+                    <height>15</height>
+                    <colordiffuse>fanartdiffuse</colordiffuse>
+                    <texture background="true">Shadow.png</texture>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>0</left>
+                    <top>405</top>
+                    <width>1920</width>
+                    <height>15</height>
+                    <colordiffuse>fanartdiffuse</colordiffuse>
+                    <texture background="true" flipy="true">Shadow.png</texture>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>0</left>
+                    <top>225</top>
+                    <width>1920</width>
+                    <height>180</height>
+                    <texture background="true">BlackBack.png</texture>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>0</left>
+                    <top>225</top>
+                    <width>1920</width>
+                    <height>1</height>
+                    <texture background="true">Separator2.png</texture>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>0</left>
+                    <top>405</top>
+                    <width>1920</width>
+                    <height>1</height>
+                    <texture background="true">Separator2.png</texture>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>885</left>
+                    <top>240</top>
+                    <width>150</width>
+                    <height>150</height>
+                    <texture>Busy.png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <animation effect="rotate" start="0" end="360" center="auto" time="2500" loop="true" condition="true">conditional</animation>
+                </control>
+                <control type="image">
+                    <description>Busy animation</description>
+                    <left>908</left>
+                    <top>262</top>
+                    <width>105</width>
+                    <height>105</height>
+                    <texture>Busy.png</texture>
+                    <aspectratio>keep</aspectratio>
+                    <colordiffuse>grey</colordiffuse>
+                    <animation effect="rotate" start="0" end="-360" center="auto" time="2000" loop="true" condition="true">conditional</animation>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

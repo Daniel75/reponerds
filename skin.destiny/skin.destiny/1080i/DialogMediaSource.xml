@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="129">
+  <defaultcontrol>10</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+  </coordinates>
+  <controls>
+  <control type="group">
+    <include>SlideInAndOutAnimationRNL</include>
+	<control type="image">
+	  <left>170</left>
+	  <top>150</top>
+	  <width>1700</width>
+	  <height>840</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>7</bordersize>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+    <control type="label">
+      <description>path label</description>
+      <left>210</left>
+      <top>170</top>
+      <width>1300</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <font>primal_24</font>
+      <label>1021</label>
+      <textcolor>$VAR[ColorFontSelected]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    </control>
+    <control type="list" id="10">
+      <left>210</left>
+      <top>235</top>
+      <width>1300</width>
+      <height>302</height>
+      <onup>9001</onup>
+      <onleft>9000</onleft>
+      <onright>60</onright>
+      <ondown>12</ondown>
+      <pagecontrol>60</pagecontrol>
+      <scrolltime>200</scrolltime>
+      <itemlayout height="60">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>1300</width>
+          <height>60</height>
+          <texture background="true">skin/button_klein.png</texture>
+	      <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+        </control>
+        <control type="label">
+          <left>15</left>
+          <top>0</top>
+          <width>1250</width>
+          <height>60</height>
+          <font>primal_20</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+          <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+          <info>ListItem.Label</info>
+        </control>
+      </itemlayout>
+      <focusedlayout height="60">
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>1300</width>
+          <height>60</height>
+          <visible>!Control.HasFocus(10)</visible>
+          <texture background="true">skin/button_klein.png</texture>
+	      <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+        </control>
+        <control type="image">
+          <left>0</left>
+          <top>0</top>
+          <width>1300</width>
+          <height>60</height>
+          <visible>Control.HasFocus(10)</visible>
+          <texture background="true">skin/button_klein.png</texture>
+	      <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+        </control>
+        <control type="label">
+          <left>15</left>
+          <top>0</top>
+          <width>1250</width>
+          <height>60</height>
+          <font>primal_24</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+          <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+          <info>ListItem.Label</info>
+        </control>
+      </focusedlayout>
+    </control>
+    <control type="scrollbar" id="60">
+      <left>832</left>
+      <top>158</top>
+      <width>38</width>
+      <height>300</height>
+      <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+      <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+      <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNib.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+      <onleft>10</onleft>
+      <onright>9000</onright>
+      <showonepage>false</showonepage>
+      <orientation>vertical</orientation>
+    </control>
+    <control type="group" id="9000">
+      <left>1540</left>
+      <top>185</top>
+      <control type="button" id="11">
+        <description>Browse Button</description>
+        <left>0</left>
+        <top>0</top>
+        <width>300</width>
+        <height>62</height>
+        <label>1024</label>
+        <font>primal_20</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <onup>18</onup>
+        <onleft>60</onleft>
+        <onright>10</onright>
+        <ondown>13</ondown>
+      </control>
+      <control type="button" id="13">
+        <description>Add Path Button</description>
+        <left>0</left>
+        <top>68</top>
+        <width>300</width>
+        <height>62</height>
+        <label>15019</label>
+        <font>primal_20</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <onup>11</onup>
+        <onleft>60</onleft>
+        <onright>10</onright>
+        <ondown>14</ondown>
+      </control>
+      <control type="button" id="14">
+        <description>Remove Path Button</description>
+        <left>0</left>
+        <top>135</top>
+        <width>300</width>
+        <height>62</height>
+        <label>1210</label>
+        <font>primal_20</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <onup>13</onup>
+        <onleft>60</onleft>
+        <onright>10</onright>
+        <ondown>12</ondown>
+      </control>
+    </control>
+    <control type="label">
+      <description>Name label</description>
+      <left>210</left>
+      <top>490</top>
+      <width>1140</width>
+      <height>45</height>
+      <align>left</align>
+      <aligny>center</aligny>
+      <font>primal_24</font>
+      <label>1022</label>
+      <textcolor>$VAR[ColorFontSelected]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    </control>
+    <control type="edit" id="12">
+      <description>Name Button</description>
+      <left>210</left>
+      <top>555</top>
+      <width>1630</width>
+      <height>60</height>
+      <align>center</align>
+      <aligny>center</aligny>
+      <label>-</label>
+      <font>primal_24</font>
+	  <textcolor>white</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      <onup>10</onup>
+      <onleft>12</onleft>
+      <onright>19</onright>
+      <ondown>9001</ondown>
+    </control>
+    <control type="group" id="9001">
+	<left>15</left>
+    <top>240</top>
+      <control type="button" id="18">
+        <description>Ok Button</description>
+        <left>350</left>
+        <top>652</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>186</label>
+        <font>primal_20</font>
+        <onup>12</onup>
+        <onleft>20</onleft>
+        <onright>19</onright>
+        <ondown>10</ondown>
+        <animation effect="slide" start="0,0" end="-153,0" time="0" condition="!Control.IsVisible(20)">Conditional</animation>
+      </control>
+      <control type="button" id="19">
+        <description>Cancel Button</description>
+        <left>665</left>
+        <top>652</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>222</label>
+        <font>primal_20</font>
+        <onup>12</onup>
+        <onleft>18</onleft>
+        <onright>20</onright>
+        <ondown>10</ondown>
+        <animation effect="slide" start="0,0" end="-153,0" time="0" condition="!Control.IsVisible(20)">Conditional</animation>
+      </control>
+      <control type="button" id="20">
+        <description>Set Content Button</description>
+        <left>980</left>
+        <top>652</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>20333</label>
+        <font>primal_20</font>
+        <onup>12</onup>
+        <onleft>19</onleft>
+        <onright>18</onright>
+        <ondown>10</ondown>
+      </control>
+    </control>
+   </control>
+  </controls>
+</window>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addon
+	id="skin.moddedconfluence.4"
+	name="Confluence-MOD Vol. 4.2 (Beta)"
+	provider-name="mad-max / blauesgruen (credits Team-XBMC)"
+	version="1.3.2">
+	<requires>
+		<import addon="xbmc.gui" version="5.10.0" />
+		<import addon="script.image.resource.select" version="0.0.5"/>
+	</requires>
+	<extension
+		point="xbmc.gui.skin"
+		debugging="false"
+		effectslowdown="0.75">
+		<res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de_DE">Confluence-MOD Vol.IV von mad-max - Support seit XBMC 13 durch blauesgruen</summary>
+		<summary lang="en_AU">Confluence-MOD Vol.IV by mad-max - Support since XBMC 13 by blauesgruen</summary>
+		<summary lang="en_GB">Confluence-MOD Vol.IV by mad-max - Support since XBMC 13 by blauesgruen</summary>
+		<summary lang="en_NZ">Confluence-MOD Vol.IV by mad-max - Support since XBMC 13 by blauesgruen</summary>
+		<summary lang="en_US">Confluence-MOD Vol.IV by mad-max - Support since XBMC 13 by blauesgruen</summary>
+		<description lang="de_DE">Der Confluence-MOD entsand als Alternative zu den Skins, welche auf einem ATV2 oder ION-System zu schwerfällig waren.[CR]Confluence als Basis gibt einen schnellen Skin, welcher durch diverse MODs, z.B. CDArt, Clearlogo-Support [CR]und weitere zu einer schönen Augenweide geworden ist</description>
+		<description lang="en_AU">My Confluence-MOD came up as alternative for Skins, that were too heavy for ATV2 or ION-systems.[CR]Confluence as base is a fast skin, which became quite handsome because of severeal MODs like CDArt, Clearlogo and many others</description>
+		<description lang="en_GB">My Confluence-MOD came up as alternative for Skins, that were too heavy for ATV2 or ION-systems.[CR]Confluence as base is a fast skin, which became quite handsome because of severeal MODs like CDArt, Clearlogo and many others</description>
+		<description lang="en_NZ">My Confluence-MOD came up as alternative for Skins, that were too heavy for ATV2 or ION-systems.[CR]Confluence as base is a fast skin, which became quite handsome because of severeal MODs like CDArt, Clearlogo and many others</description>
+		<description lang="en_US">My Confluence-MOD came up as alternative for Skins, that were too heavy for ATV2 or ION-systems.[CR]Confluence as base is a fast skin, which became quite handsome because of severeal MODs like CDArt, Clearlogo and many others</description>
+		<disclaimer lang="de_DE">Confluence ist der standard Skin für XBMC und basiert auf der Arbeit von Jezz_X und Team-XBMC. Die Deinstallation kann zu unerwünschten Nebeneffekten führen.</disclaimer>
+		<disclaimer lang="en_AU">Confluence is based on the work of Jezz_X and Team XBMC</disclaimer>
+		<disclaimer lang="en_GB">Confluence is based on the work of Jezz_X and Team XBMC</disclaimer>
+		<disclaimer lang="en_NZ">Confluence is based on the work of Jezz_X and Team XBMC</disclaimer>
+		<disclaimer lang="en_US">Confluence is based on the work of Jezz_X and Team XBMC</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>

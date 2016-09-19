@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="HorizonzVSettings">
+		<control type="group"> <!-- horizonzv style -->
+			<visible>!Skin.HasSetting(hide_horizonzvsettings)</visible>
+			<include>systeminfo</include>
+			<control type="button" id="666">
+				<include>HiddenButton</include>
+				<onfocus>ActivateWindow(home)</onfocus>
+			</control>
+			<control type="group"> <!-- menu & background & neonslide -->
+				<include>opencloseslideup</include>
+				<control type="group">
+					<visible>!Skin.HasSetting(hide_horizonzvsettings)</visible>
+					<control type="group">
+						<animation effect="slide" start="0,-40" end="0,0" time="200" delay="500">Visible</animation>
+						<animation effect="slide" start="0,0" end="0,-40" time="200">Hidden</animation>
+						<visible>Container(9000).HasFocus(1)</visible>
+						<control type="image">
+							<left>-10</left>
+							<top>410</top>
+							<width>1300</width>
+							<height>30</height>
+							<texture background="true">BackSilver.png</texture>
+						</control>
+						<control type="button" id="9001">
+							<left>650</left>
+							<top>410</top>
+							<width>200</width>
+							<height>30</height>
+							<onup>9000</onup>
+							<ondown>noop</ondown>
+							<label>20077</label>
+							<textcolor>grey3</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>BlackBack.png</texturefocus>
+							<texturenofocus>-</texturenofocus>
+							<onclick>ActivateWindow(SkinSettings)</onclick>
+						</control>
+					</control>
+					<control type="label">
+						<description>Description</description>
+						<include>openclosevisible</include>
+						<left>20</left>
+						<top>480</top>
+						<width>1240</width>
+						<height>30</height>
+						<label>36104</label>
+						<align>center</align>
+						<textcolor>white</textcolor>
+						<visible>Control.HasFocus(9001)</visible>
+					</control>
+				</control>
+				<control type="group">
+					<top>-180</top>
+					<control type="image">
+						<left>-5</left>
+						<top>533</top>
+						<width>1290</width>
+						<height>57</height>
+						<texture background="true">BlackBack.png</texture>
+					</control>
+					<control type="image">
+						<left>-5</left>
+						<top>530</top>
+						<width>1290</width>
+						<height>64</height>
+						<colordiffuse>CCFFFFFF</colordiffuse>
+						<texture border="2">MenuStripe.png</texture>
+					</control>
+					<control type="group">
+						<visible>Skin.HasSetting(NeonSlide)</visible>
+						<description>NeonSlide</description>
+						<control type="image">
+							<left>-5</left>
+							<top>530</top>
+							<width>1290</width>
+							<height>5</height>
+							<texture border="2">effects/lightline.png</texture>
+						</control>
+						<control type="image">
+							<left>1290</left>
+							<top>531</top>
+							<width>150</width>
+							<height>5</height>
+							<include>neonslide</include>
+							<texture border="3">effects/lightning.png</texture>
+						</control>
+						<control type="image">
+							<left>1310</left>
+							<top>586</top>
+							<width>150</width>
+							<height>5</height>
+							<include>neonslide</include>
+							<texture flipy="true" border="2">effects/lightning.png</texture>
+						</control>
+						<control type="image">
+							<left>1170</left>
+							<top>493</top>
+							<width>400</width>
+							<height>80</height>
+							<animation type="Conditional" reversible="false" condition="Window.IsActive(settings)" loop="true">
+								<effect type="fade" start="0" end="100" time="500" delay="9000"/>
+								<effect type="slide" start="0,0" end="-1600,0" time="12000" loop="false" delay="2000"/>
+								<effect type="fade" start="100" end="0" time="500" delay="9400"/>
+								<effect type="slide" start="0,0" end="0,0" time="10000" delay="10000" loop="false"/>
+							</animation>
+							<texture background="true">effects/supernova.png</texture>
+						</control>
+					</control>
+				</control>
+				<control type="wraplist" id="9000">
+					<visible>!Skin.HasSetting(hide_horizonzvsettings)</visible>
+					<onup>666</onup>
+					<ondown>9001</ondown>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<left>-52</left>
+					<top>320</top>
+					<width>1400</width>
+					<height>564</height>
+					<align>center</align>
+					<viewtype>list</viewtype>
+					<orientation>horizontal</orientation>
+					<focusposition>2</focusposition>
+					<itemgap>3</itemgap>
+					<scrolltime tween="circle" easing="out">400</scrolltime>
+					<itemlayout width="320" height="60">
+						<control type="label">
+							<left>0</left>
+							<top>35</top>					
+							<height>50</height>
+							<width>318</width>
+							<font>impacted36</font>
+							<textcolor>black</textcolor>
+							<shadowcolor>grey</shadowcolor>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout width="320" height="60">
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<label>480</label>
+							<label2>31400</label2>
+							<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						</item>
+						<item id="2">
+							<label>157</label>
+							<label2>31401</label2>
+							<onclick>ActivateWindow(VideosSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="3">
+							<label>31502</label>
+							<label2>31409</label2>
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="4">
+							<label>2</label>
+							<label2>31402</label2>
+							<onclick>ActivateWindow(MusicSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="5">
+							<label>1</label>
+							<label2>31403</label2>
+							<onclick>ActivateWindow(PicturesSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="6">
+							<label>8</label>
+							<label2>31404</label2>
+							<onclick>ActivateWindow(WeatherSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="7">
+							<label>24001</label>
+							<label2>31408</label2>
+							<onclick>ActivateWindow(AddonBrowser)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="8">
+							<label>14036</label>
+							<label2>31410</label2>
+							<onclick>ActivateWindow(ServiceSettings)</onclick>
+							<icon>-</icon>
+						</item>
+						<item id="9">
+							<label>13000</label>
+							<label2>31406</label2>
+							<onclick>ActivateWindow(SystemSettings)</onclick>
+							<icon>-</icon>
+						</item>
+					</content>
+				</control>
+				<control type="group"> <!-- menubackground inkl. neonslide -->
+					<top>-180</top>
+					<control type="group">
+						<control type="image">
+							<left>578</left>
+							<top>514</top>
+							<width>339</width>
+							<height>75</height>
+							<colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+							<texture>White.png</texture>
+						</control>
+						<control type="image">
+							<left>570</left>
+							<top>505</top>
+							<width>355</width>
+							<height>96</height>
+							<texture border="6">buttons/MenuButton.png</texture>
+						</control>
+						<control type="label">
+							<left>570</left>
+							<top>497</top>					
+							<width>355</width>
+							<height>50</height>
+							<label>51268</label>
+							<font>lcd14</font>
+							<shadowcolor>-</shadowcolor>
+							<textcolor>white</textcolor>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<left>588</left>
+							<top>535</top>					
+							<width>318</width>
+							<height>50</height>
+							<label>[UPPERCASE]$INFO[Container(9000).ListItem().Label][/UPPERCASE]</label>
+							<font>impacted36</font>
+							<textcolor>black</textcolor>
+							<shadowcolor>white</shadowcolor>
+							<align>center</align>
+						</control>
+					</control>
+				</control>
+				<control type="group">
+					<control type="image">
+						<left>-2</left>
+						<top>352</top>
+						<width>250</width>
+						<height>58</height>
+						<colordiffuse>menudiffuse</colordiffuse>
+						<texture background="true">SideFade.png</texture>
+					</control>
+					<control type="image">
+						<left>248r</left>
+						<top>352</top>
+						<width>250</width>
+						<height>58</height>
+						<colordiffuse>menudiffuse</colordiffuse>
+						<texture background="true" flipx="true">SideFade.png</texture>
+					</control>
+				</control>
+			</control>
+			<control type="textbox">
+				<description>Menubutton Description</description>
+				<include>openclosevisible</include>
+				<include>opencloseslidedown</include>
+				<left>300</left>
+				<top>90</top>
+				<width>740</width>
+				<height>200</height>
+				<label>$INFO[Container(9000).ListItem.Label2]</label>
+				<align>left</align>
+				<textcolor>white</textcolor>
+			</control>
+		</control>
+    </include>
+    <include name="ClassicSettings">
+		<control type="group"> <!-- classic style -->
+			<visible>Skin.HasSetting(hide_horizonzvsettings)</visible>
+			<control type="button" id="666">
+				<include>HiddenButton</include>
+				<onfocus>ActivateWindow(home)</onfocus>
+			</control>
+			<include>openclosebox</include>
+			<control type="group">
+				<left>90</left>
+				<top>60</top>
+				<control type="image">
+					<left>5</left>
+					<top>5</top>
+					<width>1090</width>
+					<height>630</height>
+					<colordiffuse>selected</colordiffuse>
+					<texture background="true" border="15">Underlay.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>632</top>
+					<width>1100</width>
+					<height>64</height>
+					<texture border="15">ContentPanelMirror.png</texture>
+				</control>
+				<control type="image">
+					<left>20</left>
+					<top>5</top>
+					<width>280</width>
+					<height>630</height>
+					<colordiffuse>menudiffuse</colordiffuse>
+					<texture background="true">BlackBack.png</texture>
+				</control>
+				<control type="list" id="9000">
+					<visible>Skin.HasSetting(hide_horizonzvsettings)</visible>
+					<left>36</left>
+					<top>70</top>
+					<width>260</width>
+					<height>541</height>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>300</scrolltime>
+					<itemlayout height="50" width="260">
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>230</width>
+							<height>55</height>
+							<textcolor>grey</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="50" width="260">
+						<control type="image">
+							<left>0</left>
+							<top>9</top>
+							<width>240</width>
+							<height>35</height>
+							<texture background="true" border="5">buttons/ButtonFO.png</texture>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<width>230</width>
+							<height>55</height>
+							<textcolor>black</textcolor>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<label>480</label>
+							<label2>31400</label2>
+							<onclick>ActivateWindow(AppearanceSettings)</onclick>
+						</item>
+						<item id="2">
+							<label>157</label>
+							<label2>31401</label2>
+							<onclick>ActivateWindow(VideosSettings)</onclick>
+							<icon>special://skin/backgrounds/home_video.jpg</icon>
+						</item>
+						<item id="3">
+							<label>31502</label>
+							<label2>31409</label2>
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+							<icon>special://skin/backgrounds/home_livetv.jpg</icon>
+						</item>
+						<item id="4">
+							<label>2</label>
+							<label2>31402</label2>
+							<onclick>ActivateWindow(MusicSettings)</onclick>
+							<icon>special://skin/backgrounds/home_music.jpg</icon>
+						</item>
+						<item id="5">
+							<label>1</label>
+							<label2>31403</label2>
+							<onclick>ActivateWindow(PicturesSettings)</onclick>
+							<icon>special://skin/backgrounds/home_pictures.jpg</icon>
+						</item>
+						<item id="6">
+							<label>8</label>
+							<label2>31404</label2>
+							<onclick>ActivateWindow(WeatherSettings)</onclick>
+							<icon>special://skin/backgrounds/home_weather.jpg</icon>
+						</item>
+						<item id="7">
+							<label>24001</label>
+							<label2>31408</label2>
+							<onclick>ActivateWindow(AddonBrowser)</onclick>
+							<icon>special://skin/backgrounds/home_addons.jpg</icon>
+						</item>
+						<item id="8">
+							<label>14036</label>
+							<label2>31410</label2>
+							<onclick>ActivateWindow(ServiceSettings)</onclick>
+							<icon>special://skin/backgrounds/programs.jpg</icon>
+						</item>
+						<item id="9">
+							<label>13000</label>
+							<label2>31406</label2>
+							<onclick>ActivateWindow(SystemSettings)</onclick>
+							<icon>special://skin/backgrounds/services.jpg</icon>
+						</item>
+					</content>
+				</control>
+				<control type="label">
+					<description>header label</description>
+					<left>5</left>
+					<top>18</top>
+					<width>1090</width>
+					<height>30</height>
+					<font>impacted26</font>
+					<label>$LOCALIZE[31000] $LOCALIZE[5]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="image">
+					<left>110</left>
+					<top>58</top>
+					<width>890</width>
+					<height>1</height>
+					<texture background="true">Separator2.png</texture>
+				</control>
+				<control type="group">
+					<left>40</left>
+					<top>20</top>
+					<control type="image">
+						<left>280</left>
+						<top>60</top>
+						<width>760</width>
+						<height>434</height>
+						<aspectratio>stretch</aspectratio>
+						<fadetime>FadeTime</fadetime>
+						<texture background="true" fallback="special://skin/backgrounds/home_settings.jpg">$INFO[Container(9000).ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>280</left>
+						<top>60</top>
+						<width>760</width>
+						<height>434</height>
+						<texture background="true" border="5">buttons/ButtonNF.png</texture>
+					</control>
+					<control type="image">
+						<left>282</left>
+						<top>62</top>
+						<width>560</width>
+						<height>340</height>
+						<aspectratio>stretch</aspectratio>
+						<texture background="true">GlassOverlay.png</texture>
+						<colordiffuse>AAFFFFFF</colordiffuse>
+					</control>
+					<control type="textbox">
+						<description>Appearance Description</description>
+						<left>280</left>
+						<top>500</top>
+						<width>760</width>
+						<height>110</height>
+						<font>ubuntu-r16b</font>
+						<label>$INFO[Container(9000).ListItem.Label2]</label>
+						<align>left</align>
+						<textcolor>description</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+				</control>
+				<control type="image">
+					<description>LOGO</description>
+					<left>25</left>
+					<top>0</top>
+					<width>250</width>
+					<height>70</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">HorizonzV.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<description>systeminfos</description>
+				<left>65</left>
+				<top>150</top>
+				<include>systeminfo_small</include>
+			</control>
+		</control>
+	</include>
+</includes>

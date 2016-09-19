@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="WidgetPropertyLabel">
+		<value condition="StringCompare(Window(Home).Property(HomeButton),movies)">$LOCALIZE[20342]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),series)">$LOCALIZE[20343]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),music)">$LOCALIZE[2]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),livetv)">$LOCALIZE[31502]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),radio)">$LOCALIZE[31960]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),weather)">$LOCALIZE[8]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),3d)">3D $LOCALIZE[20342]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),hd)">HD $LOCALIZE[20342]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fullhd)">FULL HD $LOCALIZE[20342]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),doku)">$LOCALIZE[19519]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),kids)">$LOCALIZE[51187]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav1)+!IsEmpty(Skin.String(Favourite1_Playlist_Label))">$INFO[Skin.String(Favourite1_Playlist_Label)]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav1)+IsEmpty(Skin.String(Favourite1_Playlist_Label))">FAV1</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav2)+!IsEmpty(Skin.String(Favourite2_Playlist_Label))">$INFO[Skin.String(Favourite2_Playlist_Label)]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav2)+IsEmpty(Skin.String(Favourite2_Playlist_Label))">FAV2</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav3)+!IsEmpty(Skin.String(Favourite3_Playlist_Label))">$INFO[Skin.String(Favourite3_Playlist_Label)]</value>
+		<value condition="StringCompare(Window(Home).Property(HomeButton),fav3)+IsEmpty(Skin.String(Favourite3_Playlist_Label))">FAV3</value>
+	</variable>
+	<variable name="Widget_Label">
+		<!-- recommend -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),3d)+Skin.HasSetting(Widget_RecommendedMovies_3D)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),hd)+Skin.HasSetting(Widget_RecommendedMovies_HD)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fullhd)+Skin.HasSetting(Widget_RecommendedMovies_FullHD)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),doku)+Skin.HasSetting(Widget_RecommendedMovies_Doku)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),kids)+Skin.HasSetting(Widget_RecommendedMovies_Kids)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav1)+Skin.HasSetting(Widget_RecommendedMovies_Fav1)">$LOCALIZE[51495]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav2)+Skin.HasSetting(Widget_RecommendedMovies_Fav2)">$LOCALIZE[51495]</value>
+		<!-- random -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),music)+Skin.HasSetting(Widget_RandomAlbums)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),movies)+Skin.HasSetting(Widget_RandomMovies)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),tvshow)+Skin.HasSetting(Widget_RandomTVShows)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),musicvideo)+Skin.HasSetting(Widget_RandomMusicVideos)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),3d)+Skin.HasSetting(Widget_RandomMovies_3D)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),hd)+Skin.HasSetting(Widget_RandomMovies_HD)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fullhd)+Skin.HasSetting(Widget_RandomMovies_FullHD)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),doku)+Skin.HasSetting(Widget_RandomMovies_Doku)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),kids)+Skin.HasSetting(Widget_RandomMovies_Kids)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav1)+Skin.HasSetting(Widget_RandomMovies_Fav1)">$LOCALIZE[590]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav2)+Skin.HasSetting(Widget_RandomMovies_Fav2)">$LOCALIZE[590]</value>
+		<!-- recent -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),music)+Skin.HasSetting(Widget_RecentAlbums)">$LOCALIZE[359]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),movies)+Skin.HasSetting(Widget_RecentMovies)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),tvshow)+Skin.HasSetting(Widget_RecentTVShows)">$LOCALIZE[51425]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),musicvideo)+Skin.HasSetting(Widget_RecentMusicVideos)">$LOCALIZE[20390]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),3d)+Skin.HasSetting(Widget_RecentMovies_3D)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),hd)+Skin.HasSetting(Widget_RecentMovies_HD)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fullhd)+Skin.HasSetting(Widget_RecentMovies_FullHD)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),doku)+Skin.HasSetting(Widget_RecentMovies_Doku)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),kids)+Skin.HasSetting(Widget_RecentMovies_Kids)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav1)+Skin.HasSetting(Widget_RecentMovies_Fav1)">$LOCALIZE[20386]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav2)+Skin.HasSetting(Widget_RecentMovies_Fav2)">$LOCALIZE[20386]</value>
+		<!-- User Playlist-->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav3)+Skin.HasSetting(Widget_UserPlaylist_Radio)">$LOCALIZE[51427]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),fav3)+Skin.HasSetting(Widget_UserPlaylist)">$INFO[Skin.String(UserPlaylistLabel)]</value>
+		<!-- recommended for music -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),music)+Skin.HasSetting(Widget_RecommendedSongs)">$LOCALIZE[51421]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),music)+Skin.HasSetting(Widget_RecommendedAlbums)">$LOCALIZE[517]</value>
+		<!-- pvr -->
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),pvr)+Skin.HasSetting(Widget_Recordings)">$LOCALIZE[20007]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),pvr)+Skin.HasSetting(Widget_PVRTimers)">$LOCALIZE[19040]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),pvr)+Skin.HasSetting(Widget_LiveTVWidgetChannels)">$INFO[Skin.String(Widget_PVR_TV_WidgetChannels_Path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),radio)+Skin.HasSetting(Widget_PVR_Radio_WidgetChannels)">$INFO[Skin.String(Widget_PVR_Radio_WidgetChannels_Path)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),pvr)+Skin.HasSetting(Widget_LiveTVHighlights)">TV Digital Highlights</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(homemenu_id),pvr)+Skin.HasSetting(Widget_SerienPlaner)">Serien Planer</value>
+		<value>$LOCALIZE[22080]</value>
+	</variable>
+</includes>

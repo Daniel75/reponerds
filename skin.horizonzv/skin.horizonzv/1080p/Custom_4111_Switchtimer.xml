@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4111" type="dialog">
+    <defaultcontrol always="true">36100</defaultcontrol>
+    <controls>
+        <include>BlackBack</include>
+        <control type="group" id="576757">
+            <include>openclosebox</include>
+            <left>352</left>
+            <top>90</top>
+            <width>1215</width>
+            <height>900</height>
+            <control type="image">
+                <description>background image</description>
+                <left>0</left>
+                <top>0</top>
+                <width>1215</width>
+                <height>900</height>
+                <colordiffuse>grey1</colordiffuse>
+                <texture border="1">WhiteBack.png</texture>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>15</left>
+                <top>15</top>
+                <width>1185</width>
+                <height>870</height>
+                <texture border="1">WhiteBack.png</texture>
+            </control>
+            <control type="label" id="1">
+                <description>header label</description>
+                <left>60</left>
+                <top>22</top>
+                <width>1095</width>
+                <height>45</height>
+                <font>impacted21</font>
+                <label>KN Switcher - $LOCALIZE[51485]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>grey2</textcolor>
+            </control>
+            <control type="image">
+                <description>background image</description>
+                <left>15</left>
+                <top>72</top>
+                <width>1185</width>
+                <height>60</height>
+                <colordiffuse>grey2</colordiffuse>
+                <texture border="1">WhiteBack.png</texture>
+            </control>
+            <control type="grouplist">
+                <left>870</left>
+                <top>555</top>
+                <width>330</width>
+                <height>330</height>
+                <control type="image">
+                    <description>background image</description>
+                    <width>450</width>
+                    <height>450</height>
+                    <aspectratio align="left">keep</aspectratio>
+                    <colordiffuse>grey1</colordiffuse>
+                    <texture border="1">PVR-Switchtimer2.png</texture>
+                </control>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>38</left>
+                <top>78</top>
+                <width>300</width>
+                <label>$LOCALIZE[21820]</label>
+                <align>left</align>
+                <scroll>false</scroll>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>338</left>
+                <top>78</top>
+                <width>300</width>
+                <label>$LOCALIZE[369] / $LOCALIZE[19029]</label>
+                <align>left</align>
+                <aligny>center</aligny>
+                <scroll>false</scroll>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>1020</left>
+                <top>78</top>
+                <width>150</width>
+                <label>Aktion</label>
+                <align>right</align>
+                <aligny>center</aligny>
+                <scroll>false</scroll>
+            </control>
+            <control type="label">
+                <description>Title label</description>
+                <left>1020</left>
+                <top>141</top>
+                <width>150</width>
+                <label>$INFO[Skin.String(SwitchTimerActiveItems),,/10]</label>
+                <textcolor>grey3</textcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <scroll>false</scroll>
+            </control>
+            <control type="button" id="36101">
+                <left>458</left>
+                <top>141</top>
+                <width>300</width>
+                <ondown>36100</ondown>
+                <label>51475</label>
+                <textcolor>black</textcolor>
+                <texturenofocus>-</texturenofocus>
+                <onclick>RunScript(service.kn.switchtimer,action=delall)</onclick>
+                <visible>Integer.IsGreater(Skin.String(SwitchTimerActiveItems),0)</visible>
+            </control>
+            <control type="list" id="36100">
+                <left>15</left>
+                <top>188</top>
+                <width>1185</width>
+                <height>870</height>
+                <onright>9000</onright>
+                <onleft>9000</onleft>
+                <onup>36101</onup>
+                <ondown>36101</ondown>
+                <scrolltime tween="Quadratic" easing="out">500</scrolltime>
+                <focusposition>0</focusposition>
+                <orientation>vertical</orientation>
+                <movement>1</movement>
+                <itemlayout height="75" width="1185">
+                    <control type="label">
+                        <left>30</left>
+                        <top>15</top>
+                        <width>285</width>
+                        <height>54</height>
+                        <textcolor>grey3</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>338</left>
+                        <top>15</top>
+                        <width>855</width>
+                        <height>54</height>
+                        <textcolor>grey3</textcolor>
+                        <label>$INFO[ListItem.Property(Title)][CR]$INFO[ListItem.Label2]</label>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="75" width="1185">
+                    <control type="image">
+                        <left>15</left>
+                        <top>9</top>
+                        <width>1155</width>
+                        <height>69</height>
+                        <texture border="2">buttons/ButtonFO.png</texture>
+                        <visible>Control.HasFocus(36100)</visible>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <top>15</top>
+                        <width>285</width>
+                        <height>54</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>338</left>
+                        <top>15</top>
+                        <width>855</width>
+                        <height>54</height>
+                        <textcolor>black</textcolor>
+                        <label>$INFO[ListItem.Property(Title)][CR]$INFO[ListItem.Label2]</label>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                    </control>
+                    <control type="label">
+                        <left>855</left>
+                        <top>15</top>
+                        <width>300</width>
+                        <height>54</height>
+                        <textcolor>black</textcolor>
+                        <label>51477</label>
+                        <align>right</align>
+                        <aligny>top</aligny>
+                        <visible>Control.HasFocus(36100)</visible>
+                    </control>
+                </focusedlayout>
+                <include>KNSwitcherContent</include>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <include>openclose</include>
+    <include>opencloseslidedown</include>
+	<zorder>5</zorder>
+    <depth>DepthDialog+</depth>
+    <controls>
+        <include>DialogLayout</include>
+        <control type="textbox" id="9">
+            <left>0</left>
+            <top>63</top>
+            <width>1920</width>
+            <height>150</height>
+            <label>-</label>
+            <align>center</align>
+            <aligny>center</aligny>
+            <autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+        </control>
+        <control type="label">
+            <description>Progressbar</description>
+            <left>8</left>
+            <top>243</top>
+            <align>left</align>
+            <width>120</width>
+            <height>15</height>
+            <label>$INFO[System.Progressbar,,%]</label>
+        </control>
+        <control type="image">
+            <description>Progressbarback</description>
+            <left>0</left>
+            <top>272</top>
+            <width>1920</width>
+            <height>14</height>
+			<texture>Black.png</texture>
+			<visible>!String.IsEmpty(System.Progressbar)</visible>
+        </control>
+        <control type="progress" id="20">
+            <description>Progressbar</description>
+            <left>0</left>
+            <top>274</top>
+            <width>1920</width>
+            <height>10</height>
+            <info>System.Progressbar</info>
+        </control>
+        <control type="grouplist" id="9000">
+            <orientation>horizontal</orientation>
+            <left>0</left>
+            <top>228</top>
+            <width>1920</width>
+            <align>center</align>
+            <control type="button" id="11">
+                <description>Yes</description>
+                <width>225</width>
+                <height>39</height>
+                <label>-</label>
+                <!-- <label>107</label> -->
+                <texturenofocus>-</texturenofocus>
+            </control>
+            <control type="button" id="10">
+                <description>Ok</description>
+                <width>225</width>
+                <height>39</height>
+                <label>-</label>
+                <!-- <label>222</label> -->
+                <texturenofocus>-</texturenofocus>
+            </control>
+            <control type="button" id="12">
+                <width>225</width>
+                <height>39</height>
+                <label>-</label>
+                <texturenofocus>-</texturenofocus>
+            </control>
+        </control>
+    </controls>
+</window>

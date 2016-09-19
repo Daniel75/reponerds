@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="VAR_Grabber_GTO">
+		<value condition="System.HasAddon(plugin.service.gto)">plugin://plugin.service.gto?action=getcontent&amp;ts=$INFO[Window(Home).Property(GTO.timestamp)]</value>
+		<value>-</value>
+	</variable>
+	<variable name="VAR_Grabber_SerienPlaner">
+		<value condition="System.HasAddon(plugin.program.serienplaner)">plugin://plugin.program.serienplaner/?methode=get_item_serienplaner&amp;reload=$INFO[Window(home).Property(SerienPlaner.Countdown)]</value>
+		<value>-</value>
+	</variable>
+    <include name="NewsCenterItem">
+        <item>
+            <label>$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Title)]</label>
+            <thumb>$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</thumb>
+            <label2>$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Date)]</label2>
+            <property name="comment">$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Desc)]</property>
+            <property name="headerpic">$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].HeaderPic)]</property>
+            <onclick>ActivateWindow(4117)</onclick>
+            <icon>$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</icon>
+            <visible>!String.IsEmpty(Window(home).Property(LatestNews.$PARAM[newscenter_id].Title))</visible>
+            <actualicon>$INFO[Window(home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</actualicon>
+        </item>
+    </include>
+    <variable name="NewsPreviewBundesligaTabelle">
+        <value condition="Container(23010).Hasfocus(23101)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&amp;buliliga=1</value>
+        <value condition="Container(23010).Hasfocus(23103)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&amp;buliliga=2</value>
+    </variable>
+    <variable name="NewsPreviewBundesligaSpiele">
+        <value condition="Container(23010).Hasfocus(23102)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&amp;buliliga=1</value>
+        <value condition="Container(23010).Hasfocus(23104)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&amp;buliliga=2</value>
+    </variable>
+    <include name="NewsCenterItem_Pollen">
+        <item>
+            <label>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Name)]</label>
+            <label2>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung),newscenter/,]-pollen.png</label2>
+            <icon>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Pic)]</icon>
+            <onclick>noop</onclick>
+            <visible>!String.IsEqual(Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung),0)+!String.IsEmpty(Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung))</visible>
+        </item>
+    </include>
+    <include name="HomeNewsCenterContent">
+        <content>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="0" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="1" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="2" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="3" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="4" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="5" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="6" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="7" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="8" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="9" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="10" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="11" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="12" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="13" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="14" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="15" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="16" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="17" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="18" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="19" />
+            </include>
+            <include content="NewsCenterItem">
+                <param name="newscenter_id" value="20" />
+            </include>
+        </content>
+    </include>
+    <include name="HomeNewsCenterItemLayout">
+        <control type="image">
+            <left>8</left>
+            <top>8</top>
+            <width>338</width>
+            <height>142</height>
+            <colordiffuse>grey</colordiffuse>
+            <aspectratio>scale</aspectratio>
+            <texture>$INFO[ListItem.Icon]</texture>
+        </control>
+        <control type="image">
+            <left>8</left>
+            <top>112</top>
+            <width>150</width>
+            <height>38</height>
+            <aspectratio align="left" aligny="bottom">keep</aspectratio>
+            <texture>$INFO[ListItem.Property(headerpic)]</texture>
+            <bordersize>5</bordersize>
+        </control>
+        <control type="label">
+            <left>15</left>
+            <top>52</top>
+            <width>322</width>
+            <height>45</height>
+            <font>impacted14</font>
+            <align>center</align>
+            <textcolor>description</textcolor>
+            <shadowcolor>black</shadowcolor>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="image">
+            <description>background</description>
+            <left>0</left>
+            <top>0</top>
+            <width>352</width>
+            <height>158</height>
+            <colordiffuse>menudiffuse</colordiffuse>
+            <texture border="4">masks/Default_sharp.png</texture>
+        </control>
+    </include>
+    <include name="HomeNewsCenterFocusedLayout">
+		<control type="group">
+			<include>focuseffect</include>
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>352</width>
+				<height>158</height>
+				<colordiffuse>$VAR[BackgroundOverlayColorDialog]</colordiffuse>
+				<texture>WhiteBack.png</texture>
+			</control>
+			<control type="label">
+				<left>15</left>
+				<top>5</top>
+				<width>322</width>
+				<height>40</height>
+				<font>font12</font>
+				<align>center</align>
+				<shadowcolor>black</shadowcolor>
+				<label>$PARAM[NewsCenter_Label1]</label>
+			</control>
+			<control type="textbox">
+				<left>15</left>
+				<top>43</top>
+				<width>322</width>
+				<height>75</height>
+				<font>impacted16</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>description</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<label>$PARAM[NewsCenter_Label2]</label>
+			</control>
+			<control type="label">
+				<left>15</left>
+				<top>115</top>
+				<width>322</width>
+				<height>45</height>
+				<font>font12</font>
+				<align>center</align>
+				<shadowcolor>black</shadowcolor>
+				<label>$PARAM[NewsCenter_Label3]</label>
+			</control>
+			<control type="image">
+				<description>background</description>
+				<left>0</left>
+				<top>0</top>
+				<width>352</width>
+				<height>158</height>
+				<colordiffuse>menudiffuse</colordiffuse>
+				<texture border="4">masks/Default_sharp.png</texture>
+			</control>
+		</control>
+	</include>
+    <include name="HomeNewsCenter">
+        <control type="group">
+            <visible>Control.IsVisible(401)|Control.IsVisible(402)|Control.IsVisible(403)</visible>
+            <visible>!Window.IsVisible(favourites)+!Control.HasFocus(200)</visible>
+            <include>openclosevisible</include>
+            <include>BlackBack</include>
+        </control>
+        <control type="grouplist" id="1900">
+            <left>60</left>
+            <top>70</top>
+            <width>1800</width>
+            <height>1215</height>
+            <itemgap>0</itemgap>
+            <orientation>vertical</orientation>
+            <control type="group"> <!-- News -->
+                <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                <visible>!Window.IsVisible(favourites)</visible>
+                <visible>!String.IsEmpty(Window(Home).Property(LatestNews.1.Title))+Skin.HasSetting(Widget_NEWS_NewsCenter)</visible>
+				<visible>System.HasAddon(plugin.program.newscenter)</visible>
+                <include>openclosefanart</include>
+                <include>openclosevisible</include>
+                <width>1800</width>
+                <height>225</height>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>auto</width>
+                    <height>45</height>
+                    <font>impacted21</font>
+                    <align>left</align>
+                    <textcolor>grey</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>News</label>
+					<visible>Control.IsVisible(402)|Control.IsVisible(403)</visible>
+                </control>
+                <control type="list" id="401">
+                    <left>0</left>
+                    <top>48</top>
+                    <width>1800</width>
+                    <height>360</height>
+                    <onleft>401</onleft>
+                    <onright>401</onright>
+                    <onup>noop</onup>
+                    <ondown condition="Control.IsVisible(402)">402</ondown>
+                    <ondown condition="!Control.IsVisible(402)+Control.IsVisible(403)">403</ondown>
+                    <ondown condition="!Control.IsVisible(402)+!Control.IsVisible(403)">9000</ondown>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Bottom,$ESCINFO[ListItem.Label2],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Header,$ESCINFO[ListItem.Label],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Property(comment)],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">ActivateWindow(1102)</onclick>
+                    <oninfo>RunScript(plugin.program.newscenter,&quot;?methode=show_select_dialog&quot;)</oninfo>
+                    <!-- <onclick>RunScript(plugin.program.newscenter,&quot;?methode=show_select_dialog&quot;)</onclick> -->
+                    <ondown>Action(FirstPage)</ondown>
+                    <viewtype label="list">list</viewtype>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime tween="circle" easing="out">800</scrolltime>
+                    <orientation>horizontal</orientation>
+					<visible>Control.IsVisible(402)|Control.IsVisible(403)</visible>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(LatestNews.1.Title))+Skin.HasSetting(Widget_NEWS_NewsCenter)</visible>
+                    <autoscroll time="3000" delay="5000" repeat="5000">!ControlGroup(290).HasFocus+!String.IsEmpty(Container(401).ListItem(6).Label)+Skin.HasSetting(animation)</autoscroll>
+                    <itemlayout height="180" width="360">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="180" width="360" condition="Control.HasFocus(401)">
+						<include content="HomeNewsCenterFocusedLayout">
+							<param name="NewsCenter_Label1" value="$INFO[ListItem.Label2]" />
+							<param name="NewsCenter_Label2" value="$INFO[ListItem.Label]" />
+							<param name="NewsCenter_Label3" value="$LOCALIZE[51567]" />
+						</include>
+                    </focusedlayout>
+                    <focusedlayout height="180" width="360" condition="!Control.HasFocus(401)">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </focusedlayout>
+                    <include>HomeNewsCenterContent</include>
+                </control>
+                <control type="panel" id="401">
+                    <left>0</left>
+                    <top>70</top>
+                    <width>1800</width>
+                    <height>510</height>
+                    <onleft>401</onleft>
+                    <onright>401</onright>
+                    <onup>noop</onup>
+                    <ondown condition="Control.IsVisible(402)">402</ondown>
+                    <ondown condition="!Control.IsVisible(402)+Control.IsVisible(403)">403</ondown>
+                    <ondown condition="!Control.IsVisible(402)+!Control.IsVisible(403)">9000</ondown>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Bottom,$ESCINFO[ListItem.Label2],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Header,$ESCINFO[ListItem.Label],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">SetProperty(TextViewer_Text,$ESCINFO[ListItem.Property(comment)],home)</onclick>
+					<onclick condition="!String.IsEmpty(ListItem.Property(comment))">ActivateWindow(1102)</onclick>
+                    <oninfo>RunScript(plugin.program.newscenter,&quot;?methode=show_select_dialog&quot;)</oninfo>
+                    <!-- <onclick>RunScript(plugin.program.newscenter,&quot;?methode=show_select_dialog&quot;)</onclick> -->
+                    <ondown>Action(FirstPage)</ondown>
+                    <viewtype label="list">list</viewtype>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime tween="circle" easing="out">800</scrolltime>
+                    <orientation>horizontal</orientation>
+					<visible>!Control.IsVisible(402)+!Control.IsVisible(403)</visible>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                    <visible>!String.IsEmpty(Window(Home).Property(LatestNews.1.Title))+Skin.HasSetting(Widget_NEWS_NewsCenter)</visible>
+                    <itemlayout height="170" width="360">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="170" width="360" condition="Control.HasFocus(401)">
+						<include content="HomeNewsCenterFocusedLayout">
+							<param name="NewsCenter_Label1" value="$INFO[ListItem.Label2]" />
+							<param name="NewsCenter_Label2" value="$INFO[ListItem.Label]" />
+							<param name="NewsCenter_Label3" value="$LOCALIZE[51567]" />
+						</include>
+                    </focusedlayout>
+                    <focusedlayout height="170" width="360" condition="!Control.HasFocus(401)">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </focusedlayout>
+                    <include>HomeNewsCenterContent</include>
+                </control>
+            </control>
+			<control type="group"> <!-- TVHighlights / GTO -->
+                <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                <visible>!Window.IsVisible(favourites)</visible>
+                <visible>Integer.IsGreater(Window(Home).Property(GTO.Blobs),0)+Skin.HasSetting(Widget_NEWS_TVHighlights_gto)</visible>
+                <visible>System.HasAddon(plugin.service.gto)</visible>
+                <include>openclosefanart</include>
+                <include>openclosevisible</include>
+                <width>1800</width>
+                <height>225</height>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>auto</width>
+                    <height>45</height>
+                    <font>impacted21</font>
+                    <align>left</align>
+                    <textcolor>grey</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>TV Highlights</label>
+                </control>
+                <control type="list" id="402">
+                    <left>0</left>
+                    <top>48</top>
+                    <width>1800</width>
+                    <height>360</height>
+                    <oninfo>RunScript(plugin.service.gto,action=infopopup&amp;blob=$INFO[Container(402).ListItem.Property(BlobID)])</oninfo>
+                    <onclick>RunScript(plugin.service.gto,action=infopopup&amp;blob=$INFO[ListItem.Property(BlobID)])</onclick>
+                    <onleft>402</onleft>
+                    <onright>402</onright>
+                    <onup>401</onup>
+                    <ondown condition="Control.IsVisible(403)">403</ondown>
+                    <ondown condition="!Control.IsVisible(403)">9000</ondown>
+                    <viewtype label="list">list</viewtype>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime tween="circle" easing="out">800</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <visible>System.HasAddon(plugin.service.gto)</visible>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                    <visible>Integer.IsGreater(Window(Home).Property(GTO.Blobs),0)+Skin.HasSetting(Widget_NEWS_TVHighlights_gto)</visible>
+                    <autoscroll time="3000" delay="5000" repeat="5000">!ControlGroup(290).HasFocus+!String.IsEmpty(Container(402).ListItem(6).Label)+Skin.HasSetting(animation)</autoscroll>
+                    <itemlayout height="180" width="360">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="180" width="360" condition="Control.HasFocus(402)">
+						<include content="HomeNewsCenterFocusedLayout">
+							<param name="NewsCenter_Label1" value="$INFO[ListItem.Property(channel)]$INFO[ListItem.Label2]" />
+							<param name="NewsCenter_Label2" value="$INFO[ListItem.Label]" />
+							<param name="NewsCenter_Label3" value="$INFO[ListItem.Genre]$INFO[ListItem.Property(StartTime), | ,]$INFO[ListItem.Property(EndTime), - ,]" />
+						</include>
+                    </focusedlayout>
+                    <focusedlayout height="180" width="360" condition="!Control.HasFocus(402)">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </focusedlayout>
+					<content sortby="time" sortorder="ascending">$VAR[VAR_Grabber_GTO]</content>
+                </control>
+            </control>
+            <control type="group"> <!-- Serien Planer -->
+                <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                <visible>!Window.IsVisible(favourites)</visible>
+                <visible>!String.IsEmpty(Window.Property(SerienPlaner.1.Channel))+Skin.HasSetting(Widget_NEWS_SerienPlaner)</visible>
+                <visible>System.HasAddon(plugin.program.serienplaner)</visible>
+                <include>openclosefanart</include>
+                <include>openclosevisible</include>
+                <width>1800</width>
+                <height>225</height>
+                <control type="label">
+                    <left>8</left>
+                    <top>0</top>
+                    <width>auto</width>
+                    <height>45</height>
+                    <font>impacted21</font>
+                    <align>left</align>
+                    <textcolor>grey</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>Serien Planer</label>
+                </control>
+                <control type="list" id="403">
+                    <left>0</left>
+                    <top>48</top>
+                    <width>1800</width>
+                    <height>360</height>
+                    <onleft>403</onleft>
+                    <onright>403</onright>
+                    <onup condition="Control.IsVisible(402)">402</onup>
+                    <onup condition="!Control.IsVisible(402)">401</onup>
+                    <ondown>9000</ondown>
+                    <oninfo>SetProperty(Widget.Senderlogo,$INFO[Container(403).ListItem.Property(Senderlogo)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Datetime,$INFO[Container(403).ListItem.Property(Datetime)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.PVRID,$INFO[Container(403).ListItem.Property(PVRID)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Plot,$ESCINFO[Container(403).ListItem.Plot],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Thumb,$INFO[Container(403).ListItem.Thumb],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Clearlogo,$INFO[Container(403).ListItem.Art(clearlogo)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Label,$INFO[Container(403).ListItem.Label],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Label2,$INFO[Container(403).ListItem.Label2],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Season,$INFO[Container(403).ListItem.Season],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Episode,$INFO[Container(403).ListItem.Episode],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Genre,$INFO[Container(403).ListItem.Genre],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Rating,$INFO[Container(403).ListItem.Rating],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Channel,$INFO[Container(403).ListItem.Property(channel)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Starttime,$INFO[Container(403).ListItem.Property(Starttime)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Date,$INFO[Container(403).ListItem.Property(date)],home)</oninfo>
+                    <oninfo>SetProperty(Widget.Runtime,$INFO[Container(403).ListItem.Property(runtime)],home)</oninfo>
+                    <oninfo>ActivateWindow(4118)</oninfo>
+                    <onclick>SetProperty(Widget.Senderlogo,$INFO[ListItem.Property(Senderlogo)],home)</onclick>
+                    <onclick>SetProperty(Widget.Datetime,$INFO[ListItem.Property(Datetime)],home)</onclick>
+                    <onclick>SetProperty(Widget.PVRID,$INFO[ListItem.Property(PVRID)],home)</onclick>
+                    <onclick>SetProperty(Widget.Plot,$ESCINFO[ListItem.Plot],home)</onclick>
+                    <onclick>SetProperty(Widget.Thumb,$INFO[ListItem.Thumb],home)</onclick>
+                    <onclick>SetProperty(Widget.Clearlogo,$INFO[ListItem.Art(clearlogo)],home)</onclick>
+                    <onclick>SetProperty(Widget.Label,$INFO[ListItem.Label],home)</onclick>
+                    <onclick>SetProperty(Widget.Label2,$INFO[ListItem.Label2],home)</onclick>
+                    <onclick>SetProperty(Widget.Season,$INFO[ListItem.Season],home)</onclick>
+                    <onclick>SetProperty(Widget.Episode,$INFO[ListItem.Episode],home)</onclick>
+                    <onclick>SetProperty(Widget.Genre,$INFO[ListItem.Genre],home)</onclick>
+                    <onclick>SetProperty(Widget.Rating,$INFO[ListItem.Rating],home)</onclick>
+                    <onclick>SetProperty(Widget.Channel,$INFO[ListItem.Property(channel)],home)</onclick>
+                    <onclick>SetProperty(Widget.Starttime,$INFO[ListItem.Property(Starttime)],home)</onclick>
+                    <onclick>SetProperty(Widget.Date,$INFO[ListItem.Property(date)],home)</onclick>
+                    <onclick>SetProperty(Widget.Runtime,$INFO[ListItem.Property(runtime)],home)</onclick>
+                    <onclick>ActivateWindow(4118)</onclick>
+                    <viewtype label="list">list</viewtype>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime tween="circle" easing="out">800</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+                    <visible>!String.IsEmpty(Window.Property(SerienPlaner.1.Channel))+Skin.HasSetting(Widget_NEWS_SerienPlaner)</visible>
+                    <visible>System.HasAddon(plugin.program.serienplaner)</visible>
+                    <autoscroll time="3000" delay="5000" repeat="5000">!ControlGroup(290).HasFocus+!String.IsEmpty(Container(403).ListItem(6).Label)+Skin.HasSetting(animation)</autoscroll>
+                    <itemlayout height="180" width="360">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </itemlayout>
+                    <focusedlayout height="180" width="360" condition="Control.HasFocus(403)">
+						<include content="HomeNewsCenterFocusedLayout">
+							<param name="NewsCenter_Label1" value="$INFO[ListItem.Label]" />
+							<param name="NewsCenter_Label2" value="$INFO[ListItem.Label2]" />
+							<param name="NewsCenter_Label3" value="$INFO[ListItem.Season,S,]$INFO[ListItem.Episode, E,]$INFO[ListItem.Property(starttime), / ,]$INFO[ListItem.Property(endtime), - ,]$INFO[ListItem.Property(date), / ,]" />
+						</include>
+                    </focusedlayout>
+                    <focusedlayout height="180" width="360" condition="!Control.HasFocus(403)">
+                        <include>HomeNewsCenterItemLayout</include>
+                    </focusedlayout>
+					<content target="pvr">$VAR[VAR_Grabber_SerienPlaner]</content>
+                </control>
+            </control>
+        </control>
+    </include>
+</includes>

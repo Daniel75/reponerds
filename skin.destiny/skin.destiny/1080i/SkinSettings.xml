@@ -1,0 +1,923 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">9060</defaultcontrol>
+  <controls>
+	  <control type="group">
+		<left>0</left>
+		<top>0</top>
+		<include>CommonHomeBack</include>	
+		<include>CommonAllFront2</include>
+		<include>SideBladeForViews</include>
+		<include>BigInfosTime</include>
+		<include>BigInfosDatabaseCount</include>
+		<include>BigInfosWeather</include>
+		<include>CommonHomeButton</include>	
+		<include>HomePlaying</include>   
+		</control>
+	    <!--========================================================================================-->
+        <!--================================ GENERAL SETTINGS ======================================-->
+		<!--========================================================================================-->
+		<control type="group" id="9010">
+		<include>Animation.ZoomIn</include>
+        <control type="grouplist" id="9001">
+          <visible>Container(9060).Hasfocus(1)</visible>
+          <left>505</left>
+		  <top>165</top>
+		  <width>1337</width>
+		  <height>810</height>
+          <itemgap>2</itemgap>
+          <pagecontrol>63</pagecontrol>
+          <onleft>9060</onleft>
+          <onright>63</onright>
+          <onup>9001</onup>
+          <ondown>9001</ondown>
+          <control type="radiobutton" id="1007">
+            <description>Enable Kiosk Mode (disable slideout menu)</description>
+            <width>1337</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <label>50087</label>
+			<textoffsetx>30</textoffsetx>
+            <onclick>Skin.ToggleSetting(kiosk)</onclick>
+            <selected>Skin.HasSetting(kiosk)</selected>
+          </control>
+		  <control type="label" id="1008">
+			<width>1337</width>
+			<height>50</height>
+			<font>primal_20_Bold</font>
+			<label>$LOCALIZE[50339]</label>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textoffsetx>30</textoffsetx>
+		  </control>
+		  <control type="radiobutton" id="1009">
+            <width>1337</width>
+            <height>50</height>
+            <font>primal_20</font>
+            <label>$LOCALIZE[50338]</label>
+			<textoffsetx>30</textoffsetx>
+            <onclick>Skin.ToggleSetting(tablet_modus)</onclick>
+			<onclick>XBMC.ReloadSkin()</onclick>
+            <selected>!Skin.HasSetting(tablet_modus)</selected>
+          </control>
+		  <control type="label" id="106">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20_Bold</font>
+			  <label>512</label>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <textoffsetx>30</textoffsetx>
+		  </control>
+		  <control type="radiobutton" id="1014">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50097</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
+			  <selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+			  <enable>!Skin.HasSetting(Use_Startup_VideoPlaylist)</enable>
+		  </control>
+		  <control type="button" id="108">
+			  <description>Startup Music Playlist Path</description>
+			  <width>1337</width>
+	          <height>50</height>
+			  <font>primal_20</font>
+			  <label>50098</label>
+			  <textoffsetx>30</textoffsetx>
+			  <label2>$INFO[Skin.String(Startup_Playlist_Path)]</label2>
+			  <onclick>Skin.SetFile(Startup_Playlist_Path,,special://MusicPlaylists/)</onclick>
+			  <enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+		  </control>
+		  <control type="radiobutton" id="1015">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50099</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(Use_Startup_Favorites)</onclick>
+			  <selected>Skin.HasSetting(Use_Startup_Favorites)</selected>
+			  <enable>!Skin.HasSetting(Use_Startup_Favorit)</enable>
+		  </control>
+		  <control type="button" id="1016">
+			  <description>Startup Favorit Path</description>
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50100</label>
+			  <textoffsetx>30</textoffsetx>
+			  <label2>$INFO[Skin.String(Startup_Favorites_Path)]</label2>
+			  <onclick>Skin.SetFile(Startup_Favorites_Path,,addons://sources/audio/)</onclick>
+			  <enable>Skin.HasSetting(Use_Startup_Favorites)</enable>
+		  </control>
+		  <control type="radiobutton" id="1017">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50101</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(Use_Startup_VideoPlaylist)</onclick>
+			  <selected>Skin.HasSetting(Use_Startup_VideoPlaylist)</selected>
+			  <enable>!Skin.HasSetting(Use_Startup_Playlist)</enable>
+		  </control>
+		  <control type="button" id="1079">
+			  <description>Startup Video Playlist Path</description>
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50102</label>
+			  <textoffsetx>30</textoffsetx>
+			  <label2>$INFO[Skin.String(Startup_VideoPlaylist_Path)]</label2>
+			  <onclick>Skin.SetFile(Startup_VideoPlaylist_Path,,special://VideoPlaylists/)</onclick>
+			  <enable>Skin.HasSetting(Use_Startup_VideoPlaylist)</enable>
+		  </control>
+		  <control type="label" id="1081">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20_Bold</font>
+			  <label>50105</label>
+			  <textoffsetx>30</textoffsetx>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	          <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+          </control>
+          <control type="radiobutton" id="1082">
+			  <description>Set Focus Offset</description>
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <label>50106</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(customstartupfocus)</onclick>
+			  <selected>Skin.HasSetting(customstartupfocus)</selected>
+          </control>
+          <control type="button" id="1011">
+			  <label> - $LOCALIZE[41170]</label>
+			  <label2>[COLOR=selected]$INFO[Skin.String(CustomFocusOffset)][/COLOR]</label2>
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.SetString(CustomFocusOffset)</onclick>
+			  <visible>Skin.HasSetting(customstartupfocus)</visible>
+          </control>          
+		  <control type="label" id="100006">
+			<width>1337</width>
+			<height>50</height>
+			<font>primal_20_Bold</font>
+			<label>$LOCALIZE[50132]</label>
+			<textoffsetx>30</textoffsetx>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+		  </control>
+		  <control type="radiobutton" id="100014">
+			<description>TV Tunes</description>
+			<width>1337</width>
+			<height>50</height>
+			<font>primal_20</font>
+			<label>$LOCALIZE[50140]</label>
+			<textoffsetx>30</textoffsetx>
+			<onclick>Skin.ToggleSetting(tv_theme)</onclick>
+			<selected>Skin.HasSetting(tv_theme)</selected>
+		  </control>
+	  </control>
+		<control type="scrollbar" id="63">
+		   <left>1850</left>
+		   <top>165</top>
+		   <width>10</width>
+		   <height>810</height>
+		   <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+		   <texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+		   <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+		   <textureslidernib>button/ScrollBarNib.png</textureslidernib>
+		   <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+		   <onleft>9001</onleft>
+		   <onright>1860</onright>
+		   <showonepage>false</showonepage>
+		   <orientation>vertical</orientation>
+		   <visible>Container(9060).Hasfocus(1)</visible>
+		</control>
+	
+	    <!--========================================================================================-->
+        <!--========================================== HOME ========================================-->
+		<!--========================================================================================-->
+        <control type="group">
+			<control type="grouplist" id="9003">
+			  <visible>Container(9060).Hasfocus(3)</visible>
+			  <left>505</left>
+			  <top>165</top>
+			  <width>1337</width>
+			  <height>810</height>
+			  <itemgap>2</itemgap>
+			  <pagecontrol>65</pagecontrol>
+			  <onleft>9060</onleft>
+			  <onright>65</onright>
+			  <onup>9003</onup>
+			  <ondown>9003</ondown>
+			<control type="button" id="3039">
+			  <description>Home Menü Button</description>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <label>$LOCALIZE[50108]</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>ActivateWindow(4114)</onclick>
+			</control>
+			<control type="button" id="3040">
+			  <description>Home Menü Button</description>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <label>$LOCALIZE[50398]</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>ActivateWindow(4115)</onclick>
+			</control>
+			<control type="button" id="3041">
+			  <description>Home Menü Button</description>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <label>$LOCALIZE[50321]</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>ActivateWindow(4107)</onclick>
+			</control>
+			<control type="radiobutton" id="3042">
+			  <label>$LOCALIZE[50394]</label>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(HomeMusicFanart)</onclick>
+			  <onclick>Skin.Reset(HomeMusicExtraFanart)</onclick>
+			  <onclick>Skin.Reset(ArtistslideshowHome)</onclick>
+			  <selected>Skin.HasSetting(HomeMusicFanart)</selected>
+			</control>
+			<control type="radiobutton" id="3043">
+			  <label>$LOCALIZE[50393]</label>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(ArtistslideshowHome)</onclick>
+			  <onclick>Skin.Reset(HomeMusicFanart)</onclick>
+			  <onclick>Skin.Reset(HomeMusicExtraFanart)</onclick>
+			  <selected>Skin.HasSetting(ArtistslideshowHome)</selected>
+			</control>
+			<control type="radiobutton" id="3044">
+			  <label>$LOCALIZE[50392]</label>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(HomeMusicExtraFanart)</onclick>
+			  <onclick>Skin.Reset(HomeMusicFanart)</onclick>
+			  <onclick>Skin.Reset(ArtistslideshowHome)</onclick>
+			  <selected>Skin.HasSetting(HomeMusicExtraFanart)</selected>
+			</control>
+			<control type="radiobutton" id="3045">
+			  <label>$LOCALIZE[50391]</label>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(GrabFanart)</onclick>
+			  <selected>Skin.HasSetting(GrabFanart)</selected>
+			</control>
+			<control type="radiobutton" id="3046">
+			  <label>$LOCALIZE[50390]</label>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(NoWidgets)</onclick>
+			  <selected>Skin.HasSetting(NoWidgets)</selected>
+			</control>
+			<control type="radiobutton" id="3047">
+			  <description>Home Menü Vertical</description>
+			  <width>1337</width>
+              <height>50</height>
+			  <font>primal_20</font>
+			  <label>$LOCALIZE[50389]</label>
+			  <textoffsetx>30</textoffsetx>
+			  <onclick>Skin.ToggleSetting(HomeMainMenu2)</onclick>
+			  <onclick>Skin.Reset</onclick>
+			  <selected>Skin.HasSetting(HomeMainMenu2)</selected>
+			</control>
+			<control type="radiobutton" id="3048">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <label>$LOCALIZE[50120]</label>
+			  <onclick>Skin.ToggleSetting(WheaterMultiFanart)</onclick>
+			  <selected>Skin.HasSetting(WheaterMultiFanart)</selected>
+			</control>
+			<control type="radiobutton" id="3049">
+			  <width>1337</width>
+			  <height>50</height>
+			  <font>primal_20</font>
+			  <textoffsetx>30</textoffsetx>
+			  <label>$LOCALIZE[50307]</label>
+			  <onclick>Skin.ToggleSetting(homenocolorbutton)</onclick>
+			  <selected>Skin.HasSetting(homenocolorbutton)</selected>
+			</control>
+          </control>
+		  <control type="scrollbar" id="65">
+		     <include>Animation.ZoomIn</include>
+			 <left>1850</left>
+			 <top>165</top>
+			 <width>10</width>
+			 <height>810</height>
+			 <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+			 <texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+			 <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			 <textureslidernib>button/ScrollBarNib.png</textureslidernib>
+			 <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+			 <onleft>9006</onleft>
+			 <onright>1860</onright>
+			 <showonepage>true</showonepage>
+			 <orientation>vertical</orientation>
+			 <visible>Container(9060).Hasfocus(3)</visible>
+          </control>
+		</control>
+	   </control>
+		
+	  <!--========================================================================================-->
+	  <!--=============================== HOME WINDOW SETTINGS ===================================-->
+	  <!--========================================================================================-->
+	  <control type="grouplist" id="9005">
+		<include>Animation.ZoomIn</include>
+		<visible>Container(9060).Hasfocus(5)</visible>
+		<left>505</left>
+		<top>165</top>
+		<width>1337</width>
+		<height>810</height>
+		<itemgap>2</itemgap>
+		<pagecontrol>2640</pagecontrol>
+		<onleft>9060</onleft>
+		<onright>2640</onright>
+		<onup>9005</onup>
+		<ondown>9005</ondown>	
+		<control type="radiobutton" id="3091">
+		  <description>Music Path for Artist Logos</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50308</label>
+		  <onclick>Skin.ToggleSetting(MusicPath)</onclick>
+		  <selected>Skin.HasSetting(MusicPath)</selected>
+		</control>
+		<control type="button" id="3092">
+		  <description>Music Artist Logo Set Path</description>
+		  <label>$LOCALIZE[49973] $INFO[Skin.String(Music_Folder_Path)]</label>
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20</font>
+		  <onclick>Skin.Reset(Music_Folder_Path)</onclick>
+		  <onclick>Skin.SetPath(Music_Folder_Path)</onclick>
+		  <visible>Skin.HasSetting(MusicPath)</visible>
+		</control>
+		<control type="radiobutton" id="3093">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50388]</label>
+		  <onclick>Skin.ToggleSetting(viewnoscrollbar)</onclick>
+		  <selected>Skin.HasSetting(viewnoscrollbar)</selected>
+		</control>	
+		<control type="radiobutton" id="3094">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50135]</label>
+		  <onclick>Skin.ToggleSetting(NoPlotScroll)</onclick>
+		  <selected>Skin.HasSetting(NoPlotScroll)</selected>
+		</control>	
+		<control type="radiobutton" id="3095">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20</font>
+		  <label>$LOCALIZE[50402]</label>
+		  <onclick>Skin.ToggleSetting(PlotFontBig)</onclick>
+		  <selected>Skin.HasSetting(PlotFontBig)</selected>
+		</control>	
+		<control type="radiobutton" id="3096">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20</font>
+		  <label>$LOCALIZE[50396]</label>
+		  <onclick>Skin.ToggleSetting(RatingColor)</onclick>
+		  <selected>Skin.HasSetting(RatingColor)</selected>
+		</control>
+		<control type="label" id="3097">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20_Bold</font>
+		  <label>$LOCALIZE[50232]</label>
+		  <textoffsetx>30</textoffsetx>
+		  <textcolor>$VAR[ColorFontSelected]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>left</align>
+		  <aligny>center</aligny>
+	    </control>
+	    <control type="radiobutton" id="3098">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20</font>
+		  <label>$LOCALIZE[50395]</label>
+		  <onclick>Skin.ToggleSetting(HomeNoWeather)</onclick>
+		  <selected>Skin.HasSetting(HomeNoWeather)</selected>
+		</control>
+		<control type="radiobutton" id="3099">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20</font>
+		  <label>$LOCALIZE[50397]</label>
+		  <onclick>Skin.ToggleSetting(HomeNoTime)</onclick>
+		  <selected>Skin.HasSetting(HomeNoTime)</selected>
+		</control>
+		<control type="radiobutton" id="3100">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50137]</label>
+		  <onclick>Skin.ToggleSetting(NoCommonHomeButton)</onclick>
+		  <selected>Skin.HasSetting(NoCommonHomeButton)</selected>
+		</control>
+		<control type="radiobutton" id="3101">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50111]</label>
+		  <onclick>Skin.ToggleSetting(NoHomeDBCounter)</onclick>
+		  <selected>Skin.HasSetting(NoHomeDBCounter)</selected>
+		</control>
+		<control type="radiobutton" id="3102">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50136]</label>
+		  <onclick>Skin.ToggleSetting(NoHomeDBCounterKomplett)</onclick>
+		  <selected>Skin.HasSetting(NoHomeDBCounterKomplett)</selected>
+		</control>
+	  </control>
+	  
+	  <!--========================================================================================-->
+	  <!--====================== VISUALISATION WINDOW SETTINGS ===================================-->
+	  <!--========================================================================================-->
+	  <control type="grouplist" id="9006">
+		<include>Animation.ZoomIn</include>
+		<visible>Container(9060).Hasfocus(6)</visible>
+		<left>505</left>
+		<top>165</top>
+		<width>1337</width>
+		<height>810</height>
+		<itemgap>2</itemgap>
+		<pagecontrol>2640</pagecontrol>
+		<onleft>9060</onleft>
+		<onright>2640</onright>
+		<onup>9006</onup>
+		<ondown>9006</ondown>	
+		<control type="radiobutton" id="4443">
+		  <description>Musik Info Panel</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50311]</label>
+		  <onclick>Skin.ToggleSetting(musikinfopanel)</onclick>
+		  <selected>Skin.HasSetting(musikinfopanel)</selected>
+		</control>
+		<control type="radiobutton" id="4444">
+		  <description>Musik Info Panel</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>dauerhaft</label>
+		  <onclick>Skin.ToggleSetting(durableinfo)</onclick>
+		  <selected>Skin.HasSetting(durableinfo)</selected>
+		</control>
+		<control type="radiobutton" id="4445">
+		  <description>Musik Visualisation</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>$LOCALIZE[50312]</label>
+		  <onclick>Skin.ToggleSetting(musikvisualisation)</onclick>
+		  <selected>Skin.HasSetting(musikvisualisation)</selected>
+		</control>
+		<control type="radiobutton" id="4446">
+		  <description>Enable CDArt animation on music visualization screen</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50088</label>
+		  <onclick>Skin.ToggleSetting(visualisationcdart)</onclick>
+		  <selected>Skin.HasSetting(visualisationcdart)</selected>
+		</control>
+		<control type="radiobutton" id="4447">
+		  <description>Script Artist Slide Show</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50091</label>
+		  <onclick>Skin.ToggleSetting(Artistslideshow)</onclick>
+		  <selected>Skin.HasSetting(Artistslideshow)</selected>
+		  <enable>!Skin.HasSetting(Custombackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(CDWallNoVisualisation)</enable>
+		</control>
+		<control type="button" id="4448">
+		  <description>Script Artist Slide Show</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50092</label>
+		  <onclick>Addon.OpenSettings(script.artistslideshow)</onclick>
+		  <enable>Skin.HasSetting(Artistslideshow)</enable>
+		</control>
+		<control type="radiobutton" id="4449">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50093</label>
+		  <onclick>Skin.ToggleSetting(CDWallNoVisualisation)</onclick>
+		  <selected>Skin.HasSetting(CDWallNoVisualisation)</selected>
+		  <enable>!Skin.HasSetting(Custombackground) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(Artistslideshow)</enable>
+		</control>
+		<control type="button" id="4410">
+		  <description>CD Wall Picture Path</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50094</label>
+		  <label2>$INFO[Skin.String(CDWall_Folder_Path)]</label2>
+		  <onclick>Skin.SetPath(CDWall_Folder_Path)</onclick>
+		  <enable>Skin.HasSetting(CDWallNoVisualisation)</enable>
+		</control>
+		<control type="radiobutton" id="4411">
+		  <description>Custom background</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50095</label>
+		  <onclick>Skin.ToggleSetting(CustomBackground)</onclick>
+		  <selected>Skin.HasSetting(CustomBackground)</selected>
+		  <enable>!Skin.HasSetting(Artistslideshow) + !Skin.HasSetting(BlackBackground) + !Skin.HasSetting(CDWallNoVisualisation)</enable>
+	  </control>
+	  <control type="radiobutton" id="4412">
+		  <description>Black background</description>
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>50096</label>
+		  <onclick>Skin.ToggleSetting(BlackBackground)</onclick>
+		  <selected>Skin.HasSetting(BlackBackground)</selected>
+		  <enable>!Skin.HasSetting(Artistslideshow) + !Skin.HasSetting(CustomBackground) + !Skin.HasSetting(CDWallNoVisualisation)</enable>
+	  </control>
+	  </control>
+	  
+	  <!--========================================================================================-->
+	  <!--================================= ADDONS SETTINGS ======================================-->
+	  <!--========================================================================================-->
+	  <control type="grouplist" id="9007">
+		<include>Animation.ZoomIn</include>
+		<visible>Container(9060).Hasfocus(7)</visible>
+		<left>505</left>
+		<top>165</top>
+		<width>1337</width>
+		<height>810</height>
+		<itemgap>2</itemgap>
+		<pagecontrol>2640</pagecontrol>
+		<onleft>9060</onleft>
+		<onright>2640</onright>
+		<onup>9007</onup>
+		<ondown>9007</ondown>	
+		<control type="label" id="3110">
+		  <width>1337</width>
+		  <height>50</height>
+		  <font>primal_20_Bold</font>
+		  <label>$LOCALIZE[24997]</label>
+		  <textoffsetx>30</textoffsetx>
+		  <textcolor>$VAR[ColorFontSelected]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		</control>		
+		<control type="radiobutton" id="3112">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons 3d-Coloured</label>
+		  <onclick>Skin.ToggleSetting(weathericons3dcoloured)</onclick>
+		  <selected>Skin.HasSetting(weathericons3dcoloured)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick> 
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.3d-coloured)</visible>
+		</control>
+		<control type="radiobutton" id="3113">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons 3d-White</label>
+		  <onclick>Skin.ToggleSetting(weathericons3dwhite)</onclick>
+		  <selected>Skin.HasSetting(weathericons3dwhite)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.3d-white)</visible>
+		</control>
+		<control type="radiobutton" id="3114">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Animated</label>
+		  <onclick>Skin.ToggleSetting(weathericonsanimated)</onclick>
+		  <selected>Skin.HasSetting(weathericonsanimated)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.animated)</visible>
+		</control>
+		<control type="radiobutton" id="3115">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Coloured</label>
+		  <onclick>Skin.ToggleSetting(weathericonscoloured)</onclick>
+		  <selected>Skin.HasSetting(weathericonscoloured)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.coloured)</visible>
+		</control>
+		<control type="radiobutton" id="3116">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Flat</label>
+		  <onclick>Skin.ToggleSetting(weathericonsflat)</onclick>
+		  <selected>Skin.HasSetting(weathericonsflat)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.flat)</visible>
+		</control>
+		<control type="radiobutton" id="3117">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Grey</label>
+		  <onclick>Skin.ToggleSetting(weathericonsgrey)</onclick>
+		  <selected>Skin.HasSetting(weathericonsgrey)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.grey)</visible>
+		</control>
+		<control type="radiobutton" id="3118">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Outline</label>
+		  <onclick>Skin.ToggleSetting(weathericonsoutline)</onclick>
+		  <selected>Skin.HasSetting(weathericonsoutline)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.outline)</visible>
+		</control>
+		<control type="radiobutton" id="3119">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Outline-HD</label>
+		  <onclick>Skin.ToggleSetting(weathericonsoutlinehd)</onclick>
+		  <selected>Skin.HasSetting(weathericonsoutlinehd)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.outline-hd)</visible>
+		</control>
+		<control type="radiobutton" id="3120">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons Transparent</label>
+		  <onclick>Skin.ToggleSetting(weathericonstransparent)</onclick>
+		  <selected>Skin.HasSetting(weathericonstransparent)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonswhite)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.transparent)</visible>
+		</control>	
+		<control type="radiobutton" id="3121">
+		  <font>primal_20</font>
+		  <width>1337</width>
+		  <height>50</height>
+		  <label>Weathericons White</label>
+		  <onclick>Skin.ToggleSetting(weathericonswhite)</onclick>
+		  <selected>Skin.HasSetting(weathericonswhite)</selected>
+		  <onclick>Skin.Reset(weathericonsdefault)</onclick>
+		  <onclick>Skin.Reset(weathericons3dcoloured)</onclick>
+		  <onclick>Skin.Reset(weathericons3dwhite)</onclick>
+		  <onclick>Skin.Reset(weathericonsanimated)</onclick>
+		  <onclick>Skin.Reset(weathericonscoloured)</onclick>
+		  <onclick>Skin.Reset(weathericonsflat)</onclick>
+		  <onclick>Skin.Reset(weathericonsgrey)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutline)</onclick>
+		  <onclick>Skin.Reset(weathericonsoutlinehd)</onclick>
+		  <onclick>Skin.Reset(weathericonstransparent)</onclick>
+		  <visible>System.HasAddon(resource.images.weathericons.white)</visible>
+		</control>	
+	  </control>
+	  <!-- MAIN LIST ON THE LEFT -->
+	  <control type="group">
+      <left>0</left>
+      <top>0</top>
+	  <include>Animation.ZoomIn</include>
+      <control type="list" id="9060">
+        <left>155</left>
+        <top>165</top>
+        <width>340</width>
+        <height>755</height>
+        <onright condition="Container(9060).Hasfocus(1)">9001</onright>
+		<onright condition="Container(9060).Hasfocus(2)">9002</onright>
+		<onright condition="Container(9060).Hasfocus(3)">9003</onright>
+		<onright condition="Container(9060).Hasfocus(4)">9004</onright>
+		<onright condition="Container(9060).Hasfocus(5)">9005</onright>
+		<onright condition="Container(9060).Hasfocus(6)">9006</onright>
+		<onright condition="Container(9060).Hasfocus(7)">9007</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <pagecontrol>-</pagecontrol>
+        <scrolltime>300</scrolltime>
+        <itemlayout height="82" width="440">
+		  <control type="image">
+			<left>30</left>
+			<top>0</top>
+			<width>440</width>
+			<height>80</height>
+			<texture background="true">skin/button_klein.png</texture>
+		    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+		  </control>
+          <control type="label">
+            <left>60</left>
+            <top>22</top>
+            <width>250</width>
+            <height>38</height>
+            <font>primal_20</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>55</left>
+            <top>65</top>
+            <width>1305</width>
+            <height>38</height>
+            <font>primal_16</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="82" width="440">
+		  <control type="image">
+			<left>30</left>
+			<top>0</top>
+			<width>440</width>
+			<height>80</height>
+			<texture background="true">skin/button_klein.png</texture>
+		    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  </control>
+          <control type="label">
+            <left>60</left>
+            <top>22</top>
+            <width>250</width>
+            <height>38</height>
+            <font>primal_20</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>55</left>
+            <top>75</top>
+            <width>1305</width>
+            <height>38</height>
+            <font>primal_16</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </focusedlayout>
+        <content>
+          <item id="1">
+            <label>128</label>
+            <label2>-</label2>
+            <onclick>noop</onclick>
+          </item>
+		  <item id="3">
+            <label>50107</label>
+            <label2>-</label2>
+            <onclick>noop</onclick>
+          </item>		  
+		  <item id="5">
+            <label>14018</label>
+            <label2>-</label2>
+            <onclick>noop</onclick>
+          </item>
+		  <item id="6">
+            <label>50138</label>
+            <label2>-</label2>
+            <onclick>noop</onclick>
+          </item>
+		  <item id="7">
+            <label>50257</label>
+            <label2>-</label2>
+            <onclick>noop</onclick>
+          </item>
+        </content>
+      </control>
+	</control>
+  </controls>
+</window>

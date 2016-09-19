@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">50</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <controls>
+        <include>CommonHomeBack</include>
+        <control type="multiimage">
+            <left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+            <imagepath background="true">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+            <timeperimage>10000</timeperimage>
+            <randomize>true</randomize>
+            <fadetime>1000</fadetime>
+            <include>VisibleFadeEffect</include>
+            <visible>System.HasAddon(resource.images.weatherfanart.multi)</visible>
+            <animation effect="fade" time="150">WindowClose</animation>
+        </control>	
+		<control type="largeimage">
+			<left>0</left>
+            <top>0</top>
+            <width>1920</width>
+            <height>1080</height>
+			<texture background="true">skin/button_klein_tranz90.png</texture>
+	        <aspectratio>stretch</aspectratio>
+	        <colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+		</control>
+		<include>BigInfosTime</include>
+		<include>BigInfosDatabaseCount</include>
+		<include>BigInfosWeather</include>
+		<include>CommonHomeButton</include>	
+		<include>CommonHomeWidgetControl</include>
+		<include>HomePlaying</include>			
+
+        <control type="group">
+            <animation type="WindowOpen" reversible="false">
+                <effect type="zoom" start="80" end="100" center="960,540" easing="out" tween="back" time="225" />
+                <effect type="fade" start="0" end="100" time="225" />
+            </animation>
+            <animation type="WindowClose" reversible="false">
+                <effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="225" />
+                <effect type="fade" start="100" end="0" time="225" />
+            </animation>
+            <include>VisibleFadeEffect</include>
+            <control type="group">
+                <left>90</left>
+                <top>60</top>
+                <control type="label">
+                    <description>header label</description>
+                    <left>30</left>
+                    <top>22</top>
+                    <width>690</width>
+                    <height>45</height>
+                    <font>primal_20</font>
+                    <label>31300</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                </control>
+                <control type="image">
+                    <left>45</left>
+                    <top>82</top>
+                    <width>660</width>
+                    <height>69</height>
+                    <aspectratio align="center" aligny="center">keep</aspectratio>
+                    <texture>$INFO[Window.Property(WeatherProviderLogo)]</texture>
+                </control>
+                <control type="label">
+                    <description>Provider Text</description>
+                    <left>30</left>
+                    <top>90</top>
+                    <width>690</width>
+                    <height>52</height>
+                    <font>primal_18</font>
+                    <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    <scroll>true</scroll>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>$LOCALIZE[31303] : $INFO[Window.Property(WeatherProvider)]</label>
+                    <visible>IsEmpty(Window.Property(WeatherProviderLogo))</visible>
+                </control>
+                <control type="group">
+                    <control type="label">
+                        <description>weather location label</description>
+                        <left>30</left>
+                        <top>150</top>
+                        <width>690</width>
+                        <height>45</height>
+                        <font>primal_20</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <scroll>false</scroll>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Location)]</label>
+                    </control>
+                    <control type="label">
+                        <description>update label</description>
+                        <left>30</left>
+                        <top>180</top>
+                        <width>690</width>
+                        <height>52</height>
+                        <font>primal_18</font>
+                        <label>$LOCALIZE[31301] - $INFO[Window.Property(Updated)]</label>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    </control>
+                    <control type="label">
+                        <description>current temp Value</description>
+                        <left>22</left>
+                        <top>278</top>
+                        <width>270</width>
+                        <height>60</height>
+                        <font>WeatherTemp</font>
+                        <align>right</align>
+                        <aligny>top</aligny>
+                        <label>$INFO[Window.Property(Current.Temperature)]</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    </control>
+                    <control type="label">
+                        <description>current temp Value Units</description>
+                        <left>300</left>
+                        <top>309</top>
+                        <width>150</width>
+                        <height>60</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>top</aligny>
+                        <label>[B]$INFO[System.TemperatureUnits][/B]</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    </control>
+					<control type="image">
+						<description>current weather icon</description>
+						<left>390</left>
+                        <top>218</top>
+                        <width>300</width>
+                        <height>300</height>
+						<texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Current.OutlookIcon)]</texture>
+						<aspectratio>keep</aspectratio>
+					</control>
+                    <control type="label">
+                        <description>current condition label</description>
+                        <left>30</left>
+                        <top>525</top>
+                        <width>690</width>
+                        <height>45</height>
+                        <info>Window.Property(Current.Condition)</info>
+                        <wrapmultiline>true</wrapmultiline>
+                        <font>primal_18</font>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                    </control>
+                </control>
+                <control type="image">
+                    <left>30</left>
+                    <top>585</top>
+                    <width>690</width>
+                    <height>6</height>
+                    <texture>separator.png</texture>
+                </control>
+                <control type="grouplist">
+                    <left>0</left>
+                    <top>600</top>
+                    <width>255</width>
+                    <height>270</height>
+                    <itemgap>0</itemgap>
+                    <control type="label">
+                        <description>current feels like label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[402] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.FeelsLike))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current dew label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[405] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.DewPoint))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current humidity label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[406] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Humidity))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current UV Index label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[403] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.UVIndex))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current Precipitation label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[33021] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Precipitation))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current Wind label</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>255</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[404] :</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Wind))</visible>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <left>278</left>
+                    <top>600</top>
+                    <width>450</width>
+                    <height>270</height>
+                    <itemgap>0</itemgap>
+                    <control type="label">
+                        <description>current feels like Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.FeelsLike))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current dew Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.DewPoint))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current humidity Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>Window.Property(Current.Humidity)</info>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Humidity))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current UV Index Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>Window.Property(Current.UVIndex)</info>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.UVIndex))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current Precipitation Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>Window.Property(Current.Precipitation)</info>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Precipitation))</visible>
+                    </control>
+                    <control type="label">
+                        <description>current Wind Value</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>450</width>
+                        <height>42</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <info>Window.Property(Current.Wind)</info>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Current.Wind))</visible>
+                    </control>
+                </control>
+                <control type="group">
+                    <visible>!IsEmpty(Window.Property(Today.IsFetched))</visible>
+                    <control type="label">
+                        <description>Sunrise Label</description>
+                        <left>45</left>
+                        <top>855</top>
+                        <width>450</width>
+                        <height>52</height>
+                        <font>primal_18</font>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[33027] : [COLOR=$VAR[ColorFontNormal]]$INFO[Window.Property(Today.Sunrise)][/COLOR]</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Today.Sunrise))</visible>
+                    </control>
+                    <control type="label">
+                        <description>Sunset label</description>
+                        <left>255</left>
+                        <top>855</top>
+                        <width>450</width>
+                        <height>52</height>
+                        <font>primal_18</font>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[33028] : [COLOR=$VAR[ColorFontNormal]]$INFO[Window.Property(Today.Sunset)][/COLOR]</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <visible>!IsEmpty(Window.Property(Today.Sunset))</visible>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <left>870</left>
+                <top>60</top>
+                <control type="group" id="50">
+                    <include>WeatherDaily</include>
+                    <include>Weather36Hour</include>
+                    <include>WeatherWeekend</include>
+                    <include>WeatherHourly</include>
+                    <include>WeatherMaps</include>
+                    <include>WeatherAlerts</include>
+                </control>
+            </control>
+        </control>
+        <control type="group" id="9020">
+      <visible>!Skin.HasSetting(kiosk)</visible>
+      <animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus | ControlGroup(9001).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus | ControlGroup(9001).HasFocus">WindowClose</animation>
+      <control type="image">
+        <left>-515</left>
+        <top>0</top>
+        <width>420</width>
+        <height>1080</height>
+        <texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow2.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+        <aspectratio>stretch</aspectratio>
+      </control>
+            <control type="grouplist" id="9021">
+                <left>-477</left>
+                <top>100</top>
+                <width>375</width>
+                <height>915</height>
+                <onleft>9000</onleft>
+                <onright>50</onright>
+                <onup>9020</onup>
+                <ondown>9020</ondown>
+                <onback>50</onback>
+                <itemgap>2</itemgap>
+                <control type="group" id="300">
+                    <width>375</width>
+                    <height>60</height>
+                    <control type="spincontrolex" id="3">
+                        <description>change location button</description>
+                        <left>0</left>
+                        <top>0</top>
+						<height>60</height>
+						<width>375</width>
+                        <font>-</font>
+						<texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+						<texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+						<textureup>button/scrollupNF.png</textureup>
+						<texturedown>button/scrolldownNF.png</texturedown>
+						<textureupfocus>button/scrollup.png</textureupfocus>
+						<texturedownfocus>button/scrolldown.png</texturedownfocus>
+						<font>primal_18</font>
+                        <onleft>50</onleft>
+                        <onright>50</onright>
+                        <onup>200</onup>
+                        <ondown>302</ondown>
+                        <onback>50</onback>
+                    </control>
+                    <control type="label" id="301">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>300</width>
+                        <height>60</height>
+                        <font>primal_18</font>
+                        <label>50351</label>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                    </control>
+                </control>
+                <control type="button" id="302">
+					<description>Daily forcast button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>50347</label>
+					<onfocus>ClearProperty(Weather.CurrentView)</onfocus>
+					<visible>!IsEmpty(Window.Property(Daily.IsFetched))</visible>
+				</control>
+				<control type="button" id="303">
+					<description>36 hour forcast button</description>
+					<textwidth>235</textwidth>
+					<label>50055</label>
+					<height>60</height>
+					<onfocus>SetProperty(Weather.CurrentView,36hour)</onfocus>
+					<visible>!IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+				</control>
+				<control type="button" id="304">
+					<description>Weekend forcast button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>50056</label>
+					<onfocus>SetProperty(Weather.CurrentView,weekend)</onfocus>
+					<visible>!IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+				</control>
+				<control type="button" id="305">
+					<description>Hourly forcast button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>50057</label>
+					<onfocus>SetProperty(Weather.CurrentView,hourly)</onfocus>
+					<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+				</control>
+				<control type="button" id="306">
+					<description>Maps button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>50058</label>
+					<onfocus>SetProperty(Weather.CurrentView,map)</onfocus>
+					<visible>!IsEmpty(Window.Property(Map.IsFetched))</visible>
+				</control>
+				<control type="button" id="307">
+					<description>Alerts button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>50348</label>
+					<onfocus>SetProperty(Weather.CurrentView,alerts)</onfocus>
+					<visible>!IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+				</control>
+				<control type="label" id="201">
+					<width>250</width>
+					<height>60</height>
+					<font>primal_18</font>
+					<label>50349</label>
+					<textcolor>$VAR[ColorFontSelected]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+				</control>
+				<control type="button" id="2">
+					<description>Refresh button</description>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<label>103</label>
+				</control>
+				<control type="button" id="5">
+					<description>Custom Weather Script Button</description>
+					<label>$INFO[Skin.String(WeatherScript_Label)]</label>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>RunScript($INFO[Skin.String(WeatherScript_Path)])</onclick>
+					<onclick>SetFocus(50)</onclick>
+					<textwidth>235</textwidth>
+					<height>60</height>
+					<visible>Skin.HasSetting(WeatherScript_Enable) + !IsEmpty(Skin.String(WeatherScript_Label))</visible>
+				</control>
+				<control type="button" id="4">
+					<description>Settings button</description>
+					<label>5</label>
+					<onclick>ActivateWindow(MyWeatherSettings)</onclick>
+					<textwidth>235</textwidth>
+					<height>60</height>
+				</control>
+				<control type="radiobutton" id="250">
+					<description>Fanart Toggle</description>
+					<height>60</height>
+					<width>375</width>
+					<label>50350</label>
+					<onclick>Skin.ToggleSetting(ShowWeatherFanart)</onclick>
+					<selected>!Skin.HasSetting(ShowWeatherFanart)</selected>
+				</control>
+				<control type="button" id="251">
+					<height>60</height>
+					<label>50355</label>
+					<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
+					<enable>Skin.HasSetting(ShowWeatherFanart)</enable>
+				</control>
+			</control>
+		</control>
+    </controls>
+</window>

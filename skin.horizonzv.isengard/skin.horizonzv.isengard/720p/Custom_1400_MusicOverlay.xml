@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1400">
+	<defaultcontrol always="true">2</defaultcontrol>
+	<visible>Player.HasAudio</visible>
+	<controls>
+		<control type="group">
+			<left>0</left>
+			<top>-5</top>
+			<include>openclose</include>
+			<include>opencloseslidedown</include>
+			<visible>!Window.IsActive(visualisation)+!Window.IsActive(Home)+!Window.IsVisible(playercontrols)+!VideoPlayer.IsFullscreen+!Window.IsVisible(screencalibration)+![Window.IsVisible(videos)+Skin.HasSetting(CoverWallFull)]+!Control.HasFocus(666)</visible>
+			<control type="group" id="501">
+				<left>0</left>
+				<top>-6</top>
+				<control type="image">
+					<left>-10</left>
+					<top>3</top>
+					<width>1300</width>
+					<height>40</height>
+					<texture background="true">BlackBack.png</texture>
+				</control>
+				<control type="image">
+					<left>-10</left>
+					<top>43</top>
+					<width>1300</width>
+					<height>10</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture background="true" flipy="true">Shadow.png</texture>
+				</control>
+				<control type="image">
+					<left>-10</left>
+					<top>43</top>
+					<width>1300</width>
+					<height>1</height>
+					<texture background="true">Separator2.png</texture>
+				</control>
+				<control type="grouplist">
+					<left>10</left>
+					<top>11</top>
+					<width>1200</width>
+					<orientation>horizontal</orientation>
+					<itemgap>2</itemgap>
+					<include>RecordInfo</include>
+					<control type="image"> <!-- fake -->
+						<description>Separator</description>
+						<width>3</width>
+						<height>30</height>
+						<texture>-</texture>
+					</control>
+					<include>NavInfoPvrContent</include>
+					<control type="label">
+						<description>Navigation label</description>
+						<width>auto</width>
+						<label>$INFO[System.CurrentWindow]$INFO[Container.FolderName, - ,]</label>
+						<aligny>center</aligny>
+						<font>impacted24</font>
+						<textcolor>white</textcolor>
+						<visible>![Window.IsVisible(MyPVRChannels.xml)|Window.IsVisible(MyPVRGuide.xml)|Window.IsVisible(MyPVRRecordings.xml)|Window.IsVisible(MyPVRTimers.xml)|Window.IsVisible(MyPVRSearch.xml)]</visible>
+						<visible>[Window.IsVisible(Home)+!Skin.HasSetting(HomeMenuVertical)]|!Window.IsVisible(Home)</visible>
+						<visible>!Window.IsVisible(eventlog)</visible>
+						<visible>Skin.HasSetting(NavInfo)+!Control.HasFocus(666)</visible>
+					</control>
+					<control type="label">
+						<description>Navigation label</description>
+						<width>auto</width>
+						<label>$LOCALIZE[14111]</label>
+						<aligny>center</aligny>
+						<font>impacted24</font>
+						<textcolor>white</textcolor>
+						<visible>Window.IsVisible(eventlog)</visible>
+						<visible>Skin.HasSetting(NavInfo)+!Control.HasFocus(666)</visible>
+					</control>
+					<control type="image"> <!-- fake -->
+						<description>Separator</description>
+						<width>5</width>
+						<height>30</height>
+						<texture>-</texture>
+					</control>
+					<control type="image">
+						<description>Separator</description>
+						<width>1</width>
+						<height>30</height>
+						<texture>Separator3.png</texture>
+					</control>
+					<control type="image"> <!-- fake -->
+						<description>Separator</description>
+						<width>0</width>
+						<height>30</height>
+						<texture>-</texture>
+					</control>
+					<control type="image">
+						<description>Overlay Watching</description>
+						<width>30</width>
+						<height>32</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$VAR[OSDTexture]</texture>
+					</control>
+					<control type="label">
+						<description>Now Playing Info</description>
+						<width>auto</width>
+						<height>34</height>
+						<textcolor>white</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<label>$VAR[HomeOSDTitle]$INFO[MusicPlayer.Title, [COLOR=description]•[/COLOR] ,]</label>
+						<scroll>true</scroll>
+						<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+					</control>
+					<control type="label">
+						<description>Now Playing Info</description>
+						<width>auto</width>
+						<height>34</height>
+						<textcolor>white</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<label>$INFO[MusicPlayer.Time, [COLOR=description]•[/COLOR] , ]$INFO[MusicPlayer.Duration,[COLOR=grey]/ [/COLOR], ]</label>
+						<scroll>true</scroll>
+						<visible>!IsEmpty(Player.TimeRemaining)</visible>
+						<visible>!SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+					</control>
+				</control>
+				<control type="label" id="29">
+					<description>Empty so we can pass the values up one level</description>
+					<visible>False</visible>
+				</control>
+				<control type="label" id="30">
+					<description>Empty so we can pass the values up one level</description>
+					<visible>False</visible>
+				</control>
+			</control>
+			<control type="label">
+				<animation effect="slide" end="-20" condition="Skin.HasSetting(BatteryLevel)">Conditional</animation>
+				<left>319r</left>
+				<top>4</top>
+				<width>310</width>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>impacted24</font>
+				<label>$INFO[System.Time]</label>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>8</top>
+				<width>1280</width>
+				<height>26</height>
+				<texture>TvTunes.png</texture>
+				<aspectratio>keep</aspectratio>
+				<visible>SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			</control>
+			<control type="group">
+				<left>1248</left>
+				<top>2</top>
+				<width>24</width>
+				<height>14</height>
+				<include>BatteryLevel</include>
+			</control>
+		</control>
+	</controls>
+</window>

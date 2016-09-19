@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.4.0" provider-name="piet">
+<addon id="plugin.audio.prime_music" name="Amazon Prime Music" version="0.4.1" provider-name="piet">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="script.module.mechanize" version="0.2.6"/>
+        <import addon="repository.lost-and-found" version="1.1.8"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>audio</provides>

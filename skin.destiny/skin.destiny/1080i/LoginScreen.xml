@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window>
+  <defaultcontrol always="true">52</defaultcontrol>
+  <coordinates>
+    <left>0</left>
+    <top>0</top>
+  </coordinates>
+  <controls>
+    <include>CommonHomeBack</include>
+	<include>BigInfosTime</include>
+    <control type="group">
+      <control type="list" id="52">
+        <left>440</left>
+        <top>300</top>
+        <width>1035</width>
+        <height>602</height>
+        <onleft>20</onleft>
+        <onright>20</onright>
+        <onup>52</onup>
+        <ondown>52</ondown>
+        <viewtype label="535">list</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="150" width="1035">
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>120</width>
+            <height>120</height>
+            <texture>$INFO[ListItem.Icon]</texture>
+          </control>
+          <control type="label">
+            <left>165</left>
+            <top>15</top>
+            <width>870</width>
+            <height>60</height>
+            <font>primal_24_Bold</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>165</left>
+            <top>75</top>
+            <width>870</width>
+            <height>60</height>
+            <font>primal_18</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </itemlayout>
+        <focusedlayout height="150" width="870">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1035</width>
+            <height>152</height>
+            <texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+            <visible>!Control.HasFocus(52)</visible>
+          </control>
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>1035</width>
+            <height>152</height>
+            <texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+            <visible>Control.HasFocus(52)</visible>
+          </control>
+          <control type="image">
+            <left>15</left>
+            <top>15</top>
+            <width>120</width>
+            <height>120</height>
+            <texture>$INFO[ListItem.Icon]</texture>
+          </control>
+          <control type="label">
+            <left>165</left>
+            <top>15</top>
+            <width>870</width>
+            <height>60</height>
+            <font>primal_24_Bold</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>165</left>
+            <top>75</top>
+            <width>870</width>
+            <height>60</height>
+            <font>primal_18</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="group">
+			<left>830</left>
+			<top>800</top>
+			<control type="button" id="20">
+				<description>Power push button</description>
+				<left>10</left>
+				<top>50</top>
+				<width>250</width>
+				<height>60</height>
+				<label>Kodi beenden</label>
+				<font>primal_18</font>
+				<align>center</align>
+				<onclick>ActivateWindow(ShutdownMenu)</onclick>
+				<onleft>52</onleft>
+				<onright>52</onright>
+				<onup>52</onup>
+				<ondown>52</ondown>
+				<colordiffuse>CCFFFFFF</colordiffuse>
+			</control>
+		</control>
+	</control>
+  </controls>
+</window>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<includes>
+  <!-- ======================== -->
+	<!-- ==== Wall View "54" ==== -->
+	<!-- ======================== -->
+	
+	<include name="View_605_WallView">
+        <control type="group">
+            <visible>Control.IsVisible(605)</visible>
+            <control type="group">
+                <left>0</left>
+                <top>-2</top>
+                <visible>Control.IsVisible(605)</visible>
+                <control type="group" id="8013">
+                    <animation reversible="false" effect="slide" start="0,0" end="-246,0" time="300" tween="quadratic" easing="out">Hidden</animation>
+                    <visible>Container.OnNext</visible>
+                    <include>Includes_OnNext_Wall</include>
+                </control>
+                <control type="group" id="8014">
+                    <animation reversible="false" effect="slide" start="0,0" end="246,0" time="300" tween="quadratic" easing="out">Hidden</animation>
+                    <visible>Container.OnPrevious</visible>
+                    <include>Includes_OnPrevious_Wall</include>
+                </control>
+                <control type="group">
+                    <animation type="WindowOpen" tween="sine" easing="out">
+                        <effect type="fade" start="0" end="100" time="1000" />
+                    </animation>
+                    <animation type="WindowClose" tween="sine" easing="out">
+                        <effect type="fade" start="100" end="0" time="1000" delay="800" />
+                    </animation>
+                    <visible>!Control.IsVisible(8013) + !Control.IsVisible(8014)</visible>
+                    <include>Includes_Static_Wall</include>
+                </control>
+            </control>
+            <control type="group">
+                <visible>Control.IsVisible(605)</visible>
+                <control type="group">
+                    <animation effect="fade" start="0" end="100" time="400" tween="sine" easing="out">WindowOpen</animation>
+                    <animation effect="fade" start="100" end="0" time="2000" tween="sine" easing="out">WindowClose</animation>
+					<animation reversible="true" effect="zoom" start="100" end="80" center="660,510" time="300" tween="quadratic" easing="in" condition="Control.IsVisible(8013) | Control.IsVisible(8014)">Conditional</animation>
+                    <control type="image">
+						<left>430</left>
+						<top>263</top>
+						<width>1150</width>
+						<height>551</height>
+						<texture background="true">skin/button_klein_tranz80.png</texture>
+						<bordertexture border="10">ThumbShadow2.png</bordertexture>
+			            <bordersize>7</bordersize>
+						<aspectratio>stretch</aspectratio>
+						<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+					</control>
+                </control>
+                <control type="group">
+                    <animation reversible="true" effect="zoom" start="100" end="80" center="660,510" time="300" tween="quadratic" easing="in" condition="Control.IsVisible(8013) | Control.IsVisible(8014)">Conditional</animation>
+                    <control type="image">
+                        <left>428</left>
+                        <top>264</top>
+                        <width>372</width>
+                        <height>549</height>
+                        <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                        <texture background="true" diffuse="views/wall/poster_diffuse.png" fallback="thumbs/fallback_poster_big.png">$INFO[ListItem(0).Icon]</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+			            <bordersize>7</bordersize>
+                        <animation effect="fade" start="100" end="90" time="200" delay="150" condition="Control.IsVisible(8013)">Conditional</animation>
+                    </control>
+                </control>
+            </control>
+            <control type="panel" id="605">
+                <left>-502</left>
+                <top>292</top>
+                <width>2604</width>
+                <height>543</height>
+                <onleft>605</onleft>
+                <onright>605</onright>
+                <ondown>605</ondown>
+                <onup>9020</onup>
+                <viewtype label="31083">Multiple Walls</viewtype>
+                <pagecontrol>60</pagecontrol>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <scrolltime>250</scrolltime>
+                <preloaditems>2</preloaditems>
+                <focusposition>3</focusposition>
+                <hitrect x="428" y="264" w="372" h="543" />
+                <visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)</visible>
+                <itemlayout width="372" height="543" />
+                <focusedlayout width="372" height="543">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>372</width>
+                        <height>543</height>
+                        <texture>-</texture>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+</includes>
