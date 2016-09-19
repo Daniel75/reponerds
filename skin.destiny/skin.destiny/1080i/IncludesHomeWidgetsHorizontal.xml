@@ -1,0 +1,2874 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="HomeWidgetsHorizontal">	 
+	  <control type="group">
+	  <visible>!Container(9000).HasFocus(30) + !Skin.HasSetting(NoWidgets)</visible>
+	  <include condition="!Skin.HasSetting(HomeMainMenu2)">WidgetsTopWebOS</include>
+      <include condition="Skin.HasSetting(HomeMainMenu2)">WidgetsTopTizen</include>
+	  
+	  <!--=================================== WIDGETS FREMDE ADDONS =====================================-->
+	  
+	  <include>WidgetContentForeignAddons</include>
+		  	
+	  <!--======================================= WIDGETS RADIO =========================================-->
+	  <control type="group">
+	  <left>0</left>
+	  <top>0</top>	
+	  <visible>Container(9000).Hasfocus(2)</visible>
+	  <include>Animation.ZoomIn</include>
+	  <control type="list" id="8305">
+          <left>80</left>
+		  <top>250</top>
+		  <width>1750</width>
+		  <height>810</height>
+          <onleft>8305</onleft>
+          <onright>8305</onright>
+		  <onup>300004</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+          <focusposition>0</focusposition>
+          <pagecontrol>-</pagecontrol>
+          <scrolltime>500</scrolltime>
+          <itemlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>25</left>
+              <top>-10</top>
+              <width>200</width>
+              <height>200</height>
+              <texture background="true" fallback="default/nologo.png">$INFO[ListItem.Icon]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Title]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			</control>
+          </itemlayout>
+          <focusedlayout width="250" height="430">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8305)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>430</height>
+              <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8305)</visible>
+            </control>
+			<control type="image">
+              <left>10</left>
+              <top>174</top>
+              <width>230</width>
+              <height>246</height>
+              <texture background="true">skin/button_klein.png</texture>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>25</left>
+              <top>-10</top>
+              <width>200</width>
+              <height>200</height>
+              <texture background="true" fallback="default/nologo.png">$INFO[ListItem.Icon]</texture>
+              <aspectratio>keep</aspectratio>
+            </control>
+			<control type="label">
+			  <left>15</left>
+			  <top>170</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.Title]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="label">
+			  <left>15</left>
+			  <top>200</top>
+			  <height>45</height>
+			  <width>220</width>
+			  <label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, / ]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>15</left>
+			  <top>255</top>
+			  <width>220</width>
+			  <height>160</height>
+			  <font>primal_14</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="3000" repeat="5000">Control.HasFocus(8305)</autoscroll>
+			</control>
+          </focusedlayout>
+		  <content target="video">$VAR[HomeWidgetsRadio]</content>
+        </control>
+	  </control>	
+      
+	  <!--=================================== WIDGETS MOVIES =====================================-->	
+	  <control type="group">
+	  <visible>Container(9000).Hasfocus(3)</visible>	
+	  <include>Animation.ZoomIn</include>
+	  <control type="wraplist" id="8306">
+          <left>110</left>
+		  <top>130</top>
+		  <width>1700</width>
+		  <height>810</height>
+          <onleft>8306</onleft>
+          <onright>8306</onright>
+		  <onup>300001</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <scrolltime tween="quadratic" easing="out">500</scrolltime>
+		  <focusposition>0</focusposition>
+		  <orientation>horizontal</orientation>
+		  <preloaditems>9</preloaditems>
+          <itemlayout width="170" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+          </itemlayout>
+          <focusedlayout width="170" height="250">
+		  <control type="group">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8306)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8306)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8306)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8306)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8306)</visible>
+			</control>
+			<control type="label">
+			  <description>Genre label</description>
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Genre]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8306)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$VAR[ExtendedInfoPlot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8306)</visible>
+			</control>
+			<control type="group">
+			  <visible>Control.HasFocus(8306)</visible>
+			  <left>420</left>
+			  <top>240</top>
+			  <include>FlaggingConditionsLittle</include>
+			</control>
+		   </control>
+          </focusedlayout>
+		  <content target="video">$VAR[HomeWidgetsMovies]</content>
+        </control>
+	 </control>
+	 
+	<!--=================================== WIDGETS SERIES =====================================-->
+	<control type="group">
+	<left>0</left>
+	<top>0</top>
+	<visible>Container(9000).Hasfocus(8)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="wraplist" id="8307">
+		<left>110</left>
+		<top>130</top>
+		<width>1700</width>
+		<height>810</height>
+		<onleft>8307</onleft>
+		<onright>8307</onright>
+		<onup>300002</onup>
+		<ondown>9000</ondown>
+		<viewtype>list</viewtype>
+		<orientation>horizontal</orientation>
+		<focusposition>0</focusposition>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime tween="sine" easing="out">600</scrolltime>
+		<preloaditems>9</preloaditems>
+		<itemlayout condition="Skin.HasSetting(unseentvshows) | Skin.HasSetting(recommendedtvshows)" width="170" height="250">
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+			<control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+          </itemlayout>
+		  <itemlayout condition="!Skin.HasSetting(unseentvshows) + !Skin.HasSetting(recommendedtvshows)" width="425" height="250">
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>415</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">scale</aspectratio>
+			  <visible>!Skin.HasSetting(unseentvshows) + !Skin.HasSetting(recommendedtvshows)</visible>
+            </control>
+			<control type="image">
+			  <left>6</left>
+			  <top>490</top>
+			  <width>413</width>
+			  <height>45</height>
+			  <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>18</left>
+			  <top>490</top>
+			  <height>45</height>
+			  <width>390</width>
+			  <label>$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+          </itemlayout>
+          <focusedlayout condition="Skin.HasSetting(unseentvshows) | Skin.HasSetting(recommendedtvshows)" width="170" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8307)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>!Skin.HasSetting(unseentvshows) + !Skin.HasSetting(recommendedtvshows)</visible>
+            </control>
+			<control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+			<control type="label">
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.TvshowTitle]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>90</height>
+			  <font>primal_16</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+			<control type="group">
+			  <visible>Control.HasFocus(8307)</visible>
+			  <left>420</left>
+			  <top>240</top>
+			  <include>FlaggingConditionsLittle</include>
+			</control>
+		  </focusedlayout>
+		  <focusedlayout condition="!Skin.HasSetting(unseentvshows) + !Skin.HasSetting(recommendedtvshows)" width="425" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8307)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>425</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>415</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">scale</aspectratio>
+            </control>
+			<control type="image">
+			  <left>6</left>
+			  <top>490</top>
+			  <width>413</width>
+			  <height>45</height>
+			  <texture background="true">skin/button_klein_tranz90.png</texture>
+			  <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8307)</visible>
+			</control>
+			<control type="label">
+			  <left>18</left>
+			  <top>490</top>
+			  <height>45</height>
+			  <width>390</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>!Control.HasFocus(8307)</visible>
+			</control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8307)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_15_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+			<control type="label">
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.TvshowTitle]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8307)</visible>
+			</control>
+          </focusedlayout>
+		<content target="video">$VAR[HomeWidgetsSeries]</content>
+	  </control>
+	</control>
+	
+	<!--=================================== WIDGETS VIDEOS =====================================-->	
+	  <control type="group">
+	  <visible>Container(9000).Hasfocus(4)</visible>	
+	  <include>Animation.ZoomIn</include>
+	  <control type="wraplist" id="8322">
+          <left>110</left>
+		  <top>130</top>
+		  <width>1700</width>
+		  <height>810</height>
+          <onleft>8322</onleft>
+          <onright>8322</onright>
+		  <onup>300006</onup>
+          <ondown>9000</ondown>
+          <viewtype>list</viewtype>
+		  <scrolltime tween="quadratic" easing="out">500</scrolltime>
+		  <focusposition>0</focusposition>
+		  <orientation>horizontal</orientation>
+		  <preloaditems>9</preloaditems>
+          <itemlayout width="170" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+          </itemlayout>
+          <focusedlayout width="170" height="250">
+		  <control type="group">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8322)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8322)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8322)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8322)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8322)</visible>
+			</control>
+			<control type="label">
+			  <description>Genre label</description>
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Genre]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8322)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$VAR[ExtendedInfoPlot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8322)</visible>
+			</control>
+			<control type="group">
+			  <visible>Control.HasFocus(8322)</visible>
+			  <left>420</left>
+			  <top>240</top>
+			  <include>FlaggingConditionsLittle</include>
+			</control>
+		   </control>
+          </focusedlayout>
+		  <content target="video">$VAR[HomeWidgetsVideos]</content>
+        </control>
+	 </control>
+	
+	<!--=================================== WIDGETS ADDONS =====================================-->
+	<control type="group">
+	<visible>Container(9000).Hasfocus(11)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="wraplist" id="8308">
+		<left>120</left>
+		<top>130</top>
+		<width>1680</width>
+		<height>810</height>
+		<onleft>8308</onleft>
+		<onright>8308</onright>
+		<onup>300003</onup>
+		<ondown>9000</ondown>
+		<viewtype>list</viewtype>
+		<scrolltime tween="quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+		<preloaditems>9</preloaditems>
+		<itemlayout width="240" height="240">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>230</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		</itemlayout>
+		<focusedlayout width="240" height="240">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>230</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>3</left>
+			<top>60</top>
+			<width>390</width>
+			<height>225</height>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="image">
+			<left>1450</left>
+			<top>60</top>
+			<width>225</width>
+			<height>225</height>
+			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="label">
+			<description>Title label</description>
+			<left>420</left>
+			<top>60</top>
+			<height>45</height>
+			<width>990</width>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_15_Title</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="label">
+			<description>Artist label</description>
+			<left>420</left>
+			<top>90</top>
+			<height>45</height>
+			<width>990</width>
+			<label>$INFO[ListItem.Property(Addon.Creator)] - $INFO[ListItem.Property(Addon.Type)]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		  <control type="textbox">
+			<description>Plot</description>
+			<left>420</left>
+			<top>140</top>
+			<width>990</width>
+			<height>95</height>
+			<font>primal_16</font>
+			<align>justify</align>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(Addon.Description)][/COLOR]</label>
+			<autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			<visible>Control.HasFocus(8308)</visible>
+		  </control>
+		</focusedlayout>
+		   <content target="programs">$VAR[HomeWidgetsAddons]</content>
+	  </control>
+	</control>
+	
+	<!--=================================== WIDGETS MUSIC ======================================-->
+	<control type="group">
+	<visible>Container(9000).Hasfocus(10)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="wraplist" id="8309">
+		<left>120</left>
+		<top>130</top>
+		<width>1680</width>
+		<height>810</height>
+		<onleft>8309</onleft>
+		<onright>8309</onright>
+		<onup>300005</onup>
+		<ondown>9000</ondown>
+		<viewtype>list</viewtype>
+		<scrolltime tween="quadratic" easing="out">500</scrolltime>
+		<focusposition>0</focusposition>
+		<orientation>horizontal</orientation>
+		<preloaditems>9</preloaditems>
+		<itemlayout width="240" height="240">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>230</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		</itemlayout>
+		<focusedlayout width="240" height="240">
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>300</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>305</top>
+			<width>230</width>
+			<height>230</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>3</left>
+			<top>60</top>
+			<width>390</width>
+			<height>225</height>
+			<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="left" aligny="top">stretch</aspectratio>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="image">
+			<left>1450</left>
+			<top>60</top>
+			<width>225</width>
+			<height>225</height>
+			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+			<aspectratio align="left" aligny="center">keep</aspectratio>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="label">
+			<description>Title label</description>
+			<left>420</left>
+			<top>60</top>
+			<height>45</height>
+			<width>990</width>
+			<label>$INFO[ListItem.Artist] - $INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_15_Title</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="label">
+			<description>Artist label</description>
+			<left>420</left>
+			<top>90</top>
+			<height>45</height>
+			<width>990</width>
+			<label>$INFO[ListItem.Genre]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>primal_13</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		  <control type="textbox">
+			<description>Movie Plot</description>
+			<left>420</left>
+			<top>140</top>
+			<width>990</width>
+			<height>95</height>
+			<font>primal_16</font>
+			<align>justify</align>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(Album_Description)][/COLOR]</label>
+			<autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			<visible>Control.HasFocus(8309)</visible>
+		  </control>
+		</focusedlayout>
+		  <content target="music">$VAR[HomeWidgetsMusic]</content>
+	  </control>
+	</control>
+	
+	<!--============================= WIDGETS MOVIE PLAYLISTEN =================================-->
+	<control type="group">
+	<left>0</left>
+	<top>0</top>
+	<visible>Container(9000).Hasfocus(5) | Container(9000).Hasfocus(6) | Container(9000).Hasfocus(7) | Container(9000).Hasfocus(19) | Container(9000).Hasfocus(20)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="wraplist" id="8310">
+		  <left>110</left>
+		  <top>130</top>
+		  <width>1700</width>
+		  <height>810</height>
+		  <onleft>8310</onleft>
+		  <onright>8310</onright>
+		  <onup>1860</onup>
+		  <ondown>9000</ondown>
+		  <viewtype>list</viewtype>
+		  <orientation>horizontal</orientation>
+		  <focusposition>0</focusposition>
+		  <pagecontrol>-</pagecontrol>
+		  <scrolltime>500</scrolltime>
+		  <itemlayout width="170" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+          </itemlayout>
+          <focusedlayout width="170" height="250">
+		  <control type="group">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8310)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8310)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8310)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8310)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8310)</visible>
+			</control>
+			<control type="label">
+			  <description>Genre label</description>
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Genre]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8310)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$VAR[ExtendedInfoPlot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8310)</visible>
+			</control>
+			<control type="group">
+			  <visible>Control.HasFocus(8310)</visible>
+			  <left>420</left>
+			  <top>240</top>
+			  <include>FlaggingConditionsLittle</include>
+			</control>
+		   </control>
+          </focusedlayout>
+		<content target="video">$VAR[HomeWidgetsPlaylisten]</content>
+	  </control>
+	</control>
+	
+	<!--================================= WIDGETS MUSICVIDEOS ==================================-->
+	<control type="group">
+	<visible>Container(9000).Hasfocus(12)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="wraplist" id="8312">
+		  <left>110</left>
+		  <top>130</top>
+		  <width>1700</width>
+		  <height>810</height>
+		  <onleft>8312</onleft>
+		  <onright>8312</onright>
+		  <onup>300001</onup>
+		  <ondown>9000</ondown>
+		  <viewtype>list</viewtype>
+		  <scrolltime tween="quadratic" easing="out">500</scrolltime>
+		  <focusposition>0</focusposition>
+		  <orientation>horizontal</orientation>
+		  <preloaditems>9</preloaditems>
+		  <itemlayout width="170" height="250">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+          </itemlayout>
+		  <focusedlayout width="170" height="250">
+		  <control type="group">
+		    <control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(8312)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>300</top>
+              <width>170</width>
+              <height>240</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(8312)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>305</top>
+              <width>160</width>
+              <height>230</height>
+              <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>60</top>
+              <width>390</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <visible>Control.HasFocus(8312)</visible>
+            </control>
+			<control type="image">
+              <left>1450</left>
+              <top>60</top>
+              <width>225</width>
+              <height>225</height>
+              <texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+              <aspectratio align="left" aligny="center">keep</aspectratio>
+			  <visible>Control.HasFocus(8312)</visible>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>420</left>
+			  <top>60</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8312)</visible>
+			</control>
+			<control type="label">
+			  <description>Genre label</description>
+			  <left>420</left>
+			  <top>90</top>
+			  <height>45</height>
+			  <width>990</width>
+			  <label>$INFO[ListItem.Genre]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			  <visible>Control.HasFocus(8312)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>420</left>
+			  <top>140</top>
+			  <width>990</width>
+			  <height>95</height>
+			  <font>primal_16</font>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$VAR[ExtendedInfoPlot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>Control.HasFocus(8312)</visible>
+			</control>
+			<control type="group">
+			  <visible>Control.HasFocus(8312)</visible>
+			  <left>420</left>
+			  <top>240</top>
+			  <include>FlaggingConditionsLittle</include>
+			</control>
+		   </control>
+          </focusedlayout>
+			<content target="video">videodb://recentlyaddedmusicvideos/</content>
+	  </control>
+	</control>
+	
+	<!--=================================== WIDGETS PICTURES ===================================-->
+	<control type="group">
+	<visible>Container(9000).Hasfocus(13)</visible>	
+	<visible>System.HasAddon(plugin.image.mypicsdb)</visible>
+	<include>Animation.ZoomIn</include>
+	<control type="list" id="8321">
+	  <left>80</left>
+	  <top>330</top>
+	  <width>1770</width>
+	  <height>810</height>
+	  <onleft>8321</onleft>
+	  <onright>8321</onright>
+	  <onup>300001</onup>
+	  <ondown>9000</ondown>
+	  <viewtype>list</viewtype>
+	  <scrolltime tween="quadratic" easing="out">500</scrolltime>
+	  <focusposition>0</focusposition>
+	  <orientation>horizontal</orientation>
+	  <preloaditems>9</preloaditems>
+	  <itemlayout width="250" height="350">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>250</width>
+			<height>350</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>5</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>11</left>
+			<top>245</top>
+			<width>228</width>
+			<height>95</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<description>label</description>
+			<left>20</left>
+			<top>230</top>
+			<width>200</width>
+			<height>90</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+		  </control>
+		  <control type="label">
+			<description>label</description>
+			<left>20</left>
+			<top>270</top>
+			<width>200</width>
+			<height>90</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Label2]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+		  </control>
+		</itemlayout>
+		<focusedlayout width="250" height="350">
+		<control type="group">
+		<animation effect="zoom" end="105" center="130,200" time="200">Focus</animation>
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>250</width>
+			<height>350</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			<visible>!Control.HasFocus(8321)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>250</width>
+			<height>350</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>7</bordersize>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			<visible>Control.HasFocus(8321)</visible>
+		  </control>
+		  <control type="image">
+			<left>5</left>
+			<top>5</top>
+			<width>240</width>
+			<height>240</height>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<bordertexture border="10">ThumbShadow.png</bordertexture>
+			<bordersize>6</bordersize>
+			<aspectratio align="center" aligny="top">scale</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>11</left>
+			<top>245</top>
+			<width>228</width>
+			<height>95</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<description>label</description>
+			<left>20</left>
+			<top>230</top>
+			<width>200</width>
+			<height>90</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Label]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+		  </control>
+		  <control type="label">
+			<description>label</description>
+			<left>20</left>
+			<top>270</top>
+			<width>200</width>
+			<height>90</height>
+			<font>primal_15</font>
+			<label>$INFO[ListItem.Label2]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<scroll>false</scroll>
+		  </control>
+		 </control>
+		</focusedlayout>
+	   <content>
+	    <include>PicturesAddonWidget</include>
+	  </content><!--$INFO[Skin.String(Pictures_Folder_Path)]-->
+	</control>
+    </control>
+	
+	<!--================================= WIDGETS WETTER =======================================-->
+	<control type="group">
+	<left>70</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 1 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.1.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.1.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.1.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.1.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.1.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day1.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.1.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.1.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.1.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.1.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.1.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day0.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>325</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 2 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.2.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.2.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.2.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.2.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.2.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day2.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.2.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.2.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.2.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.2.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.2.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>580</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 3 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.3.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.3.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.3.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.3.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.3.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day3.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.3.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.3.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.3.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.3.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.3.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>835</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 4 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.4.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.4.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.4.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.4.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.4.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day4.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.4.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.4.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.4.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.4.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.4.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>1090</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 5 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.5.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.5.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.5.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.5.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.5.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day5.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.5.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.5.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.5.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.5.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.5.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>1345</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 6 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.6.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.6.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.6.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.6.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.6.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day6.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.6.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.6.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.6.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.6.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.6.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+	<control type="group">
+	<left>1600</left>
+	<top>250</top>
+	<visible>Container(9000).Hasfocus(14)</visible>	
+	<include>Animation.ZoomIn</include>
+	<control type="image"><!-- Tag 7 -->
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		<visible>!StringCompare(Window(weather).Property(Daily.7.LongDay),$LOCALIZE[16]) + !StringCompare(Window(weather).Property(Daily.7.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>0</left>
+		<top>0</top>
+		<width>250</width>
+		<height>430</height>
+		<texture background="true">skin/button_klein_tranz90.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>
+		<aspectratio>stretch</aspectratio>
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		<visible>StringCompare(Window(weather).Property(Daily.7.LongDay),$LOCALIZE[16]) | StringCompare(Window(weather).Property(Daily.7.LongDay),$LOCALIZE[17])</visible>
+	</control>
+	<control type="image">
+		<left>28</left>
+		<top>5</top>
+		<width>195</width>
+		<height>195</height>
+		<texture background="true">$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Daily.7.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	 <control type="multiimage">
+		<description>Weather image</description>
+		<left>25</left>
+		<top>105</top>
+		<width>100</width>
+		<height>100</height>
+		<imagepath>$INFO[Window(Weather).Property(Day7.FanartCode),weather/]</imagepath>
+		<timeperimage>100</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>0</fadetime>
+	 </control>	 
+	 <control type="label">
+		<left>20</left>
+		<top>210</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.7.ShortDay)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	 </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>250</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[406]: $INFO[Window(Weather).Property(Daily.7.Humidity)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 <control type="label">
+		<description>FeelsLike</description>
+		<left>20</left>
+		<top>290</top>
+		<height>45</height>
+		<width>215</width>
+		<font>primal_15</font>
+		<align>center</align>
+		<label>$LOCALIZE[33024]: $INFO[Window(Weather).Property(Daily.7.FeelsLike)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>40</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherplus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>40</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.7.HighTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="image">
+		<left>120</left>
+		<top>350</top>
+		<width>30</width>
+		<height>30</height>
+		<texture background="true">button/weatherminus.png</texture>
+		<aspectratio>keep</aspectratio>
+	  </control>
+	  <control type="label">
+		<description>Temps</description>
+		<left>120</left>
+		<top>349</top>
+		<height>45</height>
+		<width>100</width>
+		<font>primal_16</font>
+		<align>center</align>
+		<label>$INFO[Window(weather).Property(Daily.7.LowTemperature)]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	  <control type="label">
+		<description>Title label</description>
+		<left>0</left>
+		<top>375</top>
+		<height>45</height>
+		<width>250</width>
+		<label>$INFO[Window(Weather).Property(Day6.Title)]</label>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>primal_13</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+	  </control>
+	</control>
+
+	
+	<!--================================= WIDGETS EINSTELLUNG =======================================-->
+	<control type="group">
+	<left>80</left>
+    <top>330</top>
+	<visible>Container(9000).Hasfocus(15)</visible>	
+	<include>Animation.ZoomIn</include>
+		<control type="image">
+		  <left>0</left>
+		  <top>0</top>
+		  <width>800</width>
+		  <height>350</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>
+		<control type="image">
+		  <left>12</left>
+		  <top>12</top>
+		  <width>776</width>
+		  <height>326</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		</control>
+		<control type="image">
+		  <left>570</left>
+		  <top>0</top>
+		  <width>250</width>
+		  <height>250</height>
+		  <texture background="true">default/kodilogo.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+		</control>
+		<control type="image">
+		  <left>25</left>
+		  <top>32</top>
+		  <width>20</width>
+		  <height>20</height>
+		  <texture background="true">home/homeicons/tvshows.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+		</control>
+		<control type="label">
+		  <description>Title label</description>
+		  <left>55</left>
+		  <top>20</top>
+		  <height>45</height>
+		  <width>700</width>
+		  <label>[COLOR $VAR[ColorFontSelected]]Bildauflösung:[/COLOR]  $INFO[System.ScreenResolution]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_14</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>25</left>
+		  <top>72</top>
+		  <width>20</width>
+		  <height>20</height>
+		  <texture background="true">home/homeicons/skin.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+		</control>
+		<control type="label">
+		  <description>Title label</description>
+		  <left>55</left>
+		  <top>60</top>
+		  <height>45</height>
+		  <width>700</width>
+		  <label>[COLOR $VAR[ColorFontSelected]]Grafikkarte:[/COLOR]  $INFO[System.VideoEncoderInfo]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_14</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>25</left>
+		  <top>111</top>
+		  <width>20</width>
+		  <height>20</height>
+		  <texture background="true">home/homeicons/system.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+		</control>
+		<control type="label">
+		  <description>Title label</description>
+		  <left>55</left>
+		  <top>100</top>
+		  <height>45</height>
+		  <width>700</width>
+		  <label>[COLOR $VAR[ColorFontSelected]]Betriebssystem:[/COLOR]  $INFO[System.KernelVersion]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_14</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>25</left>
+		  <top>152</top>
+		  <width>20</width>
+		  <height>20</height>
+		  <texture background="true">home/homeicons/sysinfo.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+		</control>
+		<control type="label">
+		  <description>Title label</description>
+		  <left>55</left>
+		  <top>140</top>
+		  <height>45</height>
+		  <width>700</width>
+		  <label>[COLOR $VAR[ColorFontSelected]]Kodi Version:[/COLOR]  $INFO[System.BuildVersion]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_14</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>25</left>
+		  <top>193</top>
+		  <width>20</width>
+		  <height>20</height>
+		  <texture background="true">home/homeicons/data.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+		</control>
+		<control type="label">
+		  <description>Title label</description>
+		  <left>55</left>
+		  <top>180</top>
+		  <height>45</height>
+		  <width>700</width>
+		  <label>[COLOR $VAR[ColorFontSelected]]Festplatte:[/COLOR]  $INFO[System.TotalSpace]$INFO[System.FreeSpace, - ]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_14</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="label">
+          <description>CPU Text</description>
+          <left>35</left>
+          <top>235</top>
+          <width>500</width>
+          <height>38</height>
+          <label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+          <font>primal_14</font>
+        </control>
+        <control type="progress">
+          <description>CPU BAR</description>
+          <left>35</left>
+          <top>270</top>
+          <width>730</width>
+          <height>5</height>
+		  <midtexture border="0" colordiffuse="FF184a4c">progress/blank.png</midtexture>
+          <info>System.CPUUsage</info>
+        </control>
+        <control type="label" id="52">
+          <description>Memory Text</description>
+          <left>35</left>
+          <top>280</top>
+          <width>500</width>
+          <height>38</height>
+          <label>$LOCALIZE[50076] $INFO[system.memory(used.percent)]</label>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>$VAR[ColorFontNormal]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+          <font>primal_14</font>
+        </control>
+        <control type="progress">
+          <description>Memory BAR</description>
+          <left>35</left>
+          <top>315</top>
+          <width>730</width>
+          <height>5</height>
+		  <midtexture border="0" colordiffuse="FF471b0c">progress/blank.png</midtexture>
+          <info>system.memory(used)</info>
+        </control>
+	</control>
+
+	  
+	<!--================================= WIDGETS PINWAND =======================================-->
+	<control type="group" id="61500">
+	<visible>Container(9000).Hasfocus(18)</visible>	
+	<include>Animation.ZoomIn</include>
+    <control type="group">
+	  <control type="label">
+		<left>100</left>
+	    <top>290</top>
+		<width>120</width>
+		<height>30</height>
+		<font>primal_16</font>
+		<label>$LOCALIZE[50325]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<align>left</align>
+		<aligny>center</aligny>	  
+	  </control>
+      <control type="list" id="88306">
+		<left>80</left>
+		<top>330</top>
+		<width>1750</width>
+		<height>810</height>
+		<onleft>88306</onleft>
+		<onright>88306</onright>
+		<onup>1860</onup>
+		<ondown>9000</ondown>
+		<viewtype>list</viewtype>
+		<autoscroll>false</autoscroll>
+		<orientation>horizontal</orientation>
+		<focusposition>0</focusposition>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime>500</scrolltime>
+		<itemlayout width="250" height="350">
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>350</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>280</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="center" aligny="top">scale</aspectratio>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>20</left>
+			  <top>290</top>
+			  <height>45</height>
+			  <width>210</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+          </itemlayout>
+		  <focusedlayout width="250" height="350">
+		  <control type="group">
+		  <animation effect="zoom" end="105" center="150,200" time="200">Focus</animation>
+		    <control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>350</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <visible>!Control.HasFocus(88306)</visible>
+            </control>
+			<control type="image">
+              <left>0</left>
+              <top>0</top>
+              <width>250</width>
+              <height>350</height>
+              <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio>stretch</aspectratio>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.HasFocus(88306)</visible>
+            </control>
+            <control type="image">
+              <left>5</left>
+              <top>5</top>
+              <width>240</width>
+              <height>280</height>
+              <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+              <aspectratio align="center" aligny="top">scale</aspectratio>
+            </control>
+			<control type="label">
+			  <description>Title label</description>
+			  <left>20</left>
+			  <top>290</top>
+			  <height>45</height>
+			  <width>210</width>
+			  <label>$INFO[ListItem.Label]</label>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <font>primal_18</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <scroll>false</scroll>
+			</control>
+		   </control>
+          </focusedlayout>
+		   <content>
+			<include>Pinwand</include>
+		  </content>
+	  </control>
+	</control>	
+   </control>
+  </control>
+ </include>
+  
+
+</includes>

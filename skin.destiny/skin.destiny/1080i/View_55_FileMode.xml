@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+  <include name="View_55_FileMode">
+    <control type="group">
+      <visible>Control.IsVisible(55)</visible>
+	  <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+	  <include>CommonAllFront</include>
+      <control type="list" id="55">
+	    <include>Animation.ZoomIn</include>
+        <left>182</left>
+		<top>163</top>
+		<width>1161</width>
+		<height>810</height>
+		<onleft>9020</onleft>
+		<onright>290000</onright>
+        <onup>55</onup>
+        <ondown>55</ondown>
+        <viewtype label="535">list</viewtype>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="76" width="1000">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1238</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>		
+			<visible>Control.IsVisible(55)</visible>
+		  </control>
+          <control type="label">
+            <left>30</left>
+            <top>5</top>
+            <width>720</width>
+            <height>60</height>
+            <font>primal_22</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>750</left>
+            <top>5</top>
+            <width>300</width>
+            <height>60</height>
+            <font>primal_22</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="30,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+		  <control type="image">
+			<left>1095</left>
+			<top>16</top>
+			<width>40</width>
+			<height>40</height>
+			<texture>Overlayicons/views/$INFO[ListItem.Overlay]</texture>
+	        <colordiffuse>$VAR[ColorIcons]</colordiffuse>
+			<visible>Control.IsVisible(55)</visible>		
+		  </control>
+        </itemlayout>
+        <focusedlayout height="76" width="1000">
+		<control type="group">
+		  <control type="image">
+			<left>1</left>
+			<top>0</top>
+			<width>1360</width>
+			<height>75</height>
+			<texture background="true">skin/button_klein.png</texture>
+	        <colordiffuse>$VAR[BackColorButton]</colordiffuse>		
+			<visible>Control.IsVisible(55)</visible>
+		  </control>
+		  <control type="image">
+			<left>1</left>
+			<top>0</top>
+			<width>5</width>
+			<height>75</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			<visible>Control.IsVisible(55)</visible>
+		  </control>
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1360</width>
+			<height>1</height>
+			<texture background="true">default/separator.png</texture>		
+			<visible>Control.IsVisible(55)</visible>
+		  </control>
+		  <control type="label">
+            <left>30</left>
+            <top>5</top>
+            <width>720</width>
+            <height>60</height>
+            <font>primal_22</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>left</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label]</label>
+          </control>
+          <control type="label">
+            <left>750</left>
+            <top>5</top>
+            <width>300</width>
+            <height>60</height>
+            <font>primal_22</font>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <align>right</align>
+            <aligny>center</aligny>
+            <label>$INFO[ListItem.Label2]</label>
+            <animation effect="slide" start="0,0" end="30,0" delay="0" time="0" condition="[Window.IsVisible(VideoLibrary) | Window.IsVisible(VideoFiles)]">conditional</animation>
+          </control>
+		  <control type="image">
+			<left>1095</left>
+			<top>16</top>
+			<width>40</width>
+			<height>40</height>
+			<texture>Overlayicons/views/$INFO[ListItem.Overlay]</texture>
+	        <colordiffuse>$VAR[ColorIcons]</colordiffuse>		
+			<visible>Control.IsVisible(55)</visible>
+		  </control>
+		 </control>
+        </focusedlayout>
+      </control>
+	  <control type="scrollbar" id="60">
+	    <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus">Conditional</animation>
+        <include>Animation.ZoomIn</include>
+		<left>30</left>
+		<top>165</top>
+		<width>5</width>
+		<height>810</height>
+        <texturesliderbackground>-</texturesliderbackground>
+		<texturesliderbar colordiffuse="$VAR[BackColorFront]">-</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">-</texturesliderbarfocus>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus>-</textureslidernibfocus>
+        <onleft>9000</onleft>
+        <onright>1860</onright>
+        <showonepage>false</showonepage>
+	    <orientation>vertical</orientation>
+        <visible>Control.IsVisible(55)</visible>
+      </control>
+    </control>
+	<control type="group">
+	  <left>1350</left>
+	  <top>0</top>
+	  <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+	  <include>Animation.ZoomIn</include>
+	  <visible>Control.IsVisible(55)</visible>
+	  <control type="image">
+		<left>12</left>
+		<top>155</top>
+		<width>501</width>
+		<height>760</height>
+		<aspectratio aligny="top">keep</aspectratio>
+		<texture background="true">$INFO[ListItem.Icon]</texture>
+		<bordertexture border="10">-</bordertexture>
+		<bordersize>7</bordersize>
+		<visible>!Container.Content(Genres)</visible>
+	  </control>
+	  <control type="image">
+		<left>12</left>
+		<top>155</top>
+		<width>501</width>
+		<height>760</height>
+		<aspectratio aligny="top">keep</aspectratio>
+		<texture background="true">$VAR[VarMovieGenreIcon]</texture>
+		<bordertexture border="10">-</bordertexture>
+		<bordersize>7</bordersize>
+		<visible>Container.Content(Genres) + Window.IsVisible(VideoLibrary)</visible>
+	  </control>
+	  <control type="image">
+		<left>12</left>
+		<top>155</top>
+		<width>501</width>
+		<height>760</height>
+		<aspectratio aligny="top">keep</aspectratio>
+		<texture background="true">$VAR[VarMusicGenreIcon]</texture>
+		<bordertexture border="10">-</bordertexture>
+		<bordersize>7</bordersize>
+		<visible>Container.Content(Genres) + Window.IsVisible(MusicLibrary)</visible>
+	  </control>
+	</control>
+  </include>
+  
+</includes>

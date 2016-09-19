@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="0">
+    <defaultcontrol always="true">9000</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundOverlayColor]</backgroundcolor>
+    <menucontrol>200</menucontrol>
+	<onload condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onload>
+	<onload condition="!System.HasAddon(resource.images.languageflags.colour)">InstallAddon(resource.images.languageflags.colour)</onload>
+	<!-- <onload condition="!System.HasAddon(resource.images.weathericons.outline-hd)">InstallAddon(resource.images.weathericons.outline)</onload> -->
+	<onload condition="!System.HasAddon(service.library.data.provider)">InstallAddon(service.library.data.provider)</onload>
+    <onload condition="!Skin.HasSetting(gambit_background)+!Skin.HasSetting(avengers_sw)+!Skin.HasSetting(standart_bkg)">Skin.SetBool(standart_bkg)</onload>
+    <!-- <onload condition="!Skin.HasSetting(fsk)+!Skin.HasSetting(fsk_original)+!Skin.HasSetting(fsk_dual)">Skin.SetBool(fsk)</onload> -->
+    <onload condition="!String.IsEmpty(Skin.String(homemenufocus))+Window.Previous(startup)">Control.Move(9000,$INFO[Skin.String(homemenufocus)])</onload>
+    <onload condition="!Skin.HasSetting(firstrun_horizonzv)">Skin.ResetSettings</onload>
+    <onload condition="!Skin.HasSetting(firstrun_horizonzv)">ActivateWindow(1155)</onload>
+    <onload>CancelAlarm(HideMenu,true)</onload>
+    <onunload>CancelAlarm(HideMenu,true)</onunload>
+    <include>openclose</include>
+    <controls>
+        <control type="button" id="3020">
+            <include>HiddenButton</include>
+            <onfocus>ActivateWindow(settings)</onfocus>
+        </control>
+        <include>fakebutton_visible_bkg</include> <!-- fakebutton for weather -->
+        <include>Gambit</include>
+        <include>GlobalBackground</include>
+        <include>WeatherFanart</include>
+        <include>BackgroundOverlay</include>
+        <include>NextTracksPlaylist</include>
+        <control type="group">
+            <include>WidgetFakeLists</include>
+            <control type="group" id="290">
+                <visible>!Window.IsVisible(1140)+!Window.IsVisible(1141)+!Window.IsVisible(1142)+!Window.IsVisible(1155)+!Window.IsVisible(selectdialog)</visible>
+                <include>HomepageWidget</include>
+                <include>Dashboard</include>
+                <include condition="System.HasAddon(plugin.service.gto)|System.HasAddon(plugin.program.newscenter)|System.HasAddon(plugin.program.serienplaner)">HomeNewsCenter</include>
+                <include condition="System.HasAddon(script.extendedinfo)">Dashboard_Extended</include>
+            </control>
+            <control type="group"> <!-- RSS / NavInfo / OSD -->
+                <control type="group">
+                    <animation effect="slide" start="0" end="-57" condition="!String.IsEmpty(Control.GetLabel(4444))">Conditional</animation>
+                    <animation effect="slide" start="0" end="-60" condition="Integer.IsGreater(System.ProfileCount,1)">Conditional</animation>
+                    <top>3</top>
+                    <include>RSS</include>
+                </control>
+                <visible>!ControlGroup(19).HasFocus()</visible>
+				<visible>!Control.HasFocus(666)</visible>
+                <include>openclosevisible</include>
+                <include>NavInfo</include>
+                <include>HomeOSD</include>
+            </control>
+            <control type="image"> <!-- Logo -->
+                <description>LOGO</description>
+                <left>30</left>
+                <top>150r</top>
+                <width>330</width>
+                <height>120</height>
+                <aspectratio>keep</aspectratio>
+                <texture>Horizonzv.png</texture>
+                <animation effect="fade" start="100" end="0" time="2000" delay="8000" condition="true">Conditional</animation>
+                <visible>Window.Previous(startup)+!Skin.HasSetting(HomeMenuVertical)</visible>
+            </control>
+            <control type="group"> <!-- Statistic -->
+                <left>810</left>
+                <top>964</top>
+                <visible>!Skin.HasSetting(HomeMenuVertical)|[Skin.HasSetting(HomeMenuVertical)+Container(9000).HasFocus()]</visible>
+                <visible>Skin.HasSetting(statistic)+!Window.IsVisible(favourites)</visible>
+                <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),music)|String.IsEqual(Container(9000).ListItem.Property(homemenu_id),movies)|String.IsEqual(Container(9000).ListItem.Property(homemenu_id),tvshow)</visible>
+                <animation type="WindowOpen" condition="Skin.HasSetting(animation)">
+                    <effect type="fade" start="0" end="100" time="500" delay="600" />
+                    <effect type="slide" start="0,150" end="0,0" time="700" tween="cubic" easing="out" delay="600" />
+                </animation>
+                <animation type="WindowClose" condition="Skin.HasSetting(animation)">
+                    <effect type="fade" start="100" end="0" time="400" />
+                    <effect type="slide" start="0,0" end="0,150" time="300" />
+                </animation>
+                <animation type="Visible" condition="Skin.HasSetting(animation)">
+                    <effect type="fade" start="0" end="100" time="500" delay="600" />
+                    <effect type="slide" start="0,150" end="0,0" time="700" tween="cubic" easing="out" delay="600" />
+                </animation>
+                <animation type="Hidden" condition="Skin.HasSetting(animation)">
+                    <effect type="fade" start="100" end="0" time="400" />
+                    <effect type="slide" start="0,0" end="0,150" time="300" />
+                </animation>
+                <control type="group">
+                    <left>352</left>
+                    <top>69</top>
+                    <control type="fadelabel">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>360</width>
+                        <height>45</height>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <textoffsetx>30</textoffsetx>
+                        <label>$INFO[Window(Home).Property(Movies.Count),$LOCALIZE[31025]: ,]</label>
+                        <label>$INFO[Window(Home).Property(Movies.UnWatched),$LOCALIZE[16101]: ,]</label>
+                        <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),movies)</visible>
+                        <scroll>false</scroll>
+                        <scrollout>false</scrollout>
+                        <pauseatend>3000</pauseatend>
+                        <include>opencloseslideup</include>
+                    </control>
+                    <control type="fadelabel">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>360</width>
+                        <height>45</height>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <textoffsetx>30</textoffsetx>
+                        <label>$INFO[Window(Home).Property(TVShows.Count),$LOCALIZE[31025]: ,]</label>
+                        <label>$INFO[Window(Home).Property(TVShows.UnWatched),$LOCALIZE[16101]: ,]</label>
+                        <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),tvshow)</visible>
+                        <scroll>false</scroll>
+                        <scrollout>false</scrollout>
+                        <pauseatend>3000</pauseatend>
+                        <include>opencloseslideup</include>
+                    </control>
+                    <control type="fadelabel">
+                        <left>30</left>
+                        <top>0</top>
+                        <width>360</width>
+                        <height>45</height>
+                        <align>center</align>
+                        <textcolor>white</textcolor>
+                        <textoffsetx>30</textoffsetx>
+                        <label>$INFO[Window(Home).Property(Music.AlbumsCount),$LOCALIZE[132]: ,]</label>
+                        <label>$INFO[Window(Home).Property(Music.ArtistsCount),$LOCALIZE[133]: ,]</label>
+                        <label>$INFO[Window(Home).Property(Music.SongsCount),$LOCALIZE[134]: ,]</label>
+                        <visible>String.IsEqual(Container(9000).ListItem.Property(homemenu_id),music)</visible>
+                        <scroll>false</scroll>
+                        <scrollout>false</scrollout>
+                        <pauseatend>3000</pauseatend>
+                        <include>opencloseslideup</include>
+                    </control>
+                </control>
+                <control type="image">
+                    <left>345</left>
+                    <top>60</top>
+                    <width>1050</width>
+                    <height>63</height>
+                    <texture background="true" diffuse="ShadowWhite.png" border="5" flipx="true" flipy="true">GlassPanel.png</texture>
+                </control>
+            </control>
+            <control type="group"> <!-- centerbuttons -->
+                <left>0</left>
+                <top>885</top>
+                <animation type="Focus">
+                    <effect type="slide" start="0,300" end="0,0" time="300" />
+                </animation>
+                <animation type="Conditional" condition="![Control.HasFocus(200)|Control.HasFocus(199)]">
+                    <effect type="slide" start="0,0" end="0,300" time="200" />
+                </animation>
+                <animation type="WindowClose">
+                    <effect type="slide" start="0,0" end="0,300" time="200" />
+                </animation>
+                <control type="button" id="199">
+                    <include>HiddenButton</include>
+                    <onfocus condition="Skin.HasSetting(hide_central)">ActivateWindow(settings)</onfocus>
+                    <onfocus condition="!Skin.HasSetting(hide_central)">SetFocus(200)</onfocus>
+                </control>
+                <control type="group">
+                    <visible>!Skin.HasSetting(hide_central)</visible>
+                    <control type="group">
+                        <control type="image">
+                            <visible>Skin.HasSetting(HomeMenuVertical)</visible>
+                            <left>-15</left>
+                            <top>0</top>
+                            <width>1950</width>
+                            <height>330</height>
+                            <texture background="true">Black.png</texture>
+                        </control>
+                        <control type="image">
+                            <visible>!Skin.HasSetting(HomeMenuVertical)</visible>
+                            <left>-15</left>
+                            <top>0</top>
+                            <width>1950</width>
+                            <height>330</height>
+                            <texture background="true">BlackBack.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>-15</left>
+                            <top>0</top>
+                            <width>1950</width>
+                            <height>1</height>
+                            <texture background="true">Separator2.png</texture>
+                        </control>
+                    </control>
+                    <control type="label">
+                        <left>660r</left>
+                        <top>96</top>
+                        <width>600</width>
+                        <align>right</align>
+                        <font>impacted26</font>
+                        <textcolor>grey3</textcolor>
+                        <label>[COLOR=grey1]$INFO[Container(200).ListItem().Label] |[/COLOR] $LOCALIZE[51411]</label>
+                    </control>
+                    <control type="list" id="200">
+                        <left>38</left>
+                        <top>68</top>
+                        <width>1365</width>
+                        <height>120</height>
+                        <onleft>200</onleft>
+                        <onright>200</onright>
+                        <onup>Control.SetFocus(9000)</onup>
+                        <ondown>3020</ondown>
+                        <viewtype label="222">list</viewtype>
+                        <pagecontrol>-</pagecontrol>
+                        <scrolltime>200</scrolltime>
+                        <orientation>Horizontal</orientation>
+                        <itemlayout height="105" width="105">
+                            <control type="image">
+                                <left>12</left>
+                                <top>12</top>
+                                <width>51</width>
+                                <height>51</height>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                            </control>
+                            <control type="image">
+                                <left>0</left>
+                                <top>0</top>
+                                <width>75</width>
+                                <height>75</height>
+                                <colordiffuse>fanartdiffuse</colordiffuse>
+                                <texture border="5">$INFO[ListItem.Label2]</texture>
+                            </control>
+                        </itemlayout>
+                        <focusedlayout height="105" width="105">
+                            <control type="group">
+                                <animation effect="zoom" start="100" end="120" time="200" center="auto" condition="Skin.HasSetting(animation)">Focus</animation>
+                                <control type="image">
+                                    <left>0</left>
+                                    <top>0</top>
+                                    <width>75</width>
+                                    <height>75</height>
+                                    <colordiffuse>$VAR[BackgroundOverlayColorDialog]</colordiffuse>
+                                    <texture border="4">WhiteBack.png</texture>
+                                    <visible>Control.HasFocus(200)</visible>
+                                </control>
+                                <control type="image">
+                                    <left>12</left>
+                                    <top>12</top>
+                                    <width>51</width>
+                                    <height>51</height>
+                                    <texture>$INFO[ListItem.Icon]</texture>
+                                </control>
+                                <control type="image">
+                                    <left>0</left>
+                                    <top>0</top>
+                                    <width>75</width>
+                                    <height>75</height>
+                                    <colordiffuse>menudiffuse</colordiffuse>
+                                    <texture border="5">$INFO[ListItem.Label2]</texture>
+                                </control>
+                            </control>
+                        </focusedlayout>
+                        <content>
+                            <item id="1">
+                                <description>Shutdown</description>
+                                <label>13005</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Shutdown.png</icon>
+                                <thumb>-</thumb>
+                                <onclick>activatewindow(shutdownmenu)</onclick>
+                            </item>
+                            <item id="2">
+                                <description>Favourites</description>
+                                <label>10134</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Fav.png</icon>
+                                <thumb>-</thumb>
+                                <onclick>action(up)</onclick>
+                                <onclick>ActivateWindow(favourites)</onclick>
+                                <visible>Skin.HasSetting(hide_fav)</visible>
+                            </item>
+                            <item id="3">
+                                <description>File Browser</description>
+                                <label>10126</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_FM.png</icon>
+                                <thumb>-</thumb>
+                                <onclick>action(up)</onclick>
+                                <onclick>ActivateWindow(FileManager)</onclick>
+                            </item>
+                            <item id="4">
+                                <description>WOL</description>
+                                <label>WOL</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_WOL.png</icon>
+                                <thumb>-</thumb>
+                                <onclick>ActivateWindow(1151)</onclick>
+                                <visible>Skin.HasSetting(wolhome)</visible>
+                            </item>
+                            <item id="5">
+                                <description>System</description>
+                                <label>21417</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_System.png</icon>
+                                <onclick>ActivateWindow(settings)</onclick>
+                            </item>
+                            <item id="6">
+                                <description>System</description>
+                                <label>10511</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Systeminfo.png</icon>
+                                <onclick>ActivateWindow(SystemInfo)</onclick>
+                            </item>
+                            <item id="7">
+                                <description>Skin Settings</description>
+                                <label>20077</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_SkinSettings.png</icon>
+                                <onclick>ActivateWindow(SkinSettings)</onclick>
+                            </item>
+                            <item id="8">
+                                <description>Global Search</description>
+                                <label>137</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Search.png</icon>
+                                <onclick>RunScript(script.globalsearch)</onclick>
+                                <onclick>Dialog.Close(favourites,force)</onclick>
+                                <visible>System.HasAddon(script.globalsearch)</visible>
+                            </item>
+                            <item id="8">
+                                <description>SwitchTimerActiveItems</description>
+                                <label>51483</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Switchtimer.png</icon>
+                                <onclick>ActivateWindow(4111)</onclick>
+                                <onclick>Dialog.Close(favourites,force)</onclick>
+                                <visible>Integer.IsGreater(Skin.String(SwitchTimerActiveItems),0)</visible>
+                            </item>
+                            <item id="9">
+                                <description>PVR Timer</description>
+                                <label>Timer</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_PVRHasTimer.png</icon>
+                                <onclick>ActivateWindow(4112)</onclick>
+                                <onclick>Dialog.Close(favourites,force)</onclick>
+                                <visible>PVR.HasTimer</visible>
+                            </item>
+                            <item id="9">
+                                <description>SkinAddons</description>
+                                <label>Skin Addons</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_SkinAddons.png</icon>
+                                <onclick>ActivateWindow(1800)</onclick>
+                            </item>
+                            <item id="10">
+                                <description>Addons</description>
+                                <label>24001</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Addons.png</icon>
+                                <onclick>ActivateWindow(AddonBrowser)</onclick>
+                            </item>
+                            <item id="11">
+                                <description>Programme</description>
+                                <label>0</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_Programs.png</icon>
+                                <onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
+                                <onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
+                            </item>
+                            <!-- <item id="12">
+                                <description>Programme</description>
+                                <label>NEWS</label>
+                                <label2>masks/Default_sharp.png</label2>
+                                <icon>center/Center_News.png</icon>
+								<onclick>ActivateWindow(4117)</onclick>
+								<visible>System.HasAddon(plugin.program.newscenter)</visible>
+                            </item> -->
+                        </content>
+                    </control>
+                </control>
+            </control>
+            <control type="group"> <!-- current weather icon -->
+                <left>15</left>
+                <top>-3</top>
+                <animation effect="slide" start="0,0" end="0,45" time="100" condition="system.getbool(lookandfeel.enablerssfeeds)">Conditional</animation>
+                <visible>!Skin.HasSetting(NavInfo)+!String.IsEmpty(Weather.Plugin)</visible>
+                <visible>Skin.HasSetting(homepageWeatherinfo)</visible>
+                <include>opencloseslidedown</include>
+                <control type="multiimage">
+                    <description>current weather icon</description>
+                    <left>0</left>
+                    <top>9</top>
+                    <width>90</width>
+                    <height>75</height>
+                    <imagepath>$VAR[WeatherIconVar]$INFO[Window(weather).Property(Current.FanartCode)]$VAR[WeatherIconFolderVar]</imagepath>
+                    <timeperimage>100</timeperimage>
+                    <randomize>false</randomize>
+                    <fadetime>10</fadetime>
+                    <aspectratio>keep</aspectratio>
+                </control>
+                <control type="label">
+                    <description>Location label</description>
+                    <left>98</left>
+                    <top>15</top>
+                    <width>750</width>
+                    <height>22</height>
+                    <align>left</align>
+                    <aligny>center</aligny>
+                    <font>ubuntu-r13b</font>
+                    <textcolor>white</textcolor>
+                    <shadowcolor>black</shadowcolor>
+                    <label>$INFO[Window(Weather).Property(Location)]</label>
+                </control>
+                <control type="grouplist">
+                    <left>98</left>
+                    <top>38</top>
+                    <width>1500</width>
+                    <height>45</height>
+                    <orientation>horizontal</orientation>
+                    <align>left</align>
+                    <itemgap>0</itemgap>
+                    <control type="label">
+                        <description>Temp label</description>
+                        <width min="0" max="450">auto</width>
+                        <height>45</height>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <font>ubuntu-r26b</font>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+                    </control>
+                    <control type="label">
+                        <description>Temp Units</description>
+                        <width min="0" max="150">auto</width>
+                        <height>33</height>
+                        <font>ubuntu-r13b</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[System.TemperatureUnits]</label>
+                        <textcolor>white</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                        <visible>!String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+                    </control>
+                    <control type="label">
+                        <description>Conditions Label</description>
+                        <width>750</width>
+                        <height>33</height>
+                        <font>ubuntu-r13b</font>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window(Weather).Property(Current.Condition),  ]</label>
+                        <textcolor>grey</textcolor>
+                        <shadowcolor>black</shadowcolor>
+                    </control>
+                </control>
+            </control>
+        </control>
+        <control type="group">
+            <visible>Window.IsVisible(1200)</visible>
+            <control type="image">
+                <description>background</description>
+                <include>openclosefanart</include>
+                <include>Dimensions_Fullscreen</include>
+                <colordiffuse>grey1</colordiffuse>
+                <texture background="true">WhiteBack.png</texture>
+            </control>
+        </control>
+		<!-- <include>Arrows</include> -->
+        <include>BehindDialogFadeOut</include>
+        <control type="group"> <!-- Profilinfos -->
+            <left>1470</left>
+            <top>0</top>
+            <visible>!Control.HasFocus(666)</visible>
+            <include>opencloseslideleft</include>
+            <visible>Integer.IsGreater(System.ProfileCount,1)</visible>
+            <control type="group">
+                <visible>Skin.HasSetting(profilname)</visible>
+                <control type="image">
+                    <description>Conditions Label</description>
+                    <left>90</left>
+                    <top>57</top>
+                    <width>375</width>
+                    <height>1</height>
+                    <colordiffuse>dustdiffuse</colordiffuse>
+                    <texture>Separator2.png</texture>
+                </control>
+                <control type="label">
+                    <description>Conditions Label</description>
+                    <left>51</left>
+                    <top>57</top>
+                    <width>375</width>
+                    <height>38</height>
+                    <align>right</align>
+                    <font>ubuntu-r13b</font>
+                    <textcolor>grey</textcolor>
+                    <label>$INFO[System.ProfileName]</label>
+                </control>
+            </control>
+        </control>
+        <control type="grouplist"> <!-- Server- / Batteryinfos -->
+            <left>1868</left>
+            <top>8</top>
+            <width>1800</width>
+            <itemgap>8</itemgap>
+            <orientation>horizontal</orientation>
+            <include>opencloseslideleft</include>
+            <visible>!Control.HasFocus(666)</visible>
+            <animation effect="slide" end="-36" condition="Skin.HasSetting(BatteryLevel)">Conditional</animation>
+            <animation effect="slide" end="-52" condition="Integer.IsGreater(System.ProfileCount,1)">Conditional</animation>
+            <control type="image" id="4444">
+                <width>42</width>
+                <height>42</height>
+                <aspectratio>keep</aspectratio>
+                <texture border="5">$INFO[Skin.String(ServerIcon_File)]</texture>
+                <visible>Window.IsActive(Home)</visible>
+            </control>
+            <control type="image">
+                <description>Conditions Label</description>
+                <width>42</width>
+                <height>42</height>
+                <texture>$INFO[System.ProfileThumb]</texture>
+                <aspectratio>keep</aspectratio>
+                <visible>Integer.IsGreater(System.ProfileCount,1)</visible>
+            </control>
+            <control type="group">
+                <left>0</left>
+                <top>0</top>
+                <width>42</width>
+                <height>42</height>
+                <control type="progress">
+                    <description>Progressbar Battery Level</description>
+                    <left>48r</left>
+                    <top>9</top>
+                    <width>36</width>
+                    <height>21</height>
+                    <texturebg>Battery.png</texturebg>
+                    <midtexture colordiffuse="description">BatteryProgress.png</midtexture>
+                    <overlaytexture colordiffuse="grey">Battery.png</overlaytexture>
+                    <info>System.BatteryLevel</info>
+                    <animation effect="rotate" end="90" center="auto" condition="true">Conditional</animation>
+                    <visible>Skin.HasSetting(BatteryLevel)</visible>
+                </control>
+            </control>
+        </control>
+		<control type="group"> <!-- Homemenu -->
+			<visible>!ControlGroup(19).HasFocus()</visible>
+            <visible>!Control.HasFocus(666)</visible>
+			<include>openclosevisible</include>
+			<animation effect="slide" start="0,878" end="0,0" time="800" condition="Skin.HasSetting(animation)">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,878" time="800" condition="Skin.HasSetting(animation)">WindowClose</animation>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,-112" time="400" delay="250" condition="Window.IsVisible(favourites)">Conditional</animation>
+				<left>-8</left>
+				<top>725</top>
+				<width>1935</width>
+				<height>230</height>
+				<colordiffuse>black</colordiffuse>
+				<texture>DoubleShadow_White.png</texture>
+				<visible>Skin.HasSetting(animation)</visible>
+			</control>
+			<control type="group">
+				<control type="group"> <!-- time label -->
+					<left>675r</left>
+					<top>878</top>
+					<visible>!Window.IsVisible(favourites)</visible>
+					<include>openclosevisible</include>
+					<animation effect="slide" start="0,0" end="0,-112" time="400" delay="250" condition="Window.IsVisible(favourites)">Conditional</animation>
+					<control type="image">
+						<visible>!Window.IsVisible(favourites)</visible>
+						<description>background</description>
+						<left>30</left>
+						<top>3</top>
+						<width>825</width>
+						<height>72</height>
+						<texture background="true" flipx="true">Scaled.png</texture>
+					</control>
+					<control type="label">
+						<description>time label</description>
+						<left>135</left>
+						<top>18</top>
+						<width>525</width>
+						<height>30</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>impacted22</font>
+						<textcolor>grey</textcolor>
+						<shadowcolor>grey3</shadowcolor>
+						<label>$INFO[System.Time(hh:mm xx)]$INFO[System.Date(DDD),  •  , ]$INFO[System.Date(dd.mm.yy), •  ,]</label>
+					</control>
+				</control>
+				<include>TouchButtons</include>
+				<include>submenu</include>
+				<include>HomeMenu</include>
+			</control>
+		</control>
+        <control type="grouplist"> <!-- Debuginfos -->
+            <visible>Skin.HasSetting(DebugInfo)</visible>
+            <left>30</left>
+            <top>60r</top>
+            <width>1800</width>
+            <orientation>horizontal</orientation>
+            <itemgap>0</itemgap>
+            <control type="label">
+                <left>30</left>
+                <top>225</top>
+                <width>auto</width>
+                <height>18</height>
+                <font>font12</font>
+                <align>left</align>
+                <textcolor>orange</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>295 sichtbar | </label>
+				<visible>Control.IsVisible(295)</visible>
+            </control>
+            <control type="label">
+                <left>30</left>
+                <top>225</top>
+                <width>auto</width>
+                <height>18</height>
+                <font>font12</font>
+                <align>left</align>
+                <textcolor>orange</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>$INFO[Container(295).ListItem(1).Label] | </label>
+            </control>
+        </control>
+    </controls>
+</window>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="107">
+  <animation effect="slide" start="0,0" end="0,-100" time="300">WindowOpen</animation>
+  <animation effect="slide" start="0,-100" end="0,0" time="300">WindowClose</animation>
+  <coordinates>
+    <system>1</system>
+    <left>5</left>
+	<top>1000</top>
+  </coordinates>
+  <controls>
+    <control type="group">
+      <control type="image">
+        <left>0</left>
+        <top>0</top>
+        <width>650</width>
+        <height>170</height>
+        <texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+      </control>
+      <control type="image" id="400">
+        <description>avatar</description>
+        <left>30</left>
+        <top>35</top>
+        <width>100</width>
+        <height>100</height>
+        <aspectratio align="center" aligny="top">keep</aspectratio>
+        <texture>DefaultFile.png</texture>
+      </control>
+      <control type="fadelabel" id="401">
+        <description>Line 1 Label</description>
+        <left>155</left>
+		<top>25</top>
+		<width>470</width>
+		<height>20</height>
+		<font>primal_18</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scrollout>false</scrollout>
+		<scrollspeed>30</scrollspeed>
+        <pauseatend>2000</pauseatend>
+      </control>
+      <control type="fadelabel" id="402">
+        <description>Line 2 Label</description>
+        <left>155</left>
+		<top>55</top>
+		<width>470</width>
+		<height>20</height>
+		<font>primal_15</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <align>left</align>
+        <aligny>center</aligny>
+        <scrollout>false</scrollout>
+		<scrollspeed>30</scrollspeed>
+        <pauseatend>2000</pauseatend>
+      </control>
+    </control>
+  </controls>
+</window>

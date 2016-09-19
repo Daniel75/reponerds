@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="resource.images.addonicons.color" name="Alternative Addon Icons" version="1.0" provider-name="Barney Stinsen">
+<addon id="resource.images.addonicons.color" name="Alternative Addon Icons" version="1.1" provider-name="Barney Stinsen">
 	<extension point="kodi.resource.images" compile="false" type="addonicons" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0"/>
+                <import addon="repository.lost-and-found" version="1.1.8"/>
 	</requires>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Alternative Addon Icons</summary>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>	
+	<category label="32000">
+		<setting id="on__service_enabled"      type="bool"      label="32001"                       default="false" />
+		<setting id="on__idle_time_min"        type="slider"    label="32002" enable="eq(-1,true)"  default="5" range="1,1,60" option="int" />
+		<setting id="on__action_type"          type="labelenum" label="32003" enable="eq(-2,true)"  values="one per startup|one after timeout|repeat with timeout|one per second after timeout" />  
+		<setting id="on__action"               type="labelenum" label="32004" enable="eq(-3,true)"  values="Minimize|Quit|Powerdown|Hibernate|Suspend|RunScript|RunAppleScript|PlayMedia|SlideShow|RecursiveSlideShow|PlayDVD|System.Exec|System.ExecWait|UpdateLibrary|CleanLibrary|ActivateScreensaver|noop" />
+		<setting id="on__type_playmedia"       type="labelenum" label="32005" enable="eq(-4,true)"  visible="eq(-1,7)" values="Playlist|Audio/Video-File|URL" />
+		<setting id="on__isdir"                type="bool"      label="32006" enable="eq(-5,true)"  visible="eq(-2,7)+!eq(-1,2)" />
+		<setting id="on__execute_file_cmd"     type="labelenum" label="32007" enable="eq(-6,true)"  visible="eq(-3,11)|eq(-3,12)" values="File|CMD" />
+		<setting id="on__file_scripts"         type="file"      label="32008" enable="eq(-7,true)"  visible="eq(-4,5)|eq(-4,6)" />
+		<setting id="on__file_playmedia"       type="file"      label="32008" enable="eq(-8,true)"  visible="eq(-5,7)+eq(-3,false)+!eq(-4,2)" />
+		<setting id="on__file_execs"           type="file"      label="32008" enable="eq(-9,true)"  visible="eq(-6,11)+eq(-3,0)" />
+		<setting id="on__file_execs"           type="file"      label="32008" enable="eq(-10,true)" visible="eq(-7,12)+eq(-4,0)" />
+		<setting id="on__folder"               type="folder"    label="32009" enable="eq(-11,true)" visible="eq(-8,8)|eq(-8,9)" />
+		<setting id="on__folder_playmedia"     type="folder"    label="32009" enable="eq(-12,true)" visible="eq(-9,7)+eq(-7,true)" />
+		<setting id="on__url_playmedia"        type="text"      label="32010" enable="eq(-13,true)" visible="eq(-10,7)+eq(-9,2)" />
+		<setting id="on__optional_parameter"   type="text"      label="32011" enable="eq(-14,true)" visible="eq(-11,5)|eq(-11,6)" /> 
+		<setting id="on__optional_parameter"   type="text"      label="32011" enable="eq(-15,true)" visible="eq(-12,11)+eq(-9,0)" /> 
+		<setting id="on__optional_parameter"   type="text"      label="32011" enable="eq(-16,true)" visible="eq(-13,12)+eq(-10,0)" /> 
+		<setting id="on__cmd"                  type="text"      label="32012" enable="eq(-17,true)" visible="eq(-14,11)+eq(-11,1)" />
+		<setting id="on__cmd"                  type="text"      label="32013" enable="eq(-18,true)" visible="eq(-15,12)+eq(-12,1)" />
+		<setting id="on__offset"               type="number"    label="32013" enable="eq(-19,true)" visible="eq(-16,7)+eq(-15,0)+eq(-14,false)" />  
+		<setting id="on__windowtype"           type="labelenum" label="32014" enable="eq(-20,true)" visible="eq(-17,7)" values="Fullscreen|Preview" />
+		<setting id="on__slideshow_recursive"  type="bool"      label="32015" enable="eq(-21,true)" visible="eq(-18,8)" default="false" />
+		<setting id="on__slideshow_randomtype" type="labelenum" label="32016" enable="eq(-22,true)" visible="eq(-19,8)" values="random|notrandom" />
+		<setting id="on__update_clean_library" type="labelenum" label="32017" enable="eq(-23,true)" visible="eq(-20,13)|eq(-20,14)" values="music|video" />
+		<setting id="on__opt_fol__upd_vid_lib" type="folder"    label="32018" enable="eq(-24,true)" visible="eq(-21,13)+eq(-1,1)" />
+		<setting                               type="lsep"      label="32019"                       visible="eq(-25,true)" />
+
+		<setting label="32100" type="lsep" visible="eq(-26,true)+eq(-23,0)" />
+		<setting label="32101" type="lsep" visible="eq(-27,true)+eq(-24,1)" />
+		<setting label="32102" type="lsep" visible="eq(-28,true)+eq(-25,2)" />
+		<setting label="32103" type="lsep" visible="eq(-29,true)+eq(-26,3)" />
+		<setting label="32104" type="lsep" visible="eq(-30,true)+eq(-27,4)" />
+		<setting label="32105" type="lsep" visible="eq(-31,true)+eq(-28,5)" />
+		<setting label="32106" type="lsep" visible="eq(-32,true)+eq(-29,6)" />
+		<setting label="32107" type="lsep" visible="eq(-33,true)+eq(-30,7)" />
+		<setting label="32108" type="lsep" visible="eq(-34,true)+eq(-31,8)" />
+		<setting label="32109" type="lsep" visible="eq(-35,true)+eq(-32,9)" />
+		<setting label="32110" type="lsep" visible="eq(-36,true)+eq(-33,10)" />
+		<setting label="32111" type="lsep" visible="eq(-37,true)+eq(-34,11)" />
+		<setting label="32112" type="lsep" visible="eq(-38,true)+eq(-35,12)" />
+		<setting label="32113" type="lsep" visible="eq(-39,true)+eq(-36,13)" />
+		<setting label="32114" type="lsep" visible="eq(-40,true)+eq(-37,14)" />
+		<setting label="32115" type="lsep" visible="eq(-41,true)+eq(-38,14)" />
+		<setting label="32116" type="lsep" visible="eq(-42,true)+eq(-39,14)" />
+		<setting label="32117" type="lsep" visible="eq(-43,true)+eq(-40,15)" />
+		<setting label="32118" type="lsep" visible="eq(-44,true)+eq(-41,16)" />
+		<setting label="32119" type="lsep" visible="eq(-45,true)" />
+	</category>
+  
+	<category label="32200">
+		<setting label="32201" type="lsep" />
+		<setting id="after__after_idle_action_enabled" type="bool" label="32202" default="false" />
+		<setting id="after__action"               type="labelenum" label="32004" enable="eq(-1,true)"  values="Minimize|Quit|Powerdown|Hibernate|Suspend|RunScript|RunAppleScript|PlayMedia|SlideShow|RecursiveSlideShow|PlayDVD|System.Exec|System.ExecWait|UpdateLibrary|CleanLibrary|ActivateScreensaver|noop" />
+		<setting id="after__type_playmedia"       type="labelenum" label="32005" enable="eq(-2,true)"  visible="eq(-1,7)" values="Playlist|Audio/Video-File|URL" />
+		<setting id="after__isdir"                type="bool"      label="32006" enable="eq(-3,true)"  visible="eq(-2,7)+!eq(-1,2)" />
+		<setting id="after__execute_file_cmd"     type="labelenum" label="32007" enable="eq(-4,true)"  visible="eq(-3,11)|eq(-3,12)" values="File|CMD" />
+		<setting id="after__file_scripts"         type="file"      label="32008" enable="eq(-5,true)"  visible="eq(-4,5)|eq(-4,6)" />
+		<setting id="after__file_playmedia"       type="file"      label="32008" enable="eq(-6,true)"  visible="eq(-5,7)+eq(-3,false)+!eq(-4,2)" />
+		<setting id="after__file_execs"           type="file"      label="32008" enable="eq(-7,true)"  visible="eq(-6,11)+eq(-3,0)" />
+		<setting id="after__file_execs"           type="file"      label="32008" enable="eq(-8,true)"  visible="eq(-7,12)+eq(-4,0)" />
+		<setting id="after__folder"               type="folder"    label="32009" enable="eq(-9,true)"  visible="eq(-8,8)|eq(-8,9)" />
+		<setting id="after__folder_playmedia"     type="folder"    label="32009" enable="eq(-10,true)" visible="eq(-9,7)+eq(-7,true)" />
+		<setting id="after__url_playmedia"        type="text"      label="32010" enable="eq(-11,true)" visible="eq(-10,7)+eq(-9,2)" />
+		<setting id="after__optional_parameter"   type="text"      label="32011" enable="eq(-12,true)" visible="eq(-11,5)|eq(-11,6)" /> 
+		<setting id="after__optional_parameter"   type="text"      label="32011" enable="eq(-13,true)" visible="eq(-12,11)+eq(-9,0)" /> 
+		<setting id="after__optional_parameter"   type="text"      label="32011" enable="eq(-14,true)" visible="eq(-13,12)+eq(-10,0)" /> 
+		<setting id="after__cmd"                  type="text"      label="32012" enable="eq(-15,true)" visible="eq(-14,11)+eq(-11,1)" />
+		<setting id="after__cmd"                  type="text"      label="32013" enable="eq(-16,true)" visible="eq(-15,12)+eq(-12,1)" />
+		<setting id="after__offset"               type="number"    label="32013" enable="eq(-17,true)" visible="eq(-16,7)+eq(-15,0)+eq(-14,false)" />  
+		<setting id="after__windowtype"           type="labelenum" label="32014" enable="eq(-18,true)" visible="eq(-17,7)" values="Fullscreen|Preview" />
+		<setting id="after__slideshow_recursive"  type="bool"      label="32015" enable="eq(-19,true)" visible="eq(-18,8)" default="false" />
+		<setting id="after__slideshow_randomtype" type="labelenum" label="32016" enable="eq(-20,true)" visible="eq(-19,8)" values="random|notrandom" />
+		<setting id="after__update_clean_library" type="labelenum" label="32017" enable="eq(-21,true)" visible="eq(-20,13)|eq(-20,14)" values="music|video" />
+		<setting id="after__opt_fol__upd_vid_lib" type="folder"    label="32018" enable="eq(-22,true)" visible="eq(-21,13)+eq(-1,1)" />
+		<setting                                  type="lsep"      label="32019"                       visible="eq(-23,true)" />
+
+		<setting label="32100" type="lsep" visible="eq(-24,true)+eq(-23,0)" />
+		<setting label="32101" type="lsep" visible="eq(-25,true)+eq(-24,1)" />
+		<setting label="32102" type="lsep" visible="eq(-26,true)+eq(-25,2)" />
+		<setting label="32103" type="lsep" visible="eq(-27,true)+eq(-26,3)" />
+		<setting label="32104" type="lsep" visible="eq(-28,true)+eq(-27,4)" />
+		<setting label="32105" type="lsep" visible="eq(-29,true)+eq(-28,5)" />
+		<setting label="32106" type="lsep" visible="eq(-30,true)+eq(-29,6)" />
+		<setting label="32107" type="lsep" visible="eq(-31,true)+eq(-30,7)" />
+		<setting label="32108" type="lsep" visible="eq(-32,true)+eq(-31,8)" />
+		<setting label="32109" type="lsep" visible="eq(-33,true)+eq(-32,9)" />
+		<setting label="32110" type="lsep" visible="eq(-34,true)+eq(-33,10)" />
+		<setting label="32111" type="lsep" visible="eq(-35,true)+eq(-34,11)" />
+		<setting label="32112" type="lsep" visible="eq(-36,true)+eq(-35,12)" />
+		<setting label="32113" type="lsep" visible="eq(-37,true)+eq(-36,13)" />
+		<setting label="32114" type="lsep" visible="eq(-38,true)+eq(-37,14)" />
+		<setting label="32115" type="lsep" visible="eq(-39,true)+eq(-38,14)" />
+		<setting label="32116" type="lsep" visible="eq(-40,true)+eq(-39,14)" />
+		<setting label="32117" type="lsep" visible="eq(-41,true)+eq(-40,15)" />
+		<setting label="32118" type="lsep" visible="eq(-42,true)+eq(-41,16)" />
+		<setting label="32119" type="lsep" visible="eq(-43,true)" />
+	</category>
+</settings>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="136">
+  <animation effect="fade" time="100">WindowOpen</animation>
+  <animation effect="fade" time="200">WindowClose</animation>
+  <coordinates>
+    <system>1</system>
+    <left>0</left>
+    <top>0</top>
+  </coordinates>
+  <controls>
+    <control type="image">
+	  <description>Background</description>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <aspectratio>stretch</aspectratio>
+	  <texture background="true">background.png</texture>
+	  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	</control>
+    <control type="group">
+      <left>0</left>
+      <top>400</top>
+      <control type="image">
+        <description>Busy animation</description>
+        <left>870</left>
+        <top>30</top>
+        <width>193</width>
+        <height>193</height>
+		<aspectratio>keep</aspectratio>
+        <texture>busy/busy.png</texture>
+        <animation effect="rotate" start="0" end="-360" center="auto" time="1200" loop="true" condition="true">conditional</animation>
+      </control>
+	  <!--<control type="multiimage">
+		<left>0</left>
+		<bottom>-10</bottom>
+		<width>1920</width>
+		<height>25</height>
+		<imagepath>busy/1/</imagepath>
+		<timeperimage>1000</timeperimage>
+		<randomize>false</randomize>
+		<fadetime>1</fadetime>
+	  </control>-->
+      <control type="label">
+        <description>Busy label</description>
+        <left>920</left>
+        <top>100</top>
+        <width>550</width>
+        <height>48</height>
+        <align>left</align>
+        <aligny>center</aligny>
+        <label>$LOCALIZE[49965]</label>
+        <font>primal_28_Bold</font>
+      </control>
+	  <control type="progress" id="10">
+		<description>Progressbar</description>
+		<left>30</left>
+		<top>75</top>
+		<width>160</width>
+		<height>10</height>
+		<!-- <info>System.Progressbar</info> -->
+	  </control>
+    </control>
+  </controls>
+</window>

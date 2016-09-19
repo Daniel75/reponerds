@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="4115" type="dialog">
+	<defaultcontrol always="true">13000</defaultcontrol>
+	<controls>
+			<control type="group">
+			<control type="image">
+			  <left>250</left>
+			  <top>200</top>
+			  <width>450</width>
+			  <height>720</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+			  <bordersize>6</bordersize>
+			</control>	
+			<control type="image">
+			  <left>262</left>
+			  <top>212</top>
+			  <width>426</width>
+			  <height>696</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			</control>
+			<control type="list" id="13000">
+				<left>265</left>
+			    <top>215</top>
+				<width>420</width>
+				<height>690</height>
+				<onleft>Action(back)</onleft>
+				<onright>Action(back)</onright>
+				<scrolltime tween="circle" easing="out">400</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout height="63" width="420">
+					<control type="image">
+					  <left>0</left>
+					  <top>0</top>
+					  <width>420</width>
+					  <height>60</height>
+					  <texture background="true">skin/button_klein.png</texture>
+					  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+					</control>
+					<control type="image">
+					  <left>10</left>
+					  <top>13</top>
+					  <width>30</width>
+					  <height>30</height>
+					  <texture background="true">$INFO[ListItem.Icon]</texture>
+					  <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+					</control>
+					<control type="label">
+					  <left>60</left>
+					  <top>10</top>
+					  <width>400</width>
+					  <height>30</height>
+					  <align>left</align>
+					  <font>primal_18</font>
+					  <label>$INFO[ListItem.Label]</label>
+					  <textcolor>$VAR[ColorFontNormal]</textcolor>
+					  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					</control>
+					<control type="label">
+					  <left>10</left>
+					  <top>10</top>
+					  <width>400</width>
+					  <height>30</height>
+					  <align>right</align>
+					  <font>primal_18</font>
+					  <label>$INFO[ListItem.Label2]</label>
+					  <textcolor>$VAR[ColorFontNormal]</textcolor>
+					  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="63" width="420">
+					<control type="image">
+					  <left>0</left>
+					  <top>0</top>
+					  <width>420</width>
+					  <height>60</height>
+					  <texture background="true">skin/button_klein.png</texture>
+					  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+					</control>	
+					<control type="image">
+					  <left>10</left>
+					  <top>13</top>
+					  <width>30</width>
+					  <height>30</height>
+					  <texture background="true">$INFO[ListItem.Icon]</texture>
+					  <colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+					</control>
+					<control type="label">
+					  <left>60</left>
+					  <top>10</top>
+					  <width>400</width>
+					  <height>30</height>
+					  <align>left</align>
+					  <font>primal_18</font>
+					  <label>$INFO[ListItem.Label]</label>
+					  <textcolor>$VAR[ColorFontNormal]</textcolor>
+					 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					</control>
+					<control type="label">
+					  <left>10</left>
+					  <top>10</top>
+					  <width>400</width>
+					  <height>30</height>
+					  <align>right</align>
+					  <font>primal_18</font>
+					  <label>$INFO[ListItem.Label2]</label>
+					  <textcolor>$VAR[ColorFontNormal]</textcolor>
+					 <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					</control>
+				</focusedlayout>
+				<content>
+				    <item id="0">
+						<label>Alles Reset</label>
+						<icon>home/homeicons/close.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlay)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemNews)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemLiveTV)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemMovies)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemTVShows)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemVideos)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist1)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist2)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist3)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist5)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist5)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemMusic)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemAddons)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemConcerts)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPictures)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemWeather)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemSettings)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPlayDisc)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemYouTube)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemSettings)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemWatchlist)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemSimplePlaylists)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemSearch)</onclick>
+						<onclick>Skin.Reset(HomeMenuItemPower)</onclick>
+						<visible></visible>
+					</item>
+					<item id="1">
+						<label>Play</label>
+						<label2 fallback="1.">$INFO[Skin.String(HomeMenuItemPlay),,.]</label2>
+						<icon>home/homeicons/sysinfo.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlay)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlay)</onclick>
+						<visible></visible>
+					</item>
+					<item id="2">
+						<label>News</label>
+						<label2 fallback="2.">$INFO[Skin.String(HomeMenuItemNews),,.]</label2>
+						<icon>home/homeicons/kodi.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemNews)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemNews)</onclick>
+						<visible></visible>
+					</item>
+					<item id="3">
+						<label>LiveTV</label>
+						<label2 fallback="3.">$INFO[Skin.String(HomeMenuItemLiveTV),,.]</label2>
+						<icon>home/homeicons/tv.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemLiveTV)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemLiveTV)</onclick>
+						<visible></visible>
+					</item>
+					<item id="4">
+						<label>Radio</label>
+						<label2 fallback="4.">$INFO[Skin.String(HomeMenuItemRadio),,.]</label2>
+						<icon>home/homeicons/music.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemRadio)</onclick>
+						<visible></visible>
+					</item>
+					<item id="5">
+						<label>Movies</label>
+						<label2 fallback="5.">$INFO[Skin.String(HomeMenuItemMovies),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemMovies)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemMovies)</onclick>
+						<visible></visible>
+					</item>
+					<item id="6">
+						<label>TVShows</label>
+						<label2 fallback="6.">$INFO[Skin.String(HomeMenuItemTVShows),,.]</label2>
+						<icon>home/homeicons/tvshows.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemTVShows)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemTVShows)</onclick>
+						<visible></visible>
+					</item>
+					<item id="7">
+						<label>Videos</label>
+						<label2 fallback="7.">$INFO[Skin.String(HomeMenuItemVideos),,.]</label2>
+						<icon>home/homeicons/video.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemVideos)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemVideos)</onclick>
+						<visible></visible>
+					</item>
+					<item id="8">
+						<label>Playlist 1</label>
+						<label2 fallback="8.">$INFO[Skin.String(HomeMenuItemPlaylist1),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist1)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist1)</onclick>
+						<visible></visible>
+					</item>
+					<item id="9">
+						<label>Playlist 2</label>
+						<label2 fallback="9.">$INFO[Skin.String(HomeMenuItemPlaylist2),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist2)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist2)</onclick>
+						<visible></visible>
+					</item>
+					<item id="10">
+						<label>Playlist 3</label>
+						<label2 fallback="10.">$INFO[Skin.String(HomeMenuItemPlaylist3),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist3)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist3)</onclick>
+						<visible></visible>
+					</item>
+					<item id="11">
+						<label>Button 1</label>
+						<label2 fallback="11.">$INFO[Skin.String(HomeMenuItemPlaylist4),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist4)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist4)</onclick>
+						<visible></visible>
+					</item>
+					<item id="12">
+						<label>Button 2</label>
+						<label2 fallback="12.">$INFO[Skin.String(HomeMenuItemPlaylist5),,.]</label2>
+						<icon>home/homeicons/film.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlaylist5)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlaylist5)</onclick>
+						<visible></visible>
+					</item>
+					<item id="13">
+						<label>Music</label>
+						<label2 fallback="13.">$INFO[Skin.String(HomeMenuItemMusic),,.]</label2>
+						<icon>home/homeicons/cd.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemMusic)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemMusic)</onclick>
+						<visible></visible>
+					</item>	
+					<item id="14">
+						<label>Addons</label>
+						<label2 fallback="14.">$INFO[Skin.String(HomeMenuItemAddons),,.]</label2>
+						<icon>home/homeicons/addons.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemAddons)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemAddons)</onclick>
+						<visible></visible>
+					</item>
+					<item id="15">
+						<label>Concerts</label>
+						<label2 fallback="15.">$INFO[Skin.String(HomeMenuItemConcerts),,.]</label2>
+						<icon>home/homeicons/musicvideos.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemConcerts)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemConcerts)</onclick>
+						<visible></visible>
+					</item>
+					<item id="16">
+						<label>Pictures</label>
+						<label2 fallback="16.">$INFO[Skin.String(HomeMenuItemPictures),,.]</label2>
+						<icon>home/homeicons/photos.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPictures)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPictures)</onclick>
+						<visible></visible>
+					</item>
+					<item id="17">
+						<label>Weather</label>
+						<label2 fallback="17.">$INFO[Skin.String(HomeMenuItemWeather),,.]</label2>
+						<icon>home/homeicons/weather.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemWeather)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemWeather)</onclick>
+						<visible></visible>
+					</item>
+					<item id="18">
+						<label>Settings</label>
+						<label2 fallback="18.">$INFO[Skin.String(HomeMenuItemSettings),,.]</label2>
+						<icon>home/homeicons/sonstiges.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemSettings)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemSettings)</onclick>
+						<visible></visible>
+					</item>
+					<item id="19">
+						<label>PlayDisc</label>
+						<label2 fallback="19.">$INFO[Skin.String(HomeMenuItemPlayDisc),,.]</label2>
+						<icon>home/homeicons/dvd.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPlayDisc)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPlayDisc)</onclick>
+						<visible></visible>
+					</item>
+					<item id="20">
+						<label>YouTube</label>
+						<label2 fallback="20.">$INFO[Skin.String(HomeMenuItemYouTube),,.]</label2>
+						<icon>home/homeicons/youtube.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemYouTube)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemYouTube)</onclick>
+						<visible></visible>
+					</item>
+					<item id="21">
+						<label>Watchlist</label>
+						<label2 fallback="21.">$INFO[Skin.String(HomeMenuItemWatchlist),,.]</label2>
+						<icon>home/homeicons/news.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemWatchlist)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemWatchlist)</onclick>
+						<visible></visible>
+					</item>
+					<item id="22">
+						<label>SimplePlaylists</label>
+						<label2 fallback="22.">$INFO[Skin.String(HomeMenuItemSimplePlaylists),,.]</label2>
+						<icon>home/homeicons/news.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemSimplePlaylists)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemSimplePlaylists)</onclick>
+						<visible></visible>
+					</item>
+					<item id="23">
+						<label>Search</label>
+						<label2 fallback="23.">$INFO[Skin.String(HomeMenuItemSearch),,.]</label2>
+						<icon>home/homeicons/search.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemSearch)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemSearch)</onclick>
+						<visible></visible>
+					</item>
+					<item id="24">
+						<label>Power</label>
+						<label2 fallback="24.">$INFO[Skin.String(HomeMenuItemPower),,.]</label2>
+						<icon>home/homeicons/off.png</icon>
+						<onclick>Skin.Reset(HomeMenuItemPower)</onclick>
+						<onclick>Skin.SetNumeric(HomeMenuItemPower)</onclick>
+						<visible></visible>
+					</item>
+				</content>
+			</control>
+		</control>
+
+	</controls>
+</window>

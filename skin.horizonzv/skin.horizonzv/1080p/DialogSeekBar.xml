@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol>1</defaultcontrol>
+    <zorder>2</zorder>
+    <visible>[!Window.IsVisible(fullscreeninfo)+!Window.IsActive(videobookmarks)+!Window.IsVisible(osdvideosettings)+!Window.IsVisible(osdaudiosettings)]</visible>
+    <visible>Player.Seeking|Player.DisplayAfterSeek|Player.Paused|Player.Forwarding|Player.Rewinding|Window.IsVisible(videoosd)</visible>
+    <visible>!Window.IsActive(DialogSubtitles.xml)</visible>
+    <visible>Window.IsVisible(fullscreenvideo)</visible>
+	<!-- <visible>!String.Contains(Window(videoosd).Property(SeekbarDisable),true)</visible> -->
+    <controls>
+        <control type="group">
+            <visible>![Pvr.IsPlayingTv|VideoPlayer.Content(livetv)]</visible>
+            <control type="group">
+                <!-- Video light -->
+                <include>opencloseslideup</include>
+                <visible>Player.HasVideo</visible>
+                <visible>Skin.HasSetting(pause_light)</visible>
+                <control type="group">
+                    <left>0</left>
+                    <top>772</top>
+                    <control type="group">
+                        <visible>Skin.HasSetting(pause_light_hideinfos)</visible>
+                        <control type="image">
+                            <description>Background</description>
+                            <left>-15</left>
+                            <top>158</top>
+                            <width>1950</width>
+                            <height>165</height>
+                            <texture background="true" border="2">BlackBack.png</texture>
+                        </control>
+                        <control type="group">
+                            <left>-3</left>
+                            <top>110</top>
+                            <control type="progress">
+                                <description>ProgressBarCache</description>
+                                <left>0</left>
+                                <top>21</top>
+                                <width>1926</width>
+                                <height>51</height>
+                                <info>Player.ProgressCache</info>
+                                <texturebg>-</texturebg>
+                                <midtexture>osd/ProgressMid.png</midtexture>
+                                <colordiffuse>DD494949</colordiffuse>
+                                <visible>true</visible>
+                            </control>
+                            <control type="progress">
+                                <description>ProgressBar</description>
+                                <left>0</left>
+                                <top>21</top>
+                                <width>1926</width>
+                                <height>51</height>
+                                <info>Player.Progress</info>
+                                <texturebg>-</texturebg>
+                                <visible>true</visible>
+                            </control>
+                            <!-- <control type="slider" id="401">
+								<description>Seekbar</description>
+								<left>2</left>
+								<top>36</top>
+								<width>1280</width>
+								<height>18</height>
+								<colordiffuse>fanartdiffuse</colordiffuse>
+								<visible>Player.Seeking</visible>
+							</control> -->
+                        </control>
+                        <control type="image">
+                            <description>Background</description>
+                            <left>-150</left>
+                            <top>158</top>
+                            <width>2220</width>
+                            <height>1</height>
+                            <texture background="true">Separator2.png</texture>
+                        </control>
+                        <control type="grouplist">
+                            <left>30</left>
+                            <top>166</top>
+                            <orientation>horizontal</orientation>
+                            <control type="label">
+                                <description>Chapter Pos No</description>
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r16b</font>
+                                <label>$LOCALIZE[21396]: $INFO[player.chapter]$INFO[player.chaptercount,[COLOR=grey] / [/COLOR],]</label>
+                                <visible>player.chaptercount + Window.IsVisible(FullScreenVideo)</visible>
+                            </control>
+                            <control type="label">
+                                <description>Subtitle Language</description>
+                                <width>auto</width>
+                                <height>24</height>
+                                <align>center</align>
+                                <font>ubuntu-r16b</font>
+                                <label> •  $LOCALIZE[462] $LOCALIZE[16041]</label>
+                                <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r16b</font>
+                                <label>$VAR[SeekLabel, • ,]</label>
+                            </control>
+                        </control>
+                        <control type="label">
+                            <description>Seeking Label</description>
+                            <left>1035</left>
+                            <top>166</top>
+                            <width>525</width>
+                            <height>24</height>
+                            <align>left</align>
+                            <font>ubuntu-r16b</font>
+                            <label>$LOCALIZE[31046]</label>
+                            <visible>Player.Seeking</visible>
+                        </control>
+                        <control type="label">
+                            <description>Cache Label</description>
+                            <left>390r</left>
+                            <top>166</top>
+                            <width>375</width>
+                            <height>24</height>
+                            <align>right</align>
+                            <font>ubuntu-r16b</font>
+                            <label>$LOCALIZE[15107]$INFO[Player.CacheLevel,,%]</label>
+                            <visible>[[Player.Paused+Player.Caching]+!Player.Seeking]|Player.IsInternetStream</visible>
+                        </control>
+                        <control type="image" id="9898">
+                            <left>30</left>
+                            <top>8</top>
+                            <width>300</width>
+                            <height>150</height>
+                            <aspectratio align="left" aligny="bottom">keep</aspectratio>
+                            <texture background="true" border="4">$VAR[MovieStudioLogoVar]$INFO[VideoPlayer.Studio,,.png]</texture>
+                        </control>
+                        <control type="image">
+                            <left>1590</left>
+                            <top>8</top>
+                            <width>300</width>
+                            <height>150</height>
+                            <aspectratio align="right" aligny="bottom">keep</aspectratio>
+                            <texture background="true" border="4">$VAR[extraart_player_rule]</texture>
+                            <visible>Skin.HasSetting(video_art)+!VideoPlayer.Content(episodes)</visible>
+                        </control>
+                        <control type="image">
+                            <left>1590</left>
+                            <top>8</top>
+                            <width>300</width>
+                            <height>150</height>
+                            <aspectratio align="right">keep</aspectratio>
+                            <texture background="true" border="4">$VAR[extraart_tvshow_player_rule]</texture>
+                            <visible>Skin.HasSetting(tvshow_art)+VideoPlayer.Content(episodes)</visible>
+                        </control>
+                    </control>
+                    <control type="image">
+                        <description>Background</description>
+                        <left>-15</left>
+                        <top>154</top>
+                        <width>1950</width>
+                        <height>165</height>
+                        <texture background="true" border="2">Underlay_light.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>892</left>
+                        <top>165</top>
+                        <width>135</width>
+                        <height>135</height>
+                        <fadetime>FadeTime</fadetime>
+                        <aspectratio>keep</aspectratio>
+                        <texture background="true" border="4">$VAR[OSDTexture]</texture>
+                    </control>
+                    <control type="group">
+                        <top>180</top>
+                        <control type="label">
+                            <left>15</left>
+                            <top>52</top>
+                            <width>870</width>
+                            <height>39</height>
+                            <align>right</align>
+                            <font>ubuntu-r26b</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>-</shadowcolor>
+                            <label>$INFO[Player.Title]$INFO[VideoPlayer.Season, (,]$INFO[VideoPlayer.Episode,x,)]</label>
+                            <scroll>true</scroll>
+                        </control>
+                        <control type="label">
+                            <left>1035</left>
+                            <top>52</top>
+                            <width>870</width>
+                            <height>39</height>
+                            <align>left</align>
+                            <font>ubuntu-r26b</font>
+                            <textcolor>white</textcolor>
+                            <shadowcolor>-</shadowcolor>
+                            <label>$INFO[Player.Time]$INFO[Player.Duration, / ,]</label>
+                        </control>
+                    </control>
+                </control>
+            </control>
+            <control type="group">
+                <!-- Video standard -->
+				<animation effect="slide" end="0,180" time="200" condition="String.Contains(Window(videoosd).Property(SeekbarDisable),true)">Conditional</animation>
+                <visible>!Skin.HasSetting(pause_light)</visible>
+                <control type="group">
+                    <include>opencloseslideup</include>
+                    <control type="group">
+                        <visible>!Window.IsVisible(visualisation)</visible>
+                        <left>0</left>
+                        <top>750</top>
+                        <control type="image">
+                            <description>Background</description>
+                            <left>-8</left>
+                            <top>82</top>
+                            <width>1950</width>
+                            <height>22</height>
+                            <colordiffuse>fanartdiffuse</colordiffuse>
+                            <texture background="true">Shadow.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Background</description>
+                            <left>-8</left>
+                            <top>105</top>
+                            <width>1950</width>
+                            <height>240</height>
+                            <colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+                            <texture background="true" flipy="true">ContentPanel_scratched.png</texture>
+                            <animation effect="fade" end="90" condition="true">Conditional</animation>
+                        </control>
+                        <control type="image">
+                            <description>Background</description>
+                            <left>0</left>
+                            <top>105</top>
+                            <width>1920</width>
+                            <height>3</height>
+                            <colordiffuse>menudiffuse</colordiffuse>
+                            <texture border="1" flipy="true">Separator1.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>0</left>
+                            <top>105</top>
+                            <width>600</width>
+                            <height>225</height>
+                            <texture background="true">SideFade.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>1335</left>
+                            <top>105</top>
+                            <width>615</width>
+                            <height>225</height>
+                            <texture background="true" flipx="true">SideFade.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Seperator</description>
+                            <left>420</left>
+                            <top>120</top>
+                            <width>3</width>
+                            <height>195</height>
+                            <colordiffuse>fanartdiffuse</colordiffuse>
+                            <texture background="true">Separator4.png</texture>
+                        </control>
+                        <control type="image">
+                            <description>Seperator</description>
+                            <left>1522</left>
+                            <top>120</top>
+                            <width>3</width>
+                            <height>195</height>
+                            <colordiffuse>fanartdiffuse</colordiffuse>
+                            <texture background="true">Separator4.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>-15</left>
+                            <top>255</top>
+                            <width>1950</width>
+                            <height>75</height>
+                            <texture background="true">Shadow.png</texture>
+                        </control>
+                        <control type="group">
+                            <left>922</left>
+                            <top>142</top>
+                            <visible>VideoPlayer.Content(episodes)</visible>
+                            <control type="label">
+                                <left>15</left>
+                                <top>0</top>
+                                <width>555</width>
+                                <height>60</height>
+                                <align>right</align>
+                                <font>impacted26</font>
+                                <textcolor>grey1</textcolor>
+                                <shadowcolor>-</shadowcolor>
+                                <label>$INFO[VideoPlayer.Season,$LOCALIZE[20373] ,]</label>
+                            </control>
+                            <control type="label">
+                                <left>0</left>
+                                <top>24</top>
+                                <width>555</width>
+                                <height>60</height>
+                                <align>right</align>
+                                <font>impacted26</font>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[VideoPlayer.Episode,$LOCALIZE[20452] ,]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <left>435</left>
+                            <top>58</top>
+                            <control type="image">
+                                <description>Background</description>
+                                <left>0</left>
+                                <top>214</top>
+                                <width>1071</width>
+                                <height>3</height>
+                                <colordiffuse>fanartdiffuse</colordiffuse>
+                                <texture border="1">Separator1.png</texture>
+                            </control>
+                            <control type="progress">
+                                <description>ProgressBarCache</description>
+                                <left>0</left>
+                                <top>45</top>
+                                <width>1072</width>
+                                <height>24</height>
+                                <texturebg>Empty.png</texturebg>
+                                <midtexture border="10,0,10,0" colordiffuse="grey2">osd/ProgressMid2.png</midtexture>
+                                <info>Player.ProgressCache</info>
+                                <visible>true</visible>
+                            </control>
+                            <control type="progress">
+                                <description>ProgressBar</description>
+                                <left>0</left>
+                                <top>45</top>
+                                <width>1072</width>
+                                <height>26</height>
+                                <texturebg border="10,0,10,0">osd/ProgressBack2.png</texturebg>
+                                <midtexture border="10,0,10,0" colordiffuse="description">osd/ProgressMid2.png</midtexture>
+                                <info>Player.Progress</info>
+                                <visible>true</visible>
+                            </control>
+                            <control type="slider" id="401">
+                                <!-- ID nicht ändern -->
+                                <description>Seekbar</description>
+                                <left>16</left>
+                                <top>48</top>
+                                <width>1036</width>
+                                <height>18</height>
+                                <texturesliderbar>osd/slider_bg2.png</texturesliderbar>
+                                <visible>Player.Seeking</visible>
+                            </control>
+                        </control>
+                        <control type="label">
+                            <left>450</left>
+                            <top>165</top>
+                            <width>1028</width>
+                            <align>center</align>
+                            <font>impacted31</font>
+                            <shadowcolor>black</shadowcolor>
+                            <label>$VAR[VideoPlayerTitle]</label>
+                            <visible>!VideoPlayer.Content(episodes)</visible>
+                        </control>
+                        <control type="group">
+                            <left>15</left>
+                            <top>22</top>
+                            <control type="label">
+                                <left>435</left>
+                                <top>110</top>
+                                <width>765</width>
+                                <height>60</height>
+                                <align>left</align>
+                                <font>impacted26</font>
+                                <textcolor>grey</textcolor>
+                                <shadowcolor>-</shadowcolor>
+                                <label>$INFO[VideoPlayer.TVShowTitle]</label>
+                                <visible>VideoPlayer.Content(episodes)</visible>
+                            </control>
+                            <control type="label">
+                                <left>435</left>
+                                <top>156</top>
+                                <width>765</width>
+                                <height>60</height>
+                                <align>left</align>
+                                <font>impacted31</font>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[VideoPlayer.Title]</label>
+                                <visible>VideoPlayer.Content(episodes)</visible>
+                            </control>
+                        </control>
+                        <control type="grouplist">
+                            <left>450</left>
+                            <top>240</top>
+                            <width>1042</width>
+                            <itemgap>6</itemgap>
+                            <align>center</align>
+                            <orientation>horizontal</orientation>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>description</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>•</label>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$LOCALIZE[462] $LOCALIZE[16041] [COLOR=description]•[/COLOR]</label>
+                                <visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled</visible>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[player.chapter,$LOCALIZE[21396]: ,]$INFO[player.chaptercount, / , [COLOR=description]•[/COLOR]]</label>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[Player.Time]</label>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[Player.Duration,/ ,]</label>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$INFO[Player.TimeRemaining,(-,)]</label>
+                            </control>
+                            <control type="label">
+                                <width>auto</width>
+                                <height>24</height>
+                                <font>ubuntu-r13b</font>
+                                <textcolor>orange</textcolor>
+                                <shadowcolor>black</shadowcolor>
+                                <label>$VAR[SeekLabel,[COLOR=description]•[/COLOR] ,] [COLOR=description]•[/COLOR]</label>
+                            </control>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <include>opencloseslideup</include>
+                        <visible>Player.HasVideo</visible>
+						<control type="grouplist">
+							<left>450</left>
+							<top>1035</top>
+							<width>1042</width>
+							<height>120</height>
+							<itemgap>12</itemgap>
+							<align>center</align>
+							<orientation>horizontal</orientation>
+							<include>FlagVideo_Player</include>
+							<include>FlagVideo_PlayerStudio</include>
+						</control>
+                        <control type="group">
+                            <left>1558</left>
+                            <top>918</top>
+                            <control type="label">
+                                <width>240</width>
+                                <height>27</height>
+                                <align>left</align>
+                                <font>impacted18</font>
+                                <textcolor>grey</textcolor>
+                                <label>$LOCALIZE[19127]</label>
+                            </control>
+                            <control type="label">
+                                <top>50</top>
+                                <width>338</width>
+                                <height>39</height>
+                                <align>left</align>
+                                <font>menufontimpacted</font>
+                                <label>$INFO[Player.FinishTime]</label>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <left>15</left>
+                            <top>862</top>
+							<visible>!String.Contains(Window(videoosd).Property(SeekbarDisable),true)</visible>
+                            <control type="list" id="80">
+                                <left>0</left>
+                                <top>8</top>
+                                <height>195</height>
+                                <width>390</width>
+                                <include>openclosevisible</include>
+                                <visible>Control.IsVisible(80)</visible>
+                                <itemlayout>
+                                    <control type="image">
+                                        <height>195</height>
+                                        <width>390</width>
+                                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                                        <visible>!String.IsEmpty(ListItem.Icon)</visible>
+                                    </control>
+                                </itemlayout>
+                                <focusedlayout>
+                                    <control type="image">
+                                        <height>195</height>
+                                        <width>390</width>
+                                        <aspectratio align="center" aligny="bottom">keep</aspectratio>
+                                        <texture background="true" diffuse="masks/mask.png">$INFO[ListItem.Icon]</texture>
+                                        <visible>!String.IsEmpty(ListItem.Icon)</visible>
+                                    </control>
+                                </focusedlayout>
+                                <content>
+                                    <item id="1">
+                                        <label>-</label>
+                                        <icon>$VAR[extraart_tvshow_player_rule]</icon>
+                                        <onclick>noop</onclick>
+                                        <visible>VideoPlayer.Content(episodes)</visible>
+                                    </item>
+                                    <item id="2">
+                                        <label></label>
+                                        <icon>$VAR[extraart_player_rule]</icon>
+                                        <onclick>noop</onclick>
+                                        <visible>VideoPlayer.Content(movies)+Skin.HasSetting(video_art)</visible>
+                                    </item>
+                                </content>
+                            </control>
+                            <control type="group">
+                                <visible>String.IsEmpty(Container(80).ListItem().Icon)</visible>
+                                <left>15</left>
+                                <top>15</top>
+                                <control type="label">
+                                    <left>0</left>
+                                    <top>39</top>
+                                    <width>360</width>
+                                    <height>27</height>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <font>impacted18</font>
+                                    <textcolor>grey</textcolor>
+                                    <label>$INFO[System.Date]</label>
+                                </control>
+                                <control type="label">
+                                    <left>0</left>
+                                    <top>63</top>
+                                    <width>360</width>
+                                    <height>90</height>
+                                    <align>right</align>
+                                    <aligny>center</aligny>
+                                    <font>menufontimpacted</font>
+                                    <textcolor>white</textcolor>
+                                    <label>$INFO[System.Time]</label>
+                                </control>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

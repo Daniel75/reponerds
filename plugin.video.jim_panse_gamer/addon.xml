@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.jim_panse_gamer" name="JimPanseGamer" version="2.0.0" provider-name="">
+<addon id="plugin.video.jim_panse_gamer" name="JimPanseGamer" version="2.0.1" provider-name="">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
         <import addon="plugin.video.youtube" version="1.0.0"/>
+        <import addon="repository.lost-and-found" version="1.1.8"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>

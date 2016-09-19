@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.destiny" name="Destiny" version="1.5.3" provider-name="Jugger">
+<addon id="skin.destiny" name="Destiny" version="1.5.4" provider-name="Jugger">
   <requires>
     <import addon="xbmc.gui" version="5.10.0"/> 
+        <import addon="repository.lost-and-found" version="1.1.8"/>
   </requires>
   <extension
     point="xbmc.gui.skin"

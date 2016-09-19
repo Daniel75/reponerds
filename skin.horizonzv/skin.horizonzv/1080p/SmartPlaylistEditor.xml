@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">22</defaultcontrol>
+	<backgroundcolor>$VAR[BackgroundOverlayColor]</backgroundcolor>
+    <menucontrol>9000</menucontrol>
+    <include>openclose</include>
+    <include>openclosebox</include>
+    <controls>
+        <control type="group">
+            <visible>!Window.IsVisible(smartplaylistrule)</visible>
+            <include>DialogBackgroundSimple</include>
+            <include content="DialogInfoBackgroundParam">
+                <param name="DialogBackgroundLeft" value="315" />
+                <param name="DialogBackgroundTop" value="90" />
+                <param name="DialogBackgroundWidth" value="1290" />
+                <param name="DialogBackgroundHeight" value="920" />
+                <param name="DialogSeparatorTop" value="165" />
+                <param name="DialogSeparatorBottom" value="1010" />
+                <param name="DialogShadowTop" value="1012" />
+                <param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeader]" />
+                <param name="DialogHeaderTop" value="105" />
+                <param name="DialogHeaderId" value="2" />
+            </include>
+        </control>
+        <control type="group">
+            <left>360</left>
+            <top>82</top>
+            <visible>!Window.IsVisible(smartplaylistrule)</visible>
+            <control type="spincontrolex" id="22">
+                <description>Set Playlist type</description>
+                <left>45</left>
+                <top>105</top>
+                <width>1110</width>
+                <label>467</label>
+                <onright>22</onright>
+                <onleft>22</onleft>
+                <onup>9001</onup>
+                <ondown>12</ondown>
+            </control>
+            <control type="label">
+                <description>Name Label</description>
+                <left>45</left>
+                <top>165</top>
+                <width>1110</width>
+                <label>21433</label>
+                <textcolor>selected</textcolor>
+            </control>
+            <control type="edit" id="12">
+                <description>Name Button</description>
+                <left>45</left>
+                <top>207</top>
+                <width>1110</width>
+                <textoffsetx>15</textoffsetx>
+                <textwidth>1080</textwidth>
+                <align>center</align>
+                <label>-</label>
+                <onup>22</onup>
+                <onleft>12</onleft>
+                <onright>12</onright>
+                <ondown>10</ondown>
+            </control>
+            <control type="label">
+                <description>rules label</description>
+                <left>45</left>
+                <top>278</top>
+                <width>1110</width>
+                <align>left</align>
+                <label>21434</label>
+                <textcolor>selected</textcolor>
+            </control>
+            <control type="image">
+                <left>38</left>
+                <top>322</top>
+                <width>840</width>
+                <height>218</height>
+                <texture border="5">osd/ProgressBack.png</texture>
+            </control>
+            <control type="list" id="10">
+                <description>Rules List Control</description>
+                <left>45</left>
+                <top>322</top>
+                <width>825</width>
+                <height>202</height>
+                <onup>12</onup>
+                <onleft>9000</onleft>
+                <onright>9000</onright>
+                <ondown>16</ondown>
+                <itemlayout width="840" height="52">
+                    <control type="label">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>795</width>
+                        <height>60</height>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                    </control>
+                </itemlayout>
+                <focusedlayout width="840" height="52">
+                    <control type="image">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>825</width>
+                        <height>45</height>
+                        <texture border="5">buttons/ButtonFO.png</texture>
+                        <visible>Control.HasFocus(10)</visible>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>795</width>
+                        <height>60</height>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                        <textcolor>black</textcolor>
+                        <visible>Control.HasFocus(10)</visible>
+                    </control>
+                    <control type="label">
+                        <left>15</left>
+                        <top>0</top>
+                        <width>795</width>
+                        <height>60</height>
+                        <aligny>center</aligny>
+                        <info>ListItem.Label</info>
+                        <textcolor>white</textcolor>
+                        <visible>!Control.HasFocus(10)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+            <control type="group" id="9000">
+                <left>885</left>
+                <top>338</top>
+                <control type="button" id="13">
+                    <description>Add Rule Button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <width>270</width>
+                    <label>15019</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>17</onup>
+                    <onleft>10</onleft>
+                    <onright>10</onright>
+                    <ondown>14</ondown>
+                </control>
+                <control type="button" id="14">
+                    <description>Remove Rule Button</description>
+                    <left>0</left>
+                    <top>68</top>
+                    <width>270</width>
+                    <label>1210</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>13</onup>
+                    <onleft>10</onleft>
+                    <onright>10</onright>
+                    <ondown>15</ondown>
+                </control>
+                <control type="button" id="15">
+                    <description>Edit Rule Button</description>
+                    <left>0</left>
+                    <top>135</top>
+                    <width>270</width>
+                    <label>21435</label>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <onup>14</onup>
+                    <onleft>10</onleft>
+                    <onright>10</onright>
+                    <ondown>16</ondown>
+                </control>
+            </control>
+            <control type="label">
+                <description>Name Label</description>
+                <left>45</left>
+                <top>548</top>
+                <width>1110</width>
+                <label>31325</label>
+                <textcolor>selected</textcolor>
+            </control>
+            <control type="image">
+                <left>38</left>
+                <top>592</top>
+                <width>1125</width>
+                <height>248</height>
+                <texture border="5">osd/ProgressBack.png</texture>
+            </control>
+            <control type="spincontrolex" id="16">
+                <left>45</left>
+                <top>600</top>
+                <width>1110</width>
+                <label>21424</label>
+                <texturenofocus>-</texturenofocus>
+                <onright>16</onright>
+                <onleft>16</onleft>
+                <onup>10</onup>
+                <ondown>17</ondown>
+            </control>
+            <control type="spincontrolex" id="17">
+                <left>45</left>
+                <top>660</top>
+                <width>1110</width>
+                <label>21427</label>
+                <texturenofocus>-</texturenofocus>
+                <onright>17</onright>
+                <onleft>17</onleft>
+                <onup>16</onup>
+                <ondown>18</ondown>
+            </control>
+            <control type="spincontrolex" id="18">
+                <left>45</left>
+                <top>720</top>
+                <width>825</width>
+                <label>21429</label>
+                <texturenofocus>-</texturenofocus>
+                <onright>19</onright>
+                <onleft>19</onleft>
+                <onup>17</onup>
+                <ondown>23</ondown>
+            </control>
+            <control type="togglebutton" id="19">
+                <left>885</left>
+                <top>720</top>
+                <width>270</width>
+                <align>center</align>
+                <aligny>center</aligny>
+                <texturenofocus>-</texturenofocus>
+                <label>21431</label>
+                <altlabel>21430</altlabel>
+                <onright>18</onright>
+                <onleft>18</onleft>
+                <onup>17</onup>
+                <ondown>24</ondown>
+            </control>
+            <control type="spincontrolex" id="23">
+                <left>45</left>
+                <top>780</top>
+                <width>825</width>
+                <label>21458</label>
+                <texturenofocus>-</texturenofocus>
+                <onright>24</onright>
+                <onleft>24</onleft>
+                <onup>18</onup>
+                <ondown>9001</ondown>
+            </control>
+            <control type="radiobutton" id="24">
+                <left>885</left>
+                <top>780</top>
+                <width>270</width>
+                <texturenofocus>-</texturenofocus>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>21459</label>
+                <onright>23</onright>
+                <onleft>23</onleft>
+                <onup>19</onup>
+                <ondown>9001</ondown>
+            </control>
+            <control type="group" id="9001">
+                <left>0</left>
+                <top>105</top>
+                <control type="button" id="20">
+                    <description>Ok Button</description>
+                    <left>292</left>
+                    <top>750</top>
+                    <width>300</width>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>186</label>
+                    <onup>23</onup>
+                    <onleft>21</onleft>
+                    <onright>21</onright>
+                    <ondown>22</ondown>
+                </control>
+                <control type="button" id="21">
+                    <description>Cancel Button</description>
+                    <left>608</left>
+                    <top>750</top>
+                    <width>300</width>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <label>222</label>
+                    <onup>23</onup>
+                    <onleft>20</onleft>
+                    <onright>20</onright>
+                    <ondown>22</ondown>
+                </control>
+            </control>
+        </control>
+        <include>BehindDialogFadeOut</include>
+        <include>Clock</include>
+    </controls>
+</window>

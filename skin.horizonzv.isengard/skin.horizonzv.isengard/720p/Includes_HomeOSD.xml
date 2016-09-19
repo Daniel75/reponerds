@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="HomeOSD">
+		<control type="group">
+			<visible>Window.IsVisible(home)</visible>
+			<control type="group">
+				<include>opencloseslideup</include>
+				<visible>[[StringCompare(Container(9000).ListItem.Property(homemenu_id),dashboard)|StringCompare(Container(9000).ListItem.Property(homemenu_id),news)]+Player.HasMedia]</visible>
+				<visible>!Control.HasFocus(200)+!Window.IsVisible(favourites)</visible>
+				<visible>!Skin.HasSetting(HomeMenuVertical)</visible>
+				<control type="image">
+					<left>-5</left>
+					<top>100r</top>
+					<width>1290</width>
+					<height>110</height>
+					<texture background="true">Shadow.png</texture>
+				</control>
+				<control type="image">
+					<left>45</left>
+					<top>118r</top>
+					<width>100</width>
+					<height>100</height>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					<texture diffuse="masks/Mask.png">$INFO[MusicPlayer.Cover]$INFO[VideoPlayer.Cover]</texture>
+				</control>
+				<control type="label">
+					<left>160</left>
+					<top>50r</top>
+					<width>1100</width>
+					<height>30</height>
+					<align>left</align>
+					<font>impacted26</font>
+					<textcolor>white</textcolor>
+					<label>$VAR[HomeOSDTitle] • $VAR[HomeOSDLabel]</label>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Skin.HasSetting(HomeMenuVertical)</visible>
+				<visible>!Control.HasFocus(200)+!Window.IsVisible(favourites)</visible>
+				<include>opencloseslow</include>
+				<control type="image">
+					<left>220r</left>
+					<top>90</top>
+					<width>200</width>
+					<height>100</height>
+					<aspectratio align="right" aligny="top">keep</aspectratio>
+					<texture diffuse="masks/Mask.png">$INFO[MusicPlayer.Cover]$INFO[VideoPlayer.Cover]</texture>
+				</control>
+				<control type="image">
+					<left>990r</left>
+					<top>200</top>
+					<width>970</width>
+					<height>2</height>
+					<colordiffuse>fanartdiffuse</colordiffuse>
+					<texture border="1">Separator1.png</texture>
+				</control>
+				<control type="label">
+					<left>820r</left>
+					<top>55</top>
+					<width>800</width>
+					<height>30</height>
+					<align>right</align>
+					<font>impacted26</font>
+					<textcolor>white</textcolor>
+					<label>$VAR[SeekLabel,[COLOR=grey],: [/COLOR]]$INFO[MusicPlayer.Artist,, - ]$INFO[Player.Title]</label>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(HomeMenuVertical)</visible>
+				<include>opencloseslideright</include>
+				<visible>!Control.HasFocus(20)+!Window.IsVisible(favourites)+!StringCompare(Container(9000).ListItem.Property(homemenu_id),dashboard)+!StringCompare(Container(9000).ListItem.Property(homemenu_id),news)</visible>
+				<control type="group">
+					<visible>Skin.HasSetting(music_art)+Player.HasAudio</visible>
+					<control type="image">
+						<left>20</left>
+						<top>600</top>
+						<width>300</width>
+						<height>110</height>
+						<aspectratio>keep</aspectratio>
+						<include>opencloseslow</include>
+						<texture diffuse="masks/flagging_mask.png">$INFO[Skin.String(Music_Folder_Path)]$INFO[MusicPlayer.Artist,,/logo.png]</texture>
+						<animation effect="zoom" start="100" end="85" center="0,760" time="150" condition="!Skin.HasSetting(HidePlayerControlsHome)">Conditional</animation>
+					</control>
+				</control>
+				<control type="group">
+					<control type="group" id="599"> <!-- Controls for currently playing media -->
+						<description>Controls for currently playing media</description>
+						<left>170</left>
+						<top>591</top>
+						<visible>Player.HasMedia+!Control.HasFocus(200)</visible>
+						<include>opencloseslideright</include>
+						<!-- OSD Buttons Glaspanel -->
+						<control type="group">
+							<visible>!Skin.HasSetting(HidePlayerControlsHome)</visible>
+							<control type="image">
+								<description>Background image</description>
+								<left>-238</left>
+								<top>-2</top>
+								<width>640</width>
+								<height>40</height>
+								<texture background="true">GlassPanel.png</texture>
+								<!-- <include>openclosemedium</include> -->
+								<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Pvr.IsPlayingTv">Conditional</animation>
+								<visible>Player.HasMedia</visible>
+							</control>
+							<control type="label">
+								<description>Current Control Label</description>
+								<left>-150</left>
+								<top>-5</top>
+								<width>295</width>
+								<height>40</height>
+								<font>ubuntu-r13b</font>
+								<textcolor>grey1</textcolor>
+								<align>right</align>
+								<label>[UPPERCASE]$INFO[System.CurrentControl][/UPPERCASE]</label>
+								<include>openclosevisible</include>
+								<animation effect="slide" start="0,0" end="-70,0" time="0" condition="Pvr.IsPlayingTv">Conditional</animation>
+								<visible>Player.HasMedia+Control.HasFocus(600)</visible>
+							</control>
+							<!-- OSD Buttons Music -->
+							<control type="list" id="600">
+								<visible>!Pvr.IsPlayingTv</visible>
+								<left>150</left>
+								<top>3</top>
+								<width>210</width>
+								<itemgap>2</itemgap>
+								<onup>9000</onup>
+								<onleft>600</onleft>
+								<onright>600</onright>
+								<ondown condition="!Skin.HasSetting(hide_fav)">ActivateWindow(favourites)</ondown>
+								<ondown condition="Skin.HasSetting(hide_fav)">SetFocus(200)</ondown>
+								<viewtype label="list">list</viewtype>
+								<itemgap>4</itemgap>
+								<orientation>horizontal</orientation>
+								<animation effect="slide" end="15" condition="!Player.CanRecord">Conditional</animation>
+								<itemlayout width="30" height="30">
+									<control type="image">
+										<left>4</left>
+										<top>4</top>
+										<width>22</width>
+										<height>22</height>
+										<texture>$INFO[ListItem.Property(record)]</texture>
+										<visible>Player.Recording</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>grey1</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+									</control>
+								</itemlayout>
+								<focusedlayout width="30" height="30">
+									<control type="image">
+										<left>3</left>
+										<top>3</top>
+										<width>24</width>
+										<height>24</height>
+										<texture border="1">$INFO[ListItem.Property(record)]</texture>
+										<visible>Player.Recording</visible>
+									</control>
+									<control type="image">
+										<left>2</left>
+										<top>2</top>
+										<width>26</width>
+										<height>26</height>
+										<colordiffuse>description</colordiffuse>
+										<texture>osd/RingOutside.png</texture>
+										<visible>Control.HasFocus(600)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>description</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+										<visible>Control.HasFocus(600)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>grey1</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+										<visible>!Control.HasFocus(600)</visible>
+									</control>
+								</focusedlayout>
+								<content>
+									<item id="0">
+										<label>210</label>
+										<icon>osd/PrevTrackFO.png</icon>
+										<onclick>PlayerControl(Previous)</onclick>
+									</item>
+									<item id="1">
+										<label>31354</label>
+										<icon>osd/RewindFO.png</icon>
+										<onclick>PlayerControl(Rewind)</onclick>
+									</item>
+									<item id="2">
+										<label>31351</label>
+										<icon>osd/PauseFO.png</icon>
+										<onclick>PlayerControl(Play)</onclick>
+										<visible>!Player.Paused</visible>
+									</item>
+									<item id="3">
+										<label>208</label>
+										<icon>osd/PlayFO.png</icon>
+										<onclick>PlayerControl(Play)</onclick>
+										<visible>Player.Paused|Player.Forwarding|Player.Rewinding</visible>
+									</item>
+									<item id="4">
+										<label>31352</label>
+										<icon>osd/StopFO.png</icon>
+										<onclick>PlayerControl(Stop)</onclick>
+										<onclick>Control.SetFocus(9000)</onclick>
+									</item>
+									<item id="5">
+										<label>31353</label>
+										<icon>osd/ForwardFO.png</icon>
+										<onclick>PlayerControl(Forward)</onclick>
+									</item>
+									<item id="6">
+										<label>209</label>
+										<icon>osd/NextTrackFO.png</icon>
+										<onclick>PlayerControl(Next)</onclick>
+									</item>
+									<item id="7">
+										<label>244</label>
+										<icon>osd/GoFullscreenFO.png</icon>
+										<onclick>fullscreen</onclick>
+									</item>
+								</content>
+							</control>
+							<!-- OSD Buttons LiveTV -->
+							<control type="list" id="600">
+								<visible>Pvr.IsPlayingTv</visible>
+								<left>95</left>
+								<top>3</top>
+								<width>210</width>
+								<itemgap>2</itemgap>
+								<onup>9000</onup>
+								<onleft>600</onleft>
+								<onright>600</onright>
+								<ondown condition="!Skin.HasSetting(hide_fav)">ActivateWindow(favourites)</ondown>
+								<ondown condition="Skin.HasSetting(hide_fav)">SetFocus(200)</ondown>
+								<viewtype label="list">list</viewtype>
+								<itemgap>4</itemgap>
+								<orientation>horizontal</orientation>
+								<animation effect="slide" end="15" condition="!Player.CanRecord">Conditional</animation>
+								<itemlayout width="30" height="30">
+									<control type="image">
+										<left>4</left>
+										<top>4</top>
+										<width>22</width>
+										<height>22</height>
+										<texture>$INFO[ListItem.Property(record)]</texture>
+										<visible>Player.Recording</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>grey1</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+									</control>
+								</itemlayout>
+								<focusedlayout width="30" height="30">
+									<control type="image">
+										<left>3</left>
+										<top>3</top>
+										<width>24</width>
+										<height>24</height>
+										<texture border="1">$INFO[ListItem.Property(record)]</texture>
+										<visible>Player.Recording</visible>
+									</control>
+									<control type="image">
+										<left>2</left>
+										<top>2</top>
+										<width>26</width>
+										<height>26</height>
+										<colordiffuse>description</colordiffuse>
+										<texture>osd/RingOutside.png</texture>
+										<visible>Control.HasFocus(600)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>description</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+										<visible>Control.HasFocus(600)</visible>
+									</control>
+									<control type="image">
+										<left>0</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<colordiffuse>grey1</colordiffuse>
+										<texture>$INFO[ListItem.Icon]</texture>
+										<visible>!Control.HasFocus(600)</visible>
+									</control>
+								</focusedlayout>
+								<content>
+									<item id="0">
+										<label>19019</label>
+										<icon>osd/ChannelListFO.png</icon>
+										<onclick>ActivateWindow(PVRosdChannels)</onclick>
+									</item>
+									<!-- <item id="1">
+										<label>19222</label>
+										<icon>osd/EPG.png</icon>
+										<onclick>ActivateWindowAndFocus(pvrosdguide)</onclick>
+									</item> -->
+									<item id="2">
+										<label>210</label>
+										<icon>osd/ChannelUPFO.png</icon>
+										<onclick>PlayerControl(Previous)</onclick>
+									</item>
+									<item id="3">
+										<label>209</label>
+										<icon>osd/ChannelDownFO.png</icon>
+										<onclick>PlayerControl(Next)</onclick>
+									</item>
+									<item id="4">
+										<label>31352</label>
+										<icon>osd/StopFO.png</icon>
+										<onclick>PlayerControl(Stop)</onclick>
+										<onclick>Control.SetFocus(9000)</onclick>
+									</item>
+									<item id="5">
+										<label>31351</label>
+										<icon>osd/PauseFO.png</icon>
+										<onclick>PlayerControl(Play)</onclick>
+										<visible>Player.CanRecord</visible>
+										<visible>![Player.Paused|Player.Forwarding|Player.Rewinding]</visible>
+									</item>
+									<item id="6">
+										<label>208</label>
+										<icon>osd/PlayFO.png</icon>
+										<onclick>PlayerControl(Play)</onclick>
+										<visible>Player.PauseEnabled</visible>
+										<visible>Player.Paused|Player.Forwarding|Player.Rewinding</visible>
+									</item>
+									<item id="7">
+										<label>265</label>
+										<icon>osd/RecordOffFO.png</icon>
+										<onclick>PlayerControl(Record)</onclick>
+										<onclick>Control.SetFocus(600)</onclick>
+										<property name="record">osd/RingOutsideRecord.png</property>
+										<visible>Player.CanRecord</visible>
+									</item>
+									<item id="8">
+										<label>244</label>
+										<icon>osd/GoFullscreenFO.png</icon>
+										<onclick>fullscreen</onclick>
+									</item>
+								</content>
+							</control>
+						</control>
+					</control>
+					<!-- NowPlaying HomeScreen -->
+					<control type="group" id="9090">
+						<description>NowPlaying</description>
+						<left>4</left>
+						<top>173</top>
+						<visible>!ControlGroup(290).HasFocus()</visible>
+						<visible>!ControlGroup(9003).HasFocus()</visible>
+						<visible>Player.HasMedia|Player.IsInternetStream</visible>
+						<include>openclose</include>
+						<include>opencloseslideright</include>
+						<animation effect="slide" start="0" end="0,-30" time="200" condition="ControlGroup(9001).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="-600" end="0" time="800"  delay="500" condition="Skin.HasSetting(animation)">Visible</animation>
+						<animation effect="slide" start="0" end="-600" time="200" condition="Skin.HasSetting(animation)">Hidden</animation>
+						<control type="group"> <!-- CDArt -->
+							<animation effect="slide" start="0" end="85" time="800" delay="1500">WindowOpen</animation>
+							<animation effect="slide" start="-1000" end="0,0" time="500" delay="400" tween="cubic" easing="out">Visible"</animation>
+							<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+							<left>100</left>
+							<top>100</top>
+							<include>cdart_player</include>
+						</control>
+						<control type="image" id="66">
+							<left>84</left>
+							<top>97</top>
+							<width>185</width>
+							<height>185</height>
+							<aspectratio scalediffuse="false">stretch</aspectratio>
+							<fadetime>FadeTime</fadetime>
+							<texture background="true" diffuse="masks/CdCoverMask.png">$INFO[MusicPlayer.Cover]</texture>
+							<visible>!VideoPlayer.Content(movies)+!VideoPlayer.Content(episodes)+[!Pvr.IsPlayingTv|Videoplayer.Content(Music)]</visible>
+						</control>
+						<control type="group">
+							<left>82</left>
+							<top>96</top>
+							<visible>Pvr.IsPlayingTv</visible>
+							<control type="image">
+								<left>2</left>
+								<top>2</top>
+								<width>183</width>
+								<height>183</height>
+								<colordiffuse>grey2</colordiffuse>
+								<texture diffuse="masks/CdCoverMask.png" border="1">WhiteBack.png</texture>
+							</control>
+							<control type="image">
+								<left>2</left>
+								<top>2</top>
+								<width>185</width>
+								<height>185</height>
+								<texture diffuse="masks/CdCoverMask.png" border="1">masks/Default.png</texture>
+							</control>
+							<control type="image">
+								<left>10</left>
+								<top>10</top>
+								<width>168</width>
+								<height>168</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$INFO[VideoPlayer.Cover]</texture>
+							</control>
+						</control>
+						<control type="image">
+							<animation effect="slide" start="0" end="85" time="800" delay="1500">WindowOpen</animation>
+							<animation effect="slide" start="-1000" end="0,0" time="500" delay="400" tween="cubic" easing="out">Visible"</animation>
+							<animation effect="fade" start="100" end="0" time="150">WindowClose</animation>
+							<animation effect="rotate" end="-360" center="auto" time="8000" loop="true" reversible="true" condition="!Player.Paused">Conditional</animation>
+							<left>115</left>
+							<top>80</top>
+							<width>140</width>
+							<height>140</height>
+							<aspectratio>keep</aspectratio>
+							<include>DiscartMovies_small</include>
+							<visible>VideoPlayer.Content(movies)+!Player.IsInternetStream</visible>
+						</control>
+						<control type="image">
+							<left>86</left>
+							<top>23</top>
+							<height>256</height>
+							<width>180</width>
+							<texture background="true" diffuse="masks/MovieCoverMask.png">$INFO[VideoPlayer.Cover]</texture>
+							<visible>Player.HasVideo</visible>
+							<visible>[!VideoPlayer.Content(episodes)|VideoPlayer.HasMenu]+!Player.IsInternetStream|SubString(Player.FolderPath,lovefilm)</visible>
+							<visible>!Pvr.IsPlayingTv</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<height>360</height>
+							<width>600</width>
+							<texture background="true">$VAR[homecover]</texture>
+						</control>
+						<control type="image" id="444">
+							<left>69</left>
+							<top>127</top>
+							<height>153</height>
+							<width>266</width>
+							<aspectratio align="left" aligny="bottom">stretch</aspectratio>
+							<texture diffuse="masks/ClearArtMask.png">$VAR[homecover_icon]</texture>
+						</control>
+						<control type="image">
+							<left>8</left>
+							<top>270</top>
+							<width>80</width>
+							<height>80</height>
+							<fadetime>FadeTime</fadetime>
+							<texture background="true">$VAR[OSDTexture]</texture>
+						</control>
+						<control type="group">
+							<include>opencloseslow</include>
+							<control type="label">
+								<left>120</left>
+								<top>307</top>
+								<width>410</width>
+								<height>30</height>
+								<font>impacted18</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>-</shadowcolor>
+								<label>$VAR[HomeOSDTitle]</label>
+							</control>
+							<control type="label">
+								<left>120</left>
+								<top>331</top>
+								<width>420</width>
+								<height>30</height>
+								<font>impacted21</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>-</shadowcolor>
+								<label>$VAR[HomeOSDLabel]</label>
+							</control>
+							<control type="progress">
+								<description>Progressbar</description>
+								<left>120</left>
+								<top>292</top>
+								<width>320</width>
+								<info>Player.Progress</info>
+							</control>
+							<control type="label">
+								<left>-5</left>
+								<top>167</top>
+								<width>151</width>
+								<height>20</height>
+								<align>left</align>
+								<aligny>bottom</aligny>
+								<font>impacted16</font>
+								<shadowcolor>-</shadowcolor>
+								<textcolor>white</textcolor>
+								<label>$INFO[MusicPlayer.Album]</label>
+								<animation effect="rotate" center="auto" end="90" time="0" condition="true">Conditional</animation> 
+							</control>
+						</control>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>                

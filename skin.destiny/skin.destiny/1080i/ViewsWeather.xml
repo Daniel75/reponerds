@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+    <include name="WeatherDaily">
+        <control type="group">
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_20</font>
+                <label>31904</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.IsVisible(51)</visible>
+            </control>
+            <control type="list" id="51">
+                <left>22</left>
+                <top>90</top>
+                <width>900</width>
+                <height>812</height>
+                <onleft>9020</onleft>
+                <onright>61</onright>
+                <onup>51</onup>
+                <ondown>51</ondown>
+                <viewtype label="535">list</viewtype>
+                <pagecontrol>61</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <include>VisibleFadeEffect</include>
+                <visible>IsEmpty(Window.Property(Weather.CurrentView))</visible>
+                <itemlayout height="202" width="900" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+                    <!--<control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                    </control>-->
+                    <control type="label">
+                        <left>225</left>
+                        <top>8</top>
+                        <width>450</width>
+                        <height>38</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>690</left>
+                        <top>0</top>
+                        <width>202</width>
+                        <height>202</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>45</left>
+                        <top>52</top>
+                        <width>585</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[419] : $INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     $LOCALIZE[418] : $INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
+                        <visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>45</left>
+                        <top>108</top>
+                        <width>600</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>left</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(Outlook)][/COLOR]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="202" width="900" condition="IsEmpty(Window.Property(Daily.IsFetched))">
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                        <visible>!Control.HasFocus(51)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                        <visible>!Control.HasFocus(51)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+                        <visible>Control.HasFocus(51)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>225</left>
+                        <top>8</top>
+                        <width>450</width>
+                        <height>38</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>690</left>
+                        <top>0</top>
+                        <width>202</width>
+                        <height>202</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.ActualIcon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>45</left>
+                        <top>52</top>
+                        <width>585</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>left</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[419] : $INFO[ListItem.Property(HighTemp)]$INFO[ListItem.Property(TempUnits)]     $LOCALIZE[418] : $INFO[ListItem.Property(LowTemp)]$INFO[ListItem.Property(TempUnits)]</label>
+                        <visible>!IsEmpty(ListItem.Property(HighTemp))</visible>
+                    </control>
+                    <control type="textbox">
+                        <left>45</left>
+                        <top>108</top>
+                        <width>600</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>left</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Property(Outlook)][/COLOR]</label>
+                    </control>
+                </focusedlayout>
+                <itemlayout height="202" width="900" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+                    <!--<control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                    </control>-->
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>150</width>
+                        <height>180</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>165</left>
+                        <top>8</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="label">
+                        <left>290</left>
+                        <top>10</top>
+                        <width>585</width>
+                        <height>105</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>8</left>
+                        <top>123</top>
+                        <width>885</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.ActualIcon][/COLOR]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="202" width="900" condition="!IsEmpty(Window.Property(Daily.IsFetched))">
+                    <!--<control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                        <visible>!Control.HasFocus(51)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>-->
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein_tranz80.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+                        <visible>Control.HasFocus(51)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>150</width>
+                        <height>180</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>165</left>
+                        <top>8</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="label">
+                        <left>290</left>
+                        <top>10</top>
+                        <width>585</width>
+                        <height>105</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>8</left>
+                        <top>123</top>
+                        <width>885</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.ActualIcon][/COLOR]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label>-</label>
+                        <icon>-</icon>
+                        <onclick>noop</onclick>
+                        <visible>!Weather.IsFetched</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day0.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day0.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day0.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day0.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day0.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day0.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day1.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day1.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day1.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day1.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day1.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day1.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day2.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day2.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day2.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day2.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day2.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day2.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day3.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day3.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day3.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day3.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day3.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day3.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day4.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day4.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day4.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day4.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day4.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day4.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day5.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day5.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day5.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day5.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day5.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day5.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Day6.Title)]</label>
+                        <icon>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Day6.OutlookIcon)]</icon>
+                        <property name="HighTemp">$INFO[Window.Property(Day6.HighTemp)]</property>
+                        <property name="LowTemp">$INFO[Window.Property(Day6.LowTemp)]</property>
+                        <property name="Outlook">$INFO[Window.Property(Day6.Outlook)]</property>
+                        <property name="TempUnits">$INFO[System.TemperatureUnits]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Day6.Outlook)) + IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.1.ShortDay)][/B][CR]$INFO[Window.Property(Daily.1.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.1.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.1.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.1.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.1.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.1.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.1.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.1.WindSpeed)] $INFO[Window.Property(Daily.1.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.1.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.2.ShortDay)][/B][CR]$INFO[Window.Property(Daily.2.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.2.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.2.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.2.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.2.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.2.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.2.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.2.WindSpeed)] $INFO[Window.Property(Daily.2.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.2.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.3.ShortDay)][/B][CR]$INFO[Window.Property(Daily.3.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.3.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.3.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.3.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.3.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.3.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.3.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.3.WindSpeed)] $INFO[Window.Property(Daily.3.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.3.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.4.ShortDay)][/B][CR]$INFO[Window.Property(Daily.4.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.4.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.4.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.4.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.4.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.4.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.4.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.4.WindSpeed)] $INFO[Window.Property(Daily.4.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.4.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.5.ShortDay)][/B][CR]$INFO[Window.Property(Daily.5.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.5.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.5.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.5.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.5.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.5.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.5.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.5.WindSpeed)] $INFO[Window.Property(Daily.5.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.5.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.6.ShortDay)][/B][CR]$INFO[Window.Property(Daily.6.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.6.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.6.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.6.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.6.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.6.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.6.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.6.WindSpeed)] $INFO[Window.Property(Daily.6.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.6.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.7.ShortDay)][/B][CR]$INFO[Window.Property(Daily.7.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.7.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.7.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.7.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.7.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.7.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.7.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.7.WindSpeed)] $INFO[Window.Property(Daily.7.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.7.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.8.ShortDay)][/B][CR]$INFO[Window.Property(Daily.8.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.8.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.8.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.8.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.8.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.8.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.8.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.8.WindSpeed)] $INFO[Window.Property(Daily.8.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.8.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.9.ShortDay)][/B][CR]$INFO[Window.Property(Daily.9.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.9.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.9.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.9.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.9.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.9.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.9.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.9.WindSpeed)] $INFO[Window.Property(Daily.9.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.9.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.10.ShortDay)][/B][CR]$INFO[Window.Property(Daily.10.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.10.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.10.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.10.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.10.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.10.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.10.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.10.WindSpeed)] $INFO[Window.Property(Daily.10.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.10.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.11.ShortDay)][/B][CR]$INFO[Window.Property(Daily.11.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.11.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.11.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.11.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.11.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.11.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.11.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.11.WindSpeed)] $INFO[Window.Property(Daily.11.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.11.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.12.ShortDay)][/B][CR]$INFO[Window.Property(Daily.12.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.12.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.12.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.12.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.12.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.12.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.12.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.12.WindSpeed)] $INFO[Window.Property(Daily.12.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.12.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.13.ShortDay)][/B][CR]$INFO[Window.Property(Daily.13.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.13.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.13.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.13.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.13.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.13.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.13.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.13.WindSpeed)] $INFO[Window.Property(Daily.13.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.13.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Daily.14.ShortDay)][/B][CR]$INFO[Window.Property(Daily.14.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Daily.14.HighTemperature),$LOCALIZE[419] :[B] ,[/B]]  $INFO[Window.Property(Daily.14.LowTemperature),$LOCALIZE[418] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.14.Precipitation),$LOCALIZE[33022] :[B] ,[/B]][CR]$INFO[Window.Property(Daily.14.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Daily.14.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Daily.14.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Daily.14.WindSpeed)] $INFO[Window.Property(Daily.14.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Daily.14.Outlook)) + !IsEmpty(Window.Property(Daily.IsFetched))</visible>
+                    </item>
+                </content>
+            </control>
+            <control type="scrollbar" id="61">
+                <left>927</left>
+                <top>95</top>
+                <width>15</width>
+                <height>800</height>
+                <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+                <onleft>51</onleft>
+                <onright>9000</onright>
+                <showonepage>true</showonepage>
+                <orientation>vertical</orientation>
+                <visible>Control.IsVisible(51)</visible>
+            </control>
+            <!--<control type="label">
+                <animation effect="slide" start="0,0" end="-135,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+                <description>number of files/pages</description>
+                <left>135</left>
+                <top>1500</top>
+                <width>855</width>
+                <font>primal_16</font>
+                <align>right</align>
+                <scroll>true</scroll>
+                <textcolor>grey</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>([COLOR=blue]$INFO[Container(51).NumItems]) $LOCALIZE[12393] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(51).CurrentPage]/$INFO[Container(51).NumPages])</label>
+                <visible>Control.IsVisible(51)</visible>
+            </control>-->
+        </control>
+    </include>
+    <include name="Weather36Hour">
+        <control type="group">
+            <visible>StringCompare(Window.Property(Weather.CurrentView),36hour) + !IsEmpty(Window.Property(36Hour.IsFetched))</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="button" id="997">
+                <description>Hidden Button for focus</description>
+                <left>-900</left>
+                <top>-30</top>
+                <width>1</width>
+                <height>1</height>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus>-</texturefocus>
+                <onleft>9020</onleft>
+                <onright>9020</onright>
+            </control>
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_20</font>
+                <label>31901</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            </control>
+            <control type="group">
+                <left>30</left>
+                <top>75</top>
+                <control type="group">
+                    <left>0</left>
+                    <top>0</top>
+                    <control type="label">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>900</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.1.Heading)]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>15</top>
+                        <width>180</width>
+                        <height>165</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(36Hour.1.OutlookIcon)]</texture>
+                    </control>
+                    <control type="label">
+                        <left>180</left>
+                        <top>60</top>
+                        <width>150</width>
+                        <height>60</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.1.TemperatureHeading)][CR]$INFO[Window.Property(36Hour.1.Temperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="label">
+                        <right>135</right>
+                        <top>30</top>
+                        <width>585</width>
+                        <height>195</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.1.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.1.Precipitation),$LOCALIZE[33021] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.1.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>0</left>
+                        <top>220</top>
+                        <width>885</width>
+                        <height>102</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(36hour.1.Outlook),$LOCALIZE[31905]: ][/COLOR]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>270</top>
+                        <width>975</width>
+                        <height>6</height>
+                        <texture>separator.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <left>0</left>
+                    <top>278</top>
+                    <control type="label">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>900</width>
+                        <height>45</height>
+                        <font>primal_18</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.2.Heading)]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>15</top>
+                        <width>180</width>
+                        <height>165</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(36Hour.2.OutlookIcon)]</texture>
+                    </control>
+                    <control type="label">
+                        <left>180</left>
+                        <top>60</top>
+                        <width>150</width>
+                        <height>60</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.2.TemperatureHeading)][CR]$INFO[Window.Property(36Hour.2.Temperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="label">
+                        <right>135</right>
+                        <top>30</top>
+                        <width>585</width>
+                        <height>195</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.2.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.2.Precipitation),$LOCALIZE[33021] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.2.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>0</left>
+                        <top>220</top>
+                        <width>885</width>
+                        <height>102</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(36hour.2.Outlook),$LOCALIZE[31905]: ][/COLOR]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>270</top>
+                        <width>975</width>
+                        <height>6</height>
+                        <texture>separator.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <left>0</left>
+                    <top>555</top>
+                    <control type="label">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>900</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.3.Heading)]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>15</top>
+                        <width>180</width>
+                        <height>165</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(36Hour.3.OutlookIcon)]</texture>
+                    </control>
+                    <control type="label">
+                        <left>180</left>
+                        <top>60</top>
+                        <width>150</width>
+                        <height>60</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.3.TemperatureHeading)][CR]$INFO[Window.Property(36Hour.3.Temperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="label">
+                        <right>135</right>
+                        <top>30</top>
+                        <width>585</width>
+                        <height>195</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(36Hour.3.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.3.Precipitation),$LOCALIZE[33021] :[B] ,[/B]][CR][CR]$INFO[Window.Property(36Hour.3.Cloudiness),$LOCALIZE[387] :[B] ,[/B]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>0</left>
+                        <top>220</top>
+                        <width>885</width>
+                        <height>102</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(36hour.3.Outlook),$LOCALIZE[31905]: ][/COLOR]</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="WeatherWeekend">
+        <control type="group">
+            <visible>StringCompare(Window.Property(Weather.CurrentView),weekend) + !IsEmpty(Window.Property(Weekend.IsFetched))</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="button" id="998">
+                <description>Hidden Button for focus</description>
+                <left>-900</left>
+                <top>-30</top>
+                <width>1</width>
+                <height>1</height>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus>-</texturefocus>
+                <onleft>9020</onleft>
+                <onright>9020</onright>
+            </control>
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <label>31903</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            </control>
+            <control type="group">
+                <left>30</left>
+                <top>75</top>
+                <control type="group">
+                    <left>0</left>
+                    <top>0</top>
+                    <control type="label">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>900</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Weekend.1.LongDay)] - $INFO[Window.Property(Weekend.1.ShortDate)]</label>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>30</top>
+                        <width>195</width>
+                        <height>240</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Weekend.1.OutlookIcon)]</texture>
+                    </control>
+                    <control type="label">
+                        <left>210</left>
+                        <top>60</top>
+                        <width>150</width>
+                        <height>75</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[393][CR]$INFO[Window.Property(Weekend.1.HighTemperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="label">
+                        <left>210</left>
+                        <top>150</top>
+                        <width>150</width>
+                        <height>75</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[391][CR]$INFO[Window.Property(Weekend.1.LowTemperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>360</left>
+                        <top>63</top>
+                        <width>525</width>
+                        <height>192</height>
+                        <font>primal_16</font>
+                        <textcolor>white</textcolor>
+                        <align>right</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(Weekend.1.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR][CR]$INFO[Window.Property(Weekend.1.Cloudiness),$LOCALIZE[387] :[B] ,[/B]][CR][CR]$INFO[Window.Property(Weekend.1.Precipitation),$LOCALIZE[33021] :[B] ,[/B]][/COLOR]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>270</top>
+                        <width>885</width>
+                        <height>30</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Weekend.1.WindSpeed),$LOCALIZE[404]: ]$INFO[Window.Property(Weekend.1.WindDirection), - ]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>0</left>
+                        <top>326</top>
+                        <width>885</width>
+                        <height>102</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(Weekend.1.Outlook),$LOCALIZE[31905]: ][CR][/COLOR]</label>
+                    </control>
+                    <control type="image">
+                        <left>0</left>
+                        <top>405</top>
+                        <width>975</width>
+                        <height>6</height>
+                        <texture>separator.png</texture>
+                    </control>
+                </control>
+                <control type="group">
+                    <left>0</left>
+                    <top>420</top>
+                    <control type="label">
+                        <left>0</left>
+                        <top>8</top>
+                        <width>900</width>
+                        <height>45</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontSelected]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Weekend.2.LongDay)] - $INFO[Window.Property(Weekend.2.ShortDate)]</label>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>30</top>
+                        <width>195</width>
+                        <height>240</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Weekend.2.OutlookIcon)]</texture>
+                    </control>
+                    <control type="label">
+                        <left>210</left>
+                        <top>60</top>
+                        <width>150</width>
+                        <height>75</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[393][CR]$INFO[Window.Property(Weekend.2.HighTemperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="label">
+                        <left>210</left>
+                        <top>150</top>
+                        <width>150</width>
+                        <height>75</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$LOCALIZE[391][CR]$INFO[Window.Property(Weekend.2.LowTemperature),[B] ,[/B]]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>360</left>
+                        <top>63</top>
+                        <width>525</width>
+                        <height>192</height>
+                        <font>primal_16</font>
+                        <align>right</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(Weekend.2.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR][CR]$INFO[Window.Property(Weekend.2.Cloudiness),$LOCALIZE[387] :[B] ,[/B]][CR][CR]$INFO[Window.Property(Weekend.2.Precipitation),$LOCALIZE[33021] :[B] ,[/B]][/COLOR]</label>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>270</top>
+                        <width>885</width>
+                        <height>30</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[Window.Property(Weekend.2.WindSpeed),$LOCALIZE[404]: ]$INFO[Window.Property(Weekend.2.WindDirection), - ]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>0</left>
+                        <top>326</top>
+                        <width>885</width>
+                        <height>102</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(Weekend.2.Outlook),$LOCALIZE[31905]: ][CR][/COLOR]</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </include>
+    <include name="WeatherHourly">
+        <control type="group">
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <label>31902</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[ColorFontSelected]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.IsVisible(52)</visible>
+            </control>
+            <control type="list" id="52">
+                <left>22</left>
+                <top>90</top>
+                <width>900</width>
+                <height>812</height>
+                <onleft>9020</onleft>
+                <onright>62</onright>
+                <onup>52</onup>
+                <ondown>52</ondown>
+                <viewtype label="535">list</viewtype>
+                <pagecontrol>62</pagecontrol>
+                <scrolltime>200</scrolltime>
+                <include>VisibleFadeEffect</include>
+                <visible>StringCompare(Window.Property(Weather.CurrentView),hourly) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                <itemlayout height="202" width="900">
+                    <!--<control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                    </control>-->
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>150</width>
+                        <height>180</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>165</left>
+                        <top>8</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="label">
+                        <left>290</left>
+                        <top>10</top>
+                        <width>585</width>
+                        <height>105</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>8</left>
+                        <top>123</top>
+                        <width>885</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.ActualIcon][/COLOR]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="202" width="900">
+                    <!--<control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+                        <visible>!Control.HasFocus(52)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>-->
+                    <control type="image">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>900</width>
+                        <height>204</height>
+                        <texture background="true">skin/button_klein.png</texture>
+						<bordertexture border="10">ThumbShadow.png</bordertexture>
+						<bordersize>7</bordersize>
+						<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+                        <visible>Control.HasFocus(52)</visible>
+                        <include>VisibleFadeEffect</include>
+                    </control>
+                    <control type="label">
+                        <left>0</left>
+                        <top>0</top>
+                        <width>150</width>
+                        <height>180</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="image">
+                        <left>165</left>
+                        <top>8</top>
+                        <width>120</width>
+                        <height>120</height>
+                        <aspectratio>keep</aspectratio>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                    </control>
+                    <control type="label">
+                        <left>290</left>
+                        <top>10</top>
+                        <width>585</width>
+                        <height>105</height>
+                        <font>primal_16</font>
+                        <textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                        <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label2]</label>
+                    </control>
+                    <control type="textbox">
+                        <left>8</left>
+                        <top>123</top>
+                        <width>885</width>
+                        <height>72</height>
+                        <font>primal_16</font>
+                        <align>center</align>
+                        <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.ActualIcon][/COLOR]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <icon>$LOCALIZE[31909]</icon>
+                        <onclick>noop</onclick>
+                        <visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.1.Time)][/B][CR]$INFO[Window.Property(Hourly.1.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.1.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.1.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.1.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.1.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.1.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.1.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.1.WindSpeed)] $INFO[Window.Property(Hourly.1.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.1.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.2.Time)][/B][CR]$INFO[Window.Property(Hourly.2.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.2.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.2.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.2.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.2.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.2.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.2.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.2.WindSpeed)] $INFO[Window.Property(Hourly.2.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.2.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.3.Time)][/B][CR]$INFO[Window.Property(Hourly.3.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.3.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.3.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.3.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.3.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.3.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.3.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.3.WindSpeed)] $INFO[Window.Property(Hourly.3.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.3.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.4.Time)][/B][CR]$INFO[Window.Property(Hourly.4.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.4.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.4.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.4.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.4.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.4.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.4.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.4.WindSpeed)] $INFO[Window.Property(Hourly.4.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.4.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.5.Time)][/B][CR]$INFO[Window.Property(Hourly.5.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.5.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.5.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.5.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.5.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.5.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.5.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.5.WindSpeed)] $INFO[Window.Property(Hourly.5.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.5.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.6.Time)][/B][CR]$INFO[Window.Property(Hourly.6.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.6.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.6.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.6.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.6.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.6.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.6.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.6.WindSpeed)] $INFO[Window.Property(Hourly.6.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.6.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.7.Time)][/B][CR]$INFO[Window.Property(Hourly.7.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.7.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.7.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.7.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.7.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.7.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.7.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.7.WindSpeed)] $INFO[Window.Property(Hourly.7.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.7.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.8.Time)][/B][CR]$INFO[Window.Property(Hourly.8.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.8.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.8.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.8.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.8.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.8.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.8.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.8.WindSpeed)] $INFO[Window.Property(Hourly.8.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.8.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.9.Time)][/B][CR]$INFO[Window.Property(Hourly.9.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.9.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.9.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.9.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.9.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.9.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.9.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.9.WindSpeed)] $INFO[Window.Property(Hourly.9.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.9.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.10.Time)][/B][CR]$INFO[Window.Property(Hourly.10.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.10.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.10.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.10.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.10.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.10.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.10.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.10.WindSpeed)] $INFO[Window.Property(Hourly.10.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.10.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.11.Time)][/B][CR]$INFO[Window.Property(Hourly.11.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.11.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.11.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.11.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.11.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.11.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.11.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.11.WindSpeed)] $INFO[Window.Property(Hourly.11.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.11.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.12.Time)][/B][CR]$INFO[Window.Property(Hourly.12.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.12.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.12.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.12.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.12.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.12.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.12.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.12.WindSpeed)] $INFO[Window.Property(Hourly.12.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.12.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.13.Time)][/B][CR]$INFO[Window.Property(Hourly.13.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.13.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.13.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.13.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.13.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.13.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.13.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.13.WindSpeed)] $INFO[Window.Property(Hourly.13.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.13.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.14.Time)][/B][CR]$INFO[Window.Property(Hourly.14.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.14.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.14.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.14.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.14.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.14.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.14.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.14.WindSpeed)] $INFO[Window.Property(Hourly.14.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.14.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.15.Time)][/B][CR]$INFO[Window.Property(Hourly.15.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.15.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.15.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.15.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.15.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.15.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.15.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.15.WindSpeed)] $INFO[Window.Property(Hourly.15.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.15.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.16.Time)][/B][CR]$INFO[Window.Property(Hourly.16.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.16.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.16.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.16.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.16.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.16.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.16.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.16.WindSpeed)] $INFO[Window.Property(Hourly.16.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.16.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.17.Time)][/B][CR]$INFO[Window.Property(Hourly.17.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.17.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.17.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.17.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.17.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.17.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.17.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.17.WindSpeed)] $INFO[Window.Property(Hourly.17.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.17.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.18.Time)][/B][CR]$INFO[Window.Property(Hourly.18.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.18.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.18.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.18.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.18.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.18.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.18.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.18.WindSpeed)] $INFO[Window.Property(Hourly.18.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.18.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.19.Time)][/B][CR]$INFO[Window.Property(Hourly.19.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.19.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.19.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.19.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.19.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.19.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.19.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.19.WindSpeed)] $INFO[Window.Property(Hourly.19.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.19.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.20.Time)][/B][CR]$INFO[Window.Property(Hourly.20.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.20.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.20.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.20.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.20.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.20.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.20.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.20.WindSpeed)] $INFO[Window.Property(Hourly.20.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.20.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.21.Time)][/B][CR]$INFO[Window.Property(Hourly.21.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.21.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.21.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.21.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.21.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.21.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.21.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.21.WindSpeed)] $INFO[Window.Property(Hourly.21.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.21.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.22.Time)][/B][CR]$INFO[Window.Property(Hourly.22.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.22.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.22.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.22.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.22.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.22.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.22.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.22.WindSpeed)] $INFO[Window.Property(Hourly.22.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.22.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.23.Time)][/B][CR]$INFO[Window.Property(Hourly.23.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.23.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.23.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.23.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.23.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.23.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.23.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.23.WindSpeed)] $INFO[Window.Property(Hourly.23.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.23.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>[B]$INFO[Window.Property(Hourly.24.Time)][/B][CR]$INFO[Window.Property(Hourly.24.ShortDate)]</label>
+                        <label2>$INFO[Window.Property(Hourly.24.Temperature),$LOCALIZE[401] :[B] ,[/B]]  $INFO[Window.Property(Hourly.24.FeelsLike),$LOCALIZE[402] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.24.Humidity),$LOCALIZE[406] :[B] ,[/B]][CR]$INFO[Window.Property(Hourly.24.Precipitation),$LOCALIZE[1448] :[B] ,[/B]]</label2>
+                        <thumb>$VAR[VarWeatherHomeIcon]$INFO[Window.Property(Hourly.24.OutlookIcon)]</thumb>
+                        <icon>$INFO[Window.Property(Hourly.24.Outlook),$LOCALIZE[33030]: ][CR]$LOCALIZE[383]: $INFO[Window.Property(Hourly.24.WindSpeed)] $INFO[Window.Property(Hourly.24.WindDirection)]</icon>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Hourly.24.Outlook)) + !IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+                    </item>
+                </content>
+            </control>
+            <control type="scrollbar" id="62">
+                <left>927</left>
+                <top>90</top>
+                <width>15</width>
+                <height>810</height>
+                <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+				<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+				<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+				<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+				<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+                <onleft>52</onleft>
+                <onright>9000</onright>
+                <showonepage>true</showonepage>
+                <orientation>vertical</orientation>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.IsVisible(52)</visible>
+            </control>
+            <!--<control type="label">
+                <animation effect="slide" start="0,0" end="-135,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+                <description>number of files/pages</description>
+                <right>60</right>
+                <top>940</top>
+                <width>855</width>
+                <font>primal_16</font>
+                <align>right</align>
+                <scroll>true</scroll>
+                <textcolor>grey</textcolor>
+                <shadowcolor>black</shadowcolor>
+                <label>([COLOR=blue]$INFO[Container(52).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=blue]$INFO[Container(52).CurrentPage]/$INFO[Container(52).NumPages])</label>
+                <include>VisibleFadeEffect</include>
+                <visible>Control.IsVisible(52)</visible>
+            </control>-->
+        </control>
+    </include>
+    <include name="WeatherMaps">
+        <control type="group">
+            <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <label>31910</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="image">
+                <description>Background image</description>
+                <left>38</left>
+                <top>98</top>
+                <width>900</width>
+                <height>720</height>
+                <texture border="5">button-nofocus.png</texture>
+            </control>
+            <control type="button" id="992">
+                <left>870</left>
+                <top>848</top>
+                <width>38</width>
+                <height>38</height>
+                <label>-</label>
+                <texturefocus>scroll-right-focus.png</texturefocus>
+                <texturenofocus>scroll-right.png</texturenofocus>
+                <onleft>991</onleft>
+                <onright>9020</onright>
+                <onclick>Control.Move(53,1)</onclick>
+            </control>
+            <control type="button" id="991">
+                <left>68</left>
+                <top>848</top>
+                <width>38</width>
+                <height>38</height>
+                <label>-</label>
+                <texturefocus>scroll-left-focus.png</texturefocus>
+                <texturenofocus>scroll-left.png</texturenofocus>
+                <onleft>9020</onleft>
+                <onright>992</onright>
+                <onclick>Control.Move(53,-1)</onclick>
+            </control>
+            <control type="label">
+                <description>heading label</description>
+                <left>112</left>
+                <top>848</top>
+                <width>750</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <label>$INFO[Container(53).ListItem.Label]</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>white</textcolor>
+                <shadowcolor>black</shadowcolor>
+            </control>
+            <control type="list" id="53">
+                <left>45</left>
+                <top>105</top>
+                <width>885</width>
+                <height>705</height>
+                <onleft>9020</onleft>
+                <onright>9020</onright>
+                <onup>9020</onup>
+                <ondown>9020</ondown>
+                <viewtype label="535">list</viewtype>
+                <scrolltime>200</scrolltime>
+                <orientation>horizontal</orientation>
+                <include>VisibleFadeEffect</include>
+                <visible>StringCompare(Window.Property(Weather.CurrentView),map) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                <itemlayout height="705" width="885">
+                    <control type="image">
+                        <description>area image</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>885</width>
+                        <height>705</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>layer image</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>885</width>
+                        <height>705</height>
+                        <texture>$INFO[ListItem.Property(Layer)]</texture>
+                        <aspectratio>scale</aspectratio>
+                        <colordiffuse>70FFFFFF</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <description>legend image</description>
+                        <left>540</left>
+                        <top>645</top>
+                        <width>336</width>
+                        <height>52</height>
+                        <texture>$INFO[ListItem.Label2]</texture>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="735" width="885">
+                    <control type="image">
+                        <description>layer image</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>885</width>
+                        <height>705</height>
+                        <texture>$INFO[ListItem.Icon]</texture>
+                        <aspectratio>scale</aspectratio>
+                    </control>
+                    <control type="image">
+                        <description>area image</description>
+                        <left>0</left>
+                        <top>0</top>
+                        <width>885</width>
+                        <height>705</height>
+                        <texture>$INFO[ListItem.Property(Layer)]</texture>
+                        <aspectratio>scale</aspectratio>
+                        <colordiffuse>70FFFFFF</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <description>legend image</description>
+                        <left>540</left>
+                        <top>645</top>
+                        <width>336</width>
+                        <height>52</height>
+                        <texture>$INFO[ListItem.Label2]</texture>
+                    </control>
+                </focusedlayout>
+                <content>
+                    <item>
+                        <label>$INFO[Window.Property(Map.1.Heading)]</label>
+                        <label2>$INFO[Window.Property(Map.1.Legend)]</label2>
+                        <icon>$INFO[Window.Property(Map.1.Area)]</icon>
+                        <property name="Layer">$INFO[Window.Property(Map.1.Layer)]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.1.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Map.2.Heading)]</label>
+                        <label2>$INFO[Window.Property(Map.2.Legend)]</label2>
+                        <icon>$INFO[Window.Property(Map.2.Area)]</icon>
+                        <property name="Layer">$INFO[Window.Property(Map.2.Layer)]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.2.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Map.3.Heading)]</label>
+                        <label2>$INFO[Window.Property(Map.3.Legend)]</label2>
+                        <icon>$INFO[Window.Property(Map.3.Area)]</icon>
+                        <property name="Layer">$INFO[Window.Property(Map.3.Layer)]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.3.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Map.4.Heading)]</label>
+                        <label2>$INFO[Window.Property(Map.4.Legend)]</label2>
+                        <icon>$INFO[Window.Property(Map.4.Area)]</icon>
+                        <property name="Layer">$INFO[Window.Property(Map.4.Layer)]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.4.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                    </item>
+                    <item>
+                        <label>$INFO[Window.Property(Map.5.Heading)]</label>
+                        <label2>$INFO[Window.Property(Map.5.Legend)]</label2>
+                        <icon>$INFO[Window.Property(Map.5.Area)]</icon>
+                        <property name="Layer">$INFO[Window.Property(Map.5.Layer)]</property>
+                        <onclick>noop</onclick>
+                        <visible>Weather.IsFetched + !IsEmpty(Window.Property(Map.5.Area)) + !IsEmpty(Window.Property(Map.IsFetched))</visible>
+                    </item>
+                </content>
+            </control>
+            <control type="image">
+                <left>0</left>
+                <top>825</top>
+                <width>975</width>
+                <height>6</height>
+                <texture>separator.png</texture>
+            </control>
+        </control>
+    </include>
+    <include name="WeatherAlerts">
+        <control type="group">
+            <visible>StringCompare(Window.Property(Weather.CurrentView),alerts) + !IsEmpty(Window.Property(Alerts.IsFetched))</visible>
+            <include>VisibleFadeEffect</include>
+            <control type="button" id="996">
+                <description>Hidden Button for focus</description>
+                <left>-900</left>
+                <top>-30</top>
+                <width>1</width>
+                <height>1</height>
+                <texturenofocus>-</texturenofocus>
+                <texturefocus>-</texturefocus>
+                <onleft>9020</onleft>
+                <onright>9020</onright>
+            </control>
+            <control type="label">
+                <description>header label</description>
+                <left>30</left>
+                <top>22</top>
+                <width>915</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <label>33050</label>
+                <align>center</align>
+                <aligny>center</aligny>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            </control>
+            <control type="label">
+                <left>60</left>
+                <top>112</top>
+                <width>855</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <textcolor>$VAR[ColorFontSelected]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$LOCALIZE[33050]</label>
+            </control>
+            <control type="group">
+                <visible>!StringCompare(Window.Property(Alerts.Count),0)</visible>
+                <control type="textbox">
+                    <left>60</left>
+                    <top>176</top>
+                    <width>855</width>
+                    <height>597</height>
+                    <font>primal_16</font>
+                    <align>center</align>
+                    <label>[COLOR $VAR[ColorFontNormal]]$INFO[Window.Property(Alerts)][/COLOR]</label>
+                    <autoscroll time="2000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
+                </control>
+            </control>
+            <control type="label">
+                <left>60</left>
+                <top>300</top>
+                <width>855</width>
+                <height>45</height>
+                <font>primal_16</font>
+                <textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>$LOCALIZE[19055]</label>
+                <visible>StringCompare(Window.Property(Alerts.Count),0)</visible>
+            </control>
+        </control>
+    </include>
+</includes>

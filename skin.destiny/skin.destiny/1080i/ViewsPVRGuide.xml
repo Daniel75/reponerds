@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- ID: 10 -->
+	<include name="PVRGuideViewTimeline">
+		<control type="group">
+			<description>TV Guide Timeline</description>
+			<visible>Control.IsVisible(10)</visible>
+			<include>Animation.ZoomIn</include>
+			<control type="epggrid" id="10">
+				<description>EPG Grid</description>
+				<left>180</left>
+                <top>160</top>
+                <width>1680</width>
+                <height>654</height>
+                <pagecontrol>10</pagecontrol>
+                <scrolltime>350</scrolltime>
+                <timeblocks>12</timeblocks>
+                <rulerunit>3</rulerunit>
+				<progresstexture border="0,59,19,19">livetv/EpgProgressIndicator.png</progresstexture>
+				<onleft>31</onleft>
+				<onright>31</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<onback>9020</onback> 
+				<rulerlayout height="51" width="91">
+				    <control type="image" id="1">
+						<left>-10</left>
+						<top>0</top>
+						<width>100</width>
+						<height>51</height>
+						<texture background="true">skin/button_klein.png</texture>
+		                <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+					</control>
+					<control type="label" id="2">
+						<left>8</left>
+						<top>10</top>
+						<width>90</width>
+						<height>29</height>
+						<font>font12</font>
+						<aligny>center</aligny>
+						<selectedcolor>grey3</selectedcolor>
+						<align>left</align>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</rulerlayout>
+				<channellayout height="86" width="160">
+					<animation effect="fade" start="110" time="200">UnFocus</animation>
+					<control type="image" id="1">
+						<left>-10</left>
+						<top>1</top>
+						<width>168</width>
+						<height>85</height>
+						<texture background="true">skin/button_klein.png</texture>
+		                <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+					</control>
+					<!--<control type="label">
+						<left>10</left>
+						<top>38</top>
+						<width>40</width>
+						<height>35</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>grey3</selectedcolor>
+						<info>ListItem.ChannelNumberLabel</info>
+					</control>-->
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>95</width>
+						<height>95</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<!--<control type="label" id="1">
+						<left>0</left>
+						<top>90</top>
+						<width>160</width>
+						<height>52</height>
+						<font>primal_13</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>grey3</selectedcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>-->
+				</channellayout>
+				<focusedchannellayout height="86" width="160">
+					<control type="image" id="1">
+						<left>-10</left>
+						<top>1</top>
+						<width>168</width>
+						<height>85</height>
+						<texture background="true">skin/button_klein.png</texture>
+		                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+					</control>
+					<!--<control type="label">
+						<left>10</left>
+						<top>38</top>
+						<width>40</width>
+						<height>35</height>
+						<font>font12</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>white</selectedcolor>
+						<info>ListItem.ChannelNumberLabel</info>
+					</control>-->
+					<control type="image">
+						<left>30</left>
+						<top>0</top>
+						<width>95</width>
+						<height>95</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+					<!--<control type="label" id="1">
+						<left>0</left>
+						<top>90</top>
+						<width>160</width>
+						<height>52</height>
+						<font>primal_13</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+						<align>center</align>
+						<label>$INFO[ListItem.ChannelName]</label>
+					</control>-->
+				</focusedchannellayout>
+				<itemlayout height="86" width="201">
+					<control type="image" id="2">
+						<width>200</width>
+						<height>85</height>
+						<left>0</left>
+						<top>1</top>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3" fallback="livetv/genres/0.png">$INFO[ListItem.Property(GenreType),livetv/genres/,.png]</texture> 
+					</control>
+					<control type="label" id="1">
+						<left>10</left>
+						<top>12</top>
+						<width>160</width>
+						<height>25</height>
+						<font>primal_18</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>40</top>
+						<width>160</width>
+						<height>30</height>
+						<font>primal_13</font>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+						<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<scroll>false</scroll>
+						<align>left</align>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+					  </control>
+					<control type="image">
+						<left>30</left>
+						<top>65</top>
+						<width>15</width>
+						<height>15</height>
+						<texture>PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>65</top>
+						<width>15</width>
+						<height>15</height>
+						<texture>PVR-HasTimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="86" width="201">
+					<control type="image" id="2">
+						<width>200</width>
+						<height>85</height>
+						<left>0</left>
+						<top>1</top>
+						<aspectratio>stretch</aspectratio>
+						<texture border="3" fallback="livetv/genres/0.png">$INFO[ListItem.Property(GenreType),livetv/genres/,.png]</texture> 
+					</control>
+					<control type="image" id="14">
+						<width>200</width>
+						<height>85</height>
+						<left>0</left>
+						<top>1</top>
+						<texture background="true">skin/button_klein.png</texture>
+		                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+					</control>
+					<control type="label" id="1">
+						<left>10</left>
+						<top>12</top>
+						<width>160</width>
+						<height>25</height>
+						<font>primal_18</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>40</top>
+						<width>160</width>
+						<height>30</height>
+						<font>primal_13</font>
+						<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+						<scroll>true</scroll>
+						<align>left</align>
+						<label>$INFO[ListItem.StartTime] - $INFO[ListItem.EndTime]</label>
+					  </control>
+					<control type="image">
+						<left>30</left>
+						<top>65</top>
+						<width>15</width>
+						<height>15</height>
+						<texture>PVR-IsRecording.png</texture>
+						<visible>ListItem.IsRecording</visible>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>65</top>
+						<width>15</width>
+						<height>15</height>
+						<texture>PVR-HasTimer.png</texture>
+						<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+					</control>
+				</focusedlayout>
+			   </control>
+			 <control type="group">
+				<visible>!IsEmpty(ListItem.Label)</visible>
+				<left>60</left>
+				<top>835</top>
+				<control type="image">
+					<left>120</left>
+					<top>-10</top>
+					<width>1680</width>
+					<height>155</height>
+					<texture background="true">skin/button_klein.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+				</control>
+				<control type="image">
+					<left>140</left>
+					<top>25</top>
+					<width>100</width>
+					<height>100</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
+				</control>
+				<control type="label">
+					<left>280</left>
+					<top>0</top>
+					<width>1500</width>
+					<height>20</height>
+					<label>[B]$INFO[ListItem.Label]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+					<font>primal_20</font>
+				</control>
+				<control type="label">
+					<left>280</left>
+					<top>30</top>
+					<width>1500</width>
+					<height>20</height>
+					<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+					<font>primal_16</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+			        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				</control>
+				<control type="textbox">
+					<description>Plot value</description>
+					<left>280</left>
+					<top>67</top>
+					<width>1500</width>
+					<height>63</height>
+					<font>primal_16</font>
+					<align>justify</align>
+			        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+					<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<!-- ID: 11 -->
+	<include name="PVRGuideViewNow">
+		<control type="group">
+			<description>TV Guide Now</description>
+			<visible>Control.IsVisible(11)</visible>
+			<include>Animation.ZoomIn</include>
+			<control type="group">
+				<left>157</left>
+				<top>100</top>
+				<control type="label">
+					<description>Time label</description>
+					<left>5</left>
+					<top>85</top>
+					<width>100</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>555</label>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<left>50</left>
+					<top>85</top>
+					<width>250</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>19148</label>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<left>320</left>
+					<top>85</top>
+					<width>550</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>369</label>
+				</control>
+				<control type="label">
+					<description>Status header label</description>
+					<left>1430</left>
+					<top>85</top>
+					<width>140</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>126</label>
+				</control>
+				<control type="list" id="11">
+					<left>26</left>
+					<top>132</top>
+					<width>1810</width>
+					<height>750</height>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<onleft>9020</onleft>
+					<onright>76</onright>
+					<pagecontrol>76</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="75">
+					    <control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+					    <control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>					
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>-3</left>
+							<top>15</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>5</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>17</top>
+							<width>490</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>17</top>
+							<width>590</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>5</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>900</left>
+							<top>5</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="75">
+					    <control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>!Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>!Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>!Control.HasFocus(11)</visible>
+						</control>					
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>!Control.HasFocus(11)</visible>
+						</control>						
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+							<visible>Control.HasFocus(11)</visible>
+						</control>
+						<control type="label">
+							<left>-3</left>
+							<top>15</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>5</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>17</top>
+							<width>490</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>17</top>
+							<width>590</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>900</left>
+							<top>5</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>10</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="76">
+					<left>1685</left>
+					<top>65</top>
+					<width>10</width>
+					<height>810</height>
+					<texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<onleft>11</onleft>
+					<onright>1860</onright>
+				</control>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<left>80</left>
+				<top>1020</top>
+				<width>500</width>
+				<height>20</height>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+				<aligny>center</aligny>
+				<label>($INFO[Container(11).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages])</label>
+			</control>
+		</control>
+	</include>
+	
+	<!-- ID: 12 -->
+	<include name="PVRGuideViewNext">
+		<control type="group">
+			<description>TV Guide Next</description>
+			<visible>Control.IsVisible(12)</visible>
+			<include>Animation.ZoomIn</include>
+			<control type="group">
+				<left>157</left>
+				<top>100</top>
+				<control type="label">
+					<description>Time label</description>
+					<left>5</left>
+					<top>85</top>
+					<width>100</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>555</label>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<left>50</left>
+					<top>85</top>
+					<width>250</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>19148</label>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<left>320</left>
+					<top>85</top>
+					<width>550</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>369</label>
+				</control>
+				<control type="label">
+					<description>Status header label</description>
+					<left>1430</left>
+					<top>85</top>
+					<width>140</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>126</label>
+				</control>
+				<control type="list" id="12">
+					<viewtype label="19031">list</viewtype>
+					<left>26</left>
+					<top>132</top>
+					<width>1810</width>
+					<height>750</height>
+					<onup>12</onup>
+					<ondown>12</ondown>
+					<onleft>9020</onleft>
+					<onright>76</onright>
+					<pagecontrol>76</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="75">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+					    <control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>					
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>-3</left>
+							<top>15</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>5</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>17</top>
+							<width>490</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>17</top>
+							<width>590</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>5</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>900</left>
+							<top>5</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="150">
+					    <control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>65</top>
+							<width>1640</width>
+							<height>80</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>8</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>0</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>10</top>
+							<width>190</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>10</top>
+							<width>1000</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="textbox">
+							<description>Plot Value for TVShow</description>
+							<left>23</left>
+							<top>69</top>
+							<width>1600</width>
+							<height>72</height>
+							<font>primal_18</font>
+							<align>justify</align>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<pagecontrol>-</pagecontrol>
+							<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>10</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>10</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>font10</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="76">
+					<left>1685</left>
+					<top>65</top>
+					<width>10</width>
+					<height>810</height>
+					<texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<onleft>12</onleft>
+					<onright>1860</onright>
+				</control>
+			</control>
+			<control type="label">
+				<animation effect="slide" start="0,0" end="-90,0" time="0" condition="system.getbool(input.enablemouse)">Conditional</animation>
+				<description>Page Count Label</description>
+				<left>80</left>
+				<top>1020</top>
+				<width>500</width>
+				<height>20</height>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+				<aligny>center</aligny>
+				<label>($INFO[Container(12).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(12).CurrentPage]/$INFO[Container(12).NumPages])</label>
+			</control>
+		</control>
+	</include>
+	
+	<!-- ID: 13 -->
+	<include name="PVRGuideViewChannel">
+		<control type="group">
+			<description>TV Guide Channel</description>
+			<visible>Control.IsVisible(13)</visible>
+			<include>Animation.ZoomIn</include>
+			<control type="group">
+				<left>157</left>
+				<top>100</top>
+				<control type="label">
+					<description>Time label</description>
+					<left>5</left>
+					<top>85</top>
+					<width>100</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>555</label>
+				</control>
+				<control type="label">
+					<description>Channel label</description>
+					<left>50</left>
+					<top>85</top>
+					<width>250</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>19148</label>
+				</control>
+				<control type="label">
+					<description>Title</description>
+					<left>320</left>
+					<top>85</top>
+					<width>550</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>369</label>
+				</control>
+				<control type="label">
+					<description>Status header label</description>
+					<left>1430</left>
+					<top>85</top>
+					<width>140</width>
+					<height>20</height>
+					<font>primal_20</font>
+					<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>126</label>
+				</control>
+				<control type="list" id="13">
+					<viewtype label="19029">list</viewtype>
+					<left>26</left>
+					<top>132</top>
+					<width>1810</width>
+					<height>750</height>
+					<onup>13</onup>
+					<ondown>13</ondown>
+					<onleft>9020</onleft>
+					<onright>75</onright>
+					<pagecontrol>75</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="75">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+					    <control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>					
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>70</height>
+							<texture background="true">skin/button_klein.png</texture>
+		                    <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>-3</left>
+							<top>15</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>5</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>17</top>
+							<width>490</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>17</top>
+							<width>590</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>5</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>900</left>
+							<top>5</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="150">
+					    <control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>95</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>65</top>
+							<width>1640</width>
+							<height>80</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>100</left>
+							<top>0</top>
+							<width>405</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>510</left>
+							<top>0</top>
+							<width>900</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="image">
+							<left>1415</left>
+							<top>0</top>
+							<width>225</width>
+							<height>60</height>
+							<texture background="true">skin/button_klein.png</texture>
+			                <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>8</top>
+							<width>100</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.StartTime</info>
+						</control>
+						<control type="image">
+							<left>110</left>
+							<top>0</top>
+							<width>60</width>
+							<height>60</height>
+							<info>ListItem.Icon</info>
+							<aspectratio>keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>185</left>
+							<top>10</top>
+							<width>190</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.ChannelName</info>
+						</control>
+						<control type="label">
+							<left>550</left>
+							<top>10</top>
+							<width>1000</width>
+							<height>35</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+						<control type="textbox">
+							<description>Plot Value for TVShow</description>
+							<left>23</left>
+							<top>69</top>
+							<width>1600</width>
+							<height>72</height>
+							<font>primal_18</font>
+							<align>justify</align>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+							<pagecontrol>-</pagecontrol>
+							<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>10</top>
+							<width>30</width>
+							<height>20</height>
+							<texture>PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1005</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>primal_20</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<label>19043</label>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>970</left>
+							<top>10</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>PVR-HasTimer.png</texture>
+							<visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>1000</left>
+							<top>0</top>
+							<width>80</width>
+							<height>40</height>
+							<font>font10</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[ColorFontNormal]</textcolor>
+	                        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+						    <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+							<label>31510</label>
+							<visible>ListItem.HasTimer</visible>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="scrollbar" id="75">
+					<left>1685</left>
+					<top>65</top>
+					<width>10</width>
+					<height>810</height>
+					<texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+					<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+					<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+					<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+					<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+					<showonepage>true</showonepage>
+					<orientation>vertical</orientation>
+					<onleft>13</onleft>
+					<onright>1860</onright>
+				</control>
+			</control>
+			<control type="label">
+				<description>Page Count Label</description>
+				<left>80</left>
+				<top>1020</top>
+				<width>500</width>
+				<height>20</height>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+				<aligny>center</aligny>
+				<label>($INFO[Container(13).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(13).CurrentPage]/$INFO[Container(13).NumPages])</label>
+			</control>
+		</control>
+	</include>
+</includes>

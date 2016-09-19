@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4108">
+    <defaultcontrol always="true">19008</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>			
+		
+		<control type="list" id="19008">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>800</height>
+			<onright>1860</onright>
+			<onleft>19108</onleft>
+			<onup>19008</onup>
+			<ondown>19008</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>
+			    <item id="90148">
+				  <label>50313</label>
+				  <onclick>ActivateWindow(Programs,Addons,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/addons.png</property>
+				  <property name="MenuIcon_over">home/homeicons/addons.png</property>
+				</item>
+				<item id="90149">
+				  <label>49997</label>
+				  <onclick>ActivateWindow(Videos,Addons,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/video.png</property>
+				  <property name="MenuIcon_over">home/homeicons/video.png</property>
+				</item>
+				<item id="90150">
+				  <label>49995</label>
+				  <onclick>ActivateWindow(Music,Addons,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/music.png</property>
+				  <property name="MenuIcon_over">home/homeicons/music.png</property>
+				</item>
+				<item id="90151">
+				  <label>Android Apps</label>
+				  <onclick>ActivateWindow(Programs,Androidapps,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/music.png</property>
+				  <property name="MenuIcon_over">home/homeicons/music.png</property>
+				</item>
+				<!--<item id="90152">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton1))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton1)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton1))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton1))</visible>
+			    </item>
+			    <item id="90153">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton2))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton2)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton2))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton2))</visible>
+			    </item>
+			    <item id="90154">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton3))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton3)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton3))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton3))</visible>
+			    </item>
+			    <item id="90155">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton4))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton4)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton4))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton4))</visible>
+			    </item>
+			    <item id="90156">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton5))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton5)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton5))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton5))</visible>
+			    </item>
+			    <item id="90157">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton6))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton6)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton6))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton6))</visible>
+			    </item>
+			    <item id="90158">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton7))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton7)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton7))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton7))</visible>
+			    </item>
+			    <item id="90159">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton8))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton8)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton8))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton8))</visible>
+			    </item>
+			    <item id="90160">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton9))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton9)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton9))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton9))</visible>
+			    </item>
+			    <item id="90161">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton10))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton10)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton10))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton10))</visible>
+			    </item>
+			    <item id="90162">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton11))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton11)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton11))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton11))</visible>
+			    </item>
+			    <item id="90163">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton12))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton12)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton12))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton12))</visible>
+			    </item>
+			    <item id="90164">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton13))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton13)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton13))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton13))</visible>
+			    </item>
+			    <item id="90165">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton14))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton14)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton14))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton14))</visible>
+			    </item>
+			    <item id="90166">
+				  <label>$INFO[system.addontitle(Skin.String(HomeVideosButton15))]</label>
+				  <onclick>RunAddon($INFO[Skin.String(HomeVideosButton15)])</onclick>
+				  <icon>$INFO[system.addonicon(Skin.String(HomeVideosButton15))]</icon>
+				  <thumb></thumb>
+				  <visible>!IsEmpty(Skin.String(HomeVideosButton15))</visible>
+			    </item>-->
+			</content>
+		</control>
+		
+		<control type="panel" id="19108">
+		  <include>Animation.ZoomIn</include>
+		  <posx>180</posx>
+		  <posy>165</posy>
+		  <width>1160</width>
+	      <height>810</height>
+		  <onright>19008</onright>
+		  <onleft>9020</onleft>
+		  <onup>19108</onup>
+		  <ondown>19108</ondown>
+		  <orientation>vertical</orientation>
+		  <viewtype>list</viewtype>
+		  <preloaditems>1</preloaditems>
+		  <autoscroll time="15000">!Control.HasFocus(19101)</autoscroll>
+		  <scrolltime tween="cubic">500</scrolltime>
+		  <itemlayout height="410" width="290">
+			<control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>285</width>
+			  <height>403</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[ColorButtonNoFocus]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>285</width>
+			  <height>285</height>
+			  <aspectratio align="center" aligny="center">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+			  <bordersize>6</bordersize>
+			</control>
+			<control type="label">
+			  <left>20</left>
+			  <top>295</top>
+			  <width>235</width>
+			  <height>38</height>
+			  <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			  <scroll>false</scroll>
+			  <align>left</align>
+			  <font>primal_16</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>20</left>
+			  <top>325</top>
+			  <width>235</width>
+			  <height>38</height>
+			  <label>$INFO[ListItem.Property(Addon.Creator),Creator: ]</label>
+			  <scroll>false</scroll>
+			  <align>left</align>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>  	
+			<control type="image">
+			  <left>20</left>
+			  <top>360</top>
+			  <width>80</width>
+			  <height>17</height>
+			  <aspectratio align="center" aligny="center">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Property(Addon.StarRating)]</texture>
+			</control>
+		  </itemlayout>
+		  <focusedlayout height="410" width="290">
+			<control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>285</width>
+			  <height>403</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>285</width>
+			  <height>285</height>
+			  <aspectratio align="center" aligny="center">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+			  <bordersize>6</bordersize>
+			</control>
+			<control type="label">
+			  <left>20</left>
+			  <top>295</top>
+			  <width>235</width>
+			  <height>38</height>
+			  <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+			  <scroll>false</scroll>
+			  <align>left</align>
+			  <font>primal_16</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>
+			<control type="label">
+			  <left>20</left>
+			  <top>325</top>
+			  <width>235</width>
+			  <height>38</height>
+			  <label>$INFO[ListItem.Property(Addon.Creator),Creator: ]</label>
+			  <scroll>false</scroll>
+			  <align>left</align>
+			  <font>primal_13</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			</control>  	
+			<control type="image">
+			  <left>20</left>
+			  <top>360</top>
+			  <width>80</width>
+			  <height>17</height>
+			  <aspectratio align="center" aligny="center">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Property(Addon.StarRating)]</texture>
+			</control>
+		</focusedlayout>
+		      <content target="video">$VAR[HomePreviewAddons]</content>  
+		  </control>
+        
+    </controls>
+    </window>

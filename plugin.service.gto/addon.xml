@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.service.gto" name="German Telecast Offers" version="2.0.2" provider-name="Birger Jesch">
+<addon id="plugin.service.gto" name="German Telecast Offers" version="2.0.3" provider-name="Birger Jesch">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
+        <import addon="repository.lost-and-found" version="1.1.8"/>
     </requires>
     <extension point="xbmc.python.script" library="default.py" />
     <extension point="xbmc.service" library="starter.py" start="startup">

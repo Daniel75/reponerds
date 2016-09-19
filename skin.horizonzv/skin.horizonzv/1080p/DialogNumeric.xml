@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">21</defaultcontrol>
+    <include>openclose</include>
+    <controls>
+        <control type="group">
+            <left>750</left>
+            <top>660</top>
+            <animation effect="slide" end="0,-75" condition="Control.IsVisible(313)">Conditional</animation>
+            <include>opencloseslideup</include>
+            <include content="DialogInfoBackgroundParam">
+                <param name="DialogBackgroundLeft" value="0" />
+                <param name="DialogBackgroundTop" value="0" />
+                <param name="DialogBackgroundWidth" value="435" />
+                <param name="DialogBackgroundHeight" value="570" />
+                <param name="DialogSeparatorTop" value="0" />
+                <param name="DialogSeparatorBottom" value="570" />
+                <param name="DialogShadowTop" value="570" />
+                <param name="DialogHeaderLabel" value="" />
+                <param name="DialogHeaderTop" value="8" />
+                <param name="DialogHeaderId" value="0" />
+            </include>
+        </control>
+        <control type="group">
+            <left>758</left>
+            <top>615</top>
+            <include>opencloseslideup</include>
+            <control type="image">
+                <left>15</left>
+                <top>75</top>
+                <width>390</width>
+                <height>60</height>
+                <aspectratio>stretch</aspectratio>
+                <texture border="20">buttons/KeyboardEditArea.png</texture>
+            </control>
+            <control type="label" id="4">
+                <description>Edit Text</description>
+                <left>22</left>
+                <top>75</top>
+                <width>375</width>
+                <height>60</height>
+                <align>center</align>
+            </control>
+            <control type="group">
+                <left>18</left>
+                <top>150</top>
+                <control type="button" id="11">
+                    <description>1 button</description>
+                    <left>0</left>
+                    <top>0</top>
+                    <label>12311</label>
+                    <onleft>23</onleft>
+                    <onright>12</onright>
+                    <onup>20</onup>
+                    <ondown>14</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="12">
+                    <description>2 button</description>
+                    <left>98</left>
+                    <top>0</top>
+                    <label>12312</label>
+                    <onleft>11</onleft>
+                    <onright>13</onright>
+                    <onup>10</onup>
+                    <ondown>15</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="13">
+                    <description>3 button</description>
+                    <left>195</left>
+                    <top>0</top>
+                    <label>12313</label>
+                    <focusedcolor>black</focusedcolor>
+                    <onleft>12</onleft>
+                    <onright>23</onright>
+                    <onup>22</onup>
+                    <ondown>16</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="23">
+                    <description>Backspace button</description>
+                    <left>292</left>
+                    <top>0</top>
+                    <width>90</width>
+                    <height>135</height>
+                    <textwidth>180</textwidth>
+                    <label>20181</label>
+                    <angle>270</angle>
+                    <onleft>13</onleft>
+                    <onright>11</onright>
+                    <onup>21</onup>
+                    <ondown>21</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="14">
+                    <description>4 button</description>
+                    <left>0</left>
+                    <top>75</top>
+                    <label>12314</label>
+                    <onleft>23</onleft>
+                    <onright>15</onright>
+                    <onup>11</onup>
+                    <ondown>17</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="15">
+                    <description>5 button</description>
+                    <left>98</left>
+                    <top>75</top>
+                    <label>12315</label>
+                    <onleft>14</onleft>
+                    <onright>16</onright>
+                    <onup>12</onup>
+                    <ondown>18</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="16">
+                    <description>6 button</description>
+                    <left>195</left>
+                    <top>75</top>
+                    <label>12316</label>
+                    <onleft>15</onleft>
+                    <onright>23</onright>
+                    <onup>13</onup>
+                    <ondown>19</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="17">
+                    <description>7 button</description>
+                    <left>0</left>
+                    <top>150</top>
+                    <label>12317</label>
+                    <onleft>21</onleft>
+                    <onright>18</onright>
+                    <onup>14</onup>
+                    <ondown>20</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="18">
+                    <description>8 button</description>
+                    <left>98</left>
+                    <top>150</top>
+                    <label>12318</label>
+                    <onleft>17</onleft>
+                    <onright>19</onright>
+                    <onup>15</onup>
+                    <ondown>10</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="19">
+                    <description>9 button</description>
+                    <left>195</left>
+                    <top>150</top>
+                    <label>12319</label>
+                    <onleft>18</onleft>
+                    <onright>21</onright>
+                    <onup>16</onup>
+                    <ondown>22</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="21">
+                    <description>Done button</description>
+                    <left>292</left>
+                    <top>150</top>
+                    <width>90</width>
+                    <height>135</height>
+                    <textwidth>180</textwidth>
+                    <label>20177</label>
+                    <angle>270</angle>
+                    <onleft>19</onleft>
+                    <onright>17</onright>
+                    <onup>23</onup>
+                    <ondown>23</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="20">
+                    <description>prev button</description>
+                    <left>0</left>
+                    <top>225</top>
+                    <label>&lt;</label>
+                    <onleft>21</onleft>
+                    <onright>10</onright>
+                    <onup>17</onup>
+                    <ondown>11</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="10">
+                    <description>0 button</description>
+                    <left>98</left>
+                    <top>225</top>
+                    <label>12310</label>
+                    <onleft>20</onleft>
+                    <onright>22</onright>
+                    <onup>18</onup>
+                    <ondown>12</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+                <control type="button" id="22">
+                    <description>next button</description>
+                    <left>195</left>
+                    <top>225</top>
+                    <label>&gt;</label>
+                    <onleft>10</onleft>
+                    <onright>21</onright>
+                    <onup>19</onup>
+                    <ondown>13</ondown>
+                    <include>KeyboardButton</include>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

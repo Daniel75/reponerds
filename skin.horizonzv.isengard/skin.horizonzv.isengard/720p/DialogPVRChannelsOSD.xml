@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="609">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<include>openclose</include>
+	<animation effect="slide" start="490,0" end="0,0" time="400">WindowOpen</animation>
+	<animation effect="slide" start="0,0" end="490,0" time="400">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<left>80</left>
+			<control type="group">
+				<control type="group">
+					<left>685</left>
+					<top>-30</top>
+					<control type="image">
+						<left>-10</left>
+						<top>0</top>
+						<width>10</width>
+						<height>800</height>
+						<colordiffuse>fanartdiffuse</colordiffuse>
+						<texture background="true" flipx="true">SideFade.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>500</width>
+						<height>800</height>
+						<texture background="true">BlackBack.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>500</width>
+						<height>800</height>
+						<colordiffuse>grey3</colordiffuse>
+						<texture background="true">WhiteBack.png</texture>
+					</control>
+					<control type="image">
+						<description>background image</description>
+						<left>0</left>
+						<top>0</top>
+						<width>501</width>
+						<height>150</height>
+						<texture flipy="true">Shadow.png</texture>
+					</control>
+					<control type="image">
+						<description>background image</description>
+						<left>0</left>
+						<top>605</top>
+						<width>500</width>
+						<height>150</height>
+						<texture>Shadow.png</texture>
+					</control>
+					<control type="image">
+						<description>background image</description>
+						<left>0</left>
+						<top>42</top>
+						<width>500</width>
+						<height>50</height>
+						<colordiffuse>red</colordiffuse>
+						<texture flipy="true">WhiteBack.png</texture>
+					</control>
+					<control type="image">
+						<description>background image</description>
+						<left>0</left>
+						<top>710</top>
+						<width>500</width>
+						<height>30</height>
+						<colordiffuse>red</colordiffuse>
+						<texture flipy="true">WhiteBack.png</texture>
+					</control>
+				</control>
+				<control type="list" id="11">
+					<left>605</left>
+					<top>70</top>
+					<width>600</width>
+					<height>594</height>
+					<onleft>PreviousChannelGroup</onleft>
+					<onright>NextChannelGroup</onright>
+					<onup>11</onup>
+					<ondown>11</ondown>
+					<viewtype label="535">list</viewtype>
+					<focusposition>4</focusposition>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="66" width="510">
+						<control type="label">
+							<left>90</left>
+							<top>18</top>
+							<width>40</width>
+							<height>30</height>
+							<font>impacted21</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>grey</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<info>ListItem.ChannelNumber</info>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>0</top>
+							<width>60</width>
+							<height>66</height>
+							<texture background="true" flipx="true" border="5">SideFade.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>0</top>
+							<width>60</width>
+							<height>66</height>
+							<texture background="true" border="5">buttons/ButtonNFhalf.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>82</left>
+							<top>0</top>
+							<width>60</width>
+							<height>66</height>
+							<texture background="true" flipx="true" border="5">buttons/ButtonNFhalf.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="image">
+							<left>45</left>
+							<top>23</top>
+							<width>20</width>
+							<height>20</height>
+							<texture background="true">PVR-IsRecording.png</texture>
+							<visible>ListItem.IsRecording</visible>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<top>5</top>
+							<width>300</width>
+							<height>25</height>
+							<textcolor>grey</textcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<top>32</top>
+							<width>300</width>
+							<height>20</height>
+							<textcolor>grey</textcolor>
+							<selectedcolor>grey</selectedcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Title]</label>
+							<visible>!ListItem.HasEpg</visible>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<top>32</top>
+							<width>300</width>
+							<height>20</height>
+							<textcolor>grey</textcolor>
+							<selectedcolor>grey</selectedcolor>
+							<shadowcolor>-</shadowcolor>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Title]$INFO[ListItem.EndTime(hh:mm), - ,]</label>
+							<visible>ListItem.HasEpg</visible>
+						</control>
+						<control type="progress">
+							<description>Progressbar</description>
+							<left>160</left>
+							<top>53</top>
+							<width>300</width>
+							<height>6</height>
+							<colordiffuse>88FFFFFF</colordiffuse>
+							<info>ListItem.Progress</info>
+							<visible>ListItem.HasEpg</visible>
+						</control>
+						<control type="image">
+							<left>505</left>
+							<top>8</top>
+							<width>50</width>
+							<height>50</height>
+							<texture background="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>keep</aspectratio>
+						</control>
+					</itemlayout>
+					<focusedlayout height="66" width="510">
+						<control type="group">
+							<include>focuseffect</include>
+							<control type="image">
+								<left>82</left>
+								<top>0</top>
+								<width>496</width>
+								<height>66</height>
+								<texture background="true" border="5">buttons/ButtonFO.png</texture>
+							</control>
+							<control type="label">
+								<left>90</left>
+								<top>18</top>
+								<width>40</width>
+								<height>30</height>
+								<font>impacted21</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>black</textcolor>
+								<selectedcolor>black</selectedcolor>
+								<shadowcolor>-</shadowcolor>
+								<info>ListItem.ChannelNumber</info>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>0</top>
+								<width>60</width>
+								<height>66</height>
+								<texture background="true" flipx="true" border="5">SideFade.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							<control type="image">
+								<left>20</left>
+								<top>0</top>
+								<width>60</width>
+								<height>66</height>
+								<texture background="true" border="5">buttons/ButtonNFhalf.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							<control type="image">
+								<left>82</left>
+								<top>0</top>
+								<width>60</width>
+								<height>66</height>
+								<texture background="true" flipx="true" border="5">buttons/ButtonNFhalf.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							<control type="image">
+								<left>45</left>
+								<top>23</top>
+								<width>20</width>
+								<height>20</height>
+								<texture background="true">PVR-IsRecording.png</texture>
+								<visible>ListItem.IsRecording</visible>
+							</control>
+							<control type="label">
+								<left>160</left>
+								<top>5</top>
+								<width>300</width>
+								<height>25</height>
+								<textcolor>black</textcolor>
+								<selectedcolor>black</selectedcolor>
+								<shadowcolor>-</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+							<control type="label">
+								<left>160</left>
+								<top>28</top>
+								<width>350</width>
+								<height>20</height>
+								<textcolor>black</textcolor>
+								<selectedcolor>black</selectedcolor>
+								<shadowcolor>-</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Title]</label>
+								<visible>!ListItem.HasEpg</visible>
+							</control>
+							<control type="label">
+								<left>160</left>
+								<top>32</top>
+								<width>300</width>
+								<height>20</height>
+								<textcolor>black</textcolor>
+								<selectedcolor>black</selectedcolor>
+								<shadowcolor>-</shadowcolor>
+								<align>left</align>
+								<aligny>center</aligny>
+								<label>$INFO[ListItem.Title]$INFO[ListItem.EndTime(hh:mm), - ,]</label>
+								<visible>ListItem.HasEpg</visible>
+							</control>
+							<control type="progress">
+								<description>Progressbar</description>
+								<left>160</left>
+								<top>53</top>
+								<width>300</width>
+								<height>6</height>
+								<info>ListItem.Progress</info>
+								<visible>ListItem.HasEpg</visible>
+							</control>
+							<control type="image">
+								<left>505</left>
+								<top>8</top>
+								<width>50</width>
+								<height>50</height>
+								<texture background="true" fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
+								<aspectratio>keep</aspectratio>
+							</control>
+							<control type="image">
+								<left>82</left>
+								<top>0</top>
+								<width>496</width>
+								<height>66</height>
+								<colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+								<texture background="true" border="5">buttons/ButtonNF.png</texture>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="group">
+					<left>730</left>
+					<top>5</top>
+					<control type="label">
+						<description>header label</description>
+						<left>0</left>
+						<top>0</top>
+						<width>430</width>
+						<height>40</height>
+						<font>impacted18</font>
+						<label>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<visible>!pvr.IsPlayingRadio</visible>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<left>0</left>
+						<top>0</top>
+						<width>430</width>
+						<height>40</height>
+						<font>impacted18</font>
+						<label>$LOCALIZE[19024] - $INFO[MusicPlayer.ChannelGroup]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>white</textcolor>
+						<shadowcolor>-</shadowcolor>
+						<visible>pvr.IsPlayingRadio</visible>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<left>0</left>
+						<top>20</top>
+						<width>430</width>
+						<height>40</height>
+						<font>impacted18</font>
+						<label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>grey</textcolor>
+						<shadowcolor>-</shadowcolor>
+					</control>
+				</control>
+				<control type="group">
+					<left>730</left>
+					<top>680</top>
+					<control type="label">
+						<description>Page Count Label</description>
+						<left>0</left>
+						<top>5</top>
+						<width>450</width>
+						<height>20</height>
+						<font>impacted18</font>
+						<textcolor>grey</textcolor>
+						<scroll>false</scroll>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>([COLOR=selected]$INFO[Container(11).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=selected]$INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages][/COLOR])</label>
+						<include>openclosemedium</include>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

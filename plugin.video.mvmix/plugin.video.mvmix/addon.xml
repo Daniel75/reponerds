@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.mvmix" version="1.6.0" name="Music Video Mix" provider-name="Jin">
+    <requires>
+        <import addon="xbmc.python" version="2.14.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="mvmix.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Music Video Mix Player</summary>
+        <description>Randomly Play Local And Online Music Videos Based On The Last FM Similar Artists API</description>
+        <platform>all</platform>
+        <forum>http://www.kodinerds.net/index.php/Thread/46548-Release-Music-Video-Mix-Player/</forum>
+    </extension>
+</addon>

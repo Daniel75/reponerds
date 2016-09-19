@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="NewsPreviewBundesligaTabelle">
+		<value condition="Container(23010).Hasfocus(23101)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&amp;buliliga=1</value>
+		<value condition="Container(23010).Hasfocus(23103)">plugin://plugin.program.newscenter/?methode=get_buli_table_items&amp;buliliga=2</value>
+	</variable>
+	<variable name="NewsPreviewBundesligaSpiele">
+		<value condition="Container(23010).Hasfocus(23102)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&amp;buliliga=1</value>
+		<value condition="Container(23010).Hasfocus(23104)">plugin://plugin.program.newscenter/?methode=get_buli_spielplan_items&amp;buliliga=2</value>
+	</variable>
+	<include name="NewsCenterItem_Pollen">
+		<item>
+			<label>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Name)]</label>
+			<label2>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung),newscenter/,]-pollen.png</label2>
+			<icon>$INFO[Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Pic)]</icon>
+			<onclick>-</onclick>
+			<visible>!StringCompare(Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung),0)+!IsEmpty(Container(88434).ListItem.Property($PARAM[newscenter_pollen_id]_Belastung))</visible>
+		</item>
+	</include>
+	<include name="NewsCenterItem">
+		<item>
+			<label>$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Title)]</label>
+			<thumb>$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</thumb>
+			<label2>$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Date)]</label2>
+			<property name="comment">$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Desc)]</property>
+			<property name="headerpic">$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].HeaderPic)]</property>
+			<icon>$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</icon>
+			<visible>!IsEmpty(Window(Home).Property(LatestNews.$PARAM[newscenter_id].Title))</visible>
+			<actualicon>$INFO[Window(Home).Property(LatestNews.$PARAM[newscenter_id].Logo)]</actualicon>
+			<onclick>-</onclick>
+		</item>
+	</include>
+	<include name="HomeNewsCenter">
+		<control type="group" id="290">
+			<animation effect="slide" end="0,-35" time="200" condition="Player.HasMedia">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,70" time="0" condition="Skin.HasSetting(LowerMenu)">Conditional</animation>
+			<left>160</left>
+			<top>30</top>
+			<visible>Container(9000).Hasfocus(50505)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="image">
+				<description>Background</description>
+				<left>60</left>
+				<top>5</top>
+				<width>830</width>
+				<height>320</height>
+				<texture border="15">ContentPanel.png</texture>
+				<visible>!IsEmpty(Container(77777).ListItem().Label)</visible>
+			</control>
+			<control type="list" id="77777">
+				<left>58</left>
+				<top>2</top>
+				<width>820</width>
+				<height>330</height>
+				<onleft>77777</onleft>
+				<onright>77777</onright>
+				<onup>-</onup>
+				<ondown>9000</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>200</scrolltime>
+				<orientation>Horizontal</orientation>
+				<autoscroll time="15000" delay="5000" repeat="5000">!Control.HasFocus(77777)</autoscroll>
+				<itemlayout height="330" width="820">
+				</itemlayout>
+				<focusedlayout height="330" width="820">
+					<control type="image">
+						<left>20</left>
+						<top>25</top>
+						<width>360</width>
+						<height>250</height>
+						<aspectratio>scale</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>30</top>
+						<width>450</width>
+						<height>40</height>
+						<aspectratio align="left" aligny="top">keep</aspectratio>
+						<texture>$INFO[ListItem.Property(headerpic)]</texture>
+						<bordersize>5</bordersize>
+					</control>
+					<control type="label">
+						<left>20</left>
+						<top>282</top>
+						<width>360</width>
+						<height>30</height>
+						<font>font12</font>
+						<textcolor>grey2</textcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+					<control type="label">
+						<left>390</left>
+						<top>18</top>
+						<width>420</width>
+						<height>30</height>
+						<font>font13_title</font>
+						<textcolor>white</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<scroll>true</scroll>
+					</control>
+					<control type="textbox">
+						<left>390</left>
+						<top>50</top>
+						<width>400</width>
+						<height>255</height>
+						<align>left</align>
+						<label>$INFO[ListItem.Property(comment)]</label>
+						<visible>Control.HasFocus(77777)</visible>
+						<autoscroll time="5000" delay="6000" repeat="5000">Control.HasFocus(77777)</autoscroll>
+					</control>
+					<control type="textbox">
+						<left>390</left>
+						<top>50</top>
+						<width>400</width>
+						<height>255</height>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Property(comment)]</label>
+						<visible>!Control.HasFocus(77777)</visible>
+						<autoscroll>false</autoscroll>
+					</control>
+				</focusedlayout>
+				<content>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="0" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="1" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="2" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="3" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="4" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="5" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="6" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="7" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="8" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="9" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="10" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="11" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="12" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="13" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="14" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="15" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="16" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="17" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="18" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="19" />
+					</include>
+					<include name="NewsCenterItem">
+						<param name="newscenter_id" value="20" />
+					</include>
+				</content>
+			</control>
+			<control type="button">
+				<description>left Arrow</description>
+				<left>-50</left>
+				<top>130</top>
+				<width>30</width>
+				<height>60</height>
+				<texturefocus>ArrowBig.png</texturefocus>
+				<texturenofocus>ArrowBig.png</texturenofocus>
+				<onclick>Control.Move(77777,-1)</onclick>
+				<visible>Control.HasFocus(77777) + Container(77777).HasPrevious</visible>
+				<include>VisibleFadeEffect</include>
+			</control>
+			<control type="button">
+				<description>right Arrow</description>
+				<left>980</left>
+				<top>130</top>
+				<width>30</width>
+				<height>60</height>
+				<texturefocus>ArrowBig.png</texturefocus>
+				<texturenofocus>ArrowBig.png</texturenofocus>
+				<onclick>Control.Move(77777,1)</onclick>
+				<visible>Control.HasFocus(77777) + Container(77777).HasNext</visible>
+				<include>VisibleFadeEffect</include>
+				<animation effect="rotate" end="180" time="0" center="auto" condition="true">Conditional</animation>
+			</control>
+		</control>
+	</include>
+</includes>

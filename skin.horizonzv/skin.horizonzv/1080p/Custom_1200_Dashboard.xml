@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1200">
+    <defaultcontrol always="true">8006</defaultcontrol>
+    <coordinates>
+        <system>1</system>
+        <left>0</left>
+        <top>0</top>
+    </coordinates>
+    <include>openclose</include>
+    <include>openclosefanart</include>
+    <controls>
+        <control type="group">
+            <visible>Window.IsActive(Home)</visible>
+            <animation effect="slide" start="0,0" end="390,225" time="0" condition="Skin.HasSetting(HomeMenuVertical)">Conditional</animation>
+            <control type="image">
+                <left>-8</left>
+                <top>-15</top>
+                <width>1935</width>
+                <height>240</height>
+                <colordiffuse>menudiffuse</colordiffuse>
+                <texture background="true" flipy="true">Shadow.png</texture>
+                <visible>!Skin.HasSetting(HomeMenuVertical)</visible>
+            </control>
+            <control type="image">
+                <left>-8</left>
+                <top>555</top>
+                <width>1935</width>
+                <height>540</height>
+                <colordiffuse>menudiffuse</colordiffuse>
+                <texture background="true">Shadow.png</texture>
+                <visible>!Skin.HasSetting(HomeMenuVertical)</visible>
+            </control>
+            <control type="label">
+                <left>0</left>
+                <top>90</top>
+                <width>1920</width>
+                <height>45</height>
+                <font>impacted26</font>
+                <align>center</align>
+                <textcolor>white</textcolor>
+                <label>$LOCALIZE[51382] Addons</label>
+                <include>openclosevisible</include>
+            </control>
+            <control type="group">
+                <!-- Addons 8006-->
+                <left>60</left>
+                <top>165</top>
+                <control type="panel" id="8006">
+                    <left>0</left>
+                    <top>0</top>
+                    <include condition="!Skin.HasSetting(HomeMenuVertical)">DashboardWith_Horizontal</include>
+                    <include condition="Skin.HasSetting(HomeMenuVertical)">DashboardWith_Vertical</include>
+                    <height>540</height>
+                    <visible>Skin.HasSetting(dashboard_big)</visible>
+                    <include>DashboardLayout_Settings</include>
+                </control>
+            </control>
+            <control type="group">
+                <!-- Addons 8006-->
+                <left>60</left>
+                <top>165</top>
+                <control type="panel" id="8006">
+                    <left>0</left>
+                    <top>180</top>
+                    <include condition="!Skin.HasSetting(HomeMenuVertical)">DashboardWith_Horizontal</include>
+                    <include condition="Skin.HasSetting(HomeMenuVertical)">DashboardWith_Vertical</include>
+                    <height>360</height>
+                    <visible>Skin.HasSetting(dashboard_medium)</visible>
+                    <include>DashboardLayout_Settings</include>
+                </control>
+            </control>
+            <control type="group">
+                <!-- Addons 8006-->
+                <left>60</left>
+                <top>165</top>
+                <control type="panel" id="8006">
+                    <left>0</left>
+                    <top>360</top>
+                    <include condition="!Skin.HasSetting(HomeMenuVertical)">DashboardWith_Horizontal</include>
+                    <include condition="Skin.HasSetting(HomeMenuVertical)">DashboardWith_Vertical</include>
+                    <height>180</height>
+                    <visible>Skin.HasSetting(dashboard_small)</visible>
+                    <include>DashboardLayout_Settings</include>
+                </control>
+            </control>
+            <control type="label">
+                <left>90</left>
+                <top>720</top>
+                <width>auto</width>
+                <height>45</height>
+                <font>impacted26</font>
+                <align>left</align>
+                <textcolor>white</textcolor>
+                <label>$VAR[DashboardAddonLabel2] [COLOR=reddiffuse]$VAR[DashboardAddonLabel3][/COLOR]</label>
+                <include>openclosevisible</include>
+            </control>
+            <control type="grouplist" id="8200">
+                <include>openclose</include>
+                <include>openclosebox</include>
+                <visible>ControlGroup(8300).HasFocus()</visible>
+                <left>578</left>
+                <top>375r</top>
+                <width>750</width>
+                <height max="780">auto</height>
+                <onleft></onleft>
+                <onright></onright>
+                <onup></onup>
+                <ondown></ondown>
+                <itemgap>0</itemgap>
+                <control type="group">
+                    <width>750</width>
+                    <height>45</height>
+                    <control type="image">
+                        <description>background top image</description>
+                        <left>0</left>
+                        <top>28</top>
+                        <width>750</width>
+                        <height>16</height>
+                        <texture border="10">buttons/ShutdownMenuTop.png</texture>
+                    </control>
+                </control>
+                <control type="grouplist" id="8300">
+                    <description>grouplist for context buttons</description>
+                    <left>45</left>
+                    <top>0</top>
+                    <width>750</width>
+                    <ondown>9000</ondown>
+                    <height max="924">auto</height>
+                    <itemgap>0</itemgap>
+                    <control type="button" id="8400">
+                        <height>45</height>
+                        <width>750</width>
+                        <onleft>8006</onleft>
+                        <align>left</align>
+                        <onright>Skin.Reset($VAR[DashboardOnclicksettings_Addon])</onright>
+                        <onclick>Skin.SetAddon($VAR[DashboardOnclicksettings_Addon],xbmc.addon.video,xbmc.addon.audio,xbmc.addon.executable,xbmc.addon.image)</onclick>
+                        <label>24000</label>
+                        <label2>$INFO[Container(8006).ListItem.Label]</label2>
+                        <focusedcolor>black</focusedcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <textoffsetx>38</textoffsetx>
+                        <texturefocus border="25,5,25,5">buttons/ShutdownButtonFO.png</texturefocus>
+                        <texturenofocus border="25,5,25,5">buttons/ShutdownButtonNF.png</texturenofocus>
+                    </control>
+                    <control type="button" id="8401">
+                        <height>45</height>
+                        <width>750</width>
+                        <onleft>8006</onleft>
+                        <align>left</align>
+                        <onright>Skin.Reset($VAR[DashboardOnclicksettings_Label])</onright>
+                        <onclick>Skin.SetString($VAR[DashboardOnclicksettings_Label])</onclick>
+                        <label>551</label>
+                        <label2>$VAR[DashboardAddonLabel2]</label2>
+                        <focusedcolor>black</focusedcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <textoffsetx>38</textoffsetx>
+                        <texturefocus border="25,5,25,5">buttons/ShutdownButtonFO.png</texturefocus>
+                        <texturenofocus border="25,5,25,5">buttons/ShutdownButtonNF.png</texturenofocus>
+                    </control>
+                    <control type="button" id="8402">
+                        <height>45</height>
+                        <width>750</width>
+                        <onleft>8006</onleft>
+                        <align>left</align>
+                        <onright>Skin.Reset($VAR[DashboardOnclicksettings_Icon])</onright>
+                        <onclick>Skin.SetImage($VAR[DashboardOnclicksettings_Icon])</onclick>
+                        <label>Icon</label>
+                        <label2>$INFO[Container(8006).ListItem.Icon]</label2>
+                        <focusedcolor>black</focusedcolor>
+                        <shadowcolor>-</shadowcolor>
+                        <textoffsetx>38</textoffsetx>
+                        <texturefocus border="25,5,25,5">buttons/ShutdownButtonFO.png</texturefocus>
+                        <texturenofocus border="25,5,25,5">buttons/ShutdownButtonNF.png</texturenofocus>
+                    </control>
+                    <control type="button" id="8403">
+                        <height>45</height>
+                        <width>750</width>
+                        <onleft>8006</onleft>
+                        <align>center</align>
+                        <label>alle löschen</label>
+                        <textcolor>red</textcolor>
+                        <textoffsetx>38</textoffsetx>
+                        <texturefocus border="25,5,25,5">buttons/ShutdownButtonFO.png</texturefocus>
+                        <texturenofocus border="25,5,25,5">buttons/ShutdownButtonNF.png</texturenofocus>
+                        <onright>Skin.Reset(addon_fav01)</onright>
+                        <onright>Skin.Reset(addon_fav02)</onright>
+                        <onright>Skin.Reset(addon_fav03)</onright>
+                        <onright>Skin.Reset(addon_fav03)</onright>
+                        <onright>Skin.Reset(addon_fav04)</onright>
+                        <onright>Skin.Reset(addon_fav05)</onright>
+                        <onright>Skin.Reset(addon_fav06)</onright>
+                        <onright>Skin.Reset(addon_fav07)</onright>
+                        <onright>Skin.Reset(addon_fav08)</onright>
+                        <onright>Skin.Reset(addon_fav09)</onright>
+                        <onright>Skin.Reset(addon_fav10)</onright>
+                        <onright>Skin.Reset(addon_fav11)</onright>
+                        <onright>Skin.Reset(addon_fav12)</onright>
+                        <onright>Skin.Reset(addon_fav13)</onright>
+                        <onright>Skin.Reset(addon_fav14)</onright>
+                        <onright>Skin.Reset(addon_fav15)</onright>
+                        <onright>Skin.Reset(addon_fav16)</onright>
+                        <onright>Skin.Reset(addon_fav17)</onright>
+                        <onright>Skin.Reset(addon_fav18)</onright>
+                        <onright>Skin.Reset(addon_fav19)</onright>
+                        <onright>Skin.Reset(addon_fav20)</onright>
+                        <onright>Skin.Reset(addon_fav21)</onright>
+                        <onright>Skin.Reset(addon_fav22)</onright>
+                        <onright>Skin.Reset(addon_fav23)</onright>
+                        <onright>Skin.Reset(addon_fav24)</onright>
+                        <onright>Skin.Reset(addon_fav25)</onright>
+                        <onright>Skin.Reset(addon_fav26)</onright>
+                        <onright>Skin.Reset(addon_fav27)</onright>
+                        <onright>Skin.Reset(addon_fav28)</onright>
+                        <onright>Skin.Reset(addon_fav29)</onright>
+                        <onright>Skin.Reset(addon_fav30)</onright>
+                        <onright>Skin.Reset(addon_fav01_icon)</onright>
+                        <onright>Skin.Reset(addon_fav02_icon)</onright>
+                        <onright>Skin.Reset(addon_fav03_icon)</onright>
+                        <onright>Skin.Reset(addon_fav03_icon)</onright>
+                        <onright>Skin.Reset(addon_fav04_icon)</onright>
+                        <onright>Skin.Reset(addon_fav05_icon)</onright>
+                        <onright>Skin.Reset(addon_fav06_icon)</onright>
+                        <onright>Skin.Reset(addon_fav07_icon)</onright>
+                        <onright>Skin.Reset(addon_fav08_icon)</onright>
+                        <onright>Skin.Reset(addon_fav09_icon)</onright>
+                        <onright>Skin.Reset(addon_fav10_icon)</onright>
+                        <onright>Skin.Reset(addon_fav11_icon)</onright>
+                        <onright>Skin.Reset(addon_fav12_icon)</onright>
+                        <onright>Skin.Reset(addon_fav13_icon)</onright>
+                        <onright>Skin.Reset(addon_fav14_icon)</onright>
+                        <onright>Skin.Reset(addon_fav15_icon)</onright>
+                        <onright>Skin.Reset(addon_fav16_icon)</onright>
+                        <onright>Skin.Reset(addon_fav17_icon)</onright>
+                        <onright>Skin.Reset(addon_fav18_icon)</onright>
+                        <onright>Skin.Reset(addon_fav19_icon)</onright>
+                        <onright>Skin.Reset(addon_fav20_icon)</onright>
+                        <onright>Skin.Reset(addon_fav21_icon)</onright>
+                        <onright>Skin.Reset(addon_fav22_icon)</onright>
+                        <onright>Skin.Reset(addon_fav23_icon)</onright>
+                        <onright>Skin.Reset(addon_fav24_icon)</onright>
+                        <onright>Skin.Reset(addon_fav25_icon)</onright>
+                        <onright>Skin.Reset(addon_fav26_icon)</onright>
+                        <onright>Skin.Reset(addon_fav27_icon)</onright>
+                        <onright>Skin.Reset(addon_fav28_icon)</onright>
+                        <onright>Skin.Reset(addon_fav29_icon)</onright>
+                        <onright>Skin.Reset(addon_fav30_icon)</onright>
+                        <onright>Skin.Reset(addon_fav01_label)</onright>
+                        <onright>Skin.Reset(addon_fav02_label)</onright>
+                        <onright>Skin.Reset(addon_fav03_label)</onright>
+                        <onright>Skin.Reset(addon_fav03_label)</onright>
+                        <onright>Skin.Reset(addon_fav04_label)</onright>
+                        <onright>Skin.Reset(addon_fav05_label)</onright>
+                        <onright>Skin.Reset(addon_fav06_label)</onright>
+                        <onright>Skin.Reset(addon_fav07_label)</onright>
+                        <onright>Skin.Reset(addon_fav08_label)</onright>
+                        <onright>Skin.Reset(addon_fav09_label)</onright>
+                        <onright>Skin.Reset(addon_fav10_label)</onright>
+                        <onright>Skin.Reset(addon_fav11_label)</onright>
+                        <onright>Skin.Reset(addon_fav12_label)</onright>
+                        <onright>Skin.Reset(addon_fav13_label)</onright>
+                        <onright>Skin.Reset(addon_fav14_label)</onright>
+                        <onright>Skin.Reset(addon_fav15_label)</onright>
+                        <onright>Skin.Reset(addon_fav16_label)</onright>
+                        <onright>Skin.Reset(addon_fav17_label)</onright>
+                        <onright>Skin.Reset(addon_fav18_label)</onright>
+                        <onright>Skin.Reset(addon_fav19_label)</onright>
+                        <onright>Skin.Reset(addon_fav20_label)</onright>
+                        <onright>Skin.Reset(addon_fav21_label)</onright>
+                        <onright>Skin.Reset(addon_fav22_label)</onright>
+                        <onright>Skin.Reset(addon_fav23_label)</onright>
+                        <onright>Skin.Reset(addon_fav24_label)</onright>
+                        <onright>Skin.Reset(addon_fav25_label)</onright>
+                        <onright>Skin.Reset(addon_fav26_label)</onright>
+                        <onright>Skin.Reset(addon_fav27_label)</onright>
+                        <onright>Skin.Reset(addon_fav28_label)</onright>
+                        <onright>Skin.Reset(addon_fav29_label)</onright>
+                        <onright>Skin.Reset(addon_fav30_label)</onright>
+                    </control>
+                    <control type="button" id="8404">
+                        <height>45</height>
+                        <width>750</width>
+                        <onleft>8006</onleft>
+                        <align>center</align>
+                        <label>10000</label>
+                        <textoffsetx>38</textoffsetx>
+                        <texturefocus border="25,5,25,5">buttons/ShutdownButtonFO.png</texturefocus>
+                        <texturenofocus border="25,5,25,5">buttons/ShutdownButtonNF.png</texturenofocus>
+                        <onclick>Action(back)</onclick>
+                    </control>
+                </control>
+                <control type="image">
+                    <description>background bottom image</description>
+                    <left>0</left>
+                    <width>750</width>
+                    <height>16</height>
+                    <texture border="10">buttons/ShutdownMenuBottom.png</texture>
+                </control>
+                <control type="image">
+                    <description>mirror bottom image</description>
+                    <width>750</width>
+                    <height>82</height>
+                    <colordiffuse>fanartdiffuse</colordiffuse>
+                    <texture flipy="true">Shadow.png</texture>
+                </control>
+            </control>
+            <control type="group">
+                <left>202</left>
+                <top>255r</top>
+                <include>openclose</include>
+                <include>openclosebox</include>
+                <visible>ControlGroup(8300).HasFocus()</visible>
+                <control type="image">
+                    <left>1080</left>
+                    <top>-60</top>
+                    <width>15</width>
+                    <height>18</height>
+                    <colordiffuse>black</colordiffuse>
+                    <texture flipy="true" flipx="true">ArrowBig.png</texture>
+                </control>
+                <control type="image">
+                    <left>1080</left>
+                    <top>-15</top>
+                    <width>15</width>
+                    <height>18</height>
+                    <colordiffuse>black</colordiffuse>
+                    <texture flipy="true" flipx="true">ArrowBig.png</texture>
+                </control>
+                <control type="image">
+                    <left>1080</left>
+                    <top>30</top>
+                    <width>15</width>
+                    <height>18</height>
+                    <colordiffuse>black</colordiffuse>
+                    <texture flipy="true" flipx="true">ArrowBig.png</texture>
+                </control>
+                <control type="image">
+                    <left>1080</left>
+                    <top>75</top>
+                    <width>15</width>
+                    <height>18</height>
+                    <colordiffuse>black</colordiffuse>
+                    <texture flipy="true" flipx="true">ArrowBig.png</texture>
+                </control>
+                <control type="image">
+                    <left>330</left>
+                    <top>0</top>
+                    <width>30</width>
+                    <height>38</height>
+                    <texture flipy="true">ArrowBig.png</texture>
+                </control>
+                <control type="label">
+                    <left>15</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <height>38</height>
+                    <align>right</align>
+                    <shadowcolor>black</shadowcolor>
+                    <label>210</label>
+                </control>
+                <control type="image">
+                    <left>1140</left>
+                    <top>0</top>
+                    <width>30</width>
+                    <height>38</height>
+                    <texture flipy="true" flipx="true">ArrowBig.png</texture>
+                </control>
+                <control type="label">
+                    <left>1185</left>
+                    <top>0</top>
+                    <width>300</width>
+                    <height>38</height>
+                    <align>left</align>
+                    <shadowcolor>black</shadowcolor>
+                    <label>192</label>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

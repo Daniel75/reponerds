@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="10140">
+  <defaultcontrol always="true">2</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <left>278</left>
+    <top>60</top>
+  </coordinates>
+  <controls>
+  <control type="group">
+    <control type="image">
+	  <left>-278</left>
+	  <top>-60</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">background.png</texture>
+	</control>
+	<control type="image">
+	  <left>0</left>
+	  <top>10</top>
+	  <width>1345</width>
+	  <height>990</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>12</left>
+	  <top>22</top>
+	  <width>1321</width>
+	  <height>966</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="button">
+	  <description>Close Window button</description>
+	  <left>1313</left>
+	  <top>45</top>
+	  <width>48</width>
+	  <height>48</height>
+	  <label>-</label>
+	  <font>-</font>
+	  <onclick>PreviousMenu</onclick>
+	  <texturefocus>default/close.png</texturefocus>
+	  <texturenofocus>default/close.png</texturenofocus>
+	  <onleft>2</onleft>
+	  <onright>2</onright>
+	  <onup>2</onup>
+	  <ondown>2</ondown>
+	  <visible>!Skin.HasSetting(tablet_modus)</visible>
+	</control>
+	<control type="label">
+	  <description>header label</description>
+	  <left>35</left>
+	  <top>20</top>
+	  <width>870</width>
+	  <height>45</height>
+      <font>primal_20</font>
+      <label>-</label>
+      <align>left</align>
+      <aligny>center</aligny>
+      <textcolor>$VAR[ColorFontNormal]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    </control>
+	</control>
+	<control type="grouplist" id="9">
+	  <description>button area</description>
+	  <left>30</left>
+	  <top>85</top>
+	  <width>300</width>
+	  <height>860</height>
+	  <itemgap>2</itemgap>
+	  <align>left</align>
+	  <orientation>vertical</orientation>
+	  <onleft>2</onleft>
+	  <onright>2</onright>
+	  <onup>9</onup>
+	  <ondown>9</ondown>
+    </control>
+    <control type="grouplist" id="2">
+      <description>control area</description>
+      <left>370</left>
+      <top>85</top>
+      <width>945</width>
+      <height>750</height>
+      <itemgap>2</itemgap>
+      <pagecontrol>30</pagecontrol>
+      <onup>9001</onup>
+      <ondown>9001</ondown>
+      <onleft>9</onleft>
+      <onright>30</onright>
+    </control>
+    <control type="scrollbar" id="30">
+      <left>1320</left>
+      <top>146</top>
+      <width>8</width>
+      <height>670</height>
+      <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+      <texturesliderbar border="2,16,2,16">ScrollBarV_bar.png</texturesliderbar>
+      <texturesliderbarfocus border="2,16,2,16">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+      <textureslidernib>ScrollBarNib.png</textureslidernib>
+      <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+      <onleft>2</onleft>
+      <onright>9</onright>
+      <showonepage>false</showonepage>
+      <orientation>vertical</orientation>
+    </control>
+    <control type="group" id="9001">
+      <top>868</top>
+      <left>370</left>
+      <control type="button" id="10">
+        <description>OK Button</description>
+        <left>0</left>
+        <top>0</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>186</label>
+        <onleft>12</onleft>
+        <onright>11</onright>
+        <onup>2</onup>
+        <ondown>2</ondown>
+      </control>
+      <control type="button" id="11">
+        <description>Cancel Button</description>
+        <left>315</left>
+        <top>0</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>222</label>
+        <onleft>10</onleft>
+        <onright>12</onright>
+        <onup>2</onup>
+        <ondown>2</ondown>
+      </control>
+      <control type="button" id="12">
+        <description>Defaults Button</description>
+        <left>630</left>
+        <top>0</top>
+        <width>300</width>
+        <height>60</height>
+        <align>center</align>
+        <aligny>center</aligny>
+        <label>409</label>
+        <onleft>11</onleft>
+        <onright>10</onright>
+        <onup>2</onup>
+        <ondown>2</ondown>
+      </control>
+    </control>
+    <control type="button" id="13">
+      <description>Default Category Button</description>
+      <height>60</height>
+      <width>300</width>
+      <textoffsetx>35</textoffsetx>
+      <align>center</align>
+      <aligny>center</aligny>
+      <font>primal_20</font>
+      <pulseonselect>false</pulseonselect>
+    </control>
+    <control type="button" id="3">
+      <description>Default Button</description>
+	  <width>80</width>
+      <height>60</height>
+      <font>primal_20</font>
+    </control>
+    <control type="radiobutton" id="4">
+      <description>Default RadioButton</description>
+      <height>60</height>
+      <font>primal_20</font>
+    </control>
+    <control type="spincontrolex" id="5">
+      <description>Default spincontrolex</description>
+      <height>60</height>
+      <font>primal_20</font>
+      <aligny>center</aligny>
+      <reverse>yes</reverse>
+    </control>
+    <control type="label" id="7">
+      <height>68</height>
+      <font>primal_20</font>
+      <label>-</label>
+      <align>left</align>
+      <aligny>center</aligny>
+    </control>
+    <control type="image" id="6">
+      <description>Default Seperator</description>
+      <height>3</height>
+      <texture>-</texture>
+    </control>
+    <control type="sliderex" id="8">
+      <description>Default Slider</description>
+      <height>60</height>
+      <font>primal_20</font>
+    </control>
+  </controls>
+</window>

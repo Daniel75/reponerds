@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="resource.uisounds.destiny" version="1.0.0" name="Destiny UI Sounds (Normal)" provider-name="Jugger">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource.uisounds"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Destiny UI Sounds (Normal)</summary>
+    <description lang="en">Destiny UI Sounds (Normal)</description>
+    <platform>all</platform>
+  </extension>
+</addon>
