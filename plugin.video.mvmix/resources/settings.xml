@@ -1,0 +1,25 @@
+<settings>
+    <category label="General">
+        <setting id="local_artists" type="bool" label="Local Artists" default="false"/>
+        <setting id="artists_source" type="labelenum" visible="eq(-1,true)" values="Music Library|Folder" label="Source" default="Music Video Library"/>
+        <setting id="artists_path" type="folder" visible="eq(-1,1)+eq(-2,true)" label="Music Path"/>
+        <setting type="sep" />
+        <setting id="limit_result" type="slider" label="Limit Similar Artists Result" default="25" range="1,1,100" option="int"/>
+        <setting id="playbytag" type="bool" label="Play By Genre" default="false"/>
+        <setting id="limit_tag" type="slider"  visible="eq(-1,true)" label="Limit Artists By Genre" default="50" range="50,50,500" option="int"/>
+        <setting id="resume" type="bool" label="Activate Resume" default="false"/>
+    </category>
+    <category label="Sources">
+        <setting id="local" type="bool" label="local" default="true"/>
+        <setting id="video_source" type="labelenum" visible="eq(-1,true)" values="Music Video Library|Folder" label="Source" default="Music Video Library"/>
+        <setting id="video_path" type="folder" visible="eq(-1,1)+eq(-2,true)" label="Music Videos Path"/>
+        <setting type="sep" />
+        <setting id="vevo" type="bool" label="vevo.com" default="true"/>
+        <setting id="putpat" type="bool" label="putpat.tv" default="true"/>
+        <setting id="clipfish" type="bool" label="clipfish.de" default="true"/>
+        <setting type="sep" />
+        <setting id="youtube" type="bool" label="youtube.com" default="true"/>
+        <setting id="yt_proxy" type="bool" visible="eq(-1,true)" label="Enable Proxy (proxfree.com)" default="false"/>
+        <setting id="proxy_location" type="enum" visible="eq(-2,true)+eq(-1,true)" label="Server Location" values="Germany|Netherlands|France|United Kingdom|Canada East|United States East|United States Central|United States West" default="Germany"/>
+    </category>
+</settings>

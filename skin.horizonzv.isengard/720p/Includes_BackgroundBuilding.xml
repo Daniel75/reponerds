@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="InfoListLeft">
+		<control type="group">
+			<left>0</left>
+			<top>60</top>
+			<width>700</width>
+			<height>700</height>
+			<control type="image">
+				<left>24</left>
+				<top>13</top>
+				<width>663</width>
+				<height>595</height>
+				<texture background="true">InlayDark.png</texture>
+			</control>
+			<control type="image">
+				<left>55</left>
+				<top>42</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>642</left>
+				<top>42</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>55</left>
+				<top>567</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>642</left>
+				<top>567</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>28</left>
+				<top>600</top>
+				<width>656</width>
+				<height>50</height>
+				<texture background="true" border="16">ContentPanelMirror.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="InfoListRight">
+		<control type="group">
+			<left>660</left>
+			<top>60</top>
+			<control type="image">
+				<left>24</left>
+				<top>13</top>
+				<width>563</width>
+				<height>595</height>
+				<texture background="true">InlayDark.png</texture>
+			</control>
+			<control type="image">
+				<left>55</left>
+				<top>42</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>542</left>
+				<top>42</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>55</left>
+				<top>567</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>542</left>
+				<top>567</top>
+				<width>15</width>
+				<height>15</height>
+				<texture background="true">Pin.png</texture>
+			</control>
+			<control type="image">
+				<left>28</left>
+				<top>600</top>
+				<width>556</width>
+				<height>50</height>
+				<texture background="true" border="16">ContentPanelMirror.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="DialogInfoWide">
+		<control type="image">
+			<left>-2</left>
+			<top>100</top>
+			<width>1284</width>
+			<height>520</height>
+			<texture background="true">ContentPanel_Wide.png</texture>
+		</control>
+	</include>
+	<include name="MediaOverlay">
+		<control type="image">
+			<include>openclosevisible</include>
+			<left>-20</left>
+			<top>-20</top>
+			<width>1300</width>
+			<height>740</height>
+			<texture background="true">special://skin/backgrounds/media-overlay.jpg</texture>
+		</control>
+	</include>
+	<include name="DialogInfoBackgroundParam">
+		<control type="group">
+			<include>openclosevisible</include>
+			<control type="image">
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogBackgroundTop]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>$PARAM[DialogBackgroundHeight]</height>
+				<colordiffuse>grey3</colordiffuse>
+				<texture background="true" border="5">$VAR[SelectBack2]</texture>
+				<!-- <texture background="true" border="5">Underlay2.png</texture> -->
+			</control>
+			<control type="label" id="$PARAM[DialogHeaderId]">
+				<description>header label</description>
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogHeaderTop]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>30</height>
+				<font>impacted26</font>
+				<label>$PARAM[DialogHeaderLabel]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="image">
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogBackgroundTop]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>1</height>
+				<texture>Separator2.png</texture>
+			</control>
+			<control type="image">
+				<description>Dialog Header Separator image</description>
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogSeparatorTop]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>1</height>
+				<texture>Separator2.png</texture>
+			</control>
+			<control type="image">
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogSeparatorBottom]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>1</height>
+				<texture>Separator2.png</texture>
+			</control>
+			<control type="image">
+				<description>mirror bottom image</description>
+				<left>$PARAM[DialogBackgroundLeft]</left>
+				<top>$PARAM[DialogShadowTop]</top>
+				<width>$PARAM[DialogBackgroundWidth]</width>
+				<height>55</height>
+				<colordiffuse>fanartdiffuse</colordiffuse>
+				<texture background="true" flipy="true" border="4">Shadow.png</texture>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="MenuPlay">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),1)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),1)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),1)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),1)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),1)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),1)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),1)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),1)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),1)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),1)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),1)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),1)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),1)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),1)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),1)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),1)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),1)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),1)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),1)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),1)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),1)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),1)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),1)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),1)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlay))">HomeMenuPlay</include>
+	</include>
+	<include name="MenuNews">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),2)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),2)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),2)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),2)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),2)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),2)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),2)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),2)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),2)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),2)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),2)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),2)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),2)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),2)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),2)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),2)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),2)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),2)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),2)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),2)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),2)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),2)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),2)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),2)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemNews))">HomeMenuNews</include>
+	</include>
+	<include name="MenuLiveTV">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),3)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),3)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),3)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),3)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),3)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),3)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),3)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),3)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),3)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),3)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),3)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),3)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),3)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),3)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),3)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),3)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),3)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),3)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),3)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),3)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),3)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),3)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),3)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),3)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemLiveTV))">HomeMenuLiveTV</include>
+	</include>
+	<include name="MenuRadio">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),4)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),4)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),4)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),4)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),4)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),4)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),4)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),4)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),4)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),4)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),4)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),4)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),4)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),4)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),4)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),4)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),4)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),4)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),4)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),4)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),4)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),4)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),4)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),4)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemRadio))">HomeMenuRadio</include>
+	</include>
+	<include name="MenuMovies">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),5)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),5)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),5)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),5)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),5)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),5)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),5)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),5)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),5)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),5)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),5)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),5)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),5)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),5)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),5)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),5)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),5)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),5)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),5)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),5)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),5)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),5)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),5)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),5)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemMovies))">HomeMenuMovies</include>
+	</include>
+	<include name="MenuTVShows">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),6)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),6)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),6)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),6)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),6)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),6)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),6)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),6)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),6)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),6)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),6)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),6)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),6)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),6)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),6)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),6)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),6)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),6)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),6)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),6)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),6)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),6)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),6)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),6)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemTVShows))">HomeMenuTVShows</include>
+	</include>
+	<include name="MenuVideos">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),7)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),7)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),7)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),7)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),7)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),7)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),7)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),7)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),7)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),7)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),7)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),7)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),7)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),7)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),7)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),7)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),7)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),7)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),7)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),7)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),7)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),7)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),7)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),7)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemVideos))">HomeMenuVideos</include>
+	</include>
+	<include name="MenuPlaylist1">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),8)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),8)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),8)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),8)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),8)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),8)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),8)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),8)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),8)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),8)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),8)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),8)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),8)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),8)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),8)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),8)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),8)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),8)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),8)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),8)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),8)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),8)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),8)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),8)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlaylist1))">HomeMenuPlaylist1</include>
+	</include>
+	<include name="MenuPlaylist2">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),9)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),9)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),9)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),9)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),9)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),9)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),9)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),9)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),9)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),9)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),9)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),9)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),9)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),9)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),9)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),9)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),9)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),9)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),9)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),9)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),9)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),9)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),9)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),9)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlaylist2))">HomeMenuPlaylist2</include>
+	</include>
+	<include name="MenuPlaylist3">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),10)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),10)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),10)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),10)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),10)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),10)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),10)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),10)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),10)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),10)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),10)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),10)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),10)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),10)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),10)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),10)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),10)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),10)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),10)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),10)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),10)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),10)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),10)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),10)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlaylist3))">HomeMenuPlaylist3</include>
+	</include>
+	<include name="MenuPlaylist4">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),11)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),11)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),11)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),11)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),11)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),11)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),11)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),11)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),11)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),11)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),11)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),11)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),11)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),11)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),11)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),11)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),11)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),11)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),11)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),11)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),11)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),11)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),11)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),11)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlaylist4))">HomeMenuPlaylist4</include>
+	</include>
+	<include name="MenuPlaylist5">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),12)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),12)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),12)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),12)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),12)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),12)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),12)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),12)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),12)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),12)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),12)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),12)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),12)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),12)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),12)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),12)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),12)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),12)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),12)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),12)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),12)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),12)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),12)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),12)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlaylist5))">HomeMenuPlaylist5</include>
+	</include>
+	<include name="MenuMusic">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),13)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),13)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),13)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),13)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),13)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),13)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),13)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),13)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),13)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),13)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),13)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),13)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),13)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),13)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),13)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),13)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),13)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),13)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),13)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),13)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),13)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),13)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),13)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),13)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemMusic))">HomeMenuMusic</include>
+	</include>
+	<include name="MenuAddons">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),14)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),14)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),14)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),14)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),14)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),14)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),14)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),14)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),14)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),14)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),14)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),14)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),14)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),14)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),14)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),14)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),14)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),14)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),14)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),14)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),14)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),14)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),14)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),14)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemAddons))">HomeMenuAddons</include>
+	</include>
+	<include name="MenuConcerts">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),15)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),15)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),15)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),15)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),15)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),15)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),15)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),15)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),15)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),15)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),15)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),15)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),15)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),15)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),15)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),15)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),15)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),15)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),15)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),15)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),15)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),15)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),15)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),15)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemConcerts))">HomeMenuConcerts</include>
+	</include>
+	<include name="MenuPictures">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),16)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),16)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),16)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),16)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),16)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),16)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),16)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),16)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),16)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),16)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),16)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),16)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),16)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),16)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),16)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),16)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),16)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),16)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),16)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),16)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),16)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),16)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),16)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),16)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPictures))">HomeMenuPictures</include>
+	</include>
+	<include name="MenuWeather">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),17)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),17)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),17)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),17)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),17)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),17)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),17)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),17)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),17)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),17)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),17)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),17)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),17)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),17)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),17)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),17)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),17)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),17)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),17)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),17)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),17)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),17)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),17)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),17)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemWeather))">HomeMenuWeather</include>
+	</include>
+	<include name="MenuSettings">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),18)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),18)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),18)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),18)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),18)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),18)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),18)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),18)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),18)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),18)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),18)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),18)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),18)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),18)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),18)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),18)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),18)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),18)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),18)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),18)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),18)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),18)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),18)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),18)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemSettings))">HomeMenuSettings</include>
+	</include>
+	<include name="MenuPlayDisc">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),19)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),19)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),19)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),19)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),19)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),19)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),19)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),19)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),19)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),19)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),19)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),19)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),19)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),19)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),19)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),19)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),19)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),19)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),19)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),19)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),19)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),19)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),19)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),19)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPlayDisc))">HomeMenuPlayDisc</include>
+	</include>
+	<include name="MenuYouTube">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),20)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),20)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),20)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),20)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),20)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),20)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),20)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),20)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),20)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),20)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),20)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),20)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),20)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),20)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),20)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),20)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),20)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),20)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),20)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),20)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),20)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),20)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),20)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),20)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemYouTube))">HomeMenuYouTube</include>
+	</include>
+	<include name="MenuWatchlist">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),21)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),21)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),21)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),21)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),21)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),21)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),21)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),21)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),21)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),21)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),21)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),21)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),21)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),21)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),21)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),21)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),21)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),21)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),21)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),21)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),21)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),21)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),21)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),21)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemWatchlist))">HomeMenuWatchlist</include>
+	</include>
+	<include name="MenuSimplePlaylists">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),22)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),22)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),22)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),22)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),22)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),22)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),22)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),22)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),22)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),22)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),22)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),22)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),22)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),22)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),22)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),22)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),22)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),22)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),22)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),22)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),22)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),22)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),22)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),22)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemSimplePlaylists))">HomeMenuSimplePlaylists</include>
+	</include>
+	<include name="MenuSearch">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),23)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),23)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),23)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),23)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),23)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),23)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),23)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),23)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),23)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),23)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),23)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),23)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),23)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),23)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),23)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),23)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),23)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),23)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),23)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),23)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),23)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),23)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),23)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),23)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemSearch))">HomeMenuSearch</include>
+	</include>
+	<include name="MenuPower">
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlay),24)">HomeMenuPlay</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemNews),24)">HomeMenuNews</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemLiveTV),24)">HomeMenuLiveTV</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemRadio),24)">HomeMenuRadio</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMovies),24)">HomeMenuMovies</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemTVShows),24)">HomeMenuTVShows</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemVideos),24)">HomeMenuVideos</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist1),24)">HomeMenuPlaylist1</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist2),24)">HomeMenuPlaylist2</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist3),24)">HomeMenuPlaylist3</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist4),24)">HomeMenuPlaylist4</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlaylist5),24)">HomeMenuPlaylist5</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemMusic),24)">HomeMenuMusic</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemAddons),24)">HomeMenuAddons</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemConcerts),24)">HomeMenuConcerts</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPictures),24)">HomeMenuPictures</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWeather),24)">HomeMenuWeather</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSettings),24)">HomeMenuSettings</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPlayDisc),24)">HomeMenuPlayDisc</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemYouTube),24)">HomeMenuYouTube</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemWatchlist),24)">HomeMenuWatchlist</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSimplePlaylists),24)">HomeMenuSimplePlaylists</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemSearch),24)">HomeMenuSearch</include>
+		<include condition="StringCompare(Skin.String(HomeMenuItemPower),24)">HomeMenuPower</include>
+		<include condition="IsEmpty(Skin.String(HomeMenuItemPower))">HomeMenuPower</include>
+	</include>
+	<include name="HomeMenuContent">
+		<include>MenuPlay</include>
+		<include>MenuNews</include>
+		<include>MenuLiveTV</include>
+		<include>MenuRadio</include>
+		<include>MenuMovies</include>
+		<include>MenuTVShows</include>
+		<include>MenuVideos</include>
+		<include>MenuPlaylist1</include>
+		<include>MenuPlaylist2</include>
+		<include>MenuPlaylist3</include>
+		<include>MenuPlaylist4</include>
+		<include>MenuPlaylist5</include>
+		<include>MenuMusic</include>
+		<include>MenuAddons</include>
+		<include>MenuConcerts</include>
+		<include>MenuPictures</include>
+		<include>MenuWeather</include>
+		<include>MenuSettings</include>
+		<include>MenuPlayDisc</include>
+		<include>MenuYouTube</include>
+		<include>MenuWatchlist</include>
+		<include>MenuSimplePlaylists</include>
+		<include>MenuSearch</include>
+		<include>MenuPower</include>
+	</include>
+	<include name="HomeMenuPlay">
+	   <item id="30">
+		  <description>Play</description>
+		  <label>19177</label>
+		  <onclick>SetFocus(2182)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/sysinfo.png</property>
+		  <property name="BackWebOS0">home/button/webos_button.png</property>
+		  <property name="BackTizen0">skin/button_klein.png</property>
+		  <visible>Player.HasMedia</visible>	
+		</item>
+	</include>
+	<include name="HomeMenuNews">
+	   <item id="31">
+		  <description>News</description>
+		  <label>News</label>
+		  <onclick>ActivateWindow(4117)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/kodi.png</property>
+		  <property name="BackWebOS1">home/button/webos_button.png</property>
+		  <property name="BackTizen1">skin/button_klein.png</property>	
+		  <visible>System.HasAddon(plugin.program.newscenter)</visible>
+		  <visible>!Skin.HasSetting(HomeMenuNoNewsButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuLiveTV">
+		<item id="1">
+		  <description>LiveTV</description>
+		  <label>$LOCALIZE[50201]</label>
+		  <onclick>ActivateWindow(tvchannels)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_TV_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/tv.png</property>	
+		  <property name="BackWebOS2">home/button/webos_button.png</property>
+		  <property name="BackTizen2">skin/button_klein.png</property>
+		  <property name="Info">$INFO[Pvr.BackendChannels] $LOCALIZE[19019]</property>
+		  <visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
+		  <visible>PVR.HasTVChannels</visible>
+		</item>
+	</include>
+	<include name="HomeMenuRadio">
+		<item id="2">
+		  <description>Radio</description>
+		  <label>$LOCALIZE[19021]</label>
+		  <onclick>ActivateWindow(RadioChannels)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Radio_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/music.png</property>
+		  <property name="BackWebOS3">home/button/webos_button.png</property>
+		  <property name="BackTizen3">skin/button_klein.png</property>		  
+		  <visible>!Skin.HasSetting(HomeMenuNoRadioButton)</visible>
+		  <visible>PVR.HasRadioChannels</visible>
+		</item>
+	</include>
+	<include name="HomeMenuMovies">
+		<item id="3">
+		  <description>Movies</description>
+		  <label>$LOCALIZE[50236]</label>
+		  <onclick>ActivateWindow(4101)</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Movies_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="MenuIcon">home/homeicons/film.png</property>
+		  <property name="BackWebOS4">home/button/webos_button.png</property>
+		  <property name="BackTizen4">skin/button_klein.png</property>
+		  <property name="Info">$LOCALIZE[342]: $INFO[Window(Home).Property(Movies.Count)]</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuTVShows">
+		<item id="8">
+		  <description>TVShows</description>
+		  <label>$LOCALIZE[50204]</label>
+		  <onclick>ActivateWindow(4102)</onclick>  
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_TVShow_Folder)]</icon>    
+		  <thumb></thumb>
+		  <property name="MenuIcon">home/homeicons/tvshows.png</property>
+		  <property name="BackWebOS5">home/button/webos_button.png</property>
+		  <property name="BackTizen5">skin/button_klein.png</property>
+		  <property name="Info">$LOCALIZE[20343]: $INFO[Window(Home).Property(TVShows.Count)]</property>		
+		  <visible>!Skin.HasSetting(HomeMenuNoTVShowsButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuVideos">
+		<item id="4">
+		  <description>Videos</description>
+		  <label>$LOCALIZE[3]</label>
+		  <onclick>ActivateWindow(Videos,Root)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Video_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/video.png</property>
+		  <property name="BackWebOS6">home/button/webos_button.png</property>
+		  <property name="BackTizen6">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoVideosButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlaylist1">
+		<item id="5">
+		  <description>Playlist 1</description>
+		  <label>$INFO[Skin.String(movieplaylistButton100_label)]</label>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</icon>
+		  <thumb></thumb>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist100_Icon)]</property>
+		  <property name="BackWebOS7">home/button/webos_button.png</property>
+		  <property name="BackTizen7">skin/button_klein.png</property>	
+		  <onclick>ActivateWindow(4104)</onclick>
+		  <visible>Skin.HasSetting(movieplaylistButton100)</visible>
+		</item>
+		<item id="5">
+		  <description>Playlist 1</description>
+		  <label fallback="Playlist 1">$INFO[Skin.String(Playlist1HomeItem.Label)]</label>
+		  <onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist1_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="Path">$INFO[Skin.String(Playlist1HomeItem.Path)]</property>
+		  <property name="Item">Playlist1</property>
+		  <property name="Widget">$INFO[Skin.String(Playlist1HomeItem.Widget)]</property>
+		  <property name="WidgetLabel">$INFO[Skin.String(Playlist1HomeItem.WidgetLabel)]</property>
+		  <property name="WidgetType">$INFO[Skin.String(Playlist1HomeItem.WidgetType)]</property>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist1000_Icon)]</property>
+		  <property name="BackWebOS7">home/button/webos_button.png</property>
+		  <property name="BackTizen7">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(movieplaylistButton1000)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlaylist2">
+		<item id="6">
+		  <description>Playlist 2</description>
+		  <label>$INFO[Skin.String(movieplaylistButton200_label)]</label>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</icon>
+		  <thumb></thumb>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist200_Icon)]</property>
+		  <property name="BackWebOS8">home/button/webos_button.png</property>
+		  <property name="BackTizen8">skin/button_klein.png</property>	
+		  <onclick>ActivateWindow(4105)</onclick>
+		  <visible>Skin.HasSetting(movieplaylistButton200)</visible>
+		</item>
+		<item id="6">
+		  <description>Playlist 2</description>
+		  <label fallback="Playlist 2">$INFO[Skin.String(Playlist2HomeItem.Label)]</label>
+		  <onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist2_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="Path">$INFO[Skin.String(Playlist2HomeItem.Path)]</property>
+		  <property name="Item">Playlist2</property>
+		  <property name="Widget">$INFO[Skin.String(Playlist2HomeItem.Widget)]</property>
+		  <property name="WidgetLabel">$INFO[Skin.String(Playlist2HomeItem.WidgetLabel)]</property>
+		  <property name="WidgetType">$INFO[Skin.String(Playlist2HomeItem.WidgetType)]</property>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist2000_Icon)]</property>
+		  <property name="BackWebOS8">home/button/webos_button.png</property>
+		  <property name="BackTizen8">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(movieplaylistButton2000)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlaylist3">
+		<item id="7">
+		  <description>Playlist 3</description>
+		  <label>$INFO[Skin.String(movieplaylistButton300_label)]</label>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</icon>
+		  <thumb></thumb>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist300_Icon)]</property>
+		  <property name="BackWebOS9">home/button/webos_button.png</property>
+		  <property name="BackTizen9">skin/button_klein.png</property>	
+		  <onclick>ActivateWindow(4112)</onclick>
+		  <visible>Skin.HasSetting(movieplaylistButton300)</visible>
+		</item>
+		<item id="7">
+		  <description>Playlist 3</description>
+		  <label fallback="Playlist 3">$INFO[Skin.String(Playlist3HomeItem.Label)]</label>
+		  <onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Playlist3_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="Path">$INFO[Skin.String(Playlist3HomeItem.Path)]</property>
+		  <property name="Item">Playlist3</property>
+		  <property name="Widget">$INFO[Skin.String(Playlist3HomeItem.Widget)]</property>
+		  <property name="WidgetLabel">$INFO[Skin.String(Playlist3HomeItem.WidgetLabel)]</property>
+		  <property name="WidgetType">$INFO[Skin.String(Playlist3HomeItem.WidgetType)]</property>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(Playlist3000_Icon)]</property>
+		  <property name="BackWebOS9">home/button/webos_button.png</property>
+		  <property name="BackTizen9">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(movieplaylistButton3000)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlaylist4">
+		<item id="19">
+		  <description>Playlist 4</description>
+		  <label fallback="Playlist 4">$INFO[Skin.String(Playlist4HomeItem.Label)]</label>
+		  <onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_HomeButton1_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="Path">$INFO[Skin.String(Playlist4HomeItem.Path)]</property>
+		  <property name="Item">Playlist4</property>
+		  <property name="Widget">$INFO[Skin.String(Playlist4HomeItem.Widget)]</property>
+		  <property name="WidgetLabel">$INFO[Skin.String(Playlist4HomeItem.WidgetLabel)]</property>
+		  <property name="WidgetType">$INFO[Skin.String(Playlist4HomeItem.WidgetType)]</property>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(HomeButton1_Icon)]</property>
+		  <property name="BackWebOS10">home/button/webos_button.png</property>
+		  <property name="BackTizen10">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(movieplaylistButton1001)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlaylist5">
+		<item id="20">
+		  <description>Playlist 5</description>
+		  <label fallback="Playlist 5">$INFO[Skin.String(Playlist5HomeItem.Label)]</label>
+		  <onclick>$INFO[Container(9000).ListItem.Property(Path)]</onclick>
+		  <icon fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_HomeButton2_Folder)]</icon>
+		  <thumb></thumb>
+		  <property name="Path">$INFO[Skin.String(Playlist5HomeItem.Path)]</property>
+		  <property name="Item">Playlist5</property>
+		  <property name="Widget">$INFO[Skin.String(Playlist5HomeItem.Widget)]</property>
+		  <property name="WidgetLabel">$INFO[Skin.String(Playlist5HomeItem.WidgetLabel)]</property>
+		  <property name="WidgetType">$INFO[Skin.String(Playlist5HomeItem.WidgetType)]</property>
+		  <property fallback="home/homeicons/film.png" name="MenuIcon">$INFO[Skin.String(HomeButton2_Icon)]</property>
+		  <property name="BackWebOS11">home/button/webos_button.png</property>
+		  <property name="BackTizen11">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(movieplaylistButton1002)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuMusic">
+		<item id="10">
+		  <description>Music</description>
+		  <label>$LOCALIZE[2]</label>
+		  <onclick>ActivateWindow(4103)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Music_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/cd.png</property>
+		  <property name="BackWebOS12">home/button/webos_button.png</property>
+		  <property name="BackTizen12">skin/button_klein.png</property>
+		  <property name="Info">$LOCALIZE[132]: $INFO[Window(Home).Property(Music.AlbumsCount)]</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuAddons">
+		<item id="11">
+		  <description>Addons</description>
+		  <label>$LOCALIZE[50197]</label>
+		  <onclick>ActivateWindow(4108)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Programs_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/addons.png</property>
+		  <property name="BackWebOS13">home/button/webos_button.png</property>
+		  <property name="BackTizen13">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoScriptsButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuConcerts">
+		<item id="12">
+		  <description>Concerts</description>
+		  <label>$LOCALIZE[50199]</label>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Concerts_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/musicvideos.png</property>
+		  <property name="BackWebOS14">home/button/webos_button.png</property>
+		  <property name="BackTizen14">skin/button_klein.png</property>	
+		  <property name="Info">$LOCALIZE[20389]: $INFO[Window(Home).Property(MusicVideos.Count)]</property>
+		  <onclick>ActivateWindow(4109)</onclick>
+		  <visible>!Skin.HasSetting(HomeMenuNoConcertsButton) + Library.HasContent(MusicVideos)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPictures">
+		<item id="13">
+		  <description>Pictures</description>
+		  <label>$LOCALIZE[1]</label>
+		  <onclick>ActivateWindow(Pictures)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Pictures_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/photos.png</property>
+		  <property name="BackWebOS15">home/button/webos_button.png</property>
+		  <property name="BackTizen15">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoPicturesButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuWeather">
+		<item id="14">
+		  <description>Weather</description>
+		  <label>$LOCALIZE[8]</label>
+		  <onclick>ActivateWindow(Weather)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Weather_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/weather.png</property>
+		  <property name="BackWebOS16">home/button/webos_button.png</property>
+		  <property name="BackTizen16">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoWeatherButton) + !IsEmpty(Weather.Plugin)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuSettings">
+		<item id="15">
+		  <description>Settings</description>
+		  <label>33063</label>
+		  <onclick>ActivateWindow(Settings)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Option_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/sonstiges.png</property>
+		  <property name="BackWebOS17">home/button/webos_button.png</property>
+		  <property name="BackTizen17">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(enablesonstiges)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuPlayDisc">
+		<item id="16">
+		  <label>50195</label>
+		  <label2>31010</label2>
+		  <onclick>PlayDVD()</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_PlayDisc_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/dvd.png</property>
+		  <property name="BackWebOS18">home/button/webos_button.png</property>
+		  <property name="BackTizen18">skin/button_klein.png</property>	
+		  <visible>System.HasMediaDVD + !Skin.HasSetting(HomeDiscDriveButtonDiscOnly)</visible>
+		  <visible>!Skin.HasSetting(HomeMenuNoDiscDriveButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuYouTube">
+		<item id="17">
+		  <label>YouTube</label>
+		  <label2>31010</label2>
+		  <onclick>RunAddon(plugin.video.youtube)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Youtube_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/youtube.png</property>
+		  <property name="BackWebOS19">home/button/webos_button.png</property>
+		  <property name="BackTizen19">skin/button_klein.png</property>	
+		  <visible>System.HasAddon(plugin.video.youtube) + Skin.HasSetting(HomeMenuNoYoutubeButton)</visible>
+		</item>
+	</include>
+	<include name="HomeMenuWatchlist">
+		<item id="18">
+		  <label>50325</label>
+		  <onclick>ActivateWindow(1238)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Watchlist_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/news.png</property>
+		  <property name="BackWebOS20">home/button/webos_button.png</property>
+		  <property name="BackTizen20">skin/button_klein.png</property>	
+		  <visible>!Skin.HasSetting(HomeMenuNoWatchlistButton)</visible> 	 
+		</item>
+	</include>
+	<include name="HomeMenuSimplePlaylists">
+		<item id="9">
+		  <label>SimplePlaylists</label>
+		  <onclick>RunPlugin(plugin://script.simpleplaylists/?mode=showPlaylists)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_ScriptWatchlist_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/news.png</property>
+		  <property name="BackWebOS21">home/button/webos_button.png</property>
+		  <property name="BackTizen21">skin/button_klein.png</property>	
+		  <visible>Skin.HasSetting(HomeMenuNoScriptWatchlistButton)</visible> 	 
+		</item>
+	</include>
+	<include name="HomeMenuSearch">
+		<item id="32">
+		  <label>137</label>
+		  <onclick>RunScript(script.globalsearch)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Search_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/search.png</property>
+		  <property name="BackWebOS22">home/button/webos_button.png</property>
+		  <property name="BackTizen22">skin/button_klein.png</property>	
+		  <visible>System.HasAddon(script.globalsearch)</visible> 
+		</item>
+	</include>
+	<include name="HomeMenuPower">
+		<item id="33">
+		  <label>33060</label>
+		  <onclick>ActivateWindow(111)</onclick>
+		  <icon></icon>
+		  <thumb fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[Skin.String(Home_Custom_Back_Power_Folder)]</thumb>
+		  <property name="MenuIcon">home/homeicons/off.png</property>
+		  <property name="BackWebOS23">home/button/webos_button.png</property>
+		  <property name="BackTizen23">skin/button_klein.png</property>	 	 
+		</item>
+	</include>
+	
+</includes>

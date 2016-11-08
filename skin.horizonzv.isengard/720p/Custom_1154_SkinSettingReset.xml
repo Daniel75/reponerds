@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1154">
+	<defaultcontrol always="true">11</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<include>DialogBackgroundSimple</include>
+		<include>BlackStripes</include>
+		<control type="group">
+			<top>40</top>
+			<include>openclosebox</include>
+			<control type="group">
+				<left>340</left>
+				<top>180</top>
+				<include name="DialogInfoBackgroundParam">
+					<param name="DialogBackgroundLeft" value="0" />
+					<param name="DialogBackgroundTop" value="0" />
+					<param name="DialogBackgroundWidth" value="600" />
+					<param name="DialogBackgroundHeight" value="300" />
+					<param name="DialogSeparatorTop" value="40" />
+					<param name="DialogSeparatorBottom" value="300" />
+					<param name="DialogShadowTop" value="301" />
+					<param name="DialogHeaderLabel" value="20077" />
+					<param name="DialogHeaderTop" value="5" />
+					<param name="DialogHeaderId" value="1" />
+				</include>
+				<control type="image">
+					<left>0</left>
+					<top>259</top>
+					<width>600</width>
+					<height>40</height>
+					<colordiffuse>red</colordiffuse>
+					<texture>WhiteBack.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<left>390</left>
+				<top>220</top>
+				<control type="label" id="3">
+					<description>dialog line</description>
+					<left>-10</left>
+					<top>90</top>
+					<width>520</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>red</shadowcolor>
+					<font>impacted24</font>
+					<label>51170</label>
+				</control>
+				<control type="group">
+					<left>40</left>
+					<top>40</top>
+					<control type="button" id="10">
+						<description>Yes button</description>
+						<left>10</left>
+						<top>185</top>
+						<width>200</width>
+						<height>30</height>
+						<font>impacted21</font>
+						<label>107</label>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<align>center</align>
+						<onleft>12</onleft>
+						<onright>11</onright>
+						<onclick>Skin.ResetSettings</onclick>
+						<onclick>Notification(werden zurückgesetzt ...,Einstellungen,4000, DefaultIconInfo.png)</onclick>
+						<onclick>back</onclick>
+						<texturenofocus>-</texturenofocus>
+					</control>
+					<control type="button" id="11">
+						<description>No button</description>
+						<left>220</left>
+						<top>185</top>
+						<width>200</width>
+						<height>30</height>
+						<font>impacted21</font>
+						<label>106</label>
+						<textcolor>white</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<align>center</align>
+						<onleft>10</onleft>
+						<onright>12</onright>
+						<onclick>back</onclick>
+						<texturenofocus>-</texturenofocus>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

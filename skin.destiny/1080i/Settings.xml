@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="4">
+  <defaultcontrol always="true">10000</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <control type="group">
+      <left>0</left>
+      <top>0</top>
+      <include>CommonHomeBack</include>	
+	  <include>CommonAllFront2</include>
+	  <include>SideBladeForViews</include>
+	  <include>BigInfosTime</include>
+	  <include>BigInfosDatabaseCount</include>
+	  <include>BigInfosWeather</include>
+	  <include>CommonHomeButton</include>
+	  <include>HomePlaying</include> 
+      <control type="panel" id="10000">
+	    <include>Animation.ZoomIn</include>
+        <left>178</left>
+        <top>159</top>
+        <width>1720</width>
+        <height>820</height>
+        <onleft>9020</onleft>
+        <onright>10000</onright>
+        <onup>1860</onup>
+        <ondown>10000</ondown>
+        <pagecontrol>-</pagecontrol>
+		<focusposition>1</focusposition>
+        <scrolltime>300</scrolltime>
+        <orientation>vertical</orientation>
+        <preloaditems>2</preloaditems>
+        <itemlayout height="192" width="559">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>566</width>
+			<height>200</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">-</bordertexture>
+			<bordersize>6</bordersize>
+		    <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>120</left>
+			<top>20</top>
+			<width>200</width>
+			<height>80</height>
+			<font>primal_22</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+		  </control>
+		  <control type="image">
+            <left>30</left>
+			<top>25</top>
+			<width>60</width>
+			<height>60</height>
+            <texture>$INFO[ListItem.Thumb]</texture>
+			<colordiffuse>$VAR[ColorIcons]</colordiffuse>
+          </control>
+		  <control type="textbox">
+			<left>25</left>
+			<top>110</top>
+			<width>500</width>
+			<height>140</height>
+			<font>primal_13</font>
+			<align>justify</align>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Label2][/COLOR]</label>
+			<autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+		  </control>
+        </itemlayout>
+        <focusedlayout height="192" width="559">
+		  <control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>566</width>
+			<height>200</height>
+			<texture background="true">skin/button_klein.png</texture>
+			<bordertexture border="10">-</bordertexture>
+			<bordersize>6</bordersize>
+		    <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+		  </control>
+		  <control type="label">
+			<left>120</left>
+			<top>20</top>
+			<width>200</width>
+			<height>80</height>
+			<font>primal_22</font>
+			<textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+			<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+		  </control>
+		  <control type="image">
+            <left>30</left>
+			<top>25</top>
+			<width>60</width>
+			<height>60</height>
+            <texture>$INFO[ListItem.Thumb]</texture>
+			<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+          </control>
+		  <control type="textbox">
+			<left>25</left>
+			<top>110</top>
+			<width>500</width>
+			<height>140</height>
+			<font>primal_13</font>
+			<align>justify</align>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Label2][/COLOR]</label>
+			<autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+		  </control>
+        </focusedlayout>
+        <content>
+          <item id="1">
+            <label>480</label>
+            <label2>50060</label2>
+            <onclick>ActivateWindow(AppearanceSettings)</onclick>
+            <thumb>home/homeicons/presentation.png</thumb>
+          </item>
+          <item id="2">
+            <label>157</label>
+            <label2>50061</label2>
+            <onclick>ActivateWindow(VideosSettings)</onclick>
+            <thumb>home/homeicons/film.png</thumb>
+          </item>
+          <!-- PVR -->
+          <item id="10">
+            <label>50062</label>
+            <label2>50063</label2>
+            <onclick>ActivateWindow(MyTVSettings)</onclick>
+            <thumb>home/homeicons/tv.png</thumb>
+          </item>
+          <!-- PVR end -->
+          <item id="3">
+            <label>2</label>
+            <label2>50064</label2>
+            <onclick>ActivateWindow(MusicSettings)</onclick>
+            <thumb>home/homeicons/music.png</thumb>
+          </item>
+          <item id="4">
+            <label>1</label>
+            <label2>50065</label2>
+            <onclick>ActivateWindow(PicturesSettings)</onclick>
+            <thumb>home/homeicons/photos.png</thumb>
+          </item>
+          <item id="5">
+            <label>8</label>
+            <label2>50066</label2>
+            <onclick>ActivateWindow(WeatherSettings)</onclick>
+            <thumb>home/homeicons/weather.png</thumb>
+          </item>
+          <item id="6">
+            <label>705</label>
+            <label2>50067</label2>
+            <onclick>ActivateWindow(ServiceSettings)</onclick>
+            <thumb>home/homeicons/network.png</thumb>
+          </item>
+          <item id="9">
+            <label>24001</label>
+            <label2>50068</label2>
+            <onclick>ActivateWindow(AddonBrowser)</onclick>
+            <thumb>home/homeicons/addons.png</thumb>
+          </item>
+          <item id="7">
+            <label>13000</label>
+            <label2>50069</label2>
+            <onclick>ActivateWindow(SystemSettings)</onclick>
+            <thumb>home/homeicons/settings.png</thumb>
+          </item>
+          <item id="8">
+            <label>20077</label>
+            <label2>50070</label2>
+            <onclick>ActivateWindow(SkinSettings)</onclick>
+            <thumb>home/homeicons/skin.png</thumb>
+          </item>
+		  <item id="11">
+            <label>13200</label>
+            <label2>50071</label2>
+            <onclick>ActivateWindow(Profiles)</onclick>
+            <thumb>home/homeicons/profiles.png</thumb>
+          </item>
+		  <item id="12">
+            <label>50073</label>
+            <label2>50072</label2>
+            <onclick>ActivateWindow(SystemInfo)</onclick>
+            <thumb>home/homeicons/sysinfo.png</thumb>
+          </item>
+		  <item id="13">
+            <label>7</label>
+            <label2>50246</label2>
+            <onclick>ActivateWindow(FileManager)</onclick>
+            <thumb>home/homeicons/data.png</thumb>
+          </item>
+        </content>
+      </control>
+    </control>
+  </controls>
+</window>

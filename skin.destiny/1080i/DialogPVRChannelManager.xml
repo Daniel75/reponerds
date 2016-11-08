@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="605">
+  <defaultcontrol always="true">20</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+    <include>CommonAllFront2</include>
+    <control type="group">
+	  <include>SlideInAndOutAnimationRNL</include>
+      <control type="button" id="4">
+        <description>OK Button</description>
+        <left>1445</left>
+        <top>220</top>
+        <width>410</width>
+        <height>60</height>
+        <textoffsety>20</textoffsety>
+        <label>186</label>
+        <font>primal_20</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <onleft>7</onleft>
+        <onright>60</onright>
+        <onup>6</onup>
+        <ondown>5</ondown>
+      </control>
+      <control type="button" id="5">
+        <description>Apply changes Button</description>
+        <left>1445</left>
+        <top>285</top>
+        <width>410</width>
+        <height>60</height>
+        <textoffsety>20</textoffsety>
+        <label>14070</label>
+        <font>primal_20</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <onleft>7</onleft>
+        <onright>60</onright>
+        <onup>4</onup>
+        <ondown>6</ondown>
+      </control>
+      <control type="button" id="6">
+        <description>Cancel Button</description>
+        <left>1445</left>
+        <top>350</top>
+        <width>410</width>
+        <height>60</height>
+        <textoffsety>20</textoffsety>
+        <label>222</label>
+        <font>primal_20</font>
+        <align>right</align>
+        <aligny>center</aligny>
+        <onleft>7</onleft>
+        <onright>60</onright>
+        <onup>5</onup>
+        <ondown>4</ondown>
+      </control>
+	  </control>
+	  <control type="group">
+	    <left>400</left>
+        <top>100</top>
+		<include>SlideInAndOutAnimationRNL</include>
+      <control type="radiobutton" id="7">
+        <description>Channel activated</description>
+        <left>402</left>
+        <top>120</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <align>left</align>
+        <aligny>center</aligny>
+        <pulseonselect>no</pulseonselect>
+        <label>19074</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>33</onup>
+        <ondown>8</ondown>
+      </control>
+      <control type="edit" id="8">
+        <description>Channel name</description>
+        <left>402</left>
+        <top>175</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <label>19201</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>7</onup>
+        <ondown>9</ondown>
+      </control>
+      <control type="button" id="9">
+        <description>Channellogo Button</description>
+        <left>402</left>
+        <top>230</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <label>19202</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>8</onup>
+        <ondown>11</ondown>
+      </control>
+      <control type="image" id="10">
+        <description>LOGO</description>
+        <left>915</left>
+        <top>230</top>
+        <width>52</width>
+        <height>52</height>
+        <aspectratio>keep</aspectratio>
+        <info>ListItem.Property(Icon)</info>
+      </control>
+      <control type="spincontrolex" id="11">
+        <description>Group selection</description>
+        <left>402</left>
+        <top>285</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <label>19207</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>9</onup>
+        <ondown>12</ondown>
+      </control>
+      <control type="radiobutton" id="12">
+        <description>EPG activated</description>
+        <left>402</left>
+        <top>340</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <align>left</align>
+        <aligny>center</aligny>
+        <pulseonselect>no</pulseonselect>
+        <label>19206</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>11</onup>
+        <ondown>13</ondown>
+      </control>
+      <control type="spincontrolex" id="13">
+        <description>EPG source</description>
+        <left>402</left>
+        <top>395</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <label>19200</label>
+        <onleft>20</onleft>
+        <onright>4</onright>
+        <onup>12</onup>
+        <ondown>14</ondown>
+      </control>
+	  <control type="radiobutton" id="14">
+		<description>Parental locked</description>
+		<left>402</left>
+        <top>450</top>
+		<width>570</width>
+        <height>50</height>
+		<font>primal_20</font>
+		<label>19267</label>
+		<onleft>20</onleft>
+        <onright>4</onright>
+        <onup>13</onup>
+        <ondown>30</ondown>
+	</control>
+      <control type="button" id="30">
+        <description>Group Manager Button</description>
+        <left>402</left>
+        <top>640</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <align>center</align>
+        <label>19205</label>
+        <onleft>20</onleft>
+        <onright>34</onright>
+        <onup>13</onup>
+        <ondown>31</ondown>
+      </control>
+      <control type="button" id="34">
+        <description>TV/Radio Button</description>
+        <left>402</left>
+        <top>695</top>
+        <width>570</width>
+        <height>50</height>
+        <font>primal_20</font>
+        <visible>IsEmpty(Window.Property(IsRadio))</visible>
+        <align>center</align>
+        <label>19024</label>
+        <onleft>30</onleft>
+        <onright>4</onright>
+        <onup>13</onup>
+        <ondown>31</ondown>
+      </control>
+      <control type="button" id="34">
+        <description>TV/Radio Button</description>
+        <left>687</left>
+        <top>638</top>
+        <width>285</width>
+        <height>50</height>
+        <font>primal_20</font>
+		<visible>!IsEmpty(Window.Property(IsRadio))</visible>
+        <texturenofocus border="5">MenuItemNF.png</texturenofocus>
+        <align>center</align>
+        <label>19023</label>
+        <onleft>30</onleft>
+        <onright>4</onright>
+        <onup>13</onup>
+        <ondown>31</ondown>
+      </control>
+	  <control type="image">
+		<left>1100</left>
+		<top>600</top>
+		<width>200</width>
+		<height>200</height>
+		<aspectratio>keep</aspectratio>
+		<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
+	  </control>
+      <!-- ===================== TV Kanäle ========================== -->
+      <control type="list" id="20">
+        <left>-200</left>
+        <top>120</top>
+        <width>525</width>
+        <height>755</height>
+        <onup>20</onup>
+        <ondown>20</ondown>
+        <onleft>60</onleft>
+        <onright>7</onright>
+        <pagecontrol>60</pagecontrol>
+        <scrolltime>200</scrolltime>
+        <itemlayout height="62">
+          <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>525</width>
+            <height>60</height>
+            <texture background="true">skin/button_klein.png</texture>
+	        <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+          </control>
+          <control type="image">
+            <left>20</left>
+            <top>8</top>
+            <width>45</width>
+            <height>45</height>
+            <info>ListItem.Property(Icon)</info>
+          </control>
+          <control type="image">
+            <left>20</left>
+            <top>8</top>
+            <width>45</width>
+            <height>45</height>
+            <texture>black-back2.png</texture>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="image">
+            <left>500</left>
+            <top>8</top>
+            <width>45</width>
+            <height>45</height>
+            <texture border="5">amt-overlay-saved.png</texture>
+            <visible>ListItem.Property(Changed)</visible>
+          </control>
+          <control type="label">
+            <left>72</left>
+            <top>0</top>
+            <width>75</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Number)</info>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>72</left>
+            <top>0</top>
+            <width>75</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Number)</info>
+            <visible>ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>148</left>
+            <top>0</top>
+            <width>285</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Name)</info>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>148</left>
+            <top>0</top>
+            <width>285</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Name)</info>
+            <visible>ListItem.Property(ActiveChannel)</visible>
+          </control>
+        </itemlayout>
+        <focusedlayout height="97">
+		  <control type="image">
+            <left>0</left>
+            <top>0</top>
+            <width>525</width>
+            <height>95</height>
+            <texture background="true">skin/button_klein.png</texture>
+	        <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+          </control>
+          <control type="image">
+            <left>20</left>
+            <top>8</top>
+            <width>45</width>
+            <height>45</height>
+            <info>ListItem.Property(Icon)</info>
+          </control>
+          <control type="image">
+            <left>500</left>
+            <top>8</top>
+            <width>45</width>
+            <height>45</height>
+            <texture border="5">amt-overlay-saved.png</texture>
+            <visible>ListItem.Property(Changed)</visible>
+          </control>
+          <control type="label">
+            <left>72</left>
+            <top>0</top>
+            <width>75</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Number)</info>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>72</left>
+            <top>0</top>
+            <width>75</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Number)</info>
+            <visible>ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>148</left>
+            <top>0</top>
+            <width>285</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Name)</info>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>148</left>
+            <top>0</top>
+            <width>285</width>
+            <height>52</height>
+            <font>primal_20</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <info>ListItem.Property(Name)</info>
+            <visible>ListItem.Property(ActiveChannel)</visible>
+          </control>
+          <control type="label">
+            <left>20</left>
+            <top>45</top>
+            <width>525</width>
+            <height>52</height>
+            <font>primal_18</font>
+            <align>left</align>
+            <aligny>center</aligny>
+            <textcolor>$VAR[ColorFontNormal]</textcolor>
+	        <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+            <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+            <label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+          </control>
+          <control type="image">
+            <left>20</left>
+            <top>0</top>
+            <width>525</width>
+            <height>90</height>
+            <texture border="5">black-back2.png</texture>
+            <visible>!ListItem.Property(ActiveChannel)</visible>
+          </control>
+        </focusedlayout>
+      </control>
+      <control type="scrollbar" id="60">
+        <left>350</left>
+        <top>120</top>
+        <width>10</width>
+        <height>755</height>
+        <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+		<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+		<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+        <onleft>4</onleft>
+        <onright>20</onright>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+      </control>
+      <control type="label">
+        <description>Page Count Label</description>
+        <left>1470</left>
+        <top>-30</top>
+        <width>750</width>
+        <height>30</height>
+        <font>primal_20</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <scroll>false</scroll>
+        <align>right</align>
+        <aligny>center</aligny>
+        <label>([COLOR=orange]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=orange]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+      </control>
+      <control type="label">
+        <description>header label</description>
+        <left>570</left>
+        <top>65</top>
+        <width>1110</width>
+        <height>45</height>
+        <font>primal_24</font>
+        <label>$LOCALIZE[19199]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <visible>IsEmpty(Window.Property(IsRadio))</visible>
+      </control>
+      <control type="label">
+        <description>header label</description>
+        <left>-80</left>
+        <top>65</top>
+        <width>1110</width>
+        <height>45</height>
+        <font>primal_24</font>
+        <label>$LOCALIZE[19023]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <visible>IsEmpty(Window.Property(IsRadio))</visible>
+      </control>
+      <control type="label">
+        <description>header label</description>
+        <left>450</left>
+        <top>30</top>
+        <width>1110</width>
+        <height>45</height>
+        <font>font16caps</font>
+        <label>$LOCALIZE[19199] - $LOCALIZE[19024]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+        <visible>!IsEmpty(Window.Property(IsRadio))</visible>
+      </control>
+    </control>
+  </controls>
+</window>

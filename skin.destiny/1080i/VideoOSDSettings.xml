@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="123">
+  <defaultcontrol>5</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <left>360</left>
+    <top>172</top>
+  </coordinates>
+  <include>dialogeffect</include>
+  <controls>
+    <control type="group">
+      <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+      <control type="image">
+		<left>25</left>
+		<top>0</top>
+		<width>1175</width>
+		<height>780</height>
+		<texture background="true">skin/button_klein.png</texture>	
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>6</bordersize>	
+		<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+	  </control>
+	  <control type="image">
+		<left>30</left>
+		<top>5</top>
+		<width>1165</width>
+		<height>770</height>
+		<texture background="true">skin/button_klein.png</texture>	
+		<bordertexture border="10">-</bordertexture>
+		<bordersize>6</bordersize>	
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  </control>
+	  <control type="button">
+		<description>Close Window button</description>
+		<left>1160</left>
+		<top>-10</top>
+		<width>48</width>
+		<height>48</height>
+		<label>-</label>
+		<font>-</font>
+		<onclick>PreviousMenu</onclick>
+		<texturefocus>default/close.png</texturefocus>
+		<texturenofocus>default/close.png</texturenofocus>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<onup>2</onup>
+		<ondown>2</ondown>
+		<visible>system.getbool(input.enablemouse)</visible>
+	  </control>
+      <control type="label" id="2">
+        <description>header label</description>
+        <left>30</left>
+        <top>37</top>
+        <width>1140</width>
+        <height>45</height>
+        <font>primal_20</font>
+        <align>center</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontSelected]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      </control>
+      <control type="grouplist" id="5">
+        <description>control area</description>
+        <left>60</left>
+        <top>98</top>
+        <width>1080</width>
+        <height>642</height>
+        <itemgap>5</itemgap>
+        <pagecontrol>60</pagecontrol>
+        <onleft>60</onleft>
+        <onright>60</onright>
+        <onup>5</onup>
+        <ondown>5</ondown>
+      </control>
+      <control type="scrollbar" id="60">
+        <left>1150</left>
+        <top>98</top>
+        <width>15</width>
+        <height>635</height>
+        <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+		<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+		<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+		<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+		<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+        <onleft>5</onleft>
+        <onright>5</onright>
+        <ondown>61</ondown>
+        <onup>61</onup>
+        <showonepage>false</showonepage>
+        <orientation>vertical</orientation>
+      </control>
+    </control>
+    <control type="sliderex" id="13">
+      <description>Default Slider</description>
+      <height>60</height>
+      <font>font13</font>
+      <textcolor>grey2</textcolor>
+      <focusedcolor>white</focusedcolor>
+    </control>
+    <control type="button" id="7">
+      <description>Default Button</description>
+      <left>0</left>
+      <top>0</top>
+      <height>60</height>
+      <font>font13</font>
+    </control>
+    <control type="radiobutton" id="8">
+      <description>Default RadioButton</description>
+      <left>0</left>
+      <top>0</top>
+      <height>60</height>
+      <font>font13</font>
+    </control>
+    <control type="spincontrolex" id="9">
+      <description>Default SpinControlex</description>
+      <left>0</left>
+      <top>0</top>
+      <height>60</height>
+      <font>font13</font>
+      <aligny>center</aligny>
+      <reverse>yes</reverse>
+    </control>
+  </controls>
+</window>

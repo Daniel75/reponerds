@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+	<defaultcontrol>61</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<include>DialogBackgroundSimple</include>
+		<control type="group">
+			<visible>!Window.IsVisible(FileBrowser)</visible>
+			<include>openclosebox</include>
+			<include name="DialogInfoBackgroundParam">
+				<param name="DialogBackgroundLeft" value="160" />
+				<param name="DialogBackgroundTop" value="60" />
+				<param name="DialogBackgroundWidth" value="965" />
+				<param name="DialogBackgroundHeight" value="605" />
+				<param name="DialogSeparatorTop" value="110" />
+				<param name="DialogSeparatorBottom" value="665" />
+				<param name="DialogShadowTop" value="666" />
+				<param name="DialogHeaderLabel" value="" />
+				<param name="DialogHeaderTop" value="70" />
+				<param name="DialogHeaderId" value="1" />
+			</include>
+			<control type="group">
+				<left>160</left>
+				<top>55</top>
+				<control type="textbox" id="5">
+					<description>textarea</description>
+					<left>10</left>
+					<top>72</top>
+					<width>922</width>
+					<height>516</height>
+					<align>justify</align>
+				</control>
+				<control type="scrollbar" id="61">
+					<left>940</left>
+					<top>60</top>
+					<height>516</height>
+					<onleft>Close</onleft>
+					<onright>Close</onright>
+					<ondown>61</ondown>
+					<onup>61</onup>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

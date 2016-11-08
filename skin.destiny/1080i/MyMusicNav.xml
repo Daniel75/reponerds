@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="502">
+  <defaultcontrol always="true">55</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <include>ViewidAudio</include>
+  <visible>!Skin.HasSetting(kiosk)</visible>
+  <controls>
+	
+	<include>CommonHomeBack</include>	
+    <include>ViewsAudio</include>
+	<include>SideBladeForViews</include>
+	<include>BigInfosTime</include>
+	<include>BigInfosDatabaseCount</include>
+	<include>BigInfosWeather</include>
+	<include>CommonHomeButton</include>
+	<include>HomePlaying</include>
+	<include>CommonPageCount</include>
+	<include>JumpBarHorizontal</include>
+   
+    <control type="group">
+      <visible>!Skin.HasSetting(kiosk)</visible>
+      <animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">WindowClose</animation>
+      <control type="image">
+        <left>-495</left>
+        <top>0</top>
+        <width>420</width>
+        <height>1080</height>
+        <texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow2.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+        <aspectratio>stretch</aspectratio>
+      </control>
+      <control type="group">
+        <left>-457</left>
+        <top>60</top>
+        <control type="label">
+          <description>View options</description>
+          <left>0</left>
+          <top>0</top>
+          <width>375</width>
+          <height>45</height>
+          <font>primal_20</font>
+          <textcolor>$VAR[ColorFontSelected]</textcolor>
+	      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+          <scroll>false</scroll>
+          <align>left</align>
+          <aligny>center</aligny>
+          <label>$LOCALIZE[14018]</label>
+        </control>
+      </control>
+      <!-- MENU ITEMS BELOW -->
+      <control type="grouplist" id="9020">
+		<description>My first group list control</description>
+		<left>-482</left>
+		<top>120</top>
+		<width>400</width>
+		<height>800</height>
+		<itemgap>2</itemgap>
+		<pagecontrol>25</pagecontrol>
+		<scrolltime tween="sine" easing="out">200</scrolltime>
+		<orientation>vertical</orientation>
+		<usecontrolcoords>false</usecontrolcoords>
+		<visible>true</visible>
+		<onleft>55</onleft>
+		<onright>55</onright>
+		<onup>9020</onup>
+		<ondown>9020</ondown>
+		<control type="button" id="1">
+		  <description>View</description>
+		  <height>60</height>
+		  <width>400</width>
+		  <label>457</label>
+		  <onclick>Control.SetFocus(9030)</onclick>
+		</control>
+        <!--<control type="button" id="2">
+          <description>View As button</description>
+		  <width>400</width>
+          <height>60</height>
+          <label>-</label>
+          <onleft>55</onleft>
+          <onright>55</onright>
+          <onup>201</onup>
+          <ondown>3</ondown>
+        </control>-->
+        <control type="button" id="3">
+          <description>Sort by button</description>
+		  <width>400</width>
+          <height>60</height>
+          <label>103</label>
+          <onleft>55</onleft>
+          <onright>4</onright>
+          <onup>2</onup>
+          <ondown>99</ondown>
+        </control>
+        <control type="togglebutton" id="4">
+          <description>Sort asc</description>
+		  <width>400</width>
+          <height>60</height>
+          <label>50029</label>
+		  <altlabel>50324</altlabel>
+          <onleft>3</onleft>
+          <onright>55</onright>
+          <onup>2</onup>
+          <ondown>99</ondown>
+        </control>
+        <control type="radiobutton" id="16">
+          <description>PartyMode</description>
+		  <width>400</width>
+          <height>60</height>
+          <label>589</label>
+          <onleft>55</onleft>
+          <onright>55</onright>
+          <onup>99</onup>
+          <ondown>19</ondown>
+        </control>
+        <control type="edit" id="19">
+		  <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+		  <description>Filter</description>
+		  <textwidth>230</textwidth>
+		  <width>400</width>
+          <height>60</height>
+		  <label>587</label>
+		</control>
+		<control type="radiobutton" id="98">
+		  <visible>Container.CanFilterAdvanced</visible>
+		  <description>Filter</description>
+		  <width>400</width>
+          <height>60</height>
+		  <label>587</label>
+		  <selected>Container.Filtered</selected>
+		  <onclick>right</onclick>
+		  <onclick>Filter</onclick>
+		</control>
+        <control type="togglebutton" id="20">
+		  <width>400</width>
+          <height>60</height>
+          <description>Update library</description>
+          <label>653</label>
+          <altlabel>13353</altlabel>
+          <alttexturefocus border="5">button-focus.png</alttexturefocus>
+          <alttexturenofocus>-</alttexturenofocus>
+          <usealttexture>library.isscanningvideo</usealttexture>
+		  <onright>55</onright>
+          <onup>19</onup>
+          <ondown>8</ondown>
+        </control>
+		<control type="button" id="8">
+          <description>Search</description>
+		  <width>400</width>
+          <height>60</height>
+          <label>137</label>
+          <onleft>55</onleft>
+          <onright>55</onright>
+          <onup>20</onup>
+          <ondown>201</ondown>
+        </control>
+      </control>
+    </control>
+	<include>ViewTypeList</include>
+  </controls>
+</window>

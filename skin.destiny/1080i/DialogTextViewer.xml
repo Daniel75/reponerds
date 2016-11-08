@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="147">
+  <defaultcontrol>61</defaultcontrol>
+  <controls>
+    <control type="group">
+      <animation effect="slide" start="1650,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="1650,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
+      <control type="image">
+        <left>270</left>
+        <top>-50</top>
+        <width>1750</width>
+        <height>1200</height>
+        <texture>DIALOGE/dialog_blank2.png</texture>
+      </control>
+      <control type="group">
+        <animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
+        <animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+        <control type="label" id="1">
+          <description>header label</description>
+          <left>315</left>
+          <top>75</top>
+          <width>1545</width>
+          <height>45</height>
+          <font>primal_30_Bold</font>
+          <align>left</align>
+          <aligny>center</aligny>
+          <textcolor>blue</textcolor>
+          <shadowcolor>black</shadowcolor>
+        </control>
+        <control type="textbox" id="5">
+          <description>textarea</description>
+          <left>315</left>
+          <top>135</top>
+          <width>1500</width>
+          <height>900</height>
+          <label>-</label>
+          <font>primal_20</font>
+          <align>justify</align>
+          <textcolor>white</textcolor>
+          <shadowcolor>black</shadowcolor>
+          <pagecontrol>61</pagecontrol>
+        </control>
+        <control type="scrollbar" id="61">
+          <left>1822</left>
+          <top>135</top>
+          <width>15</width>
+          <height>900</height>
+          <texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+          <texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+          <texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+          <textureslidernib>ScrollBarNib.png</textureslidernib>
+          <textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+          <onleft>61</onleft>
+          <onright>61</onright>
+          <ondown>61</ondown>
+          <onup>61</onup>
+          <showonepage>true</showonepage>
+          <orientation>vertical</orientation>
+        </control>
+      </control>
+    </control>
+  </controls>
+</window>

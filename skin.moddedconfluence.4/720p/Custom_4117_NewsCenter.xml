@@ -1,0 +1,1783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4117">
+    <defaultcontrol always="true">19010</defaultcontrol>
+    <allowoverlay>false</allowoverlay>
+	<include>openclose</include>
+    <controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<colordiffuse>grey</colordiffuse>
+			<texture background="true">White.png</texture>
+		</control>
+		<include>ContentPanelBackgrounds</include>
+		<control type="group">
+			<top>16</top>
+			<include>openclosebox</include>
+			<control type="image">
+				<left>20</left>
+				<top>20</top>
+				<width>1230</width>
+				<height>60</height>
+				<colordiffuse>fanartdiffuse</colordiffuse>
+				<texture border="15">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>20</left>
+				<top>80</top>
+				<width>910</width>
+				<height>585</height>
+				<texture border="15">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+				<left>940</left>
+				<top>80</top>
+				<width>310</width>
+				<height>585</height>
+				<texture border="15">ContentPanel.png</texture>
+			</control>
+			<control type="label">
+				<left>30</left>
+				<top>35</top>
+				<width>1220</width>
+				<height>50</height>
+				<label>[UPPERCASE]Newscenter[/UPPERCASE]</label>
+				<align>center</align>
+			</control>
+			<control type="list" id="19010"> <!-- Home -->
+				<left>950</left>
+				<top>100</top>
+				<width>290</width>
+				<height>500</height>
+				<onright>1860</onright>
+				<onleft condition="Container(19010).Hasfocus(80101)">19111</onleft>
+				<onleft condition="Container(19010).Hasfocus(80102)">24010</onleft>
+				<onleft condition="Container(19010).Hasfocus(80103)">23010</onleft>
+				<onleft condition="Container(19010).Hasfocus(80104)">88435</onleft>
+				<onleft condition="Container(19010).Hasfocus(80105)">88432</onleft>
+				<onleft condition="Container(19010).Hasfocus(80106)">88433</onleft>
+				<onleft condition="Container(19010).Hasfocus(80107)">88434</onleft>
+				<onleft condition="Container(19010).Hasfocus(80108)">88435</onleft>
+				<onup>19011</onup>
+				<ondown>19011</ondown>
+				<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+				<focusposition>0</focusposition>
+				<orientation>vertical</orientation>
+				<movement>1</movement>
+				<itemlayout height="40" width="290">
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>270</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="40" width="290">
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>40</height>
+						<texture>button-focus.png</texture>
+						<visible>Control.HasFocus(19010)</visible>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>290</width>
+						<height>40</height>
+						<colordiffuse>fanartdiffuse</colordiffuse>
+						<texture>button-focus.png</texture>
+						<visible>!Control.HasFocus(19010)</visible>
+					</control>
+					<control type="label">
+						<left>10</left>
+						<top>0</top>
+						<width>270</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="80101">
+					  <label>$ADDON[plugin.program.newscenter  30112]</label>
+					  <onclick>RunScript(plugin.program.newscenter,"?methode=show_select_dialog")</onclick>
+					</item>
+					<item id="80102">
+					  <label>$ADDON[plugin.program.newscenter  30113]</label>
+					  <onclick>-</onclick>
+					</item>
+					<item id="80108">
+					  <label>Live Streams</label>
+					  <onclick>-</onclick>
+					</item>
+					<item id="80103">
+					  <label>$ADDON[plugin.program.newscenter  30111]</label>
+					  <onclick>-</onclick>
+					</item>
+					<item id="80104">
+					  <label>$ADDON[plugin.program.newscenter  30109]</label>
+					  <onclick>-</onclick>
+					</item>
+					<item id="80105">
+					  <label>$ADDON[plugin.program.newscenter  30093]</label>
+					  <onclick>-</onclick>
+					</item>
+					<item id="80106">
+					  <label>$ADDON[plugin.program.newscenter  30107]</label>
+					  <onclick>-</onclick>
+					  <!-- <visible>!StringCompare(Window(Home).Property(NewsCenter.Unwetter.Anzahl),0)</visible> -->
+					</item>
+					<item id="80107">
+					  <label>$ADDON[plugin.program.newscenter  30105]</label>
+					  <onclick>-</onclick>
+					</item>
+				</content>
+			</control>
+			<control type="button" id="19011"> <!-- Addon Settings -->
+				<left>950</left>
+				<top>600</top>
+				<width>290</width>
+				<height>40</height>
+				<onright>-</onright>
+				<onleft condition="Container(19010).Hasfocus(80101)">19111</onleft>
+				<onleft condition="Container(19010).Hasfocus(80102)">24010</onleft>
+				<onleft condition="Container(19010).Hasfocus(80103)">23010</onleft>
+				<onleft condition="Container(19010).Hasfocus(80104)">88435</onleft>
+				<onleft condition="Container(19010).Hasfocus(80105)">88432</onleft>
+				<onleft condition="Container(19010).Hasfocus(80106)">88433</onleft>
+				<onleft condition="Container(19010).Hasfocus(80107)">88434</onleft>
+				<onup>19010</onup>
+				<ondown>19010</ondown>
+				<align>left</align>
+				<label>Addons Settings</label>
+				<texturenofocus>-</texturenofocus>
+				<onclick>Addon.OpenSettings(plugin.program.newscenter)</onclick>
+			</control>
+			<control type="group"> <!-- News Feed -->
+				<visible>Container(19010).Hasfocus(80101)</visible>
+				<control type="image">
+					<left>50</left>
+					<top>100</top>
+					<width>860</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Window(Home).Property(LatestNews.0.HeaderPic)]</texture>
+				</control>
+				<control type="list" id="19111">
+					<visible>Container(19010).Hasfocus(80101)</visible>
+					<left>40</left>
+					<top>152</top>
+					<width>880</width>
+					<height>490</height>
+					<onright>19010</onright>
+					<onleft>9020</onleft>
+					<onup>19111</onup>
+					<ondown>19111</ondown>
+					<orientation>vertical</orientation>
+					<viewtype>list</viewtype>
+					<preloaditems>1</preloaditems>
+					<scrolltime tween="cubic">500</scrolltime>
+					<itemlayout height="160" width="880">
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>216</width>
+							<height>150</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<left>225</left>
+							<top>10</top>
+							<width>644</width>
+							<height>20</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<left>225</left>
+							<top>30</top>
+							<width>644</width>
+							<height>20</height>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>225</left>
+							<top>58</top>
+							<width>644</width>
+							<height>88</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(comment)]</label>
+							<autoscroll>false</autoscroll>
+						</control>
+					</itemlayout>
+					<focusedlayout height="160" width="880">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>880</width>
+							<height>160</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(19111)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>216</width>
+							<height>150</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadow.png</bordertexture>
+							<bordersize>6</bordersize>
+							<visible>!Control.HasFocus(19111)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>216</width>
+							<height>150</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadow.png</bordertexture>
+							<bordersize>6</bordersize>
+							<visible>Control.HasFocus(19111)</visible>
+						</control>
+						<control type="label">
+							<left>225</left>
+							<top>10</top>
+							<width>644</width>
+							<height>20</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<left>225</left>
+							<top>30</top>
+							<width>644</width>
+							<height>20</height>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="textbox">
+							<left>225</left>
+							<top>58</top>
+							<width>644</width>
+							<height>88</height>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(comment)]</label>
+							<autoscroll time="5000" delay="6000" repeat="5000">Control.HasFocus(19111)</autoscroll>
+						</control>
+					</focusedlayout>
+					<content>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="0" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="1" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="2" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="3" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="4" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="5" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="6" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="7" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="8" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="9" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="10" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="11" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="12" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="13" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="14" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="15" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="16" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="17" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="18" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="19" />
+						</include>
+						<include name="NewsCenterItem">
+							<param name="newscenter_id" value="20" />
+						</include>
+					</content>
+				</control>
+			</control>
+			<control type="group"> <!-- VIDEO NEWS MENU -->
+				<control type="panel" id="24010">
+					<visible>Container(19010).Hasfocus(80102)</visible>
+					<left>40</left>
+					<top>115</top>
+					<width>900</width>
+					<height>528</height>
+					<onright>19010</onright>
+					<onleft>19010</onleft>
+					<onup>24010</onup>
+					<ondown>24010</ondown>
+					<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>horizontal</orientation>
+					<movement>1</movement>
+					<itemlayout width="294" height="132">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>284</width>
+							<height>122</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>!Control.HasFocus(24010)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>274</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>30</top>
+							<width>274</width>
+							<height>100</height>
+							<font>font12</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Label2]</label>
+							<autoscroll>false</autoscroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="294" height="132">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>284</width>
+							<height>122</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(24010)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>274</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>30</top>
+							<width>274</width>
+							<height>100</height>
+							<font>font12</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Label2]</label>
+							<autoscroll>false</autoscroll>
+							<autoscroll time="5000" delay="6000" repeat="5000">Control.HasFocus(24010)</autoscroll>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="80148">
+							<label>$ADDON[plugin.program.newscenter  30131]</label>
+							<label2>$ADDON[plugin.program.newscenter  30121]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschau_100")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.Tagesschau100),true)</visible>
+						</item>
+						<item id="80149">
+							<label>$ADDON[plugin.program.newscenter  30123]</label>
+							<label2>$ADDON[plugin.program.newscenter  30122]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschau")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.Tagesschau),true)</visible>
+						</item>
+						<item id="80150">
+							<label>$ADDON[plugin.program.newscenter  30136]</label>
+							<label2>$ADDON[plugin.program.newscenter  30130]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_mdr_aktuell_130")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.MDRAktuell),true)</visible>
+						</item>
+						<item id="80151">
+							<label>$ADDON[plugin.program.newscenter  30095]</label>
+							<label2>$ADDON[plugin.program.newscenter  30094]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_rundschau100")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.BRRundschau100),true)</visible>
+						</item>
+						<item id="80152">
+							<label>$ADDON[plugin.program.newscenter  30097]</label>
+							<label2>$ADDON[plugin.program.newscenter  30096]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_ndraktuellkompakt")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.NDRKompakt),true)</visible>
+						</item>
+						<item id="80153">
+							<label>$ADDON[plugin.program.newscenter  30138]</label>
+							<label2>$ADDON[plugin.program.newscenter  30132]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_kinder_nachrichten")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.KinderNachrichten),true)</visible>
+						</item>
+						<item id="80154">
+							<label>$ADDON[plugin.program.newscenter  30139]</label>
+							<label2>$ADDON[plugin.program.newscenter  30134]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_wetteronline")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.Wetter60),true)</visible>
+						</item>
+						<item id="80155">
+							<label>$ADDON[plugin.program.newscenter  30140]</label>
+							<label2>$ADDON[plugin.program.newscenter  30133]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_tagesschauwetter")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.TagesschauWetter),true)</visible>
+						</item>
+						<item id="80156">
+							<label>$ADDON[plugin.program.newscenter  30141]</label>
+							<label2>$ADDON[plugin.program.newscenter  30124]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_wetterinfo")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.WetterInfo),true)</visible>
+						</item>
+						<item id="80157">
+							<label>$ADDON[plugin.program.newscenter  30099]</label>
+							<label2>$ADDON[plugin.program.newscenter  30098]</label2>
+							<onclick>RunScript(plugin.program.newscenter,"?methode=play_wetternet")</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.WetterNet),true)</visible>
+						</item>
+					</content>
+				</control>
+			</control>
+			<control type="group"> <!-- Live Streams -->
+				<control type="panel" id="88435">
+					<visible>Container(19010).Hasfocus(80108)</visible>
+					<left>40</left>
+					<top>115</top>
+					<width>900</width>
+					<height>528</height>
+					<onright>19010</onright>
+					<onleft>19010</onleft>
+					<onup>88435</onup>
+					<ondown>88435</ondown>
+					<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>horizontal</orientation>
+					<movement>1</movement>
+					<itemlayout width="294" height="132">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>284</width>
+							<height>122</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>!Control.HasFocus(88435)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>274</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>30</top>
+							<width>274</width>
+							<height>100</height>
+							<font>font12</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Label2]</label>
+							<autoscroll>false</autoscroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="294" height="132">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>284</width>
+							<height>122</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(88435)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>274</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>30</top>
+							<width>274</width>
+							<height>100</height>
+							<font>font12</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Label2]</label>
+							<autoscroll>false</autoscroll>
+							<autoscroll time="5000" delay="6000" repeat="5000">Control.HasFocus(88435)</autoscroll>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="80148">
+							<label>EuroNews</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_euronews&quot;)</onclick>
+						</item>
+						<item id="80149">
+							<label>N-TV</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_ntv&quot;)</onclick>
+							<visible>SubString(Window(Home).Property(NewsCenter.Visible.Tagesschau),true)</visible>
+						</item>
+						<item id="80150">
+							<label>N24</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_n24&quot;)</onclick>
+						</item>
+						<item id="80151">
+							<label>Tagesschau24</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_tagesschau24&quot;)</onclick>
+						</item>
+						<item id="80152">
+							<label>Phoenix</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_phoenix&quot;)</onclick>
+						</item>
+						<item id="80153">
+							<label>Deutsche Welle</label>
+							<label2>Live Stream</label2>
+							<onclick>RunScript(plugin.program.newscenter,&quot;?methode=play_livestream_dw&quot;)</onclick>
+						</item>
+					</content>
+				</control>
+			</control>
+			<control type="group"> <!-- Fussball Top Menü -->
+				<visible>Container(19010).Hasfocus(80103)</visible>
+				<control type="list" id="23010">
+					<visible>Container(19010).Hasfocus(80103)</visible>
+					<left>60</left>
+					<top>100</top>
+					<width>840</width>
+					<height>40</height>
+					<onright>19010</onright>
+					<onleft>19010</onleft>
+					<onup>-</onup>
+					<ondown condition="Container(23010).HasFocus(23101)|Container(23010).HasFocus(23103)">88430</ondown>
+					<ondown condition="Container(23010).HasFocus(23102)|Container(23010).HasFocus(23104)">88431</ondown>
+					<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>horizontal</orientation>
+					<movement>1</movement>
+					<itemlayout width="210" height="40">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>210</width>
+							<height>35</height>
+							<colordiffuse>fanartdiffuse</colordiffuse>
+							<texture border="4">button-focus.png</texture>
+							<visible>!Control.HasFocus(23010)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>4</top>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>font12_title</font>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="210" height="40">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>210</width>
+							<height>36</height>
+							<texture border="4">button-focus.png</texture>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>4</top>
+							<width>200</width>
+							<height>30</height>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<font>font12_title</font>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="23101">
+							<label>$ADDON[plugin.program.newscenter  30128]</label>
+							<onclick>SetFocus(88430)</onclick>
+						</item>
+						<item id="23102">
+							<label>$ADDON[plugin.program.newscenter  30125]</label>
+							<onclick>SetFocus(88431)</onclick>
+						</item>
+						<item id="23103">
+							<label>$ADDON[plugin.program.newscenter  30129]</label>
+							<onclick>SetFocus(88430)</onclick>
+						</item>
+						<item id="23104">
+							<label>$ADDON[plugin.program.newscenter  30126]</label>
+							<onclick>SetFocus(88431)</onclick>
+						</item>
+					</content>
+				</control>
+			</control>
+			<control type="group"> <!-- Fussball TABELLE -->
+				<visible>Container(19010).Hasfocus(80103)</visible>
+				<visible>Container(23010).Hasfocus(23101)|Container(23010).Hasfocus(23103)</visible>
+				<control type="group">
+					<left>56</left>
+					<top>55</top>
+					<control type="label">
+						<description>Platz label</description>
+						<left>70</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30142]. $ADDON[plugin.program.newscenter  30143]</label>
+					</control>
+					<control type="label">
+						<description>Spiele label</description>
+						<left>327</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30144]</label>
+					</control>
+					<control type="label">
+						<description>header label</description>
+						<left>433</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30145]</label>
+					</control>
+					<control type="label">
+						<description>Tore label</description>
+						<left>570</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30146]</label>
+					</control>
+					<control type="label">
+						<description>Punkte label</description>
+						<left>670</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30147]</label>
+					</control>
+					<control type="label">
+						<description>Statistik label</description>
+						<left>760</left>
+						<top>100</top>
+						<width>730</width>
+						<height>30</height>
+						<font>font13</font>
+						<label>$ADDON[plugin.program.newscenter  30148]</label>
+					</control>
+				</control>
+				<control type="list" id="88430">
+					<left>50</left>
+					<top>190</top>
+					<width>860</width>
+					<height>450</height>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>23010</onup>
+					<ondown>88430</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<itemlayout width="860" height="45">
+						<control type="image">
+							<left>10</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<description>Platz</description>
+							<left>40</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Platz)]</label>
+							<align>right</align>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Label</description>
+							<left>95</left>
+							<top>5</top>
+							<height>30</height>
+							<width>250</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Spiele</description>
+							<left>330</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Spiele)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Sun</description>
+							<left>430</left>
+							<top>5</top>
+							<height>30</height>
+							<width>100</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Sun)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Tore</description>
+							<left>550</left>
+							<top>5</top>
+							<height>30</height>
+							<width>110</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Tore)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Punkte</description>
+							<left>670</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Punkte)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<description>StatPic</description>
+							<left>780</left>
+							<top>18</top>
+							<width>41</width>
+							<height>11</height>
+							<aligny>center</aligny>
+							<texture>$INFO[ListItem.Property(StatPic)]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</itemlayout>
+					<focusedlayout width="860" height="45">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>45</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(88430)</visible>
+						</control>
+						<control type="image">
+							<left>10</left>
+							<top>8</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<description>Platz</description>
+							<left>40</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Platz)]</label>
+							<align>right</align>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>channel</description>
+							<left>95</left>
+							<top>5</top>
+							<height>30</height>
+							<width>233</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Spiele</description>
+							<left>330</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Spiele)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Sun</description>
+							<left>430</left>
+							<top>5</top>
+							<height>30</height>
+							<width>100</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Sun)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Tore</description>
+							<left>550</left>
+							<top>5</top>
+							<height>30</height>
+							<width>110</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Tore)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<description>Punkte</description>
+							<left>670</left>
+							<top>5</top>
+							<height>30</height>
+							<width>50</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Punkte)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<description>StatPic</description>
+							<left>780</left>
+							<top>18</top>
+							<width>41</width>
+							<height>11</height>
+							<aligny>center</aligny>
+							<texture>$INFO[ListItem.Property(StatPic)]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</focusedlayout>
+					<content>$VAR[NewsPreviewBundesligaTabelle]</content>
+				</control>
+			</control>
+			<control type="group"> <!-- Fussball SPIELERGEBNISSE -->
+				<visible>Container(19010).Hasfocus(80103)</visible>
+				<visible>Container(23010).Hasfocus(23102)|Container(23010).Hasfocus(23104)</visible>
+				<control type="list" id="88431">
+					<left>40</left>
+					<top>190</top>
+					<width>860</width>
+					<height>450</height>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>23010</onup>
+					<ondown>88431</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<itemlayout width="860" height="45">
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<height>45</height>
+							<width>180</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Spieldatum)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<left>200</left>
+							<top>8</top>
+							<width>28</width>
+							<height>28</height>
+							<texture background="true">$INFO[ListItem.Property(Mannschaft1Logo)]</texture>
+						</control>
+						<control type="label">
+							<left>240</left>
+							<top>0</top>
+							<height>45</height>
+							<width>250</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Mannschaft1)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>490</left>
+							<top>0</top>
+							<height>45</height>
+							<width>50</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Ergebniss)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>540</left>
+							<top>0</top>
+							<height>45</height>
+							<width>250</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Mannschaft2)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<left>810</left>
+							<top>8</top>
+							<width>28</width>
+							<height>28</height>
+							<texture>$INFO[ListItem.Property(Mannschaft2Logo)]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</itemlayout>
+					<focusedlayout width="860" height="45">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>45</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.Hasfocus(88431)</visible>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>0</top>
+							<height>45</height>
+							<width>180</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Spieldatum)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<left>200</left>
+							<top>8</top>
+							<width>28</width>
+							<height>28</height>
+							<texture background="true">$INFO[ListItem.Property(Mannschaft1Logo)]</texture>
+						</control>
+						<control type="label">
+							<left>240</left>
+							<top>0</top>
+							<height>45</height>
+							<width>250</width>
+							<align>right</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Mannschaft1)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>490</left>
+							<top>0</top>
+							<height>45</height>
+							<width>50</width>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Ergebniss)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>540</left>
+							<top>0</top>
+							<height>45</height>
+							<width>250</width>
+							<align>left</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Property(Mannschaft2)]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="image">
+							<left>810</left>
+							<top>8</top>
+							<width>28</width>
+							<height>28</height>
+							<texture>$INFO[ListItem.Property(Mannschaft2Logo)]</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+					</focusedlayout>
+					<content>$VAR[NewsPreviewBundesligaSpiele]</content>
+				</control>
+			</control>
+			<control type="group"> <!-- DEUTSCHLAND WETTER DATEN BILDER -->
+				<visible>Container(19010).Hasfocus(80104)</visible>
+				<control type="panel" id="88435">
+					<left>45</left>
+					<top>105</top>
+					<width>860</width>
+					<height>147</height>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>88435</onup>
+					<ondown>88435</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<itemlayout width="286" height="45">
+						<control type="image">
+							<left>2</left>
+							<top>0</top>
+							<height>40</height>
+							<width>282</width>
+							<colordiffuse>fanartdiffuse</colordiffuse>
+							<texture border="4">button-focus.png</texture>
+							<visible>!Control.HasFocus(88435)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<height>40</height>
+							<width>276</width>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="286" height="45">
+						<control type="image">
+							<left>2</left>
+							<top>0</top>
+							<height>40</height>
+							<width>282</width>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(88435)</visible>
+							<include>VisibleFadeEffect</include>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>0</top>
+							<height>40</height>
+							<width>276</width>
+							<font>font12</font>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.program.newscenter/?methode=get_dwd_pics_base_uwz</content>
+				</control>
+				<control type="image">
+					<left>52</left>
+					<top>200</top>
+					<width>846</width>
+					<height>445</height>
+					<colordiffuse>grey2</colordiffuse>
+					<texture background="true">White.png</texture>
+				</control>
+				<control type="image">
+					<left>52</left>
+					<top>200</top>
+					<width>856</width>
+					<height>445</height>
+					<texture background="true">$INFO[Container(88435).ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="group"> <!-- BUNDESLAND WETTER DATEN BILDER -->
+				<visible>Container(19010).Hasfocus(80105)</visible>
+				<control type="list" id="88432">
+					<left>610</left>
+					<top>105</top>
+					<width>300</width>
+					<height>540</height>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>88432</onup>
+					<ondown>88432</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<itemlayout width="300" height="42">
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>290</width>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="253" height="42">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>40</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(88432)</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>40</height>
+							<colordiffuse>fanartdiffuse</colordiffuse>
+							<texture border="4">button-focus.png</texture>
+							<visible>!Control.HasFocus(88432)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>5</top>
+							<height>30</height>
+							<width>290</width>
+							<label>$INFO[ListItem.Label]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.program.newscenter/?methode=get_dwd_pics_bundesland_uwz</content>
+				</control>
+				<control type="image">
+					<left>46</left>
+					<top>105</top>
+					<width>540</width>
+					<height>540</height>
+					<colordiffuse>grey3</colordiffuse>
+					<texture background="true">White.png</texture>
+				</control>
+				<control type="image">
+					<left>46</left>
+					<top>105</top>
+					<width>540</width>
+					<height>540</height>
+					<texture background="true">$INFO[Container(88432).ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="group"> <!-- WETTERWARNUNG DATEN BILDER -->
+				<visible>Container(19010).Hasfocus(80106)</visible>
+				<control type="list" id="88433">
+					<left>50</left>
+					<top>105</top>
+					<width>860</width>
+					<height>540</height>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>88433</onup>
+					<ondown>88433</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<visible>Container(19010).Hasfocus(80106)</visible>
+					<itemlayout width="860" height="180">
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>80</width>
+							<height>80</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left" aligny="top">keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>0</top>
+							<height>30</height>
+							<width>760</width>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Start)]$INFO[ListItem.Property(Ende), - ,]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>26</top>
+							<height>30</height>
+							<width>760</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>52</top>
+							<height>30</height>
+							<width>760</width>
+							<label>$INFO[ListItem.Property(Severity),$LOCALIZE[504044]: , - $INFO[ListItem.Property(Type)]]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>90</top>
+							<width>850</width>
+							<height>100</height>
+							<font>font13</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Property(LongText)]</label>
+							<autoscroll>false</autoscroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="860" height="180">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>860</width>
+							<height>180</height>
+							<texture border="4">button-focus.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>Control.HasFocus(88433)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>80</width>
+							<height>80</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio align="left" aligny="top">keep</aspectratio>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>0</top>
+							<height>30</height>
+							<width>760</width>
+							<font>font12</font>
+							<label>$INFO[ListItem.Property(Start)]$INFO[ListItem.Property(Ende), - ,]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>26</top>
+							<height>30</height>
+							<width>760</width>
+							<label>$INFO[ListItem.Label]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<left>90</left>
+							<top>52</top>
+							<height>30</height>
+							<width>760</width>
+							<label>$INFO[ListItem.Property(Severity),$LOCALIZE[504044]: , - $INFO[ListItem.Property(Type)]]</label>
+							<scroll>false</scroll>
+						</control>
+						<control type="textbox">
+							<left>5</left>
+							<top>90</top>
+							<width>850</width>
+							<height>100</height>
+							<font>font13</font>
+							<align>left</align>
+							<label>$INFO[ListItem.Property(LongText)]</label>
+							<autoscroll time="2000" delay="5000" repeat="5000">true</autoscroll>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.program.newscenter/?methode=get_unwetter_warnungen</content>
+				</control>
+				<control type="label">
+					<left>50</left>
+					<top>105</top>
+					<width>860</width>
+					<height>340</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font_MainMenu</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[Window(Home).Property(NewsCenter.PLZ),es liegen keine Warnungen für[CR],]$INFO[Window(Home).Property(NewsCenter.Bundesland, - , vor]</label>
+					<visible>StringCompare(Window(Home).Property(NewsCenter.Unwetter.Anzahl),0)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+			<control type="group"> <!-- POLLENWARNUNG INFOS & BILDER -->
+				<visible>Container(19010).Hasfocus(80107)</visible>
+				<control type="list">
+					<left>55</left>
+					<top>110</top>
+					<width>855</width>
+					<height>200</height>
+					<orientation>horizontal</orientation>
+					<itemlayout width="107" height="200">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>100</top>
+							<width>100</width>
+							<height>26</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>98</top>
+							<width>100</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>100</width>
+							<height>126</height>
+							<colordiffuse>grey3</colordiffuse>
+							<texture>$INFO[ListItem.Property(fallback1)]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout width="107" height="200">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>100</width>
+							<height>100</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>100</top>
+							<width>100</width>
+							<height>26</height>
+							<texture>$INFO[ListItem.Label2]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="label">
+							<left>0</left>
+							<top>98</top>
+							<width>100</width>
+							<height>30</height>
+							<align>center</align>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>100</width>
+							<height>126</height>
+							<colordiffuse>grey3</colordiffuse>
+							<texture>$INFO[ListItem.Property(fallback1)]</texture>
+						</control>
+					</focusedlayout>
+					<content>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="0" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="1" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="2" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="3" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="4" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="5" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="6" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="7" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="8" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="9" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="10" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="11" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="12" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="13" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="14" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="15" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="16" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="17" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="18" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="19" />
+						</include>
+						<include name="NewsCenterItem_Pollen">
+							<param name="newscenter_pollen_id" value="20" />
+						</include>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+						<item>
+							<label>-</label>
+							<property name="fallback1">White.png</property>
+							<onclick>-</onclick>
+						</item>
+					</content>
+				</control>
+				<control type="group">
+					<left>50</left>
+					<top>60</top>
+					<control type="label">
+						<left>0</left>
+						<top>520</top>
+						<height>30</height>
+						<width>160</width>
+						<label>$ADDON[plugin.program.newscenter  30100]</label>
+						<font>font12</font>
+						<scroll>false</scroll>
+					</control>
+					<control type="label">
+						<left>0</left>
+						<top>544</top>
+						<height>30</height>
+						<width>200</width>
+						<label>$ADDON[plugin.program.newscenter  30101]</label>
+						<font>font12</font>
+						<scroll>false</scroll>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>570</top>
+						<width>200</width>
+						<height>11</height>
+						<texture background="true">newscenter/0-pollen.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<left>215</left>
+						<top>544</top>
+						<height>30</height>
+						<width>200</width>
+						<label>$ADDON[plugin.program.newscenter  30102]</label>
+						<font>font12</font>
+						<scroll>false</scroll>
+					</control>
+					<control type="image">
+						<left>215</left>
+						<top>570</top>
+						<width>200</width>
+						<height>11</height>
+						<texture background="true">newscenter/1-pollen.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<left>430</left>
+						<top>544</top>
+						<height>30</height>
+						<width>200</width>
+						<label>$ADDON[plugin.program.newscenter  30103]</label>
+						<font>font12</font>
+						<scroll>false</scroll>
+					</control>
+					<control type="image">
+						<left>430</left>
+						<top>570</top>
+						<width>200</width>
+						<height>11</height>
+						<texture background="true">newscenter/2-pollen.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<left>645</left>
+						<top>544</top>
+						<height>30</height>
+						<width>200</width>
+						<label>$ADDON[plugin.program.newscenter  30104]</label>
+						<font>font12</font>
+						<scroll>false</scroll>
+					</control>
+					<control type="image">
+						<left>645</left>
+						<top>570</top>
+						<width>200</width>
+						<height>11</height>
+						<texture background="true">newscenter/3-pollen.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>200</top>
+						<width>846</width>
+						<height>2</height>
+						<texture>separator.png</texture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>510</top>
+						<width>846</width>
+						<height>2</height>
+						<texture>separator.png</texture>
+					</control>
+				</control>
+				<control type="list" id="88434">
+					<left>340</left>
+					<top>275</top>
+					<width>846</width>
+					<height>445</height>
+					<align>center</align>
+					<onleft>9020</onleft>
+					<onright>19010</onright>
+					<onup>88434</onup>
+					<ondown>88434</ondown>
+					<viewtype>list</viewtype>
+					<scrolltime tween="quadratic" easing="out">500</scrolltime>
+					<focusposition>0</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>9</preloaditems>
+					<itemlayout width="300" height="40">
+						<control type="label">
+							<left>10</left>
+							<top>5</top>
+							<height>30</height>
+							<width>280</width>
+							<align>center</align>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="300" height="40">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>300</width>
+							<height>40</height>
+							<texture border="4">button-focus.png</texture>
+							<visible>Control.HasFocus(88434)</visible>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>5</top>
+							<height>30</height>
+							<width>280</width>
+							<align>center</align>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+							<scroll>false</scroll>
+						</control>
+					</focusedlayout>
+					<content>plugin://plugin.program.newscenter/?methode=get_pollen_items</content>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Player.HasMedia + !SubString(Window(videolibrary).Property(TvTunesIsAlive),TRUE)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>push button</description>
+				<left>30</left>
+				<top>36r</top>
+				<width>28</width>
+				<height>28</height>
+				<label>31003</label>
+				<font>-</font>
+				<onclick>ActivateWindow(PlayerControls)</onclick>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+			</control>
+			<control type="image">
+				<description>Player Icon</description>
+				<left>35</left>
+				<top>30r</top>
+				<width>18</width>
+				<height>18</height>
+				<aspectratio>keep</aspectratio>
+				<texture>icon_player.png</texture>
+			</control>
+			<control type="grouplist">
+				<left>70</left>
+				<top>32r</top>
+				<width>800</width>
+				<height>20</height>
+				<itemgap>5</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[Player.Title]$INFO[Player.Time, - ([COLOR=blue],]$INFO[Player.Duration, / ,[/COLOR])]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[MusicPlayer.Artist,- ,]$INFO[MusicPlayer.Album, - ]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.HasAudio</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Studio]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.TVShowTitle]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.Artist]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>20</height>
+					<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, - ([COLOR=blue],[/COLOR])]</label>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+				</control>
+			</control>
+		</control>
+		<include>Clock</include>
+    </controls>
+</window>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4109">
+    <defaultcontrol always="true">19009</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>			
+		
+		<control type="list" id="19009">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>800</height>
+			<onright>1860</onright>
+			<onleft>19109</onleft>
+			<onup>19009</onup>
+			<ondown>19009</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>
+			    <item id="901620">
+				  <label>50198</label>
+				  <onclick>ActivateWindow(Videos,MusicVideoTitles,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				</item>
+				<item id="901621">
+				  <label>49987</label>
+				  <onclick>ActivateWindow(Videos,recentlyaddedmusicvideos,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/new.png</property>
+				  <property name="MenuIcon_over">home/homeicons/new.png</property>
+				</item>
+				<item id="901622">
+				  <label>133</label>
+				  <onclick>ActivateWindow(Videos,MusicVideoArtists,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/search.png</property>
+				  <property name="MenuIcon_over">home/homeicons/search.png</property>
+				</item>
+				<item id="901623">
+				  <label>132</label>
+				  <onclick>ActivateWindow(Videos,MusicVideoAlbums,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/collections.png</property>
+				  <property name="MenuIcon_over">home/homeicons/collections.png</property>
+				</item>				
+				<item id="901624">
+				  <label>572</label>
+				  <onclick>ActivateWindow(Videos,MusicVideoStudios,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				</item>
+			</content>
+		</control>
+		
+		<control type="wraplist" id="19109">
+		  <include>Animation.ZoomIn</include>
+		  <left>186</left>
+		  <top>165</top>
+		  <width>1155</width>
+	      <height>810</height>
+		  <onright>19009</onright>
+		  <onleft>9020</onleft>
+		  <onup>19109</onup>
+		  <ondown>19109</ondown>
+		  <orientation>vertical</orientation>
+		  <preloaditems>1</preloaditems>
+		  <autoscroll time="15000">!Control.HasFocus(19109)</autoscroll>
+		  <scrolltime tween="cubic">500</scrolltime>
+		  <itemlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/MUSICDEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+			  </control>
+		  </itemlayout>
+		  <focusedlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/MUSICDEFAULT.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="center" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>0</left>
+				<top>615</top>
+				<width>1155</width>
+				<height>200</height>
+				<texture background="true">skin/button_klein_tranz70.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+			  </control>
+				<control type="label">
+				<description>Title label</description>
+				<left>20</left>
+				<top>630</top>
+				<height>45</height>
+				<width>1118</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="textbox">
+				<description>Movie Plot</description>
+				<left>20</left>
+				<top>680</top>
+				<width>1118</width>
+				<height>125</height>
+				<font>primal_16</font>
+				<align>justify</align>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+				<autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  </control>
+		  </focusedlayout>
+		      <content>videodb://recentlyaddedmusicvideos/</content>  
+		  </control>
+        
+    </controls>
+    </window>

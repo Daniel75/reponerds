@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<smartplaylist type="movies">
+    <name>Dokumentationen</name>
+    <match>all</match>
+    <rule field="genre" operator="contains">
+        <value>Documentary</value>
+        <value>Dokumentation</value>
+    </rule>
+    <order direction="descending">dateadded</order>
+</smartplaylist>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="1301">
+	<defaultcontrol always="true">13000</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<!-- <include>DialogBackground</include> -->
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>FadeTime</fadetime>
+			<texture background="true">special://skin/backgrounds/gambit/background.jpg</texture>
+			<visible>Skin.HasSetting(gambit_background)</visible>
+		</control>
+		<control type="image">
+			<include>Dimensions_Fullscreen</include>
+			<fadetime>FadeTime</fadetime>
+			<texture background="true">$INFO[Container(13000).ListItem.Icon]</texture>
+		</control>
+		<control type="group">
+			<include>openclosebox</include>
+			<control type="group">
+				<include name="DialogInfoBackgroundParam">
+					<param name="DialogBackgroundLeft" value="170" />
+					<param name="DialogBackgroundTop" value="58" />
+					<param name="DialogBackgroundWidth" value="940" />
+					<param name="DialogBackgroundHeight" value="600" />
+					<param name="DialogSeparatorTop" value="58" />
+					<param name="DialogSeparatorBottom" value="658" />
+					<param name="DialogShadowTop" value="659" />
+					<param name="DialogHeaderLabel" value="" />
+					<param name="DialogHeaderTop" value="58" />
+					<param name="DialogHeaderId" value="1" />
+				</include>
+				<control type="label">
+					<left>200</left>
+					<top>150</top>
+					<height>auto</height>
+					<width>440</width>
+					<align>left</align>
+					<label>51441</label>
+					<font>impacted18</font>
+					<textcolor>selected</textcolor>
+					<shadowcolor>grey3</shadowcolor>
+				</control>
+			</control>
+			<control type="group">
+				<left>665</left>
+				<top>30</top>
+				<control type="group">
+					<control type="image">
+						<left>14</left>
+						<top>28</top>
+						<height>600</height>
+						<width>430</width>
+						<texture background="true" flipx="true">Sidefade.png</texture>
+					</control>
+					<!-- <control type="image">
+						<left>10</left>
+						<top>584</top>
+						<height>30</height>
+						<width>430</width>
+						<texture background="true">buttons/ButtonNFlight.png</texture>
+					</control> -->
+					<control type="group">
+						<top>40</top>
+						<control type="label">
+							<left>42</left>
+							<top>589</top>
+							<height>30</height>
+							<width>100</width>
+							<align>left</align>
+							<label>210</label>
+							<font>ubuntu-r16b</font>
+							<textcolor>description</textcolor>
+						</control>
+						<control type="image">
+							<left>20</left>
+							<top>596</top>
+							<height>16</height>
+							<width>14</width>
+							<texture>ArrowBig.png</texture>
+						</control>
+						<control type="label">
+							<left>260</left>
+							<top>589</top>
+							<height>30</height>
+							<width>150</width>
+							<align>right</align>
+							<label>10035</label>
+							<font>ubuntu-r16b</font>
+							<textcolor>description</textcolor>
+						</control>
+						<control type="image">
+							<left>420</left>
+							<top>596</top>
+							<height>16</height>
+							<width>14</width>
+							<texture flipx="true">ArrowBig.png</texture>
+						</control>
+					</control>
+				</control>
+				<control type="list" id="13000">
+					<left>10</left>
+					<top>40</top>
+					<width>420</width>
+					<height>630</height>
+					<onleft>Action(back)</onleft>
+					<onright>Skin.Reset(HomeMenuItemMusic)</onright>
+					<onright>Skin.Reset(HomeMenuItemVideo)</onright>
+					<onright>Skin.Reset(HomeMenuItemMovie)</onright>
+					<onright>Skin.Reset(HomeMenuItemDashboard)</onright>
+					<onright>Skin.Reset(HomeMenuItemTVShows)</onright>
+					<onright>Skin.Reset(HomeMenuItemMusicvideos)</onright>
+					<onright>Skin.Reset(HomeMenuItemPictures)</onright>
+					<onright>Skin.Reset(HomeMenuItemWeather)</onright>
+					<onright>Skin.Reset(HomeMenuItemPlayDisc)</onright>
+					<onright>Skin.Reset(HomeMenuItem3D)</onright>
+					<onright>Skin.Reset(HomeMenuItemHD)</onright>
+					<onright>Skin.Reset(HomeMenuItemFullHD)</onright>
+					<onright>Skin.Reset(HomeMenuItemDoku)</onright>
+					<onright>Skin.Reset(HomeMenuItemKids)</onright>
+					<onright>Skin.Reset(HomeMenuItemFav1)</onright>
+					<onright>Skin.Reset(HomeMenuItemFav2)</onright>
+					<onright>Skin.Reset(HomeMenuItemFav3)</onright>
+					<onright>Skin.Reset(HomeMenuItemFav4)</onright>
+					<onright>Skin.Reset(HomeMenuItemSettings)</onright>
+					<onright>Skin.Reset(HomeMenuItemPVR)</onright>
+					<onright>Skin.Reset(HomeMenuItemRadio)</onright>
+					<onright>Skin.Reset(HomeMenuItemNews)</onright>
+					<scrolltime tween="circle" easing="out">400</scrolltime>
+					<orientation>vertical</orientation>
+					<itemlayout height="26" width="420">
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>400</width>
+							<height>30</height>
+							<align>left</align>
+							<font>ubuntu-r13b</font>
+							<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+						</control>
+						<control type="label">
+							<left>10</left>
+							<top>0</top>
+							<width>400</width>
+							<height>30</height>
+							<align>right</align>
+							<font>ubuntu-r13b</font>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="26" width="420">
+						<control type="group">
+							<include>focuseffect</include>
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>420</width>
+								<height>26</height>
+								<texture border="2">buttons/ButtonFO.png</texture>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<top>0</top>
+								<width>400</width>
+								<height>30</height>
+								<align>left</align>
+								<font>ubuntu-r13b</font>
+								<textcolor>black</textcolor>
+								<label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
+							</control>
+							<control type="label">
+								<left>10</left>
+								<top>0</top>
+								<width>400</width>
+								<height>30</height>
+								<align>right</align>
+								<font>ubuntu-r13b</font>
+								<textcolor>black</textcolor>
+								<label>$INFO[ListItem.Label2]</label>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<top>1</top>
+								<width>420</width>
+								<height>26</height>
+								<colordiffuse>$VAR[BackgroundOverlayColor]</colordiffuse>
+								<texture border="2">buttons/ButtonNF.png</texture>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<label>2</label>
+							<label2 fallback="1.">$INFO[Skin.String(HomeMenuItemMusic),,.]</label2>
+							<icon>$INFO[Skin.String(user_bkg_music)]</icon>
+							<thumb>$VAR[backgroundfolder]home_music$VAR[bkg_fileext]</thumb>
+							<onclick>Skin.Reset(HomeMenuItemMusic)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemMusic)</onclick>
+							<visible></visible>
+						</item>
+						<item id="2">
+							<label>3</label>
+							<label2 fallback="2.">$INFO[Skin.String(HomeMenuItemVideo),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_video$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_movie)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemVideo)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemVideo)</onclick>
+							<visible></visible>
+						</item>
+						<item id="3">
+							<label>20342</label>
+							<label2 fallback="3.">$INFO[Skin.String(HomeMenuItemMovie),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_video$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_movie)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemMovie)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemMovie)</onclick>
+							<visible></visible>
+						</item>
+						<item id="4">
+							<label>Dashboard</label>
+							<label2 fallback="4.">$INFO[Skin.String(HomeMenuItemDashboard),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_addons$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_addons)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemDashboard)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemDashboard)</onclick>
+							<visible></visible>
+						</item>
+						<item id="5">
+							<label>20343</label>
+							<label2 fallback="5.">$INFO[Skin.String(HomeMenuItemTVShows),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_tvshows$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_tvshow)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemTVShows)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemTVShows)</onclick>
+							<visible></visible>
+						</item>
+						<item id="6">
+							<label>20389</label>
+							<label2 fallback="6.">$INFO[Skin.String(HomeMenuItemMusicvideos),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_musicvideos$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_musicvideo)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemMusicvideos)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemMusicvideos)</onclick>
+							<visible></visible>
+						</item>
+						<item id="7">
+							<label>1</label>
+							<label2 fallback="7.">$INFO[Skin.String(HomeMenuItemPictures),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_pictures$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_pictures)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemPictures)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemPictures)</onclick>
+							<visible></visible>
+						</item>
+						<item id="8">
+							<label>8</label>
+							<label2 fallback="8.">$INFO[Skin.String(HomeMenuItemWeather),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_weather$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_weather)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemWeather)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemWeather)</onclick>
+							<visible></visible>
+						</item>
+						<item id="9">
+							<label>341</label>
+							<label2 fallback="9.">$INFO[Skin.String(HomeMenuItemPlayDisc),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_disc$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_dvd)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemPlayDisc)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemPlayDisc)</onclick>
+							<visible></visible>
+						</item>
+						<item id="10">
+							<label>3D</label>
+							<label2 fallback="10.">$INFO[Skin.String(HomeMenuItem3D),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_3d$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_3d)]</icon>
+							<onclick>Skin.Reset(HomeMenuItem3D)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItem3D)</onclick>
+							<visible></visible>
+						</item>
+						<item id="11">
+							<label>HD</label>
+							<label2 fallback="11.">$INFO[Skin.String(HomeMenuItemHD),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_hd$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_hd)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemHD)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemHD)</onclick>
+							<visible></visible>
+						</item>
+						<item id="12">
+							<label>FullHD</label>
+							<label2 fallback="12.">$INFO[Skin.String(HomeMenuItemFullHD),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fullhd$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fullhd)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemFullHD)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemFullHD)</onclick>
+							<visible></visible>
+						</item>
+						<item id="13">
+							<label>19519</label>
+							<label2 fallback="13.">$INFO[Skin.String(HomeMenuItemDoku),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_doku$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_doku)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemDoku)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemDoku)</onclick>
+							<visible></visible>
+						</item>
+						<item id="14">
+							<label>51187</label>
+							<label2 fallback="14.">$INFO[Skin.String(HomeMenuItemKids),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_kids$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_kids)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemKids)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemKids)</onclick>
+							<visible></visible>
+						</item>
+						<item id="15">
+							<label fallback="Favourite 1">$INFO[Skin.String(Favourite1_Playlist_Label),, (Favourite 1)]</label>
+							<label2 fallback="15.">$INFO[Skin.String(HomeMenuItemFav1),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fav1$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fav1)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemFav1)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemFav1)</onclick>
+							<visible></visible>
+						</item>
+						<item id="16">
+							<label fallback="Favourite 2">$INFO[Skin.String(Favourite2_Playlist_Label),, (Favourite 2)]</label>
+							<label2 fallback="16.">$INFO[Skin.String(HomeMenuItemFav2),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fav2$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fav2)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemFav2)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemFav2)</onclick>
+							<visible></visible>
+						</item>
+						<item id="17">
+							<label fallback="Favourite 3">$INFO[Skin.String(Favourite3_Playlist_Label),, (Favourite 3)]</label>
+							<label2 fallback="17.">$INFO[Skin.String(HomeMenuItemFav3),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fav3$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fav3)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemFav3)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemFav3)</onclick>
+							<visible></visible>
+						</item>
+						<item id="18">
+							<label fallback="Favourite 4">$INFO[Skin.String(Favourite4_Playlist_Label),, (Favourite 4)]</label>
+							<label2 fallback="18.">$INFO[Skin.String(HomeMenuItemFav4),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fav2$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fav2)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemFav4)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemFav4)</onclick>
+							<visible></visible>
+						</item>
+						<item id="19">
+							<label>13000</label>
+							<label2 fallback="19.">$INFO[Skin.String(HomeMenuItemSettings),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_settings$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_settings)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemSettings)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemSettings)</onclick>
+							<visible></visible>
+						</item>
+						<item id="20">
+							<label>31502</label>
+							<label2 fallback="20.">$INFO[Skin.String(HomeMenuItemPVR),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_livetv$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_pvr)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemPVR)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemPVR)</onclick>
+							<visible></visible>
+						</item>
+						<item id="21">
+							<label>31960</label>
+							<label2 fallback="21.">$INFO[Skin.String(HomeMenuItemRadio),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_fav3$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_fav3)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemRadio)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemRadio)</onclick>
+							<visible></visible>
+						</item>
+						<item id="22">
+							<label>NEWS</label>
+							<label2 fallback="22.">$INFO[Skin.String(HomeMenuItemNews),,.]</label2>
+							<thumb>$VAR[backgroundfolder]home_news$VAR[bkg_fileext]</thumb>
+							<icon>$INFO[Skin.String(user_bkg_news)]</icon>
+							<onclick>Skin.Reset(HomeMenuItemNews)</onclick>
+							<onclick>Skin.SetNumeric(HomeMenuItemNews)</onclick>
+							<visible></visible>
+						</item>
+					</content>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

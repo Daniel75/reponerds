@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	
+    <include name="ViewidAudio">
+		<views>55,702,704,705</views>
+    </include>
+    <include name="ViewsAudio">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_55_FileMode</include>   
+			<include>View_702_Fanartlist</include>
+			<include>View_704_Poster_Fanart</include>
+			<include>View_705_Poster_Wall</include>
+		</control>
+    </include>
+	
+    <include name="ViewidVideo">
+		<views>55,598,600,601,602,603,604,605,606,607,608,609,610,611,901,902</views>
+    </include>
+    <include name="ViewsVideo">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_55_FileMode</include>  
+			<include>View_598_Fanartlist</include> <!-- MOVIES -->
+			<include>View_600_PosterlistTVShows</include> <!-- TVSHOWS, SEASONS -->
+			<include>View_601_Poster_Movies</include> <!-- MOVIES -->
+			<include>View_602_LandscapeView_TVShows</include> <!-- TVSHOWS -->
+			<include>View_603_Posterlist</include> <!-- MOVIES -->
+			<include>View_604_Fanartlist_TVShows</include> <!-- TVSHOWS -->
+			<include>View_605_WallView</include>
+			<include>View_606_LogoFanart</include> <!-- MOVIES -->
+			<include>View_607_Thumb</include> <!-- TVSHOWS & FILES -->
+			<include>View_608_Banner</include> <!-- TVSHOWS & FILES -->
+			<include>View_609_Poster_TVShows</include> <!-- TVSHOWS -->
+			<include>View_610_BannerFull</include> <!-- MOVIES & TVSHOWS -->
+			<include>View_611_Wall_Infos</include> <!-- MOVIES & TVSHOWS -->
+			<include>View_901_Apps</include> 
+			<include>View_902_Mixed</include> 
+		</control>
+    </include>
+	
+    <include name="ViewidPictures">
+		<views>55,580,581</views>
+    </include>
+    <include name="ViewsPictures">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_55_FileMode</include>
+			<include>View_580_PictureWall</include>
+		</control>
+    </include>
+	
+    <include name="ViewidAddons">
+		<views>55,901,591,592</views>
+    </include>
+    <include name="ViewsAddons">
+		<control type="group" id="777">
+			<visible>!Window.IsVisible(selectdialog)</visible>
+			<include>View_55_FileMode</include>
+            <include>View_901_Apps</include>
+		</control>
+    </include>
+	
+    <include name="ViewsidPVR">
+		<views>50,51</views>
+    </include>
+    <include name="ViewsPVR">
+		<control type="group" id="777">
+			<include>View_50_LiveTVList</include>	
+		    <include>View_51_LiveTVPanel</include>
+		</control>
+    </include>
+	
+    <include name="ViewsidGuide">
+		<views>10,11,12,13</views>
+    </include>
+    <include name="ViewsGuide">
+		<control type="group" id="777">
+			<include>PVRGuideViewTimeline</include>
+			<include>PVRGuideViewNow</include>
+			<include>PVRGuideViewNext</include>
+			<include>PVRGuideViewChannel</include>
+		</control>
+    </include>
+	
+    <include name="ViewsidRecordings">
+		<views>50</views>
+    </include>   
+    <include name="ViewsidSearch">
+		<views>50</views>
+    </include>
+	<include name="ViewsidTimers">
+		<views>50</views>
+    </include>
+	    
+    <include name="ViewTypeList">
+		<control type="group">
+			<animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9030).HasFocus">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9030).HasFocus">WindowClose</animation>
+			<control type="image">
+			  <left>-495</left>
+			  <top>0</top>
+			  <width>420</width>
+			  <height>1080</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow2.png</bordertexture>
+			  <bordersize>7</bordersize>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist" id="9030">
+				<left>-479</left>
+				<top>120</top>
+				<width>410</width>
+				<height>800</height>
+				<onleft>9020</onleft>
+				<onright>777</onright>
+				<onup>9030</onup>
+				<ondown>9030</ondown>
+				<onback>777</onback>
+				<itemgap>2</itemgap>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<control type="button" id="810">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>List</label>
+					<onclick>Container.SetViewMode(55)</onclick>
+					<onclick>Action(down)</onclick>
+				</control>
+				<!-- ================= MUSIC ==================== -->
+				<control type="button" id="811">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Fanartlist</label>
+					<onclick>Container.SetViewMode(702)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(songs) | Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+				<control type="button" id="812">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Poster/Big Fanart</label>
+					<onclick>Container.SetViewMode(704)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+				<control type="button" id="813">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Poster Wall</label>
+					<onclick>Container.SetViewMode(705)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(artists) | Container.Content(albums)</visible>
+				</control>
+				<!-- ================= MOVIES & TVSHOWS ==================== -->
+				<control type="button" id="820">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Fanartlist</label>
+					<onclick>Container.SetViewMode(598)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Musicvideos)</visible>
+				</control>
+				<control type="button" id="821">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Posterlist</label>
+					<onclick>Container.SetViewMode(600)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
+				</control>
+				<control type="button" id="822">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Poster/Big Fanart</label>
+					<onclick>Container.SetViewMode(601)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Musicvideos)</visible>
+				</control>
+				<control type="button" id="823">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Landscape Wall</label>
+					<onclick>Container.SetViewMode(602)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
+				</control>
+				<control type="button" id="824">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Posterlist</label>
+					<onclick>Container.SetViewMode(603)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(Musicvideos) | Container.Content(Genres) | Container.Content(Actors)</visible>
+				</control>
+				<control type="button" id="825">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Fanartlist</label>
+					<onclick>Container.SetViewMode(604)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)</visible>
+				</control>
+				<control type="button" id="826">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Poster Wall</label>
+					<onclick>Container.SetViewMode(605)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons)</visible>
+				</control>
+				<control type="button" id="827">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Logo/Fanart Wall</label>
+					<onclick>Container.SetViewMode(606)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(Sets)</visible>
+				</control>
+				<control type="button" id="828">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Thumb</label>
+					<onclick>Container.SetViewMode(607)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Episodes) | Container.Content(files)</visible>
+				</control>	
+				<control type="button" id="829">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Banner</label>
+					<onclick>Container.SetViewMode(608)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(Sets)</visible>
+				</control>				
+				<control type="button" id="830">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Poster/Big Fanart</label>
+					<onclick>Container.SetViewMode(609)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(TVShows) | Container.Content(Seasons)</visible>
+				</control>
+				<control type="button" id="831">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Banner Full</label>
+					<onclick>Container.SetViewMode(610)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				</control>
+				<control type="button" id="832">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Infowall</label>
+					<onclick>Container.SetViewMode(611)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Movies) | Container.Content(TVShows)</visible>
+				</control>
+				<control type="button" id="833">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Mixed</label>
+					<onclick>Container.SetViewMode(902)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Genres) | Container.Content(actors) | Container.Content(Addons) | Container.Content(files) | Container.Content(years)</visible>
+				</control>
+				<!-- ================= PICTURES ==================== -->
+				<control type="button" id="840">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Picture Wall</label>
+					<onclick>Container.SetViewMode(580)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Window.IsVisible(Pictures)</visible>
+					<visible>!Container.Content(Addons)</visible>
+				</control>
+				<!-- ================= ADDONS ==================== -->
+				<control type="button" id="850">
+					<description>View</description>
+					<height>60</height>
+		            <width>398</width>
+					<label>Apps</label>
+					<onclick>Container.SetViewMode(901)</onclick>
+					<onclick>Action(down)</onclick>
+					<visible>Container.Content(Addons) | Container.Content(files)</visible>
+				</control>
+			</control>
+		</control>
+    </include>
+	
+	<include name="ViewTypeOption">
+		<control type="group">
+			<animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9031).HasFocus">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9031).HasFocus">WindowClose</animation>
+			<control type="image">
+			  <left>-495</left>
+			  <top>0</top>
+			  <width>420</width>
+			  <height>1080</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <bordertexture border="10">ThumbShadow2.png</bordertexture>
+			  <bordersize>7</bordersize>
+			  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+			  <aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist" id="9031">
+				<left>-479</left>
+				<top>120</top>
+				<width>410</width>
+				<height>800</height>
+				<onleft>9020</onleft>
+				<onright>9020</onright>
+				<onup>9031</onup>
+				<ondown>9031</ondown>
+				<onback>9020</onback>
+				<itemgap>2</itemgap>
+				<scrolltime tween="sine" easing="out">200</scrolltime>
+				<control type="radiobutton" id="7323">
+					<label>50240</label>
+					<height>60</height>
+		            <width>398</width>
+					<onclick>Skin.ToggleSetting(banner598)</onclick>
+					<selected>Skin.HasSetting(banner598)</selected>
+					<visible>Control.IsVisible(598)</visible>
+				</control>
+				<control type="radiobutton" id="7324">
+					<label>50240</label>
+					<height>60</height>
+		            <width>398</width>
+					<onclick>Skin.ToggleSetting(banner604)</onclick>
+					<selected>Skin.HasSetting(banner604)</selected>
+					<visible>Control.IsVisible(604)</visible>
+				</control>
+				<control type="radiobutton" id="7325">
+					<label>50224</label>
+					<height>60</height>
+		            <width>398</width>
+					<onclick>Skin.ToggleSetting(noinfo611)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<selected>Skin.HasSetting(noinfo611)</selected>
+					<visible>Control.IsVisible(611)</visible>
+				</control>
+			</control>
+		</control>
+    </include>
+</includes>

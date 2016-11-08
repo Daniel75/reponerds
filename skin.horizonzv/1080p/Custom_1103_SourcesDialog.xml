@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1103">
+	<defaultcontrol always="true">5000</defaultcontrol>
+	<include>openclose</include>
+	<include>openclosebox</include>
+	<controls>
+        <include>BlackBack</include>
+        <control type="grouplist" id="5000">
+			<left>710</left>
+			<top>320</top>
+            <width>510</width>
+            <height max="780">auto</height>
+            <itemgap>-1</itemgap>
+            <control type="group">
+                <width>510</width>
+                <height>45</height>
+                <control type="image">
+                    <description>background top image</description>
+                    <left>0</left>
+                    <top>28</top>
+                    <width>510</width>
+                    <height>16</height>
+                    <texture border="2">buttons/ShutdownMenuTop.png</texture>
+                </control>
+            </control>
+            <control type="grouplist" id="5001">
+                <left>45</left>
+                <top>0</top>
+                <width>510</width>
+                <height max="780">auto</height>
+                <itemgap>0</itemgap>
+                <control type="button" id="50001">
+                    <description>Buttons</description>
+                    <width>510</width>
+                    <textwidth>450</textwidth>
+                    <focusedcolor>black</focusedcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <texturefocus border="2">buttons/ShutdownButtonFO.png</texturefocus>
+                    <texturenofocus border="2">buttons/ShutdownButtonNF.png</texturenofocus>
+					<label>$LOCALIZE[3]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(Videos,Files,return)</onclick>
+                </control>
+                <control type="button" id="50002">
+                    <description>Buttons</description>
+                    <width>510</width>
+                    <textwidth>450</textwidth>
+                    <focusedcolor>black</focusedcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <texturefocus border="2">buttons/ShutdownButtonFO.png</texturefocus>
+                    <texturenofocus border="2">buttons/ShutdownButtonNF.png</texturenofocus>
+					<label>$LOCALIZE[2]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(Music,Files,return)</onclick>
+                </control>
+                <control type="button" id="50003">
+                    <description>Buttons</description>
+                    <width>510</width>
+                    <textwidth>450</textwidth>
+                    <focusedcolor>black</focusedcolor>
+                    <shadowcolor>-</shadowcolor>
+                    <texturefocus border="2">buttons/ShutdownButtonFO.png</texturefocus>
+                    <texturenofocus border="2">buttons/ShutdownButtonNF.png</texturenofocus>
+					<label>$LOCALIZE[1]</label>
+					<onclick>Dialog.Close(all)</onclick>
+					<onclick>ActivateWindow(pictures,root)</onclick>
+                </control>
+            </control>
+            <control type="image">
+                <description>background bottom image</description>
+                <left>0</left>
+                <width>510</width>
+                <height>16</height>
+                <texture border="2">buttons/ShutdownMenuBottom.png</texture>
+            </control>
+            <control type="image">
+                <description>mirror bottom image</description>
+                <width>510</width>
+                <height>82</height>
+                <colordiffuse>fanartdiffuse</colordiffuse>
+                <texture flipy="true">Shadow.png</texture>
+            </control>
+        </control>
+	</controls>
+</window>

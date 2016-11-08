@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">20</defaultcontrol>
+	<include>openclose</include>
+	<include>openclosebox</include>
+	<controls>
+		<include>DialogBackgroundSimple</include>
+		<include name="DialogInfoBackgroundParam">
+			<param name="DialogBackgroundLeft" value="60" />
+			<param name="DialogBackgroundTop" value="40" />
+			<param name="DialogBackgroundWidth" value="1160" />
+			<param name="DialogBackgroundHeight" value="625" />
+			<param name="DialogSeparatorTop" value="90" />
+			<param name="DialogSeparatorBottom" value="664" />
+			<param name="DialogShadowTop" value="668" />
+			<param name="DialogHeaderLabel" value="$VAR[PVRChannelMgrHeader]" />
+			<param name="DialogHeaderTop" value="50" />
+			<param name="DialogHeaderId" value="2" />
+		</include>
+		<control type="group">
+			<left>80</left>
+			<top>65</top>
+			<control type="group">
+				<left>20</left>
+				<top>70</top>
+				<control type="scrollbar" id="60">
+					<left>430</left>
+					<top>5</top>
+					<width>12</width>
+					<height>470</height>
+					<onleft>20</onleft>
+					<onright>9002</onright>
+					<showonepage>false</showonepage>
+					<orientation>vertical</orientation>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>430</width>
+					<height>485</height>
+					<texture border="5">osd/ProgressBack.png</texture>
+				</control>
+				<control type="image">
+					<left>455</left>
+					<top>0</top>
+					<width>400</width>
+					<height>485</height>
+					<texture border="5">osd/ProgressBack.png</texture>
+				</control>
+				<control type="image">
+					<left>870</left>
+					<top>0</top>
+					<width>220</width>
+					<height>170</height>
+					<texture border="5">osd/ProgressBack.png</texture>
+				</control>
+				<control type="list" id="20">
+					<left>5</left>
+					<top>10</top>
+					<width>420</width>
+					<height>470</height>
+					<onup>20</onup>
+					<ondown>20</ondown>
+					<onleft>9000</onleft>
+					<onright>60</onright>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="45" width="420">
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>30</width>
+							<height>30</height>
+							<colordiffuse>77FFFFFF</colordiffuse>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<left>45</left>
+							<top>0</top>
+							<width>335</width>
+							<height>40</height>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<left>45</left>
+							<top>0</top>
+							<width>335</width>
+							<height>40</height>
+							<font>font12</font>
+							<textcolor>grey1</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<left>390</left>
+							<top>10</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>OverlayWatched.png</texture>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="65" width="420">
+						<control type="image">
+							<left>0</left>
+							<top>0</top>
+							<width>420</width>
+							<height>60</height>
+							<texture border="5">buttons/ButtonFO.png</texture>
+							<animation effect="fade" start="100" end="30" time="0" condition="!Control.HasFocus(20)">conditional</animation>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>30</width>
+							<height>30</height>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<left>5</left>
+							<top>5</top>
+							<width>30</width>
+							<height>30</height>
+							<colordiffuse>77FFFFFF</colordiffuse>
+							<texture>$INFO[ListItem.Property(Icon)]</texture>
+							<aspectratio>keep</aspectratio>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<left>45</left>
+							<top>0</top>
+							<width>335</width>
+							<height>40</height>
+							<textcolor>black</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="label">
+							<left>45</left>
+							<top>0</top>
+							<width>335</width>
+							<height>40</height>
+							<font>font12</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>black</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Property(Number),(,) - ]$INFO[ListItem.Property(Name)]</label>
+							<visible>!ListItem.Property(ActiveChannel)</visible>
+						</control>
+						<control type="image">
+							<left>390</left>
+							<top>10</top>
+							<width>20</width>
+							<height>20</height>
+							<texture>OverlayWatched.png</texture>
+							<visible>ListItem.Property(Changed)</visible>
+						</control>
+						<control type="label">
+							<left>5</left>
+							<top>30</top>
+							<width>410</width>
+							<height>30</height>
+							<font>font12</font>
+							<textcolor>grey</textcolor>
+							<shadowcolor>grey3</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$LOCALIZE[19210]: $INFO[ListItem.Property(ClientName)]</label>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<control type="grouplist" id="9002">
+					<left>485</left>
+					<top>75</top>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<onup>34</onup>
+					<ondown>30</ondown>
+					<itemgap>5</itemgap>
+					<control type="label" id="9001">
+						<description>channel options Header</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>25</height>
+						<label>$LOCALIZE[31511]</label>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>selected</textcolor>
+						<shadowcolor>black</shadowcolor>
+					</control>
+					<control type="radiobutton" id="7">
+						<description>Channel activated</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<texturenofocus>-</texturenofocus>
+						<align>left</align>
+						<label>19074</label>
+					</control>
+					<control type="edit" id="8">
+						<description>Channel name</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<textcolor>grey</textcolor>
+						<focusedcolor>black</focusedcolor>
+						<texturenofocus>-</texturenofocus>
+						<textoffsetx>10</textoffsetx>
+						<align>left</align>
+						<label>19201</label>
+					</control>
+					<control type="group" id="9005">
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<height>40</height>
+						<control type="button" id="9">
+							<description>Channel logo Button</description>
+							<left>0</left>
+							<top>0</top>
+							<width>380</width>
+							<height>40</height>
+							<align>left</align>
+							<label>19202</label>
+							<textcolor>grey</textcolor>
+							<texturenofocus>-</texturenofocus>
+							<onleft>60</onleft>
+							<onright>9000</onright>
+							<onup>8</onup>
+							<ondown>12</ondown>
+						</control>
+						<control type="image">
+							<description>Current Channel Icon</description>
+							<left>340</left>
+							<top>3</top>
+							<width>34</width>
+							<height>34</height>
+							<aspectratio>keep</aspectratio>
+							<info>ListItem.Property(Icon)</info>
+						</control>
+					</control>
+					<control type="radiobutton" id="12">
+						<description>EPG activated</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<align>left</align>
+						<textcolor>grey</textcolor>
+						<texturenofocus>-</texturenofocus>
+						<label>19206</label>
+					</control>
+					<control type="spincontrolex" id="13">
+						<description>EPG source</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<label>19200</label>
+						<textcolor>grey</textcolor>
+						<texturenofocus>-</texturenofocus>
+					</control>
+					<control type="radiobutton" id="14">
+						<description>Parental locked</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<align>left</align>
+						<label>19267</label>
+						<textcolor>grey</textcolor>
+						<texturenofocus>-</texturenofocus>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>485</left>
+					<top>375</top>
+					<itemgap>5</itemgap>
+					<onleft>60</onleft>
+					<onright>9000</onright>
+					<onup>14</onup>
+					<ondown>7</ondown>
+					<animation effect="slide" start="0,0" end="0,45" time="0" condition="!Control.IsVisible(31)">Conditional</animation>
+					<control type="label" id="9003">
+						<description>channel options Header</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<label>$LOCALIZE[31026]</label>
+						<align>left</align>
+						<textcolor>selected</textcolor>
+					</control>
+					<control type="button" id="31">
+						<description>New channel Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<texturenofocus>-</texturenofocus>
+						<align>center</align>
+						<label>19204</label>
+					</control>
+					<control type="button" id="30">
+						<description>Group Manager Button</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<texturenofocus>-</texturenofocus>
+						<align>center</align>
+						<label>19205</label>
+					</control>
+					<control type="togglebutton" id="34">
+						<description>TV/Radio toggle</description>
+						<left>0</left>
+						<top>0</top>
+						<width>380</width>
+						<texturenofocus>-</texturenofocus>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>19024</label>
+						<altlabel>19023</altlabel>
+						<usealttexture>!IsEmpty(Window.Property(IsRadio))</usealttexture>
+					</control>
+				</control>
+			</control>
+			<control type="group" id="9000">
+				<left>900</left>
+				<top>95</top>
+				<control type="button" id="4">
+					<description>OK Button</description>
+					<left>0</left>
+					<top>0</top>
+					<width>200</width>
+					<label>186</label>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9002</onleft>
+					<onright>20</onright>
+					<onup>6</onup>
+					<ondown>5</ondown>
+				</control>
+				<control type="button" id="5">
+					<description>Apply changes Button</description>
+					<left>0</left>
+					<top>45</top>
+					<width>200</width>
+					<label>14070</label>
+					<font>font12_title</font>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9002</onleft>
+					<onright>20</onright>
+					<onup>4</onup>
+					<ondown>6</ondown>
+				</control>
+				<control type="button" id="6">
+					<description>Cancel Button</description>
+					<left>0</left>
+					<top>90</top>
+					<width>200</width>
+					<label>222</label>
+					<font>font12_title</font>
+					<texturenofocus>-</texturenofocus>
+					<onleft>9002</onleft>
+					<onright>20</onright>
+					<onup>5</onup>
+					<ondown>4</ondown>
+				</control>
+				<control type="group">
+					<left>-5</left>
+					<top>250</top>
+					<control type="image">
+						<left>0</left>
+						<top>0</top>
+						<width>210</width>
+						<height>210</height>
+						<texture border="10">osd/ProgressBack.png</texture>
+					</control>
+					<control type="image">
+						<left>5</left>
+						<top>5</top>
+						<width>200</width>
+						<height>200</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<texture background="true">$INFO[Container(20).ListItem.Icon]</texture>
+					</control>
+				</control>
+				<control type="label">
+					<description>Page Count Label</description>
+					<left>-15</left>
+					<top>465</top>
+					<width>230</width>
+					<height>35</height>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>([COLOR=selected]$INFO[Container(20).NumItems][/COLOR]) $LOCALIZE[19019] - $LOCALIZE[31024] ([COLOR=selected]$INFO[Container(20).CurrentPage]/$INFO[Container(20).NumPages][/COLOR])</label>
+					<wrapmultiline>true</wrapmultiline>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

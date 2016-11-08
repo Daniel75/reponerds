@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4103">
+    <defaultcontrol always="true">19003</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>			
+		
+		<control type="list" id="19003">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>800</height>
+			<onright>1860</onright>
+			<onleft>1860</onleft>
+			<onup>19003</onup>
+			<ondown>19003</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			</control>	
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>			    
+				<item id="90107">
+				  <label>49987</label>
+				  <onclick>ActivateWindow(Music,recentlyaddedalbums,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/new.png</property>
+				  <property name="MenuIcon_over">home/homeicons/new.png</property>
+				</item>
+				<item id="90108">
+				  <label>50322</label>
+				  <onclick>ActivateWindow(Music,recentlyplayedalbums,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/news.png</property>
+				  <property name="MenuIcon_over">home/homeicons/news.png</property>
+				</item>
+				<item id="90109">
+				  <label>133</label>
+				  <onclick>ActivateWindow(Music,Artists,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/actors.png</property>
+				  <property name="MenuIcon_over">home/homeicons/actors.png</property>
+				</item>
+				<item id="90110">
+				  <label>132</label>
+				  <onclick>ActivateWindow(Music,Albums,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/cd.png</property>
+				  <property name="MenuIcon_over">home/homeicons/cd.png</property>
+				</item>
+				<item id="90111">
+				  <label>521</label>
+				  <onclick>ActivateWindow(Music,Compilations,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/song.png</property>
+				  <property name="MenuIcon_over">home/homeicons/song.png</property>
+				</item>
+				<item id="90112">
+				  <label>134</label>
+				  <onclick>ActivateWindow(Music,Songs,return)</onclick>
+				  <property name="MenuIcon">home/homeicons/song.png</property>
+				  <property name="MenuIcon_over">home/homeicons/song.png</property>
+				</item>
+				<item id="90113">
+				  <label>589</label>
+				  <onclick>PlayerControl(Partymode(music))</onclick>
+				  <property name="MenuIcon">home/homeicons/kids.png</property>
+				  <property name="MenuIcon_over">home/homeicons/kids.png</property>
+				</item>
+				<item id="90114">
+				  <label>49996</label>
+				  <onclick>ActivateWindow(MusicLibrary)</onclick>
+				  <onclick>SendClick(8)</onclick>
+				  <property name="MenuIcon">home/homeicons/search.png</property>
+				  <property name="MenuIcon_over">home/homeicons/search.png</property>
+				</item>
+				<item id="90115">
+				  <label>744</label>
+				  <onclick>ActivateWindow(MusicFiles)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				</item>
+				<item id="90116">
+				  <label>14022</label>
+				  <onclick>ActivateWindow(MusicLibrary)</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				</item>
+				<item id="90117">
+				  <label>653</label>
+				  <onclick>UpdateLibrary(Music)</onclick>
+				  <property name="MenuIcon">home/homeicons/refresh.png</property>
+				  <property name="MenuIcon_over">home/homeicons/refresh.png</property>
+				</item>
+				<item id="90118">
+				  <label>$INFO[Skin.String(musicplaylistButton1_label)]</label>
+				  <onclick>$INFO[Skin.String(musicplaylistButton1_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(musicplaylistButton1) + !IsEmpty(Skin.String(musicplaylistButton1_label))</visible>
+				</item>
+				<item id="90119">
+				  <label>$INFO[Skin.String(musicplaylistButton2_label)]</label>
+				  <onclick>$INFO[Skin.String(musicplaylistButton2_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(musicplaylistButton2) + !IsEmpty(Skin.String(musicplaylistButton2_label))</visible>
+				</item>
+				<item id="90120">
+				  <label>$INFO[Skin.String(musicplaylistButton3_label)]</label>
+				  <onclick>$INFO[Skin.String(musicplaylistButton3_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(musicplaylistButton3) + !IsEmpty(Skin.String(musicplaylistButton3_label))</visible>
+				</item>
+				<item id="90121">
+				  <label>$INFO[Skin.String(musicplaylistButton4_label)]</label>
+				  <onclick>$INFO[Skin.String(musicplaylistButton4_Path)]</onclick>
+				  <property name="MenuIcon">home/homeicons/folder.png</property>
+				  <property name="MenuIcon_over">home/homeicons/folder.png</property>
+				  <visible>Skin.HasSetting(musicplaylistButton4) + !IsEmpty(Skin.String(musicplaylistButton4_label))</visible>
+				</item>
+			</content>
+		</control>
+		
+		<control type="wraplist" id="19103">
+		  <include>Animation.ZoomIn</include>
+		  <left>186</left>
+		  <top>165</top>
+		  <width>1155</width>
+	      <height>810</height>
+		  <onright>19003</onright>
+		  <onleft>9020</onleft>
+		  <onup>19103</onup>
+		  <ondown>19103</ondown>
+		  <orientation>vertical</orientation>
+		  <preloaditems>1</preloaditems>
+		  <autoscroll time="15000">!Control.HasFocus(19103)</autoscroll>
+		  <scrolltime tween="cubic">500</scrolltime>
+		  <itemlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+		  </itemlayout>
+		  <focusedlayout width="1247" height="810">
+			  <control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>1155</width>
+	            <height>810</height>
+				<texture background="true" fallback="special://skin/backgrounds/FALLBACK.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+		  </focusedlayout>
+		      <content>special://skin/playlists/Music Recentlyadded.xsp</content>  
+		  </control>
+        
+    </controls>
+    </window>

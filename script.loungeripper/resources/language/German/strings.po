@@ -1,0 +1,298 @@
+# XBMC Media Center language file
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC-Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: 2015-09-22 07:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+msgctxt "#30010"
+msgid "Lounge Ripper"
+msgstr "Lounge Ripper"
+
+msgctxt "#30011"
+msgid "Resolution"
+msgstr "Auflösung"
+
+msgctxt "#30012"
+msgid "Quality"
+msgstr "Qualität"
+
+msgctxt "#30016"
+msgid "Path to 'makemkvcon'"
+msgstr "Pfad zu 'makemkvcon'"
+
+msgctxt "#30017"
+msgid "Path to 'HandBrakeCLI'"
+msgstr "Pfad zu 'HandBrakeCLI'"
+
+msgctxt "#30019"
+msgid "Delete Source Files after successfully Operation"
+msgstr "Nach erfolgreicher Ausführung Quelldatei löschen"
+
+msgctxt "#30020"
+msgid "Temporary Folder"
+msgstr "Temporäres Verzeichnis"
+
+msgctxt "#30021"
+msgid "Destination Folder"
+msgstr "Zielverzeichnis"
+
+msgctxt "#30022"
+msgid "Minimum Title Length"
+msgstr "Minimale Titellänge"
+
+msgctxt "#30023"
+msgid "Native Language"
+msgstr "Standardsprache"
+
+msgctxt "#30024"
+msgid "Foreign Audio (grabs all audio streams)"
+msgstr "alle Audiostreams enkodieren"
+
+msgctxt "#30025"
+msgid "Encode after Rip"
+msgstr "Enkodiere nach Rippen"
+
+msgctxt "#30026"
+msgid "Eject after Ripping"
+msgstr "Disk nach dem Rippen auswerfen"
+
+msgctxt "#30027"
+msgid "Create Subfolder with Title of Movie"
+msgstr "Erstelle Unterverzeichnis mit Titel des Films"
+
+msgctxt "#30028"
+msgid "Black and White"
+msgstr "Schwarz-Weiss"
+
+msgctxt "#30029"
+msgid "Current Task: %s - %s%% (%s remaining)"
+msgstr "aktueller Schritt: %s - %s%% (%s verbleibend)"
+
+msgctxt "#30030"
+msgid "Title of Movie"
+msgstr "Titel des Films eingeben"
+
+msgctxt "#30031"
+msgid "Profile 1"
+msgstr "Profil 1"
+
+msgctxt "#30032"
+msgid "Profile 2"
+msgstr "Profil 2"
+
+msgctxt "#30033"
+msgid "Profile 3"
+msgstr "Profil 3"
+
+msgctxt "#30034"
+msgid "Profile 4"
+msgstr "Profil 4"
+
+msgctxt "#30035"
+msgid "Profile 5"
+msgstr "Profil 5"
+
+msgctxt "#30036"
+msgid "Profile 6"
+msgstr "Profil 6"
+
+msgctxt "#30037"
+msgid "Profile 7"
+msgstr "Profil 7"
+
+msgctxt "#30038"
+msgid "Abort currently running Rip/Encode Process"
+msgstr "aktuell laufenden Rip/Encode-Prozess abbrechen"
+
+msgctxt "#30039"
+msgid "Cleanup Temporary Folder completely"
+msgstr "Temporäres Verzeichnis komplett bereinigen"
+
+msgctxt "#30040"
+msgid "Current Task: %s - %s%%"
+msgstr "aktueller Schritt: %s - %s%%"
+
+msgctxt "#30041"
+msgid "Copy File to Destination Folder"
+msgstr "kopiere Datei ins Zielverzeichnis"
+
+msgctxt "#30042"
+msgid "Full HD"
+msgstr "Full HD"
+
+msgctxt "#30043"
+msgid "HDTV (1280)"
+msgstr "HDTV (1280)"
+
+msgctxt "#30044"
+msgid "SDTV/DVD (PAL)"
+msgstr "SDTV/DVD (PAL)"
+
+msgctxt "#30045"
+msgid "SDTV/DVD (NTSC)"
+msgstr "SDTV/DVD (NTSC)"
+
+msgctxt "#30046"
+msgid "Content of temporary Folder '%s' deleted."
+msgstr "Inhalt des temporären Verzeichnisses '%s' wurde gelöscht."
+
+msgctxt "#30047"
+msgid "Profile Name"
+msgstr "Profilname"
+
+msgctxt "#30048"
+msgid "Enabled"
+msgstr "aktiviert"
+
+msgctxt "#30049"
+msgid "%s has Operation '%s' successfully completed."
+msgstr "%s hat die Aufgabe '%s' erfolgreich abgeschlossen."
+
+msgctxt "#30050"
+msgid "There aren't active Profiles enabled. Go to Settimgs and enable at least one active Profile."
+msgstr "Es sind keine aktiven Profile freigegeben. Schalte mindestens ein aktives Profil in den Einstellungen frei."
+
+msgctxt "#30051"
+msgid "You don't have selected any active Profile. Lounge Ripper will be terminated."
+msgstr "Es wurde kein aktives Profil ausgewählt. Lounge Ripper wird beendet."
+
+msgctxt "#30052"
+msgid "One or more System Settings are invalid. Please check Settings again."
+msgstr "Eine oder mehrere Systemeinstellungen sind ungültig. Bitte überprüfe nochmals die Einstellungen in den Settings des Addons."
+
+msgctxt "#30053"
+msgid "MakeMKV don't work as expected. The Version is too old, the License Key is invalid or another Error has occured (see logfile)."
+msgstr "MakeMKV arbeitet nicht wie erwartet. Die Softwareversion ist evtl. zu alt, der Lizenzschlüssel ungültig oder ein anderer Fehler ist aufgetreten (Details siehe Logdatei)."
+
+msgctxt "#30054"
+msgid "An Error occured while Encoding a Stream with HandBrakeCLI."
+msgstr "Während des Encodierens mit HandBrakeCLI ist ein Fehler aufgetreten."
+
+msgctxt "#30055"
+msgid "All current Ripper or Encoder Tasks was killed."
+msgstr "Alle aktiven Rip-/Encodeprozesse wurden terminiert."
+
+msgctxt "#30056"
+msgid "There are no valid files in folder '%s' for the operation to be performed or folder is empty. Copy the intended files into that folder."
+msgstr "Im Ordner '%s' befinden sich keine gültigen Dateien oder der Ordner ist leer. Lege die zur Abarbeitung vorgesehene Datei in diesem Ordner ab."
+
+msgctxt "#30057"
+msgid "Could not detect removable media in drive or media isn't inserted or not readable."
+msgstr "Es befindet sich keine Disc im Laufwerk oder die Disc wird nicht erkannt bzw. ist nicht lesbar."
+
+msgctxt "#30058"
+msgid "A previous incomplete ripper process was complete finished."
+msgstr "Ein vorheriger unvollständiger Rip-Prozess wurde komplett abgearbeitet."
+
+msgctxt "#30059"
+msgid "There are more than one file present in source directory. Would You process all files with the same parameters at once? This requires high time consumption."
+msgstr "Es befinden sich mehr als eine Datei im Quellverzeichnis. Möchtest Du alle Dateien mit den gleichen Parametern auf einmal abarbeiten? Das erfordert einen hohen Zeitaufwand."
+
+msgctxt "#30060"
+msgid "System Defaults"
+msgstr "Systemeinstellungen"
+
+msgctxt "#30061"
+msgid "Mode"
+msgstr "Modus"
+
+msgctxt "#30062"
+msgid "Continue previous incomplete Rip"
+msgstr "letzten unvollständigen Rip fortsetzen"
+
+msgctxt "#30063"
+msgid "Please wait..."
+msgstr "Bitte warten..."
+
+msgctxt "#30064"
+msgid "Additional HandBrakeCLI Arguments"
+msgstr "Zusätzliche HandBrakeCLI Argumente"
+
+msgctxt "#30065"
+msgid "Update Library after processing"
+msgstr "Nach Abarbeitung Bibliothek aktualisieren"
+
+msgctxt "#30068"
+msgid "Drive ID"
+msgstr "Laufwerks-ID"
+
+msgctxt "#30070"
+msgid "2 Minutes"
+msgstr "2 Minuten"
+
+msgctxt "#30071"
+msgid "5 Minutes"
+msgstr "5 Minuten"
+
+msgctxt "#30072"
+msgid "10 Minutes"
+msgstr "10 Minuten"
+
+msgctxt "#30073"
+msgid "15 Minutes"
+msgstr "15 Minuten"
+
+msgctxt "#30074"
+msgid "20 Minutes"
+msgstr "20 Minuten"
+
+msgctxt "#30075"
+msgid "25 Minutes"
+msgstr "25 Minuten"
+
+msgctxt "#30076"
+msgid "30 Minutes"
+msgstr "30 Minuten"
+
+msgctxt "#30077"
+msgid "35 Minutes"
+msgstr "35 Minuten"
+
+msgctxt "#30078"
+msgid "40 Minutes"
+msgstr "40 Minuten"
+
+msgctxt "#30079"
+msgid "45 Minutes"
+msgstr "45 Minuten"
+
+msgctxt "#30080"
+msgid "Rip only"
+msgstr "Nur Rippen"
+
+msgctxt "#30081"
+msgid "Rip and Encode"
+msgstr "Rippen und Encodieren"
+
+msgctxt "#30082"
+msgid "Encode only"
+msgstr "Nur Encodieren"
+
+msgctxt "#30085"
+msgid "Very High"
+msgstr "Sehr Hoch"
+
+msgctxt "#30086"
+msgid "High"
+msgstr "Hoch"
+
+msgctxt "#30087"
+msgid "Medium"
+msgstr "Mittel"
+
+msgctxt "#30088"
+msgid "Moderate"
+msgstr "Mäßig"
+
+msgctxt "#30089"
+msgid "Low"
+msgstr "Niedrig"

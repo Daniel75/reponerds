@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog">
+    <defaultcontrol always="true">301</defaultcontrol>
+    <animation type="WindowOpen">
+        <effect type="fade" start="0" end="100" time="500" />
+        <effect type="slide" start="0,750" end="0,0" time="700" />
+    </animation>
+    <animation type="WindowClose">
+        <effect type="fade" start="100" end="0" time="400" />
+        <effect type="slide" start="0,0" end="0,750" time="300" />
+    </animation>
+    <controls>
+        <control type="group">
+            <visible>Window.IsVisible(home)</visible>
+            <control type="button" id="301">
+                <include>HiddenButton</include>
+                <onfocus condition="String.IsEmpty(Container(450).ListItem(0).Label)">Control.SetFocus(201)</onfocus>
+                <onfocus condition="!String.IsEmpty(Container(450).ListItem(0).Label)">Control.SetFocus(450)</onfocus>
+            </control>
+            <!-- <control type="button" id="302">
+				<include>HiddenButton</include>
+				<onfocus>Dialog.Close(Favourites)</onfocus>
+				<onfocus>ActivateWindow(settings)</onfocus>
+			</control> -->
+            <control type="group">
+                <top>154</top>
+                <control type="group">
+                    <control type="image">
+                        <left>-15</left>
+                        <top>615</top>
+                        <width>1950</width>
+                        <height>330</height>
+                        <texture background="true">BlackBack.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>-15</left>
+                        <top>615</top>
+                        <width>1950</width>
+                        <height>1</height>
+                        <texture background="true">Separator2.png</texture>
+                    </control>
+                </control>
+                <control type="list" id="450">
+                    <!-- favourites -->
+                    <left>60</left>
+                    <top>645</top>
+                    <width>1800</width>
+                    <height>570</height>
+                    <onup>Dialog.Close(Favourites)</onup>
+                    <onleft>450</onleft>
+                    <onright>450</onright>
+                    <ondown>Dialog.Close(Favourites)</ondown>
+                    <ondown>SetFocus(199)</ondown>
+                    <pagecontrol>-</pagecontrol>
+                    <scrolltime>200</scrolltime>
+                    <orientation>horizontal</orientation>
+                    <animation effect="slide" start="0,0" end="0,0" time="0" condition="String.IsEqual(Container(450).NumItems,8)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="120,0" time="0" condition="String.IsEqual(Container(450).NumItems,7)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="240,0" time="0" condition="String.IsEqual(Container(450).NumItems,6)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="345,0" time="0" condition="String.IsEqual(Container(450).NumItems,5)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="450,0" time="0" condition="String.IsEqual(Container(450).NumItems,4)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="570,0" time="0" condition="String.IsEqual(Container(450).NumItems,3)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="690,0" time="0" condition="String.IsEqual(Container(450).NumItems,2)">conditional</animation>
+                    <animation effect="slide" start="0,0" end="795,0" time="0" condition="String.IsEqual(Container(450).NumItems,1)">conditional</animation>
+                    <itemlayout height="225" width="225">
+                        <control type="image">
+                            <left>6</left>
+                            <top>6</top>
+                            <width>198</width>
+                            <height>198</height>
+                            <aspectratio>scale</aspectratio>
+                            <colordiffuse>grey</colordiffuse>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="225" width="225">
+                        <control type="image">
+                            <include>focuseffect</include>
+                            <left>0</left>
+                            <top>0</top>
+                            <width>210</width>
+                            <height>210</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <bordertexture border="4">buttons/ButtonNF.png</bordertexture>
+                            <bordersize>4</bordersize>
+                            <visible>Control.HasFocus(450)</visible>
+                        </control>
+                        <control type="image">
+                            <left>6</left>
+                            <top>6</top>
+                            <width>198</width>
+                            <height>198</height>
+                            <aspectratio>scale</aspectratio>
+                            <colordiffuse>grey</colordiffuse>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                            <visible>!Control.HasFocus(450)</visible>
+                        </control>
+                    </focusedlayout>
+                </control>
+                <control type="label">
+                    <left>698</left>
+                    <top>858</top>
+                    <width>525</width>
+                    <height>60</height>
+                    <align>center</align>
+                    <aligny>center</aligny>
+                    <font>ubuntu-r21</font>
+                    <label>$INFO[Container(450).ListItem.Label]</label>
+                </control>
+                <control type="label">
+                    <visible>!String.IsEmpty(Container(450).ListItem(0).Label)</visible>
+                    <description>Page label</description>
+                    <left>570r</left>
+                    <top>870</top>
+                    <width>525</width>
+                    <height>45</height>
+                    <align>right</align>
+                    <aligny>center</aligny>
+                    <font>impacted21</font>
+                    <textcolor>grey</textcolor>
+                    <label>([COLOR=selected]$INFO[Container(450).NumItems][/COLOR]) $LOCALIZE[31025] - $LOCALIZE[31024] ([COLOR=selected]$INFO[Container(450).CurrentPage]/$INFO[Container(450).NumPages][/COLOR])</label>
+                </control>
+                <!-- <control type="image">
+					<description>down arrow</description>
+					<left>20</left>
+					<top>590</top>
+					<width>16</width>
+					<height>14</height>
+					<texture flipx="true">ArrowBig.png</texture>
+					<animation effect="slide" start="0" end="0,5" time="1000" delay="0" loop="true" condition="true">Conditional</animation>
+					<animation effect="rotate" start="0" end="-90" time="0" delay="0" center="auto" condition="true">Conditional</animation>
+					<visible>!Skin.HasSetting(HideNavArrow)</visible>
+				</control> -->
+                <control type="group">
+                    <visible>String.IsEmpty(Container(450).ListItem(0).Label)</visible>
+                    <control type="button" id="201">
+                        <left>855</left>
+                        <top>645</top>
+                        <width>210</width>
+                        <height>210</height>
+                        <label>-</label>
+                        <onup>Dialog.Close(Favourites)</onup>
+                        <onup>SetFocus(9000)</onup>
+                        <ondown>Dialog.Close(Favourites)</ondown>
+                        <ondown>SetFocus(200)</ondown>
+                        <texturefocus border="4">DefaultIconWarning.png</texturefocus>
+                    </control>
+                    <control type="label">
+                        <left>698</left>
+                        <top>858</top>
+                        <width>525</width>
+                        <height>60</height>
+                        <align>center</align>
+                        <aligny>center</aligny>
+                        <font>ubuntu-r21</font>
+                        <label>51176</label>
+                    </control>
+                </control>
+            </control>
+        </control>
+    </controls>
+</window>

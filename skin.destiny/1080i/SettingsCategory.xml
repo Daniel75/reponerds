@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<window id="12">
+  <defaultcontrol>3</defaultcontrol>
+  <allowoverlay>no</allowoverlay>
+  <controls>
+	  <control type="group">
+		<visible>!Window.Previous(Weather) + !Window.Previous(VideoFiles) + !Window.Previous(VideoLibrary) + !Window.Previous(MusicFiles) + !Window.Previous(MusicLibrary) + !Window.Previous(Pictures) + !Window.Previous(Programs)</visible>
+	  </control>
+	  <control type="group">
+		<visible>Window.Previous(Weather)</visible>
+	  </control>
+	  <control type="group">
+		<visible>Window.Previous(Programs)</visible>
+	  </control>
+	  <control type="group">
+		<visible>Window.Previous(VideoFiles) | Window.Previous(VideoLibrary)</visible>
+	  </control>
+	  <control type="group">
+		<visible>Window.Previous(MusicFiles) | Window.Previous(MusicLibrary) | Window.Previous(Pictures)</visible>
+	  </control>
+	  <control type="group">
+		<visible>Window.Previous(Pictures)</visible>
+	  </control>
+	  <control type="group">
+		<left>0</left>
+		<top>0</top>
+		<include>CommonHomeBack</include>
+		<include>CommonAllFront2</include>
+		<include>SideBladeForViews</include>	
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>	
+		<include>HomePlaying</include>
+	  </control>
+	  <!--<control type="label">
+        <description>header label</description>
+        <left>550</left>
+        <top>120</top>
+        <width>1110</width>
+        <height>45</height>
+        <font>primal_20_Bold</font>
+        <label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
+        <align>left</align>
+        <aligny>center</aligny>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      </control>-->
+      <control type="grouplist" id="5">
+	    <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+	    <include>Animation.ZoomIn</include>
+        <description>control area</description>
+        <left>505</left>
+        <top>165</top>
+        <width>1337</width>
+        <height>810</height>
+        <itemgap>2</itemgap>
+        <pagecontrol>60</pagecontrol>
+        <onleft>3</onleft>
+        <onright>1860</onright>
+        <onup>5</onup>
+        <ondown>5</ondown>
+      </control>
+	  <control type="group">
+      <left>0</left>
+      <top>0</top>
+	  <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="ControlGroup(9020).HasFocus | ControlGroup(9021).HasFocus | ControlGroup(9030).HasFocus">Conditional</animation>
+	  <include>Animation.ZoomIn</include>
+	  <control type="grouplist" id="3">
+        <description>button area</description>
+        <left>185</left>
+        <top>165</top>
+        <width>310</width>
+        <height>755</height>
+        <itemgap>2</itemgap>
+        <onleft>9020</onleft>
+        <onright>5</onright>
+        <onup>3</onup>
+        <ondown>3</ondown>
+      </control>
+      <control type="scrollbar" id="60">
+        <include>Animation.ZoomIn</include>
+		<include>Animation.ZoomOut</include>
+		<left>1850</left>
+	    <top>165</top>
+	    <width>10</width>
+	    <height>810</height>
+	    <texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+	    <texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+	    <texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+	    <textureslidernib>button/ScrollBarNib.png</textureslidernib>
+	    <textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+        <onleft>9020</onleft>
+        <onright>3</onright>
+        <showonepage>true</showonepage>
+        <orientation>vertical</orientation>
+      </control>
+    </control>
+	<control type="textbox" id="6">
+	  <description>description area</description>
+	  <left>130</left>
+	  <top>995</top>
+	  <width>1650</width>
+	  <height>70</height>
+	  <font>primal_18</font>
+	  <align>justify</align>
+	  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  <autoscroll time="3000" delay="10000" repeat="5000">true</autoscroll>
+	  <include>Fade_Widgets</include>
+	</control>
+    <control type="button" id="10">
+      <description>Default Category Button</description>
+	  <left>30</left>
+      <top>0</top>
+      <height>90</height>
+      <width>310</width>
+      <textoffsetx>20</textoffsetx>
+	  <texturenofocus colordiffuse="$VAR[ColorButtonNoFocus]">skin/button_klein.png</texturenofocus>
+	  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+      <align>right</align>
+      <aligny>center</aligny>
+      <font>primal_20</font>
+      <pulseonselect>false</pulseonselect>
+    </control>
+    <control type="button" id="7">
+      <description>Default Button</description>
+      <left>0</left>
+      <top>0</top>
+      <height>70</height>
+	  <textoffsetx>30</textoffsetx>
+    </control>
+    <control type="radiobutton" id="8">
+      <description>Default RadioButton</description>
+      <left>0</left>
+      <top>0</top>
+      <height>70</height>
+	  <textoffsetx>30</textoffsetx>
+    </control>
+    <control type="spincontrolex" id="9">
+      <description>Default SpinControlex</description>
+      <left>0</left>
+      <top>0</top>
+      <height>70</height>
+	  <textoffsetx>30</textoffsetx>
+      <aligny>center</aligny>
+      <reverse>yes</reverse>
+    </control>
+	<control type="sliderex" id="13">
+      <description>Default Slider</description>
+      <left>0</left>
+      <top>0</top>
+      <height>70</height>
+	  <textoffsetx>10</textoffsetx>
+      <aligny>center</aligny>
+    </control>
+    <control type="label" id="2">
+      <description>Fake Label so we can pass it value down to the one below</description>
+      <left>0</left>
+      <top>0</top>
+      <width>0</width>
+      <height>0</height>
+      <font>-</font>
+      <visible>false</visible>
+    </control>	
+	<control type="group">
+      <visible>!Skin.HasSetting(kiosk)</visible>
+      <animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">Conditional</animation>
+      <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">WindowClose</animation>
+      <control type="image">
+        <left>-495</left>
+        <top>0</top>
+        <width>395</width>
+        <height>1080</height>
+		<texture background="true">skin/button_klein.png</texture>
+		<bordertexture border="10">ThumbShadow2.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+        <aspectratio>stretch</aspectratio>
+      </control>
+	  </control> 
+      <control type="grouplist" id="9020">
+	    <animation effect="slide" start="0,0" end="480,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">Conditional</animation>
+        <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">WindowClose</animation>
+        <left>-485</left>
+        <top>110</top>
+        <width>377</width>
+        <height>600</height>
+        <onleft>9000</onleft>
+        <onright>3</onright>
+        <onup>9000</onup>
+        <ondown>9000</ondown>
+        <onback>3</onback>
+        <itemgap>0</itemgap>
+        <control type="button" id="20">
+          <description>Setting level button</description>
+		  <height>50</height>
+          <textwidth>235</textwidth>
+          <label>10037</label>
+          <onclick>SettingsLevelChange</onclick>
+        </control>
+        <control type="button" id="21">
+          <description>Reset button</description>
+		  <height>50</height>
+          <label>10035</label>
+          <onclick>SettingsReset</onclick>
+        </control>
+      </control> 
+  </controls>
+</window>

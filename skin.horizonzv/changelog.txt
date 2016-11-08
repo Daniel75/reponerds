@@ -1,0 +1,32 @@
+﻿v 0.9.0.0
+- Widget: "im Gange" wird nun nicht mehr separat angezeigt, man wählt jetzt zwischen "Zufall", "zuletzt hinzugefügt" ODER "im Gange" (es werden jeweils 10 Objekte angezeigt)
+- Widget: neu für Videos (Playlisten, Quellen)
+- Hauptmenü: ONCLICK für Videos korrigiert, Abstände zwischen den Menüpunkten etwas verkleinert
+- Videovollbild: Seekbar kann temporär ausgeblendet werden (OSD), beim Neustart von Kodi wird sie wieder angezeigt
+- Game Controllers Dialog: Kopie aus Estuary an HorizonzV angepasst
+- Code Bugfixes
+
+v 0.0.0.2
+- Plot im Showcase View verbreitert, wenn ExtraArts deaktiviert sind
+- Position der Flaggs in den Viwes korrigiert
+- Anzeige für FSK Logos überarbeitet
+- Schreibfehler im Code ausfindig gemacht
+
+v 0.0.0.1
+- Umbau auf 1080p
+- Änderungen für Kodi 17 umgesetzt
+- System Einstellungen neues Design (Vorbild: Estuary)
+- neues Fenster: Textviewer (für Plot, News ...)
+- Icons aus Estuary übernommen und Grafisch etwas angepasst
+- Music Info überarbeitet (neuer Schalter - YouTube durchsuchen über Extended Script Info)
+- Video Info überarbeitet (neue Schlater - eigene Bewertung, Erweiterte Infos, Filme des Direktors)
+- einige Scrolldown/-up Einstellungen in Popups umgewandelt (SetBool)
+- neue Funktion "backgroundcolor" in Fenster eingebaut (wird von der gewählten Skinfarbe/-theme beeinflust)
+- Skinfarbe/-theme wirkt sich auf mehr Bereiche aus (Dialoge, Popups, Sidepanel, Hauptmenü, Listen, Hintergrundfarbe der Fenster)
+- Hauptmenü und Untermenü für News überarbeitet
+- Im Newsbereich können NewsCenter, SerienPlaner und das TV Highlights (GTO Addon) angezeigt werden. "Onclick" für News-Text eingebaut
+- einige Filmansichten überarbeitet (zB. Showcase)
+- alle Flaggs überarbeitet -> Grafische Flaggs entfernt und durch Text (mit Border) ersetzt. Verhindert fehlerhafte Anzeige und sieht einheitlicher aus
+- TV Highlights (GTO) aus TV-Widget entfernt
+- kleine Bugs gefixt (und hoffentlich keine Neuen eingebaut ;) )
+- Sprachdateien überarbeitet

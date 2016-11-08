@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<include>openclose</include>
+	<controls>
+		<include>DialogLayout</include>
+		<control type="group">
+			<include>opencloseslidedown</include>
+			<left>0</left>
+			<top>34</top>
+			<control type="button" id="10">
+				<description>Ok</description>
+				<left>565</left>
+				<top>120</top>
+				<width>150</width>
+				<height>26</height>
+				<label>222</label>
+				<onleft>10</onleft>
+				<onright>10</onright>
+				<onup>10</onup>
+				<ondown>10</ondown>
+				<texturenofocus>-</texturenofocus>
+			</control>
+		</control>
+	</controls>
+</window>

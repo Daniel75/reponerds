@@ -1,0 +1,2297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+  <include file="defaults.xml" />
+  
+  <include file="View_55_FileMode.xml" />  
+  <include file="ViewsMovies.xml" />  
+  <include file="ViewsTVShows.xml" /> 
+  <include file="ViewsMusic.xml" /> 
+  <include file="ViewsPictures.xml" /> 
+  <include file="ViewsPVR.xml" />
+  <include file="ViewsPVRGuide.xml" />
+  <include file="ViewsMixed.xml" />
+  <include file="ViewsWeather.xml" />
+  
+  <include file="IncludesViewTypeList.xml" />
+  <include file="IncludesViewWalls.xml" />
+  <include file="IncludesHomePlaylistFanart.xml" />
+  <include file="IncludesHomeWidgetsHorizontal.xml" />
+  <include file="IncludesHomeWidgetsForeign.xml" />
+  <include file="IncludesHomeWidgetsPlaying.xml" />
+  <include file="IncludesCodecFlagging.xml" />
+  <include file="IncludesHomeContent.xml" />
+  <include file="IncludesHomeMainMenuHorizontal.xml" />
+  <include file="IncludesPVR.xml"/>
+  <include file="IncludesMusic.xml" />
+  <include file="Variables.xml" /> 
+  
+  <constant name="FanartCrossfadeTime">200</constant>
+  <constant name="IconCrossfadeTime">200</constant>
+  <constant name="FanartCrossfadeTime">500</constant>
+  <constant name="IconCrossfadeTime">400</constant>
+  <constant name="DepthDialog">0.50</constant>
+  <constant name="DepthDialog+">0.52</constant>
+  <constant name="DepthDialog-">0.48</constant>
+  <constant name="DepthMax">0.54</constant>
+  <constant name="DepthOSD">0.40</constant>
+  <constant name="DepthOSD+">0.44</constant>
+  <constant name="DepthOSD-">0.36</constant>
+  <constant name="DepthOSDPopout">0.48</constant>
+  <constant name="DepthContent">0</constant>
+  <constant name="DepthContent+">0.08</constant>
+  <constant name="DepthContent-">-0.08</constant>
+  <constant name="DepthContentPopout">0.15</constant>
+  <constant name="DepthMenu">0.08</constant>
+  <constant name="DepthMenu+">0.14</constant>
+  <constant name="DepthMenu-">0.00</constant>
+  <constant name="DepthHeader">0.08</constant>
+  <constant name="DepthFooter">0.08</constant>
+  <constant name="DepthBackground">-0.80</constant>
+  <constant name="DepthFloor">-0.20</constant>
+  <constant name="DepthSideBlade">0.15</constant>
+  
+  <include name="no_tv_theme">
+	  <onfocus>SetFocus(55)</onfocus>
+  </include>
+  <include name="yes_tv_theme">
+	   <onfocus>XBMC.RunScript(script.tvtunes,backend=True&amploop=True)</onfocus>
+	   <onfocus>SetFocus(55)</onfocus>
+  </include>
+  <include name="KeyboardButton">
+	  <width>125</width>
+	  <height>125</height>
+	  <texturenofocus colordiffuse="$VAR[BackColorFront]">skin/button_klein.png</texturenofocus>
+	  <texturefocus colordiffuse="$VAR[BackColorButton]">skin/button_klein.png</texturefocus>
+	  <align>center</align>
+	  <aligny>center</aligny>
+	  <font>primal_20</font>
+	  <textcolor>$VAR[ColorFontNormal]</textcolor>
+      <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+  </include>
+  <include name="CommonHomeMediaVisualisation">   
+    <control type="visualisation">
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <visible>Player.HasAudio + Skin.HasSetting(homemusikvisualisation)</visible>
+    </control>
+  </include>
+  
+  <include name="HomemenuLeftWebOS"><left>14</left></include>
+  <include name="HomemenuLeftTizen"><left>98</left></include>
+  <include name="HomemenuTopWebOS"><top>720</top></include>
+  <include name="HomemenuTopTizen"><top>800</top></include>
+  <include name="HomemenuPlayerTopWebOS"><top>600</top></include>
+  <include name="HomemenuPlayerTopTizen"><top>700</top></include>
+  <include name="SubmenuTopWebOS"><top>720</top></include>
+  <include name="SubmenuTopTizen"><top>800</top></include>
+  <include name="WidgetsTopWebOS"><top>0</top></include>
+  <include name="WidgetsTopTizen"><top>90</top></include>
+  
+  <include name="ViewLowWidth611"><width>1320</width></include>
+  <include name="ViewBigWidth611"><width>1820</width></include>
+  
+  <include name="PlotFontBigVar"><font>primal_21</font></include>
+  <include name="PlotFontLowVar"><font>primal_16</font></include>
+	
+  <include name="ColorSettingsLayout">
+	  <width>930</width>
+	  <height>50</height>
+	  <texturefocus>skin/button_klein.png</texturefocus>
+	  <texturenofocus>skin/button_klein_tranz20.png</texturenofocus>
+  </include>
+  
+  <include name="CommonViewBack">
+	<control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">special://skin/backgrounds/FALLBACK.jpg</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <visible>!Window.IsVisible(home)</visible>
+    </control>
+	<control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">skin/button_klein_tranz90.png</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+	</control>
+  </include>
+
+  <include name="CommonHomeBack">
+    <control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  <visible>!Window.IsVisible(home)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Thumb]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>!Container(9000).HasFocus(3) + !Container(9000).HasFocus(5) + !Container(9000).HasFocus(6) + !Container(9000).HasFocus(7) + !Container(9000).HasFocus(8)</visible>
+    </control>
+	<control type="multiimage">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <imagepath background="true">resource://resource.images.weatherfanart.multi/$INFO[Window(Weather).Property(Current.FanartCode)]</imagepath>
+	  <timeperimage>10000</timeperimage>
+	  <randomize>true</randomize>
+	  <fadetime>1000</fadetime>
+	  <include>VisibleFadeEffect</include>
+	  <visible>System.HasAddon(resource.images.weatherfanart.multi)</visible>
+	  <animation effect="fade" time="150">WindowClose</animation>
+	  <visible>Container(9000).HasFocus(14) + Skin.HasSetting(WheaterMultiFanart)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>Container(9000).HasFocus(3)</visible>
+	  <visible>!Skin.HasSetting(movieplaylistButton11000)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>Container(9000).HasFocus(5)</visible>
+	  <visible>!Skin.HasSetting(movieplaylistButton1800)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>Container(9000).HasFocus(6)</visible>
+	  <visible>!Skin.HasSetting(movieplaylistButton2800)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>Container(9000).HasFocus(7)</visible>
+	  <visible>!Skin.HasSetting(movieplaylistButton3800)</visible>
+    </control>
+	<control type="multiimage">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>1920</width>
+      <height>1080</height>
+      <imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
+      <timeperimage>8000</timeperimage>
+      <randomize>true</randomize>
+      <fadetime>500</fadetime>
+	  <visible>Container(9000).HasFocus(8)</visible>
+	  <visible>!Skin.HasSetting(movieplaylistButton12000)</visible>
+    </control>
+	<include>HomePlaylistFanart</include>
+	<control type="multiimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <imagepath>$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</imagepath>
+	  <aspectratio>stretch</aspectratio>
+	  <timeperimage>10000</timeperimage>
+	  <fadetime>2000</fadetime>
+	  <visible>Skin.HasSetting(GrabFanart)</visible>
+	  <visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(4) | Container(9000).HasFocus(5) | Container(9000).HasFocus(6) | Container(9000).HasFocus(7)</visible>
+	</control>
+	<control type="multiimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <imagepath>$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</imagepath>
+	  <aspectratio>stretch</aspectratio>
+	  <timeperimage>10000</timeperimage>
+	  <fadetime>2000</fadetime>
+	  <visible>Skin.HasSetting(GrabFanart)</visible>
+	  <visible>Container(9000).HasFocus(8)</visible>
+	</control>
+	<control type="multiimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <imagepath>$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</imagepath>
+	  <aspectratio>stretch</aspectratio>
+	  <timeperimage>10000</timeperimage>
+	  <fadetime>2000</fadetime>
+	  <visible>Skin.HasSetting(GrabFanart)</visible>
+	  <visible>Container(9000).HasFocus(10)</visible>
+	</control>
+	<control type="largeimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+	  <texture background="true" fallback="special://skin/backgrounds/FALLBACK.jpg">special://skin/backgrounds/FALLBACK.jpg</texture>
+	  <fadetime>FanartCrossfadeTime</fadetime>
+	  <visible>Player.HasAudio</visible>
+	  <visible>!Skin.HasSetting(ArtistslideshowHome)</visible>
+	</control>
+	<control type="largeimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+	  <texture background="true" fallback="special://skin/backgrounds/MUSICDEFAULT.jpg">$INFO[Window(Home).Property(SkinHelper.Music.Fanart)]</texture>	 
+	  <fadetime>FanartCrossfadeTime</fadetime>
+	  <visible>Skin.HasSetting(HomeMusicFanart)</visible>
+	  <visible>!Skin.HasSetting(MusicPath)</visible>
+	  <visible>Window.IsVisible(home)</visible>
+	  <visible>Player.HasAudio</visible>
+	  <visible>!Pvr.IsPlayingRadio</visible>
+	</control>
+	<control type="multiimage">
+	  <visible>Window.IsVisible(home)</visible>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
+	  <imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+	  <timeperimage>10000</timeperimage>
+	  <fadetime>2000</fadetime>
+	  <randomize>true</randomize>
+	  <visible>IsEmpty(Window.Property(ArtistSlideshowRefresh))</visible>
+	  <visible>Skin.HasSetting(ArtistslideshowHome)</visible>
+	  <visible>Window.IsVisible(home)</visible>
+	  <visible>Player.HasAudio</visible>
+	  <visible>!Pvr.IsPlayingRadio</visible>
+	</control>
+    <control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">$VAR[VarWidgetsFanart]</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <fadetime>500</fadetime>
+	</control>
+	<control type="videowindow">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <align>left</align>
+	  <visible>Window.IsVisible(home)</visible>
+	  <visible>Player.HasVideo</visible>
+	</control>
+    <control type="image">
+	  <left>0</left>
+	  <top>0</top>
+	  <width>1920</width>
+	  <height>1080</height>
+	  <texture background="true">skin/button_klein_tranz80.png</texture>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+	  <visible>!Container(9000).HasFocus(30)</visible>
+	</control>
+  </include>
+  <include name="CommonAllFront"> 
+  <control type="group">
+  <visible>!Control.IsVisible(51)</visible>
+  <include>Animation.ZoomIn</include>
+	<control type="image">	  
+	  <left>170</left>
+	  <top>150</top>
+	  <width>1187</width>
+	  <height>840</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>7</bordersize>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <left>1355</left>
+	  <top>150</top>
+	  <width>515</width>
+	  <height>840</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>7</bordersize>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>		
+	</control>
+   </control>
+  </include>
+  <include name="CommonAllFront2"> 
+	<control type="image">
+	  <visible>!Control.IsVisible(50)</visible>
+	  <include>Animation.ZoomIn</include>
+	  <left>170</left>
+	  <top>150</top>
+	  <width>1700</width>
+	  <height>840</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>7</bordersize>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+  </include>
+  <include name="CommonAllFront3"> 
+	<control type="image">
+	  <include>Animation.ZoomIn</include>
+	  <left>170</left>
+	  <top>150</top>
+	  <width>1700</width>
+	  <height>840</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>7</bordersize>
+	  <aspectratio>stretch</aspectratio>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+  </include>
+  <!-- PVR End -->
+  <include name="BehindDialogFadeOut">
+    <control type="image">
+      <left>0</left>
+      <top>0</top>
+      <width>1920</width>
+      <height>1080</height>
+      <texture>black-back.png</texture>
+      <animation effect="fade" time="400">Visible</animation>
+      <animation effect="fade" time="200">Hidden</animation>
+      <visible>Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(ScriptsDebugInfo) | Window.IsActive(PluginSettings) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | Window.IsActive(PlayerControls) | Window.IsActive(VirtualKeyboard) | Window.IsActive(NumericInput) | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-XBMC_Lyrics-settings.xml) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml)</visible>
+    </control>
+  </include>
+  <include name="HomeMenuIcon">
+    <control type="image">
+      <left>5</left>
+		<top>2</top>
+		<width>70</width>
+		<height>70</height>
+		<texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+      </control>
+  </include>
+  <include name="StartUpNoCustomfocus">
+    <control type="button" id="8999">
+      <description>Run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+    <control type="button" id="8999">
+      <description>Don't run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+  </include>
+  <include name="StartupCustomFocus">
+    <control type="button" id="8999">
+      <description>Run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(8998)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+    <control type="button" id="8998">
+      <description>Run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>Control.Move(9000,$INFO[Skin.String(CustomFocusOffset)])</onfocus>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(homepageHideRecentlyAdded) + Window.Previous(startup)</visible>
+    </control>
+    <control type="button" id="8998">
+      <description>Run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>Skin.HasSetting(homepageHideRecentlyAdded) + !Window.Previous(startup)</visible>
+    </control>
+    <control type="button" id="8999">
+      <description>Don't run Recently added</description>
+      <left>-30</left>
+      <top>-30</top>
+      <width>1</width>
+      <height>1</height>
+      <label>-</label>
+      <font>-</font>
+      <onfocus>Control.Move(9000,$INFO[Skin.String(CustomFocusOffset)])</onfocus>
+      <onfocus>SetFocus(9000)</onfocus>
+      <texturenofocus>-</texturenofocus>
+      <texturefocus>-</texturefocus>
+      <visible>!Skin.HasSetting(homepageHideRecentlyAdded)</visible>
+    </control>
+  </include>
+  <include name="WindowTitleCommons">
+    <include>SlideInAndOutAnimationRNL</include>
+    <left>80</left>
+	<top>1020</top>
+	<width>500</width>
+	<height>20</height>
+	<font>primal_20</font>
+	<textcolor>$VAR[ColorFontNormal]</textcolor>
+	<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+    <scroll>false</scroll>
+    <align>left</align>
+    <aligny>center</aligny>
+  </include>
+  <!-- Home sub-menu stuff -->
+  <include name="ButtonActorInfoDialogsCommonValues">
+    <texturefocus>skin/actor_layer.png</texturefocus>
+    <pulseonselect>false</pulseonselect>
+  </include>
+  <include name="GlobalVideoWindow">
+    <control type="videowindow">
+      <left>570</left>
+      <top>45</top>
+      <width>750</width>
+      <height>600</height>
+      <aligny>center</aligny>
+      <texture>-</texture>
+      <animation effect="slide" start="-39,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+      <animation effect="slide" start="0,0" end="-39,0" time="200" delay="200" tween="quadratic" easing="out">WindowClose</animation>
+    </control>
+  </include>
+  <include name="CommonPageCount">
+    <control type="label">
+	  <include>SlideInAndOutAnimationLNR</include>
+      <description>Page Count Label</description>
+      <left>80</left>
+	  <top>1020</top>
+	  <width>500</width>
+	  <height>20</height>
+	  <font>primal_20</font>
+      <textcolor>$VAR[ColorFontNormal]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      <scroll>false</scroll>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$INFO[Container.NumItems] $LOCALIZE[49984] $LOCALIZE[49983] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
+      <visible>!Skin.HasSetting(nopagecount)</visible>	  
+	  <visible>!Control.IsVisible(106) + !Control.IsVisible(580) + !Control.IsVisible(599) + !Control.IsVisible(601) + !Control.IsVisible(602) + !Control.IsVisible(603) + !Control.IsVisible(604) + !Control.IsVisible(605)</visible>
+    </control>
+  </include>
+  <include name="CommonPageCountView">
+    <control type="label">
+	  <include>SlideInAndOutAnimationLNR</include>
+      <description>Page Count Label</description>
+      <left>80</left>
+	  <top>1020</top>
+	  <width>500</width>
+	  <height>20</height>
+	  <font>primal_20</font>
+      <textcolor>$VAR[ColorFontNormal]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+      <scroll>false</scroll>
+      <align>left</align>
+      <aligny>center</aligny>
+      <label>$INFO[Container.NumItems] $LOCALIZE[49984] $LOCALIZE[49983] $INFO[Container.CurrentPage]/$INFO[Container.NumPages]</label>
+      <visible>!Skin.HasSetting(nopagecount)</visible>
+	  <visible>Control.IsVisible(580) | Control.IsVisible(601) | Control.IsVisible(602) | Control.IsVisible(603)</visible>	
+    </control>
+  </include>
+  <include name="DialogBackgroundCommons">
+	<control type="image">
+	  <description>background image</description>
+	  <left>0</left>
+	  <top>0</top>
+	  <width>$PARAM[DialogBackgroundWidth]</width>
+	  <height>$PARAM[DialogBackgroundHeight]</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <bordertexture border="10">ThumbShadow2.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	</control>
+	<control type="image">
+	  <description>Dialog Header image</description>
+	  <left>10</left>
+	  <top>10</top>
+	  <width>$PARAM[DialogHeaderWidth]</width>
+	  <height>50</height>
+	  <texture background="true">skin/button_klein.png</texture>
+	  <colordiffuse>$VAR[BackColorBackground]</colordiffuse>
+	</control>
+	<control type="label" id="$PARAM[DialogHeaderId]">
+	  <description>header label</description>
+	  <left>10</left>
+	  <top>20</top>
+	  <width>$PARAM[DialogHeaderWidth]</width>
+	  <height>30</height>
+	  <font>font13_title</font>
+	  <label>$PARAM[DialogHeaderLabel]</label>
+	  <align>center</align>
+	  <aligny>center</aligny>
+	  <textcolor>$VAR[ColorFontSelected]</textcolor>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	</control>
+	<control type="button">
+	  <description>Close Window button</description>
+	  <left>$PARAM[CloseButtonLeft]</left>
+	  <top>15</top>
+	  <width>64</width>
+	  <height>32</height>
+	  <label>-</label>
+	  <font>-</font>
+	  <onclick>PreviousMenu</onclick>
+	  <texturefocus>DialogCloseButton-focus.png</texturefocus>
+	  <texturenofocus>DialogCloseButton.png</texturenofocus>
+	  <onleft>$PARAM[CloseButtonNav]</onleft>
+	  <onright>$PARAM[CloseButtonNav]</onright>
+	  <onup>$PARAM[CloseButtonNav]</onup>
+	  <ondown>$PARAM[CloseButtonNav]</ondown>
+	  <visible>system.getbool(input.enablemouse)</visible>
+	</control>
+  </include>
+  <!-- Context menu -->
+	<include name="ZusatzContentMenuButtonSimpleplaylists">
+	 <control type="button" id="2002">
+		<description>simpleplaylists</description>
+		<width>420</width>
+		<height>80</height>
+		<font>primal_20</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+		<align>center</align>
+		<textoffsetx>15</textoffsetx>
+		<label>Watch Later</label>
+		<onclick>Playlist.Clear</onclick>
+		<onclick>RunPlugin(plugin://script.simpleplaylists/?mode=addCurrentUrl)</onclick>
+		<visible>System.HasAddon(script.simpleplaylists)</visible>
+	  </control>
+	</include>
+	<!-- Movies in Hauptmenü -->
+  <include name="QuicklinksButton">
+	<control type="button" id="995">
+	  <label>$VAR[QuicklinksContextLabelMovies]</label>
+	  <width>420</width>
+	  <height>80</height>
+	  <font>primal_20</font>
+	  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	  <focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	  <align>center</align>
+	  <textoffsetx>15</textoffsetx>
+	  <visible>Container.Content(Movies)</visible>
+	  
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title)) ">Skin.SetString(MovieList1Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Plot,$INFO[ListItem.Plot])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1StarRating,$INFO[ListItem.StarRating])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Duration,$INFO[ListItem.Duration])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(MovieList1Title))">Skin.SetString(MovieList1Genre,$INFO[ListItem.Genre])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Plot,$INFO[ListItem.Plot])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2StarRating,$INFO[ListItem.StarRating])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Duration,$INFO[ListItem.Duration])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + IsEmpty(Skin.String(MovieList2Title))">Skin.SetString(MovieList2Genre,$INFO[ListItem.Genre])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Plot,$INFO[ListItem.Plot])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3StarRating,$INFO[ListItem.StarRating])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Duration,$INFO[ListItem.Duration])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + [IsEmpty(Skin.String(MovieList3Title))]">Skin.SetString(MovieList3Genre,$INFO[ListItem.Genre])</onclick>
+
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + [IsEmpty(Skin.String(MovieList4Title))]">Skin.SetString(MovieList4Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + [IsEmpty(Skin.String(MovieList5Title))]">Skin.SetString(MovieList5Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + [IsEmpty(Skin.String(MovieList6Title))]">Skin.SetString(MovieList6Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7Title,$INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7Thumb,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7Poster,$INFO[ListItem.Art(poster)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + [IsEmpty(Skin.String(MovieList7Title))]">Skin.SetString(MovieList7Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(MovieList1Title)) + !IsEmpty(Skin.String(MovieList2Title)) + !IsEmpty(Skin.String(MovieList3Title)) + !IsEmpty(Skin.String(MovieList4Title)) + !IsEmpty(Skin.String(MovieList5Title)) + !IsEmpty(Skin.String(MovieList6Title)) + !IsEmpty(Skin.String(MovieList7Title)) + !IsEmpty(Skin.String(MovieList8Title)) + !IsEmpty(Skin.String(MovieList9Title)) + !IsEmpty(Skin.String(MovieList10Title))">ActivateWindow(1238)</onclick>
+  </control>
+  
+  <!-- Serien in Hauptmenü -->
+  <control type="button" id="1113">
+	  <label>$VAR[QuicklinksContextLabelSeries]</label>
+	  <width>420</width>
+	  <height>80</height>
+	  <font>primal_20</font>
+	  <align>center</align>
+	  <textoffsetx>15</textoffsetx>
+	  <textcolor>$VAR[ColorFontNormal]</textcolor>
+	  <focusedcolor>$VAR[ColorFontNormal]</focusedcolor>
+	  <visible>Container.Content(Episodes)</visible>
+	  
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="IsEmpty(Skin.String(ShowList1TVShowTitle))">Skin.SetString(ShowList1Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + IsEmpty(Skin.String(ShowList2TVShowTitle))">Skin.SetString(ShowList2Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + [IsEmpty(Skin.String(ShowList3TVShowTitle))]">Skin.SetString(ShowList3Plot,$INFO[ListItem.Plot])</onclick>
+
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + [IsEmpty(Skin.String(ShowList4TVShowTitle))]">Skin.SetString(ShowList4Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + [IsEmpty(Skin.String(ShowList5TVShowTitle))]">Skin.SetString(ShowList5Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + [IsEmpty(Skin.String(ShowList6TVShowTitle))]">Skin.SetString(ShowList6Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + [IsEmpty(Skin.String(ShowList7TVShowTitle))]">Skin.SetString(ShowList7Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + [IsEmpty(Skin.String(ShowList8TVShowTitle))]">Skin.SetString(ShowList8Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + [IsEmpty(Skin.String(ShowList9TVShowTitle))]">Skin.SetString(ShowList9Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10TVShowTitle,$INFO[ListItem.TVShowTitle] - $INFO[ListItem.Title])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10ID,$INFO[ListItem.DBID])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10Path,$INFO[ListItem.Path])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10Thumb,$INFO[ListItem.Icon])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10Fanart,$INFO[ListItem.Art(fanart)])</onclick>
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + [IsEmpty(Skin.String(ShowList10TVShowTitle))]">Skin.SetString(ShowList10Plot,$INFO[ListItem.Plot])</onclick>
+	  
+	  <onclick condition="!IsEmpty(Skin.String(ShowList1TVShowTitle)) + !IsEmpty(Skin.String(ShowList2TVShowTitle)) + !IsEmpty(Skin.String(ShowList3TVShowTitle)) + !IsEmpty(Skin.String(ShowList4TVShowTitle)) + !IsEmpty(Skin.String(ShowList5TVShowTitle)) + !IsEmpty(Skin.String(ShowList6TVShowTitle)) + !IsEmpty(Skin.String(ShowList7TVShowTitle)) + !IsEmpty(Skin.String(ShowList8TVShowTitle)) + !IsEmpty(Skin.String(ShowList9TVShowTitle)) + !IsEmpty(Skin.String(ShowList10TVShowTitle))">ActivateWindow(1239)</onclick>
+	</control>
+</include>
+   
+   <!-- WIDGETS WECHSEL BUTTON -->
+   <include name="CommonHomeWidgetControl">
+   <control type="group">
+   <visible>!Skin.HasSetting(NoWidgets)</visible>
+   <include condition="!Skin.HasSetting(HomeMainMenu2)">WidgetsTopWebOS</include>
+   <include condition="Skin.HasSetting(HomeMainMenu2)">WidgetsTopTizen</include>
+	 <control type="button" id="300001">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8306)">Conditional</animation>
+	    <left>110</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[MovieWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(recommendedmovies) + !Skin.HasSetting(unseenmovies) + !Skin.HasSetting(fsk18movies) + !Skin.HasSetting(moviessets) + !Skin.HasSetting(topratedmovies) + !Skin.HasSetting(3dmovies)">Skin.SetBool(unseenmovies)</onclick>
+		<onclick condition="Skin.HasSetting(unseenmovies)">Skin.SetBool(recommendedmovies)</onclick>
+		<onclick condition="Skin.HasSetting(recommendedmovies)">Skin.SetBool(fsk18movies)</onclick>
+		<onclick condition="Skin.HasSetting(fsk18movies)">Skin.SetBool(moviessets)</onclick>
+		<onclick condition="Skin.HasSetting(moviessets)">Skin.SetBool(topratedmovies)</onclick>
+		<onclick condition="Skin.HasSetting(topratedmovies)">Skin.SetBool(3dmovies)</onclick>
+		
+		<onclick condition="Skin.HasSetting(unseenmovies)">Skin.Reset(unseenmovies)</onclick>
+		<onclick condition="Skin.HasSetting(recommendedmovies)">Skin.Reset(recommendedmovies)</onclick>
+		<onclick condition="Skin.HasSetting(fsk18movies)">Skin.Reset(fsk18movies)</onclick>
+		<onclick condition="Skin.HasSetting(moviessets)">Skin.Reset(moviessets)</onclick>
+		<onclick condition="Skin.HasSetting(topratedmovies)">Skin.Reset(topratedmovies)</onclick>
+		<onclick condition="Skin.HasSetting(3dmovies)">Skin.Reset(3dmovies)</onclick>
+		<onup>1860</onup>
+		<ondown>8306</ondown>
+		<visible>Container(9000).Hasfocus(3)</visible>
+	 </control>
+	 <control type="button" id="300002">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8307)">Conditional</animation>
+	    <left>110</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[TVShowsWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(recommendedtvshows) + !Skin.HasSetting(unseentvshows)">Skin.SetBool(unseentvshows)</onclick>
+		<onclick condition="Skin.HasSetting(unseentvshows)">Skin.SetBool(recommendedtvshows)</onclick>
+		<onclick condition="Skin.HasSetting(unseentvshows)">Skin.Reset(unseentvshows)</onclick>
+		<onclick condition="Skin.HasSetting(recommendedtvshows)">Skin.Reset(recommendedtvshows)</onclick>
+		<onup>1860</onup>
+		<ondown>8307</ondown>
+		<visible>Container(9000).Hasfocus(8)</visible>
+	 </control>
+	 <control type="button" id="300003">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8308)">Conditional</animation>
+	    <left>120</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[AddonsWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(videoaddons) + !Skin.HasSetting(musicaddons)">Skin.SetBool(musicaddons)</onclick>
+		<onclick condition="Skin.HasSetting(musicaddons)">Skin.SetBool(videoaddons)</onclick>
+		<onclick condition="Skin.HasSetting(musicaddons)">Skin.Reset(musicaddons)</onclick>
+		<onclick condition="Skin.HasSetting(videoaddons)">Skin.Reset(videoaddons)</onclick>
+		<onup>1860</onup>
+		<ondown>8308</ondown>
+		<visible>Container(9000).Hasfocus(11)</visible>
+	 </control>
+	 <control type="button" id="300004">
+	    <include>Animation.ZoomIn</include>
+	    <left>80</left>
+	    <top>205</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[LiveTVWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(tvhighlight) + !Skin.HasSetting(serienplaner)">Skin.SetBool(serienplaner)</onclick>
+		<onclick condition="Skin.HasSetting(serienplaner)">Skin.SetBool(tvhighlight)</onclick>		
+		<onclick condition="Skin.HasSetting(serienplaner)">Skin.Reset(serienplaner)</onclick>
+		<onclick condition="Skin.HasSetting(tvhighlight)">Skin.Reset(tvhighlight)</onclick>
+		<onup>9000</onup>
+		<ondown>8304</ondown>
+		<visible>Container(9000).Hasfocus(1)</visible>
+	 </control>
+	 <control type="button" id="300005">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8309)">Conditional</animation>
+	    <left>120</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[MusicWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(randommusic) + !Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.SetBool(albumsrecentlyplayedmusic)</onclick>
+		<onclick condition="Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.SetBool(randommusic)</onclick>
+		<onclick condition="Skin.HasSetting(albumsrecentlyplayedmusic)">Skin.Reset(albumsrecentlyplayedmusic)</onclick>
+		<onclick condition="Skin.HasSetting(randommusic)">Skin.Reset(randommusic)</onclick>
+		<onup>1860</onup>
+		<ondown>8308</ondown>
+		<visible>Container(9000).Hasfocus(10)</visible>
+	 </control>
+	 <control type="button" id="300006">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8322)">Conditional</animation>
+	    <left>110</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[VideosWidgetsSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(recommendedmovies2) + !Skin.HasSetting(unseenmovies2) + !Skin.HasSetting(fsk18movies2)">Skin.SetBool(unseenmovies2)</onclick>
+		<onclick condition="Skin.HasSetting(unseenmovies2)">Skin.SetBool(recommendedmovies2)</onclick>
+		<onclick condition="Skin.HasSetting(recommendedmovies2)">Skin.SetBool(fsk18movies2)</onclick>
+		<onclick condition="Skin.HasSetting(unseenmovies2)">Skin.Reset(unseenmovies2)</onclick>
+		<onclick condition="Skin.HasSetting(recommendedmovies2)">Skin.Reset(recommendedmovies2)</onclick>
+		<onclick condition="Skin.HasSetting(fsk18movies2)">Skin.Reset(fsk18movies2)</onclick>
+		<onup>1860</onup>
+		<ondown>8322</ondown>
+		<visible>Container(9000).Hasfocus(4)</visible>
+	 </control>
+	 <control type="button" id="300007">
+	    <include>Animation.ZoomIn</include>
+		<animation effect="slide" end="0,-235" time="100" condition="Control.HasFocus(8317)">Conditional</animation>
+	    <left>110</left>
+	    <top>380</top>
+		<height>45</height>
+	    <width>350</width>
+		<label>$VAR[HomeWidgetsYoutubeSettingVar]</label>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <focusedcolor>$VAR[ColorFontSelected]</focusedcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">-</texturenofocus>
+	    <texturefocus colordiffuse="$VAR[BackColorButton]">-</texturefocus>
+		<onclick condition="!Skin.HasSetting(youtubenewuploadedvideostv) + !Skin.HasSetting(youtubemine) + !Skin.HasSetting(youtubelive) + !Skin.HasSetting(youtubelist)">Skin.SetBool(youtubenewuploadedvideostv)</onclick>
+		<onclick condition="Skin.HasSetting(youtubenewuploadedvideostv)">Skin.SetBool(youtubepopularrightnow)</onclick>
+		<onclick condition="Skin.HasSetting(youtubepopularrightnow)">Skin.SetBool(youtubemine)</onclick>
+		<onclick condition="Skin.HasSetting(youtubemine)">Skin.SetBool(youtubelive)</onclick>
+		<onclick condition="Skin.HasSetting(youtubelive)">Skin.SetBool(youtubelist)</onclick>
+		
+		<onclick condition="Skin.HasSetting(youtubenewuploadedvideostv)">Skin.Reset(youtubenewuploadedvideostv)</onclick>
+		<onclick condition="Skin.HasSetting(youtubepopularrightnow)">Skin.Reset(youtubepopularrightnow)</onclick>
+		<onclick condition="Skin.HasSetting(youtubemine)">Skin.Reset(youtubemine)</onclick>
+		<onclick condition="Skin.HasSetting(youtubelive)">Skin.Reset(youtubelive)</onclick>
+		<onclick condition="Skin.HasSetting(youtubelist)">Skin.Reset(youtubelist)</onclick>
+		<onup>1860</onup>
+		<ondown>8317</ondown>
+		<visible>Skin.HasSetting(widgetvideoyoutube)</visible>
+		<visible>Container(9000).Hasfocus(17)</visible>
+	 </control>
+    </control>
+   </include>
+   <!-- WIDGETS WECHSEL BUTTON CLOSE -->
+  
+  <!-- SIDEBLADE FOR VIEWS -->
+  <include name="SideBladeForViews">
+	  <control type="group">
+	  <visible>!Control.IsVisible(605)</visible>
+	  <include>Animation.ZoomIn</include>
+	  <animation effect="zoom" end="83" center="2100,100" time="300" tween="cubic" easing="inout" condition="!Window.IsVisible(tvchannels) + !Window.IsVisible(radiochannels) + !Window.IsVisible(tvguide) + !Window.IsVisible(tvrecordings) + !Window.IsVisible(tvtimers) + !Window.IsVisible(tvsearch) + [ControlGroup(9020).HasFocus | ControlGroup(9030).HasFocus | ControlGroup(9021).HasFocus]">Conditional</animation>
+		<control type="image">
+		  <left>70</left>
+		  <top>150</top>
+		  <width>100</width>
+		  <height>840</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		  <bordersize>6</bordersize>
+		  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>		
+		</control>
+		<control type="label">
+		  <left>80</left>
+		  <top>965</top>
+		  <height>200</height>
+		  <width>800</width>
+		  <align>left</align>
+		  <angle>90</angle>
+		  <label>[UPPERCASE]$VAR[SideBladeForViewsLabel][/UPPERCASE]</label>
+		  <font>primal_40_Bold</font>
+		  <textcolor>$VAR[BackColorBackground]</textcolor>
+		  <visible>Skin.HasSetting(tablet_modus)</visible>
+		</control>
+		<control type="label">
+		  <left>80</left>
+		  <top>885</top>
+		  <height>200</height>
+		  <width>650</width>
+		  <align>left</align>
+		  <angle>90</angle>
+		  <label>[UPPERCASE]$VAR[SideBladeForViewsLabel][/UPPERCASE]</label>
+		  <font>primal_40_Bold</font>
+		  <textcolor>$VAR[BackColorBackground]</textcolor>
+		  <visible>!Skin.HasSetting(tablet_modus)</visible>
+		</control>
+		<control type="button" id="180111">
+		  <left>95</left>
+		  <top>170</top>
+		  <width>50</width>
+		  <height>50</height>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">home/homeicons/back.png</texturefocus>
+		  <texturenofocus colordiffuse="$VAR[BackColorBackground]">home/homeicons/back.png</texturenofocus>
+		  <onclick>back</onclick>
+		  <visible>!Skin.HasSetting(tablet_modus)</visible>
+		</control>
+		<control type="button" id="180112">
+		  <left>95</left>
+		  <top>910</top>
+		  <width>50</width>
+		  <height>50</height>
+		  <texturefocus colordiffuse="$VAR[BackColorButton]">home/homeicons/home.png</texturefocus>
+		  <texturenofocus colordiffuse="$VAR[BackColorBackground]">home/homeicons/home.png</texturenofocus>
+		  <onclick>ActivateWindow(Home)</onclick>
+		  <visible>!Skin.HasSetting(tablet_modus)</visible>
+		</control>
+	 </control>
+  </include>
+  <variable name="SideBladeForViewsLabel">
+    <value condition="Window.IsVisible(tvchannels)">$LOCALIZE[19020]</value>
+	<value condition="Window.IsVisible(radiochannels)">$LOCALIZE[50326]</value>
+	<value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
+	<value condition="Window.IsVisible(appearancesettings)">$LOCALIZE[10019]</value>
+	<value condition="Window.IsVisible(videossettings)">$LOCALIZE[10017]</value>
+	<value condition="Window.IsVisible(pvrsettings)">$LOCALIZE[10021]</value>
+	<value condition="Window.IsVisible(musicsettings)">$LOCALIZE[10015]</value>
+	<value condition="Window.IsVisible(weathersettings)">$LOCALIZE[10014]</value>
+	<value condition="Window.IsVisible(picturessettings)">$LOCALIZE[10012]</value>
+	<value condition="Window.IsVisible(weathersettings)">$LOCALIZE[10014]</value>
+	<value condition="Window.IsVisible(programssettings)">$LOCALIZE[10013]</value>
+	<value condition="Window.IsVisible(systemsettings)">$LOCALIZE[10016]</value>
+	<value condition="Window.IsVisible(profiles)">$LOCALIZE[10034]</value>
+	<value condition="Window.IsVisible(systeminfo)">$LOCALIZE[10511]</value>
+	<value condition="Window.IsVisible(networksettings)">$LOCALIZE[10018]</value>
+	<value condition="Window.IsVisible(skinsettings)">$LOCALIZE[20077]</value>
+	<value condition="Window.IsVisible(programs)">$LOCALIZE[1043]</value>
+	<value condition="Window.IsVisible(pictures)">$LOCALIZE[1]</value>
+	<value condition="Window.IsVisible(addonbrowser)">$LOCALIZE[10040]</value>
+	<value condition="Window.IsVisible(musicinformation)">$LOCALIZE[10523]</value>
+	<value condition="Window.IsVisible(movieinformation)">$LOCALIZE[10524]</value>
+	<value condition="Window.IsVisible(tvguide)">$LOCALIZE[22020]</value>
+	<value condition="Window.IsVisible(tvrecordings)">$LOCALIZE[22015]</value>
+	<value condition="Window.IsVisible(tvtimers)">$LOCALIZE[19040]</value>
+	<value condition="Window.IsVisible(tvsearch)">$LOCALIZE[19140]</value>
+	
+	<value condition="Window.IsVisible(videos) + ![Control.IsVisible(598) | Control.IsVisible(600) | Control.IsVisible(601) | Control.IsVisible(602) | Control.IsVisible(604) | Control.IsVisible(603) | Control.IsVisible(606) | Control.IsVisible(607) | Control.IsVisible(608) | Control.IsVisible(609) | Control.IsVisible(610) | Control.IsVisible(611) | Control.IsVisible(902)]">$LOCALIZE[1212]</value>
+	<value condition="Window.IsVisible(musiclibrary) + ![Control.IsVisible(702) | Control.IsVisible(704) | Control.IsVisible(705)]">$LOCALIZE[36914]</value>
+	
+	<value condition="Control.IsVisible(598) | Control.IsVisible(600) | Control.IsVisible(601) | Control.IsVisible(602) | Control.IsVisible(603) | Control.IsVisible(604) | Control.IsVisible(606) | Control.IsVisible(607) | Control.IsVisible(608) | Control.IsVisible(609) | Control.IsVisible(610) | Control.IsVisible(611) | Control.IsVisible(902)">$INFO[Listitem.Label]</value>
+	<value condition="Control.IsVisible(702) | Control.IsVisible(704) | Control.IsVisible(705)">$INFO[Listitem.Artist]</value>
+	<value condition="Control.IsVisible(19001)">$LOCALIZE[20342]</value>
+	<value condition="Control.IsVisible(19002)">$LOCALIZE[20343]</value>
+	<value condition="Control.IsVisible(19003)">$LOCALIZE[36914]</value>
+	<value condition="Control.IsVisible(19004)">$LOCALIZE[136]</value>
+	<value condition="Control.IsVisible(19005)">$LOCALIZE[136]</value>
+	<value condition="Control.IsVisible(19006)">$LOCALIZE[19020]</value>
+	<value condition="Control.IsVisible(19007)">$LOCALIZE[19021]$LOCALIZE[50326, - ]</value>
+	<value condition="Control.IsVisible(19008)">$LOCALIZE[24001]</value>
+	<value condition="Control.IsVisible(19009)">$LOCALIZE[36908]</value>
+	<value condition="Control.IsVisible(19010)">$LOCALIZE[50403]</value>	
+  </variable>
+  <!-- SIDEBLADE FOR VIEWS CLOSE -->
+
+  <!-- HOMEMENU NO FOCUS BUTTON -->
+  <include name="WebOSNoFocusButton">
+    <control type="image">
+	  <texture background="true">home/button/webos_button.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  <visible>Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS0)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS0]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS1)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS1]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS2)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS2]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS3)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS3]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS4)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS4]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS5)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS5]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS6)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS6]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS7)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS7]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS8)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS8]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS9)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS9]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS10)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS10]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS11)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS11]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS12)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS12]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS13)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS13]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS14)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS14]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS15)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS15]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS16)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS16]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS17)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS17]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS18)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS18]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS19)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS19]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS20)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS20]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS21)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS21]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS22)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS22]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackWebOS23)]</texture>
+	  <colordiffuse>$VAR[ColorBackWebOS23]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+  </include>
+  <include name="TizenNoFocusButton">
+    <control type="image">
+	  <texture background="true">skin/button_klein.png</texture>
+	  <colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <visible>Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen0)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS0]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen1)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS1]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen2)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS2]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen3)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS3]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen4)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS4]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen5)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS5]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen6)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS6]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen7)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS7]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen8)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS8]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen9)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS9]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen10)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS10]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen11)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS11]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen12)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS12]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen13)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS13]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen14)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS14]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen15)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS15]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen16)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS16]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen17)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS17]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen18)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS18]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen19)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS19]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen20)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS20]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen21)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS21]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen22)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS22]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+	<control type="image">
+	  <texture background="true">$INFO[ListItem.Property(BackTizen23)]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <colordiffuse>$VAR[ColorBackWebOS23]</colordiffuse>
+	  <visible>!Skin.HasSetting(homenocolorbutton)</visible>
+	</control>
+  </include>
+  <!-- HOMEMENU NO FOCUS BUTTON CLOSE -->
+  
+  
+  <!-- BUTTON OBEN RECHTS -->
+   <include name="CommonHomeButton">
+	<control type="grouplist" id="1860">
+	<visible>Window.IsVisible(Home) | !Skin.HasSetting(NoCommonHomeButton)</visible>
+		<right>210</right>
+		<top>32</top>
+		<width>1000</width>
+		<height>70</height>
+		<itemgap>20</itemgap>
+		<align>right</align>
+		<pagecontrol>1802</pagecontrol>
+		<scrolltime tween="sine" easing="out">200</scrolltime>
+		<orientation>horizontal</orientation>
+		<usecontrolcoords>false</usecontrolcoords>
+		<onleft>1860</onleft>
+		<onright>1860</onright>
+		<onup>9000</onup>
+		<ondown condition="Window.IsVisible(Home)">9000</ondown>
+		<ondown condition="!Window.IsVisible(Home) + !Window.IsActive(4101) + !Window.IsActive(4102) + !Window.IsActive(4103) + !Window.IsActive(4104) + !Window.IsActive(4105) + !Window.IsActive(4106) + !Window.IsActive(4) + !Window.IsActive(4107)">9020</ondown>
+		<ondown condition="Window.IsActive(4101)">19001</ondown>
+		<ondown condition="Window.IsActive(4102)">19002</ondown>
+		<ondown condition="Window.IsActive(4103)">19003</ondown>
+		<ondown condition="Window.IsActive(4104)">19004</ondown>
+		<ondown condition="Window.IsActive(4105)">19005</ondown>
+		<ondown condition="Window.IsActive(4106)">19006</ondown>
+		<ondown condition="Window.IsActive(4)">10000</ondown>
+		<ondown condition="Window.IsActive(4107)">140500</ondown>
+	  <control type="button" id="1863">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/off.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/off.png</texturenofocus>
+		<onclick>ActivateWindow(111)</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control> 	  
+	  <control type="button" id="1864">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/skin.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/skin.png</texturenofocus>
+		<onclick>ActivateWindow(4106)</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1865">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/settings.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/settings.png</texturenofocus>  
+		<onclick>ActivateWindow(Settings)</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1866">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/star.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/star.png</texturenofocus>
+		<onclick>ActivateWindow(Favourites)</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1867">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/search.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/search.png</texturenofocus>
+		<onclick>RunScript(script.globalsearch)</onclick>
+		<visible>System.HasAddon(script.globalsearch)</visible>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1868">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/sort.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/sort.png</texturenofocus>
+		<onfocus>SetFocus(290000)</onfocus>
+		<visible>!Window.IsVisible(Home)</visible>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1869">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/sidemenu.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/sidemenu.png</texturenofocus> 
+		<onfocus>SetFocus(9020)</onfocus>
+		<visible>!Window.IsVisible(Home)</visible>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1870">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/home.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/home.png</texturenofocus>
+		<onclick>ActivateWindow(Home)</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+	  <control type="button" id="1871">
+		<width>40</width>
+		<height>40</height>
+		<texturefocus colordiffuse="$VAR[BackColorButton]">home/icons_oben/back.png</texturefocus>
+		<texturenofocus colordiffuse="$VAR[ColorIcons]">home/icons_oben/back.png</texturenofocus>
+		<onclick>back</onclick>
+		<visible>!Skin.HasSetting(tablet_modus)</visible>
+	  </control>
+   </control>
+  </include>
+  <!-- BUTTON OBEN RECHTS CLOSE -->
+  
+  <!-- TIME OBEN RECHTS -->
+  <include name="BigInfosTime">
+    <control type="group">
+	  <control type="fadelabel">
+	    <visible>Window.IsVisible(Home) | !Skin.HasSetting(HomeNoTime)</visible>
+		<left>1668</left>
+		<top>18</top>
+		<height>45</height>
+		<width>200</width>
+        <scroll>false</scroll>
+		<scrollout>false</scrollout>
+		<pauseatend>5000</pauseatend>
+		<align>right</align>
+        <label>$INFO[System.Time(hh:mm)]</label>
+        <font>primal_40_Bold</font>
+        <textcolor>$VAR[ColorFontNormal]</textcolor>
+	    <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  </control>
+	 </control>
+  </include>
+  <include name="BigInfosDatabaseCount">
+    <control type="group">
+	  <control type="label">
+	    <visible>!Player.HasMedia</visible>
+		<visible>!Window.IsVisible(home)</visible>
+		<visible>!Skin.HasSetting(NoHomeDBCounter)</visible>
+		<left>665</left>
+		<top>78</top>
+		<height>45</height>
+		<width>1200</width>
+		<label>$LOCALIZE[342]: $INFO[Window(Home).Property(Movies.Count)] - $LOCALIZE[20343]: $INFO[Window(Home).Property(TVShows.Count)] - $LOCALIZE[50203]: $INFO[Window(Home).Property(Episodes.Count)] - $LOCALIZE[132]: $INFO[Window(Home).Property(Music.AlbumsCount)]</label>
+		<align>right</align>
+		<font>primal_20</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>true</scroll>
+		<scrollspeed>30</scrollspeed>
+		<scrollsuffix> - </scrollsuffix>
+	  </control>
+	  <control type="label">
+	    <visible>!Player.HasMedia</visible>
+		<visible>Window.IsVisible(home)</visible>
+		<visible>!Skin.HasSetting(NoHomeDBCounterKomplett)</visible>
+		<left>665</left>
+		<top>78</top>
+		<height>45</height>
+		<width>1200</width>
+		<label>$LOCALIZE[342]: $INFO[Window(Home).Property(Movies.Count)] - $LOCALIZE[20343]: $INFO[Window(Home).Property(TVShows.Count)] - $LOCALIZE[50203]: $INFO[Window(Home).Property(Episodes.Count)] - $LOCALIZE[132]: $INFO[Window(Home).Property(Music.AlbumsCount)]</label>
+		<align>right</align>
+		<font>primal_20</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>true</scroll>
+		<scrollspeed>30</scrollspeed>
+	  </control>
+	 </control>
+  </include>
+  <include name="BigInfosWeather">
+    <control type="group">
+	<visible>!Skin.HasSetting(HomeNoWeather)</visible>
+	  <control type="image">
+		<left>77</left>
+		<top>28</top>
+		<width>100</width>
+		<height>100</height>
+		<texture>$VAR[VarWeatherHomeIcon]$INFO[Window(Weather).Property(Current.OutlookIcon)]</texture>
+		<aspectratio>keep</aspectratio>
+		<visible>!Skin.HasSetting(homenoleftweather) + !IsEmpty(Weather.Plugin)</visible>
+		<visible>!Window.IsVisible(pvrosdguide) + !Window.IsVisible(pvrosdchannels)</visible>
+	  </control>
+	  <control type="label">
+		<left>195</left>
+		<top>40</top>
+		<height>45</height>
+		<width>390</width>
+		<label>$INFO[System.Date(DDD  dd.m.yyy)]</label>
+		<align>left</align>
+		<font>primal_20_Bold</font>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+		<visible>!Skin.HasSetting(homenoleftweather) + !IsEmpty(Weather.Plugin)</visible>
+		<visible>!Window.IsVisible(pvrosdguide) + !Window.IsVisible(pvrosdchannels)</visible>
+	  </control>
+	  <control type="fadelabel">
+		<left>195</left>
+		<top>75</top>
+		<height>45</height>
+		<width>290</width>
+		<label>$INFO[Window(Weather).Property(Current.Condition)]  $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]</label>
+		<label>$LOCALIZE[402]: $INFO[Window(Weather).Property(Current.FeelsLike)]°</label>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>primal_20</font>
+		<scroll>true</scroll>
+		<scrollout>false</scrollout>
+		<scrollspeed>5000</scrollspeed>
+		<pauseatend>10000</pauseatend>
+		<textcolor>$VAR[ColorFontNormal]</textcolor>
+		<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		<scroll>false</scroll>
+		<visible>!Skin.HasSetting(homenoleftweather) + !IsEmpty(Weather.Plugin)</visible>
+		<visible>!Window.IsVisible(pvrosdguide) + !Window.IsVisible(pvrosdchannels)</visible>
+	  </control>
+	 </control>
+  </include>
+  
+  <!-- ANSICHTEN INFO FENSTER -->
+  <include name="ViewInfoWindow">
+      <control type="group">
+	  <top>480</top>
+	  <visible>!Container.Content(Genres) + !Container.Content(Actors)</visible>
+      <animation effect="slide" start="0,0" end="0,-480" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(162591) | Control.HasFocus(162592)">Conditional</animation>
+      <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">WindowClose</animation>
+	  <control type="button" id="162591">
+	    <onup condition="Control.IsVisible(600)">600</onup>
+	    <onup condition="Control.IsVisible(603)">603</onup>
+		<onup condition="Control.IsVisible(605)">605</onup>
+	    <ondown>162592</ondown>
+		<onleft>330000</onleft>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+	  </control>
+	  <control type="image">
+		<left>-50</left>
+		<top>700</top>
+		<width>2000</width>
+		<height>400</height>
+		<texture background="true" fallback="special://skin/backgrounds/FALLBACK.jpg">$VAR[VarFanartVideoInfos]</texture>
+		<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
+		<bordertexture border="10">ThumbShadow.png</bordertexture>
+		<bordersize>7</bordersize>
+		<colordiffuse>FF5f5f61</colordiffuse>
+	  </control>
+      <control type="list" id="162592">
+	    <visible>!Container.Content(TVShows) + !Container.Content(Seasons)</visible>
+		<left>30</left>
+		<top>650</top>
+		<width>920</width>
+		<height>400</height>
+		<onup condition="Control.IsVisible(600)">600</onup>
+	    <onup condition="Control.IsVisible(603)">603</onup>
+		<onup condition="Control.IsVisible(605)">605</onup>
+		<ondown>9020</ondown>
+		<onleft>162592</onleft>
+		<onright>162592</onright>
+		<orientation>horizontal</orientation>
+		<pagecontrol>60</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="cubic" easing="inout">400</scrolltime>
+		<!--<autoscroll time="10000" delay="25000" repeat="5000">true</autoscroll>-->
+		<preloaditems>2</preloaditems>	
+		<itemlayout height="310" width="305">
+		    <control type="image">
+			  <left>30</left>
+			  <top>120</top>
+			  <width>270</width>
+			  <height>270</height>
+			  <aspectratio>keep</aspectratio>
+			  <texture background="true" fallback="cdartdefault.png">$INFO[ListItem.Art(discart)]</texture>
+			</control>
+		    <control type="image">
+			  <left>10</left>
+			  <top>100</top>
+			  <width>200</width>
+			  <height>310</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+			</control>		    
+		</itemlayout>
+		<focusedlayout height="310" width="305">
+		    <control type="image">
+			  <left>30</left>
+			  <top>120</top>
+			  <width>270</width>
+			  <height>270</height>
+			  <aspectratio>keep</aspectratio>
+			  <texture background="true" fallback="cdartdefault.png">$INFO[ListItem.Art(discart)]</texture>
+			  <animation effect="rotate" end="-360" center="auto" time="5000" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
+			</control>
+		    <control type="image">
+			  <left>10</left>
+			  <top>100</top>
+			  <width>200</width>
+			  <height>310</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>6</bordersize>
+			</control>	
+		</focusedlayout>
+	    <content target="video" sortby="year">$INFO[ListItem.FolderPath]</content>
+	 </control>
+	</control>
+	<control type="group">
+	<top>1130</top>
+	<visible>!Container.Content(Genres) + !Container.Content(Actors)</visible>
+	<animation effect="slide" start="0,0" end="0,-480" time="400" tween="quadratic" easing="out" condition="Control.HasFocus(162591) | Control.HasFocus(162592)">Conditional</animation>
+    <animation effect="slide" start="0,0" end="-570,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9020).HasFocus">WindowClose</animation>	
+	<control type="image">
+	  <left>70</left>
+	  <top>120</top>
+	  <width>270</width>
+	  <height>270</height>
+	  <aspectratio align="left" aligny="top">stretch</aspectratio>
+	  <texture background="true" fallback="cdartdefault.png">$INFO[ListItem.Art(discart)]</texture>	
+	  <visible>!ListItem.IsCollection</visible>
+	</control>
+	<control type="image">
+	  <left>30</left>
+	  <top>100</top>
+	  <width>200</width>
+	  <height>310</height>
+	  <aspectratio align="left" aligny="top">stretch</aspectratio>
+	  <texture background="true" fallback="default/noposter.jpg">$INFO[ListItem.Icon]</texture>
+	  <bordertexture border="10">ThumbShadow.png</bordertexture>
+	  <bordersize>6</bordersize>
+	  <visible>!ListItem.IsCollection</visible>
+	</control>
+	<control type="textbox">
+	  <description>Movie Plot</description>
+	  <left>400</left>
+	  <top>110</top>
+	  <width>750</width>
+	  <height>272</height>
+	  <include condition="!Skin.HasSetting(PlotFontBig)">PlotFontLowVar</include>
+	  <include condition="Skin.HasSetting(PlotFontBig)">PlotFontBigVar</include>
+	  <align>left</align>
+	  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+	  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+	  <autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+	  <visible>!ListItem.IsCollection</visible>
+	</control>
+	<control type="image">
+	  <left>1190</left>
+	  <top>0</top>
+	  <width>730</width>
+	  <height>430</height>
+	  <aspectratio>stretch</aspectratio>
+	  <texture background="true">$VAR[VarClearart]</texture>
+	  <visible>!ListItem.IsCollection</visible>
+	</control>	
+	<control type="image">
+	  <left>1100</left>
+	  <top>0</top>
+	  <width>730</width>
+	  <height>430</height>
+	  <aspectratio>stretch</aspectratio>
+	  <texture background="true">$INFO[ListItem.Art(clearart)]</texture>
+	  <visible>ListItem.IsCollection</visible>
+	</control>
+   </control>
+  </include>
+  <!-- ANSICHTEN INFO FENSTER CLOSE -->
+  
+	<include name="MovieSetPoster">
+      <control type="list" id="62593">
+		<left>0</left>
+		<top>0</top>
+		<width>1700</width>
+		<height>500</height>
+		<onup>290000</onup>
+		<ondown condition="Control.IsVisible(601)">601</ondown>
+		<onleft>330000</onleft>
+		<onright>62593</onright>
+		<orientation>horizontal</orientation>
+		<pagecontrol>60</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="cubic" easing="inout">400</scrolltime>
+		<!--<autoscroll time="10000" delay="25000" repeat="5000">true</autoscroll>-->
+		<preloaditems>2</preloaditems>
+		<itemlayout height="163" width="540">
+		    <control type="image">
+			  <left>85</left>
+			  <top>20</top>
+			  <width>120</width>
+			  <height>200</height>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			  <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+			</control>
+			<control type="label">
+			  <left>220</left>
+			  <top>30</top>
+			  <width>330</width>
+			  <height>36</height>
+			  <font>primal_15_Bold</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>220</left>
+			  <top>75</top>
+			  <width>400</width>
+			  <height>88</height>
+			  <include condition="!Skin.HasSetting(PlotFontBig)">PlotFontLowVar</include>
+			  <include condition="Skin.HasSetting(PlotFontBig)">PlotFontBigVar</include>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll>
+			  <visible>!Stringcompare(ListItem.label,..)</visible> 
+			  <visible>!ListItem.IsCollection</visible>
+			</control>
+		</itemlayout>
+		<focusedlayout height="163" width="540">
+		    <control type="image">
+			  <left>85</left>
+			  <top>20</top>
+			  <width>120</width>
+			  <height>200</height>
+			  <aspectratio align="left" aligny="top">keep</aspectratio>
+			  <texture background="true">$INFO[ListItem.Art(poster)]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+			</control>
+			<control type="label">
+			  <left>220</left>
+			  <top>30</top>
+			  <width>330</width>
+			  <height>36</height>
+			  <font>primal_15_Bold</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">true</autoscroll>
+			  <visible>!Control.HasFocus(62593)</visible>
+			</control>
+			<control type="label">
+			  <left>220</left>
+			  <top>30</top>
+			  <width>330</width>
+			  <height>36</height>
+			  <font>primal_15_Bold</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">true</autoscroll>
+			  <visible>Control.HasFocus(62593)</visible>
+			</control>
+			<control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>220</left>
+			  <top>75</top>
+			  <width>400</width>
+			  <height>88</height>
+			  <include condition="!Skin.HasSetting(PlotFontBig)">PlotFontLowVar</include>
+			  <include condition="Skin.HasSetting(PlotFontBig)">PlotFontBigVar</include>
+			  <align>left</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			  <visible>!Stringcompare(ListItem.label,..)</visible> 
+			  <visible>!ListItem.IsCollection</visible>
+			</control>
+		</focusedlayout>
+	    <content target="video" sortby="year">$INFO[ListItem.FolderPath]</content>
+	</control>
+	</include>
+    <include name="MovieSetInformation">
+	<control type="list" id="62592">
+		<left>185</left>
+		<top>170</top>
+		<width>685</width>
+		<height>810</height>
+		<onup>62592</onup>
+		<ondown>62592</ondown>
+		<onleft>9020</onleft>
+		<onright condition="!Control.IsVisible(598)">9020</onright>
+		<onright condition="Control.IsVisible(598)">SetFocus(598)</onright>
+		<orientation>vertical</orientation>
+		<pagecontrol>60</pagecontrol>
+		<focusposition>0</focusposition>
+		<!--<autoscroll time="10000" delay="25000" repeat="5000">true</autoscroll>-->
+		<scrolltime tween="cubic" easing="inout">800</scrolltime>
+		<preloaditems>2</preloaditems>
+		<itemlayout height="270" width="580">
+		    <control type="image">
+			  <left>90</left>
+			  <top>80</top>
+			  <width>155</width>
+			  <height>155</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true" fallback="cdartdefault.png">$INFO[ListItem.Art(discart)]</texture>
+			</control>
+		    <control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>175</width>
+			  <height>250</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+			</control>
+			<control type="label">
+			  <left>195</left>
+			  <top>5</top>
+			  <width>480</width>
+			  <height>36</height>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			</control>
+		    <control type="label">
+			  <left>195</left>
+			  <top>40</top>
+			  <width>480</width>
+			  <height>36</height>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$VAR[ExtendedInfoYear]$VAR[ExtendedInfoRuntime, • ] • $LOCALIZE[49972] $INFO[ListItem.EndTime]</label>
+			</control>
+		    <control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>260</left>
+			  <top>85</top>
+			  <width>415</width>
+			  <height>153</height>
+			  <include condition="!Skin.HasSetting(PlotFontBig)">PlotFontLowVar</include>
+			  <include condition="Skin.HasSetting(PlotFontBig)">PlotFontBigVar</include>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="10000" repeat="5000">false</autoscroll> 
+			</control>
+		</itemlayout>
+		<focusedlayout height="270" width="580">
+		    <control type="image">
+			  <left>90</left>
+			  <top>80</top>
+			  <width>155</width>
+			  <height>155</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true" fallback="cdartdefault.png">$INFO[ListItem.Art(discart)]</texture>
+			</control>
+		    <control type="image">
+			  <left>5</left>
+			  <top>0</top>
+			  <width>175</width>
+			  <height>250</height>
+			  <aspectratio align="left" aligny="top">stretch</aspectratio>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+		      <bordersize>7</bordersize>
+			</control>
+			<control type="label">
+			  <left>195</left>
+			  <top>5</top>
+			  <width>480</width>
+			  <height>36</height>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			  <visible>!Control.HasFocus(62592)</visible>
+			</control>
+			<control type="label">
+			  <left>195</left>
+			  <top>5</top>
+			  <width>480</width>
+			  <height>36</height>
+			  <font>primal_18_Title</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$INFO[ListItem.Label]</label>
+			  <visible>Control.HasFocus(62592)</visible>
+			</control>
+		    <control type="label">
+			  <left>195</left>
+			  <top>40</top>
+			  <width>480</width>
+			  <height>36</height>
+			  <font>primal_15</font>
+			  <textcolor>$VAR[ColorFontSelected]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>
+			  <label>$VAR[ExtendedInfoYear]$VAR[ExtendedInfoRuntime, • ] • $LOCALIZE[49972] $INFO[ListItem.EndTime]</label>
+			</control>
+		    <control type="textbox">
+			  <description>Movie Plot</description>
+			  <left>260</left>
+			  <top>85</top>
+			  <width>415</width>
+			  <height>153</height>
+			  <include condition="!Skin.HasSetting(PlotFontBig)">PlotFontLowVar</include>
+			  <include condition="Skin.HasSetting(PlotFontBig)">PlotFontBigVar</include>
+			  <align>justify</align>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <label>[COLOR $VAR[ColorFontNormal]]$INFO[ListItem.Plot][/COLOR]</label>
+			  <autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			</control>
+		</focusedlayout>
+	    <content target="video" sortby="year">$INFO[ListItem.FolderPath]</content>
+	</control>
+  </include>
+  
+  <include name="ArtistCoverList">
+      <control type="list" id="180001">
+		<left>1655</left>
+		<top>100</top>
+		<width>800</width>
+		<height>750</height>
+		<onup>180001</onup>
+		<ondown>180001</ondown>
+		<onleft>9000</onleft>
+		<onright>9000</onright>
+		<orientation>vertical</orientation>
+		<pagecontrol>60</pagecontrol>
+		<focusposition>0</focusposition>
+		<scrolltime tween="cubic" easing="inout">400</scrolltime>
+		<preloaditems>2</preloaditems>
+		<autoscroll time="2000" delay="15000" repeat="5000">true</autoscroll>
+		<itemlayout height="215" width="225">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>220</width>
+			  <height>220</height>
+			  <aspectratio align="center" aligny="bottom">keep</aspectratio>
+			  <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+			  <bordersize>10</bordersize>
+			</control>
+		</itemlayout>
+		<focusedlayout height="215" width="225">>
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>220</width>
+			  <height>220</height>
+			  <aspectratio align="center" aligny="bottom">keep</aspectratio>
+			  <texture background="true">$INFO[ListItem.Thumb]</texture>
+			  <bordertexture border="10">ThumbShadow.png</bordertexture>
+			  <bordersize>10</bordersize>
+			</control>
+		</focusedlayout>
+	  <content>
+		<item>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<thumb>$INFO[Window(home).Property(Artist.Album.1.Thumb)]</thumb>
+			<onclick>Playlist.PlayOffset(1)</onclick>
+		</item>
+		<item>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<thumb>$INFO[Window(home).Property(Artist.Album.2.Thumb)]</thumb>
+			<onclick>Playlist.PlayOffset(1)</onclick>
+		</item>
+		<item>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<thumb>$INFO[Window(home).Property(Artist.Album.3.Thumb)]</thumb>
+			<onclick>Playlist.PlayOffset(1)</onclick>
+		</item>
+		<item>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<thumb>$INFO[Window(home).Property(Artist.Album.4.Thumb)]</thumb>
+			<onclick>Playlist.PlayOffset(1)</onclick>
+		</item>
+		<item>
+			<label>$INFO[MusicPlayer.Offset(1).Title]</label>
+			<thumb>$INFO[Window(home).Property(Artist.Album.5.Thumb)]</thumb>
+			<onclick>Playlist.PlayOffset(1)</onclick>
+		</item>
+	</content>
+	</control>
+  </include>
+  
+  <include name="JumpBarHorizontal">
+		<control type="group">
+		<visible allowhiddenfocus="true">ControlGroup(290000).HasFocus()</visible>
+		    <control type="image">
+				<left>1770</left>
+				<top>150</top>
+				<width>200</width>
+				<height>840</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+		        <bordersize>7</bordersize>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist" id="290000">
+				<visible allowhiddenfocus="true">ControlGroup(290000).HasFocus()</visible>
+				<left>1800</left>
+				<top>155</top>
+				<width>150</width>
+				<height>800</height>
+				<align>center</align>
+				<itemgap>10</itemgap>
+				<onup>290000</onup>
+				<ondown>290000</ondown>
+				<onleft>$VAR[JumpBarClick]</onleft>
+				<onright>SetFocus(1869)</onright>
+				<orientation>vertical</orientation>
+				<control type="button" id="290001">
+					<include>JumpBarButton</include>
+					<label>ABC</label>
+					<onclick>Action(JumpSMS2)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290002">
+					<include>JumpBarButton</include>
+					<label>DEF</label>
+					<onclick>Action(JumpSMS3)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290003">
+					<include>JumpBarButton</include>
+					<label>GHI</label>
+					<onclick>Action(JumpSMS4)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290004">
+					<include>JumpBarButton</include>
+					<label>JKL</label>
+					<onclick>Action(JumpSMS5)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290005">
+					<include>JumpBarButton</include>
+					<label>MNO</label>
+					<onclick>Action(JumpSMS6)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290006">
+					<include>JumpBarButton</include>
+					<label>PQRS</label>
+					<onclick>Action(JumpSMS7)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290007">
+					<include>JumpBarButton</include>
+					<label>TUV</label>
+					<onclick>Action(JumpSMS8)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+				<control type="button" id="290008">
+					<include>JumpBarButton</include>
+					<label>WXYZ</label>
+					<onclick>Action(JumpSMS9)</onclick>
+					<onclick>SetFocus(290000)</onclick>
+				</control>
+			</control>			
+		</control>
+	</include>
+	<include name="JumpBarButton">
+		<left>0</left>
+		<top>0</top>
+		<height>80</height>
+		<width>100</width>
+		<align>center</align>
+		<pulseonselect>false</pulseonselect>
+		<onclick>$VAR[JumpBarClick]</onclick>
+	</include>
+	<variable name="JumpBarClick">
+		<value condition="Control.IsVisible(55)">SetFocus(55)</value>
+		<value condition="Control.IsVisible(580)">SetFocus(580)</value>	
+		<value condition="Control.IsVisible(581)">SetFocus(581)</value>	
+		<value condition="Control.IsVisible(591)">SetFocus(591)</value>
+		<value condition="Control.IsVisible(592)">SetFocus(592)</value>
+		<value condition="Control.IsVisible(598)">SetFocus(598)</value>	
+		<value condition="Control.IsVisible(600)">SetFocus(600)</value>		
+		<value condition="Control.IsVisible(601)">SetFocus(601)</value>
+		<value condition="Control.IsVisible(602)">SetFocus(602)</value>
+		<value condition="Control.IsVisible(603)">SetFocus(603)</value>
+		<value condition="Control.IsVisible(604)">SetFocus(604)</value>
+		<value condition="Control.IsVisible(605)">SetFocus(605)</value>
+		<value condition="Control.IsVisible(606)">SetFocus(606)</value>
+		<value condition="Control.IsVisible(607)">SetFocus(607)</value>
+		<value condition="Control.IsVisible(608)">SetFocus(608)</value>			
+		<value condition="Control.IsVisible(609)">SetFocus(609)</value>	
+		<value condition="Control.IsVisible(610)">SetFocus(610)</value>	
+		<value condition="Control.IsVisible(611)">SetFocus(611)</value>		
+		<value condition="Control.IsVisible(702)">SetFocus(702)</value>
+		<value condition="Control.IsVisible(703)">SetFocus(703)</value>	
+		<value condition="Control.IsVisible(704)">SetFocus(704)</value>	
+		<value condition="Control.IsVisible(705)">SetFocus(705)</value>	
+		<value condition="Control.IsVisible(900)">SetFocus(900)</value>
+		<value condition="Control.IsVisible(901)">SetFocus(901)</value>
+	</variable>
+	
+	<!-- ============================= ANIMATIONS BEGIN ============================== -->
+	<include name="ListFocusAnimation">
+	  <animation type="Focus" condition="Container().OnPrevious">
+			<effect type="fade" start="100" end="100" time="700"/>
+			<effect type="slide" start="0,45" end="0,0" time="400" tween="back" easing="out"/>
+      </animation>
+	  <animation type="Focus" condition="Container().OnNext">
+			<effect type="fade" start="100" end="100" time="700"/>
+			<effect type="slide" start="0,-45" end="0,0" time="400" tween="back" easing="out"/>
+	  </animation>
+	</include>
+	<include name="Animation.ZoomIn">
+	  <animation type="WindowOpen">
+		  <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+		  <effect type="zoom" start="80" end="100" time="300" center="auto" tween="quadratic" easing="out" />
+	  </animation>
+	  <animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+		</animation>
+	  <animation type="Visible">
+		  <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+		  <effect type="zoom" start="80" end="100" time="300" center="auto" tween="quadratic" easing="out" />
+	  </animation>
+    </include>	
+	<include name="Fade_Widgets">		
+	  <animation type="Visible" reversible="false">
+		  <effect type="slide" start="400,0" end="0,0" delay="200" easing="out" tween="sine" time="400" />
+		  <effect type="fade" start="0" end="100" delay="200" time="400" />
+	  </animation>
+	  <animation type="Hidden" reversible="false">
+		  <effect type="zoom" start="100" end="0" center="900,1050" time="1000" tween="cubic" easing="inout" />
+		  <effect type="fade" start="100" end="70" time="400" />
+	  </animation>
+	</include>	
+	<include name="SlideInAndOutAnimationRNL">
+		<animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+			<effect type="slide" start="800,0" end="0,0" time="500" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+		</animation>
+    </include>
+	<include name="SlideInAndOutAnimationLNR">
+        <animation type="WindowOpen">
+			<effect type="fade" start="0" end="100" time="500" tween="sine" easing="out" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="fade" start="100" end="0" time="500" tween="sine" easing="out" />
+		</animation>
+    </include>
+	<include name="ViewSlidePanelAnimationUNO">
+        <animation type="WindowOpen">
+			<effect type="slide" time="500" start="0,800"  end="0,0" tween="sine" easing="out" />
+		    <effect type="fade" time="300" start="50" end="100"/>
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="slide" time="500" start="0,0" end="0,800" tween="sine" easing="in" />
+			<effect type="fade" time="300" start="100" end="50" />
+		</animation>
+    </include>
+	<include name="global_kenburns_fanart">
+	  <animation effect="zoom" start="110" end="130" center="auto" time="15000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
+      <animation effect="slide" start="-100,-190" end="20,20" time="7000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
+      <animation effect="rotate" center="360,640" start="-2" end="2" time="11000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(animation_bg)">Conditional</animation>
+	</include>	
+	<include name="box4fade">
+      <animation effect="fade" time="1500" delay="300">Visible</animation>
+	  <animation effect="fade" time="500">Hidden</animation>
+	</include>
+	<include name="dialogeffect">
+	  <animation effect="fade" time="250">WindowOpen</animation>
+	  <animation effect="fade" time="250">WindowClose</animation>
+	</include>
+	<include name="backgroundfade">
+	  <animation effect="fade" time="450">Visible</animation>
+	  <animation effect="fade" time="450">Hidden</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+	  <animation effect="fade" time="2250">Visible</animation>
+	  <animation effect="fade" time="2250">Hidden</animation>
+	</include>
+	<include name="AnimationIcon360">
+      <animation type="Focus" >
+	    <effect type="rotatey" center="220,0" start="0" end="360" time="2000" delay="0"/>
+	  </animation>
+    </include>
+	<!-- ============================= ANIMATIONS CLOSE ============================== -->
+
+</includes>

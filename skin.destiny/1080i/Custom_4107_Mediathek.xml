@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="4107">
+  <defaultcontrol always="true">140500</defaultcontrol>
+  <controls>
+  <control type="image">
+	<left>0</left>
+	<top>0</top>
+	<width>1920</width>
+	<height>1080</height>
+	<texture background="true">background.png</texture>
+  </control>
+  <control type="image">
+	<left>180</left>
+	<top>155</top>
+	<width>1610</width>
+	<height>663</height>
+	<texture background="true">skin/button_klein.png</texture>
+	<bordertexture border="10">ThumbShadow2.png</bordertexture>
+	<bordersize>7</bordersize>
+	<colordiffuse>$VAR[ColorButtonDialogeBack]</colordiffuse>
+  </control>
+  <control type="grouplist" id="140500">
+	<left>195</left>
+	<top>170</top>
+	<width>1590</width>
+	<height>632</height>
+	<itemgap>2</itemgap>
+	<pagecontrol>2640</pagecontrol>
+	<onleft>9000</onleft>
+	<onleft>PreviousMenu</onleft>
+	<onright>2640</onright>
+	<onup>140500</onup>
+	<ondown>140500</ondown>
+	<control type="radiobutton" id="3059">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>Alternative Logos</label>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.ToggleSetting(AlternativeLogos)</onclick>
+	  <selected>Skin.HasSetting(AlternativeLogos)</selected>
+	</control>
+	<control type="button" id="3060">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 1</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton1))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton1,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3061">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 2</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton2))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton2,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3062">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 3</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton3))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton3,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3063">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 4</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton4))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton4,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3064">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 5</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton5))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton5,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3065">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 6</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton6))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton6,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3066">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 7</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton7))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton7,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3067">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 8</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton8))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton8,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3068">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 9</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton9))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton9,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3069">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 10</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton10))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton10,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3070">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50122] 11</label>
+	  <label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(HomeVideosButton11))][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>Skin.SetAddon(HomeVideosButton11,xbmc.addon.executable,xbmc.addon.image,xbmc.addon.video,xbmc.addon.audio)</onclick>
+	</control>
+	<control type="button" id="3071">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 1</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite1.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite1)</onclick>
+	</control>
+	<control type="button" id="3072">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 2</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite2.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite2)</onclick>
+	</control>
+	<control type="button" id="3073">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 3</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite3.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite3)</onclick>
+	</control>
+	<control type="button" id="3074">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 4</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite4.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite4)</onclick>
+	</control>
+	<control type="button" id="3075">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 5</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite5.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite5)</onclick>
+	</control>
+	<control type="button" id="3076">
+	  <width>1580</width>
+	  <height>51</height>
+	  <font>primal_20</font>
+	  <label>$LOCALIZE[50238] 6</label>
+	  <label2>[COLOR=selected]$INFO[Skin.String(Menu_HomeVideosButtonfavourite6.Path)][/COLOR]</label2>
+	  <textoffsetx>30</textoffsetx>
+	  <onclick>RunScript(script.favourites,property=Menu_HomeVideosButtonfavourite6)</onclick>
+	</control>
+  </control>
+  <control type="scrollbar" id="2640">
+	<include>SlideInAndOutAnimationRNL</include>
+	<left>1850</left>
+	<top>165</top>
+	<width>10</width>
+	<height>810</height>
+	<texturesliderbackground>button/ScrollBarV.png</texturesliderbackground>
+	<texturesliderbar colordiffuse="$VAR[BackColorFront]">button/ScrollBarV_bar.png</texturesliderbar>
+	<texturesliderbarfocus colordiffuse="$VAR[BackColorButton]">button/ScrollBarV_bar_focus.png</texturesliderbarfocus>
+	<textureslidernib>button/ScrollBarNib.png</textureslidernib>
+	<textureslidernibfocus>button/ScrollBarNib.png</textureslidernibfocus>
+	<onleft>9002</onleft>
+	<onright>1860</onright>
+	<showonepage>true</showonepage>
+	<orientation>vertical</orientation>
+	<visible>Container(9000).Hasfocus(4)</visible>
+  </control>
+  
+  </controls>
+</window>

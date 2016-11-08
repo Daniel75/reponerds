@@ -1,0 +1,2411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="window" id="4117">
+    <defaultcontrol always="true">19010</defaultcontrol>
+    <controls>
+	    <include>CommonHomeBack</include>
+        <include>CommonAllFront</include>
+		<include>SideBladeForViews</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosTime</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">BigInfosDatabaseCount</include>
+		<include condition="!Skin.HasSetting(homenoleftweather)">BigInfosWeather</include>
+		<include condition="!Skin.HasSetting(NoCommonHomeButton)">CommonHomeButton</include>
+		<include>HomePlaying</include>				
+		<!-- =============================================================================================-->
+		<!-- ================================== HAUPT MENU ===============================================-->
+		<!-- =============================================================================================-->
+		<control type="list" id="19010">
+		    <include>Animation.ZoomIn</include>
+			<left>1362</left>
+			<top>165</top>
+			<width>501</width>
+			<height>810</height>
+			<onright>1860</onright>
+			<onleft condition="Container(19010).Hasfocus(80101)">19111</onleft>
+			<onleft condition="Container(19010).Hasfocus(80102)">24010</onleft>
+			<onleft condition="Container(19010).Hasfocus(80103)">23010</onleft>
+			<onleft condition="Container(19010).Hasfocus(80104)">88435</onleft>
+			<onleft condition="Container(19010).Hasfocus(80105)">88432</onleft>	
+			<onleft condition="Container(19010).Hasfocus(80106)">88433</onleft>	
+			<onleft condition="Container(19010).Hasfocus(80107)">88434</onleft>	
+			<onleft condition="Container(19010).Hasfocus(80108)">24011</onleft>			
+			<onup>19010</onup>
+			<ondown>19010</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout height="81" width="250">
+			<control type="group">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>25</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontUnfocus]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		   </control>
+		  </itemlayout>
+		  <focusedlayout height="81" width="250">
+			<control type="image">
+			  <left>0</left>
+			  <top>0</top>
+			  <width>501</width>
+			  <height>1</height>
+			  <texture background="true">default/separator.png</texture>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  <visible>!Control.Hasfocus(19010)</visible>
+			</control>
+			<control type="image">
+			  <left>0</left>
+			  <top>1</top>
+			  <width>501</width>
+			  <height>80</height>
+			  <texture background="true">skin/button_klein.png</texture>
+			  <colordiffuse>$VAR[BackColorButton]</colordiffuse>
+			  <visible>Control.Hasfocus(19010)</visible>
+			</control>		
+			<control type="image">
+			  <left>15</left>
+			  <top>25</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Property(MenuIcon)]</texture>
+			  <colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			</control>
+			<control type="image">
+			  <left>15</left>
+			  <top>20</top>
+			  <width>30</width>
+			  <height>30</height>
+			  <texture background="true">$INFO[ListItem.Icon]</texture>
+			  <colordiffuse>$VAR[ColorFontUnfocus]</colordiffuse>
+			</control>
+			<control type="label">
+			  <left>70</left>
+			  <top>20</top>
+			  <width>450</width>
+			  <height>36</height>
+			  <font>primal_20</font>
+			  <label>$INFO[ListItem.Label]</label>
+			  <textcolor>$VAR[ColorFontNormal]</textcolor>
+			  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+			  <align>left</align>
+			  <aligny>center</aligny>	  
+			</control>
+		  </focusedlayout>
+			<content>
+			    <item id="80101">
+				  <label>$ADDON[plugin.program.newscenter  30112]</label>
+				  <onclick>RunScript(plugin.program.newscenter,?methode=show_select_dialog)</onclick>
+				  <property name="MenuIcon">home/homeicons/time2.png</property>
+				  <property name="MenuIcon_over">home/homeicons/time2.png</property>
+				</item>
+				<item id="80102">
+				  <label>$ADDON[plugin.program.newscenter  30113]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/news.png</property>
+				  <property name="MenuIcon_over">home/homeicons/news.png</property>
+				</item>
+				<item id="80108">
+				  <label>$ADDON[plugin.program.newscenter  30090]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/news.png</property>
+				  <property name="MenuIcon_over">home/homeicons/news.png</property>
+				</item>
+				<item id="80103">
+				  <label>$ADDON[plugin.program.newscenter  30111]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="80104">
+				  <label>$ADDON[plugin.program.newscenter  30109]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/weather.png</property>
+				  <property name="MenuIcon_over">home/homeicons/weather.png</property>
+				</item>
+				<item id="80105">
+				  <label>$ADDON[plugin.program.newscenter  30093]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/weather.png</property>
+				  <property name="MenuIcon_over">home/homeicons/weather.png</property>
+				</item>
+				<item id="80106">
+				  <label>$ADDON[plugin.program.newscenter  30107]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/weather.png</property>
+				  <property name="MenuIcon_over">home/homeicons/weather.png</property>
+				  <visible>!StringCompare(Window(Home).Property(NewsCenter.Unwetter.Anzahl),0)</visible>
+				</item>
+				<item id="80107">
+				  <label>$ADDON[plugin.program.newscenter  30105]</label>
+				  <onclick>-</onclick>
+				  <property name="MenuIcon">home/homeicons/blume.png</property>
+				  <property name="MenuIcon_over">home/homeicons/blume.png</property>
+				</item>
+			</content>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- ================================== VIDEO NEWS MENU ==========================================-->
+		<!-- =============================================================================================-->
+		<control type="panel" id="24010">
+		    <visible>Container(19010).Hasfocus(80102)</visible>
+		    <include>Animation.ZoomIn</include>
+			<left>175</left>
+			<top>161</top>
+			<width>1205</width>
+			<height>830</height>
+			<onright>19010</onright>
+			<onleft>1860</onleft>
+			<onup>19010</onup>
+			<ondown>19010</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout width="387" height="171">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>90</left>
+				<top>15</top>
+				<height>45</height>
+				<width>290</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>25</left>
+				<top>15</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$VAR[ColorIcons]</colordiffuse>
+			  </control>
+			  <control type="textbox">
+				<left>25</left>
+				<top>75</top>
+				<width>365</width>
+				<height>100</height>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+				<autoscroll delay="5000" time="5000" repeat="10000">false</autoscroll>
+			  </control>								
+			</itemlayout>
+		    <focusedlayout width="387" height="171">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(24010)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(24010)</visible>
+			  </control>
+			  <control type="label">
+				<left>90</left>
+				<top>15</top>
+				<height>45</height>
+				<width>290</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>25</left>
+				<top>15</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			  </control>
+			  <control type="textbox">
+				<left>25</left>
+				<top>75</top>
+				<width>375</width>
+				<height>100</height>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+				<autoscroll delay="5000" time="5000" repeat="10000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			  </control>
+			</focusedlayout>
+			<content>
+				<item id="80148">
+                    <label>$ADDON[plugin.program.newscenter  30131]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30121]</label2>
+                    <icon>home/homeicons/time2.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_tagesschau_100)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.Tagesschau100),true)</visible>
+                </item>
+                <item id="80149">
+                    <label>$ADDON[plugin.program.newscenter  30123]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30122]</label2>
+                    <icon>home/homeicons/news.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_tagesschau)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.Tagesschau),true)</visible>
+                </item>
+                <item id="80150">
+                    <label>$ADDON[plugin.program.newscenter  30136]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30130]</label2>
+                    <icon>home/homeicons/news.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_mdr_aktuell_130)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.MDRAktuell),true)</visible>
+                </item>
+				<item id="80151">
+                    <label>$ADDON[plugin.program.newscenter  30095]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30094]</label2>
+                    <icon>home/homeicons/news.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_rundschau100)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.BRRundschau100),true)</visible>
+                </item>
+				<item id="80152">
+                    <label>$ADDON[plugin.program.newscenter  30097]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30096]</label2>
+                    <icon>home/homeicons/news.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_ndraktuellkompakt)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.NDRKompakt),true)</visible>
+                </item>
+                <item id="80153">
+                    <label>$ADDON[plugin.program.newscenter  30138]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30132]</label2>
+                    <icon>home/homeicons/zdftivi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_kinder_nachrichten)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.KinderNachrichten),true)</visible>
+                </item>
+                <item id="80154">
+                    <label>$ADDON[plugin.program.newscenter  30139]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30134]</label2>
+                    <icon>home/homeicons/time2.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_wetteronline)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.Wetter60),true)</visible>
+                </item>
+                <item id="80155">
+                    <label>$ADDON[plugin.program.newscenter  30140]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30133]</label2>
+                    <icon>home/homeicons/weather.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_tagesschauwetter)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.TagesschauWetter),true)</visible>
+                </item>
+                <item id="80156">
+                    <label>$ADDON[plugin.program.newscenter  30141]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30124]</label2>
+                    <icon>home/homeicons/weather.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_wetterinfo)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.WetterInfo),true)</visible>
+                </item>
+				<item id="80157">
+                    <label>$ADDON[plugin.program.newscenter  30099]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30098]</label2>
+                    <icon>home/homeicons/weather.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_wetternet)</onclick>
+					<visible>SubString(Window(Home).Property(NewsCenter.Visible.WetterNet),true)</visible>
+                </item>			
+			</content>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- =========================== VIDEO LIVE STREAM NEWS MENU =====================================-->
+		<!-- =============================================================================================-->
+		<control type="panel" id="24011">
+		    <visible>Container(19010).Hasfocus(80108)</visible>
+		    <include>Animation.ZoomIn</include>
+			<left>175</left>
+			<top>161</top>
+			<width>1205</width>
+			<height>830</height>
+			<onright>19010</onright>
+			<onleft>1860</onleft>
+			<onup>19010</onup>
+			<ondown>19010</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout width="387" height="171">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>90</left>
+				<top>15</top>
+				<height>45</height>
+				<width>290</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>25</left>
+				<top>15</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$VAR[ColorIcons]</colordiffuse>
+			  </control>
+			  <control type="textbox">
+				<left>25</left>
+				<top>75</top>
+				<width>365</width>
+				<height>100</height>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+				<autoscroll delay="5000" time="5000" repeat="10000">false</autoscroll>
+			  </control>								
+			</itemlayout>
+		    <focusedlayout width="387" height="171">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(24011)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>383</width>
+				<height>167</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(24011)</visible>
+			  </control>
+			  <control type="label">
+				<left>90</left>
+				<top>15</top>
+				<height>45</height>
+				<width>290</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>25</left>
+				<top>15</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+				<colordiffuse>$VAR[ColorFontSelected]</colordiffuse>
+			  </control>
+			  <control type="textbox">
+				<left>25</left>
+				<top>75</top>
+				<width>375</width>
+				<height>100</height>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+				<autoscroll delay="5000" time="5000" repeat="10000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			  </control>
+			</focusedlayout>
+			<content>
+				<item id="80248">
+                    <label>$ADDON[plugin.program.newscenter  30089]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30078]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_livestream_euronews)</onclick>
+                </item>
+                <item id="80249">
+                    <label>$ADDON[plugin.program.newscenter  30088]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30079]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_livestream_ntv)</onclick>
+                </item>
+                <item id="80250">
+                    <label>$ADDON[plugin.program.newscenter  30087]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30080]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_livestream_n24)</onclick>
+                </item>
+				<item id="80251">
+                    <label>$ADDON[plugin.program.newscenter  30086]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30081]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter?methode=play_livestream_tagesschau24)</onclick>
+                </item>
+				<item id="80252">
+                    <label>$ADDON[plugin.program.newscenter  30085]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30082]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_livestream_phoenix)</onclick>
+                </item>
+                <item id="80253">
+                    <label>$ADDON[plugin.program.newscenter  30084]</label>
+                    <label2>$ADDON[plugin.program.newscenter  30083]</label2>
+                    <icon>home/homeicons/kodi.png</icon>
+                    <onclick>RunScript(plugin.program.newscenter,?methode=play_livestream_dw)</onclick>
+                </item>		
+			</content>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- ================================== FUSSBALL MENU ============================================-->
+		<!-- =============================================================================================-->
+		<control type="panel" id="23010">
+		    <visible>Container(19010).Hasfocus(80103)</visible>
+		    <include>Animation.ZoomIn</include>
+			<left>175</left>
+			<top>161</top>
+			<width>1205</width>
+			<height>220</height>
+			<onright>19010</onright>
+			<onleft>1860</onleft>
+			<onup>19010</onup>
+			<ondown>19010</ondown>
+			<scrolltime tween="Quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<movement>1</movement>
+			<itemlayout width="290" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>286</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>22</left>
+				<top>14</top>
+				<height>45</height>
+				<width>270</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>								
+			</itemlayout>
+		    <focusedlayout width="290" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>286</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(23010)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>286</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(23010)</visible>
+			  </control>
+			  <control type="label">
+				<left>22</left>
+				<top>14</top>
+				<height>45</height>
+				<width>270</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			</focusedlayout>
+			<content>
+				<item id="23101">
+				  <label>$ADDON[plugin.program.newscenter  30128]</label>
+				  <onclick>SetFocus(88430)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="23103">
+				  <label>$ADDON[plugin.program.newscenter  30129]</label>
+				  <onclick>SetFocus(88430)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="23102">
+				  <label>$ADDON[plugin.program.newscenter  30125]</label>
+				  <onclick>SetFocus(88431)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="23104">
+				  <label>$ADDON[plugin.program.newscenter  30126]</label>
+				  <onclick>SetFocus(88431)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="23105">
+				  <label>$ADDON[plugin.program.newscenter  30091]</label>
+				  <onclick>SetFocus(88431)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+				<item id="23106">
+				  <label>$ADDON[plugin.program.newscenter  30092]</label>
+				  <onclick>SetFocus(88431)</onclick>
+				  <property name="MenuIcon">home/homeicons/football.png</property>
+				  <property name="MenuIcon_over">home/homeicons/football.png</property>
+				</item>
+			</content>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- ==================================== NEWS FEED ==============================================-->
+		<!-- =============================================================================================-->
+		<control type="wraplist" id="19111">
+		  <visible>Container(19010).Hasfocus(80101)</visible>	
+		  <include>Animation.ZoomIn</include>
+		  <left>175</left>
+		  <top>159</top>
+		  <width>1170</width>
+	      <height>823</height>
+		  <onright>19010</onright>
+		  <onleft>9020</onleft>
+		  <onup>19111</onup>
+		  <ondown>19111</ondown>
+		  <orientation>vertical</orientation>
+		  <viewtype>list</viewtype>
+		  <preloaditems>1</preloaditems>
+		  <scrolltime tween="sine" easing="out">500</scrolltime>
+		  <autoscroll time="20000" delay="15000" repeat="5000">!Control.HasFocus(19111)</autoscroll>
+		  <itemlayout height="75" width="240">
+		    <control type="image">
+				<left>7</left>
+				<top>3</top>
+				<width>1170</width>
+				<height>70</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">skin/button_klein.png</texture>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			</control>
+			<control type="image">
+				<left>15</left>
+				<top>13</top>
+				<width>280</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Property(headerpic)]</texture>
+			</control>
+			<control type="label">
+				<left>330</left>
+				<top>26</top>
+				<width>800</width>
+				<height>20</height>
+				<font>primal_16_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+	    </itemlayout>
+	    <focusedlayout height="595" width="960">
+		    <control type="image">
+				<left>7</left>
+				<top>3</top>
+				<width>1170</width>
+				<height>590</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">skin/button_klein.png</texture>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(19111)</visible>
+			</control>
+			<control type="image">
+				<left>7</left>
+				<top>3</top>
+				<width>1170</width>
+				<height>590</height>
+				<aspectratio>stretch</aspectratio>
+				<texture background="true">skin/button_klein.png</texture>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(19111)</visible>
+			</control>
+			<control type="image">
+				<left>10</left>
+				<top>6</top>
+				<width>290</width>
+				<height>210</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+		        <bordersize>6</bordersize>
+			</control>
+			<control type="image">
+				<left>340</left>
+				<top>26</top>
+				<width>280</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Property(headerpic)]</texture>
+			</control>
+			<control type="label">
+				<left>20</left>
+				<top>246</top>
+				<width>1140</width>
+				<height>20</height>
+				<font>primal_16_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label]</label>
+				<scroll>true</scroll>
+			</control>
+			<control type="label">
+				<left>340</left>
+				<top>86</top>
+				<width>800</width>
+				<height>20</height>
+				<font>primal_16</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Label2]</label>
+			</control>	
+			<control type="textbox">
+				<left>20</left>
+				<top>296</top>
+				<width>1140</width>
+				<height>270</height>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Property(desc)]</label>
+				<autoscroll>false</autoscroll>
+				<visible>!Control.Hasfocus(19111)</visible>
+			</control>		
+			<control type="textbox">
+				<left>20</left>
+				<top>296</top>
+				<width>1140</width>
+				<height>270</height>
+				<font>primal_20</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>top</aligny>
+				<label>$INFO[ListItem.Property(desc)]</label>
+				<autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+				<visible>Control.Hasfocus(19111)</visible>
+			</control>
+        </focusedlayout>
+		      <content>
+                 <include>Newscenter</include>
+			  </content> 
+		  </control>
+		  
+		<!-- =============================================================================================-->
+		<!-- =============================== FUSSBALL TABELLE ============================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<top>60</top>
+		<visible>Container(19010).Hasfocus(80103)</visible>	
+		<visible>Container(23010).Hasfocus(23101) | Container(23010).Hasfocus(23103)</visible>	
+		<include>Animation.ZoomIn</include>
+		<control type="label">
+			<description>Platz label</description>
+			<left>255</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30142]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Verein label</description>
+			<left>320</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30143]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Spiele label</description>
+			<left>640</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30144]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>header label</description>
+			<left>800</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30145]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Tore label</description>
+			<left>1005</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30146]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Punkte label</description>
+			<left>1155</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30147]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="label">
+			<description>Statistik label</description>
+			<left>1265</left>
+			<top>260</top>
+			<width>1095</width>
+			<height>45</height>
+			<font>primal_15</font>
+			<label>$ADDON[plugin.program.newscenter  30148]</label>
+			<align>left</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[ColorFontSelected]</textcolor>
+			<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		</control>
+		<control type="list" id="88430">
+			<left>175</left>
+			<top>298</top>
+			<width>1170</width>
+			<height>620</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88430</onup>
+			<ondown>88430</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="1700" height="65">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="image">
+				<left>16</left>
+				<top>10</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>100</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Platz)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>140</left>
+				<top>12</top>
+				<height>45</height>
+				<width>350</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>480</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Spiele)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="label">
+				<description>channel</description>
+				<left>610</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Sun)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>800</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Tore)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="label">
+				<description>channel</description>
+				<left>1000</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Punkte)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="image">
+				<description>channel</description>
+				<left>1090</left>
+				<top>27</top>
+				<width>62</width>
+				<height>16</height>
+				<texture background="true">$INFO[ListItem.Property(StatPic)]</texture>
+				<aspectratio>stretch</aspectratio>
+			  </control>
+			</itemlayout>
+			<focusedlayout width="1700" height="65">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88430)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88430)</visible>
+			  </control>
+			  <control type="image">
+				<left>16</left>
+				<top>10</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>100</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Platz)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>140</left>
+				<top>12</top>
+				<height>45</height>
+				<width>350</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>480</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Spiele)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="label">
+				<description>channel</description>
+				<left>610</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Sun)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<description>channel</description>
+				<left>800</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Tore)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="label">
+				<description>channel</description>
+				<left>1000</left>
+				<top>12</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Punkte)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			  <control type="image">
+				<description>channel</description>
+				<left>1090</left>
+				<top>27</top>
+				<width>62</width>
+				<height>16</height>
+				<texture background="true">$INFO[ListItem.Property(StatPic)]</texture>
+				<aspectratio>stretch</aspectratio>
+			  </control>
+			</focusedlayout>
+				<content>$VAR[NewsPreviewBundesligaTabelle]</content>
+		  </control>
+		</control>
+		<!-- =============================================================================================-->
+		<!-- ============================ FUSSBALL SPIELERGEBNISSE =======================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<visible>Container(19010).Hasfocus(80103)</visible>	
+		<visible>Container(23010).Hasfocus(23102) | Container(23010).Hasfocus(23104) | Container(23010).Hasfocus(23105) | Container(23010).Hasfocus(23106)</visible>
+		<include>Animation.ZoomIn</include>
+		<control type="list" id="88431">
+			<left>175</left>
+			<top>358</top>
+			<width>1170</width>
+			<height>610</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88431</onup>
+			<ondown>88431</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="1700" height="65">
+			  <control type="image">
+				<left>10</left>
+				<top>8</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>15</top>
+				<height>45</height>
+				<width>235</width>
+				<label>$INFO[ListItem.Property(Spieldatum)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>13</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Property(Mannschaft1Logo)]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>370</left>
+				<top>15</top>
+				<height>45</height>
+				<width>250</width>
+				<label>$INFO[ListItem.Property(Mannschaft1)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>690</left>
+				<top>13</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Property(Mannschaft2Logo)]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>760</left>
+				<top>15</top>
+				<height>45</height>
+				<width>250</width>
+				<label>$INFO[ListItem.Property(Mannschaft2)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>				
+			  <control type="label">
+				<left>1100</left>
+				<top>15</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Ergebniss)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontSelected]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			</itemlayout>
+			<focusedlayout width="1700" height="65">
+			  <control type="image">
+				<left>10</left>
+				<top>8</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88431)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>8</top>
+				<width>1157</width>
+				<height>60</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88431)</visible>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>15</top>
+				<height>45</height>
+				<width>230</width>
+				<label>$INFO[ListItem.Property(Spieldatum)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>13</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Property(Mannschaft1Logo)]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>370</left>
+				<top>15</top>
+				<height>45</height>
+				<width>250</width>
+				<label>$INFO[ListItem.Property(Mannschaft1)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>690</left>
+				<top>13</top>
+				<width>50</width>
+				<height>50</height>
+				<texture background="true">$INFO[ListItem.Property(Mannschaft2Logo)]</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>760</left>
+				<top>15</top>
+				<height>45</height>
+				<width>250</width>
+				<label>$INFO[ListItem.Property(Mannschaft2)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>				
+			  <control type="label">
+				<left>1100</left>
+				<top>15</top>
+				<height>45</height>
+				<width>220</width>
+				<label>$INFO[ListItem.Property(Ergebniss)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontSelected]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	
+			</focusedlayout>
+				<content>$VAR[NewsPreviewBundesligaSpiele]</content>
+		  </control>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- =============================== WETTER DATEN DEUTSCHLAND ====================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<visible>Container(19010).Hasfocus(80104)</visible>	
+		<include>Animation.ZoomIn</include>
+		<control type="panel" id="88435">
+			<left>175</left>
+			<top>161</top>
+			<width>1205</width>
+			<height>220</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88435</onup>
+			<ondown>88435</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="380" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>14</top>
+				<height>45</height>
+				<width>330</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>								
+			</itemlayout>
+			<focusedlayout width="380" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88435)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88435)</visible>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>14</top>
+				<height>45</height>
+				<width>330</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			</focusedlayout>
+				<content>plugin://plugin.program.newscenter/?methode=get_dwd_pics_base_uwz</content>
+		  </control>
+		  <!--<control type="image">
+			<left>1327</left>
+			<top>170</top>
+			<width>15</width>
+			<height>15</height>
+			<texture background="true">button/Arrowup.png</texture>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>1327</left>
+			<top>360</top>
+			<width>15</width>
+			<height>15</height>
+			<texture background="true">button/Arrowdown.png</texture>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		  </control>-->
+		  <control type="image">
+			<left>185</left>
+			<top>393</top>
+			<width>1155</width>
+			<height>580</height>
+			<texture background="true">$INFO[Container(88435).ListItem.Icon]</texture>
+			<aspectratio align="center" aligny="top">keep</aspectratio>
+		  </control>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- =============================== WETTER DATEN BUNDESLAND =====================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<visible>Container(19010).Hasfocus(80105)</visible>	
+		<include>Animation.ZoomIn</include>
+		<control type="panel" id="88432">
+			<left>175</left>
+			<top>161</top>
+			<width>1205</width>
+			<height>220</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88432</onup>
+			<ondown>88432</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="380" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>14</top>
+				<height>45</height>
+				<width>330</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>								
+			</itemlayout>
+			<focusedlayout width="380" height="72">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88432)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>376</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88432)</visible>
+			  </control>
+			  <control type="label">
+				<left>25</left>
+				<top>14</top>
+				<height>45</height>
+				<width>330</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			</focusedlayout>
+				<content>plugin://plugin.program.newscenter/?methode=get_dwd_pics_bundesland_uwz</content>
+		  </control>
+		  <control type="image">
+			<left>1327</left>
+			<top>170</top>
+			<width>15</width>
+			<height>15</height>
+			<texture background="true">button/Arrowup.png</texture>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>1327</left>
+			<top>360</top>
+			<width>15</width>
+			<height>15</height>
+			<texture background="true">button/Arrowdown.png</texture>
+			<aspectratio align="left" aligny="top">keep</aspectratio>
+		  </control>
+		  <control type="image">
+			<left>185</left>
+			<top>393</top>
+			<width>1155</width>
+			<height>580</height>
+			<texture background="true">$INFO[Container(88432).ListItem.Icon]</texture>
+			<aspectratio align="center" aligny="top">keep</aspectratio>
+		  </control>
+		</control>
+		  
+		<!-- =============================================================================================-->
+		<!-- ============================ WETTERWARNUNG DATEN BUNDESLAND =================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<visible>Container(19010).Hasfocus(80106)</visible>	
+		<include>Animation.ZoomIn</include>
+		<control type="list" id="88433">
+			<left>175</left>
+			<top>161</top>
+			<width>1170</width>
+			<height>815</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88433</onup>
+			<ondown>88433</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="387" height="348">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1158</width>
+				<height>340</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="image">
+				<left>15</left>
+				<top>11</top>
+				<width>190</width>
+				<height>190</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>10</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$INFO[ListItem.Property(Start)] / $INFO[ListItem.Property(Ende)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>50</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>90</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$LOCALIZE[504044]: $INFO[ListItem.Property(Severity)] - $INFO[ListItem.Property(Type)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="textbox">
+				<left>20</left>
+				<top>170</top>
+				<width>1100</width>
+				<height>160</height>
+				<font>primal_16</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(LongText)]</label>
+				<autoscroll time="2000" delay="15000" repeat="5000">false</autoscroll>
+			  </control>								
+			</itemlayout>
+			<focusedlayout width="387" height="348">
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1158</width>
+				<height>340</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88433)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>5</top>
+				<width>1158</width>
+				<height>340</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88433)</visible>
+			  </control>
+			  <control type="image">
+				<left>15</left>
+				<top>11</top>
+				<width>190</width>
+				<height>190</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio align="left" aligny="top">keep</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>10</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$INFO[ListItem.Property(Start)] / $INFO[ListItem.Property(Ende)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>		  
+			  <control type="label">
+				<left>220</left>
+				<top>50</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>50</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$INFO[ListItem.Label]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_18</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="label">
+				<left>220</left>
+				<top>90</top>
+				<height>45</height>
+				<width>1000</width>
+				<label>$LOCALIZE[504044]: $INFO[ListItem.Property(Severity)] - $INFO[ListItem.Property(Type)]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_15</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="textbox">
+				<left>20</left>
+				<top>170</top>
+				<width>1100</width>
+				<height>160</height>
+				<font>primal_16</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+	            <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<selectedcolor>$VAR[ColorFontSelected]</selectedcolor>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Property(LongText)]</label>
+				<autoscroll time="2000" delay="15000" repeat="5000">!Skin.HasSetting(NoPlotScroll)</autoscroll>
+			  </control>			
+			</focusedlayout>
+				<content>plugin://plugin.program.newscenter/?methode=get_unwetter_warnungen</content>
+		  </control>
+		</control>
+		
+		<!-- =============================================================================================-->
+		<!-- ============================ POLLENWARNUNG INFOS & BILDER ===================================-->
+		<!-- =============================================================================================-->
+		<control type="group">
+		<visible>Container(19010).Hasfocus(80107)</visible>	
+		<control type="image">
+		  <left>855</left>
+		  <top>558</top>
+		  <width>489</width>
+		  <height>418</height>
+		  <texture background="true">skin/button_klein.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		  <colordiffuse>$VAR[BackColorFront]</colordiffuse>
+		</control>
+		<control type="label">
+		  <left>885</left>
+		  <top>570</top>
+		  <height>45</height>
+		  <width>650</width>
+		  <label>$ADDON[plugin.program.newscenter  30100]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_18_Title</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="label">
+		  <left>885</left>
+		  <top>638</top>
+		  <height>45</height>
+		  <width>650</width>
+		  <label>$ADDON[plugin.program.newscenter  30101]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_15</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>885</left>
+		  <top>680</top>
+		  <width>430</width>
+		  <height>17</height>
+		  <texture background="true">0-pollen.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		</control>
+		<control type="label">
+		  <left>885</left>
+		  <top>698</top>
+		  <height>45</height>
+		  <width>630</width>
+		  <label>$ADDON[plugin.program.newscenter  30102]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_15</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>885</left>
+		  <top>740</top>
+		  <width>430</width>
+		  <height>17</height>
+		  <texture background="true">1-pollen.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		</control>
+		<control type="label">
+		  <left>885</left>
+		  <top>758</top>
+		  <height>45</height>
+		  <width>630</width>
+		  <label>$ADDON[plugin.program.newscenter  30103]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_15</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>885</left>
+		  <top>800</top>
+		  <width>430</width>
+		  <height>17</height>
+		  <texture background="true">2-pollen.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		</control>
+		<control type="label">
+		  <left>885</left>
+		  <top>818</top>
+		  <height>45</height>
+		  <width>630</width>
+		  <label>$ADDON[plugin.program.newscenter  30104]</label>
+		  <align>left</align>
+		  <aligny>center</aligny>
+		  <font>primal_15</font>
+		  <textcolor>$VAR[ColorFontNormal]</textcolor>
+		  <shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+		  <scroll>false</scroll>
+		</control>
+		<control type="image">
+		  <left>885</left>
+		  <top>860</top>
+		  <width>430</width>
+		  <height>17</height>
+		  <texture background="true">3-pollen.png</texture>
+		  <aspectratio>stretch</aspectratio>
+		</control>
+		<include>Animation.ZoomIn</include>
+		<control type="wraplist" id="88434">
+			<left>175</left>
+			<top>161</top>
+			<width>1170</width>
+			<height>815</height>
+			<onleft>9020</onleft>
+			<onright>19010</onright>
+			<onup>88434</onup>
+			<ondown>88434</ondown>
+			<viewtype>list</viewtype>
+			<scrolltime tween="quadratic" easing="out">500</scrolltime>
+			<focusposition>0</focusposition>
+			<orientation>vertical</orientation>
+			<preloaditems>9</preloaditems>
+			<itemlayout width="1160" height="70">
+			  <control type="image">
+				<left>8</left>
+				<top>3</top>
+				<width>664</width>
+				<height>67</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+			  </control>
+			  <control type="image">
+				<left>20</left>
+				<top>17</top>
+				<width>35</width>
+				<height>35</height>
+				<texture background="true">home/homeicons/calender.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>70</left>
+				<top>14</top>
+				<height>45</height>
+				<width>650</width>
+				<label>$INFO[ListItem.Label] - [LIGHT]$INFO[ListItem.Label2][/LIGHT]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_16_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>								
+			</itemlayout>
+			<focusedlayout width="1160" height="395">
+			<control type="group">
+			 <include>ListFocusAnimation</include>
+			  <control type="image">
+				<left>8</left>
+				<top>3</top>
+				<width>1161</width>
+				<height>390</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorFront]</colordiffuse>
+				<visible>!Control.Hasfocus(88434)</visible>
+			  </control>
+			  <control type="image">
+				<left>6</left>
+				<top>3</top>
+				<width>1168</width>
+				<height>390</height>
+				<texture background="true">skin/button_klein.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[BackColorButton]</colordiffuse>
+				<visible>Control.Hasfocus(88434)</visible>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(0_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(0_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>10</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(0_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>155</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(1_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>155</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(1_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>155</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(1_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(2_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(2_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>300</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(2_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>445</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(3_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>445</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(3_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>445</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(3_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>590</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(4_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>590</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(4_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>590</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(4_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>735</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(5_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>735</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(5_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>735</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(5_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>880</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(6_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>880</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(6_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>880</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(6_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>1025</left>
+				<top>55</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(7_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>	
+			  <control type="image">
+				<left>1025</left>
+				<top>55</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(7_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>	
+			  <control type="label">
+				<left>1025</left>
+				<top>180</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(7_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>	  
+			  <control type="image">
+				<left>10</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(8_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>10</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(8_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>10</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(8_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>155</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(9_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>155</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(9_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>155</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(9_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(10_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>300</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(10_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>300</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(10_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>445</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(11_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>445</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(11_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>445</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(11_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>590</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(12_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>590</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(12_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>590</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(12_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>735</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(13_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>735</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(13_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>735</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(13_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>880</left>
+				<top>220</top>
+				<width>140</width>
+				<height>160</height>
+				<texture background="true">$INFO[ListItem.Property(14_Belastung)]-pollen.png</texture>
+				<aspectratio align="left" aligny="top">stretch</aspectratio>
+			  </control>
+			  <control type="image">
+				<left>880</left>
+				<top>220</top>
+				<width>140</width>
+				<height>135</height>
+				<texture background="true">$INFO[ListItem.Property(14_Pic)]</texture>
+				<aspectratio align="left" aligny="top">scale</aspectratio>
+			  </control>
+			  <control type="label">
+				<left>880</left>
+				<top>345</top>
+				<height>45</height>
+				<width>130</width>
+				<label>$INFO[ListItem.Property(14_Name)]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>primal_13</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			  <control type="image">
+				<left>20</left>
+				<top>10</top>
+				<width>35</width>
+				<height>35</height>
+				<texture background="true">home/homeicons/calender.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<colordiffuse>$VAR[ColorFontNormal]</colordiffuse>
+			  </control>
+			  <control type="label">
+				<left>70</left>
+				<top>7</top>
+				<height>45</height>
+				<width>650</width>
+				<label>$INFO[ListItem.Label] - $INFO[ListItem.Label2]</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>primal_16_Title</font>
+				<textcolor>$VAR[ColorFontNormal]</textcolor>
+				<shadowcolor>$VAR[ColorFontShadow]</shadowcolor>
+				<scroll>false</scroll>
+			  </control>
+			 </control>
+			</focusedlayout>
+				<content>plugin://plugin.program.newscenter/?methode=get_pollen_items</content>
+		  </control>
+		</control>
+
+      </controls>
+    </window>

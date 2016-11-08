@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<include>ViewsidGuide</include>
+	<controls>
+	    <include>CommonHomeBack</include>
+		<include>CommonAllFront3</include>
+		<include>SideBladeForViews</include>
+	    <include>BigInfosTime</include>
+		<include>BigInfosDatabaseCount</include>
+		<include>BigInfosWeather</include>
+		<include>CommonHomeButton</include>
+		<include>HomePlaying</include>
+		
+		<control type="group" id="50">
+			<include>ViewsGuide</include>
+		</control>
+
+		<include>PVRSideBlade</include>
+	</controls>
+</window>
