@@ -298,7 +298,8 @@ Achtung: Diese Sender wurden nicht auf Funktionalität geprüft!
 <!-- ===================================================================================== -->
 <!-- ==================================== Repos ========================================== -->
 <!-- ===================================================================================== -->
-<addon id="repository.kodinerds" name="kodinerds.net Add-ons (old)" version="5.0.1" provider-name="Jugger">
+<addon id="repository.kodinerds" name="kodinerds.net Add-ons (old)" version="5.0.2" provider-name="Jugger">
+    <broken>Es gibt ein neues Repo</broken>
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
         <import addon="repository.lost-and-found" version="1.1.8"/>
