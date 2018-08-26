@@ -1,7 +1,0 @@
-<settings>
-    <category label="Einstellungen">
-        <setting id="quality" type="enum" label="Video Qualität" values="Niedrig|Mittel|Hoch" default="2"/>
-        <setting label="Email" type="text" id="email" default=""/>
-        <setting label="Passwort" type="text" id="password" option="hidden"  enable="!eq(-1,)" default=""/>
-    </category>
-</settings>

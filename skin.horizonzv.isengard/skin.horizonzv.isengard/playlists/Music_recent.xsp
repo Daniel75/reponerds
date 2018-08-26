@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<smartplaylist type="songs">
-    <name>Songs (recently played) [COLOR=FFFF0000]!! DO NOT CHANGE !![/COLOR]</name>
-    <match>all</match>
-    <limit>10</limit>
-    <order direction="descending">lastplayed</order>
-</smartplaylist>
